@@ -1,0 +1,129 @@
+{
+  "commit": "f245ca9f663d437bbda0fd3b6c774f76497363d9",
+  "files": [
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Auditoria_Mestra_18_Temas.html",
+      "sha256": "2c71c77cd01f6dff7990ecddf30e969174d3f35466b5ba2bd7a6af47de46a21c"
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "sha256": "06bc7c51d80146f6b2f82a0c247d0d7babe56462dc33543ff025353ead69e683"
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_02_Cartografia_I_MATRIZ_OFICIAL_V2_6.html",
+      "sha256": "cc976ddf7ca014693868786b4a6d306ba9d9d04a6fd13283856fb77662610906"
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_03_Cartografia_II_MATRIZ_OFICIAL_V2_6.html",
+      "sha256": "7d2fbc117ac7a2763e1e19848ac390b139d4c2b7e0082c2fc68b2ead05846b4a"
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_03_Cartografia_II_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "sha256": "3295adad462b654cfdc8d27b280e2bb7e85593de228d5f45456de46aa0dde8aa"
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_04_Climatologia_MATRIZ_OFICIAL_V2_6.html",
+      "sha256": "d0dd9fb621034a60e547989da86f25ad318f853e22e0a68d7c6df684c3a29e20"
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_05_Tectonica_e_Relevo_MATRIZ_OFICIAL_V2_6.html",
+      "sha256": "6f52e76e3fb4a3a71499a6d705902dc079d468353d305fd4f29fdaef1fbbd650"
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_06_Solos_e_Erosao_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "sha256": "7812eec2099ddee07c575c43ac584967e78bc500d765d8d0932810878123c2b0"
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_07_Hidrologia_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "sha256": "cea1a39b7d5ea36ebec1a0c2d490fae5e3e367e4dd9bcdef58fecd0e12440cf9"
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_08_Biomas_e_Dominios_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "sha256": "01f65753bf92fe04eacbb90d01ee7d3b9eeb1a44ffaf33a91b47ba313ec32694"
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_09_Ambiente_e_Energia_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "sha256": "b571cf4aea63e51b5d689cbb08e2568b0f645d38b423a1364eb5f0f392fc72b6"
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_10_Populacao_e_Povos_Tradicionais_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "sha256": "e64517d09c2d56897dc785fdebb28ec4a87a5652cfc1dc43641fafc26b5cefb2"
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_11_Geografia_Urbana.html",
+      "sha256": "27a3420574a27a4b249e6afb61e1dc2f8028be64fc4b50b68184cb863fbda1f5"
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_12_Geografia_Agraria.html",
+      "sha256": "2c9d1013b3b4d9c7510232089252390dc14eb84535ef3cdb7513f8d0e296cf1a"
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_13_Industria_Economia_e_Redes.html",
+      "sha256": "9a1757edaaa9b001b419c4dcef0d16177d460d3a030ee4d5f286be1d809cf940"
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_14_Geopolitica_Globalizacao_e_Ordem_Mundial.html",
+      "sha256": "65734ab986ff46bcf2d4e4a5892b02a5ee13c1d670c3f772d11a32c51d96d73d"
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_15_Amazonia_Natureza_Territorio_e_Desenvolvimento.html",
+      "sha256": "43282bc1771e68705d3d3b92fd9a595c2f9d4f797847613440d0cd30a31242da"
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_16_Geografia_do_Brasil_e_do_Para.html",
+      "sha256": "836396d38f992486c2d791fa21ae01f1e041a18b9cde683f8fce1a886d18b90c"
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_17_Amazonia_Natureza_e_Sistemas_Ambientais_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "sha256": "04d0793fe5a240a79afcd9d55b051ddf6e927407df257b3f4972e75df7f32dea"
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_17_Cartografia_Geotecnologias_e_Representacao_do_Espaco.html",
+      "sha256": "a04ee219ef78757498e611179c6657cf578ca680da3520a3e8c9710a383d094f"
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_18_Amazonia_Formacao_Territorial_e_Redes_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "sha256": "c345bdc25bafe3be2f00b03f41070488ad0b0423777a7627d953f0d695982053"
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_18_BNCC_e_Ensino_de_Geografia.html",
+      "sha256": "49f13486d6b8c46939e67ff38e312d917219c6bf20e40d7049ad3da4d72e55e9"
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_19_Amazonia_Conflitos_e_Desenvolvimento_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "sha256": "1bb33249d89c920ceafe8edf424cba869085f35bbc67fdbf8528e9d2b3f4237f"
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_20_Para_Territorio_Populacao_e_Regionalizacao_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "sha256": "00479a96f61746dd559302a9eb5ff9eb13f51b261ac4bf8b948f88a51069005f"
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_21_Para_Economia_Infraestrutura_e_Ambiente_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "sha256": "0ff48fe9d66c1c9f4155f579c52f05767e315a093d14fbc4051619374907f119"
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_22_BNCC_e_Ensino_de_Geografia_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "sha256": "daac13b65a9ff637944e753fff0d08b4a44bc561035fa5b5a154fae5ba80a8de"
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_23_Legislacao_e_Fundamentos_da_Educacao_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "sha256": "fd40157267e4c97eca22a5630c7747a85fba34fd0c002155b3dae773e4521ce4"
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_24_Fundamentos_Pedagogicos_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "sha256": "510c9d38be94eed06c1cb68787c0377349a11884ff7a03ccb670c452b34be1b0"
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_25_Lingua_Portuguesa_FGV_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "sha256": "6d306db5b6627ad676b47553fd74a6b4b0ebcbc00036f7e7c3c19abc5e8ddaf6"
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_26_Raciocinio_Logico_FGV_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "sha256": "8ff32f317661b530ee392d3a05a2439c546eea154844804340267dcc67c62d2c"
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_27_Atualidades_do_Para_e_Sociedade_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "sha256": "6651bd535519689e8c3b6381cc96967fcba9bf67ab17e256ad4607510036278e"
+    }
+  ]
+}

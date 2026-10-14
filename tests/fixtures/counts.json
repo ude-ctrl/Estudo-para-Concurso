@@ -1,0 +1,392 @@
+[
+  {
+    "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+    "counts": {
+      "stages": 11,
+      "stageQuestions": 24,
+      "diagnostic": 3,
+      "boss": 5,
+      "questions": 32,
+      "flashcards": 44,
+      "game": 100,
+      "recall": 4
+    }
+  },
+  {
+    "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_02_Cartografia_I_MATRIZ_OFICIAL_V2_6.html",
+    "counts": {
+      "stages": 15,
+      "stageQuestions": 30,
+      "diagnostic": 3,
+      "boss": 5,
+      "questions": 38,
+      "flashcards": 50,
+      "game": 100,
+      "recall": 15
+    }
+  },
+  {
+    "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_03_Cartografia_II_MATRIZ_OFICIAL_V2_6.html",
+    "counts": {
+      "stages": 17,
+      "stageQuestions": 34,
+      "diagnostic": 3,
+      "boss": 5,
+      "questions": 42,
+      "flashcards": 50,
+      "game": 100,
+      "recall": 17
+    }
+  },
+  {
+    "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_03_Cartografia_II_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+    "counts": {
+      "stages": 17,
+      "stageQuestions": 35,
+      "diagnostic": 3,
+      "boss": 5,
+      "questions": 43,
+      "flashcards": 50,
+      "game": 100,
+      "recall": 17
+    }
+  },
+  {
+    "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_04_Climatologia_MATRIZ_OFICIAL_V2_6.html",
+    "counts": {
+      "stages": 13,
+      "stageQuestions": 26,
+      "diagnostic": 3,
+      "boss": 5,
+      "questions": 34,
+      "flashcards": 50,
+      "game": 100,
+      "recall": 13
+    }
+  },
+  {
+    "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_05_Tectonica_e_Relevo_MATRIZ_OFICIAL_V2_6.html",
+    "counts": {
+      "stages": 14,
+      "stageQuestions": 28,
+      "diagnostic": 3,
+      "boss": 5,
+      "questions": 36,
+      "flashcards": 50,
+      "game": 100,
+      "recall": 14
+    }
+  },
+  {
+    "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_06_Solos_e_Erosao_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+    "counts": {
+      "stages": 16,
+      "stageQuestions": 32,
+      "diagnostic": 3,
+      "boss": 5,
+      "questions": 40,
+      "flashcards": 50,
+      "game": 100,
+      "recall": 16
+    }
+  },
+  {
+    "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_07_Hidrologia_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+    "counts": {
+      "stages": 16,
+      "stageQuestions": 32,
+      "diagnostic": 3,
+      "boss": 5,
+      "questions": 40,
+      "flashcards": 50,
+      "game": 100,
+      "recall": 16
+    }
+  },
+  {
+    "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_08_Biomas_e_Dominios_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+    "counts": {
+      "stages": 17,
+      "stageQuestions": 34,
+      "diagnostic": 3,
+      "boss": 5,
+      "questions": 42,
+      "flashcards": 50,
+      "game": 100,
+      "recall": 17
+    }
+  },
+  {
+    "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_09_Ambiente_e_Energia_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+    "counts": {
+      "stages": 20,
+      "stageQuestions": 40,
+      "diagnostic": 3,
+      "boss": 5,
+      "questions": 48,
+      "flashcards": 50,
+      "game": 100,
+      "recall": 20
+    }
+  },
+  {
+    "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_10_Populacao_e_Povos_Tradicionais_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+    "counts": {
+      "stages": 18,
+      "stageQuestions": 36,
+      "diagnostic": 3,
+      "boss": 5,
+      "questions": 44,
+      "flashcards": 50,
+      "game": 100,
+      "recall": 6
+    }
+  },
+  {
+    "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_11_Geografia_Urbana.html",
+    "counts": {
+      "stages": 18,
+      "stageQuestions": 36,
+      "diagnostic": 3,
+      "boss": 5,
+      "questions": 44,
+      "flashcards": 50,
+      "game": 100,
+      "recall": 6
+    }
+  },
+  {
+    "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_12_Geografia_Agraria.html",
+    "counts": {
+      "stages": 18,
+      "stageQuestions": 36,
+      "diagnostic": 3,
+      "boss": 5,
+      "questions": 44,
+      "flashcards": 50,
+      "game": 100,
+      "recall": 6
+    }
+  },
+  {
+    "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_13_Industria_Economia_e_Redes.html",
+    "counts": {
+      "stages": 18,
+      "stageQuestions": 36,
+      "diagnostic": 3,
+      "boss": 5,
+      "questions": 44,
+      "flashcards": 50,
+      "game": 100,
+      "recall": 6
+    }
+  },
+  {
+    "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_14_Geopolitica_Globalizacao_e_Ordem_Mundial.html",
+    "counts": {
+      "stages": 18,
+      "stageQuestions": 36,
+      "diagnostic": 3,
+      "boss": 5,
+      "questions": 44,
+      "flashcards": 50,
+      "game": 100,
+      "recall": 5
+    }
+  },
+  {
+    "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_15_Amazonia_Natureza_Territorio_e_Desenvolvimento.html",
+    "counts": {
+      "stages": 20,
+      "stageQuestions": 40,
+      "diagnostic": 3,
+      "boss": 5,
+      "questions": 48,
+      "flashcards": 50,
+      "game": 100,
+      "recall": 20
+    }
+  },
+  {
+    "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_16_Geografia_do_Brasil_e_do_Para.html",
+    "counts": {
+      "stages": 20,
+      "stageQuestions": 40,
+      "diagnostic": 3,
+      "boss": 5,
+      "questions": 48,
+      "flashcards": 50,
+      "game": 100,
+      "recall": 20
+    }
+  },
+  {
+    "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_17_Amazonia_Natureza_e_Sistemas_Ambientais_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+    "counts": {
+      "stages": 20,
+      "stageQuestions": 40,
+      "diagnostic": 3,
+      "boss": 5,
+      "questions": 48,
+      "flashcards": 50,
+      "game": 100,
+      "recall": 20
+    }
+  },
+  {
+    "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_17_Cartografia_Geotecnologias_e_Representacao_do_Espaco.html",
+    "counts": {
+      "stages": 18,
+      "stageQuestions": 36,
+      "diagnostic": 3,
+      "boss": 5,
+      "questions": 44,
+      "flashcards": 50,
+      "game": 100,
+      "recall": 7
+    }
+  },
+  {
+    "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_18_Amazonia_Formacao_Territorial_e_Redes_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+    "counts": {
+      "stages": 20,
+      "stageQuestions": 40,
+      "diagnostic": 3,
+      "boss": 5,
+      "questions": 48,
+      "flashcards": 50,
+      "game": 100,
+      "recall": 20
+    }
+  },
+  {
+    "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_18_BNCC_e_Ensino_de_Geografia.html",
+    "counts": {
+      "stages": 18,
+      "stageQuestions": 36,
+      "diagnostic": 3,
+      "boss": 5,
+      "questions": 44,
+      "flashcards": 50,
+      "game": 100,
+      "recall": 7
+    }
+  },
+  {
+    "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_19_Amazonia_Conflitos_e_Desenvolvimento_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+    "counts": {
+      "stages": 20,
+      "stageQuestions": 40,
+      "diagnostic": 3,
+      "boss": 5,
+      "questions": 48,
+      "flashcards": 50,
+      "game": 100,
+      "recall": 20
+    }
+  },
+  {
+    "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_20_Para_Territorio_Populacao_e_Regionalizacao_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+    "counts": {
+      "stages": 20,
+      "stageQuestions": 40,
+      "diagnostic": 3,
+      "boss": 5,
+      "questions": 48,
+      "flashcards": 50,
+      "game": 100,
+      "recall": 20
+    }
+  },
+  {
+    "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_21_Para_Economia_Infraestrutura_e_Ambiente_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+    "counts": {
+      "stages": 20,
+      "stageQuestions": 40,
+      "diagnostic": 3,
+      "boss": 5,
+      "questions": 48,
+      "flashcards": 50,
+      "game": 100,
+      "recall": 20
+    }
+  },
+  {
+    "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_22_BNCC_e_Ensino_de_Geografia_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+    "counts": {
+      "stages": 20,
+      "stageQuestions": 40,
+      "diagnostic": 3,
+      "boss": 5,
+      "questions": 48,
+      "flashcards": 50,
+      "game": 100,
+      "recall": 20
+    }
+  },
+  {
+    "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_23_Legislacao_e_Fundamentos_da_Educacao_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+    "counts": {
+      "stages": 20,
+      "stageQuestions": 40,
+      "diagnostic": 3,
+      "boss": 5,
+      "questions": 48,
+      "flashcards": 50,
+      "game": 100,
+      "recall": 20
+    }
+  },
+  {
+    "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_24_Fundamentos_Pedagogicos_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+    "counts": {
+      "stages": 20,
+      "stageQuestions": 40,
+      "diagnostic": 3,
+      "boss": 5,
+      "questions": 48,
+      "flashcards": 50,
+      "game": 100,
+      "recall": 20
+    }
+  },
+  {
+    "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_25_Lingua_Portuguesa_FGV_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+    "counts": {
+      "stages": 20,
+      "stageQuestions": 40,
+      "diagnostic": 3,
+      "boss": 5,
+      "questions": 48,
+      "flashcards": 50,
+      "game": 100,
+      "recall": 20
+    }
+  },
+  {
+    "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_26_Raciocinio_Logico_FGV_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+    "counts": {
+      "stages": 20,
+      "stageQuestions": 40,
+      "diagnostic": 3,
+      "boss": 5,
+      "questions": 48,
+      "flashcards": 50,
+      "game": 100,
+      "recall": 20
+    }
+  },
+  {
+    "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_27_Atualidades_do_Para_e_Sociedade_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+    "counts": {
+      "stages": 20,
+      "stageQuestions": 40,
+      "diagnostic": 3,
+      "boss": 5,
+      "questions": 48,
+      "flashcards": 50,
+      "game": 100,
+      "recall": 20
+    }
+  }
+]

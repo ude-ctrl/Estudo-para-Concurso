@@ -1,0 +1,97 @@
+# Missão Geografia
+
+Biblioteca de estudos para concursos de Professor de Geografia. Esta primeira etapa reúne o acervo em uma interface React/TypeScript, com busca, filtros por área, favoritos, percurso e acesso a estudo, flashcards e games.
+
+## Executar localmente
+
+Requer Node.js 22.12 ou superior.
+
+```bash
+npm ci
+npm run dev
+```
+
+Abra o endereço mostrado pelo Vite, normalmente `http://localhost:5173/`.
+
+O importador roda automaticamente antes do desenvolvimento e do build. Os arquivos em `public/content/` e `public/legacy/` são gerados e não precisam ser versionados.
+
+```bash
+npm test
+npm run build
+npm run preview
+```
+
+`dist/` contém o site estático pronto para hospedagem.
+
+## Conteúdo preservado
+
+Os 31 arquivos em `MissaoAprovacaoGeo/` continuam sendo os originais. Nenhum texto, questão, alternativa, explicação, imagem ou banco pedagógico foi reescrito.
+
+O acervo contém 30 páginas de estudo e uma auditoria: 542 etapas, 1.327 questões cadastradas, 1.494 flashcards, 3.000 itens de game e 452 comandos de evocação. O diagnóstico é reapresentado no pós-teste e não é contado novamente.
+
+`scripts/import-content.mjs`:
+
+- lê os HTMLs sem executar o código das páginas;
+- extrai dados literais de `PRE`, `B`, `CH`, `C`, `G`, `X`, incluindo as atribuições adicionais de evocação;
+- preserva o conteúdo estático e os suplementos de revisão, discursiva e prática docente;
+- identifica cada arquivo separadamente por um ID e registra o hash da versão;
+- gera o catálogo, os dados estruturados e cópias byte a byte dos HTMLs;
+- mantém todas as variantes dos temas 03, 17 e 18.
+
+Os testes comparam os hashes e as contagens com o commit auditado `f245ca9f663d437bbda0fd3b6c774f76497363d9`. Uma mudança editorial futura exige uma nova versão e atualização explícita das referências de integridade.
+
+## Progresso
+
+Favoritos e último tema acessado usam uma chave própria da biblioteca. O percurso lê as chaves de progresso já utilizadas pelas páginas, incluindo a chave anterior quando disponível. Respostas fora do banco ou fora das alternativas não entram no percentual.
+
+O percentual corresponde às questões das etapas e do Chefão respondidas; não significa acerto ou domínio. Flashcards possuem avaliações independentes.
+
+O botão **Salvar cópia do progresso** baixa um JSON com as chaves disponíveis, as preferências e a identificação das versões. A restauração de backups ainda não está implementada.
+
+O armazenamento pertence ao navegador e à origem do site. Dados de arquivos abertos por `file://`, de outro domínio ou de outro dispositivo não são acessíveis automaticamente. Esta etapa não possui login ou sincronização.
+
+## Migração gradual
+
+O leitor integrado abre os HTMLs preservados em um iframe de mesma origem. A aplicação organiza o acesso e acompanha o progresso; o motor pedagógico interno ainda é o existente. Esse limite mantém todo o material disponível enquanto a extração estruturada é validada.
+
+As limitações previamente auditadas nas páginas continuam presentes: reinício de missão com comando inválido, rascunhos não persistidos, callback de game que pode acessar uma rodada encerrada e estado legado sem validação estrutural. As duas versões de Cartografia II ainda compartilham a chave `seducpa_t3_carto2_v26`; sua separação precisa de uma migração versionada do motor e do progresso.
+
+Próxima etapa: substituir o motor copiado por componentes comuns, com persistência de rascunhos e mapeamento seguro entre versões, preservando os conteúdos já extraídos.
+
+## Testes no navegador
+
+```bash
+npm run build
+npx playwright install chromium
+npm run test:e2e
+```
+
+Os mesmos fluxos são testados na raiz e em `/Estudo-para-Concurso/`, incluindo celular, favoritos, busca, progresso legado, exportação, materiais e navegação direta. Se já existir um Chromium instalado, a variável `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` pode indicar o executável.
+
+## GitHub Pages
+
+O build usa assets relativos e navegação por hash, permitindo abrir e recarregar uma missão sem configuração de rotas no servidor.
+
+O workflow **Publicar no GitHub Pages** está preparado para acionamento manual. Esta implementação não publica automaticamente.
+
+Para publicar depois da revisão:
+
+1. Enviar a implementação revisada ao repositório GitHub.
+2. Em **Settings → Pages**, selecionar **GitHub Actions** como fonte.
+3. Em **Actions**, executar **Publicar no GitHub Pages** na branch escolhida.
+
+O endereço esperado é `https://ude-ctrl.github.io/Estudo-para-Concurso/`. A disponibilidade do Pages depende das configurações e do plano do repositório.
+
+## Organização
+
+```text
+MissaoAprovacaoGeo/       HTMLs originais preservados
+scripts/                 Importador de conteúdo
+src/                     Biblioteca, leitor e progresso
+public/content/          Catálogo e bancos gerados
+public/legacy/           Cópias integrais geradas
+tests/fixtures/          Integridade e contagens da auditoria
+tests/browser/           Validação dos fluxos no Chromium
+.github/workflows/       Verificação e publicação manual
+dist/                    Site gerado para hospedagem
+```
