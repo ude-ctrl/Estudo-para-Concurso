@@ -52,26 +52,31 @@ Status:
 - [x] Definir critérios de aceite do piloto UX
 
 ## Fase 4 — Gamificação e dopamina controlada
-- [ ] Definir sistema de XP
-- [ ] Definir streak
-- [ ] Definir conquistas
-- [ ] Definir microcelebrações
-- [ ] Definir recompensa por correção de erro
-- [ ] Definir identidade temática por módulo
-- [ ] Garantir que nenhuma recompensa premie clique vazio
-- [ ] Criar opção para reduzir/desativar animações
+- [x] Definir sistema de XP
+- [x] Definir streak
+- [x] Definir conquistas
+- [x] Definir microcelebrações
+- [x] Definir recompensa por correção de erro
+- [x] Definir identidade temática por módulo
+- [x] Garantir que nenhuma recompensa premie clique vazio
+- [x] Criar opção para reduzir/desativar animações
+- [x] Definir regras anti-farming
+- [x] Separar XP de domínio pedagógico
 
 ## Fase 5 — Feedback universal
-- [ ] Questões: resposta correta
-- [ ] Questões: explicação clara
-- [ ] Questões: causalidade/relação conceitual
-- [ ] Questões: exemplo concreto/cotidiano/territorial
-- [ ] Questões erradas: explicar confusão provável
-- [ ] Flashcards: resposta + explicação quando necessária
-- [ ] Flashcards: exemplo quando necessário
-- [ ] Game V/F: justificativa obrigatória
-- [ ] Chefão: feedback analítico
-- [ ] Discursiva: rubrica + correção
+- [x] Questões: resposta correta
+- [x] Questões: explicação clara
+- [x] Questões: causalidade/relação conceitual
+- [x] Questões: exemplo concreto/cotidiano/territorial
+- [x] Questões erradas: explicar confusão provável
+- [x] Flashcards: resposta + explicação quando necessária
+- [x] Flashcards: exemplo quando necessário
+- [x] Game V/F: justificativa obrigatória
+- [x] Chefão: feedback analítico
+- [x] Discursiva: rubrica + correção
+- [x] Definir taxonomia de erros
+- [x] Definir feedback por distrator
+- [x] Definir recuperação ativa após erro
 
 ## Fase 6 — Banco de questões
 - [ ] Separar Fixação / Concurso / FGV Elite
