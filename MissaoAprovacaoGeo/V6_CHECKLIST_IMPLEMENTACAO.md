@@ -19,10 +19,10 @@ Status:
 - [x] Identificar duplicidades de numeração
 - [x] Identificar páginas com nome e conteúdo desalinhados
 - [x] Identificar versões antigas / duplicadas / auditadas
-- [~] Mapear conteúdo exclusivo por página
-- [~] Mapear conteúdo redundante
-- [~] Mapear lacunas frente ao edital
-- [~] Mapear dados temporais que precisam de atualização futura
+- [x] Mapear conteúdo exclusivo por página
+- [x] Mapear conteúdo redundante
+- [x] Mapear lacunas frente ao edital
+- [x] Mapear dados temporais que precisam de atualização futura
 
 ## Fase 2 — Nova arquitetura por módulos
 - [~] Aprovar módulos principais
