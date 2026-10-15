@@ -172,28 +172,31 @@ Status:
 - [x] Garantir transparência quando o estoque inédito estiver baixo
 
 ## Fase 11 — Discursivas
-- [~] Criar especificação do ambiente próprio
-- [~] 2 situações-problema por prova completa
-- [~] Limite oficial de 15–30 linhas por resposta
-- [~] Integrar ao cronômetro global de 5h
-- [~] Definir rubrica pedagógica de treino
-- [~] Definir correção de conteúdo / estrutura / linguagem / aderência ao comando
-- [~] Modelo de resposta somente após tentativa
-- [~] Histórico de evolução
-- [~] Banco rotativo e política anti-repetição
-- [~] Treino manuscrito/folha simulada
+- [x] Criar especificação do ambiente próprio
+- [x] Definir 2 situações-problema por prova completa
+- [x] Validar limite oficial de 15–30 linhas por resposta
+- [x] Integrar ao cronômetro global de 5h
+- [x] Definir rubrica pedagógica de treino sem confundir com espelho oficial
+- [x] Definir correção de conteúdo / estrutura / linguagem / aderência ao comando
+- [x] Modelo de resposta somente após tentativa
+- [x] Definir histórico de evolução
+- [x] Definir banco rotativo e política anti-repetição
+- [x] Definir treino manuscrito/folha simulada
+- [x] Integrar erros discursivos ao caderno global
 
 ## Fase 12 — Prova prática
-- [~] Modelar defesa de plano de aula
-- [~] Plano manuscrito no local
-- [~] Tema definido em edital de convocação
-- [~] Plano 4 pontos / Defesa 6 pontos
-- [~] Simular apresentação oral / aula / conteúdo / situação-problema
-- [~] Treinar sem projetor ou computador
-- [~] Usar apenas quadro/lousa e pincel como cenário oficial atual
-- [~] Definir rubrica alinhada aos critérios gerais do edital
-- [~] Não inventar tempo oficial antes do edital de convocação
-- [~] Criar feedback e histórico de evolução
+- [x] Modelar defesa de plano de aula
+- [x] Validar plano manuscrito no local
+- [x] Registrar que o tema será definido em edital de convocação
+- [x] Validar Plano 4 pontos / Defesa 6 pontos
+- [x] Modelar apresentação oral / aula / conteúdo / situação-problema
+- [x] Treinar sem projetor, vídeo ou computador
+- [x] Usar quadro/lousa e pincel como cenário oficial atual
+- [x] Definir plano de quadro
+- [x] Definir rubrica alinhada aos critérios gerais do edital
+- [x] Não inventar tempo oficial antes do edital de convocação
+- [x] Definir feedback e histórico de evolução
+- [x] Preparar arquitetura para atualização quando sair o edital de convocação
 
 ## Fase 13 — Correções já conhecidas
 - [ ] Renomear/corrigir atual Tema 15
