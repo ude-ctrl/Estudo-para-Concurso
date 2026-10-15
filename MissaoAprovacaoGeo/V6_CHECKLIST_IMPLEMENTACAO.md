@@ -198,17 +198,24 @@ Status:
 - [x] Definir feedback e histórico de evolução
 - [x] Preparar arquitetura para atualização quando sair o edital de convocação
 
-## Fase 13 — Correções já conhecidas
-- [ ] Renomear/corrigir atual Tema 15
-- [ ] Resolver duplicidade Tema 17
-- [ ] Resolver duplicidade Tema 18
-- [~] Consolidar Cartografia I + II + Cartografia/Geotecnologias
+## Fase 13 — Saneamento final antes do piloto
+- [x] Confirmar conteúdo real do antigo Tema 15 como Geopolítica II
+- [x] Definir `unit_id` canônico para Geopolítica II sem renomear destrutivamente o legado
+- [x] Resolver conflito de numeração Tema 17 por IDs canônicos
+- [x] Resolver conflito de numeração Tema 18 por IDs canônicos
+- [x] Fechar regra de consolidação Cartografia I + II + Cartografia/Geotecnologias
 - [x] Revisar sobreposição Amazônia 15/17/18/19
 - [x] Revisar sobreposição Brasil/Pará 16/20/21
 - [x] Revisar sobreposição BNCC 18/22
-- [ ] Atualizar módulos antigos ao padrão V6
-- [ ] Verificar Documento/Base Curricular do Pará
-- [ ] Reforçar transtornos específicos de aprendizagem
+- [x] Verificar Documento Curricular do Estado do Pará como lacuna explícita
+- [x] Incluir DCEPA EI/EF e Ensino Médio no escopo obrigatório de migração
+- [x] Verificar transtornos funcionais específicos como lacuna explícita
+- [x] Incluir dislexia, disortografia, disgrafia, discalculia e TDAH no escopo pedagógico
+- [x] Definir distinção entre TFE e público-alvo da Educação Especial
+- [x] Definir limite da atuação docente: apoio pedagógico, não diagnóstico clínico
+- [x] Definir 28 IDs canônicos independentes de `Tema XX`
+- [x] Manter HTMLs históricos intactos até auditoria de paridade
+- [x] Transferir atualização efetiva dos módulos antigos para as Fases 14/15
 
 ## Fase 14 — Piloto
 - [ ] Escolher módulo piloto
