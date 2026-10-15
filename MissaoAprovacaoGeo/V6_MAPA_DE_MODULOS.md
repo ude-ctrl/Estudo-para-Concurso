@@ -1,259 +1,188 @@
-# V6 — Mapa Oficial de Módulos
+# V6 — Mapa Oficial de Módulos — FINAL DA FASE 2
 
-## Estrutura principal
-SEDUC-PA → Módulo → Unidade → Etapas/Missões
+## Estrutura de navegação
+**SEDUC-PA → Módulo → Unidade → Missão/Etapa**
 
-A navegação principal deixará de usar “Tema XX” como referência para o estudante. A numeração pode continuar internamente para rastreabilidade.
+A interface principal não utiliza mais `Tema XX`. A numeração histórica permanece somente como metadado de rastreabilidade durante a migração e auditoria.
+
+## Resumo
+- **9 módulos principais**;
+- **28 unidades canônicas**;
+- páginas duplicadas ou conflitantes deixam de aparecer para o estudante;
+- conceitos-base são ensinados uma vez e reaplicados em contextos nacionais e regionais;
+- Biblioteca e Trilha de Estudo são estruturas diferentes.
+
+---
 
 ## Módulo 1 — Fundamentos da Geografia
-Objetivo: consolidar conceitos estruturantes e autores que serão reutilizados em todo o curso.
+1. **Conceitos, Categorias e Autores** — fonte: Tema 01.
 
-Unidades propostas:
-1. Espaço geográfico
-2. Território e territorialidade
-3. Região e regionalização
-4. Paisagem
-5. Lugar
-6. Redes e escalas
-7. Escolas do pensamento geográfico
-8. Autores clássicos e contemporâneos
-9. Geografia crítica, cultural e decolonial
-10. Integração conceitual
+Função: espaço, território, região, paisagem, lugar, redes, escalas, escolas e autores. A V5 permanece referência qualitativa.
 
-Fonte principal atual:
-- Tema 01 — Conceitos e Autores
+---
 
 ## Módulo 2 — Cartografia e Geotecnologias
-Objetivo: integrar linguagem cartográfica, cálculo, representação e tecnologias geoespaciais em uma única trilha coerente.
+1. **Orientação, Coordenadas, Fusos e Escala** — Tema 02 + complementos exclusivos.
+2. **Projeções e Representação Cartográfica** — Tema 03 Auditada + conteúdos exclusivos do antigo Tema 17 Cartografia.
+3. **Sensoriamento Remoto, SIG e Geotecnologias** — Tema 03 Auditada + antigo Tema 17 Cartografia.
 
-Unidades propostas:
-1. Linguagem cartográfica: mapa, carta e planta
-2. Orientação
-3. Coordenadas geográficas
-4. Fusos horários
-5. Escala numérica e gráfica
-6. Projeções cartográficas
-7. Cartografia temática e variáveis visuais
-8. Tabelas, gráficos e perfis
-9. Sensoriamento remoto
-10. SIG e geoprocessamento
-11. GNSS
-12. Cartografia digital e aplicações
-13. Integração cartográfica
+Regras:
+- Tema 03 comum permanece fonte histórica;
+- versão Auditada é preferencial;
+- mapa/carta/planta, curvas de nível, perfil, declividade, espectro, classificação, geocodificação, interpolação, georreferenciamento, metadados e INDE devem ser preservados.
 
-Fontes atuais:
-- Tema 02 — Cartografia I
-- Tema 03 — Cartografia II
-- Tema 17 — Cartografia, Geotecnologias e Representação do Espaço
+---
 
-Decisão preliminar: forte candidato a consolidação.
+## Módulo 3 — Geografia Física, Ambiente e Energia
+1. **Climatologia** — Tema 04.
+2. **Tectônica, Geologia e Relevo** — Tema 05.
+3. **Solos, Erosão e Riscos Geomorfológicos** — Tema 06.
+4. **Hidrologia e Recursos Hídricos** — Tema 07.
+5. **Biomas e Domínios Morfoclimáticos** — Tema 08.
+6. **Ambiente, Conservação e Energia** — Tema 09.
 
-## Módulo 3 — Geografia Física e Sistemas Naturais
-Objetivo: estudar processos naturais de modo sistêmico, evitando páginas isoladas sem conexão causal.
+Regra: unidades permanecem independentes; integração ocorre por missões e questões cruzadas, não por uma página gigante.
 
-Unidades propostas:
-1. Climatologia
-2. Geologia e tectônica
-3. Geomorfologia
-4. Solos e pedogênese
-5. Erosão e movimentos de massa
-6. Hidrologia
-7. Biomas e domínios morfoclimáticos
-8. Sistemas ambientais
-9. Riscos e vulnerabilidades
-10. Integração natureza–sociedade
-
-Fontes atuais:
-- Tema 04 — Climatologia
-- Tema 05 — Tectônica e Relevo
-- Tema 06 — Solos e Erosão
-- Tema 07 — Hidrologia
-- Tema 08 — Biomas e Domínios
-- partes do Tema 09 — Ambiente e Energia
+---
 
 ## Módulo 4 — Geografia Humana e Organização do Espaço
-Objetivo: integrar população, cidade, campo, economia e redes dentro de uma leitura territorial comum.
+1. **População, Migrações e Povos Tradicionais** — Tema 10.
+2. **Geografia Urbana e Redes Urbanas** — Tema 11.
+3. **Geografia Agrária e Questão Fundiária** — Tema 12.
+4. **Indústria, Economia, Redes e Logística** — Tema 13.
 
-Unidades propostas:
-1. População e demografia
-2. Migrações
-3. Povos e comunidades tradicionais
-4. Territorialidades
-5. Geografia Urbana
-6. Redes urbanas e centralidade
-7. Segregação, mobilidade e direito à cidade
-8. Geografia Agrária
-9. Estrutura fundiária e questão agrária
-10. Agricultura familiar e agronegócio
-11. Indústria e localização
-12. Reestruturação produtiva
-13. Redes, fluxos e logística
-14. Integração campo–cidade
+---
 
-Fontes atuais:
-- Tema 10 — População e Povos Tradicionais
-- Tema 11 — Geografia Urbana
-- Tema 12 — Geografia Agrária
-- Tema 13 — Indústria, Economia e Redes
+## Módulo 5 — Brasil: Território e Regionalização
+1. **Brasil: Formação Territorial, Regionalização e Integração** — Tema 16.
 
-## Módulo 5 — Geopolítica, Globalização e Economia Mundial
-Objetivo: reunir geopolítica clássica, ordem mundial e geoeconomia contemporânea.
+Regra: população, urbanização, agrário, indústria e redes aparecem como **aplicações ao Brasil**, sem repetir integralmente a teoria dos módulos-base.
 
-Unidades propostas:
-1. Estado, nação, soberania e fronteiras
-2. Ratzel e Kjellén
-3. Mahan, Mackinder e Spykman
-4. Guerra Fria
-5. Ordem pós-Guerra Fria
-6. Hard power, soft power e smart power
-7. Globalização e compressão espaço-tempo
-8. DIT e cadeias globais de valor
-9. China e geoeconomia
-10. BRI e corredores estratégicos
-11. Taiwan e semicondutores
-12. Chokepoints e rotas estratégicas
-13. Minerais críticos
-14. Blocos e integração regional
-15. Conflitos contemporâneos
+---
 
-Fontes atuais:
-- Tema 14 — Geopolítica, Globalização e Ordem Mundial
-- atual Tema 15, cujo nome não corresponde ao conteúdo e deverá ser corrigido
+## Módulo 6 — Geopolítica, Globalização e Geoeconomia
+1. **Geopolítica, Poder e Ordem Mundial** — Tema 14.
+2. **Geoeconomia e Conflitos Contemporâneos** — atual Tema 15, cujo nome de arquivo será corrigido na migração.
 
-## Módulo 6 — Amazônia e Pará
-Objetivo: formar um grande eixo regional estratégico para o concurso, integrando natureza, formação territorial, população, economia, conflitos e atualidades do Pará.
+Tema 15 pertence definitivamente à Geopolítica, não à Amazônia.
 
-Unidades propostas:
-1. Amazônia: recortes e conceitos
-2. Sistemas ambientais amazônicos
-3. Clima, floresta e água
-4. Hidrografia amazônica
-5. Formação territorial da Amazônia
-6. Territorialidades indígenas e tradicionais
-7. Redes, rios e urbanização amazônica
-8. SPVEA, SUDAM e planejamento regional
-9. PIN, Transamazônica e BR-163
-10. Mineração e Carajás
-11. Garimpo, mercúrio e conflitos
-12. Hidrelétricas e grandes projetos
-13. População e mobilidade amazônica
-14. Pará: formação territorial
-15. Pará: regionalização
-16. Pará: rede urbana
-17. Pará: população
-18. Pará: economia
-19. Pará: infraestrutura e logística
-20. Pará: ambiente e conflitos
-21. Atualidades do Pará
-22. Integração Amazônia–Pará
+---
 
-Fontes atuais:
-- Tema 15 nominal — revisar, pois conteúdo real é Geopolítica II
-- Tema 16 — Geografia do Brasil e do Pará
-- Tema 17 — Amazônia Natureza e Sistemas Ambientais
-- Tema 18 — Amazônia Formação Territorial e Redes
-- Tema 19 — Amazônia Conflitos e Desenvolvimento
-- Tema 20 — Pará Território, População e Regionalização
-- Tema 21 — Pará Economia, Infraestrutura e Ambiente
-- Tema 27 — Atualidades do Pará e Sociedade
+## Módulo 7 — Amazônia e Pará
+1. **Amazônia: Natureza e Sistemas Ambientais** — Tema 17 Amazônia.
+2. **Amazônia: Formação Territorial, Redes e Urbanização** — Tema 18 Amazônia.
+3. **Amazônia: Conflitos, Grandes Projetos e Desenvolvimento** — Tema 19.
+4. **Pará: Território, População e Regionalização** — Tema 20.
+5. **Pará: Economia, Infraestrutura e Ambiente** — Tema 21.
 
-## Módulo 7 — Brasil: Território, Economia e Regionalização
-Objetivo: concentrar aplicações nacionais sem repetir conceitos já ensinados em módulos-base.
+Regra: este módulo é aplicação regional de alta prioridade. Conceitos de clima, hidrologia, território, redes, população, logística e ambiente são recuperados de forma breve e aplicados à realidade amazônica/paraense.
 
-Unidades propostas:
-1. Formação territorial do Brasil
-2. Tratados e fronteiras
-3. Regionalizações do Brasil
-4. Grandes Regiões do IBGE
-5. Regiões Imediatas e Intermediárias
-6. Complexos geoeconômicos de Geiger
-7. Amazônia Legal
-8. Desigualdades regionais
-9. Dinâmica populacional brasileira
-10. Urbanização brasileira
-11. Espaço agrário brasileiro
-12. Industrialização e redes
-13. Infraestrutura e território
-14. Integração nacional
-
-Fonte principal atual:
-- Tema 16 — Geografia do Brasil e do Pará
-- aplicações distribuídas em Urbana, Agrária, Indústria e População
-
-Regra: evitar repetir definições já ensinadas nos módulos 3 e 4. Este módulo deve priorizar aplicação ao território brasileiro.
+---
 
 ## Módulo 8 — Educação, Ensino de Geografia e Legislação
-Objetivo: integrar didática, fundamentos pedagógicos, ensino de Geografia, BNCC e legislação educacional.
+1. **BNCC e Ensino de Geografia** — fusão seletiva do Tema 18 BNCC antigo + Tema 22 Auditada.
+2. **Legislação e Fundamentos da Educação** — Tema 23.
+3. **Fundamentos Pedagógicos, Aprendizagem e Inclusão** — Tema 24.
 
-Unidades propostas:
-1. Ensino de Geografia e pensamento espacial
-2. BNCC e competências
-3. Cartografia escolar
-4. Metodologias de ensino de Geografia
-5. Avaliação da aprendizagem
-6. Piaget
-7. Vygotsky
-8. Freire
-9. Wallon
-10. Aprendizagem baseada em evidências
-11. Memória, atenção e funções executivas
-12. Inclusão e DUA
-13. AEE
-14. TEA, TDAH e transtornos específicos de aprendizagem
-15. Constituição e educação
-16. LDB
-17. ECA
-18. Gestão democrática
-19. PNE / SNE
-20. Documento/Base Curricular do Pará
-21. PPP e planejamento
-22. Integração pedagógica
+Na Unidade 8.1:
+- Tema 18 antigo fornece a espinha curricular/normativa;
+- Tema 22 fornece didática específica, Castellar, Callai, Castro Panizza, pensamento espacial, raciocínio geográfico e erros dos estudantes.
 
-Fontes atuais:
-- Tema 18 — BNCC e Ensino de Geografia (versão anterior)
-- Tema 22 — BNCC e Ensino de Geografia auditada
-- Tema 23 — Legislação e Fundamentos da Educação
-- Tema 24 — Fundamentos Pedagógicos
+Complementos obrigatórios antes da versão final:
+- Documento/Base Curricular do Pará;
+- transtornos específicos de aprendizagem explicitados e diferenciados.
 
-Decisão preliminar: consolidar versões duplicadas de BNCC e usar a mais completa como fonte principal.
+---
 
 ## Módulo 9 — Conhecimentos Básicos
-Objetivo: manter os componentes gerais do edital organizados, mas separados dos conhecimentos específicos.
+1. **Língua Portuguesa — FGV** — Tema 25.
+2. **Raciocínio Lógico — FGV** — Tema 26.
+3. **Atualidades do Pará e Sociedade** — Tema 27.
 
-Submódulos:
-### Língua Portuguesa
-Fonte atual:
-- Tema 25 — Língua Portuguesa FGV
+Atualidades deve exibir fonte, data de referência e data de verificação.
 
-### Raciocínio Lógico
-Fonte atual:
-- Tema 26 — Raciocínio Lógico FGV
+---
 
-### Atualidades
-Fonte atual:
-- Tema 27 — Atualidades do Pará e Sociedade
+## Contagem oficial
+| Módulo | Unidades |
+|---|---:|
+| Fundamentos da Geografia | 1 |
+| Cartografia e Geotecnologias | 3 |
+| Geografia Física, Ambiente e Energia | 6 |
+| Geografia Humana e Organização do Espaço | 4 |
+| Brasil: Território e Regionalização | 1 |
+| Geopolítica, Globalização e Geoeconomia | 2 |
+| Amazônia e Pará | 5 |
+| Educação, Ensino de Geografia e Legislação | 3 |
+| Conhecimentos Básicos | 3 |
+| **Total** | **28** |
 
-Regra: Atualidades deve possuir marcação de fonte e data de verificação.
+---
 
-## Áreas transversais da plataforma
-Não são módulos teóricos, mas sistemas comuns:
-- Revisão inteligente
-- Caderno de erros
-- Flashcards globais
-- Banco de questões
-- Simulado SEDUC-PA
-- Discursivas
-- Prova prática
-- Desempenho e domínio
+## Conceito-base × aplicação
+Exemplos estruturais:
+- território: base em Fundamentos; aplicação em Brasil, Geopolítica e Amazônia/Pará;
+- cartografia temática: base no Módulo 2; aplicação em Urbana, Brasil, Pará e Ensino;
+- ZCIT: base em Climatologia; aplicação em Amazônia;
+- hidrologia: base em Hidrologia; aplicação em Amazônia/Pará;
+- REGIC/rede urbana: base em Urbana; aplicação em Brasil, Amazônia e Pará;
+- questão agrária: base em Agrária; aplicação em Brasil e Amazônia/Pará;
+- logística/cadeias: base em Indústria/Economia/Redes; aplicação em Geopolítica, Brasil e Pará.
+
+Regra: reaparecer não significa repetir a aula. A aplicação contém recuperação curta + link para o conceito-base + transferência para novo caso.
+
+---
+
+## Biblioteca × Trilha SEDUC-PA
+### Biblioteca
+Organiza o conhecimento pela lógica científica acima.
+
+### Trilha de preparação
+Intercala desde o início:
+- Geografia específica;
+- Conhecimentos pedagógicos;
+- Português;
+- Raciocínio Lógico;
+- Atualidades.
+
+A trilha não exige terminar todos os módulos de Geografia para depois iniciar as demais disciplinas.
+
+### Ordem conceitual recomendada da Geografia
+1. Fundamentos;
+2. Cartografia;
+3. Física;
+4. Humana;
+5. Brasil;
+6. Amazônia e Pará;
+7. Geopolítica.
+
+---
+
+## Sistemas transversais
+Não são páginas teóricas duplicadas:
+- Revisão inteligente;
+- Caderno de erros;
+- Flashcards globais;
+- Banco de questões;
+- Simulado SEDUC-PA;
+- Discursivas;
+- Prova prática;
+- Desempenho e domínio.
+
+---
 
 ## Regra de consolidação
-Ao migrar conteúdo:
 1. ensinar conceito-base uma vez;
 2. referenciar o conceito em outras unidades;
-3. transformar repetições em aplicação;
+3. transformar repetição em recuperação e aplicação;
 4. preservar exemplos regionais relevantes;
-5. nunca apagar aprofundamento único;
-6. nunca fundir assuntos apenas porque compartilham palavras-chave.
+5. nunca apagar aprofundamento exclusivo;
+6. nunca fundir assuntos apenas porque compartilham palavras-chave;
+7. auditar paridade antes de classificar um original como legado.
+
+## Documento detalhado
+Ver `V6_ARQUITETURA_DEFINITIVA_FASE2.md`.
 
 ## Estado
-Este mapa é proposta oficial inicial da V6 e deverá ser refinado após a Matriz de Redundância completa.
+**Mapa de módulos aprovado tecnicamente para a V6 ao final da Fase 2.**
+Nenhum HTML de estudo foi alterado.
