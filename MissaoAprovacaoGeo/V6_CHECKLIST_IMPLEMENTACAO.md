@@ -148,39 +148,52 @@ Status:
 - [x] Definir painel de pontos fracos e próxima ação
 - [x] Definir persistência e reuso entre concursos
 
-## Fase 10 — Simulado SEDUC-PA
-- [ ] Criar modo 60 questões
-- [ ] 10 Língua Portuguesa
-- [ ] 5 Raciocínio Lógico
-- [ ] 5 Atualidades
-- [ ] 10 Conhecimentos Pedagógicos
-- [ ] 30 Geografia
-- [ ] Questões A–E
-- [ ] Cronômetro
-- [ ] Correção final
-- [ ] Diagnóstico por disciplina e assunto
-- [ ] Alimentar caderno de erros
-- [ ] Adicionar 2 discursivas ao final
+## Fase 10 — Gerador de Simulados SEDUC-PA
+- [x] Substituir conceito de simulado fixo por gerador de provas
+- [x] Definir banco amplo e expansível
+- [x] Definir blueprint de 60 questões por tentativa
+- [x] 10 Língua Portuguesa
+- [x] 5 Raciocínio Lógico
+- [x] 5 Atualidades
+- [x] 10 Conhecimentos Pedagógicos
+- [x] 30 Geografia
+- [x] Definir A–E para questões autorais do perfil SEDUC-PA
+- [x] Definir política anti-repetição
+- [x] Registrar histórico de exposição por questão
+- [x] Definir índice de novidade
+- [x] Definir modos Oficial / Inédito / Adaptativo / Revisão de Erros / Por Módulo / Prova Nova
+- [x] Definir cobertura acumulada entre tentativas
+- [x] Definir distribuição inicial de dificuldade e nível cognitivo
+- [x] Definir controle de gabaritos
+- [x] Definir validade temporal de Atualidades
+- [x] Definir diagnóstico final e integração com erros/domínio
+- [x] Definir motor genérico por `exam_profile`
+- [x] Integrar objetiva + 2 discursivas em modo Prova Completa de 5h
+- [x] Garantir transparência quando o estoque inédito estiver baixo
 
 ## Fase 11 — Discursivas
-- [ ] Criar ambiente próprio
-- [ ] 2 questões simultâneas
-- [ ] Limite de linhas
-- [ ] Cronômetro
-- [ ] Rubrica de conteúdo
-- [ ] Rubrica de estrutura
-- [ ] Rubrica de linguagem
-- [ ] Modelo de resposta após tentativa
-- [ ] Histórico de evolução
+- [~] Criar especificação do ambiente próprio
+- [~] 2 situações-problema por prova completa
+- [~] Limite oficial de 15–30 linhas por resposta
+- [~] Integrar ao cronômetro global de 5h
+- [~] Definir rubrica pedagógica de treino
+- [~] Definir correção de conteúdo / estrutura / linguagem / aderência ao comando
+- [~] Modelo de resposta somente após tentativa
+- [~] Histórico de evolução
+- [~] Banco rotativo e política anti-repetição
+- [~] Treino manuscrito/folha simulada
 
 ## Fase 12 — Prova prática
-- [ ] Criar sorteio de tema
-- [ ] Criar modelo de plano de aula
-- [ ] Definir tempo de preparação
-- [ ] Criar defesa oral cronometrada
-- [ ] Criar rubrica
-- [ ] Criar feedback
-- [ ] Simular condições sem projetor
+- [~] Modelar defesa de plano de aula
+- [~] Plano manuscrito no local
+- [~] Tema definido em edital de convocação
+- [~] Plano 4 pontos / Defesa 6 pontos
+- [~] Simular apresentação oral / aula / conteúdo / situação-problema
+- [~] Treinar sem projetor ou computador
+- [~] Usar apenas quadro/lousa e pincel como cenário oficial atual
+- [~] Definir rubrica alinhada aos critérios gerais do edital
+- [~] Não inventar tempo oficial antes do edital de convocação
+- [~] Criar feedback e histórico de evolução
 
 ## Fase 13 — Correções já conhecidas
 - [ ] Renomear/corrigir atual Tema 15
