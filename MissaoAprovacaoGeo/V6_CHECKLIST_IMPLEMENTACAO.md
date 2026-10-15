@@ -11,26 +11,26 @@ Status:
 - [x] Criar Checklist V6
 - [x] Criar Mapa de Módulos V6
 - [x] Criar Matriz de Redundância V6
-- [ ] Definir arquivos originais como fonte de verdade durante migração
-- [ ] Definir política de rollback
+- [x] Definir arquivos originais como fonte de verdade durante migração
+- [x] Definir política de rollback
 
 ## Fase 1 — Auditoria estrutural
-- [ ] Inventariar todas as páginas atuais
-- [ ] Identificar duplicidades de numeração
-- [ ] Identificar páginas com nome e conteúdo desalinhados
-- [ ] Identificar versões antigas / duplicadas / auditadas
-- [ ] Mapear conteúdo exclusivo por página
-- [ ] Mapear conteúdo redundante
-- [ ] Mapear lacunas frente ao edital
-- [ ] Mapear dados temporais que precisam de atualização futura
+- [x] Inventariar todas as páginas atuais
+- [x] Identificar duplicidades de numeração
+- [x] Identificar páginas com nome e conteúdo desalinhados
+- [x] Identificar versões antigas / duplicadas / auditadas
+- [~] Mapear conteúdo exclusivo por página
+- [~] Mapear conteúdo redundante
+- [~] Mapear lacunas frente ao edital
+- [~] Mapear dados temporais que precisam de atualização futura
 
 ## Fase 2 — Nova arquitetura por módulos
-- [ ] Aprovar módulos principais
-- [ ] Associar cada página atual a um módulo
-- [ ] Definir unidades de estudo finais
-- [ ] Definir conceitos-base e páginas de aplicação
-- [ ] Remover “Tema XX” da navegação principal
-- [ ] Preservar numeração apenas internamente quando útil
+- [~] Aprovar módulos principais
+- [x] Associar cada página atual a um módulo
+- [~] Definir unidades de estudo finais
+- [~] Definir conceitos-base e páginas de aplicação
+- [x] Remover “Tema XX” da navegação principal
+- [x] Preservar numeração apenas internamente quando útil
 - [ ] Criar navegação Concurso → Módulo → Unidade → Etapas
 
 ## Fase 3 — Matriz Premium V6 de UX
@@ -143,10 +143,10 @@ Status:
 - [ ] Renomear/corrigir atual Tema 15
 - [ ] Resolver duplicidade Tema 17
 - [ ] Resolver duplicidade Tema 18
-- [ ] Consolidar Cartografia I + II + Cartografia/Geotecnologias
-- [ ] Revisar sobreposição Amazônia 15/17/18/19
-- [ ] Revisar sobreposição Brasil/Pará 16/20/21
-- [ ] Revisar sobreposição BNCC 18/22
+- [~] Consolidar Cartografia I + II + Cartografia/Geotecnologias
+- [x] Revisar sobreposição Amazônia 15/17/18/19
+- [x] Revisar sobreposição Brasil/Pará 16/20/21
+- [x] Revisar sobreposição BNCC 18/22
 - [ ] Atualizar módulos antigos ao padrão V6
 - [ ] Verificar Documento/Base Curricular do Pará
 - [ ] Reforçar transtornos específicos de aprendizagem
