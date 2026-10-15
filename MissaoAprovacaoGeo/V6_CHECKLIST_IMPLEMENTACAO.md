@@ -79,17 +79,24 @@ Status:
 - [x] Definir recuperação ativa após erro
 
 ## Fase 6 — Banco de questões
-- [ ] Separar Fixação / Concurso / FGV Elite
-- [ ] Converter avaliações reais para A–E
-- [ ] Criar quinto distrator plausível
-- [ ] Revisar qualidade de distratores
-- [ ] Balancear gabaritos A/B/C/D/E
-- [ ] Remover padrões previsvisíveis
-- [ ] Classificar dificuldade
-- [ ] Classificar nível cognitivo
-- [ ] Inserir questões interdisciplinares
-- [ ] Inserir mapas, gráficos, tabelas e imagens quando pertinentes
-- [ ] Criar banco de questões reais da FGV separado das autorais
+- [x] Separar Fixação / Concurso / FGV Elite
+- [x] Definir banco de questões reais separado das autorais
+- [x] Corrigir regra: questão real permanece fiel ao formato original
+- [x] Padronizar Concurso / FGV Elite / simulados autorais em A–E
+- [x] Definir quinto distrator plausível para itens autorais promovidos
+- [x] Definir critérios de qualidade de distratores
+- [x] Definir balanceamento A/B/C/D/E
+- [x] Definir prevenção de padrões previsíveis
+- [x] Classificar dificuldade D1–D4
+- [x] Classificar nível cognitivo C1–C5
+- [x] Definir regra para questões interdisciplinares
+- [x] Definir regra para mapas, gráficos, tabelas e imagens
+- [x] Definir esquema de metadados do banco
+- [x] Definir migração do legado sem apagar originais
+- [x] Definir rastreabilidade por `legacy_id`
+- [x] Definir reuso do banco entre concursos
+- [x] Realizar auditoria amostral de Tema 01 e Cartografia II
+- [x] Validar formato oficial da SEDUC-PA no edital FGV
 
 ## Fase 7 — Flashcards e revisão espaçada
 - [ ] Revisar cartões excessivamente longos
