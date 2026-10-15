@@ -37,15 +37,19 @@ Status:
 - [x] Definir contagem canônica: 9 módulos / 28 unidades
 
 ## Fase 3 — Matriz Premium V6 de UX
-- [ ] Definir template visual único
-- [ ] Definir cabeçalho padrão
-- [ ] Definir hierarquia de títulos
-- [ ] Definir área de progresso
-- [ ] Definir navegação entre seções
-- [ ] Definir separação Estudo / Treino / Revisão / Prova
-- [ ] Definir comportamento mobile
-- [ ] Definir modo claro/escuro
-- [ ] Definir acessibilidade e redução de movimento
+- [x] Definir template visual único
+- [x] Definir cabeçalho padrão
+- [x] Definir hierarquia de títulos
+- [x] Definir área de progresso
+- [x] Definir navegação entre seções
+- [x] Definir separação Estudo / Treino / Revisão / Prova
+- [x] Definir comportamento mobile
+- [x] Definir modo claro/escuro
+- [x] Definir acessibilidade e redução de movimento
+- [x] Definir dashboard orientado à próxima ação
+- [x] Definir regra de densidade e divulgação progressiva
+- [x] Definir componentes comuns da V6
+- [x] Definir critérios de aceite do piloto UX
 
 ## Fase 4 — Gamificação e dopamina controlada
 - [ ] Definir sistema de XP
