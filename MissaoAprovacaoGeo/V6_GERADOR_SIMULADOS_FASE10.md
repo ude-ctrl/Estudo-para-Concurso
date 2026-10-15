@@ -11,7 +11,7 @@ O número 60 representa o tamanho de cada prova gerada conforme o edital. O sist
 Cada nova tentativa deverá ser diferente sempre que houver estoque suficiente.
 
 ## Blueprint oficial por tentativa
-Cada simulado oficial terá:
+Cada simulado objetivo oficial terá:
 - 10 Língua Portuguesa;
 - 5 Raciocínio Lógico;
 - 5 Atualidades;
@@ -25,6 +25,26 @@ Para questões autorais do perfil SEDUC-PA:
 - uma correta;
 - sem feedback durante a execução;
 - correção somente ao final.
+
+## Prova completa integrada
+O edital vigente estabelece **5 horas para a realização conjunta da Prova Objetiva e da Prova Discursiva** para Professor Classe I.
+
+Por isso, a V6 terá dois níveis de simulação:
+
+### Simulado Objetivo
+- 60 questões;
+- cronômetro próprio;
+- adequado para treinos frequentes.
+
+### Prova Completa SEDUC-PA
+- 60 questões objetivas;
+- 2 situações-problema discursivas;
+- cronômetro global de 5 horas;
+- sem feedback durante a execução;
+- possibilidade de o aluno escolher a ordem de resolução, como estratégia de prova;
+- correção somente ao final.
+
+A plataforma deve registrar quanto tempo foi gasto em objetiva, discursivas e revisão final, sem obrigar uma divisão artificial do tempo.
 
 ## O banco não terá limite conceitual de 60 itens
 O banco deverá crescer continuamente.
@@ -69,6 +89,14 @@ Exemplo:
 
 Nunca fingir variedade.
 
+## Índice de novidade
+Antes de iniciar um simulado, o sistema poderá mostrar:
+- percentual de itens inéditos;
+- percentual vistos há muito tempo;
+- percentual de repetição recente inevitável.
+
+O índice serve para transparência, não para criar pontuação de desempenho.
+
 ## Modos de simulado
 ### 1. Oficial
 Replica a distribuição do edital.
@@ -92,6 +120,9 @@ Não deve ser rotulado como simulado oficial.
 ### 6. Prova Nova
 Gera uma nova versão completa evitando itens usados nas últimas tentativas.
 
+### 7. Prova Completa 5h
+Integra objetiva + duas discursivas sob um único cronômetro, reproduzindo a carga temporal oficial.
+
 ## Blueprint interno de Geografia
 As 30 questões específicas não serão sorteadas aleatoriamente de um saco único.
 
@@ -106,6 +137,14 @@ O motor deve equilibrar os grandes eixos do edital e variar a composição entre
 - Ensino de Geografia quando aplicável ao bloco específico conforme edital.
 
 A distribuição exata pode variar entre simulados para evitar previsibilidade, mas nenhum grande eixo pode desaparecer repetidamente.
+
+## Cobertura acumulada
+Além da cobertura de uma prova isolada, o sistema deve avaliar a cobertura das últimas tentativas.
+
+Objetivo:
+- evitar que um eixo importante fique ausente por várias provas consecutivas;
+- aumentar a diversidade temática ao longo do tempo;
+- não transformar cada prova em uma divisão rígida e previsível.
 
 ## Dificuldade
 Cada simulado deve misturar dificuldade.
@@ -154,7 +193,8 @@ Ao terminar, mostrar:
 - questões em branco;
 - padrões de erro;
 - comparação com tentativas anteriores;
-- conceitos que precisam de revisão.
+- conceitos que precisam de revisão;
+- índice de novidade efetivo da prova.
 
 Depois da correção, os erros alimentam:
 - Caderno Global de Erros;
@@ -176,6 +216,8 @@ Cada concurso fornece um `exam_profile` com:
 - banca;
 - número de alternativas;
 - regras de prova;
+- duração;
+- presença e formato de discursiva;
 - pesos, se houver;
 - conteúdos prioritários.
 
@@ -203,4 +245,5 @@ O piloto deve demonstrar que:
 - não usa itens vencidos de Atualidades;
 - registra exposição;
 - integra resultados ao sistema de erros/domínio;
-- informa quando o estoque inédito estiver baixo.
+- informa quando o estoque inédito estiver baixo;
+- consegue executar prova completa de 5 horas com objetiva + discursivas sob cronômetro único.
