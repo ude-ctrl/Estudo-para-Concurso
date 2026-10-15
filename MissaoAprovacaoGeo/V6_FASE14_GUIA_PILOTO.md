@@ -12,16 +12,18 @@ npm run import:v6
 npm run dev
 ```
 
-Abra o endereço indicado pelo Vite acrescentando `/v6.html`. Por exemplo, se o servidor indicar `http://localhost:5173`, abra `http://localhost:5173/v6.html`.
+Abra o endereço indicado pelo Vite. A raiz agora abre a V6 diretamente. `/v6.html` é um alias da mesma experiência; não é mais necessário descobrir esse caminho para ver a nova interface.
 
-O portal anterior continua em `/index.html`. Para conferir a build de produção:
+Os demais materiais continuam em `/biblioteca.html`, sem os quatro registros históricos de Cartografia no catálogo ativo. Os arquivos integrais permanecem no repositório e no arquivo de auditoria. Para conferir a build de produção:
 
 ```sh
 npm run build
 npm run preview
 ```
 
-Abra `/v6.html` no endereço do preview. Caminhos de assets relativos e rotas após `#` funcionam também sob `/Estudo-para-Concurso/`.
+Abra a raiz ou `/v6.html` no endereço do preview. Caminhos de assets relativos e rotas após `#` funcionam também sob `/Estudo-para-Concurso/`. O site público não recebe esta alteração até uma publicação autorizada.
+
+A [segunda rodada de correções](V6_FASE14_CORRECOES_RODADA2.md) descreve as mudanças exigidas pela auditoria independente e pela rejeição de UX. O piloto continua aguardando aprovação humana.
 
 ## Revisar o piloto
 
@@ -40,13 +42,15 @@ Não é necessário apagar dados históricos para experimentar. Importação de 
 
 | Camada | Arquivos | Responsabilidade |
 | --- | --- | --- |
-| Entrada isolada | `v6.html`, `src/v6/main.tsx` | Inicialização do piloto sem modificar o HTML do portal |
+| Entrada canônica | `index.html`, `v6.html`, `src/v6/main.tsx` | Inicialização V6 na raiz da prévia; `/v6.html` permanece como alias |
+| Outros materiais e compatibilidade | `biblioteca.html`, `src/legacy-routes.ts`, `scripts/import-content.mjs` | Demais módulos acessíveis; Cartografia legada somente para auditoria/backup; URLs antigas encaminhadas sem inferir progresso |
 | Navegação e preferências | `src/v6/App.tsx`, `context.tsx` | Cinco destinos principais, unidade ativa, retomada, tema, backup e migração explícita |
 | Conteúdo e paridade | `scripts/build-v6.mjs`, `v6-catalog.mjs`, `v6-concepts.mjs`, `v6-authored.mjs` | Extração AST, sanitização, consolidação seletiva, conceitos e novos itens autorais |
 | Identidade permanente | `scripts/v6-ids.json` | Registro congelado dos destinos históricos; não recalcular IDs por mudança editorial |
 | Banco publicado | `public/v6/cartografia.json` | Conteúdo, variantes, fontes, originais, gabaritos e vínculos de procedência |
 | Mapa verificável | `V6_FASE14_PARIDADE.json` | Contagens e destino individual de cada registro histórico |
 | Motor independente da interface | `src/v6/engine.ts` | Agenda, evidências, erros, domínio, recompensas, seleção de questões e blueprint genérico |
+| Marcos e apresentação | `recognition.ts`, `Celebration.tsx`, `scripts/v6-editorial.mjs` | Microcelebrações sem XP adicional e revisão rastreável da embalagem editorial |
 | Persistência | `src/v6/repository.ts`, `types.ts` | Envelope de estado, validação, revisões, recuperação e espelho do caderno global |
 | Ambientes | `Study.tsx`, `Training.tsx`, `Review.tsx`, `Exam.tsx` | Estudo, treino, revisão e prova separados |
 | Componentes e linguagem visual | `components.tsx`, `styles.css` | Feedback, procedência, tabelas/figura, tipografia, responsividade e acessibilidade |

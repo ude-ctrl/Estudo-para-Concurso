@@ -1,5 +1,30 @@
 # V6 — Fase 14: relatório de testes
 
+## Segunda rodada — correções após auditoria independente e rejeição UX
+
+As falhas B1 (ciclo de gabarito), B2 (Difícil como erro), C1 (dia UTC) e a exposição indevida do legado não foram detectadas ou resolvidas pela bateria da primeira entrega descrita abaixo. Esses resultados históricos são mantidos para rastreabilidade e não representam aprovação humana.
+
+As correções e seus limites estão em [V6_FASE14_CORRECOES_RODADA2.md](V6_FASE14_CORRECOES_RODADA2.md). A suíte atual de integridade/lógica passou em **51 testes: 5 do acervo +46 V6**. A bateria global passou em **72 cenários de navegador**, 36 em cada caminho, no commit `e400d86`. O ajuste visual seguinte, commit `bf421cd`, colocou as celebrações no fluxo sem sobrepor ações e recebeu **10 revalidações específicas**, também aprovadas. Não houve alteração posterior do motor pedagógico. Evidência: [resultado-rodada2.json](v6-evidencias/resultado-rodada2.json).
+
+Resultado final das duas baterias de navegador: zero falhas, testes ignorados ou resultados instáveis. Durações aproximadas: 122 segundos na bateria global e 25 segundos na revalidação visual. A última build com TypeScript passou. A geração `--check` conferiu os arquivos de conteúdo e paridade sem diferenças.
+
+Uma bateria intermediária desta rodada teve duas falhas, uma por caminho, porque um seletor antigo de retomada passou a encontrar dois elementos. O seletor foi restringido ao material correto; a repetição global passou. Na inspeção visual, a primeira posição da celebração podia cobrir ações no celular; o aviso foi movido para o fluxo e os testes agora conferem a separação geométrica entre aviso e botão, além de teclado, movimento e persistência. Esse histórico é mantido sem atribuir os resultados intermediários à bateria final.
+
+Cobertura acrescentada:
+
+- raiz abrindo V6 e acesso aos demais módulos por `/biblioteca.html`;
+- ausência de Cartografia histórica em catálogo ativo, busca, favoritos e retomadas, preservando backup das 30 fontes;
+- URLs anteriores encaminhadas ao destino adequado sem reabrir a edição não auditada;
+- sete revisões editoriais canônicas, com originais e 685 registros de paridade intactos;
+- diagnóstico direto e treino contextual da missão estudada;
+- temas no cabeçalho, microcelebração normal/reduzida, teclado, persistência e ausência de recompensa por alternativa ou XP adicional;
+- 160 montagens de prova testadas para equilíbrio sem ciclo periódico ou run de três letras, ordem reproduzível e persistente;
+- Difícil sem criação/reativação de erro, intervalo menor e Errei ainda criando lapsos; falso domínio permanece coberto;
+- calendário local em UTC−3, mudança de offset, migração conservadora e fronteira de meia-noite no navegador;
+- restauração sem manter sessão ou marcos ausentes do backup.
+
+## Histórico da primeira entrega
+
 Execução final: 15/10/2026. Branch exclusiva: `v6-piloto-cartografia`. Implementação verificada: commit `410e3ac`.
 
 Resultado: **build aprovada; 39 testes de integridade/motor aprovados; 54 cenários de navegador aprovados**, sem falhas, testes ignorados ou resultados instáveis na bateria final. Este resultado técnico não substitui a revisão pedagógica humana.

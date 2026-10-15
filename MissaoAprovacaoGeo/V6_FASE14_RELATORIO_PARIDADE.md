@@ -2,6 +2,8 @@
 
 Data: 15/10/2026. Branch: `v6-piloto-cartografia`. Aceitação humana pendente.
 
+**Atualização da segunda rodada:** as contagens e os 685 registros de origem permanecem iguais. Sete títulos/transições/comandos recebem redação canônica publicada, sem resumir teoria; os originais integrais e hashes continuam no arquivo. O legado sai da experiência ativa. Ver o [registro completo dessas alterações e riscos](V6_FASE14_CORRECOES_RODADA2.md). As descrições abaixo da primeira entrega não devem ser interpretadas como proibição de reeditar sua embalagem editorial.
+
 O [mapa anterior à implementação](V6_FASE14_MAPA_PARIDADE.md) foi registrado no commit `869d69a01861dbed138963ed701409a8a945d8ad`. O [manifesto por registro](V6_FASE14_PARIDADE.json) e o [registro congelado de IDs](../scripts/v6-ids.json) tornam os destinos verificáveis. Este relatório descreve o resultado efetivamente implementado.
 
 ## Contagens e preservação
