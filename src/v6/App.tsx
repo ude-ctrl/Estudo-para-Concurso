@@ -569,6 +569,10 @@ function Workspace({ content }: { content: Content }) {
           ) : (
             <Exam key={route.unit} />
           )}
+          <Celebration
+            milestone={route.page === 'unit' && route.mode === 'prova' ? null : celebration}
+            onDismiss={dismissCelebration}
+          />
           <footer className="site-footer">
             <span>Aprender com profundidade. Avançar com evidência.</span>
             <a href="./biblioteca.html">Outros materiais</a>
@@ -576,10 +580,6 @@ function Workspace({ content }: { content: Content }) {
           </footer>
         </main>
       </div>
-      <Celebration
-        milestone={route.page === 'unit' && route.mode === 'prova' ? null : celebration}
-        onDismiss={dismissCelebration}
-      />
     </V6Context>
   );
 }

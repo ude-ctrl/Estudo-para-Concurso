@@ -87,8 +87,17 @@ for (const motion of ['normal', 'system-reduced', 'manual-reduced'] as const) {
     const saved = await page.evaluate((key) => JSON.parse(localStorage.getItem(key)!), STATE_KEY);
     expect(saved.awards).toEqual(state.awards);
     expect(saved.milestones['boss:' + fund]).toBeGreaterThan(0);
+    const action = await page
+      .getByRole('button', { name: 'Preparar outra rodada', exact: true })
+      .boundingBox();
+    const note = await page.locator('.milestone-toast').boundingBox();
+    expect(note!.y).toBeGreaterThanOrEqual(action!.y + action!.height);
     if (motion === 'normal')
-      await page.screenshot({ path: info.outputPath('v6-celebracao-mobile.png'), fullPage: true });
+      await page.screenshot({
+        path: info.outputPath('v6-celebracao-mobile.png'),
+        fullPage: true,
+        animations: 'disabled',
+      });
     await page.getByRole('button', { name: 'Dispensar celebração', exact: true }).focus();
     await page.keyboard.press('Enter');
     await expect(page.locator('.milestone-toast')).toHaveCount(0);

@@ -2025,12 +2025,12 @@ th {
   }
 }
 .celebration-region {
-  position: fixed;
-  bottom: 22px;
-  right: 22px;
-  width: min(420px, calc(100vw - 24px));
-  z-index: 50;
-  pointer-events: none;
+  width: 100%;
+  max-width: 680px;
+  margin: 24px 0;
+}
+.celebration-region:empty {
+  margin: 0;
 }
 .next-step-context {
   margin: 24px 0 18px;
@@ -2152,12 +2152,6 @@ th {
 }
 .milestone-history li {
   margin-bottom: 18px;
-}
-@media (max-width: 760px) {
-  .celebration-region {
-    bottom: calc(84px + env(safe-area-inset-bottom));
-    right: 12px;
-  }
 }
 @keyframes milestone-enter {
   from {
