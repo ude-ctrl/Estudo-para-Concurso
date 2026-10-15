@@ -3,6 +3,16 @@
 ## Missão
 Transformar o projeto SEDUC-PA em uma plataforma de estudo de alto desempenho para Professor de Geografia, preservando integralmente o conteúdo válido já produzido, reduzindo redundâncias, elevando a qualidade de treino para o padrão FGV e tornando a experiência mais clara, padronizada, envolvente e eficaz para retenção e aprovação.
 
+## Evolução estratégica da missão
+A V6 também deve preservar o investimento intelectual para concursos futuros. Portanto, a plataforma será organizada logicamente em duas camadas:
+
+1. **Base Permanente de Conhecimento** — teoria, conceitos, flashcards conceituais, questões genéricas, revisão e mecanismos reutilizáveis em diferentes concursos de Professor de Geografia.
+2. **Perfil do Concurso** — edital, banca, pesos, conteúdos regionais específicos, legislação, atualidades, simulados, discursivas, prova prática e prioridades daquele certame.
+
+Documento vinculante: `V6_ARQUITETURA_REUTILIZAVEL_CONCURSOS.md`.
+
+Foi criado o snapshot histórico `snapshot-base-estudos-2026-10-15`, derivado da `main`, que não deve ser usado para desenvolvimento e serve como ponto de recuperação da base pré-V6.
+
 ## Princípio central
 Qualidade > quantidade.
 
@@ -14,15 +24,17 @@ Nenhum conteúdo será mantido apenas porque já existe. Nenhum conteúdo será 
 - redundância;
 - qualidade de recuperação ativa;
 - clareza de UX;
-- possibilidade de integração com outros conteúdos.
+- possibilidade de integração com outros conteúdos;
+- potencial de reutilização em outros concursos.
 
 ## Fonte de verdade
-1. Edital oficial vigente da SEDUC-PA / FGV.
+1. Edital oficial vigente da SEDUC-PA / FGV para o perfil SEDUC-PA.
 2. Páginas HTML aprovadas no repositório.
 3. Este Plano Mestre V6.
-4. Checklist V6.
-5. Mapa de Módulos V6.
-6. Matriz de Redundância V6.
+4. `V6_ARQUITETURA_REUTILIZAVEL_CONCURSOS.md`.
+5. Checklist V6.
+6. Mapa de Módulos V6.
+7. Matriz de Redundância V6.
 
 ## Arquitetura pedagógica obrigatória
 Cada unidade deverá seguir, quando aplicável:
@@ -212,6 +224,22 @@ Antes de atualizar páginas, todo conteúdo repetido deverá ser classificado co
 
 Conceitos centrais devem ser ensinados profundamente uma vez e depois reutilizados em aplicações.
 
+## Reutilização entre concursos
+Ao revisar qualquer conteúdo, classificar também como:
+- **núcleo permanente**;
+- **aplicação regional**;
+- **específico de edital/banca**;
+- **dado temporal/atualidade**.
+
+Exemplos:
+- Climatologia geral → núcleo permanente.
+- Climatologia aplicada à Amazônia → aplicação regional.
+- questão no estilo FGV → perfil SEDUC-PA.
+- legislação estadual do Pará → perfil SEDUC-PA.
+- dado econômico de 2026 → dado temporal.
+
+A futura SEDUC-MA ou concurso de Imperatriz deve reutilizar o núcleo permanente e acrescentar apenas sua camada própria.
+
 ## Organização por módulos
 Os temas deixam de ser a estrutura principal de navegação. “Tema XX” pode continuar internamente, mas a experiência do usuário será organizada por módulos e unidades.
 
@@ -234,7 +262,8 @@ A teoria existente é considerada base valiosa, mas não intocável. Ela deve se
 - tornar explícita a base curricular/documentação curricular do Pará quando necessário;
 - reforçar transtornos específicos de aprendizagem;
 - revisar dados voláteis de Atualidades e legislação antes da prova;
-- separar conteúdo permanente de dado temporal.
+- separar conteúdo permanente de dado temporal;
+- separar base permanente da camada SEDUC-PA/FGV.
 
 ## Estratégia de implementação
 Não atualizar tudo de uma vez.
@@ -243,13 +272,14 @@ Ordem oficial:
 1. mapear redundâncias;
 2. fechar mapa de módulos;
 3. fechar padrão V6;
-4. escolher módulo piloto;
-5. migrar piloto;
-6. auditar piloto;
-7. corrigir padrão;
-8. escalar por módulos;
-9. criar simulador/revisão global;
-10. realizar auditoria final edital × plataforma.
+4. preservar snapshot histórico e arquitetura reutilizável;
+5. escolher módulo piloto;
+6. migrar piloto;
+7. auditar piloto;
+8. corrigir padrão;
+9. escalar por módulos;
+10. criar simulador/revisão global;
+11. realizar auditoria final edital × plataforma.
 
 ## Módulo piloto sugerido
 Cartografia e Geotecnologias ou Geografia Física.
@@ -261,6 +291,7 @@ Uma unidade só é considerada pronta quando:
 - conteúdo está correto;
 - edital está coberto;
 - redundância foi tratada;
+- classificação permanente × específica foi definida;
 - feedback é completo;
 - questões têm qualidade;
 - UX está padronizada;
