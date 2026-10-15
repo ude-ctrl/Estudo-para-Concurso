@@ -25,13 +25,16 @@ Status:
 - [x] Mapear dados temporais que precisam de atualização futura
 
 ## Fase 2 — Nova arquitetura por módulos
-- [~] Aprovar módulos principais
+- [x] Aprovar módulos principais
 - [x] Associar cada página atual a um módulo
-- [~] Definir unidades de estudo finais
-- [~] Definir conceitos-base e páginas de aplicação
+- [x] Definir unidades de estudo finais
+- [x] Definir conceitos-base e páginas de aplicação
 - [x] Remover “Tema XX” da navegação principal
 - [x] Preservar numeração apenas internamente quando útil
-- [ ] Criar navegação Concurso → Módulo → Unidade → Etapas
+- [x] Criar navegação Concurso → Módulo → Unidade → Etapas
+- [x] Diferenciar Biblioteca × Trilha SEDUC-PA
+- [x] Definir dependências/pré-requisitos principais
+- [x] Definir contagem canônica: 9 módulos / 28 unidades
 
 ## Fase 3 — Matriz Premium V6 de UX
 - [ ] Definir template visual único
