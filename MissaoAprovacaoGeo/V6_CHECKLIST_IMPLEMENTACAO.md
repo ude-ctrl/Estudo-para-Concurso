@@ -99,13 +99,19 @@ Status:
 - [x] Validar formato oficial da SEDUC-PA no edital FGV
 
 ## Fase 7 — Flashcards e revisão espaçada
-- [ ] Revisar cartões excessivamente longos
-- [ ] Atomizar cartões quando necessário
-- [ ] Remover redundâncias
-- [ ] Implementar estados: errei / difícil / bom / fácil
-- [ ] Implementar intervalos adaptativos
-- [ ] Criar fila diária de revisão
-- [ ] Integrar flashcards ao domínio do tema
+- [x] Auditar sistema atual de flashcards
+- [x] Definir formato atômico do cartão V6
+- [x] Definir verso com resposta + explicação + exemplo
+- [x] Definir estados: Errei / Difícil / Bom / Fácil
+- [x] Definir agenda `due` por cartão
+- [x] Definir heurística inicial de intervalos
+- [x] Definir lapsos e cartões problemáticos
+- [x] Definir fila diária priorizando revisões vencidas
+- [x] Integrar flashcards a erros e questões
+- [x] Definir detecção de falso domínio
+- [x] Definir metadados e migração do legado
+- [x] Definir reuso entre concursos
+- [x] Garantir evolução futura do scheduler sem perda de histórico
 
 ## Fase 8 — Caderno global de erros
 - [ ] Centralizar erros entre módulos
