@@ -130,13 +130,23 @@ Status:
 - [x] Definir reuso de histórico entre concursos
 
 ## Fase 9 — Métrica de domínio
-- [ ] Separar “concluído” de “dominado”
-- [ ] Registrar precisão recente
-- [ ] Registrar retenção após intervalo
-- [ ] Registrar reincidência de erros
-- [ ] Criar domínio estimado por unidade
-- [ ] Criar domínio por módulo
-- [ ] Criar painel de pontos fracos
+- [x] Separar progresso de domínio
+- [x] Definir precisão recente
+- [x] Definir retenção após intervalo
+- [x] Integrar reincidência de erros
+- [x] Definir fórmula heurística transparente de domínio
+- [x] Definir requisitos mínimos de evidência
+- [x] Definir confiança baixa / média / alta
+- [x] Definir pesos relativos por tipo de atividade
+- [x] Definir ajuste por dificuldade
+- [x] Definir cobertura conceitual
+- [x] Definir domínio por conceito
+- [x] Definir domínio estimado por unidade
+- [x] Definir domínio por módulo
+- [x] Definir proteção contra falso domínio e farming
+- [x] Separar prontidão para prova de domínio conceitual
+- [x] Definir painel de pontos fracos e próxima ação
+- [x] Definir persistência e reuso entre concursos
 
 ## Fase 10 — Simulado SEDUC-PA
 - [ ] Criar modo 60 questões
