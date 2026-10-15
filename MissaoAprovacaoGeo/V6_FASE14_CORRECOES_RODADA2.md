@@ -2,7 +2,7 @@
 
 Data: 15/10/2026. Branch exclusiva: `v6-piloto-cartografia`.
 
-**Situação: correções para nova avaliação humana; piloto ainda NÃO aprovado.** Não houve merge, publicação ou migração de outro módulo. A auditoria independente e a rejeição de UX permanecem registradas integralmente.
+**Situação atualizada: visual e teste de uso aprovados pelo usuário; reavaliação independente pendente.** Ver o [registro do aceite e próximos passos](V6_FASE14_ACEITE_USO_E_PROXIMOS_PASSOS.md). Não houve merge, publicação ou migração de outro módulo. A auditoria independente e a rejeição inicial de UX permanecem registradas integralmente.
 
 Esta rodada atende a [auditoria independente](V6_FASE14_AUDITORIA_INDEPENDENTE.md), o [feedback de uso real](V6_FASE14_FEEDBACK_USUARIO.md) e os comentários atualizados da Issue #12, incorporados dos commits `d285bf3` e `5fab5d1`. Os resultados da primeira entrega não são tratados como aprovação do usuário.
 
@@ -103,4 +103,4 @@ Os resultados vigentes estão no [relatório de testes](V6_FASE14_RELATORIO_TEST
 
 Roteiro de aceite humano: abrir a raiz da prévia desta branch, verificar a diferença para a biblioteca antiga, percorrer as três unidades, alternar tema, passar de uma explicação ao treino da mesma missão, avaliar Difícil e revisar a experiência de Chefão/revisão. Verificar que Cartografia II não aparece duplicada em nenhum catálogo ativo.
 
-**Parar nesta rodada.** A aprovação visual/pedagógica e a nova auditoria independente continuam necessárias. A Issue #12 permanece aberta. Não há autorização de merge, publicação ou expansão para outro módulo.
+**Parar nesta rodada.** O usuário já aprovou o visual e o teste de uso. A nova auditoria independente e a revisão editorial dos itens autorais continuam pendentes. A Issue #12 permanece aberta. Não há autorização de merge, publicação ou expansão para outro módulo.

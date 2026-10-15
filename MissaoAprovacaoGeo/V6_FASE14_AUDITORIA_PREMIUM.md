@@ -1,6 +1,10 @@
 # V6 — Fase 14: Auditoria Premium do piloto
 
-**Atualização após rejeição humana:** o piloto NÃO está aprovado. Esta autoauditoria registra a primeira entrega e suas limitações; os bloqueadores encontrados depois constam integralmente na [auditoria independente](V6_FASE14_AUDITORIA_INDEPENDENTE.md) e no [feedback do usuário](V6_FASE14_FEEDBACK_USUARIO.md). A [segunda rodada](V6_FASE14_CORRECOES_RODADA2.md) implementa correções para nova avaliação; testes técnicos não encerram o aceite visual ou pedagógico.
+**Atualização de aceite:** após a segunda rodada, o usuário aprovou o visual e informou **“Testei, tudo ok.”**. O [registro de aceite](V6_FASE14_ACEITE_USO_E_PROXIMOS_PASSOS.md) documenta esse resultado. A reavaliação independente e a revisão editorial individual dos itens novos permanecem pendentes; merge/publicação não foram autorizados.
+
+## Histórico da autoauditoria da primeira entrega
+
+O registro abaixo corresponde à primeira entrega e suas limitações. Os achados posteriores permanecem na [auditoria independente](V6_FASE14_AUDITORIA_INDEPENDENTE.md) e no [feedback inicial](V6_FASE14_FEEDBACK_USUARIO.md), com correções descritas na [segunda rodada](V6_FASE14_CORRECOES_RODADA2.md).
 
 Data: 15/10/2026. Objeto: somente Cartografia e Geotecnologias na branch `v6-piloto-cartografia`.
 
