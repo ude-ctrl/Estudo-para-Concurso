@@ -9,8 +9,8 @@ Status:
 - [x] Criar branch exclusiva `v6-planejamento`
 - [x] Criar Plano Mestre V6
 - [x] Criar Checklist V6
-- [ ] Criar Mapa de Módulos V6
-- [ ] Criar Matriz de Redundância V6
+- [x] Criar Mapa de Módulos V6
+- [x] Criar Matriz de Redundância V6
 - [ ] Definir arquivos originais como fonte de verdade durante migração
 - [ ] Definir política de rollback
 
