@@ -114,12 +114,20 @@ Status:
 - [x] Garantir evolução futura do scheduler sem perda de histórico
 
 ## Fase 8 — Caderno global de erros
-- [ ] Centralizar erros entre módulos
-- [ ] Categorizar tipo de erro
-- [ ] Registrar conceito relacionado
-- [ ] Registrar reincidência
-- [ ] Gerar revisão automática a partir dos erros
-- [ ] Criar estado “erro convertido em domínio”
+- [x] Centralizar modelo de erros entre módulos
+- [x] Definir taxonomia E1–E8
+- [x] Registrar conceito e `misconception_tag`
+- [x] Registrar reincidência por conceito/confusão
+- [x] Definir agregador global de erro
+- [x] Definir revisão automática a partir dos erros
+- [x] Definir integração com flashcards, questões e Game
+- [x] Definir critérios de resolução após intervalo
+- [x] Definir estado “erro convertido em domínio”
+- [x] Definir detecção de falso domínio
+- [x] Definir severidade e priorização
+- [x] Definir fila global de correção
+- [x] Definir persistência versionada
+- [x] Definir reuso de histórico entre concursos
 
 ## Fase 9 — Métrica de domínio
 - [ ] Separar “concluído” de “dominado”
