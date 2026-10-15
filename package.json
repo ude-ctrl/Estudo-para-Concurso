@@ -1,0 +1,36 @@
+{
+  "name": "missao-aprovacao-geografia",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "import:content": "node scripts/import-content.mjs",
+    "predev": "npm run import:content",
+    "dev": "vite --host 0.0.0.0",
+    "build": "npm run import:content && tsc --noEmit && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "node tests/content.test.mjs",
+    "test:e2e": "playwright test",
+    "format": "prettier --write src scripts tests index.html README.md vite.config.ts playwright.config.ts package.json tsconfig.json .github/workflows"
+  },
+  "dependencies": {
+    "lucide-react": "^0.468.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@babel/parser": "^7.26.0",
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "parse5": "^7.2.1",
+    "prettier": "^3.9.10",
+    "typescript": "^5.7.0",
+    "vite": "^6.0.0"
+  }
+}
