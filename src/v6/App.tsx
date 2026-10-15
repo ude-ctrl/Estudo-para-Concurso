@@ -1,13 +1,15 @@
-import { Component, useEffect, useRef, useState } from 'react';
+import { Component, useCallback, useEffect, useRef, useState } from 'react';
 import {
   BookOpen,
   CheckCircle2,
   ClipboardCheck,
   Compass,
   Home as HomeIcon,
+  Moon,
   RotateCcw,
   Settings as SettingsIcon,
   Target,
+  Sun,
 } from 'lucide-react';
 import { V6Context } from './context';
 import type { Route } from './context';
@@ -18,12 +20,19 @@ import { Exam } from './Exam';
 import { Html } from './components';
 import { importLegacy, STATE_KEY } from './engine';
 import { Repository, downloadState } from './repository';
+import { Celebration } from './Celebration';
+import { recognize } from './recognition';
+import type { Milestone } from './recognition';
+import { canonicalLegacyRoute } from '../legacy-routes';
 import type { Content, Mode, State, UnitId } from './types';
 const firstUnit: UnitId = 'cartografia-fundamentos';
 function parseRoute(): Route {
   let url: URL;
   try {
-    url = new URL(location.hash.slice(1) || '/', location.origin);
+    url = new URL(
+      canonicalLegacyRoute(location.hash) || location.hash.slice(1) || '/',
+      location.origin,
+    );
   } catch {
     url = new URL('/', location.origin);
   }
@@ -337,21 +346,43 @@ function Workspace({ content }: { content: Content }) {
     [state, setState] = useState(repo.state),
     [route, setRoute] = useState(parseRoute),
     [message, setMessage] = useState(''),
+    [celebration, setCelebration] = useState<Milestone | null>(null),
+    [systemDark, setSystemDark] = useState(
+      () => matchMedia('(prefers-color-scheme: dark)').matches,
+    ),
     [tick, setTick] = useState(0),
     main = useRef<HTMLElement>(null);
   function update(fn: (s: State) => void) {
     try {
-      setState(repo.commit(fn));
+      let earned: Milestone[] = [];
+      const next = repo.commit((s) => {
+        const before = structuredClone(s);
+        fn(s);
+        earned = recognize(content, before, s, Date.now());
+      });
+      setState(next);
+      if (earned.length && !(route.page === 'unit' && route.mode === 'prova'))
+        setCelebration(earned[0]);
     } catch (e) {
       setMessage(e instanceof Error ? e.message : 'Não foi possível registrar a atividade.');
     }
   }
+  const dismissCelebration = useCallback(() => setCelebration(null), []);
+  const dark =
+    state.preferences.theme === 'dark' || (state.preferences.theme === 'system' && systemDark);
+  useEffect(() => {
+    const media = matchMedia('(prefers-color-scheme: dark)');
+    const change = () => setSystemDark(media.matches);
+    media.addEventListener('change', change);
+    return () => media.removeEventListener('change', change);
+  }, []);
   function go(unit: UnitId, mode: Mode, mission = '') {
     location.hash = `/unidade/${unit}/${mode}${mission ? '?missao=' + mission : ''}`;
   }
   useEffect(() => {
     const onHash = () => {
       setRoute(parseRoute());
+      setCelebration(null);
       window.scrollTo({ top: 0, behavior: 'instant' });
       requestAnimationFrame(() => {
         const heading = main.current?.querySelector<HTMLElement>('h1');
@@ -438,6 +469,17 @@ function Workspace({ content }: { content: Content }) {
           </span>
         </a>
         <div className="header-tools">
+          <button
+            className="icon-button"
+            aria-label={dark ? 'Ativar modo claro' : 'Ativar modo escuro'}
+            onClick={() =>
+              update((s) => {
+                s.preferences.theme = dark ? 'light' : 'dark';
+              })
+            }
+          >
+            {dark ? <Sun size={22} /> : <Moon size={22} />}
+          </button>
           <a className="icon-button" href="#/caderno" aria-label="Caderno Global de Erros">
             <CheckCircle2 size={22} />
           </a>
@@ -529,11 +571,15 @@ function Workspace({ content }: { content: Content }) {
           )}
           <footer className="site-footer">
             <span>Aprender com profundidade. Avançar com evidência.</span>
-            <a href="./index.html">Biblioteca histórica</a>
+            <a href="./biblioteca.html">Outros materiais</a>
             <a href="#/configuracoes">Dados e fontes</a>
           </footer>
         </main>
       </div>
+      <Celebration
+        milestone={route.page === 'unit' && route.mode === 'prova' ? null : celebration}
+        onDismiss={dismissCelebration}
+      />
     </V6Context>
   );
 }
@@ -552,7 +598,7 @@ class Boundary extends Component<{ children: React.ReactNode }, { failed: boolea
           ser exportada pelas ferramentas do navegador.
         </p>
         <button onClick={() => location.reload()}>Recarregar</button>
-        <a href="./index.html">Biblioteca histórica</a>
+        <a href="./biblioteca.html">Outros materiais</a>
       </main>
     ) : (
       this.props.children

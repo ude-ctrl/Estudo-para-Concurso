@@ -18,29 +18,34 @@ test.beforeEach(async ({ page }) => {
 test('biblioteca mostra todo o acervo e suas contagens', async ({ page }) => {
   const errors: string[] = [];
   page.on('pageerror', (error) => errors.push(error.message));
-  await page.goto('./');
-  await expect(page.locator('.lesson-card')).toHaveCount(30);
-  await expect(page.locator('.stats-grid')).toContainText('1.494');
-  await expect(page.locator('.stats-grid')).toContainText('3.000');
+  await page.goto('./biblioteca.html');
+  await expect(page.locator('.lesson-card')).toHaveCount(26);
+  await expect(page.locator('.stats-grid')).toContainText('1.294');
+  await expect(page.locator('.stats-grid')).toContainText('2.600');
   expect(errors).toEqual([]);
 });
 
-test('busca ignora acentos e filtros mantêm as versões', async ({ page }) => {
-  await page.goto('./');
+test('busca ignora acentos e Cartografia histórica não aparece como opção de estudo', async ({
+  page,
+}) => {
+  await page.goto('./biblioteca.html');
   await page.getByRole('searchbox').fill('tectonica');
   await expect(page.locator('.lesson-card')).toHaveCount(1);
   await expect(page.locator('.lesson-card')).toContainText('TEMA 05');
   await page.getByRole('button', { name: 'Limpar busca' }).click();
-  await page.getByLabel('Filtrar por área').selectOption('Cartografia');
-  await expect(page.locator('.lesson-card')).toHaveCount(4);
+  await expect(
+    page.getByLabel('Filtrar por área').locator('option', { hasText: 'Cartografia' }),
+  ).toHaveCount(0);
+  await page.getByRole('searchbox').fill('Cartografia II');
+  await expect(page.locator('.lesson-card')).toHaveCount(0);
   await page.getByRole('searchbox').fill('assunto-inexistente');
   await expect(page.getByRole('heading', { name: 'Nenhum tema encontrado' })).toBeVisible();
   await page.getByRole('button', { name: 'Ver toda a biblioteca' }).click();
-  await expect(page.locator('.lesson-card')).toHaveCount(30);
+  await expect(page.locator('.lesson-card')).toHaveCount(26);
 });
 
 test('favoritos persistem e podem ser removidos', async ({ page }) => {
-  await page.goto('./');
+  await page.goto('./biblioteca.html');
   await page
     .getByRole('button', { name: `Adicionar aos favoritos: ${t01.title}`, exact: true })
     .click();
@@ -57,7 +62,7 @@ test('favoritos persistem e podem ser removidos', async ({ page }) => {
 });
 
 test('uma resposta na página existente atualiza o catálogo e permite retomar', async ({ page }) => {
-  await page.goto('./');
+  await page.goto('./biblioteca.html');
   await page.locator('.lesson-card h3').getByRole('link', { name: t01.title, exact: true }).click();
   const frame = page.frameLocator('iframe');
   await expect(frame.locator('#w_b_0_0 .o')).toHaveCount(4);
@@ -67,13 +72,15 @@ test('uma resposta na página existente atualiza o catálogo e permite retomar',
     .locator('.lesson-card')
     .filter({ has: page.locator('h3', { hasText: t01.title }) });
   await expect(card).toContainText('3% das questões');
-  await expect(page.locator('.resume-card')).toContainText('1 de 29 questões respondidas');
+  await expect(page.locator('.resume-card').filter({ hasText: t01.title })).toContainText(
+    '1 de 29 questões respondidas',
+  );
   await page.locator('.main-nav').getByRole('button', { name: 'Meu percurso' }).click();
   await expect(page.locator('.lesson-card')).toHaveCount(1);
 });
 
 test('atalhos abrem flashcards e game sem perder a navegação', async ({ page }) => {
-  await page.goto(`./#/missao/${t01.id}?modo=flash`);
+  await page.goto(`./biblioteca.html#/missao/${t01.id}?modo=flash`);
   const frame = page.frameLocator('iframe');
   await expect(frame.locator('#tab-flash')).toBeVisible();
   await page.locator('.skip-link').focus();
@@ -98,14 +105,14 @@ test('progresso legado é lido sem contar respostas inválidas', async ({ page }
       ),
     { key: urban.storage.previous! },
   );
-  await page.goto('./');
+  await page.goto('./biblioteca.html');
   await page.locator('.main-nav').getByRole('button', { name: 'Meu percurso' }).click();
   await expect(page.locator('.lesson-card')).toHaveCount(1);
   await expect(page.locator('.lesson-card')).toContainText('2% das questões');
 });
 
 test('exportação contém uma cópia identificada do progresso', async ({ page }) => {
-  await page.goto('./');
+  await page.goto('./biblioteca.html');
   await page
     .getByRole('button', { name: `Adicionar aos favoritos: ${t01.title}`, exact: true })
     .click();
@@ -123,14 +130,14 @@ test('todas as páginas originais e dados são servidos no caminho publicado', a
   request,
   baseURL,
 }) => {
-  await page.goto('./');
+  await page.goto('./biblioteca.html');
   for (const item of [...catalog.lessons, ...catalog.resources]) {
     const response = await request.get(new URL(item.legacyUrl, baseURL!).href);
     expect(response.status()).toBe(200);
   }
   const response = await request.get(new URL(t01.contentUrl, baseURL!).href);
   expect((await response.json()).banks.C).toHaveLength(44);
-  await page.goto(`./#/recurso/${catalog.resources[0].id}`);
+  await page.goto(`./biblioteca.html#/recurso/${catalog.resources[0].id}`);
   await expect(
     page.frameLocator('iframe').getByRole('heading', { name: 'Auditoria-Mestra dos 18 Temas' }),
   ).toBeVisible();
@@ -138,8 +145,8 @@ test('todas as páginas originais e dados são servidos no caminho publicado', a
 
 test('celular tem menu funcional e não transborda horizontalmente', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.goto('./');
-  await expect(page.locator('.lesson-card')).toHaveCount(30);
+  await page.goto('./biblioteca.html');
+  await expect(page.locator('.lesson-card')).toHaveCount(26);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await page.getByRole('button', { name: 'Abrir menu' }).click();
   await page.keyboard.press('Escape');
@@ -153,4 +160,77 @@ test('celular tem menu funcional e não transborda horizontalmente', async ({ pa
     page.getByRole('heading', { name: 'Seus favoritos', exact: true, level: 1 }),
   ).toBeVisible();
   await expect(page.getByRole('button', { name: 'Abrir menu' })).toBeVisible();
+});
+
+test('endereço principal abre V6; outros módulos ficam acessíveis sem duplicar Cartografia', async ({
+  page,
+}, info) => {
+  await page.goto('./');
+  await expect(page.locator('.unit-card')).toHaveCount(3);
+  await expect(page.locator('.lesson-card')).toHaveCount(0);
+  await expect(page.locator('.main-navigation a')).toHaveText([
+    'Início',
+    'Estudo',
+    'Treino',
+    'Revisão',
+    'Prova',
+  ]);
+  await expect(page.getByText('Seu próximo passo', { exact: true })).toBeVisible();
+  await page.getByRole('button', { name: 'Ativar modo escuro', exact: true }).click();
+  await page.reload();
+  await expect(page.getByRole('button', { name: 'Ativar modo claro', exact: true })).toBeVisible();
+  await page.screenshot({ path: info.outputPath('v6-entrada-canonica.png'), fullPage: true });
+  await page.goto('./biblioteca.html');
+  await expect(page.locator('.lesson-card')).toHaveCount(26);
+  await expect(page.locator('.lesson-grid')).not.toContainText('Cartografia II');
+  await page.getByRole('link', { name: 'Continuar Cartografia V6', exact: true }).click();
+  await expect(page.locator('.unit-card')).toHaveCount(3);
+});
+
+test('Cartografia não auditada não é pesquisável, favoritada ou recomendada; URL antiga leva à V6', async ({
+  page,
+  request,
+  baseURL,
+}) => {
+  const original = 'lesson-76fbd0d2b7a4';
+  await page.addInitScript(
+    ({ id }) => {
+      localStorage.setItem(
+        'missao-geografia:preferences:v1',
+        JSON.stringify({ favorites: [id], lastVisited: id }),
+      );
+      localStorage.setItem(
+        'seducpa_t3_carto2_v26',
+        JSON.stringify({ a: { b_0_0: 1 }, fc: { 0: 'ok' } }),
+      );
+    },
+    { id: original },
+  );
+  await page.goto('./biblioteca.html');
+  await expect(page.locator('.resume-card')).not.toContainText('Cartografia II');
+  await page.getByRole('searchbox').fill('Cartografia II');
+  await expect(page.locator('.lesson-card')).toHaveCount(0);
+  await page.getByRole('button', { name: 'Limpar busca', exact: true }).click();
+  await page
+    .locator('.main-nav')
+    .getByRole('button', { name: /Favoritos/ })
+    .click();
+  await expect(page.locator('.lesson-card')).toHaveCount(0);
+  const downloaded = page.waitForEvent('download');
+  await page.getByRole('button', { name: 'Salvar cópia do progresso', exact: true }).click();
+  const backup = JSON.parse(await readFile((await (await downloaded).path())!, 'utf8'));
+  expect(backup.sources).toHaveLength(30);
+  expect(backup.legacyStorage.seducpa_t3_carto2_v26).toContain('b_0_0');
+  const active = await (await request.get(new URL('content/catalog.json', baseURL!).href)).json();
+  expect(active.lessons.some((item: { category: string }) => item.category === 'Cartografia')).toBe(
+    false,
+  );
+  await page.goto(`./biblioteca.html#/missao/${original}`);
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Projeções e propriedades');
+  await expect(page.locator('iframe')).toHaveCount(0);
+  expect(await page.evaluate(() => localStorage.getItem('seducpa_t3_carto2_v26'))).toContain(
+    'b_0_0',
+  );
+  await page.goto(`./#/missao/${t01.id}`);
+  await expect(page.frameLocator('iframe').locator('#tab-study')).toBeVisible();
 });

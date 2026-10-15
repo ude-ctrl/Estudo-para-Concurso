@@ -43,7 +43,7 @@
         },
         {
           "id": "v6-theory-t02-0",
-          "title": "Como a FGV cobra Cartografia I",
+          "title": "Fundamentos cartográficos: decisões e armadilhas de prova",
           "hook": "Cartografia vira prova quando a banca transforma um mapa, uma coordenada ou uma escala em uma decisão.",
           "html": "<p>A FGV costuma cobrar Cartografia por <b>aplicação</b>: comparar coordenadas, localizar pontos, calcular distância, interpretar fusos e reconhecer o efeito do denominador da escala. A teoria é curta; o erro geralmente nasce de <b>sinal, unidade, direção ou proporção</b>.</p><div class=\"w\"><table><tbody><tr><th>Sinal no enunciado</th><th>Pense primeiro em</th><th>Pegadinha</th></tr><tr><td>23° S / 47° W</td><td>hemisférios + posição relativa</td><td>trocar latitude por longitude</td></tr><tr><td>graus, minutos, segundos</td><td>D + M/60 + S/3600</td><td>usar base 100</td></tr><tr><td>diferença de longitude</td><td>15° = 1 h</td><td>errar leste/oeste</td></tr><tr><td>1:25.000</td><td>mesma unidade nos dois lados</td><td>achar que denominador maior = escala maior</td></tr><tr><td>escala gráfica</td><td>medida visual</td><td>esquecer que ela acompanha redimensionamento</td></tr><tr><td>mapa sem norte no topo</td><td>orientação indicada</td><td>assumir convenção como regra natural</td></tr></tbody></table></div><div class=\"box prova\"><span class=\"l\">Como a banca cobra</span>Em Cartografia, a alternativa errada costuma parecer plausível porque acerta o conceito e erra <b>uma operação</b>: sinal, conversão, direção, unidade ou relação inversa.</div>",
           "primary": false,
@@ -59,7 +59,7 @@
           "id": "v6-theory-t02-14",
           "title": "Leitura de mapas: elementos, tipos e evidência",
           "hook": "Antes de interpretar o tema, confirme o que o mapa realmente está dizendo.",
-          "html": "<p>Uma leitura cartográfica segura começa pelos elementos: <b>título</b> (o quê/onde/quando), <b>legenda</b> (significado dos símbolos), <b>escala</b>, <b>orientação</b> quando necessária, <b>fonte/data</b> e, em produtos técnicos, sistema de referência/projeção.</p><p>Mapas <b>políticos</b> destacam divisões territoriais; <b>físicos</b>, aspectos naturais; <b>topográficos</b>, feições planialtimétricas detalhadas; <b>temáticos</b>, a distribuição de um fenômeno específico. O tipo não substitui a leitura da legenda.</p><p>Mapas não são fotografias neutras: toda representação seleciona, generaliza e simboliza informações segundo finalidade e escala.</p><div class=\"box dia\"><span class=\"l\">Estudo com mapa real</span>Abra novamente o <a href=\"https://atlasescolar.ibge.gov.br/images/mapas/pdf/brasil-federacao-e-territorio-pontos-extremos-e-fuso-horario-p-97.pdf\" target=\"_blank\" rel=\"noopener\">mapa de fusos do IBGE</a>. Identifique título, legenda, coordenadas, escala, orientação, fonte e quatro zonas UTC. Depois explique por que os limites não seguem meridianos retos.</div><div class=\"nu\"><b>Ponte para Cartografia II.</b> O mapa informa “Projeção Policônica”. Na próxima página estudaremos por que toda projeção distorce algo e como reconhecer suas propriedades.</div>",
+          "html": "<p>Uma leitura cartográfica segura começa pelos elementos: <b>título</b> (o quê/onde/quando), <b>legenda</b> (significado dos símbolos), <b>escala</b>, <b>orientação</b> quando necessária, <b>fonte/data</b> e, em produtos técnicos, sistema de referência/projeção.</p><p>Mapas <b>políticos</b> destacam divisões territoriais; <b>físicos</b>, aspectos naturais; <b>topográficos</b>, feições planialtimétricas detalhadas; <b>temáticos</b>, a distribuição de um fenômeno específico. O tipo não substitui a leitura da legenda.</p><p>Mapas não são fotografias neutras: toda representação seleciona, generaliza e simboliza informações segundo finalidade e escala.</p><div class=\"box dia\"><span class=\"l\">Estudo com mapa real</span>Abra novamente o <a href=\"https://atlasescolar.ibge.gov.br/images/mapas/pdf/brasil-federacao-e-territorio-pontos-extremos-e-fuso-horario-p-97.pdf\" target=\"_blank\" rel=\"noopener\">mapa de fusos do IBGE</a>. Identifique título, legenda, coordenadas, escala, orientação, fonte e quatro zonas UTC. Depois explique por que os limites não seguem meridianos retos.</div><div class=\"nu\"><b>Conexão com representação do espaço.</b> O mapa informa “Projeção Policônica”. Na missão Projeções e propriedades, investigue por que toda projeção distorce algo e como reconhecer suas propriedades.</div>",
           "primary": true,
           "refs": [
             {
@@ -75,7 +75,7 @@
           "id": "v6-recall-af03d6ab5d10acbb",
           "mission": "linguagem-cartografica",
           "concept": "linguagem",
-          "prompt": "Sem olhar: cite quatro erros mecânicos que a FGV pode explorar em Cartografia I.",
+          "prompt": "Sem olhar: cite quatro erros mecânicos que a FGV pode explorar em fundamentos cartográficos.",
           "model": "Troca latitude/longitude; sinal de S/W; leste/oeste em fusos; escala grande/pequena; conversão de unidades; base 60 em coordenadas.",
           "points": [
             "Troca latitude/longitude; sinal de S/W; leste/oeste em fusos; escala grande/pequena; conversão de unidades; base 60 em coordenadas.",
@@ -357,7 +357,7 @@
           "id": "v6-theory-t02-7",
           "title": "Fusos horários: a lógica dos 15°",
           "hook": "O fuso horário ideal nasce de uma conta simples: 360° ÷ 24 h = 15° por hora.",
-          "html": "<p>A Terra completa aproximadamente uma rotação em 24 horas. Dividindo 360° por 24, obtemos <b>15° de longitude por hora</b>. No modelo ideal, cada faixa de 15° corresponde a uma hora.</p><p>Ao deslocar-se para <b>leste</b>, a hora local tende a ser mais adiantada; para <b>oeste</b>, mais atrasada. Para resolver problemas: calcule a diferença de longitude, divida por 15 e aplique o sentido.</p><p>Fusos civis reais não seguem sempre linhas retas de meridiano: fronteiras políticas e decisões legais deformam as faixas.</p><div class=\"nu\"><b>Regra:</b> leste soma; oeste subtrai — quando a referência é uma localidade e o problema usa o modelo ideal.</div><div class=\"box prova\"><span class=\"l\">Pegadinha típica</span>Não confunda <b>fuso horário ideal (15°)</b> com <b>fuso UTM (6°)</b>, que pertence ao sistema cartográfico estudado na Cartografia II.</div>",
+          "html": "<p>A Terra completa aproximadamente uma rotação em 24 horas. Dividindo 360° por 24, obtemos <b>15° de longitude por hora</b>. No modelo ideal, cada faixa de 15° corresponde a uma hora.</p><p>Ao deslocar-se para <b>leste</b>, a hora local tende a ser mais adiantada; para <b>oeste</b>, mais atrasada. Para resolver problemas: calcule a diferença de longitude, divida por 15 e aplique o sentido.</p><p>Fusos civis reais não seguem sempre linhas retas de meridiano: fronteiras políticas e decisões legais deformam as faixas.</p><div class=\"nu\"><b>Regra:</b> leste soma; oeste subtrai — quando a referência é uma localidade e o problema usa o modelo ideal.</div><div class=\"box prova\"><span class=\"l\">Pegadinha típica</span>Não confunda <b>fuso horário ideal (15°)</b> com <b>fuso UTM (6°)</b>, que pertence ao sistema cartográfico estudado na missão Mercator, Gall-Peters e UTM.</div>",
           "primary": true,
           "refs": [
             {
@@ -671,9 +671,9 @@
       "sections": [
         {
           "id": "v6-theory-t03a-0",
-          "title": "Como a FGV cobra Cartografia II",
+          "title": "Representação e geotecnologias: decidir pela finalidade",
           "hook": "A banca raramente quer o nome solto: ela mostra um produto e pergunta o que ele preserva, mede ou permite concluir.",
-          "html": "<p>Cartografia II exige uma leitura por <b>função</b>. Em projeções, pergunte: <b>o que foi preservado e o que foi sacrificado?</b> Em semiologia, pergunte: <b>qual variável visual combina com o tipo de dado?</b> Em sensoriamento, pergunte: <b>qual resolução ou faixa espectral resolve o problema?</b> Em SIG, pergunte: <b>qual estrutura e operação espacial são adequadas?</b></p><div class=\"w\"><table><tbody><tr><th>Se aparecer...</th><th>Pense primeiro em...</th><th>Pegadinha típica</th></tr><tr><td>Mercator</td><td>conformidade + aumento de área em altas latitudes</td><td>chamá-la de equivalente</td></tr><tr><td>taxa por município</td><td>coroplético</td><td>usar valor absoluto</td></tr><tr><td>pixel / bandas</td><td>resoluções</td><td>trocar espacial por espectral</td></tr><tr><td>pontos, linhas, polígonos</td><td>vetor</td><td>confundir com raster</td></tr><tr><td>GPS</td><td>GNSS + referencial</td><td>tratar GPS como sinônimo de todo GNSS</td></tr></tbody></table></div><div class=\"box prova\"><span class=\"l\">Radar de prova</span>O enunciado pode parecer tecnológico, mas normalmente cobra uma relação conceitual curta: propriedade → finalidade; dado → representação; sensor → resolução; camada → operação.</div>",
+          "html": "<p>A representação cartográfica e as geotecnologias exigem uma leitura por <b>função</b>. Em projeções, pergunte: <b>o que foi preservado e o que foi sacrificado?</b> Em semiologia, pergunte: <b>qual variável visual combina com o tipo de dado?</b> Em sensoriamento, pergunte: <b>qual resolução ou faixa espectral resolve o problema?</b> Em SIG, pergunte: <b>qual estrutura e operação espacial são adequadas?</b></p><div class=\"w\"><table><tbody><tr><th>Se aparecer...</th><th>Pense primeiro em...</th><th>Pegadinha típica</th></tr><tr><td>Mercator</td><td>conformidade + aumento de área em altas latitudes</td><td>chamá-la de equivalente</td></tr><tr><td>taxa por município</td><td>coroplético</td><td>usar valor absoluto</td></tr><tr><td>pixel / bandas</td><td>resoluções</td><td>trocar espacial por espectral</td></tr><tr><td>pontos, linhas, polígonos</td><td>vetor</td><td>confundir com raster</td></tr><tr><td>GPS</td><td>GNSS + referencial</td><td>tratar GPS como sinônimo de todo GNSS</td></tr></tbody></table></div><div class=\"box prova\"><span class=\"l\">Radar de prova</span>O enunciado pode parecer tecnológico, mas normalmente cobra uma relação conceitual curta: propriedade → finalidade; dado → representação; sensor → resolução; camada → operação.</div>",
           "primary": false,
           "refs": [
             {
@@ -745,7 +745,7 @@
           "id": "v6-recall-4803dafc8397a392",
           "mission": "projecoes-propriedades",
           "concept": "projecao",
-          "prompt": "Explique em 30 segundos por que uma questão de Cartografia II deve começar pela finalidade do produto.",
+          "prompt": "Explique em 30 segundos por que uma questão de representação cartográfica ou geotecnologias deve começar pela finalidade do produto.",
           "model": "Porque projeção, simbologia, sensor e estrutura de dados são escolhas técnicas condicionadas pelo objetivo; não existe uma única solução ideal para todo uso.",
           "points": [
             "Porque projeção, simbologia, sensor e estrutura de dados são escolhas técnicas condicionadas pelo objetivo; não existe uma única solução ideal para todo uso.",
@@ -31721,6 +31721,57 @@
         "game": 100,
         "recalls": 7
       }
+    }
+  ],
+  "editorialChanges": [
+    {
+      "id": "v6-theory-t02-0",
+      "field": "title",
+      "original": "Como a FGV cobra Cartografia I",
+      "replacement": "Fundamentos cartográficos: decisões e armadilhas de prova",
+      "reason": "Identidade e transição canônica V6; conteúdo conceitual preservado."
+    },
+    {
+      "id": "v6-theory-t02-14",
+      "field": "html",
+      "original": "<b>Ponte para Cartografia II.</b> O mapa informa “Projeção Policônica”. Na próxima página estudaremos por que toda projeção distorce algo e como reconhecer suas propriedades.",
+      "replacement": "<b>Conexão com representação do espaço.</b> O mapa informa “Projeção Policônica”. Na missão Projeções e propriedades, investigue por que toda projeção distorce algo e como reconhecer suas propriedades.",
+      "reason": "Identidade e transição canônica V6; conteúdo conceitual preservado."
+    },
+    {
+      "id": "v6-theory-t02-7",
+      "field": "html",
+      "original": "que pertence ao sistema cartográfico estudado na Cartografia II.",
+      "replacement": "que pertence ao sistema cartográfico estudado na missão Mercator, Gall-Peters e UTM.",
+      "reason": "Identidade e transição canônica V6; conteúdo conceitual preservado."
+    },
+    {
+      "id": "v6-theory-t03a-0",
+      "field": "title",
+      "original": "Como a FGV cobra Cartografia II",
+      "replacement": "Representação e geotecnologias: decidir pela finalidade",
+      "reason": "Identidade e transição canônica V6; conteúdo conceitual preservado."
+    },
+    {
+      "id": "v6-theory-t03a-0",
+      "field": "html",
+      "original": "Cartografia II exige uma leitura por",
+      "replacement": "A representação cartográfica e as geotecnologias exigem uma leitura por",
+      "reason": "Identidade e transição canônica V6; conteúdo conceitual preservado."
+    },
+    {
+      "id": "v6-recall-af03d6ab5d10acbb",
+      "field": "prompt",
+      "original": "Sem olhar: cite quatro erros mecânicos que a FGV pode explorar em Cartografia I.",
+      "replacement": "Sem olhar: cite quatro erros mecânicos que a FGV pode explorar em fundamentos cartográficos.",
+      "reason": "Identidade e transição canônica V6; conteúdo conceitual preservado."
+    },
+    {
+      "id": "v6-recall-4803dafc8397a392",
+      "field": "prompt",
+      "original": "Explique em 30 segundos por que uma questão de Cartografia II deve começar pela finalidade do produto.",
+      "replacement": "Explique em 30 segundos por que uma questão de representação cartográfica ou geotecnologias deve começar pela finalidade do produto.",
+      "reason": "Identidade e transição canônica V6; conteúdo conceitual preservado."
     }
   ]
 }

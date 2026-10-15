@@ -6,6 +6,6 @@ export default defineConfig({
   base: './',
   plugins: [react()],
   build: {
-    rollupOptions: { input: { portal: 'index.html', v6: 'v6.html' } },
+    rollupOptions: { input: { portal: 'biblioteca.html', v6: 'v6.html', index: 'index.html' } },
   },
 });

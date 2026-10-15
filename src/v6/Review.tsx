@@ -120,6 +120,10 @@ function Cards() {
             </details>
           )}
           <p>Como foi sua recuperação?</p>
+          <p className="micro">
+            Errei: não recuperei ou respondi errado. Difícil: recuperei com esforço ou insegurança.
+            Bom e Fácil indicam recuperação correta, com estabilidade crescente.
+          </p>
           <div className="rating-grid">
             {ratings.map((r) => (
               <button key={r.id} onClick={() => rate(r.id)}>

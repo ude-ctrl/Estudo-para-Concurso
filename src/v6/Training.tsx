@@ -317,10 +317,14 @@ export function GameRunner() {
 }
 export function Training() {
   const { content, state, route, update } = useV6(),
-    [pool, setPool] = useState('fixacao'),
+    [pool, setPool] = useState(
+      new URLSearchParams(location.hash.split('?')[1]).get('banco') === 'diagnostico'
+        ? 'diagnostico'
+        : 'fixacao',
+    ),
     [game, setGame] = useState(false),
     [timed, setTimed] = useState(false),
-    [mission, setMission] = useState('');
+    [mission, setMission] = useState(route.mission || '');
   const active =
     state.session &&
     state.session.kind !== 'cards' &&
@@ -372,9 +376,9 @@ export function Training() {
                   <option value="fixacao">Fixação — fundamentos e memória</option>
                   <option value="concurso">Concurso — aplicação A–E</option>
                   <option value="elite">FGV Elite — integração A–E</option>
-                  <option value="diagnostico">Diagnóstico histórico</option>
+                  <option value="diagnostico">Diagnóstico da unidade</option>
                   <option value="pos-teste">Pós-teste — os mesmos itens do diagnóstico</option>
-                  <option value="chefao">Chefão histórico</option>
+                  <option value="chefao">Chefão da unidade</option>
                 </select>
               </label>
               <label className="field-label">
@@ -426,8 +430,8 @@ export function Training() {
                 Iniciar questões
               </button>
               <p className="micro">
-                Chefão preserva o papel histórico de desafio. A dificuldade real aparece nos
-                metadados; não converte automaticamente Fixação em FGV Elite.
+                O Chefão integra os raciocínios da unidade em uma rodada de desafio. A dificuldade
+                real aparece nos metadados; não converte automaticamente Fixação em FGV Elite.
               </p>
             </>
           ) : (

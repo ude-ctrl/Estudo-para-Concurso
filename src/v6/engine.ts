@@ -49,6 +49,7 @@ export function fresh(): State {
     },
     practicalHistory: [],
     significantDays: [],
+    calendarPolicy: 'local-v1',
   };
 }
 export function schedule(old: Review | undefined, rating: Rating, at: number): Review {
@@ -102,17 +103,21 @@ function award(s: State, key: string, xp: number, reason: string, at: number) {
 export function totalXP(s: State) {
   return Object.values(s.awards).reduce((n, a) => n + a.xp, 0);
 }
+export function localDay(at: number) {
+  const d = new Date(at);
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+}
 function significant(s: State, at: number) {
-  const d = new Date(at).toISOString().slice(0, 10);
+  const d = localDay(at);
   if (!s.significantDays.includes(d)) s.significantDays.push(d);
 }
 export function streak(s: State, at: number) {
   let days = 0;
-  const now = new Date(at).toISOString().slice(0, 10);
-  let t = at;
-  if (!s.significantDays.includes(now)) t -= DAY;
-  for (let i = 0; i < 365; i++, t -= DAY) {
-    if (!s.significantDays.includes(new Date(t).toISOString().slice(0, 10))) break;
+  const t = new Date(at);
+  t.setHours(12, 0, 0, 0);
+  if (!s.significantDays.includes(localDay(at))) t.setDate(t.getDate() - 1);
+  for (let i = 0; i < 365; i++, t.setDate(t.getDate() - 1)) {
+    if (!s.significantDays.includes(localDay(t.getTime()))) break;
     days++;
   }
   return days;
@@ -260,13 +265,7 @@ export function attempt(
     if (args.kind === 'boss')
       award(s, 'boss:' + args.item, 25, 'Primeiro acerto do Chefão', args.at);
     else if (args.kind === 'recall')
-      award(
-        s,
-        'recall:' + args.item + ':' + Math.floor(args.at / DAY),
-        4,
-        'Evocação ativa',
-        args.at,
-      );
+      award(s, 'recall:' + args.item + ':' + localDay(args.at), 4, 'Evocação ativa', args.at);
     else if (args.kind !== 'flashcard' && args.kind !== 'game')
       award(s, 'first:' + args.item, 4, 'Primeira recuperação objetiva', args.at);
     if (delayed && previous && !previous.correct)
@@ -298,7 +297,7 @@ export function rateCard(s: State, content: Content, id: string, rating: Rating,
   }
   attempt(s, content, {
     item: id,
-    correct: rating === 'bom' || rating === 'facil',
+    correct: rating !== 'errei',
     kind: 'flashcard',
     rating,
     at,
@@ -354,7 +353,13 @@ export function mastery(content: Content, s: State, unit: UnitId) {
     );
     const Q = weighted[1] ? weighted[0] / weighted[1] : 0;
     const rs = es.filter((e) => e.delayed);
-    const R = rs.length ? rs.filter((e) => e.correct).length / rs.length : 0;
+    const R = rs.length
+      ? rs.reduce(
+          (n, e) =>
+            n + (e.correct ? (e.kind === 'flashcard' && e.rating === 'dificil' ? 0.5 : 1) : 0),
+          0,
+        ) / rs.length
+      : 0;
     const errs = Object.values(s.errors).filter((e) => e.concept === c.id);
     const E = errs.length
       ? errs.filter((e) => ['resolvido', 'dominado-apos-erro'].includes(e.status)).length /
@@ -447,6 +452,7 @@ export function makeExam(
   minutes: number,
   at: number,
   unit?: string,
+  seed?: string,
 ): ExamSession {
   const pool = examPool(content, unit);
   if (
@@ -479,15 +485,45 @@ export function makeExam(
       if (selected.length < count) selected.push(b.shift()!);
     }
   }
-  // Assign balanced correct positions while retaining immutable option IDs.
+  // Generate once per session, then persist optionOrder. Balance alone must not reveal a cycle.
+  const id = crypto.randomUUID();
+  let value =
+    [...(seed || id)].reduce((n, ch) => Math.imul(n ^ ch.charCodeAt(0), 16777619), 2166136261) >>>
+    0;
+  const random = () => {
+    let t = (value += 0x6d2b79f5);
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+  const shuffle = <T>(items: T[]): T[] => {
+    const copy = [...items];
+    for (let i = copy.length - 1; i > 0; i--) {
+      const j = Math.floor(random() * (i + 1));
+      [copy[i], copy[j]] = [copy[j], copy[i]];
+    }
+    return copy;
+  };
+  let positions: number[] = [];
+  for (let tries = 0; tries < 128; tries++) {
+    positions = shuffle(Array.from({ length: count }, (_, i) => i % 5));
+    const excessiveRun = positions.some(
+      (p, i) => i >= 2 && p === positions[i - 1] && p === positions[i - 2],
+    );
+    const periodic = [1, 2, 3, 4, 5].some(
+      (period) => count >= 2 * period && positions.every((p, i) => p === positions[i % period]),
+    );
+    if (!excessiveRun && !periodic) break;
+    if (tries === 127) throw Error('Não foi possível montar uma ordem válida. Tente novamente.');
+  }
   const optionOrder: Record<string, string[]> = {};
   selected.forEach((q, i) => {
-    const wrong = q.options.filter((o) => o.id !== q.correct).map((o) => o.id);
-    wrong.splice(i % 5, 0, q.correct);
+    const wrong = shuffle(q.options.filter((o) => o.id !== q.correct).map((o) => o.id));
+    wrong.splice(positions[i], 0, q.correct);
     optionOrder[q.id] = wrong;
   });
   return {
-    id: crypto.randomUUID(),
+    id,
     ids: selected.map((q) => q.id),
     answers: {},
     optionOrder,
@@ -632,6 +668,12 @@ export function parseState(raw: string): State {
       typeof a.reason !== 'string'
     )
       throw Error('Recompensa inválida.');
+  if (
+    o.milestones !== undefined &&
+    (!isObject(o.milestones) ||
+      Object.values(o.milestones).some((at) => !Number.isFinite(at) || Number(at) < 0))
+  )
+    throw Error('Histórico de marcos inválido.');
   for (const m of Object.values(o.migrations as Record<string, unknown>))
     if (
       !isObject(m) ||
@@ -685,6 +727,14 @@ export function parseState(raw: string): State {
   }
   if (!strings(o.significantDays) || !o.significantDays.every((v) => /^\d{4}-\d{2}-\d{2}$/.test(v)))
     throw Error('Calendário inválido.');
+  if (o.calendarPolicy !== undefined && o.calendarPolicy !== 'local-v1')
+    throw Error('Política de calendário inválida.');
+  if (
+    o.legacySignificantDays !== undefined &&
+    (!strings(o.legacySignificantDays) ||
+      !o.legacySignificantDays.every((v) => /^\d{4}-\d{2}-\d{2}$/.test(v)))
+  )
+    throw Error('Calendário legado inválido.');
   if (
     o.resume &&
     (!isObject(o.resume) ||
@@ -726,6 +776,18 @@ export function parseState(raw: string): State {
       (x.deadline !== undefined && !Number.isFinite(x.deadline))
     )
       throw Error('Sessão inválida.');
+  }
+  if (o.calendarPolicy === undefined) {
+    // Earlier V6 builds used UTC days. Retain that history and reconstruct only dated evidence.
+    const previous = o.significantDays as string[];
+    const dated = [
+      ...(o.evidence as Evidence[]).filter((e) => e.eligible).map((e) => e.at),
+      ...(o.writingHistory as State['writingHistory']).map((h) => h.at),
+      ...(o.practicalHistory as State['practicalHistory']).map((h) => h.at),
+    ];
+    o.legacySignificantDays = [...previous];
+    o.significantDays = [...new Set(dated.map(localDay))].sort();
+    o.calendarPolicy = 'local-v1';
   }
   return o as unknown as State;
 }

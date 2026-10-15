@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { ArrowRight, BookOpen, Check, RotateCcw } from 'lucide-react';
 import { useV6 } from './context';
 import { CompassArt, Html, ModeLink, Provenance, studyLink } from './components';
-import { attempt, mastery, streak, totalXP } from './engine';
+import { attempt, mastery, priorityErrors, streak, totalXP } from './engine';
+import { describeMilestone } from './recognition';
 import type { Recall, UnitId } from './types';
 export function Mastery({ unit }: { unit: UnitId }) {
   const { content, state } = useV6();
@@ -48,10 +49,14 @@ export function Home() {
     );
   const sections = content.missions.flatMap((m) => m.sections),
     read = sections.filter((x) => state.read[x.id]).length;
+  const nextMission = content.missions.find((m) => m.id === resume?.mission) || content.missions[0];
+  const weak = priorityErrors(state)
+    .filter((e) => e.status !== 'dominado-apos-erro')
+    .slice(0, 3);
   return (
     <>
       <div className="welcome">
-        <span className="eyebrow">Seu espaço de aprendizagem · Piloto V6</span>
+        <span className="eyebrow">Hoje · Seu percurso V6</span>
         <h1>
           Leia o mundo.
           <br />
@@ -62,6 +67,13 @@ export function Home() {
           continuar.
         </p>
         <CompassArt />
+        <div className="next-step-context">
+          <span className="eyebrow">
+            {due ? 'Revisão que precisa de você' : 'Seu próximo passo'}
+          </span>
+          <strong>{due ? `${due} cartões para recuperar de memória` : nextMission.title}</strong>
+          <span>{content.units.find((u) => u.id === (dueUnit || nextMission.unit))?.title}</span>
+        </div>
         <a
           className="button primary"
           href={
@@ -90,6 +102,29 @@ export function Home() {
           {due && resume ? 'Continuar meu percurso' : 'Preparar minha revisão'}
         </a>
       </div>
+      <nav className="learning-path" aria-label="Percurso de aprendizagem">
+        <span>Seu método</span>
+        <a href={`#/unidade/${resume?.unit || first}/treino?banco=diagnostico`}>Diagnosticar</a>
+        <span aria-hidden="true">→</span>
+        <a href={studyLink(content, nextMission.id)}>Estudar e evocar</a>
+        <span aria-hidden="true">→</span>
+        <a href={`#/unidade/${resume?.unit || first}/treino?missao=${nextMission.id}`}>
+          Treinar e corrigir
+        </a>
+        <span aria-hidden="true">→</span>
+        <a href={`#/unidade/${resume?.unit || first}/revisao`}>Revisar após intervalo</a>
+      </nav>
+      {weak.length > 0 && (
+        <section className="weak-points">
+          <h2>Transforme dificuldades em próximos passos</h2>
+          {weak.map((e) => (
+            <a key={e.id} href={studyLink(content, e.mission)}>
+              <strong>{content.concepts.find((c) => c.id === e.concept)?.name}</strong>
+              <span>{e.count} registro(s) · recuperar o conceito e treinar novamente →</span>
+            </a>
+          ))}
+        </section>
+      )}
       <div className="metrics" aria-label="Visão do seu percurso">
         <div>
           <span>Leitura registrada</span>
@@ -182,12 +217,38 @@ export function Home() {
                 ))}
             </ul>
           </details>
+          <details className="milestone-history">
+            <summary>Seus marcos de aprendizagem</summary>
+            {Object.keys(state.milestones || {}).length ? (
+              <ul>
+                {Object.entries(state.milestones || {})
+                  .sort((a, b) => b[1] - a[1])
+                  .slice(0, 8)
+                  .map(([id, at]) => {
+                    const milestone = describeMilestone(id, content);
+                    return (
+                      <li key={id}>
+                        <strong>{milestone.title}</strong>
+                        <p>{milestone.description}</p>
+                        <small>{new Date(at).toLocaleDateString('pt-BR')}</small>
+                      </li>
+                    );
+                  })}
+              </ul>
+            ) : (
+              <p>
+                Os marcos aparecem ao concluir unidades com recuperação, superar Chefões, colocar
+                revisões vencidas em dia, recuperar erros de forma estável e manter dias de prática
+                significativa. Ler ou clicar sozinho não gera conquistas.
+              </p>
+            )}
+          </details>
         </article>
       </div>
       <p className="pilot-note">
         Este piloto contém apenas Cartografia. Conteúdo autoral de Concurso e FGV Elite aguarda
-        revisão humana. A biblioteca histórica continua disponível no{' '}
-        <a href="./index.html">portal de estudos</a>.
+        revisão humana. Os demais módulos continuam disponíveis em{' '}
+        <a href="./biblioteca.html">outros materiais</a>.
       </p>
     </>
   );
@@ -318,7 +379,7 @@ export function Study() {
                       ? 'Leitura registrada'
                       : sec.primary
                         ? 'Explicação principal'
-                        : 'Complemento e formulação histórica'}
+                        : 'Aprofundamento e aplicação'}
                   </small>
                 </span>
               </summary>
@@ -348,6 +409,14 @@ export function Study() {
                     'Registrar que estudei esta explicação'
                   )}
                 </button>
+                {state.read[sec.id] && (
+                  <a
+                    className="concept-practice"
+                    href={`#/unidade/${route.unit}/treino?missao=${m.id}`}
+                  >
+                    Testar este raciocínio sem consulta <ArrowRight size={16} />
+                  </a>
+                )}
                 <Provenance refs={sec.refs} />
               </div>
             </details>
@@ -371,7 +440,7 @@ export function Study() {
               estimar domínio.
             </p>
             <button className="primary" onClick={() => go(route.unit, 'treino', m.id)}>
-              Praticar nesta unidade <ArrowRight size={16} />
+              Praticar esta missão <ArrowRight size={16} />
             </button>
             {ms[index + 1] && (
               <a href={studyLink(content, ms[index + 1].id)}>
@@ -383,7 +452,7 @@ export function Study() {
         <aside className="study-aside">
           <Mastery unit={route.unit} />
           <details>
-            <summary>Revisões e roteiros preservados</summary>
+            <summary>Revisão integradora e aplicação em aula</summary>
             {content.supplements
               .filter(
                 (s) =>

@@ -2024,7 +2024,169 @@ th {
     padding-top: 40px;
   }
 }
+.celebration-region {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  width: min(420px, calc(100vw - 24px));
+  z-index: 50;
+  pointer-events: none;
+}
+.next-step-context {
+  margin: 24px 0 18px;
+  padding: 14px 18px;
+  max-width: 540px;
+  border-left: 3px solid var(--green);
+  background: var(--card);
+}
+.next-step-context strong,
+.next-step-context > span {
+  display: block;
+}
+.next-step-context strong {
+  margin: 8px 0;
+  font-size: 1rem;
+}
+.next-step-context > span:last-child {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+.learning-path {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin: 18px 0 30px;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+.learning-path a {
+  padding: 10px 0;
+  min-height: 44px;
+  align-content: center;
+}
+.weak-points {
+  background: var(--soft);
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 28px;
+}
+.weak-points h2 {
+  font-size: 1.15rem;
+  margin-top: 0;
+}
+.weak-points a,
+.weak-points a span {
+  display: block;
+}
+.weak-points a {
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+  text-decoration: none;
+}
+.weak-points span {
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin-top: 6px;
+}
+.concept-practice {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 12px 0;
+}
+@media (max-width: 620px) {
+  .site-header {
+    padding: 0 12px;
+    gap: 6px;
+  }
+  .brand {
+    min-width: 0;
+  }
+  .brand-icon,
+  .header-tools {
+    flex-shrink: 0;
+  }
+  .brand > span:last-child {
+    min-width: 0;
+  }
+}
+.milestone-toast {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--amber);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 16px;
+  pointer-events: auto;
+}
+.milestone-toast > div {
+  flex: 1;
+  min-width: 0;
+}
+.milestone-toast strong {
+  display: block;
+  font-size: 0.95rem;
+}
+.milestone-toast p {
+  margin: 7px 0 0;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.milestone-toast .icon-button {
+  margin: -6px -6px 0 0;
+}
+.milestone-check {
+  flex-shrink: 0;
+  color: var(--amber);
+  margin-top: 4px;
+}
+.milestone-history {
+  margin-top: 12px;
+}
+.milestone-history li {
+  margin-bottom: 18px;
+}
+@media (max-width: 760px) {
+  .celebration-region {
+    bottom: calc(84px + env(safe-area-inset-bottom));
+    right: 12px;
+  }
+}
+@keyframes milestone-enter {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes milestone-check {
+  0% {
+    transform: scale(0.85);
+  }
+  70% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 @media (prefers-reduced-motion: no-preference) {
+  .milestone-toast {
+    animation: milestone-enter 220ms ease-out both;
+  }
+  .milestone-check {
+    animation: milestone-check 450ms ease-out both;
+  }
   button,
   .button,
   .main-navigation a {
@@ -2055,6 +2217,7 @@ th {
   .breadcrumb,
   .unit-switch,
   .status-note,
+  .celebration-region,
   .site-footer,
   button,
   .segmented {

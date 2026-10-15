@@ -193,6 +193,8 @@ export interface State {
   evidence: Evidence[];
   errors: Record<string, ErrorRecord>;
   awards: Record<string, { at: number; xp: number; reason: string }>;
+  // Additive to schema 6: older backups without this field remain valid.
+  milestones?: Record<string, number>;
   migrations: Record<string, { at: number; raw: string; notes: string[]; imported: number }>;
   legacyHistory: {
     source: string;
@@ -239,4 +241,6 @@ export interface State {
     repeat: string[];
   };
   significantDays: string[];
+  calendarPolicy?: 'local-v1';
+  legacySignificantDays?: string[];
 }

@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { readFile } from 'node:fs/promises';
 import type { Content } from '../../src/v6/types';
-import { fresh, STATE_KEY } from '../../src/v6/engine';
+import { attempt, fresh, STATE_KEY } from '../../src/v6/engine';
 const content: Content = JSON.parse(
   await readFile(new URL('../../public/v6/cartografia.json', import.meta.url), 'utf8'),
 );
@@ -34,6 +34,164 @@ test('V6: três unidades, cinco destinos mobile, retomada e portal histórico', 
   await page.getByRole('link', { name: 'Início', exact: true }).click();
   await expect(page.getByRole('link', { name: 'Continuar de onde parei' })).toBeVisible();
   await page.screenshot({ path: info.outputPath('v6-home-desktop.png'), fullPage: true });
+});
+
+for (const motion of ['normal', 'system-reduced', 'manual-reduced'] as const) {
+  test(`V6: celebração de Chefão ${motion}, sem repetição ou distração em Prova`, async ({
+    page,
+  }, info) => {
+    await page.emulateMedia({
+      reducedMotion: motion === 'system-reduced' ? 'reduce' : 'no-preference',
+    });
+    await page.setViewportSize({ width: 390, height: 844 });
+    const state = fresh();
+    if (motion === 'manual-reduced') state.preferences.motion = 'reduce';
+    const qs = content.questions.filter((q) => q.unit === fund && q.roles.includes('chefao'));
+    const id = 'complete-boss-test';
+    state.session = {
+      id,
+      kind: 'questions',
+      pool: 'chefao',
+      ids: qs.map((q) => q.id),
+      position: qs.length - 1,
+      answered: true,
+      repeat: [],
+    };
+    for (const q of qs) {
+      attempt(state, content, {
+        item: q.id,
+        correct: true,
+        kind: 'boss',
+        context: id,
+        at: Date.now(),
+      });
+      state.drafts[`answer:${id}:${q.id}`] = q.correct;
+    }
+    await page.addInitScript(
+      ({ key, state }) => {
+        if (!localStorage.getItem(key)) localStorage.setItem(key, JSON.stringify(state));
+      },
+      { key: STATE_KEY, state },
+    );
+    await page.goto(path(fund, 'treino'));
+    await expect(page.locator('.feedback')).toBeVisible();
+    await expect(page.locator('.milestone-toast')).toHaveCount(0);
+    await page.getByRole('button', { name: 'Concluir rodada', exact: true }).click();
+    await expect(page.locator('.milestone-toast')).toContainText('Chefão superado');
+    expect(
+      await page.locator('.milestone-toast').evaluate((el) => getComputedStyle(el).animationName),
+    ).toBe(motion === 'normal' ? 'milestone-enter' : 'none');
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(
+      true,
+    );
+    const saved = await page.evaluate((key) => JSON.parse(localStorage.getItem(key)!), STATE_KEY);
+    expect(saved.awards).toEqual(state.awards);
+    expect(saved.milestones['boss:' + fund]).toBeGreaterThan(0);
+    if (motion === 'normal')
+      await page.screenshot({ path: info.outputPath('v6-celebracao-mobile.png'), fullPage: true });
+    await page.getByRole('button', { name: 'Dispensar celebração', exact: true }).focus();
+    await page.keyboard.press('Enter');
+    await expect(page.locator('.milestone-toast')).toHaveCount(0);
+    await page.reload();
+    await expect(
+      page.getByRole('heading', { name: 'Rodada concluída', exact: true }),
+    ).toBeVisible();
+    await expect(page.locator('.milestone-toast')).toHaveCount(0);
+    await page
+      .locator('.main-navigation')
+      .getByRole('link', { name: 'Início', exact: true })
+      .click();
+    await page.getByText('Seus marcos de aprendizagem', { exact: true }).click();
+    await expect(page.locator('.milestone-history')).toContainText('Chefão superado');
+    await page
+      .locator('.main-navigation')
+      .getByRole('link', { name: 'Prova', exact: true })
+      .click();
+    await page.getByRole('combobox', { name: 'Questões', exact: true }).selectOption('5');
+    await page.getByRole('button', { name: 'Iniciar prova do piloto', exact: true }).click();
+    await expect(page.getByRole('timer', { name: 'Tempo restante de prova' })).toBeVisible();
+    await expect(page.locator('.milestone-toast')).toHaveCount(0);
+    await expect(page.locator('.milestone-history')).toHaveCount(0);
+  });
+}
+
+test('V6: um acerto comum ensina sem celebração por alternativa', async ({ page }) => {
+  await page.goto(path(fund, 'treino'));
+  await page.getByRole('button', { name: 'Iniciar questões', exact: true }).click();
+  const prompt = await page.locator('.question-options legend').innerText();
+  const q = content.questions.find((q) => q.prompt === prompt)!;
+  await page
+    .getByRole('radio')
+    .nth(q.options.findIndex((o) => o.id === q.correct))
+    .check();
+  await page.getByRole('button', { name: 'Confirmar resposta', exact: true }).click();
+  await expect(page.locator('.feedback')).toBeVisible();
+  await expect(page.locator('.milestone-toast')).toHaveCount(0);
+});
+
+test('V6: estudo orienta treino da mesma missão sem rótulos Cartografia I/II', async ({ page }) => {
+  await page.goto('./');
+  await page.getByRole('link', { name: 'Diagnosticar', exact: true }).click();
+  await expect(page.getByRole('combobox', { name: 'Banco', exact: true })).toHaveValue(
+    'diagnostico',
+  );
+  await page.goto(path(fund, 'estudo', 'escalas-e-medidas'));
+  await page
+    .getByRole('button', { name: 'Registrar que estudei esta explicação', exact: true })
+    .first()
+    .click();
+  await page
+    .getByRole('link', { name: 'Testar este raciocínio sem consulta', exact: true })
+    .click();
+  await expect(page.getByRole('combobox', { name: 'Missão', exact: true })).toHaveValue(
+    'escalas-e-medidas',
+  );
+  await page.getByRole('button', { name: 'Iniciar questões', exact: true }).click();
+  await expect(page.locator('.exercise')).toContainText('Escalas e medidas');
+  for (const mission of ['linguagem-cartografica', 'fusos-utc-data', 'projecoes-propriedades']) {
+    await page.goto(path(content.missions.find((m) => m.id === mission)!.unit, 'estudo', mission));
+    await page
+      .locator('.reading-section')
+      .evaluateAll((nodes) => nodes.forEach((node) => node.setAttribute('open', '')));
+    await expect(page.locator('.reading-column')).not.toContainText(
+      /Cartografia I{1,2}(?![IV])|Tema\s+\d+/i,
+    );
+  }
+});
+
+test('V6: Difícil agenda recuperação com esforço e mantém Caderno de Erros vazio', async ({
+  page,
+}) => {
+  await page.goto(path(fund, 'revisao'));
+  await page.getByRole('button', { name: 'Iniciar revisão de até 12 cartões' }).click();
+  await page.getByLabel('Tentei recuperar a resposta antes de conferir').check();
+  await page.getByRole('button', { name: 'Revelar resposta', exact: true }).click();
+  await page.getByRole('button', { name: /^Difícil/ }).click();
+  const state = await page.evaluate((key) => JSON.parse(localStorage.getItem(key)!), STATE_KEY);
+  expect(state.errors).toEqual({});
+  expect(state.evidence.at(-1)).toMatchObject({ correct: true, rating: 'dificil' });
+  expect(Object.values(state.reviews)[0]).toMatchObject({ interval: 2, lapses: 0 });
+});
+
+test.describe('dia civil do estudante', () => {
+  test.use({ timezoneId: 'America/Sao_Paulo' });
+  test('V6: prática noturna e após meia-noite conta dois dias locais', async ({ page }) => {
+    await page.clock.install({ time: new Date('2026-10-16T02:30:00Z') });
+    await page.goto(path(fund, 'treino'));
+    await page.getByRole('button', { name: 'Iniciar questões', exact: true }).click();
+    await page.getByRole('radio').first().check();
+    await page.getByRole('button', { name: 'Confirmar resposta', exact: true }).click();
+    let state = await page.evaluate((key) => JSON.parse(localStorage.getItem(key)!), STATE_KEY);
+    expect(state.significantDays).toEqual(['2026-10-15']);
+    await page.clock.setSystemTime(new Date('2026-10-16T03:05:00Z'));
+    await page.getByRole('button', { name: 'Próxima questão', exact: true }).click();
+    await page.getByRole('radio').first().check();
+    await page.getByRole('button', { name: 'Confirmar resposta', exact: true }).click();
+    state = await page.evaluate((key) => JSON.parse(localStorage.getItem(key)!), STATE_KEY);
+    expect(state.significantDays).toEqual(['2026-10-15', '2026-10-16']);
+    await page.getByRole('link', { name: 'Início', exact: true }).click();
+    await expect(page.getByText(/2 dia\(s\) de prática/)).toBeVisible();
+  });
 });
 test('V6: 17 missões acessíveis, teoria preservada, IDs únicos e registro de leitura', async ({
   page,

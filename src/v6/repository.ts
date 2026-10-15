@@ -65,7 +65,11 @@ export class Repository {
   replace(raw: string) {
     const restored = parseState(raw);
     this.store.setItem(STATE_KEY + '.before-restore', JSON.stringify(this.state));
-    return this.commit((s) => Object.assign(s, restored, { revision: s.revision }));
+    return this.commit((s) => {
+      const revision = s.revision;
+      for (const key of Object.keys(s)) delete (s as unknown as Record<string, unknown>)[key];
+      Object.assign(s, restored, { revision });
+    });
   }
   reload() {
     try {

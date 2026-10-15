@@ -20,11 +20,15 @@ import {
   finishExam,
   blueprintAvailability,
   totalXP,
+  localDay,
+  streak,
   parseState,
   examPool,
 } from '../src/v6/engine.ts';
 import { assembleBlueprint, officialBlueprint } from '../src/v6/engine.ts';
 import { Repository } from '../src/v6/repository.ts';
+import { recognize } from '../src/v6/recognition.ts';
+import { editorialReplacements } from '../scripts/v6-editorial.mjs';
 const { content: c, parity } = await buildV6(),
   now = Date.UTC(2026, 9, 15, 12),
   sha = (x) =>
@@ -529,4 +533,269 @@ test('restauração preserva cópia anterior e rejeita arquivo defeituoso antes 
   assert.ok(JSON.parse(m.getItem(STATE_KEY + '.before-restore')).drafts.before);
   assert.throws(() => r.replace('null'));
   assert.equal(r.state.drafts.after, 'cópia');
+});
+
+test('marcos: navegação e leitura sem recuperação não geram celebração nem XP', () => {
+  const before = fresh(),
+    after = structuredClone(before);
+  after.resume = { unit: c.units[0].id, mode: 'estudo', mission: c.missions[0].id };
+  for (const m of c.missions) for (const section of m.sections) after.read[section.id] = now;
+  assert.deepEqual(recognize(c, before, after, now), []);
+  assert.equal(totalXP(after), 0);
+  assert.equal(after.milestones, undefined);
+});
+test('marcos: unidade requer todas as explicações e recuperação por missão, sem fabricar domínio', () => {
+  const s = fresh(),
+    unit = c.units[0].id,
+    missions = c.missions.filter((m) => m.unit === unit);
+  for (const m of missions) {
+    for (const section of m.sections) s.read[section.id] = now;
+    const item = c.questions.find((q) => q.mission === m.id);
+    attempt(s, c, { item: item.id, correct: true, kind: item.pool, at: now });
+  }
+  const before = structuredClone(s),
+    final = missions.at(-1).sections.at(-1).id;
+  delete before.read[final];
+  const xp = totalXP(s);
+  assert.deepEqual(
+    recognize(c, before, s, now).map((m) => m.id),
+    ['unit:' + unit],
+  );
+  assert.equal(totalXP(s), xp);
+  assert.equal(mastery(c, s, unit).score, null);
+  const restored = parseState(JSON.stringify(s));
+  assert.deepEqual(recognize(c, before, restored, now + DAY), []);
+});
+test('marcos: Chefão requer rodada completa da unidade, pelo menos 80% e não repete conquista', () => {
+  const qs = c.questions.filter((q) => q.unit === c.units[0].id && q.roles.includes('chefao'));
+  for (const hits of [qs.length - 2, qs.length - 1]) {
+    const s = fresh();
+    s.session = {
+      id: 'boss-round',
+      kind: 'questions',
+      pool: 'chefao',
+      ids: qs.map((q) => q.id),
+      position: qs.length - 1,
+      repeat: [],
+    };
+    qs.forEach((q, i) =>
+      attempt(s, c, {
+        item: q.id,
+        correct: i < hits,
+        kind: 'boss',
+        context: s.session.id,
+        at: now,
+      }),
+    );
+    const before = structuredClone(s);
+    assert.deepEqual(recognize(c, before, s, now), []);
+    s.session.position++;
+    const earned = recognize(c, before, s, now);
+    assert.equal(earned.length, hits / qs.length >= 0.8 ? 1 : 0);
+    assert.deepEqual(recognize(c, before, s, now + DAY), []);
+  }
+  const subset = fresh();
+  subset.session = {
+    id: 'subset',
+    kind: 'questions',
+    pool: 'chefao',
+    ids: [qs[0].id],
+    position: 0,
+    repeat: [],
+  };
+  attempt(subset, c, { item: qs[0].id, correct: true, kind: 'boss', context: 'subset', at: now });
+  const before = structuredClone(subset);
+  subset.session.position = 1;
+  assert.deepEqual(recognize(c, before, subset, now), []);
+});
+test('marcos: revisões só ficam em dia quando os vencidos reais terminam; importados não bastam', () => {
+  const s = fresh(),
+    cards = c.cards.filter((card) => card.unit === c.units[0].id).slice(0, 2);
+  s.session = {
+    id: 'review-round',
+    kind: 'cards',
+    ids: cards.map((c) => c.id),
+    position: 0,
+    repeat: [],
+  };
+  for (const card of cards) s.reviews[card.id] = schedule(undefined, 'bom', now - 5 * DAY);
+  let before = structuredClone(s);
+  rateCard(s, c, cards[0].id, 'bom', now);
+  assert.deepEqual(recognize(c, before, s, now), []);
+  before = structuredClone(s);
+  rateCard(s, c, cards[1].id, 'bom', now);
+  const xp = totalXP(s);
+  assert.match(recognize(c, before, s, now)[0].id, /^reviews:/);
+  assert.equal(totalXP(s), xp);
+  const imported = fresh();
+  importLegacy(imported, c, c.sources[0].key, JSON.stringify({ fc: { 0: 'ok' } }), now);
+  const id = Object.keys(imported.reviews)[0];
+  imported.session = { id: 'revalidate', kind: 'cards', ids: [id], position: 0, repeat: [] };
+  before = structuredClone(imported);
+  rateCard(imported, c, id, 'bom', now);
+  assert.deepEqual(recognize(c, before, imported, now), []);
+});
+test('marcos: sete dias exigem prática significativa e não acrescentam pontos', () => {
+  const s = fresh();
+  s.significantDays = Array.from({ length: 6 }, (_, i) => localDay(now - (i + 1) * DAY));
+  const before = structuredClone(s);
+  attempt(s, c, { item: q.id, correct: true, kind: 'concurso', at: now });
+  const xp = totalXP(s),
+    earned = recognize(c, before, s, now);
+  assert.ok(earned.some((m) => m.id === 'streak:7'));
+  assert.equal(totalXP(s), xp);
+  assert.deepEqual(recognize(c, s, s, now), []);
+});
+test('marcos: erro convertido exige recuperação já validada pelo motor', () => {
+  const s = fresh(),
+    other = c.questions.find((x) => x.id !== q.id && x.concept === q.concept),
+    card = c.cards.find((x) => x.concept === q.concept);
+  attempt(s, c, { item: q.id, correct: false, kind: 'concurso', at: now });
+  let before = structuredClone(s);
+  attempt(s, c, { item: q.id, correct: true, kind: 'concurso', at: now + 1000 });
+  assert.deepEqual(recognize(c, before, s, now + 1000), []);
+  rateCard(s, c, card.id, 'bom', now + DAY);
+  rateCard(s, c, card.id, 'bom', now + 5 * DAY);
+  attempt(s, c, { item: q.id, correct: true, kind: 'concurso', at: now + 8 * DAY });
+  before = structuredClone(s);
+  attempt(s, c, { item: other.id, correct: true, kind: 'concurso', at: now + 9 * DAY });
+  const xp = totalXP(s);
+  assert.match(recognize(c, before, s, now + 9 * DAY)[0].id, /^error:/);
+  assert.equal(totalXP(s), xp);
+});
+test('marcos: backups anteriores permanecem válidos e marcos inválidos são rejeitados', () => {
+  const s = fresh();
+  assert.deepEqual(parseState(JSON.stringify(s)), s);
+  s.milestones = { 'streak:7': now };
+  assert.deepEqual(parseState(JSON.stringify(s)), s);
+  for (const invalid of [[], null, { a: 'hoje' }, { a: -1 }])
+    assert.throws(() => parseState(JSON.stringify({ ...s, milestones: invalid })), /marcos/);
+});
+
+test('B1: provas equilibradas não têm ciclo periódico nem três letras iguais em sequência', () => {
+  const signatures = new Set();
+  for (const count of [5, 10, 20, 30])
+    for (let seed = 0; seed < 40; seed++) {
+      const ex = makeExam(c, fresh(), count, 20, now, undefined, 'auditoria-' + seed);
+      const positions = ex.ids.map((id) => ex.optionOrder[id].indexOf(entity(id).correct));
+      const frequencies = Array.from(
+        { length: 5 },
+        (_, p) => positions.filter((x) => x === p).length,
+      );
+      assert.ok(Math.max(...frequencies) - Math.min(...frequencies) <= 1);
+      assert.equal(
+        positions.some((p, i) => i >= 2 && p === positions[i - 1] && p === positions[i - 2]),
+        false,
+      );
+      for (let period = 1; period <= Math.min(5, Math.floor(count / 2)); period++)
+        assert.equal(
+          positions.every((p, i) => p === positions[i % period]),
+          false,
+        );
+      if (count === 20) signatures.add(positions.join(''));
+      const restored = parseState(JSON.stringify({ ...fresh(), exam: ex }));
+      assert.deepEqual(restored.exam.optionOrder, ex.optionOrder);
+    }
+  assert.ok(signatures.size >= 35);
+  assert.deepEqual(
+    makeExam(c, fresh(), 20, 20, now, undefined, 'reproduzir').optionOrder,
+    makeExam(c, fresh(), 20, 20, now, undefined, 'reproduzir').optionOrder,
+  );
+});
+test('B2: Difícil é recuperação com esforço, intervalo curto, sem criar ou reabrir erro', () => {
+  const s = fresh(),
+    card = c.cards.find((x) => x.concept === q.concept);
+  rateCard(s, c, card.id, 'dificil', now);
+  assert.equal(s.evidence.at(-1).correct, true);
+  assert.equal(s.evidence.at(-1).rating, 'dificil');
+  assert.equal(Object.keys(s.errors).length, 0);
+  assert.equal(s.reviews[card.id].lapses, 0);
+  assert.ok(s.reviews[card.id].interval < schedule(undefined, 'bom', now).interval);
+  rateCard(s, c, card.id, 'errei', now + DAY);
+  const error = Object.values(s.errors)[0];
+  assert.equal(error.count, 1);
+  error.status = 'resolvido';
+  const last = error.last;
+  rateCard(s, c, card.id, 'dificil', now + 2 * DAY);
+  assert.equal(error.status, 'resolvido');
+  assert.equal(error.last, last);
+  assert.equal(error.count, 1);
+  assert.equal(s.reviews[card.id].lapses, 1);
+  rateCard(s, c, card.id, 'errei', now + 3 * DAY);
+  assert.equal(error.status, 'aberto');
+  assert.equal(error.count, 2);
+});
+test('C1: dias civis em UTC−3 e calendário com mudança de offset não perdem a sequência', () => {
+  const previousTimezone = process.env.TZ;
+  try {
+    for (const zone of ['America/Sao_Paulo', 'America/New_York']) {
+      process.env.TZ = zone;
+      const s = fresh();
+      const dates =
+        zone === 'America/Sao_Paulo'
+          ? ['2026-10-15T23:30:00-03:00', '2026-10-16T00:15:00-03:00']
+          : [
+              '2026-03-07T00:30:00-05:00',
+              '2026-03-08T00:30:00-05:00',
+              '2026-03-09T00:30:00-04:00',
+              '2026-03-10T00:30:00-04:00',
+            ];
+      dates.forEach((date, i) =>
+        attempt(s, c, {
+          item: c.questions[i].id,
+          correct: true,
+          kind: 'fixacao',
+          at: Date.parse(date),
+        }),
+      );
+      assert.deepEqual(
+        s.significantDays,
+        dates.map((x) => x.slice(0, 10)),
+      );
+      assert.equal(streak(s, Date.parse(dates.at(-1))), dates.length);
+      assert.equal(streak(s, Date.parse(dates.at(-1)) + 60 * 60 * 1000), dates.length);
+      const legacy = structuredClone(s);
+      delete legacy.calendarPolicy;
+      legacy.significantDays = ['2000-01-01'];
+      const migrated = parseState(JSON.stringify(legacy));
+      assert.deepEqual(migrated.legacySignificantDays, ['2000-01-01']);
+      assert.deepEqual(migrated.significantDays, s.significantDays);
+      assert.equal(migrated.calendarPolicy, 'local-v1');
+      assert.deepEqual(parseState(JSON.stringify(migrated)), migrated);
+    }
+  } finally {
+    if (previousTimezone === undefined) delete process.env.TZ;
+    else process.env.TZ = previousTimezone;
+  }
+});
+test('UX: a camada canônica troca só a embalagem editorial e mantém originais integrais', () => {
+  assert.equal(c.editorialChanges.length, 7);
+  for (const [id, field, original, replacement] of editorialReplacements) {
+    assert.ok(entity(id)[field].includes(replacement));
+    const raw = c.archive.find((entry) => entry.id === id);
+    assert.ok(
+      JSON.stringify(raw.original).includes(original.replaceAll('"', '\\"')) ||
+        JSON.stringify(raw.original).includes(original),
+    );
+  }
+  const active = c.missions.map((m) => ({
+    title: m.title,
+    goal: m.goal,
+    sections: m.sections.map(({ title, hook, html }) => ({ title, hook, html })),
+    recalls: m.recalls.map(({ prompt, model }) => ({ prompt, model })),
+  }));
+  assert.doesNotMatch(JSON.stringify(active), /Cartografia I{1,2}(?![IV])|Tema\s+\d+/i);
+  assert.equal(c.archive.length, 685);
+});
+test('restaurar backup anterior não mantém marcos ou sessão ausentes da cópia', () => {
+  const m = new Memory(),
+    r = new Repository(m);
+  r.commit((s) => {
+    s.milestones = { 'streak:7': now };
+    s.session = { id: 'old', kind: 'cards', ids: [c.cards[0].id], position: 0, repeat: [] };
+  });
+  r.replace(JSON.stringify(fresh()));
+  assert.equal(r.state.session, undefined);
+  assert.equal(r.state.milestones, undefined);
+  assert.equal(JSON.parse(m.getItem(STATE_KEY + '.before-restore')).milestones['streak:7'], now);
 });

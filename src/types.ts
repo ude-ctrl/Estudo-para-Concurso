@@ -39,6 +39,7 @@ export interface Lesson {
 export interface Catalog {
   schemaVersion: number;
   lessons: Lesson[];
+  legacyBackupSources?: Pick<Lesson, 'id' | 'sourceHash' | 'storage'>[];
   resources: {
     id: string;
     title: string;

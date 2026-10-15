@@ -14,6 +14,7 @@ import {
 } from './v6-catalog.mjs';
 import { concepts, conceptFor } from './v6-concepts.mjs';
 import { authored } from './v6-authored.mjs';
+import { applyEditorial } from './v6-editorial.mjs';
 const sha = (x) =>
   createHash('sha256')
     .update(typeof x === 'string' ? x : JSON.stringify(x))
@@ -476,6 +477,7 @@ export async function buildV6() {
     references,
     archive,
     sources,
+    editorialChanges: applyEditorial(missions),
   };
   const parity = {
     version: obj.version,
