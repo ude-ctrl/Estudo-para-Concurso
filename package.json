@@ -13,7 +13,9 @@
     "import:v6": "node scripts/build-v6.mjs",
     "build": "npm run import:content && npm run import:v6 && tsc --noEmit && vite build",
     "preview": "vite preview --host 0.0.0.0",
-    "test": "node tests/content.test.mjs && node --experimental-strip-types tests/v6.test.mjs",
+    "test": "node tests/content.test.mjs && node --experimental-strip-types tests/v6.test.mjs && node tests/canonical.test.mjs",
+    "test:canonical": "node tests/canonical.test.mjs",
+    "check:canonical": "node scripts/canonical-content.mjs",
     "test:e2e": "playwright test",
     "format": "prettier --write src scripts tests index.html README.md vite.config.ts playwright.config.ts package.json tsconfig.json .github/workflows"
   },

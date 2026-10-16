@@ -1,5 +1,7 @@
 # V6 — Fase 14: aceite de uso e revisão final
 
+**Atualização posterior:** o usuário autorizou encerrar tecnicamente o piloto com a ressalva visual e iniciar a Issue #13 em `v6-base-canonica`, começando pelas três unidades de Cartografia. O [registro da decisão](V6_FASE14_ENCERRAMENTO_TECNICO.md) delimita o encerramento e as pendências editoriais mantidas. Os estados e próximos passos abaixo são históricos; não exigem uma segunda autorização da mesma transição.
+
 Data do registro: 15/10/2026, America/Sao_Paulo.
 Branch: `v6-piloto-cartografia`.
 Versão avaliada pelo usuário: `67c38a7`, contendo a implementação `e400d86` e o ajuste visual `bf421cd`.

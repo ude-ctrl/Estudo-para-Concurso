@@ -1,0 +1,561 @@
+{
+  "schema_version": 1,
+  "unit_id": "geotecnologias",
+  "editorial_version": "0.1.0",
+  "status": "EM_AUDITORIA",
+  "reviewed_at": "2026-10-16",
+  "reviewer_kind": "AI-assisted editorial review; not independent human approval",
+  "human_approval": null,
+  "scope": {
+    "all_published_resources_read": true,
+    "legacy_htmls_not_rewritten": true,
+    "other_units_audited": 0,
+    "official_exam_fully_audited": false
+  },
+  "counts": {
+    "missions": 7,
+    "sections": 17,
+    "recalls": 12,
+    "concepts": 13,
+    "questions": 52,
+    "authored_questions": 12,
+    "cards": 35,
+    "game": 89,
+    "writing": 2,
+    "supplements": 3,
+    "parity_records": 241
+  },
+  "confidence": {
+    "structural": "high — exact snapshot comparison",
+    "basic_concepts": "moderate — assisted reading and selected primary sources",
+    "numerical_examples": "high for the calculations described",
+    "difficulty_calibration": "not measured",
+    "human_premium": "pending"
+  },
+  "premium_criteria": [
+    {
+      "id": "correcao_conceitual",
+      "title": "Correção conceitual",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    },
+    {
+      "id": "cobertura",
+      "title": "Cobertura do escopo e perfil",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    },
+    {
+      "id": "profundidade",
+      "title": "Profundidade para concurso",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    },
+    {
+      "id": "clareza",
+      "title": "Clareza didática",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    },
+    {
+      "id": "exemplos",
+      "title": "Qualidade dos exemplos",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    },
+    {
+      "id": "redundancia",
+      "title": "Redundância editorial",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    },
+    {
+      "id": "terminologia",
+      "title": "Consistência terminológica",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    },
+    {
+      "id": "lacunas",
+      "title": "Identificação de lacunas",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    },
+    {
+      "id": "temporalidade",
+      "title": "Dados temporais",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    },
+    {
+      "id": "nivel",
+      "title": "Adequação ao nível de cobrança",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    },
+    {
+      "id": "fontes",
+      "title": "Confiabilidade das fontes",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    },
+    {
+      "id": "treino",
+      "title": "Qualidade do treino",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    }
+  ],
+  "authored_questions": [
+    {
+      "id": "v6-q-g01",
+      "resource_sha256": "1e5d2a1fd743b71764f200ad0d9667cdda3a38b5bfef2cb8d36d49cd07eea5f0",
+      "pool": "concurso",
+      "correct_option_id": "v6-q-g01-correct",
+      "correct_option_text": "Emissão própria de energia e capacidade de atravessar muitas nuvens, conforme frequência e condições.",
+      "current_difficulty": 2,
+      "current_cognitive": 3,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Radar é ativo e opera sem iluminação solar; micro-ondas são menos limitadas por muitas nuvens.",
+      "recommendation": "Manter ressalva de frequência/condições; não generalizar para qualquer sensor ativo ou chuva.",
+      "level_concern": false,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-theory-t03a-8",
+        "v6-theory-t17-0",
+        "v6-theory-t17-9",
+        "v6-theory-t17-11",
+        "sensores"
+      ],
+      "verification_basis": "Raciocínio/cálculo do enunciado e teoria preservada; não se atribui a uma fonte externa que não tratou deste item.",
+      "human_decision": "pending",
+      "human_reviewer": null
+    },
+    {
+      "id": "v6-q-g02",
+      "resource_sha256": "f9b3d0285a5a5990c6bcf08c8160fd2181b4f08fc4471107f4c46ed9a3f570a5",
+      "pool": "concurso",
+      "correct_option_id": "v6-q-g02-correct",
+      "correct_option_text": "16.384, associados à resolução radiométrica.",
+      "current_difficulty": 2,
+      "current_cognitive": 3,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "2¹⁴=16.384 códigos possíveis, associados à discretização radiométrica.",
+      "recommendation": "Manter “em princípio”: bits não comprovam sensibilidade efetiva ou precisão radiométrica do sensor.",
+      "level_concern": false,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-theory-t03a-9",
+        "v6-theory-t03a-10",
+        "v6-theory-t17-10",
+        "v6-theory-t17-12",
+        "resolucoes"
+      ],
+      "verification_basis": "Raciocínio/cálculo do enunciado e teoria preservada; não se atribui a uma fonte externa que não tratou deste item.",
+      "human_decision": "pending",
+      "human_reviewer": null
+    },
+    {
+      "id": "v6-q-g03",
+      "resource_sha256": "9a8acb88ad62af1a22147223e09e59ff830a5210814182085dd0dc86cf7b9d34",
+      "pool": "concurso",
+      "correct_option_id": "v6-q-g03-correct",
+      "correct_option_text": "Confirmar os referenciais e aplicar transformação apropriada, validando o alinhamento.",
+      "current_difficulty": 2,
+      "current_cognitive": 4,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Atribuir um rótulo não transforma coordenadas; confirmar referências, parâmetros, época e validar.",
+      "recommendation": "Reavaliar C4 frente à aplicação direta; manter a distinção entre definição de CRS e transformação.",
+      "level_concern": true,
+      "source_ids": [
+        "ibge-sirgas"
+      ],
+      "content_evidence": [
+        "v6-theory-t03a-13",
+        "v6-theory-t17-13",
+        "datum"
+      ],
+      "verification_basis": "Raciocínio do item, teoria preservada e fontes listadas, respeitando o nível de acesso de cada uma.",
+      "human_decision": "pending",
+      "human_reviewer": null
+    },
+    {
+      "id": "v6-q-g04",
+      "resource_sha256": "cf8b55cf0880ae9f701862166bf47c62b2ee5d0ed699e75bcf6db4c8bbcaf2f7",
+      "pool": "concurso",
+      "correct_option_id": "v6-q-g04-correct",
+      "correct_option_text": "Compatibilizar dados, criar buffer dos rios e combinar a seleção espacial com os bairros vulneráveis.",
+      "current_difficulty": 3,
+      "current_cognitive": 4,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Buffer representa distância; seleção/interseção cruza a condição com bairros vulneráveis.",
+      "recommendation": "Rever família com Chefão legado de mesmas condições; 500 m é parâmetro hipotético, não regra jurídica.",
+      "level_concern": false,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-theory-t03a-11",
+        "v6-theory-t03a-12",
+        "v6-theory-t17-14",
+        "topologia"
+      ],
+      "verification_basis": "Raciocínio/cálculo do enunciado e teoria preservada; não se atribui a uma fonte externa que não tratou deste item.",
+      "human_decision": "pending",
+      "human_reviewer": null
+    },
+    {
+      "id": "v6-q-g05",
+      "resource_sha256": "c919a1468ed9b6045c18687414ba37dd722379f839edc7f8d405f16423ad3c5f",
+      "pool": "concurso",
+      "correct_option_id": "v6-q-g05-correct",
+      "correct_option_text": "Obter metadados e avaliar adequação temporal, referência, precisão e método.",
+      "current_difficulty": 2,
+      "current_cognitive": 4,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Metadados permitem avaliar época, referência, precisão e método; zoom não os substitui.",
+      "recommendation": "Reavaliar C4: decisão direta com vários distratores pouco plausíveis para treino de concurso.",
+      "level_concern": true,
+      "source_ids": [
+        "inde-norma"
+      ],
+      "content_evidence": [
+        "v6-theory-t17-15",
+        "digital"
+      ],
+      "verification_basis": "Raciocínio do item, teoria preservada e fontes listadas, respeitando o nível de acesso de cada uma.",
+      "human_decision": "pending",
+      "human_reviewer": null
+    },
+    {
+      "id": "v6-q-g06",
+      "resource_sha256": "adf4eac20b51f9003dfcc829fd8faad035bcf4875a2276b380786cfe794fca90",
+      "pool": "concurso",
+      "correct_option_id": "v6-q-g06-correct",
+      "correct_option_text": "Confunde um produto de alerta operacional com a estimativa anual consolidada do PRODES.",
+      "current_difficulty": 3,
+      "current_cognitive": 4,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Alertas operacionais DETER não são intercambiáveis com a taxa anual do PRODES.",
+      "recommendation": "Manter candidato; vincular documentação INPE com data, preservando a diferença entre estimativa e produto consolidado.",
+      "level_concern": false,
+      "source_ids": [
+        "inpe-deter",
+        "inpe-2026"
+      ],
+      "content_evidence": [
+        "v6-theory-t03a-14",
+        "v6-theory-t17-16",
+        "monitoramento"
+      ],
+      "verification_basis": "Raciocínio do item, teoria preservada e fontes listadas, respeitando o nível de acesso de cada uma.",
+      "human_decision": "pending",
+      "human_reviewer": null
+    },
+    {
+      "id": "v6-q-g07",
+      "resource_sha256": "dd8d8f877d2ca13a4e77e4440ba4f5dbdf764ef285873c3be466a9160d764c65",
+      "pool": "elite",
+      "correct_option_id": "v6-q-g07-correct",
+      "correct_option_text": "P tem NDVI 0,5 e Q cerca de −0,67; os valores são indícios espectrais e não identificam, sozinhos, espécie ou situação jurídica.",
+      "current_difficulty": 3,
+      "current_cognitive": 4,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "P=(0,6−0,2)/(0,6+0,2)=0,5; Q=(0,02−0,1)/(0,02+0,1)=−2/3.",
+      "recommendation": "Manter candidato de cálculo com limite inferencial; espectros são didáticos e comparáveis por premissa.",
+      "level_concern": false,
+      "source_ids": [
+        "usgs-ndvi"
+      ],
+      "content_evidence": [
+        "v6-theory-t03a-9",
+        "v6-theory-t03a-10",
+        "v6-theory-t17-10",
+        "v6-theory-t17-12",
+        "ndvi"
+      ],
+      "verification_basis": "Raciocínio do item, teoria preservada e fontes listadas, respeitando o nível de acesso de cada uma.",
+      "human_decision": "pending",
+      "human_reviewer": null
+    },
+    {
+      "id": "v6-q-g08",
+      "resource_sha256": "b61ea917c640d79c9e260bdb8f921b4dd113d6f3ead968adfe7d573c9c7fb3e4",
+      "pool": "elite",
+      "correct_option_id": "v6-q-g08-correct",
+      "correct_option_text": "Avaliar com amostra de referência independente, informar o desenho amostral e examinar omissões e comissões por classe.",
+      "current_difficulty": 4,
+      "current_cognitive": 5,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Avaliar nos próprios pixels de ajuste não estima bem generalização; referência independente deve examinar classes.",
+      "recommendation": "Manter candidato; amostragem e independência espacial merecem discussão na revisão humana.",
+      "level_concern": false,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-theory-t03a-9",
+        "v6-theory-t03a-10",
+        "v6-theory-t17-10",
+        "v6-theory-t17-12",
+        "classificacao"
+      ],
+      "verification_basis": "Raciocínio/cálculo do enunciado e teoria preservada; não se atribui a uma fonte externa que não tratou deste item.",
+      "human_decision": "pending",
+      "human_reviewer": null
+    },
+    {
+      "id": "v6-q-g09",
+      "resource_sha256": "6d2f711b30e90ed682d079665301b531ddeb503ee6acafe8ae3f8a552a630a0b",
+      "pool": "elite",
+      "correct_option_id": "v6-q-g09-correct",
+      "correct_option_text": "A interseção não localiza todos os moradores; é preciso estimar a distribuição populacional na faixa e declarar método e incerteza.",
+      "current_difficulty": 3,
+      "current_cognitive": 5,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Município parcialmente intersectado não localiza toda sua população na faixa; interpolação por área impõe hipótese.",
+      "recommendation": "Manter candidato de mudança de suporte espacial; não tratar ponderação como contagem exata.",
+      "level_concern": false,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-theory-t03a-11",
+        "v6-theory-t03a-12",
+        "v6-theory-t17-14",
+        "topologia"
+      ],
+      "verification_basis": "Raciocínio/cálculo do enunciado e teoria preservada; não se atribui a uma fonte externa que não tratou deste item.",
+      "human_decision": "pending",
+      "human_reviewer": null
+    },
+    {
+      "id": "v6-q-g10",
+      "resource_sha256": "a7d1768e0972fd203ae37a518fd3878de45982d6a01c7b4031eef4540151a11e",
+      "pool": "elite",
+      "correct_option_id": "v6-q-g10-correct",
+      "correct_option_text": "Interpretar diferenças observáveis após conferir comparabilidade; atribuir causas requer evidências complementares às duas imagens.",
+      "current_difficulty": 3,
+      "current_cognitive": 4,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Comparabilidade de datas/sensores/processamento precede interpretação; causa social exige evidência adicional.",
+      "recommendation": "Preservar acesso ao par NASA no estudo; a questão hoje o referencia sem trazer as imagens junto do enunciado.",
+      "level_concern": false,
+      "source_ids": [
+        "nasa-rio"
+      ],
+      "content_evidence": [
+        "v6-theory-t03a-8",
+        "v6-theory-t17-0",
+        "v6-theory-t17-9",
+        "v6-theory-t17-11",
+        "sensores"
+      ],
+      "verification_basis": "Raciocínio do item, teoria preservada e fontes listadas, respeitando o nível de acesso de cada uma.",
+      "human_decision": "pending",
+      "human_reviewer": null
+    },
+    {
+      "id": "v6-q-g11",
+      "resource_sha256": "e8ea412f1191cb71bb2365e32e9cb8d00302e2821f8326cdc02cccf3b2ec1451",
+      "pool": "elite",
+      "correct_option_id": "v6-q-g11-correct",
+      "correct_option_text": "Geocodificar endereços e interpolar chuva entre estações, avaliando a qualidade das posições e a incerteza da superfície estimada.",
+      "current_difficulty": 3,
+      "current_cognitive": 4,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Geocodificação posiciona endereços; interpolação estima chuva não observada; ambas exigem avaliação.",
+      "recommendation": "Manter candidato de integração e incerteza; reconhecer que estimativa não é observação direta.",
+      "level_concern": false,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-theory-t17-15",
+        "operacoes-digitais"
+      ],
+      "verification_basis": "Raciocínio/cálculo do enunciado e teoria preservada; não se atribui a uma fonte externa que não tratou deste item.",
+      "human_decision": "pending",
+      "human_reviewer": null
+    },
+    {
+      "id": "v6-q-g12",
+      "resource_sha256": "6389ebec9c66032b0e61aafd1688238a437e248726f5633e9e947b9bf7d1f6e1",
+      "pool": "elite",
+      "correct_option_id": "v6-q-g12-correct",
+      "correct_option_text": "Construir mapas de trajetos com legenda compartilhada, comparar barreiras e justificar alternativas, com recursos táteis ou textuais e avaliação do raciocínio.",
+      "current_difficulty": 3,
+      "current_cognitive": 5,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Mapear trajetos, comparar barreiras e justificar alternativas com acesso tátil/textual produz evidência do raciocínio.",
+      "recommendation": "Manter candidato; validar alinhamento pedagógico e fonte curricular antes de aprovação humana.",
+      "level_concern": false,
+      "source_ids": [
+        "mec-bncc"
+      ],
+      "content_evidence": [
+        "v6-theory-t17-17",
+        "ensino"
+      ],
+      "verification_basis": "Raciocínio do item, teoria preservada e fontes listadas, respeitando o nível de acesso de cada uma.",
+      "human_decision": "pending",
+      "human_reviewer": null
+    }
+  ],
+  "proposed_metadata_changes": [
+    {
+      "id": "v6-fix-b5782254d12f27da",
+      "before": {
+        "mission": "sensores-espectro",
+        "concept": "sensores"
+      },
+      "proposed": {
+        "mission": "resolucoes-indices-classificacao",
+        "concept": "resolucoes"
+      },
+      "reason": "Pixel/grade raster não tem como conceito principal fonte de energia do sensor.",
+      "before_sha256": "c9aa9def68dc20f42907a92f107b48f95638c43ecaf0ae4a16abb7454832fbb3",
+      "status": "pending-human-decision",
+      "applied": false
+    }
+  ],
+  "question_families": [
+    {
+      "id": "familia-buffer-escolas-500",
+      "members": [
+        "v6-q-g04",
+        "v6-fix-df0accd0b0af1130"
+      ],
+      "reason": "Mesmas escolas a até 500 m de rios e dentro de bairros vulneráveis.",
+      "status": "proposal-not-merged",
+      "applied": false
+    }
+  ],
+  "findings": [
+    {
+      "id": "CAN-EDITORIAL-001",
+      "severity": "promotion-blocker",
+      "status": "open",
+      "blocks_promotion": true,
+      "title": "Parecer humano Premium e aprovação dos itens ainda pendentes",
+      "resource_ids": [
+        "v6-q-g01",
+        "v6-q-g02",
+        "v6-q-g03",
+        "v6-q-g04",
+        "v6-q-g05",
+        "v6-q-g06",
+        "v6-q-g07",
+        "v6-q-g08",
+        "v6-q-g09",
+        "v6-q-g10",
+        "v6-q-g11",
+        "v6-q-g12"
+      ],
+      "decision": "Este parecer assistido e os testes não promovem uma unidade. Os 12 critérios e o conjunto integral precisam de decisão editorial documentada."
+    },
+    {
+      "id": "CAN-FEEDBACK-001",
+      "severity": "editorial-review",
+      "status": "open",
+      "blocks_promotion": true,
+      "title": "Complementos genéricos e atribuições de conceitos exigem revisão por pertinência",
+      "resource_ids": [
+        "v6-fix-b5782254d12f27da"
+      ],
+      "decision": "Conferir as propostas de vínculo e os feedbacks por alternativa. Na questão v6-fix-b5782254d12f27da, o conceito de pixel recebe complemento sobre sensores passivos/térmicos. Os textos foram preservados nesta candidata."
+    },
+    {
+      "id": "CAN-FONTE-001",
+      "severity": "editorial-review",
+      "status": "open",
+      "blocks_promotion": true,
+      "title": "Afirmações sobre como a FGV já cobrou não possuem prova/ano/item identificados",
+      "resource_ids": [
+        "v6-theory-t17-0",
+        "v6-theory-t03a-9",
+        "v6-theory-t03a-12",
+        "v6-theory-t03a-14"
+      ],
+      "decision": "Tratar como orientação autoral até verificar exemplos de provas reais; o edital confirma programa/formato, não frequência histórica de cobrança."
+    },
+    {
+      "id": "CAN-NIVEL-001",
+      "severity": "editorial-review",
+      "status": "open",
+      "blocks_promotion": true,
+      "title": "Nível cognitivo/dificuldade e distratores precisam de decisão",
+      "resource_ids": [
+        "v6-q-g03",
+        "v6-q-g05"
+      ],
+      "decision": "Reclassificar ou reconstruir em nova versão após decisão editorial. Não há calibração psicométrica ou promoção pelo rótulo Elite."
+    },
+    {
+      "id": "CAN-FAMILIA-001",
+      "severity": "editorial-review",
+      "status": "open",
+      "blocks_promotion": true,
+      "title": "Famílias próximas entre novos itens e legado",
+      "resource_ids": [
+        "v6-q-g04",
+        "v6-fix-df0accd0b0af1130"
+      ],
+      "decision": "Os pares não são duplicatas exatas. Decidir identidade de família, rastreabilidade de reformulação e efeito na novidade antes da promoção; não apagar originais."
+    },
+    {
+      "id": "CAN-VISUAL-003",
+      "severity": "editorial-review",
+      "status": "open",
+      "blocks_promotion": true,
+      "title": "Questão referencia imagens apresentadas em outro contexto",
+      "resource_ids": [
+        "v6-q-g10"
+      ],
+      "decision": "O par NASA está na teoria de sensores. Decidir vinculação/exibição junto ao item para torná-lo autônomo, sem alterar o original silenciosamente."
+    },
+    {
+      "id": "CAN-PRATICA-001",
+      "severity": "scope-limitation",
+      "status": "open",
+      "blocks_promotion": false,
+      "title": "Prática ativa tem um roteiro de escala, compartilhado pelo módulo",
+      "resource_ids": [],
+      "decision": "Preservado no suporte da unidade de fundamentos; não declarar três temas específicos de prática já implementados. Futuras ampliações exigem autoria/auditoria."
+    },
+    {
+      "id": "CAN-TEMPORAL-001",
+      "severity": "source-review",
+      "status": "open",
+      "blocks_promotion": true,
+      "title": "Conferência direta de fonte ainda parcial",
+      "resource_ids": [
+        "ensino",
+        "v6-theory-t17-17"
+      ],
+      "decision": "Trecho indexado ou falha de acesso não equivale a conferência integral. Manter verified_at nulo no fato parcialmente verificado e resolver antes da promoção."
+    },
+    {
+      "id": "CAN-SUPORTE-001",
+      "severity": "preservation",
+      "status": "resolved",
+      "blocks_promotion": false,
+      "title": "Dados pedagógicos da interface incluídos no pacote candidato",
+      "resource_ids": [
+        "v6-q-g07"
+      ],
+      "decision": "Tabelas extraídas de literais AST, perfil SVG preservado, precisão UTM e rubricas de prática registradas. Nada foi removido do piloto."
+    }
+  ],
+  "statements": [
+    "As 17 explicações preservam fonte de energia, espectro, quatro resoluções, bandas/NDVI, classificação, GNSS/referenciais, SIG e operações digitais, monitoramento regional e ensino. O texto distingue passivo de dependência obrigatória do Sol e inclui limites de inferência por imagens, validação independente e trabalho de campo.",
+    "Os 12 recalls, 35 cartões, 89 V/F, duas discursivas e três suplementos foram lidos. As respostas são geralmente atômicas; a explicação expandida depende dos conceitos do motor e deve acompanhar a base. As rubricas e o roteiro de prática atualmente definidos na interface foram preservados como suporte do lote, sem criar novos temas de prática.",
+    "As contas de 14 bits e NDVI conferem. g08, g09, g10 e g11 oferecem integração e análise de incerteza mais fortes. g03 e g05 merecem revisão de C4 e plausibilidade dos distratores. g04 tem uma família próxima do Chefão legado. g10 menciona um par real de imagens consultável na teoria, mas não o traz junto do enunciado: recomenda-se tornar essa dependência explícita na próxima versão.",
+    "SIRGAS2000, INDE e a função atual de PRODES/DETER foram confrontados com fontes primárias. Foram mantidas as datas históricas das imagens NASA (1984/2015), não transformadas em situação atual. A fonte curricular dos sete princípios tem apoio indexado, mas o PDF direto foi bloqueado; não se declara auditoria integral de BNCC/DCEPA ou cobertura completa do edital."
+  ],
+  "technical_checks": "Consultar relatório de validação do lote; leitura editorial não é execução de navegador."
+}

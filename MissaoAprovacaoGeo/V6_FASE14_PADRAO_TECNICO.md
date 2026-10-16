@@ -1,5 +1,7 @@
 # V6 — Fase 14: consolidação do padrão técnico
 
+**Decisão posterior:** o usuário autorizou o [encerramento técnico com ressalva sensorial e o início da Issue #13](V6_FASE14_ENCERRAMENTO_TECNICO.md), em branch própria. O registro abaixo preserva o estado anterior dessa consolidação; suas restrições de início foram superadas somente no escopo autorizado. A aprovação sensorial e a editorial não são presumidas.
+
 Registro: 16/10/2026, America/Sao_Paulo. Branch: `v6-piloto-cartografia`.
 Referência consolidada: `e7302000106b70c0fcaa37594d575e4a8b92d0f8`.
 
