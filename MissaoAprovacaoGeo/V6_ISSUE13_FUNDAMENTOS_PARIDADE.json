@@ -1,0 +1,4772 @@
+{
+  "schema_version": 1,
+  "unit_id": "fundamentos-geografia",
+  "editorial_version": "1.0.0",
+  "date": "2026-10-16",
+  "branch": "v6-base-fundamentos-geografia",
+  "source_commit": "3aa0509193a11d7d6f09ba916d125cc76afe5b79",
+  "source": {
+    "code": "T01",
+    "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+    "hash": "06bc7c51d80146f6b2f82a0c247d0d7babe56462dc33543ff025353ead69e683",
+    "key": "t1i_v21",
+    "previous": "t1i_v2",
+    "counts": {
+      "stages": 11,
+      "questions": 32,
+      "diagnostic": 3,
+      "stage_questions": 24,
+      "boss": 5,
+      "cards": 44,
+      "game": 100,
+      "recalls": 4,
+      "writing": 2,
+      "teaching_practice": 1,
+      "tables_theory": 2,
+      "tables_matrix": 1
+    }
+  },
+  "counts": {
+    "missions": 11,
+    "sections": 22,
+    "recalls": 11,
+    "concepts": 27,
+    "questions": 48,
+    "authored_questions": 48,
+    "cards": 45,
+    "game": 100,
+    "writing": 2,
+    "supplements": 2,
+    "parity_records": 228
+  },
+  "original_answer_keys_unchanged": true,
+  "original_correct_option_texts_unchanged": true,
+  "source_literal_changes": 139,
+  "not_independent_learning_evidence": true,
+  "resource_ids": [
+    "fundamentos-geografia",
+    "fundamentos-leitura-de-questoes",
+    "fundamentos-campo-conhecimento",
+    "fundamentos-correntes",
+    "fundamentos-espaco",
+    "fundamentos-paisagem-lugar",
+    "fundamentos-regiao-territorio",
+    "fundamentos-redes",
+    "fundamentos-producao-escalas",
+    "fundamentos-decolonialidade",
+    "fundamentos-leitura-realidade",
+    "fundamentos-autores-complementares",
+    "fund-leitura",
+    "fund-campo",
+    "fund-classicos",
+    "fund-correntes",
+    "fund-quantitativa",
+    "fund-objetos-acoes",
+    "fund-rugosidades",
+    "fund-fixos-fluxos",
+    "fund-paisagem",
+    "fund-lugar",
+    "fund-regiao",
+    "fund-territorio",
+    "fund-territorio-rede",
+    "fund-redes",
+    "fund-producao",
+    "fund-escalas",
+    "fund-natureza",
+    "fund-decolonial",
+    "fund-intercultural",
+    "fund-evidencias",
+    "fund-forma-funcao",
+    "fund-ajuste",
+    "fund-agentes",
+    "fund-politica-escalas",
+    "fund-saber-poder",
+    "fund-compressao",
+    "fund-direito-cidade",
+    "v6-fund-q-pre-0",
+    "v6-fund-q-pre-1",
+    "v6-fund-q-pre-2",
+    "v6-fund-q-b-0-0",
+    "v6-fund-q-b-1-0",
+    "v6-fund-q-b-1-1",
+    "v6-fund-q-b-2-0",
+    "v6-fund-q-b-2-1",
+    "v6-fund-q-b-3-0",
+    "v6-fund-q-b-3-1",
+    "v6-fund-q-b-4-0",
+    "v6-fund-q-b-4-1",
+    "v6-fund-q-b-5-0",
+    "v6-fund-q-b-5-1",
+    "v6-fund-q-b-5-2",
+    "v6-fund-q-b-6-0",
+    "v6-fund-q-b-6-1",
+    "v6-fund-q-b-6-2",
+    "v6-fund-q-b-7-0",
+    "v6-fund-q-b-7-1",
+    "v6-fund-q-b-7-2",
+    "v6-fund-q-b-8-0",
+    "v6-fund-q-b-8-1",
+    "v6-fund-q-b-9-0",
+    "v6-fund-q-b-10-0",
+    "v6-fund-q-b-10-1",
+    "v6-fund-q-b-10-2",
+    "v6-fund-q-c-0",
+    "v6-fund-q-c-1",
+    "v6-fund-q-c-2",
+    "v6-fund-q-c-3",
+    "v6-fund-q-c-4",
+    "v6-fund-q-concurso01",
+    "v6-fund-q-concurso02",
+    "v6-fund-q-concurso03",
+    "v6-fund-q-concurso04",
+    "v6-fund-q-concurso05",
+    "v6-fund-q-concurso06",
+    "v6-fund-q-concurso07",
+    "v6-fund-q-concurso08",
+    "v6-fund-q-concurso09",
+    "v6-fund-q-concurso10",
+    "v6-fund-q-concurso11",
+    "v6-fund-q-concurso12",
+    "v6-fund-q-elite01",
+    "v6-fund-q-elite02",
+    "v6-fund-q-elite03",
+    "v6-fund-q-elite04",
+    "v6-fund-card-0",
+    "v6-fund-card-1",
+    "v6-fund-card-2",
+    "v6-fund-card-3",
+    "v6-fund-card-4",
+    "v6-fund-card-5",
+    "v6-fund-card-6",
+    "v6-fund-card-7",
+    "v6-fund-card-8",
+    "v6-fund-card-9",
+    "v6-fund-card-10",
+    "v6-fund-card-11",
+    "v6-fund-card-12",
+    "v6-fund-card-13",
+    "v6-fund-card-14",
+    "v6-fund-card-15",
+    "v6-fund-card-16",
+    "v6-fund-card-17",
+    "v6-fund-card-18",
+    "v6-fund-card-19",
+    "v6-fund-card-20",
+    "v6-fund-card-21",
+    "v6-fund-card-22",
+    "v6-fund-card-23",
+    "v6-fund-card-24",
+    "v6-fund-card-25",
+    "v6-fund-card-26",
+    "v6-fund-card-27",
+    "v6-fund-card-28",
+    "v6-fund-card-29",
+    "v6-fund-card-30",
+    "v6-fund-card-31",
+    "v6-fund-card-32",
+    "v6-fund-card-33",
+    "v6-fund-card-34",
+    "v6-fund-card-35",
+    "v6-fund-card-36",
+    "v6-fund-card-37",
+    "v6-fund-card-38",
+    "v6-fund-card-39",
+    "v6-fund-card-40",
+    "v6-fund-card-41",
+    "v6-fund-card-42",
+    "v6-fund-card-43",
+    "v6-fund-card-escobar",
+    "v6-fund-game-0",
+    "v6-fund-game-1",
+    "v6-fund-game-2",
+    "v6-fund-game-3",
+    "v6-fund-game-4",
+    "v6-fund-game-5",
+    "v6-fund-game-6",
+    "v6-fund-game-7",
+    "v6-fund-game-8",
+    "v6-fund-game-9",
+    "v6-fund-game-10",
+    "v6-fund-game-11",
+    "v6-fund-game-12",
+    "v6-fund-game-13",
+    "v6-fund-game-14",
+    "v6-fund-game-15",
+    "v6-fund-game-16",
+    "v6-fund-game-17",
+    "v6-fund-game-18",
+    "v6-fund-game-19",
+    "v6-fund-game-20",
+    "v6-fund-game-21",
+    "v6-fund-game-22",
+    "v6-fund-game-23",
+    "v6-fund-game-24",
+    "v6-fund-game-25",
+    "v6-fund-game-26",
+    "v6-fund-game-27",
+    "v6-fund-game-28",
+    "v6-fund-game-29",
+    "v6-fund-game-30",
+    "v6-fund-game-31",
+    "v6-fund-game-32",
+    "v6-fund-game-33",
+    "v6-fund-game-34",
+    "v6-fund-game-35",
+    "v6-fund-game-36",
+    "v6-fund-game-37",
+    "v6-fund-game-38",
+    "v6-fund-game-39",
+    "v6-fund-game-40",
+    "v6-fund-game-41",
+    "v6-fund-game-42",
+    "v6-fund-game-43",
+    "v6-fund-game-44",
+    "v6-fund-game-45",
+    "v6-fund-game-46",
+    "v6-fund-game-47",
+    "v6-fund-game-48",
+    "v6-fund-game-49",
+    "v6-fund-game-50",
+    "v6-fund-game-51",
+    "v6-fund-game-52",
+    "v6-fund-game-53",
+    "v6-fund-game-54",
+    "v6-fund-game-55",
+    "v6-fund-game-56",
+    "v6-fund-game-57",
+    "v6-fund-game-58",
+    "v6-fund-game-59",
+    "v6-fund-game-60",
+    "v6-fund-game-61",
+    "v6-fund-game-62",
+    "v6-fund-game-63",
+    "v6-fund-game-64",
+    "v6-fund-game-65",
+    "v6-fund-game-66",
+    "v6-fund-game-67",
+    "v6-fund-game-68",
+    "v6-fund-game-69",
+    "v6-fund-game-70",
+    "v6-fund-game-71",
+    "v6-fund-game-72",
+    "v6-fund-game-73",
+    "v6-fund-game-74",
+    "v6-fund-game-75",
+    "v6-fund-game-76",
+    "v6-fund-game-77",
+    "v6-fund-game-78",
+    "v6-fund-game-79",
+    "v6-fund-game-80",
+    "v6-fund-game-81",
+    "v6-fund-game-82",
+    "v6-fund-game-83",
+    "v6-fund-game-84",
+    "v6-fund-game-85",
+    "v6-fund-game-86",
+    "v6-fund-game-87",
+    "v6-fund-game-88",
+    "v6-fund-game-89",
+    "v6-fund-game-90",
+    "v6-fund-game-91",
+    "v6-fund-game-92",
+    "v6-fund-game-93",
+    "v6-fund-game-94",
+    "v6-fund-game-95",
+    "v6-fund-game-96",
+    "v6-fund-game-97",
+    "v6-fund-game-98",
+    "v6-fund-game-99",
+    "v6-fund-writing-0",
+    "v6-fund-writing-1",
+    "v6-fund-supp-matrixBox",
+    "v6-fund-supp-teacherBox",
+    "v6-fund-theory-0",
+    "v6-fund-depth-0",
+    "v6-fund-recall-0",
+    "v6-fund-theory-1",
+    "v6-fund-depth-1",
+    "v6-fund-recall-1",
+    "v6-fund-theory-2",
+    "v6-fund-depth-2",
+    "v6-fund-recall-2",
+    "v6-fund-theory-3",
+    "v6-fund-depth-3",
+    "v6-fund-recall-3",
+    "v6-fund-theory-4",
+    "v6-fund-depth-4",
+    "v6-fund-recall-4",
+    "v6-fund-theory-5",
+    "v6-fund-depth-5",
+    "v6-fund-recall-5",
+    "v6-fund-theory-6",
+    "v6-fund-depth-6",
+    "v6-fund-recall-6",
+    "v6-fund-theory-7",
+    "v6-fund-depth-7",
+    "v6-fund-recall-7",
+    "v6-fund-theory-8",
+    "v6-fund-depth-8",
+    "v6-fund-recall-8",
+    "v6-fund-theory-9",
+    "v6-fund-depth-9",
+    "v6-fund-recall-9",
+    "v6-fund-theory-10",
+    "v6-fund-depth-10",
+    "v6-fund-recall-10"
+  ],
+  "records": [
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "B[0]",
+      "hash": "a795c5fbea5ba01ba0c92db862a4daabb5c6da5f803c5548ed23566d5eede7d0",
+      "canonical_id": "v6-fund-theory-0",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "B[1]",
+      "hash": "76274f1adfc8f455b24ea24df00776561ba824e25bc45d46e6ef30ebdefe53a0",
+      "canonical_id": "v6-fund-theory-1",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "B[2]",
+      "hash": "7ccd422bbe23c946b34daaf46f21d44ea0d28b67497ba744efa9796a4b6d6b47",
+      "canonical_id": "v6-fund-theory-2",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "B[3]",
+      "hash": "c11505f20d471a730f1baf04a88c0db34b6703513017d935b6e335a7a508ec87",
+      "canonical_id": "v6-fund-theory-3",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "B[3].recall",
+      "hash": "3c230ac9c229b348ea70bb541317461d999bc3a687181fa88762457d05df2c34",
+      "canonical_id": "v6-fund-recall-3",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "B[4]",
+      "hash": "73b012bad622d7dbf6e8eedde4a3df817c3a381f3acbddf88f65425c5b917020",
+      "canonical_id": "v6-fund-theory-4",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "B[5]",
+      "hash": "1501ec96c63047f24c7667c3159effe5a373da2d2d2dd0c8e93406b4842b653c",
+      "canonical_id": "v6-fund-theory-5",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "B[6]",
+      "hash": "32b656576dfa5f0eff8b81c06940e252f3dc35eb2dfafe7f72c21d4ba95b9053",
+      "canonical_id": "v6-fund-theory-6",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "B[6].recall",
+      "hash": "c4f81b5d4be8e32601498520435a2c7b147223915040176099b1deb39e63164a",
+      "canonical_id": "v6-fund-recall-6",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "B[7]",
+      "hash": "def17d8b0b6a49bcad6900f01fde03e274394db4f60077e3e2304794b79ecaf9",
+      "canonical_id": "v6-fund-theory-7",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "B[7].recall",
+      "hash": "b43a58bd25188b5e61d833f3a04a1cf3375f27df1d8636541efc154cae231050",
+      "canonical_id": "v6-fund-recall-7",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "B[8]",
+      "hash": "66398ee53b5158dd78aefb1c6761ed426257095ea31bc353ada217b12cf60df8",
+      "canonical_id": "v6-fund-theory-8",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "B[9]",
+      "hash": "e1d30396c9255030c9a4dd5bb3c008e7280a0be371fbecb403d970684102c95b",
+      "canonical_id": "v6-fund-theory-9",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "B[10]",
+      "hash": "8081c0e6728da06c1702ace9d8f529ebc5b1a448e4695de04be15a673d38fbdf",
+      "canonical_id": "v6-fund-theory-10",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "B[10].recall",
+      "hash": "dc910810dce0132cdb04fec72b972483d89926244ec4ac6ce92f1f321882f4fe",
+      "canonical_id": "v6-fund-recall-10",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "pre_0",
+      "hash": "59c21a090ed5149813f0374a0d64fcdd353bcab0249531a0e9675b342c453365",
+      "canonical_id": "v6-fund-q-pre-0",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "X.pre_0",
+      "hash": "69032dd380ff29130276d4bb05411c60570d66231f69a95229adc6fc2bbd722c",
+      "canonical_id": "v6-fund-q-pre-0",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "pre_1",
+      "hash": "3965340702af72acc258aaf99e9ddc638d21708d8b1acf61b12df3d121f1362e",
+      "canonical_id": "v6-fund-q-pre-1",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "X.pre_1",
+      "hash": "8ba9bb2b4579679d3d93984ca3a8dbdb7909be1e9cdb493de7f5ae3205e2641c",
+      "canonical_id": "v6-fund-q-pre-1",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "pre_2",
+      "hash": "0abc7516063795fa62cea793ef88f2c30e7ca638553b2c3e682e7664e346e6c8",
+      "canonical_id": "v6-fund-q-pre-2",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "X.pre_2",
+      "hash": "ad8f725aba43e8a200f66f3a6476d94b02c9d635a1914c0c8fb6fda4cc04ce85",
+      "canonical_id": "v6-fund-q-pre-2",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "b_0_0",
+      "hash": "7ed249c3ae239e444ca5533bc70097da7a9a9c5d8260355410713d1494c36491",
+      "canonical_id": "v6-fund-q-b-0-0",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "X.b_0_0",
+      "hash": "62e90f6f9daff4626d3b73e710373ef70f5302ba04fcc658f0df1dcd08904bca",
+      "canonical_id": "v6-fund-q-b-0-0",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "b_1_0",
+      "hash": "1ce71527cd82e116003e4ddf7d54a6af9e0f2861148cd3f58ae5051211b60639",
+      "canonical_id": "v6-fund-q-b-1-0",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "X.b_1_0",
+      "hash": "3d3fbf18db8f828b9654e8753d9d0f489da145d493731cc28850b0700cbb05db",
+      "canonical_id": "v6-fund-q-b-1-0",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "b_1_1",
+      "hash": "b76d052185aafe4c860d9d5cc3764dff6b6088c4b5d2356be613fc8a5fc28a97",
+      "canonical_id": "v6-fund-q-b-1-1",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "X.b_1_1",
+      "hash": "d628072643e957126c80fb54cc260ed1ffe0394ab15e7912e28d804d749e50dc",
+      "canonical_id": "v6-fund-q-b-1-1",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "b_2_0",
+      "hash": "93613b959bbeb15ee802a3f08e8b6b2817e6c09d4bc3613e817fd34d13c0f58d",
+      "canonical_id": "v6-fund-q-b-2-0",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "X.b_2_0",
+      "hash": "528789301c494adbc1418cebdea5041e498c74dc9f1e2b25a64124f0346b0b4b",
+      "canonical_id": "v6-fund-q-b-2-0",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "b_2_1",
+      "hash": "b07e1ca30312c4d3248245f08420970e50b096badc920798436ddb047cb420c0",
+      "canonical_id": "v6-fund-q-b-2-1",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "X.b_2_1",
+      "hash": "67c6f7681c7bca17dd821172012b41cde968561dad40dcb74c9b0573f81800c4",
+      "canonical_id": "v6-fund-q-b-2-1",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "b_3_0",
+      "hash": "760b9a9c8c43314eb561a9d6c44da95a0a915238de76e92671a98855c2a09aa1",
+      "canonical_id": "v6-fund-q-b-3-0",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "X.b_3_0",
+      "hash": "4fbbc109829a7fe8c1d3a571f6ac6686bcb7a45dc08314218c5fff8f5e7c7eef",
+      "canonical_id": "v6-fund-q-b-3-0",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "b_3_1",
+      "hash": "7473e54cd53f351ac7bdf5581d5928340a64b134ceb93f26ffd0c1f487c8cf5e",
+      "canonical_id": "v6-fund-q-b-3-1",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "X.b_3_1",
+      "hash": "b74b0aa4c99896fcd1eaef552b3a0d2f22db1c9cfdfc34947d5f8e1181d1379b",
+      "canonical_id": "v6-fund-q-b-3-1",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "b_4_0",
+      "hash": "fc4de15de248812257e366d7313ffe899edbe39257e51f4b3849c7857d587446",
+      "canonical_id": "v6-fund-q-b-4-0",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "X.b_4_0",
+      "hash": "ac968d5242d400fd4673b6d47df020a8565fec4713dde11463fbec07d55ee8e7",
+      "canonical_id": "v6-fund-q-b-4-0",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "b_4_1",
+      "hash": "8cdb8f20139e1fbce96e631045bcd142e8b686103a4d1615708b7a03e5f5ea69",
+      "canonical_id": "v6-fund-q-b-4-1",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "X.b_4_1",
+      "hash": "a8f17b94bb79024dd248df0c8d28e2704ab4ec0aeb47471110490be5d62e78ae",
+      "canonical_id": "v6-fund-q-b-4-1",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "b_5_0",
+      "hash": "002771da73c10fc425736d52988ced4b6266ba42834e17a71adf50a7c0ccbf24",
+      "canonical_id": "v6-fund-q-b-5-0",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "X.b_5_0",
+      "hash": "34862bc44152aa5ad11e6d81e5af53204a84f47d17bf0892f8044a5cfcb4cee9",
+      "canonical_id": "v6-fund-q-b-5-0",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "b_5_1",
+      "hash": "5594830cce1e6050c7b7b39e21a9791227d2b61011281f64e52a17e63a5e4cdf",
+      "canonical_id": "v6-fund-q-b-5-1",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "X.b_5_1",
+      "hash": "101de85b754d7378ff651ff6700f855110f6ef7140ec28447b00f540e6d1a448",
+      "canonical_id": "v6-fund-q-b-5-1",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "b_5_2",
+      "hash": "c1a3e855578762073a7c8abe86c50bca661bdbc17168b2da55ed6b8787404435",
+      "canonical_id": "v6-fund-q-b-5-2",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "X.b_5_2",
+      "hash": "9afa92e3267dc10bba965a002d1d09500410166dfcaea48302a3f7b24740d964",
+      "canonical_id": "v6-fund-q-b-5-2",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "b_6_0",
+      "hash": "1645187434bef35ca77fc409c1d70803a93bdc000b38f2ccfa22bf023122798c",
+      "canonical_id": "v6-fund-q-b-6-0",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "X.b_6_0",
+      "hash": "6f5d1ccc8e0942acc03d0baa92cebc0e40eb6e68e9a9f3de1d2a2708dd1abc2a",
+      "canonical_id": "v6-fund-q-b-6-0",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "b_6_1",
+      "hash": "6afd2e84b659413c4bf222baa1da5294cad337bb9baf74ff6487148fd9c4ea3c",
+      "canonical_id": "v6-fund-q-b-6-1",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "X.b_6_1",
+      "hash": "14510f738e3e9d544fa0d2a29620549b2f3323ccec639a6a11599ca90a3024cd",
+      "canonical_id": "v6-fund-q-b-6-1",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "b_6_2",
+      "hash": "9e88d1ef255662499fe759610ed3a5ce6385372e7aeeffef963e52e32dea081e",
+      "canonical_id": "v6-fund-q-b-6-2",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "X.b_6_2",
+      "hash": "98cd0d19ddc3c65d2cb12c3b74f838e18df10b88f069518333260a41ebe5b91f",
+      "canonical_id": "v6-fund-q-b-6-2",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "b_7_0",
+      "hash": "e18ceeac68a683f7543b5db590725b4ee75a4f0f16c919bec7d1b6b6b99cebf3",
+      "canonical_id": "v6-fund-q-b-7-0",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "X.b_7_0",
+      "hash": "1e1a928591ac9558078359453977b8903973986bd904f77f070b24d480884950",
+      "canonical_id": "v6-fund-q-b-7-0",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "b_7_1",
+      "hash": "3e8124350b943d4c8d3d60bb9c3588e8621505584b620e3188a6a9a3acbed862",
+      "canonical_id": "v6-fund-q-b-7-1",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "X.b_7_1",
+      "hash": "f4f3a5483d7476be37738f0bd36bf40fc1ae27f64a4e8d49ffbc9b2557ef64cf",
+      "canonical_id": "v6-fund-q-b-7-1",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "b_7_2",
+      "hash": "7fe8f5343e8ae30e65797f8181499b4e90ce8b9a8064e57055dfeb150797bd10",
+      "canonical_id": "v6-fund-q-b-7-2",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "X.b_7_2",
+      "hash": "e49cb9fa67aa1be66a968175208bd95e567ce2fec8a672740c22ae71b7a5566d",
+      "canonical_id": "v6-fund-q-b-7-2",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "b_8_0",
+      "hash": "dd87e7e0210269ec7b09534b7b7466901d968642f4075a69851d456da2baf21c",
+      "canonical_id": "v6-fund-q-b-8-0",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "X.b_8_0",
+      "hash": "6b7072800883f755f87c3cafee165e8744d62b2881f54410ce806e9964160217",
+      "canonical_id": "v6-fund-q-b-8-0",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "b_8_1",
+      "hash": "2605ac74e0733df0e4da7a60a1bcdb1ecf9f1bae7c1eb4db8aa8be1e071646f1",
+      "canonical_id": "v6-fund-q-b-8-1",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "X.b_8_1",
+      "hash": "048cf4fa6e32852b92d88c43e67e5f024e92aa6fbc724a9278cce743cb07782f",
+      "canonical_id": "v6-fund-q-b-8-1",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "b_9_0",
+      "hash": "601dd893a2b8d1868e353da41b69d30a8a2e59c06c89dd9190bc0820a74d288a",
+      "canonical_id": "v6-fund-q-b-9-0",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "X.b_9_0",
+      "hash": "d8b33d0512162cd4aa6f241d4594750376885c730fb8be2f6f81ad601617ca60",
+      "canonical_id": "v6-fund-q-b-9-0",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "b_10_0",
+      "hash": "a0623e25c7a726e76b519cb0a190cdc23a9f27d4ab84167ea2244790d26cd713",
+      "canonical_id": "v6-fund-q-b-10-0",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "b_10_1",
+      "hash": "09c9f9f5469b092b3426cefb8d58f8b0cb29023f72d2651a8c31c8ecfc32f233",
+      "canonical_id": "v6-fund-q-b-10-1",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "b_10_2",
+      "hash": "f773f26a988f75ae26f79673344f426d957d1825ec349baa7349d547dfc54f6a",
+      "canonical_id": "v6-fund-q-b-10-2",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "c_0",
+      "hash": "1bdf837996826f92532088710852bc260b32ed33b2f4924a1cca2cbb86f4d85a",
+      "canonical_id": "v6-fund-q-c-0",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "X.c_0",
+      "hash": "feb7607d124cddac8e07a47aad060d37f2289d0f1e61ab7f6e78fd86582aeaf3",
+      "canonical_id": "v6-fund-q-c-0",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "c_1",
+      "hash": "2834a7d2cbb352d9cea7689ce1605f5c696517a941c9677160aa1b2e62b17d33",
+      "canonical_id": "v6-fund-q-c-1",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "X.c_1",
+      "hash": "64bb7a712ffa0bb402b0a0a4111f49353e96dfc195815f29d20e7809dcaf8cf8",
+      "canonical_id": "v6-fund-q-c-1",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "c_2",
+      "hash": "4b6e3736da7dffb2b2430ac12a251ca717b6ae8fc432f2111e7d24482e791c94",
+      "canonical_id": "v6-fund-q-c-2",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "X.c_2",
+      "hash": "152dd87781d31690141731175d1f483100030092d60243d533e7bd0c2cfef978",
+      "canonical_id": "v6-fund-q-c-2",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "c_3",
+      "hash": "0a92c138bd7e129a3767b9d2606cecb78ca0246bf8e32dad154159a6289dbc8e",
+      "canonical_id": "v6-fund-q-c-3",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "X.c_3",
+      "hash": "cdb409c2c61bf8ddbe604c033d0863767f8f3bf8b985648eb5eb3b3f076e47eb",
+      "canonical_id": "v6-fund-q-c-3",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "c_4",
+      "hash": "8d99a389027bef62453f249baeb63a7dd4ea3b8f81df358310f99be94435ea9c",
+      "canonical_id": "v6-fund-q-c-4",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "X.c_4",
+      "hash": "3f81ad478c90d7c41385bbf8633b9f43eaa900731f0cb4019b63333d1858efdb",
+      "canonical_id": "v6-fund-q-c-4",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[0]",
+      "hash": "b523af98cca72b02bd39f75ed5e1e9275a98f2005a74072c6d0794a186cc4357",
+      "canonical_id": "v6-fund-card-0",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[1]",
+      "hash": "99ef05201f954cf47f511c6b24d875e6ef3209678a1f4a330e8fb7fd4c789bad",
+      "canonical_id": "v6-fund-card-1",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[2]",
+      "hash": "1d22b85f173e2dc4deb90fbede74f93505bcb2afe4ec0b4e3a283b1415ba11c8",
+      "canonical_id": "v6-fund-card-2",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[3]",
+      "hash": "e49fe7185d2221eab345f2fbcbf7537db131d08305f566d3872f0aaa8aacc6a3",
+      "canonical_id": "v6-fund-card-3",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[4]",
+      "hash": "657731fa2db46cbd9adf21fe511cd59e571dda864bb4ae3c687eeea12b40c885",
+      "canonical_id": "v6-fund-card-4",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[5]",
+      "hash": "8014541a4796480d702355c21574b03a9fd534c4fb28a63e44d394fce56f40e9",
+      "canonical_id": "v6-fund-card-5",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[6]",
+      "hash": "bea61c9fb79282b12f93f96715b456f7a5f2a189a36a3bd54d460961e230387e",
+      "canonical_id": "v6-fund-card-6",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[7]",
+      "hash": "80c4eabfd4d0a1a9f4eb5848a933fb4a02eb003ce5c6b52401b82c2491199272",
+      "canonical_id": "v6-fund-card-7",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[8]",
+      "hash": "dcfac5317f4322b954e5a12007d45e20f8607848d4b5e67eaf97d56eca94d048",
+      "canonical_id": "v6-fund-card-8",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[9]",
+      "hash": "5211c6d2a1eb864e20eeb65f4d8567534eced25c94ba41a3f28d70908d0383a5",
+      "canonical_id": "v6-fund-card-9",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[10]",
+      "hash": "3b8ec91552984227f5f54e4c2372ddc41bc623688649eb294a7a2ae087ab21c7",
+      "canonical_id": "v6-fund-card-10",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[11]",
+      "hash": "f5893ca71a367558a47cd1768df68f18fed7f5eacbfa6be336a9739c54b05b70",
+      "canonical_id": "v6-fund-card-11",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[12]",
+      "hash": "26589426c290b9d267b0fec11b10d7447a6955f4744b58b29c160638847aae08",
+      "canonical_id": "v6-fund-card-12",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[13]",
+      "hash": "10cc8ec46263cf0950000ff483d2f11cb8511732c264ba2748bdf5737ba43633",
+      "canonical_id": "v6-fund-card-13",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[14]",
+      "hash": "cd04893bd7b98e316c3cccbd18ac78f95a379e7d2d1a428f0fa573d6a62301ea",
+      "canonical_id": "v6-fund-card-14",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[15]",
+      "hash": "4305d3c8d48c61d00b8f18a9615a0d0e7d9004e60411da6bca837b9f44c6ff6a",
+      "canonical_id": "v6-fund-card-15",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[16]",
+      "hash": "2f1b80d0560b1838a6e95c69d89047fc0d5561f281ca1d8857cd994679cc73fe",
+      "canonical_id": "v6-fund-card-16",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[17]",
+      "hash": "c6037a713c16a83fd045bfe0164fa9966d0e736d90becd9f56d71a4f931e4791",
+      "canonical_id": "v6-fund-card-17",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[18]",
+      "hash": "a73ee6c899e1b0cde7e7763060c3d3430bf440799bb6b4ab5776e150779dfb54",
+      "canonical_id": "v6-fund-card-18",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[19]",
+      "hash": "bcf3bed10b97cddedf58edad955131dfc1b3e280992739e54ec3f3b34a1296e9",
+      "canonical_id": "v6-fund-card-19",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[20]",
+      "hash": "354947e7d57686cd85f7b86c3282c951e074ff5c86060b0a7dfa6296140f324c",
+      "canonical_id": "v6-fund-card-20",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[21]",
+      "hash": "ac1d3e9be206ca832d0f6d5bbc09ed7816e6808281e3c6b5e313c5fca54cabaa",
+      "canonical_id": "v6-fund-card-21",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[22]",
+      "hash": "ecd6d082aa1933513bef5a08d36e2a4b6747f158618bbb0b6a346065e3c1b8ca",
+      "canonical_id": "v6-fund-card-22",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[23]",
+      "hash": "1d4b99971c61f4716768df17ac8a895d721fe82a7db9a8cdababd976d1a72179",
+      "canonical_id": "v6-fund-card-23",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[24]",
+      "hash": "e8f4663adf65be3e1e6c3005f6eba00f6a408191fb1ba2279ce65e896a108800",
+      "canonical_id": "v6-fund-card-24",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[25]",
+      "hash": "18b5e165f5c80a9afcf4cfff9280864dfb04abc502c76113f170b1845f8395d2",
+      "canonical_id": "v6-fund-card-25",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[26]",
+      "hash": "70436f0c69cf8363a8a05fb6f505cdff89034a22dde81d8abf4299cf5ad15d4f",
+      "canonical_id": "v6-fund-card-26",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[27]",
+      "hash": "d6f3f671bab3e891dd57efb9703629360a84720a21ee20f84aaef3be3bc45c6d",
+      "canonical_id": "v6-fund-card-27",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[28]",
+      "hash": "d615fa08b4e7a613c7a3459f5cdc240829d9d5400f7ddb1397e1b8aaa6e4f74a",
+      "canonical_id": "v6-fund-card-28",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[29]",
+      "hash": "ca46c0e4b81d8fdd1edbe2e4c7283d16cf56155c52e93b322b81c8d982ef6df5",
+      "canonical_id": "v6-fund-card-29",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[30]",
+      "hash": "7bf244f927d42dab3539c7b15c59db72e3d2bbc8a6595a5071db747dd4b80248",
+      "canonical_id": "v6-fund-card-30",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[31]",
+      "hash": "88a0b283586d1c7987f9e745293bbee584de795161b16109bd250d1ef25f850b",
+      "canonical_id": "v6-fund-card-31",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[32]",
+      "hash": "4ed46ccf3e37b9f79e6f549fd8bfda2e1e052440af4ae647a7f58777031f7d75",
+      "canonical_id": "v6-fund-card-32",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[33]",
+      "hash": "17ffa402cc26b50bc8843f4904a7ccb895b2fbf95f047fcd50ae191e022d5ee9",
+      "canonical_id": "v6-fund-card-33",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[34]",
+      "hash": "694abddeead44cc310720a0797b47add97b9ac641948db01207bcb51fb5633e9",
+      "canonical_id": "v6-fund-card-34",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[35]",
+      "hash": "5eb1e9af4eeac8aaaabb6daf9d97f604d960bfd611ad5dc4c688a7d2f80a19a6",
+      "canonical_id": "v6-fund-card-35",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[36]",
+      "hash": "dfff12d0357e716a5fce268fa04033fa54d3e404f03d33ae2b0af554e9c64bde",
+      "canonical_id": "v6-fund-card-36",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[37]",
+      "hash": "602cfdb38dcaa4efb6c32fdd8de44e136809ed04b0367850c867ae6d3c7f315d",
+      "canonical_id": "v6-fund-card-37",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[38]",
+      "hash": "32acdcddb701906ecdc53cb732c6bff607ab4919ca190bc4ae4be63f046b267e",
+      "canonical_id": "v6-fund-card-38",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[39]",
+      "hash": "39b2c28e126e40db7a53b2ea7a1651375c063afb76fb4166a4b2256b3c21d77f",
+      "canonical_id": "v6-fund-card-39",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[40]",
+      "hash": "1c1b6f9cb508678999dfa580d8f0846638a9a95e4561663a511b8c137767e97d",
+      "canonical_id": "v6-fund-card-40",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[41]",
+      "hash": "d048bf424f6b8ba2c978d5072f8cfe78cb0493662791ebcfa67e5bf3f3387c69",
+      "canonical_id": "v6-fund-card-41",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[42]",
+      "hash": "eb100f2efa27b3ff1a42efe5cd8943e068d0af390ab32788cd7eff6448b23b90",
+      "canonical_id": "v6-fund-card-42",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "C[43]",
+      "hash": "ce26674b5cbfdad51f0fc84aabbace698760982a130fe96e9f6d2de45eb6387f",
+      "canonical_id": "v6-fund-card-43",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[0]",
+      "hash": "d92bb92ff9b802035ab94a1108696946a1960c51a8ca0f04fac120eb707b9e8d",
+      "canonical_id": "v6-fund-game-0",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[1]",
+      "hash": "6366577f53c37a8933f01f80c7a9e1faf1441d449d91db5db232da15946ad706",
+      "canonical_id": "v6-fund-game-1",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[2]",
+      "hash": "9623ecdfbdae142c31b2ac9f5b7917f89e4ccd65675a6bf40851ded5038633b7",
+      "canonical_id": "v6-fund-game-2",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[3]",
+      "hash": "6f350a5da9530bc562687440dd763f9cdd346868a34dac508ede6b4a89cd24d3",
+      "canonical_id": "v6-fund-game-3",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[4]",
+      "hash": "14e6b1d1ca261a5e603832ecbc10b126d54bb2a9fa38cd6d2d9683f3c1c76fca",
+      "canonical_id": "v6-fund-game-4",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[5]",
+      "hash": "b3767d1088bc058daf387ece88df414c116af43f3216e492ba26c71df78ff912",
+      "canonical_id": "v6-fund-game-5",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[6]",
+      "hash": "976a900f4bb7e4aee49d2b664a7dad5a47d8cab12240683aa40a595da55a28b2",
+      "canonical_id": "v6-fund-game-6",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[7]",
+      "hash": "e9a133cdb8abbf3ad72900542920600b7079e570474a97db66f2984767b09385",
+      "canonical_id": "v6-fund-game-7",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[8]",
+      "hash": "202a17a5d045de5ee34ab5b89393c4178508fe49851d2dc87fae40d7218e23ef",
+      "canonical_id": "v6-fund-game-8",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[9]",
+      "hash": "8325d229ae44699da9fb540f7649dcd58a871437035b79682fd0c499160738d6",
+      "canonical_id": "v6-fund-game-9",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[10]",
+      "hash": "fd6a4f2be63c542cc7ec51173025fb59d74e84a3e636c934287709e71b0bc9a8",
+      "canonical_id": "v6-fund-game-10",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[11]",
+      "hash": "cb579d98872a56a9e9e38bef14317105ff5f0bc94d480761672d281ebd4602ef",
+      "canonical_id": "v6-fund-game-11",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[12]",
+      "hash": "8c896241c7b7524baa30451ae665b5e4a0e9eebf69175ffd0f197dc8cd58ee40",
+      "canonical_id": "v6-fund-game-12",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[13]",
+      "hash": "dc23d136ba55d1cd3d899217b68e6dbec1d4b9d6a518c900459e208affdf8056",
+      "canonical_id": "v6-fund-game-13",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[14]",
+      "hash": "614f01c4f5b7130877d67418107941ef208a324985bc4274a0433230d6b32d8e",
+      "canonical_id": "v6-fund-game-14",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[15]",
+      "hash": "3f710178010a957ed3c3f338d302c4d4d4befc76dcdd1987ac48c2ac2c1605fe",
+      "canonical_id": "v6-fund-game-15",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[16]",
+      "hash": "9f7f858eaa4c97321c341d302b3b6a2b0cd44c5f931f5eda04f57f08c8c5526b",
+      "canonical_id": "v6-fund-game-16",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[17]",
+      "hash": "67f2fb4196b256bb922839154cbd997911734bcbaed7293c86882dce19213a56",
+      "canonical_id": "v6-fund-game-17",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[18]",
+      "hash": "279da46872870eab4393d7c0ba80f883ac7de4645dd1649d27c7cd064949eaa3",
+      "canonical_id": "v6-fund-game-18",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[19]",
+      "hash": "f2dc8efaafc864cfbdd352d638d21cc0f45d70275ad8a03433f10d261eabf739",
+      "canonical_id": "v6-fund-game-19",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[20]",
+      "hash": "b6ecba9ff0ad07bbb289b383ab55e43992091ab6ac24519c0cac77d749ae419c",
+      "canonical_id": "v6-fund-game-20",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[21]",
+      "hash": "8ac151c35c9d457577e9d9726e44711f5f1ccc969d33117e11d90b21a149e046",
+      "canonical_id": "v6-fund-game-21",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[22]",
+      "hash": "5762e4bd00b2ac9af3fa0062488bb44b6154af13c6aea0049b083041e3e17dbe",
+      "canonical_id": "v6-fund-game-22",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[23]",
+      "hash": "9a1677bf8df43ef97a2ec310513b97eca54f972403b07abaaedbd43d36fcd702",
+      "canonical_id": "v6-fund-game-23",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[24]",
+      "hash": "54be9ee31395f6b3ac1aae328663340615132c02e86400bc82bb0cec34f8a12d",
+      "canonical_id": "v6-fund-game-24",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[25]",
+      "hash": "5769f21cb5a765366dbc0319fd7aecef860c6bc8eec18b76a163c539276d2d06",
+      "canonical_id": "v6-fund-game-25",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[26]",
+      "hash": "b19a66b1a0421aaa6f8edbc44515ccee33b569cc3368218feeb4b4beb9174471",
+      "canonical_id": "v6-fund-game-26",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[27]",
+      "hash": "be896fc6906beeacb110eb15e2a6df7f092ad821916171464a722055d615f63d",
+      "canonical_id": "v6-fund-game-27",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[28]",
+      "hash": "feeddabfb67343a5594e2f46a0314684722acc913e4e1df01f46890660ed811a",
+      "canonical_id": "v6-fund-game-28",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[29]",
+      "hash": "c6cc0c7e4cc0f846d358bd9f80a2c6b7f6e76fe41672a332738e55de178f1b18",
+      "canonical_id": "v6-fund-game-29",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[30]",
+      "hash": "24ad9e4828080c4b01b4bf210531bf71b81b28fb2c785d380893d30dfa5d1540",
+      "canonical_id": "v6-fund-game-30",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[31]",
+      "hash": "d6edd5c7c676561c347a19b3c8234aadb29c2b5a2e2cbca5c6be46ae878b6f59",
+      "canonical_id": "v6-fund-game-31",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[32]",
+      "hash": "638af706dac888702d74aca025e614568082db9a7ac36930f7a7c0cbc1867525",
+      "canonical_id": "v6-fund-game-32",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[33]",
+      "hash": "2b830033683ff1a674cfe9e9fece0e7ff496b42c23c4f6571b11fc869d560566",
+      "canonical_id": "v6-fund-game-33",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[34]",
+      "hash": "5e166e9126c79f6874599fe83723b4d9aab231f1624bef8076b1d617d53348c2",
+      "canonical_id": "v6-fund-game-34",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[35]",
+      "hash": "ce9120198977d7827b1b3637a57ce7f87869973cc5b6e623bb27acf345976a07",
+      "canonical_id": "v6-fund-game-35",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[36]",
+      "hash": "bff6b46a279cb2dba3e3596f19563ba88b14a125684600e82cf222385c91e109",
+      "canonical_id": "v6-fund-game-36",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[37]",
+      "hash": "003c34653144d85bb62e3ce772d8da56842ee6cd0dcd9b42d6d9750cc87c4e64",
+      "canonical_id": "v6-fund-game-37",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[38]",
+      "hash": "6e267a36bc0f557df4220f89ab87f1fa21a992f8db2e71487a4107387eba446d",
+      "canonical_id": "v6-fund-game-38",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[39]",
+      "hash": "20867dc98ad1782b131a6eac1962e7d3eaa7db4d8e265c34fbaa95cc2a541d55",
+      "canonical_id": "v6-fund-game-39",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[40]",
+      "hash": "80912f8be5a6195a20ad6c95193ef12841e0f210c5b05fb01630de99ae0f94f2",
+      "canonical_id": "v6-fund-game-40",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[41]",
+      "hash": "130c28160d1956816f6d0f58dcf04e674b066329681902fe411011ded1c26742",
+      "canonical_id": "v6-fund-game-41",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[42]",
+      "hash": "cbd37825a538c54638f15014ee7085eada387eb0bcc6fae64082073bdd6f5195",
+      "canonical_id": "v6-fund-game-42",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[43]",
+      "hash": "99c83964fad057818abd54a69a5887fa7cdc54d78bfe681c44fb168fc962f69e",
+      "canonical_id": "v6-fund-game-43",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[44]",
+      "hash": "2393e67d6edd81f56dc9393b2ec7babda8785209cafa3dc7f70fe7fe91851797",
+      "canonical_id": "v6-fund-game-44",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[45]",
+      "hash": "60377742be35969142237e20bfdf37d7fefc2e9e87c48f7899f7a01891d3711c",
+      "canonical_id": "v6-fund-game-45",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[46]",
+      "hash": "1b86bbcf632f6cc308b95ba4006eb0f3d1762f40abcb8fcab9ffc9ee61179fad",
+      "canonical_id": "v6-fund-game-46",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[47]",
+      "hash": "54020e87e2b0b0d8c77245246642dfed155cf501caad9de4670b440a5eff5a74",
+      "canonical_id": "v6-fund-game-47",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[48]",
+      "hash": "8e1e899971d2f5592d23dbd44b0e672024f0e7309ef0f607e7bb94644a7482ea",
+      "canonical_id": "v6-fund-game-48",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[49]",
+      "hash": "cacca681b17082a379213ef9db7c1d011bdd7cb860214e0d488aa24f2311d4e7",
+      "canonical_id": "v6-fund-game-49",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[50]",
+      "hash": "152134d43176fc3d5085b5a93fb9fe039edba0ae7012932e32da3d4411ba2626",
+      "canonical_id": "v6-fund-game-50",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[51]",
+      "hash": "08648efa69b4ab09e8318bc7b013cab4b360264c04639c1a858ca5fcaa153959",
+      "canonical_id": "v6-fund-game-51",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[52]",
+      "hash": "df9ecb3c56a38a8502e89e54e166827e1e99e81d0a09957bc8ff430fa426c0e8",
+      "canonical_id": "v6-fund-game-52",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[53]",
+      "hash": "8147dae423a1a426a3a22b0cda1693a1e19c200aa5b5a338e77e76af120a9a57",
+      "canonical_id": "v6-fund-game-53",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[54]",
+      "hash": "dba363176e7c7d3652bff7e147980b08e599cd771016fc671c914a6f66fc06c8",
+      "canonical_id": "v6-fund-game-54",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[55]",
+      "hash": "2779f11f157b8c0623f83a0a75f21c1cbd6f157f29cfa499954eec2b486d59d4",
+      "canonical_id": "v6-fund-game-55",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[56]",
+      "hash": "da47f1e7253cb4e641b678db3279a002a568fee969502637382727820c8b78a3",
+      "canonical_id": "v6-fund-game-56",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[57]",
+      "hash": "8e5cd91adea312a5c16a7a53ba5a4260c85335645da1fbe95d84f79ec4fd4137",
+      "canonical_id": "v6-fund-game-57",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[58]",
+      "hash": "51ac19abfc13c4fa6068f15fb3b179c18001755a67e3a35ffc9b3cbb997a10d3",
+      "canonical_id": "v6-fund-game-58",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[59]",
+      "hash": "b7a34b2098c0b4d5360b165f9b18e93a8a2ef3e03a7891c2a0faa326e6ff8484",
+      "canonical_id": "v6-fund-game-59",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[60]",
+      "hash": "1b1ce71223f16ce42c6930765d56ef7f0e3f4c202c67984d3e7056ff9cdef42a",
+      "canonical_id": "v6-fund-game-60",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[61]",
+      "hash": "aec9b60d77abc6f1ef180db32470942df0455339991dc53fa68d6c2b076a6113",
+      "canonical_id": "v6-fund-game-61",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[62]",
+      "hash": "63ee0cbf980a1246d17bb72218be9f18dfe622d05e3771de26734521d5c106f9",
+      "canonical_id": "v6-fund-game-62",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[63]",
+      "hash": "c97a9f880e9182e14f966cbd90159ac51af96ae8459222b692adff889b8b5daa",
+      "canonical_id": "v6-fund-game-63",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[64]",
+      "hash": "629dab49de0748342b17acbed575a23cc038deca9335ddb5b1a4f0fe4168b9d6",
+      "canonical_id": "v6-fund-game-64",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[65]",
+      "hash": "0487fcdebfb41c2a09ae86c05b2a791edac181783853fb4546af23f114c31343",
+      "canonical_id": "v6-fund-game-65",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[66]",
+      "hash": "e2393c9c00a5e1934e4f826b6ff99649aa635b0f2fdbe7232ffcd1d5c705e12e",
+      "canonical_id": "v6-fund-game-66",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[67]",
+      "hash": "c2d80c1ce979cb366b8018bf04a78982a3667124ceda567a0a6b06c88b5e561f",
+      "canonical_id": "v6-fund-game-67",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[68]",
+      "hash": "ffad1b9a5eeb5ad16a2ac5d7e9ef134eb548a9e286bcde4f2e21aa0ecee53c45",
+      "canonical_id": "v6-fund-game-68",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[69]",
+      "hash": "84924cfc706073606a9f92ac4b570483e9509dab411dec0f87ec7493e998143f",
+      "canonical_id": "v6-fund-game-69",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[70]",
+      "hash": "4f98f7c7517c30d0eb529ef89959c21f85a57c6c9ae19cd43e685af495167ad1",
+      "canonical_id": "v6-fund-game-70",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[71]",
+      "hash": "ec63db116c9b9bd4d6723b35ec6c4d505f6f57d0ae00054a4edb33af3b5c9190",
+      "canonical_id": "v6-fund-game-71",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[72]",
+      "hash": "ac440aa079a3f9011425883a52e48294fedc999716471f8a35b47c819167aff8",
+      "canonical_id": "v6-fund-game-72",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[73]",
+      "hash": "9d7c626397a8a84257311b987093c32cd9dd2ffc836570a404a88dcfb12055f9",
+      "canonical_id": "v6-fund-game-73",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[74]",
+      "hash": "d9d678b3439eb03cdf8a57517a43bf0da0b5514b4dcab33af408e7039611e5d2",
+      "canonical_id": "v6-fund-game-74",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[75]",
+      "hash": "e0bd270a2bce70399553142cd2ef34f1bb40f304db392d193412175c4dc03599",
+      "canonical_id": "v6-fund-game-75",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[76]",
+      "hash": "725f1844ae38ea57ec624fa18ca2a9c1376a050df0f5f303f5985bdd64125e56",
+      "canonical_id": "v6-fund-game-76",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[77]",
+      "hash": "f5b01d5d6b407a3212520e133f1cab122d0331ac49ba9515bca2f966b07fe425",
+      "canonical_id": "v6-fund-game-77",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[78]",
+      "hash": "e045e27cc8147737baa9e4585dba16a2483fee87129898cb7ac224c503b854c4",
+      "canonical_id": "v6-fund-game-78",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[79]",
+      "hash": "74a615c5d9fbf8a81649e3b8e535760e5e1a7542ac5eb4f90617822ccc72584e",
+      "canonical_id": "v6-fund-game-79",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[80]",
+      "hash": "ca3e573ab385a43dc88ba311bc11231cfc813c8cd4895461276daba0b54e2651",
+      "canonical_id": "v6-fund-game-80",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[81]",
+      "hash": "da0963e2950eef030527006fcd2c3c4e1c5f754933c4881e17dc5dbf43eebd7a",
+      "canonical_id": "v6-fund-game-81",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[82]",
+      "hash": "c6cd9ae933ad7de1a839fe0483ce104cb7296fbd40226f372bc4ec41cb6bb246",
+      "canonical_id": "v6-fund-game-82",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[83]",
+      "hash": "c2ad9d6b01310744e734ada06d1794296414e68d5382e3a335b1a7b33b577e5f",
+      "canonical_id": "v6-fund-game-83",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[84]",
+      "hash": "eb33200eb252fd4bf3cfcf38d0dd59398a4f2080a847f34c9afc39a319d26e3b",
+      "canonical_id": "v6-fund-game-84",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[85]",
+      "hash": "a02add53d710cae02480e31bc30c49b7c71ed5f725c9acea09429c3882221b6b",
+      "canonical_id": "v6-fund-game-85",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[86]",
+      "hash": "2c68016568662df0b4992b704e590bc9cddf120213c5aac25f2660ef5f2fcb60",
+      "canonical_id": "v6-fund-game-86",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[87]",
+      "hash": "686e45ee0857ada13270951d4e97d79a789ac626a80681d4a2b60b55332cda93",
+      "canonical_id": "v6-fund-game-87",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[88]",
+      "hash": "8d2dea818606acfe6bb51b7cc047be5feb3a07fffb01e1bfe17679b04d801e1f",
+      "canonical_id": "v6-fund-game-88",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[89]",
+      "hash": "34b71260e7d2ab32ad7d1d9376e46d5fd66bfaba7f7e959887fbabd9bb950e14",
+      "canonical_id": "v6-fund-game-89",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[90]",
+      "hash": "b4b65f233536579ea6f97b54cc0fecfb4f9a2558276eb6b72cc1e15fd8167a1f",
+      "canonical_id": "v6-fund-game-90",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[91]",
+      "hash": "7235d4806ba0074871d463cfa4fd06502804d5bb80d191d5611c1d0ec08221f6",
+      "canonical_id": "v6-fund-game-91",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[92]",
+      "hash": "c27978658db10ff7bf6f080f439707a500f098c055c7c0bb7ca47fd01b9af6af",
+      "canonical_id": "v6-fund-game-92",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[93]",
+      "hash": "633c118f59265010afda0305f313638e1738492b71dac6c992c2af9a6a39d376",
+      "canonical_id": "v6-fund-game-93",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[94]",
+      "hash": "874b21e6c34c678aaeabb38186b8d6bbbd5cdc708e852319960dc940a8123b9b",
+      "canonical_id": "v6-fund-game-94",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[95]",
+      "hash": "5efe230657edea644a20d9e1ace93266422d5c41409d15a0e988893a571a0cbb",
+      "canonical_id": "v6-fund-game-95",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[96]",
+      "hash": "8f68e5d59e3650ee52f6d22bbda3d2c7b005aa2e1c079b6e8fb18284c9a5a6a8",
+      "canonical_id": "v6-fund-game-96",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[97]",
+      "hash": "2be610742cea155c3106b712cb14be2d01dcd9a867c7bc15b691ed25698bedda",
+      "canonical_id": "v6-fund-game-97",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[98]",
+      "hash": "ccced398bc3fcffacfe46ddb86d5ae292f5018bf7ee84818790deb45afa5b9f0",
+      "canonical_id": "v6-fund-game-98",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "G[99]",
+      "hash": "0b34a3489c35e6ca3a65178bdaff87b46de7a934f280ef21a152de453e3bed50",
+      "canonical_id": "v6-fund-game-99",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "discBox",
+      "hash": "a5aaf5e7abf7916d4072b6747291224e45668f706b8c9327f7b35152e5839927",
+      "canonical_id": "v6-fund-writing-0",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "matrixBox",
+      "hash": "039e7723c98cdca273449aceb4b52dd400bb62adda5e58d6d09ecb0786eace89",
+      "canonical_id": "v6-fund-supp-matrixBox",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "teacherBox",
+      "hash": "71c927ce592421c3b9a2ae5927685ff486e3364b16e02a01d448a68754f0fab5",
+      "canonical_id": "v6-fund-supp-teacherBox",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "title",
+      "hash": "3178a4fb5aca3c55601d7e6587a009be750cfe2431954f69206896f2734ced88",
+      "canonical_id": "fundamentos-geografia",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "K",
+      "hash": "4fbae9e4be01a7bfb0a16011082042b94bf4c5232397d853b30bddb9ddf9392c",
+      "canonical_id": "fundamentos-geografia",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "OLDK",
+      "hash": "271b1499ce8870a340f689b592747e3b0d27353c55ea0d22f8e3da90f666a18a",
+      "canonical_id": "fundamentos-geografia",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "staticContent.tab-study",
+      "hash": "4fb2d42707731561b3a9d4c1a85e6699d82092b18678df5f1ae6c77c756bfb17",
+      "canonical_id": "v6-fund-context-tab-study",
+      "decision": "preserved-with-declared-editorial-review"
+    },
+    {
+      "legacy_source": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "legacy_id": "staticContent.fontes",
+      "hash": "42ae81d51cf7c0bb029dc1894736c19bc6d66ad33f0d0aa734f35d4a6f8f3cac",
+      "canonical_id": "v6-fund-context-fontes",
+      "decision": "preserved-with-declared-editorial-review"
+    }
+  ],
+  "literal_bindings": [
+    {
+      "legacy_id": "B[0]",
+      "canonical_id": "v6-fund-theory-0",
+      "pointer": "/banks/B/0",
+      "sha256": "a795c5fbea5ba01ba0c92db862a4daabb5c6da5f803c5548ed23566d5eede7d0"
+    },
+    {
+      "legacy_id": "B[1]",
+      "canonical_id": "v6-fund-theory-1",
+      "pointer": "/banks/B/1",
+      "sha256": "76274f1adfc8f455b24ea24df00776561ba824e25bc45d46e6ef30ebdefe53a0"
+    },
+    {
+      "legacy_id": "B[2]",
+      "canonical_id": "v6-fund-theory-2",
+      "pointer": "/banks/B/2",
+      "sha256": "7ccd422bbe23c946b34daaf46f21d44ea0d28b67497ba744efa9796a4b6d6b47"
+    },
+    {
+      "legacy_id": "B[3]",
+      "canonical_id": "v6-fund-theory-3",
+      "pointer": "/banks/B/3",
+      "sha256": "c11505f20d471a730f1baf04a88c0db34b6703513017d935b6e335a7a508ec87"
+    },
+    {
+      "legacy_id": "B[3].recall",
+      "canonical_id": "v6-fund-recall-3",
+      "pointer": "/banks/B/3",
+      "fields": ["r", "ra"],
+      "sha256": "3c230ac9c229b348ea70bb541317461d999bc3a687181fa88762457d05df2c34"
+    },
+    {
+      "legacy_id": "B[4]",
+      "canonical_id": "v6-fund-theory-4",
+      "pointer": "/banks/B/4",
+      "sha256": "73b012bad622d7dbf6e8eedde4a3df817c3a381f3acbddf88f65425c5b917020"
+    },
+    {
+      "legacy_id": "B[5]",
+      "canonical_id": "v6-fund-theory-5",
+      "pointer": "/banks/B/5",
+      "sha256": "1501ec96c63047f24c7667c3159effe5a373da2d2d2dd0c8e93406b4842b653c"
+    },
+    {
+      "legacy_id": "B[6]",
+      "canonical_id": "v6-fund-theory-6",
+      "pointer": "/banks/B/6",
+      "sha256": "32b656576dfa5f0eff8b81c06940e252f3dc35eb2dfafe7f72c21d4ba95b9053"
+    },
+    {
+      "legacy_id": "B[6].recall",
+      "canonical_id": "v6-fund-recall-6",
+      "pointer": "/banks/B/6",
+      "fields": ["r", "ra"],
+      "sha256": "c4f81b5d4be8e32601498520435a2c7b147223915040176099b1deb39e63164a"
+    },
+    {
+      "legacy_id": "B[7]",
+      "canonical_id": "v6-fund-theory-7",
+      "pointer": "/banks/B/7",
+      "sha256": "def17d8b0b6a49bcad6900f01fde03e274394db4f60077e3e2304794b79ecaf9"
+    },
+    {
+      "legacy_id": "B[7].recall",
+      "canonical_id": "v6-fund-recall-7",
+      "pointer": "/banks/B/7",
+      "fields": ["r", "ra"],
+      "sha256": "b43a58bd25188b5e61d833f3a04a1cf3375f27df1d8636541efc154cae231050"
+    },
+    {
+      "legacy_id": "B[8]",
+      "canonical_id": "v6-fund-theory-8",
+      "pointer": "/banks/B/8",
+      "sha256": "66398ee53b5158dd78aefb1c6761ed426257095ea31bc353ada217b12cf60df8"
+    },
+    {
+      "legacy_id": "B[9]",
+      "canonical_id": "v6-fund-theory-9",
+      "pointer": "/banks/B/9",
+      "sha256": "e1d30396c9255030c9a4dd5bb3c008e7280a0be371fbecb403d970684102c95b"
+    },
+    {
+      "legacy_id": "B[10]",
+      "canonical_id": "v6-fund-theory-10",
+      "pointer": "/banks/B/10",
+      "sha256": "8081c0e6728da06c1702ace9d8f529ebc5b1a448e4695de04be15a673d38fbdf"
+    },
+    {
+      "legacy_id": "B[10].recall",
+      "canonical_id": "v6-fund-recall-10",
+      "pointer": "/banks/B/10",
+      "fields": ["r", "ra"],
+      "sha256": "dc910810dce0132cdb04fec72b972483d89926244ec4ac6ce92f1f321882f4fe"
+    },
+    {
+      "legacy_id": "pre_0",
+      "canonical_id": "v6-fund-q-pre-0",
+      "pointer": "/banks/PRE/0",
+      "sha256": "59c21a090ed5149813f0374a0d64fcdd353bcab0249531a0e9675b342c453365"
+    },
+    {
+      "legacy_id": "X.pre_0",
+      "canonical_id": "v6-fund-q-pre-0",
+      "pointer": "/banks/X/pre_0",
+      "sha256": "69032dd380ff29130276d4bb05411c60570d66231f69a95229adc6fc2bbd722c"
+    },
+    {
+      "legacy_id": "pre_1",
+      "canonical_id": "v6-fund-q-pre-1",
+      "pointer": "/banks/PRE/1",
+      "sha256": "3965340702af72acc258aaf99e9ddc638d21708d8b1acf61b12df3d121f1362e"
+    },
+    {
+      "legacy_id": "X.pre_1",
+      "canonical_id": "v6-fund-q-pre-1",
+      "pointer": "/banks/X/pre_1",
+      "sha256": "8ba9bb2b4579679d3d93984ca3a8dbdb7909be1e9cdb493de7f5ae3205e2641c"
+    },
+    {
+      "legacy_id": "pre_2",
+      "canonical_id": "v6-fund-q-pre-2",
+      "pointer": "/banks/PRE/2",
+      "sha256": "0abc7516063795fa62cea793ef88f2c30e7ca638553b2c3e682e7664e346e6c8"
+    },
+    {
+      "legacy_id": "X.pre_2",
+      "canonical_id": "v6-fund-q-pre-2",
+      "pointer": "/banks/X/pre_2",
+      "sha256": "ad8f725aba43e8a200f66f3a6476d94b02c9d635a1914c0c8fb6fda4cc04ce85"
+    },
+    {
+      "legacy_id": "b_0_0",
+      "canonical_id": "v6-fund-q-b-0-0",
+      "pointer": "/banks/B/0/qs/0",
+      "sha256": "7ed249c3ae239e444ca5533bc70097da7a9a9c5d8260355410713d1494c36491"
+    },
+    {
+      "legacy_id": "X.b_0_0",
+      "canonical_id": "v6-fund-q-b-0-0",
+      "pointer": "/banks/X/b_0_0",
+      "sha256": "62e90f6f9daff4626d3b73e710373ef70f5302ba04fcc658f0df1dcd08904bca"
+    },
+    {
+      "legacy_id": "b_1_0",
+      "canonical_id": "v6-fund-q-b-1-0",
+      "pointer": "/banks/B/1/qs/0",
+      "sha256": "1ce71527cd82e116003e4ddf7d54a6af9e0f2861148cd3f58ae5051211b60639"
+    },
+    {
+      "legacy_id": "X.b_1_0",
+      "canonical_id": "v6-fund-q-b-1-0",
+      "pointer": "/banks/X/b_1_0",
+      "sha256": "3d3fbf18db8f828b9654e8753d9d0f489da145d493731cc28850b0700cbb05db"
+    },
+    {
+      "legacy_id": "b_1_1",
+      "canonical_id": "v6-fund-q-b-1-1",
+      "pointer": "/banks/B/1/qs/1",
+      "sha256": "b76d052185aafe4c860d9d5cc3764dff6b6088c4b5d2356be613fc8a5fc28a97"
+    },
+    {
+      "legacy_id": "X.b_1_1",
+      "canonical_id": "v6-fund-q-b-1-1",
+      "pointer": "/banks/X/b_1_1",
+      "sha256": "d628072643e957126c80fb54cc260ed1ffe0394ab15e7912e28d804d749e50dc"
+    },
+    {
+      "legacy_id": "b_2_0",
+      "canonical_id": "v6-fund-q-b-2-0",
+      "pointer": "/banks/B/2/qs/0",
+      "sha256": "93613b959bbeb15ee802a3f08e8b6b2817e6c09d4bc3613e817fd34d13c0f58d"
+    },
+    {
+      "legacy_id": "X.b_2_0",
+      "canonical_id": "v6-fund-q-b-2-0",
+      "pointer": "/banks/X/b_2_0",
+      "sha256": "528789301c494adbc1418cebdea5041e498c74dc9f1e2b25a64124f0346b0b4b"
+    },
+    {
+      "legacy_id": "b_2_1",
+      "canonical_id": "v6-fund-q-b-2-1",
+      "pointer": "/banks/B/2/qs/1",
+      "sha256": "b07e1ca30312c4d3248245f08420970e50b096badc920798436ddb047cb420c0"
+    },
+    {
+      "legacy_id": "X.b_2_1",
+      "canonical_id": "v6-fund-q-b-2-1",
+      "pointer": "/banks/X/b_2_1",
+      "sha256": "67c6f7681c7bca17dd821172012b41cde968561dad40dcb74c9b0573f81800c4"
+    },
+    {
+      "legacy_id": "b_3_0",
+      "canonical_id": "v6-fund-q-b-3-0",
+      "pointer": "/banks/B/3/qs/0",
+      "sha256": "760b9a9c8c43314eb561a9d6c44da95a0a915238de76e92671a98855c2a09aa1"
+    },
+    {
+      "legacy_id": "X.b_3_0",
+      "canonical_id": "v6-fund-q-b-3-0",
+      "pointer": "/banks/X/b_3_0",
+      "sha256": "4fbbc109829a7fe8c1d3a571f6ac6686bcb7a45dc08314218c5fff8f5e7c7eef"
+    },
+    {
+      "legacy_id": "b_3_1",
+      "canonical_id": "v6-fund-q-b-3-1",
+      "pointer": "/banks/B/3/qs/1",
+      "sha256": "7473e54cd53f351ac7bdf5581d5928340a64b134ceb93f26ffd0c1f487c8cf5e"
+    },
+    {
+      "legacy_id": "X.b_3_1",
+      "canonical_id": "v6-fund-q-b-3-1",
+      "pointer": "/banks/X/b_3_1",
+      "sha256": "b74b0aa4c99896fcd1eaef552b3a0d2f22db1c9cfdfc34947d5f8e1181d1379b"
+    },
+    {
+      "legacy_id": "b_4_0",
+      "canonical_id": "v6-fund-q-b-4-0",
+      "pointer": "/banks/B/4/qs/0",
+      "sha256": "fc4de15de248812257e366d7313ffe899edbe39257e51f4b3849c7857d587446"
+    },
+    {
+      "legacy_id": "X.b_4_0",
+      "canonical_id": "v6-fund-q-b-4-0",
+      "pointer": "/banks/X/b_4_0",
+      "sha256": "ac968d5242d400fd4673b6d47df020a8565fec4713dde11463fbec07d55ee8e7"
+    },
+    {
+      "legacy_id": "b_4_1",
+      "canonical_id": "v6-fund-q-b-4-1",
+      "pointer": "/banks/B/4/qs/1",
+      "sha256": "8cdb8f20139e1fbce96e631045bcd142e8b686103a4d1615708b7a03e5f5ea69"
+    },
+    {
+      "legacy_id": "X.b_4_1",
+      "canonical_id": "v6-fund-q-b-4-1",
+      "pointer": "/banks/X/b_4_1",
+      "sha256": "a8f17b94bb79024dd248df0c8d28e2704ab4ec0aeb47471110490be5d62e78ae"
+    },
+    {
+      "legacy_id": "b_5_0",
+      "canonical_id": "v6-fund-q-b-5-0",
+      "pointer": "/banks/B/5/qs/0",
+      "sha256": "002771da73c10fc425736d52988ced4b6266ba42834e17a71adf50a7c0ccbf24"
+    },
+    {
+      "legacy_id": "X.b_5_0",
+      "canonical_id": "v6-fund-q-b-5-0",
+      "pointer": "/banks/X/b_5_0",
+      "sha256": "34862bc44152aa5ad11e6d81e5af53204a84f47d17bf0892f8044a5cfcb4cee9"
+    },
+    {
+      "legacy_id": "b_5_1",
+      "canonical_id": "v6-fund-q-b-5-1",
+      "pointer": "/banks/B/5/qs/1",
+      "sha256": "5594830cce1e6050c7b7b39e21a9791227d2b61011281f64e52a17e63a5e4cdf"
+    },
+    {
+      "legacy_id": "X.b_5_1",
+      "canonical_id": "v6-fund-q-b-5-1",
+      "pointer": "/banks/X/b_5_1",
+      "sha256": "101de85b754d7378ff651ff6700f855110f6ef7140ec28447b00f540e6d1a448"
+    },
+    {
+      "legacy_id": "b_5_2",
+      "canonical_id": "v6-fund-q-b-5-2",
+      "pointer": "/banks/B/5/qs/2",
+      "sha256": "c1a3e855578762073a7c8abe86c50bca661bdbc17168b2da55ed6b8787404435"
+    },
+    {
+      "legacy_id": "X.b_5_2",
+      "canonical_id": "v6-fund-q-b-5-2",
+      "pointer": "/banks/X/b_5_2",
+      "sha256": "9afa92e3267dc10bba965a002d1d09500410166dfcaea48302a3f7b24740d964"
+    },
+    {
+      "legacy_id": "b_6_0",
+      "canonical_id": "v6-fund-q-b-6-0",
+      "pointer": "/banks/B/6/qs/0",
+      "sha256": "1645187434bef35ca77fc409c1d70803a93bdc000b38f2ccfa22bf023122798c"
+    },
+    {
+      "legacy_id": "X.b_6_0",
+      "canonical_id": "v6-fund-q-b-6-0",
+      "pointer": "/banks/X/b_6_0",
+      "sha256": "6f5d1ccc8e0942acc03d0baa92cebc0e40eb6e68e9a9f3de1d2a2708dd1abc2a"
+    },
+    {
+      "legacy_id": "b_6_1",
+      "canonical_id": "v6-fund-q-b-6-1",
+      "pointer": "/banks/B/6/qs/1",
+      "sha256": "6afd2e84b659413c4bf222baa1da5294cad337bb9baf74ff6487148fd9c4ea3c"
+    },
+    {
+      "legacy_id": "X.b_6_1",
+      "canonical_id": "v6-fund-q-b-6-1",
+      "pointer": "/banks/X/b_6_1",
+      "sha256": "14510f738e3e9d544fa0d2a29620549b2f3323ccec639a6a11599ca90a3024cd"
+    },
+    {
+      "legacy_id": "b_6_2",
+      "canonical_id": "v6-fund-q-b-6-2",
+      "pointer": "/banks/B/6/qs/2",
+      "sha256": "9e88d1ef255662499fe759610ed3a5ce6385372e7aeeffef963e52e32dea081e"
+    },
+    {
+      "legacy_id": "X.b_6_2",
+      "canonical_id": "v6-fund-q-b-6-2",
+      "pointer": "/banks/X/b_6_2",
+      "sha256": "98cd0d19ddc3c65d2cb12c3b74f838e18df10b88f069518333260a41ebe5b91f"
+    },
+    {
+      "legacy_id": "b_7_0",
+      "canonical_id": "v6-fund-q-b-7-0",
+      "pointer": "/banks/B/7/qs/0",
+      "sha256": "e18ceeac68a683f7543b5db590725b4ee75a4f0f16c919bec7d1b6b6b99cebf3"
+    },
+    {
+      "legacy_id": "X.b_7_0",
+      "canonical_id": "v6-fund-q-b-7-0",
+      "pointer": "/banks/X/b_7_0",
+      "sha256": "1e1a928591ac9558078359453977b8903973986bd904f77f070b24d480884950"
+    },
+    {
+      "legacy_id": "b_7_1",
+      "canonical_id": "v6-fund-q-b-7-1",
+      "pointer": "/banks/B/7/qs/1",
+      "sha256": "3e8124350b943d4c8d3d60bb9c3588e8621505584b620e3188a6a9a3acbed862"
+    },
+    {
+      "legacy_id": "X.b_7_1",
+      "canonical_id": "v6-fund-q-b-7-1",
+      "pointer": "/banks/X/b_7_1",
+      "sha256": "f4f3a5483d7476be37738f0bd36bf40fc1ae27f64a4e8d49ffbc9b2557ef64cf"
+    },
+    {
+      "legacy_id": "b_7_2",
+      "canonical_id": "v6-fund-q-b-7-2",
+      "pointer": "/banks/B/7/qs/2",
+      "sha256": "7fe8f5343e8ae30e65797f8181499b4e90ce8b9a8064e57055dfeb150797bd10"
+    },
+    {
+      "legacy_id": "X.b_7_2",
+      "canonical_id": "v6-fund-q-b-7-2",
+      "pointer": "/banks/X/b_7_2",
+      "sha256": "e49cb9fa67aa1be66a968175208bd95e567ce2fec8a672740c22ae71b7a5566d"
+    },
+    {
+      "legacy_id": "b_8_0",
+      "canonical_id": "v6-fund-q-b-8-0",
+      "pointer": "/banks/B/8/qs/0",
+      "sha256": "dd87e7e0210269ec7b09534b7b7466901d968642f4075a69851d456da2baf21c"
+    },
+    {
+      "legacy_id": "X.b_8_0",
+      "canonical_id": "v6-fund-q-b-8-0",
+      "pointer": "/banks/X/b_8_0",
+      "sha256": "6b7072800883f755f87c3cafee165e8744d62b2881f54410ce806e9964160217"
+    },
+    {
+      "legacy_id": "b_8_1",
+      "canonical_id": "v6-fund-q-b-8-1",
+      "pointer": "/banks/B/8/qs/1",
+      "sha256": "2605ac74e0733df0e4da7a60a1bcdb1ecf9f1bae7c1eb4db8aa8be1e071646f1"
+    },
+    {
+      "legacy_id": "X.b_8_1",
+      "canonical_id": "v6-fund-q-b-8-1",
+      "pointer": "/banks/X/b_8_1",
+      "sha256": "048cf4fa6e32852b92d88c43e67e5f024e92aa6fbc724a9278cce743cb07782f"
+    },
+    {
+      "legacy_id": "b_9_0",
+      "canonical_id": "v6-fund-q-b-9-0",
+      "pointer": "/banks/B/9/qs/0",
+      "sha256": "601dd893a2b8d1868e353da41b69d30a8a2e59c06c89dd9190bc0820a74d288a"
+    },
+    {
+      "legacy_id": "X.b_9_0",
+      "canonical_id": "v6-fund-q-b-9-0",
+      "pointer": "/banks/X/b_9_0",
+      "sha256": "d8b33d0512162cd4aa6f241d4594750376885c730fb8be2f6f81ad601617ca60"
+    },
+    {
+      "legacy_id": "b_10_0",
+      "canonical_id": "v6-fund-q-b-10-0",
+      "pointer": "/banks/B/10/qs/0",
+      "sha256": "a0623e25c7a726e76b519cb0a190cdc23a9f27d4ab84167ea2244790d26cd713"
+    },
+    {
+      "legacy_id": "b_10_1",
+      "canonical_id": "v6-fund-q-b-10-1",
+      "pointer": "/banks/B/10/qs/1",
+      "sha256": "09c9f9f5469b092b3426cefb8d58f8b0cb29023f72d2651a8c31c8ecfc32f233"
+    },
+    {
+      "legacy_id": "b_10_2",
+      "canonical_id": "v6-fund-q-b-10-2",
+      "pointer": "/banks/B/10/qs/2",
+      "sha256": "f773f26a988f75ae26f79673344f426d957d1825ec349baa7349d547dfc54f6a"
+    },
+    {
+      "legacy_id": "c_0",
+      "canonical_id": "v6-fund-q-c-0",
+      "pointer": "/banks/CH/0",
+      "sha256": "1bdf837996826f92532088710852bc260b32ed33b2f4924a1cca2cbb86f4d85a"
+    },
+    {
+      "legacy_id": "X.c_0",
+      "canonical_id": "v6-fund-q-c-0",
+      "pointer": "/banks/X/c_0",
+      "sha256": "feb7607d124cddac8e07a47aad060d37f2289d0f1e61ab7f6e78fd86582aeaf3"
+    },
+    {
+      "legacy_id": "c_1",
+      "canonical_id": "v6-fund-q-c-1",
+      "pointer": "/banks/CH/1",
+      "sha256": "2834a7d2cbb352d9cea7689ce1605f5c696517a941c9677160aa1b2e62b17d33"
+    },
+    {
+      "legacy_id": "X.c_1",
+      "canonical_id": "v6-fund-q-c-1",
+      "pointer": "/banks/X/c_1",
+      "sha256": "64bb7a712ffa0bb402b0a0a4111f49353e96dfc195815f29d20e7809dcaf8cf8"
+    },
+    {
+      "legacy_id": "c_2",
+      "canonical_id": "v6-fund-q-c-2",
+      "pointer": "/banks/CH/2",
+      "sha256": "4b6e3736da7dffb2b2430ac12a251ca717b6ae8fc432f2111e7d24482e791c94"
+    },
+    {
+      "legacy_id": "X.c_2",
+      "canonical_id": "v6-fund-q-c-2",
+      "pointer": "/banks/X/c_2",
+      "sha256": "152dd87781d31690141731175d1f483100030092d60243d533e7bd0c2cfef978"
+    },
+    {
+      "legacy_id": "c_3",
+      "canonical_id": "v6-fund-q-c-3",
+      "pointer": "/banks/CH/3",
+      "sha256": "0a92c138bd7e129a3767b9d2606cecb78ca0246bf8e32dad154159a6289dbc8e"
+    },
+    {
+      "legacy_id": "X.c_3",
+      "canonical_id": "v6-fund-q-c-3",
+      "pointer": "/banks/X/c_3",
+      "sha256": "cdb409c2c61bf8ddbe604c033d0863767f8f3bf8b985648eb5eb3b3f076e47eb"
+    },
+    {
+      "legacy_id": "c_4",
+      "canonical_id": "v6-fund-q-c-4",
+      "pointer": "/banks/CH/4",
+      "sha256": "8d99a389027bef62453f249baeb63a7dd4ea3b8f81df358310f99be94435ea9c"
+    },
+    {
+      "legacy_id": "X.c_4",
+      "canonical_id": "v6-fund-q-c-4",
+      "pointer": "/banks/X/c_4",
+      "sha256": "3f81ad478c90d7c41385bbf8633b9f43eaa900731f0cb4019b63333d1858efdb"
+    },
+    {
+      "legacy_id": "C[0]",
+      "canonical_id": "v6-fund-card-0",
+      "pointer": "/banks/C/0",
+      "sha256": "b523af98cca72b02bd39f75ed5e1e9275a98f2005a74072c6d0794a186cc4357"
+    },
+    {
+      "legacy_id": "C[1]",
+      "canonical_id": "v6-fund-card-1",
+      "pointer": "/banks/C/1",
+      "sha256": "99ef05201f954cf47f511c6b24d875e6ef3209678a1f4a330e8fb7fd4c789bad"
+    },
+    {
+      "legacy_id": "C[2]",
+      "canonical_id": "v6-fund-card-2",
+      "pointer": "/banks/C/2",
+      "sha256": "1d22b85f173e2dc4deb90fbede74f93505bcb2afe4ec0b4e3a283b1415ba11c8"
+    },
+    {
+      "legacy_id": "C[3]",
+      "canonical_id": "v6-fund-card-3",
+      "pointer": "/banks/C/3",
+      "sha256": "e49fe7185d2221eab345f2fbcbf7537db131d08305f566d3872f0aaa8aacc6a3"
+    },
+    {
+      "legacy_id": "C[4]",
+      "canonical_id": "v6-fund-card-4",
+      "pointer": "/banks/C/4",
+      "sha256": "657731fa2db46cbd9adf21fe511cd59e571dda864bb4ae3c687eeea12b40c885"
+    },
+    {
+      "legacy_id": "C[5]",
+      "canonical_id": "v6-fund-card-5",
+      "pointer": "/banks/C/5",
+      "sha256": "8014541a4796480d702355c21574b03a9fd534c4fb28a63e44d394fce56f40e9"
+    },
+    {
+      "legacy_id": "C[6]",
+      "canonical_id": "v6-fund-card-6",
+      "pointer": "/banks/C/6",
+      "sha256": "bea61c9fb79282b12f93f96715b456f7a5f2a189a36a3bd54d460961e230387e"
+    },
+    {
+      "legacy_id": "C[7]",
+      "canonical_id": "v6-fund-card-7",
+      "pointer": "/banks/C/7",
+      "sha256": "80c4eabfd4d0a1a9f4eb5848a933fb4a02eb003ce5c6b52401b82c2491199272"
+    },
+    {
+      "legacy_id": "C[8]",
+      "canonical_id": "v6-fund-card-8",
+      "pointer": "/banks/C/8",
+      "sha256": "dcfac5317f4322b954e5a12007d45e20f8607848d4b5e67eaf97d56eca94d048"
+    },
+    {
+      "legacy_id": "C[9]",
+      "canonical_id": "v6-fund-card-9",
+      "pointer": "/banks/C/9",
+      "sha256": "5211c6d2a1eb864e20eeb65f4d8567534eced25c94ba41a3f28d70908d0383a5"
+    },
+    {
+      "legacy_id": "C[10]",
+      "canonical_id": "v6-fund-card-10",
+      "pointer": "/banks/C/10",
+      "sha256": "3b8ec91552984227f5f54e4c2372ddc41bc623688649eb294a7a2ae087ab21c7"
+    },
+    {
+      "legacy_id": "C[11]",
+      "canonical_id": "v6-fund-card-11",
+      "pointer": "/banks/C/11",
+      "sha256": "f5893ca71a367558a47cd1768df68f18fed7f5eacbfa6be336a9739c54b05b70"
+    },
+    {
+      "legacy_id": "C[12]",
+      "canonical_id": "v6-fund-card-12",
+      "pointer": "/banks/C/12",
+      "sha256": "26589426c290b9d267b0fec11b10d7447a6955f4744b58b29c160638847aae08"
+    },
+    {
+      "legacy_id": "C[13]",
+      "canonical_id": "v6-fund-card-13",
+      "pointer": "/banks/C/13",
+      "sha256": "10cc8ec46263cf0950000ff483d2f11cb8511732c264ba2748bdf5737ba43633"
+    },
+    {
+      "legacy_id": "C[14]",
+      "canonical_id": "v6-fund-card-14",
+      "pointer": "/banks/C/14",
+      "sha256": "cd04893bd7b98e316c3cccbd18ac78f95a379e7d2d1a428f0fa573d6a62301ea"
+    },
+    {
+      "legacy_id": "C[15]",
+      "canonical_id": "v6-fund-card-15",
+      "pointer": "/banks/C/15",
+      "sha256": "4305d3c8d48c61d00b8f18a9615a0d0e7d9004e60411da6bca837b9f44c6ff6a"
+    },
+    {
+      "legacy_id": "C[16]",
+      "canonical_id": "v6-fund-card-16",
+      "pointer": "/banks/C/16",
+      "sha256": "2f1b80d0560b1838a6e95c69d89047fc0d5561f281ca1d8857cd994679cc73fe"
+    },
+    {
+      "legacy_id": "C[17]",
+      "canonical_id": "v6-fund-card-17",
+      "pointer": "/banks/C/17",
+      "sha256": "c6037a713c16a83fd045bfe0164fa9966d0e736d90becd9f56d71a4f931e4791"
+    },
+    {
+      "legacy_id": "C[18]",
+      "canonical_id": "v6-fund-card-18",
+      "pointer": "/banks/C/18",
+      "sha256": "a73ee6c899e1b0cde7e7763060c3d3430bf440799bb6b4ab5776e150779dfb54"
+    },
+    {
+      "legacy_id": "C[19]",
+      "canonical_id": "v6-fund-card-19",
+      "pointer": "/banks/C/19",
+      "sha256": "bcf3bed10b97cddedf58edad955131dfc1b3e280992739e54ec3f3b34a1296e9"
+    },
+    {
+      "legacy_id": "C[20]",
+      "canonical_id": "v6-fund-card-20",
+      "pointer": "/banks/C/20",
+      "sha256": "354947e7d57686cd85f7b86c3282c951e074ff5c86060b0a7dfa6296140f324c"
+    },
+    {
+      "legacy_id": "C[21]",
+      "canonical_id": "v6-fund-card-21",
+      "pointer": "/banks/C/21",
+      "sha256": "ac1d3e9be206ca832d0f6d5bbc09ed7816e6808281e3c6b5e313c5fca54cabaa"
+    },
+    {
+      "legacy_id": "C[22]",
+      "canonical_id": "v6-fund-card-22",
+      "pointer": "/banks/C/22",
+      "sha256": "ecd6d082aa1933513bef5a08d36e2a4b6747f158618bbb0b6a346065e3c1b8ca"
+    },
+    {
+      "legacy_id": "C[23]",
+      "canonical_id": "v6-fund-card-23",
+      "pointer": "/banks/C/23",
+      "sha256": "1d4b99971c61f4716768df17ac8a895d721fe82a7db9a8cdababd976d1a72179"
+    },
+    {
+      "legacy_id": "C[24]",
+      "canonical_id": "v6-fund-card-24",
+      "pointer": "/banks/C/24",
+      "sha256": "e8f4663adf65be3e1e6c3005f6eba00f6a408191fb1ba2279ce65e896a108800"
+    },
+    {
+      "legacy_id": "C[25]",
+      "canonical_id": "v6-fund-card-25",
+      "pointer": "/banks/C/25",
+      "sha256": "18b5e165f5c80a9afcf4cfff9280864dfb04abc502c76113f170b1845f8395d2"
+    },
+    {
+      "legacy_id": "C[26]",
+      "canonical_id": "v6-fund-card-26",
+      "pointer": "/banks/C/26",
+      "sha256": "70436f0c69cf8363a8a05fb6f505cdff89034a22dde81d8abf4299cf5ad15d4f"
+    },
+    {
+      "legacy_id": "C[27]",
+      "canonical_id": "v6-fund-card-27",
+      "pointer": "/banks/C/27",
+      "sha256": "d6f3f671bab3e891dd57efb9703629360a84720a21ee20f84aaef3be3bc45c6d"
+    },
+    {
+      "legacy_id": "C[28]",
+      "canonical_id": "v6-fund-card-28",
+      "pointer": "/banks/C/28",
+      "sha256": "d615fa08b4e7a613c7a3459f5cdc240829d9d5400f7ddb1397e1b8aaa6e4f74a"
+    },
+    {
+      "legacy_id": "C[29]",
+      "canonical_id": "v6-fund-card-29",
+      "pointer": "/banks/C/29",
+      "sha256": "ca46c0e4b81d8fdd1edbe2e4c7283d16cf56155c52e93b322b81c8d982ef6df5"
+    },
+    {
+      "legacy_id": "C[30]",
+      "canonical_id": "v6-fund-card-30",
+      "pointer": "/banks/C/30",
+      "sha256": "7bf244f927d42dab3539c7b15c59db72e3d2bbc8a6595a5071db747dd4b80248"
+    },
+    {
+      "legacy_id": "C[31]",
+      "canonical_id": "v6-fund-card-31",
+      "pointer": "/banks/C/31",
+      "sha256": "88a0b283586d1c7987f9e745293bbee584de795161b16109bd250d1ef25f850b"
+    },
+    {
+      "legacy_id": "C[32]",
+      "canonical_id": "v6-fund-card-32",
+      "pointer": "/banks/C/32",
+      "sha256": "4ed46ccf3e37b9f79e6f549fd8bfda2e1e052440af4ae647a7f58777031f7d75"
+    },
+    {
+      "legacy_id": "C[33]",
+      "canonical_id": "v6-fund-card-33",
+      "pointer": "/banks/C/33",
+      "sha256": "17ffa402cc26b50bc8843f4904a7ccb895b2fbf95f047fcd50ae191e022d5ee9"
+    },
+    {
+      "legacy_id": "C[34]",
+      "canonical_id": "v6-fund-card-34",
+      "pointer": "/banks/C/34",
+      "sha256": "694abddeead44cc310720a0797b47add97b9ac641948db01207bcb51fb5633e9"
+    },
+    {
+      "legacy_id": "C[35]",
+      "canonical_id": "v6-fund-card-35",
+      "pointer": "/banks/C/35",
+      "sha256": "5eb1e9af4eeac8aaaabb6daf9d97f604d960bfd611ad5dc4c688a7d2f80a19a6"
+    },
+    {
+      "legacy_id": "C[36]",
+      "canonical_id": "v6-fund-card-36",
+      "pointer": "/banks/C/36",
+      "sha256": "dfff12d0357e716a5fce268fa04033fa54d3e404f03d33ae2b0af554e9c64bde"
+    },
+    {
+      "legacy_id": "C[37]",
+      "canonical_id": "v6-fund-card-37",
+      "pointer": "/banks/C/37",
+      "sha256": "602cfdb38dcaa4efb6c32fdd8de44e136809ed04b0367850c867ae6d3c7f315d"
+    },
+    {
+      "legacy_id": "C[38]",
+      "canonical_id": "v6-fund-card-38",
+      "pointer": "/banks/C/38",
+      "sha256": "32acdcddb701906ecdc53cb732c6bff607ab4919ca190bc4ae4be63f046b267e"
+    },
+    {
+      "legacy_id": "C[39]",
+      "canonical_id": "v6-fund-card-39",
+      "pointer": "/banks/C/39",
+      "sha256": "39b2c28e126e40db7a53b2ea7a1651375c063afb76fb4166a4b2256b3c21d77f"
+    },
+    {
+      "legacy_id": "C[40]",
+      "canonical_id": "v6-fund-card-40",
+      "pointer": "/banks/C/40",
+      "sha256": "1c1b6f9cb508678999dfa580d8f0846638a9a95e4561663a511b8c137767e97d"
+    },
+    {
+      "legacy_id": "C[41]",
+      "canonical_id": "v6-fund-card-41",
+      "pointer": "/banks/C/41",
+      "sha256": "d048bf424f6b8ba2c978d5072f8cfe78cb0493662791ebcfa67e5bf3f3387c69"
+    },
+    {
+      "legacy_id": "C[42]",
+      "canonical_id": "v6-fund-card-42",
+      "pointer": "/banks/C/42",
+      "sha256": "eb100f2efa27b3ff1a42efe5cd8943e068d0af390ab32788cd7eff6448b23b90"
+    },
+    {
+      "legacy_id": "C[43]",
+      "canonical_id": "v6-fund-card-43",
+      "pointer": "/banks/C/43",
+      "sha256": "ce26674b5cbfdad51f0fc84aabbace698760982a130fe96e9f6d2de45eb6387f"
+    },
+    {
+      "legacy_id": "G[0]",
+      "canonical_id": "v6-fund-game-0",
+      "pointer": "/banks/G/0",
+      "sha256": "d92bb92ff9b802035ab94a1108696946a1960c51a8ca0f04fac120eb707b9e8d"
+    },
+    {
+      "legacy_id": "G[1]",
+      "canonical_id": "v6-fund-game-1",
+      "pointer": "/banks/G/1",
+      "sha256": "6366577f53c37a8933f01f80c7a9e1faf1441d449d91db5db232da15946ad706"
+    },
+    {
+      "legacy_id": "G[2]",
+      "canonical_id": "v6-fund-game-2",
+      "pointer": "/banks/G/2",
+      "sha256": "9623ecdfbdae142c31b2ac9f5b7917f89e4ccd65675a6bf40851ded5038633b7"
+    },
+    {
+      "legacy_id": "G[3]",
+      "canonical_id": "v6-fund-game-3",
+      "pointer": "/banks/G/3",
+      "sha256": "6f350a5da9530bc562687440dd763f9cdd346868a34dac508ede6b4a89cd24d3"
+    },
+    {
+      "legacy_id": "G[4]",
+      "canonical_id": "v6-fund-game-4",
+      "pointer": "/banks/G/4",
+      "sha256": "14e6b1d1ca261a5e603832ecbc10b126d54bb2a9fa38cd6d2d9683f3c1c76fca"
+    },
+    {
+      "legacy_id": "G[5]",
+      "canonical_id": "v6-fund-game-5",
+      "pointer": "/banks/G/5",
+      "sha256": "b3767d1088bc058daf387ece88df414c116af43f3216e492ba26c71df78ff912"
+    },
+    {
+      "legacy_id": "G[6]",
+      "canonical_id": "v6-fund-game-6",
+      "pointer": "/banks/G/6",
+      "sha256": "976a900f4bb7e4aee49d2b664a7dad5a47d8cab12240683aa40a595da55a28b2"
+    },
+    {
+      "legacy_id": "G[7]",
+      "canonical_id": "v6-fund-game-7",
+      "pointer": "/banks/G/7",
+      "sha256": "e9a133cdb8abbf3ad72900542920600b7079e570474a97db66f2984767b09385"
+    },
+    {
+      "legacy_id": "G[8]",
+      "canonical_id": "v6-fund-game-8",
+      "pointer": "/banks/G/8",
+      "sha256": "202a17a5d045de5ee34ab5b89393c4178508fe49851d2dc87fae40d7218e23ef"
+    },
+    {
+      "legacy_id": "G[9]",
+      "canonical_id": "v6-fund-game-9",
+      "pointer": "/banks/G/9",
+      "sha256": "8325d229ae44699da9fb540f7649dcd58a871437035b79682fd0c499160738d6"
+    },
+    {
+      "legacy_id": "G[10]",
+      "canonical_id": "v6-fund-game-10",
+      "pointer": "/banks/G/10",
+      "sha256": "fd6a4f2be63c542cc7ec51173025fb59d74e84a3e636c934287709e71b0bc9a8"
+    },
+    {
+      "legacy_id": "G[11]",
+      "canonical_id": "v6-fund-game-11",
+      "pointer": "/banks/G/11",
+      "sha256": "cb579d98872a56a9e9e38bef14317105ff5f0bc94d480761672d281ebd4602ef"
+    },
+    {
+      "legacy_id": "G[12]",
+      "canonical_id": "v6-fund-game-12",
+      "pointer": "/banks/G/12",
+      "sha256": "8c896241c7b7524baa30451ae665b5e4a0e9eebf69175ffd0f197dc8cd58ee40"
+    },
+    {
+      "legacy_id": "G[13]",
+      "canonical_id": "v6-fund-game-13",
+      "pointer": "/banks/G/13",
+      "sha256": "dc23d136ba55d1cd3d899217b68e6dbec1d4b9d6a518c900459e208affdf8056"
+    },
+    {
+      "legacy_id": "G[14]",
+      "canonical_id": "v6-fund-game-14",
+      "pointer": "/banks/G/14",
+      "sha256": "614f01c4f5b7130877d67418107941ef208a324985bc4274a0433230d6b32d8e"
+    },
+    {
+      "legacy_id": "G[15]",
+      "canonical_id": "v6-fund-game-15",
+      "pointer": "/banks/G/15",
+      "sha256": "3f710178010a957ed3c3f338d302c4d4d4befc76dcdd1987ac48c2ac2c1605fe"
+    },
+    {
+      "legacy_id": "G[16]",
+      "canonical_id": "v6-fund-game-16",
+      "pointer": "/banks/G/16",
+      "sha256": "9f7f858eaa4c97321c341d302b3b6a2b0cd44c5f931f5eda04f57f08c8c5526b"
+    },
+    {
+      "legacy_id": "G[17]",
+      "canonical_id": "v6-fund-game-17",
+      "pointer": "/banks/G/17",
+      "sha256": "67f2fb4196b256bb922839154cbd997911734bcbaed7293c86882dce19213a56"
+    },
+    {
+      "legacy_id": "G[18]",
+      "canonical_id": "v6-fund-game-18",
+      "pointer": "/banks/G/18",
+      "sha256": "279da46872870eab4393d7c0ba80f883ac7de4645dd1649d27c7cd064949eaa3"
+    },
+    {
+      "legacy_id": "G[19]",
+      "canonical_id": "v6-fund-game-19",
+      "pointer": "/banks/G/19",
+      "sha256": "f2dc8efaafc864cfbdd352d638d21cc0f45d70275ad8a03433f10d261eabf739"
+    },
+    {
+      "legacy_id": "G[20]",
+      "canonical_id": "v6-fund-game-20",
+      "pointer": "/banks/G/20",
+      "sha256": "b6ecba9ff0ad07bbb289b383ab55e43992091ab6ac24519c0cac77d749ae419c"
+    },
+    {
+      "legacy_id": "G[21]",
+      "canonical_id": "v6-fund-game-21",
+      "pointer": "/banks/G/21",
+      "sha256": "8ac151c35c9d457577e9d9726e44711f5f1ccc969d33117e11d90b21a149e046"
+    },
+    {
+      "legacy_id": "G[22]",
+      "canonical_id": "v6-fund-game-22",
+      "pointer": "/banks/G/22",
+      "sha256": "5762e4bd00b2ac9af3fa0062488bb44b6154af13c6aea0049b083041e3e17dbe"
+    },
+    {
+      "legacy_id": "G[23]",
+      "canonical_id": "v6-fund-game-23",
+      "pointer": "/banks/G/23",
+      "sha256": "9a1677bf8df43ef97a2ec310513b97eca54f972403b07abaaedbd43d36fcd702"
+    },
+    {
+      "legacy_id": "G[24]",
+      "canonical_id": "v6-fund-game-24",
+      "pointer": "/banks/G/24",
+      "sha256": "54be9ee31395f6b3ac1aae328663340615132c02e86400bc82bb0cec34f8a12d"
+    },
+    {
+      "legacy_id": "G[25]",
+      "canonical_id": "v6-fund-game-25",
+      "pointer": "/banks/G/25",
+      "sha256": "5769f21cb5a765366dbc0319fd7aecef860c6bc8eec18b76a163c539276d2d06"
+    },
+    {
+      "legacy_id": "G[26]",
+      "canonical_id": "v6-fund-game-26",
+      "pointer": "/banks/G/26",
+      "sha256": "b19a66b1a0421aaa6f8edbc44515ccee33b569cc3368218feeb4b4beb9174471"
+    },
+    {
+      "legacy_id": "G[27]",
+      "canonical_id": "v6-fund-game-27",
+      "pointer": "/banks/G/27",
+      "sha256": "be896fc6906beeacb110eb15e2a6df7f092ad821916171464a722055d615f63d"
+    },
+    {
+      "legacy_id": "G[28]",
+      "canonical_id": "v6-fund-game-28",
+      "pointer": "/banks/G/28",
+      "sha256": "feeddabfb67343a5594e2f46a0314684722acc913e4e1df01f46890660ed811a"
+    },
+    {
+      "legacy_id": "G[29]",
+      "canonical_id": "v6-fund-game-29",
+      "pointer": "/banks/G/29",
+      "sha256": "c6cc0c7e4cc0f846d358bd9f80a2c6b7f6e76fe41672a332738e55de178f1b18"
+    },
+    {
+      "legacy_id": "G[30]",
+      "canonical_id": "v6-fund-game-30",
+      "pointer": "/banks/G/30",
+      "sha256": "24ad9e4828080c4b01b4bf210531bf71b81b28fb2c785d380893d30dfa5d1540"
+    },
+    {
+      "legacy_id": "G[31]",
+      "canonical_id": "v6-fund-game-31",
+      "pointer": "/banks/G/31",
+      "sha256": "d6edd5c7c676561c347a19b3c8234aadb29c2b5a2e2cbca5c6be46ae878b6f59"
+    },
+    {
+      "legacy_id": "G[32]",
+      "canonical_id": "v6-fund-game-32",
+      "pointer": "/banks/G/32",
+      "sha256": "638af706dac888702d74aca025e614568082db9a7ac36930f7a7c0cbc1867525"
+    },
+    {
+      "legacy_id": "G[33]",
+      "canonical_id": "v6-fund-game-33",
+      "pointer": "/banks/G/33",
+      "sha256": "2b830033683ff1a674cfe9e9fece0e7ff496b42c23c4f6571b11fc869d560566"
+    },
+    {
+      "legacy_id": "G[34]",
+      "canonical_id": "v6-fund-game-34",
+      "pointer": "/banks/G/34",
+      "sha256": "5e166e9126c79f6874599fe83723b4d9aab231f1624bef8076b1d617d53348c2"
+    },
+    {
+      "legacy_id": "G[35]",
+      "canonical_id": "v6-fund-game-35",
+      "pointer": "/banks/G/35",
+      "sha256": "ce9120198977d7827b1b3637a57ce7f87869973cc5b6e623bb27acf345976a07"
+    },
+    {
+      "legacy_id": "G[36]",
+      "canonical_id": "v6-fund-game-36",
+      "pointer": "/banks/G/36",
+      "sha256": "bff6b46a279cb2dba3e3596f19563ba88b14a125684600e82cf222385c91e109"
+    },
+    {
+      "legacy_id": "G[37]",
+      "canonical_id": "v6-fund-game-37",
+      "pointer": "/banks/G/37",
+      "sha256": "003c34653144d85bb62e3ce772d8da56842ee6cd0dcd9b42d6d9750cc87c4e64"
+    },
+    {
+      "legacy_id": "G[38]",
+      "canonical_id": "v6-fund-game-38",
+      "pointer": "/banks/G/38",
+      "sha256": "6e267a36bc0f557df4220f89ab87f1fa21a992f8db2e71487a4107387eba446d"
+    },
+    {
+      "legacy_id": "G[39]",
+      "canonical_id": "v6-fund-game-39",
+      "pointer": "/banks/G/39",
+      "sha256": "20867dc98ad1782b131a6eac1962e7d3eaa7db4d8e265c34fbaa95cc2a541d55"
+    },
+    {
+      "legacy_id": "G[40]",
+      "canonical_id": "v6-fund-game-40",
+      "pointer": "/banks/G/40",
+      "sha256": "80912f8be5a6195a20ad6c95193ef12841e0f210c5b05fb01630de99ae0f94f2"
+    },
+    {
+      "legacy_id": "G[41]",
+      "canonical_id": "v6-fund-game-41",
+      "pointer": "/banks/G/41",
+      "sha256": "130c28160d1956816f6d0f58dcf04e674b066329681902fe411011ded1c26742"
+    },
+    {
+      "legacy_id": "G[42]",
+      "canonical_id": "v6-fund-game-42",
+      "pointer": "/banks/G/42",
+      "sha256": "cbd37825a538c54638f15014ee7085eada387eb0bcc6fae64082073bdd6f5195"
+    },
+    {
+      "legacy_id": "G[43]",
+      "canonical_id": "v6-fund-game-43",
+      "pointer": "/banks/G/43",
+      "sha256": "99c83964fad057818abd54a69a5887fa7cdc54d78bfe681c44fb168fc962f69e"
+    },
+    {
+      "legacy_id": "G[44]",
+      "canonical_id": "v6-fund-game-44",
+      "pointer": "/banks/G/44",
+      "sha256": "2393e67d6edd81f56dc9393b2ec7babda8785209cafa3dc7f70fe7fe91851797"
+    },
+    {
+      "legacy_id": "G[45]",
+      "canonical_id": "v6-fund-game-45",
+      "pointer": "/banks/G/45",
+      "sha256": "60377742be35969142237e20bfdf37d7fefc2e9e87c48f7899f7a01891d3711c"
+    },
+    {
+      "legacy_id": "G[46]",
+      "canonical_id": "v6-fund-game-46",
+      "pointer": "/banks/G/46",
+      "sha256": "1b86bbcf632f6cc308b95ba4006eb0f3d1762f40abcb8fcab9ffc9ee61179fad"
+    },
+    {
+      "legacy_id": "G[47]",
+      "canonical_id": "v6-fund-game-47",
+      "pointer": "/banks/G/47",
+      "sha256": "54020e87e2b0b0d8c77245246642dfed155cf501caad9de4670b440a5eff5a74"
+    },
+    {
+      "legacy_id": "G[48]",
+      "canonical_id": "v6-fund-game-48",
+      "pointer": "/banks/G/48",
+      "sha256": "8e1e899971d2f5592d23dbd44b0e672024f0e7309ef0f607e7bb94644a7482ea"
+    },
+    {
+      "legacy_id": "G[49]",
+      "canonical_id": "v6-fund-game-49",
+      "pointer": "/banks/G/49",
+      "sha256": "cacca681b17082a379213ef9db7c1d011bdd7cb860214e0d488aa24f2311d4e7"
+    },
+    {
+      "legacy_id": "G[50]",
+      "canonical_id": "v6-fund-game-50",
+      "pointer": "/banks/G/50",
+      "sha256": "152134d43176fc3d5085b5a93fb9fe039edba0ae7012932e32da3d4411ba2626"
+    },
+    {
+      "legacy_id": "G[51]",
+      "canonical_id": "v6-fund-game-51",
+      "pointer": "/banks/G/51",
+      "sha256": "08648efa69b4ab09e8318bc7b013cab4b360264c04639c1a858ca5fcaa153959"
+    },
+    {
+      "legacy_id": "G[52]",
+      "canonical_id": "v6-fund-game-52",
+      "pointer": "/banks/G/52",
+      "sha256": "df9ecb3c56a38a8502e89e54e166827e1e99e81d0a09957bc8ff430fa426c0e8"
+    },
+    {
+      "legacy_id": "G[53]",
+      "canonical_id": "v6-fund-game-53",
+      "pointer": "/banks/G/53",
+      "sha256": "8147dae423a1a426a3a22b0cda1693a1e19c200aa5b5a338e77e76af120a9a57"
+    },
+    {
+      "legacy_id": "G[54]",
+      "canonical_id": "v6-fund-game-54",
+      "pointer": "/banks/G/54",
+      "sha256": "dba363176e7c7d3652bff7e147980b08e599cd771016fc671c914a6f66fc06c8"
+    },
+    {
+      "legacy_id": "G[55]",
+      "canonical_id": "v6-fund-game-55",
+      "pointer": "/banks/G/55",
+      "sha256": "2779f11f157b8c0623f83a0a75f21c1cbd6f157f29cfa499954eec2b486d59d4"
+    },
+    {
+      "legacy_id": "G[56]",
+      "canonical_id": "v6-fund-game-56",
+      "pointer": "/banks/G/56",
+      "sha256": "da47f1e7253cb4e641b678db3279a002a568fee969502637382727820c8b78a3"
+    },
+    {
+      "legacy_id": "G[57]",
+      "canonical_id": "v6-fund-game-57",
+      "pointer": "/banks/G/57",
+      "sha256": "8e5cd91adea312a5c16a7a53ba5a4260c85335645da1fbe95d84f79ec4fd4137"
+    },
+    {
+      "legacy_id": "G[58]",
+      "canonical_id": "v6-fund-game-58",
+      "pointer": "/banks/G/58",
+      "sha256": "51ac19abfc13c4fa6068f15fb3b179c18001755a67e3a35ffc9b3cbb997a10d3"
+    },
+    {
+      "legacy_id": "G[59]",
+      "canonical_id": "v6-fund-game-59",
+      "pointer": "/banks/G/59",
+      "sha256": "b7a34b2098c0b4d5360b165f9b18e93a8a2ef3e03a7891c2a0faa326e6ff8484"
+    },
+    {
+      "legacy_id": "G[60]",
+      "canonical_id": "v6-fund-game-60",
+      "pointer": "/banks/G/60",
+      "sha256": "1b1ce71223f16ce42c6930765d56ef7f0e3f4c202c67984d3e7056ff9cdef42a"
+    },
+    {
+      "legacy_id": "G[61]",
+      "canonical_id": "v6-fund-game-61",
+      "pointer": "/banks/G/61",
+      "sha256": "aec9b60d77abc6f1ef180db32470942df0455339991dc53fa68d6c2b076a6113"
+    },
+    {
+      "legacy_id": "G[62]",
+      "canonical_id": "v6-fund-game-62",
+      "pointer": "/banks/G/62",
+      "sha256": "63ee0cbf980a1246d17bb72218be9f18dfe622d05e3771de26734521d5c106f9"
+    },
+    {
+      "legacy_id": "G[63]",
+      "canonical_id": "v6-fund-game-63",
+      "pointer": "/banks/G/63",
+      "sha256": "c97a9f880e9182e14f966cbd90159ac51af96ae8459222b692adff889b8b5daa"
+    },
+    {
+      "legacy_id": "G[64]",
+      "canonical_id": "v6-fund-game-64",
+      "pointer": "/banks/G/64",
+      "sha256": "629dab49de0748342b17acbed575a23cc038deca9335ddb5b1a4f0fe4168b9d6"
+    },
+    {
+      "legacy_id": "G[65]",
+      "canonical_id": "v6-fund-game-65",
+      "pointer": "/banks/G/65",
+      "sha256": "0487fcdebfb41c2a09ae86c05b2a791edac181783853fb4546af23f114c31343"
+    },
+    {
+      "legacy_id": "G[66]",
+      "canonical_id": "v6-fund-game-66",
+      "pointer": "/banks/G/66",
+      "sha256": "e2393c9c00a5e1934e4f826b6ff99649aa635b0f2fdbe7232ffcd1d5c705e12e"
+    },
+    {
+      "legacy_id": "G[67]",
+      "canonical_id": "v6-fund-game-67",
+      "pointer": "/banks/G/67",
+      "sha256": "c2d80c1ce979cb366b8018bf04a78982a3667124ceda567a0a6b06c88b5e561f"
+    },
+    {
+      "legacy_id": "G[68]",
+      "canonical_id": "v6-fund-game-68",
+      "pointer": "/banks/G/68",
+      "sha256": "ffad1b9a5eeb5ad16a2ac5d7e9ef134eb548a9e286bcde4f2e21aa0ecee53c45"
+    },
+    {
+      "legacy_id": "G[69]",
+      "canonical_id": "v6-fund-game-69",
+      "pointer": "/banks/G/69",
+      "sha256": "84924cfc706073606a9f92ac4b570483e9509dab411dec0f87ec7493e998143f"
+    },
+    {
+      "legacy_id": "G[70]",
+      "canonical_id": "v6-fund-game-70",
+      "pointer": "/banks/G/70",
+      "sha256": "4f98f7c7517c30d0eb529ef89959c21f85a57c6c9ae19cd43e685af495167ad1"
+    },
+    {
+      "legacy_id": "G[71]",
+      "canonical_id": "v6-fund-game-71",
+      "pointer": "/banks/G/71",
+      "sha256": "ec63db116c9b9bd4d6723b35ec6c4d505f6f57d0ae00054a4edb33af3b5c9190"
+    },
+    {
+      "legacy_id": "G[72]",
+      "canonical_id": "v6-fund-game-72",
+      "pointer": "/banks/G/72",
+      "sha256": "ac440aa079a3f9011425883a52e48294fedc999716471f8a35b47c819167aff8"
+    },
+    {
+      "legacy_id": "G[73]",
+      "canonical_id": "v6-fund-game-73",
+      "pointer": "/banks/G/73",
+      "sha256": "9d7c626397a8a84257311b987093c32cd9dd2ffc836570a404a88dcfb12055f9"
+    },
+    {
+      "legacy_id": "G[74]",
+      "canonical_id": "v6-fund-game-74",
+      "pointer": "/banks/G/74",
+      "sha256": "d9d678b3439eb03cdf8a57517a43bf0da0b5514b4dcab33af408e7039611e5d2"
+    },
+    {
+      "legacy_id": "G[75]",
+      "canonical_id": "v6-fund-game-75",
+      "pointer": "/banks/G/75",
+      "sha256": "e0bd270a2bce70399553142cd2ef34f1bb40f304db392d193412175c4dc03599"
+    },
+    {
+      "legacy_id": "G[76]",
+      "canonical_id": "v6-fund-game-76",
+      "pointer": "/banks/G/76",
+      "sha256": "725f1844ae38ea57ec624fa18ca2a9c1376a050df0f5f303f5985bdd64125e56"
+    },
+    {
+      "legacy_id": "G[77]",
+      "canonical_id": "v6-fund-game-77",
+      "pointer": "/banks/G/77",
+      "sha256": "f5b01d5d6b407a3212520e133f1cab122d0331ac49ba9515bca2f966b07fe425"
+    },
+    {
+      "legacy_id": "G[78]",
+      "canonical_id": "v6-fund-game-78",
+      "pointer": "/banks/G/78",
+      "sha256": "e045e27cc8147737baa9e4585dba16a2483fee87129898cb7ac224c503b854c4"
+    },
+    {
+      "legacy_id": "G[79]",
+      "canonical_id": "v6-fund-game-79",
+      "pointer": "/banks/G/79",
+      "sha256": "74a615c5d9fbf8a81649e3b8e535760e5e1a7542ac5eb4f90617822ccc72584e"
+    },
+    {
+      "legacy_id": "G[80]",
+      "canonical_id": "v6-fund-game-80",
+      "pointer": "/banks/G/80",
+      "sha256": "ca3e573ab385a43dc88ba311bc11231cfc813c8cd4895461276daba0b54e2651"
+    },
+    {
+      "legacy_id": "G[81]",
+      "canonical_id": "v6-fund-game-81",
+      "pointer": "/banks/G/81",
+      "sha256": "da0963e2950eef030527006fcd2c3c4e1c5f754933c4881e17dc5dbf43eebd7a"
+    },
+    {
+      "legacy_id": "G[82]",
+      "canonical_id": "v6-fund-game-82",
+      "pointer": "/banks/G/82",
+      "sha256": "c6cd9ae933ad7de1a839fe0483ce104cb7296fbd40226f372bc4ec41cb6bb246"
+    },
+    {
+      "legacy_id": "G[83]",
+      "canonical_id": "v6-fund-game-83",
+      "pointer": "/banks/G/83",
+      "sha256": "c2ad9d6b01310744e734ada06d1794296414e68d5382e3a335b1a7b33b577e5f"
+    },
+    {
+      "legacy_id": "G[84]",
+      "canonical_id": "v6-fund-game-84",
+      "pointer": "/banks/G/84",
+      "sha256": "eb33200eb252fd4bf3cfcf38d0dd59398a4f2080a847f34c9afc39a319d26e3b"
+    },
+    {
+      "legacy_id": "G[85]",
+      "canonical_id": "v6-fund-game-85",
+      "pointer": "/banks/G/85",
+      "sha256": "a02add53d710cae02480e31bc30c49b7c71ed5f725c9acea09429c3882221b6b"
+    },
+    {
+      "legacy_id": "G[86]",
+      "canonical_id": "v6-fund-game-86",
+      "pointer": "/banks/G/86",
+      "sha256": "2c68016568662df0b4992b704e590bc9cddf120213c5aac25f2660ef5f2fcb60"
+    },
+    {
+      "legacy_id": "G[87]",
+      "canonical_id": "v6-fund-game-87",
+      "pointer": "/banks/G/87",
+      "sha256": "686e45ee0857ada13270951d4e97d79a789ac626a80681d4a2b60b55332cda93"
+    },
+    {
+      "legacy_id": "G[88]",
+      "canonical_id": "v6-fund-game-88",
+      "pointer": "/banks/G/88",
+      "sha256": "8d2dea818606acfe6bb51b7cc047be5feb3a07fffb01e1bfe17679b04d801e1f"
+    },
+    {
+      "legacy_id": "G[89]",
+      "canonical_id": "v6-fund-game-89",
+      "pointer": "/banks/G/89",
+      "sha256": "34b71260e7d2ab32ad7d1d9376e46d5fd66bfaba7f7e959887fbabd9bb950e14"
+    },
+    {
+      "legacy_id": "G[90]",
+      "canonical_id": "v6-fund-game-90",
+      "pointer": "/banks/G/90",
+      "sha256": "b4b65f233536579ea6f97b54cc0fecfb4f9a2558276eb6b72cc1e15fd8167a1f"
+    },
+    {
+      "legacy_id": "G[91]",
+      "canonical_id": "v6-fund-game-91",
+      "pointer": "/banks/G/91",
+      "sha256": "7235d4806ba0074871d463cfa4fd06502804d5bb80d191d5611c1d0ec08221f6"
+    },
+    {
+      "legacy_id": "G[92]",
+      "canonical_id": "v6-fund-game-92",
+      "pointer": "/banks/G/92",
+      "sha256": "c27978658db10ff7bf6f080f439707a500f098c055c7c0bb7ca47fd01b9af6af"
+    },
+    {
+      "legacy_id": "G[93]",
+      "canonical_id": "v6-fund-game-93",
+      "pointer": "/banks/G/93",
+      "sha256": "633c118f59265010afda0305f313638e1738492b71dac6c992c2af9a6a39d376"
+    },
+    {
+      "legacy_id": "G[94]",
+      "canonical_id": "v6-fund-game-94",
+      "pointer": "/banks/G/94",
+      "sha256": "874b21e6c34c678aaeabb38186b8d6bbbd5cdc708e852319960dc940a8123b9b"
+    },
+    {
+      "legacy_id": "G[95]",
+      "canonical_id": "v6-fund-game-95",
+      "pointer": "/banks/G/95",
+      "sha256": "5efe230657edea644a20d9e1ace93266422d5c41409d15a0e988893a571a0cbb"
+    },
+    {
+      "legacy_id": "G[96]",
+      "canonical_id": "v6-fund-game-96",
+      "pointer": "/banks/G/96",
+      "sha256": "8f68e5d59e3650ee52f6d22bbda3d2c7b005aa2e1c079b6e8fb18284c9a5a6a8"
+    },
+    {
+      "legacy_id": "G[97]",
+      "canonical_id": "v6-fund-game-97",
+      "pointer": "/banks/G/97",
+      "sha256": "2be610742cea155c3106b712cb14be2d01dcd9a867c7bc15b691ed25698bedda"
+    },
+    {
+      "legacy_id": "G[98]",
+      "canonical_id": "v6-fund-game-98",
+      "pointer": "/banks/G/98",
+      "sha256": "ccced398bc3fcffacfe46ddb86d5ae292f5018bf7ee84818790deb45afa5b9f0"
+    },
+    {
+      "legacy_id": "G[99]",
+      "canonical_id": "v6-fund-game-99",
+      "pointer": "/banks/G/99",
+      "sha256": "0b34a3489c35e6ca3a65178bdaff87b46de7a934f280ef21a152de453e3bed50"
+    },
+    {
+      "legacy_id": "discBox",
+      "canonical_id": "v6-fund-writing-0",
+      "pointer": "/supplements/discBox",
+      "sha256": "a5aaf5e7abf7916d4072b6747291224e45668f706b8c9327f7b35152e5839927"
+    },
+    {
+      "legacy_id": "matrixBox",
+      "canonical_id": "v6-fund-supp-matrixBox",
+      "pointer": "/supplements/matrixBox",
+      "sha256": "039e7723c98cdca273449aceb4b52dd400bb62adda5e58d6d09ecb0786eace89"
+    },
+    {
+      "legacy_id": "teacherBox",
+      "canonical_id": "v6-fund-supp-teacherBox",
+      "pointer": "/supplements/teacherBox",
+      "sha256": "71c927ce592421c3b9a2ae5927685ff486e3364b16e02a01d448a68754f0fab5"
+    },
+    {
+      "legacy_id": "title",
+      "canonical_id": "fundamentos-geografia",
+      "pointer": "/title",
+      "sha256": "3178a4fb5aca3c55601d7e6587a009be750cfe2431954f69206896f2734ced88"
+    },
+    {
+      "legacy_id": "K",
+      "canonical_id": "fundamentos-geografia",
+      "pointer": "/banks/K",
+      "sha256": "4fbae9e4be01a7bfb0a16011082042b94bf4c5232397d853b30bddb9ddf9392c"
+    },
+    {
+      "legacy_id": "OLDK",
+      "canonical_id": "fundamentos-geografia",
+      "pointer": "/banks/OLDK",
+      "sha256": "271b1499ce8870a340f689b592747e3b0d27353c55ea0d22f8e3da90f666a18a"
+    },
+    {
+      "legacy_id": "staticContent.tab-study",
+      "canonical_id": "v6-fund-context-tab-study",
+      "pointer": "/staticContent/tab-study",
+      "sha256": "4fb2d42707731561b3a9d4c1a85e6699d82092b18678df5f1ae6c77c756bfb17"
+    },
+    {
+      "legacy_id": "staticContent.fontes",
+      "canonical_id": "v6-fund-context-fontes",
+      "pointer": "/staticContent/fontes",
+      "sha256": "42ae81d51cf7c0bb029dc1894736c19bc6d66ad33f0d0aa734f35d4a6f8f3cac"
+    }
+  ],
+  "change_index": [
+    {
+      "path": "/banks/B/0/hook",
+      "reason": "Não apresentar palavra-chave como solução quase universal de questões."
+    },
+    {
+      "path": "/banks/B/1/h",
+      "reason": "Precisar a institucionalização ao longo do século XIX, sem apagar contribuições universitárias anteriores ao fim do século."
+    },
+    {
+      "path": "/banks/B/0/h",
+      "reason": "Precisão conceitual, causalidade, fonte ou limite de inferência explicitado."
+    },
+    {
+      "path": "/banks/B/0/h",
+      "reason": "Precisão conceitual, causalidade, fonte ou limite de inferência explicitado."
+    },
+    {
+      "path": "/banks/B/2/h",
+      "reason": "Precisão conceitual, causalidade, fonte ou limite de inferência explicitado."
+    },
+    {
+      "path": "/banks/B/3/h",
+      "reason": "Precisão conceitual, causalidade, fonte ou limite de inferência explicitado."
+    },
+    {
+      "path": "/banks/B/3/h",
+      "reason": "Precisão conceitual, causalidade, fonte ou limite de inferência explicitado."
+    },
+    {
+      "path": "/banks/B/4/h",
+      "reason": "Precisão conceitual, causalidade, fonte ou limite de inferência explicitado."
+    },
+    {
+      "path": "/banks/B/4/h",
+      "reason": "Precisão conceitual, causalidade, fonte ou limite de inferência explicitado."
+    },
+    {
+      "path": "/banks/B/5/h",
+      "reason": "Precisão conceitual, causalidade, fonte ou limite de inferência explicitado."
+    },
+    {
+      "path": "/banks/B/5/h",
+      "reason": "Precisão conceitual, causalidade, fonte ou limite de inferência explicitado."
+    },
+    {
+      "path": "/banks/B/7/h",
+      "reason": "Precisão conceitual, causalidade, fonte ou limite de inferência explicitado."
+    },
+    {
+      "path": "/banks/B/7/h",
+      "reason": "Precisão conceitual, causalidade, fonte ou limite de inferência explicitado."
+    },
+    {
+      "path": "/banks/B/8/h",
+      "reason": "Precisão conceitual, causalidade, fonte ou limite de inferência explicitado."
+    },
+    {
+      "path": "/banks/B/10/h",
+      "reason": "Precisão conceitual, causalidade, fonte ou limite de inferência explicitado."
+    },
+    {
+      "path": "/banks/B/10/h",
+      "reason": "Precisão conceitual, causalidade, fonte ou limite de inferência explicitado."
+    },
+    {
+      "path": "/banks/B/8/h",
+      "reason": "Ajuste gramatical após explicitar o recorte institucional da disciplina."
+    },
+    {
+      "path": "/banks/B/8/h",
+      "reason": "Distinguir adoção francesa da referência horária e permanência de outros usos do meridiano de Paris."
+    },
+    {
+      "path": "/banks/B/10/qs/0/e",
+      "reason": "Desambiguar conceito e alcance do comando, preservando a resposta correta."
+    },
+    {
+      "path": "/banks/B/4/qs/1/p",
+      "reason": "Desambiguar conceito e alcance do comando, preservando a resposta correta."
+    },
+    {
+      "path": "/banks/B/4/qs/1/e",
+      "reason": "Desambiguar conceito e alcance do comando, preservando a resposta correta."
+    },
+    {
+      "path": "/banks/B/5/qs/2/p",
+      "reason": "Desambiguar conceito e alcance do comando, preservando a resposta correta."
+    },
+    {
+      "path": "/banks/B/5/qs/2/e",
+      "reason": "Desambiguar conceito e alcance do comando, preservando a resposta correta."
+    },
+    {
+      "path": "/banks/CH/0/p",
+      "reason": "Desambiguar conceito e alcance do comando, preservando a resposta correta."
+    },
+    {
+      "path": "/banks/CH/0/e",
+      "reason": "Desambiguar conceito e alcance do comando, preservando a resposta correta."
+    },
+    {
+      "path": "/banks/CH/1/p",
+      "reason": "Desambiguar conceito e alcance do comando, preservando a resposta correta."
+    },
+    {
+      "path": "/banks/CH/1/e",
+      "reason": "Desambiguar conceito e alcance do comando, preservando a resposta correta."
+    },
+    {
+      "path": "/banks/CH/3/p",
+      "reason": "Desambiguar conceito e alcance do comando, preservando a resposta correta."
+    },
+    {
+      "path": "/banks/CH/3/e",
+      "reason": "Desambiguar conceito e alcance do comando, preservando a resposta correta."
+    },
+    {
+      "path": "/banks/CH/4/e",
+      "reason": "Desambiguar conceito e alcance do comando, preservando a resposta correta."
+    },
+    {
+      "path": "/banks/CH/4/o/4",
+      "reason": "Completar A–E sem alterar a resposta correta nem suas quatro alternativas anteriores."
+    },
+    {
+      "path": "/banks/X/pre_0/0",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/pre_0/1",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/pre_0/3",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/pre_2/0",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/b_0_0/0",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/b_2_0/1",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/b_2_1/0",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/b_2_1/1",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/b_2_1/2",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/b_3_0/1",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/b_3_1/3",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/b_4_1/0",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/b_4_1/1",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/b_4_1/2",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/b_5_1/3",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/b_5_2/0",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/b_5_2/1",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/b_5_2/2",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/b_5_2/3",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/b_7_2/0",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/b_7_2/3",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/b_9_0/2",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/b_10_0",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/b_10_1",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/b_10_2",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/c_0/0",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/c_0/1",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/c_0/2",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/c_0/3",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/c_0/4",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/c_1/0",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/c_1/1",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/c_1/2",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/c_1/3",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/c_1/4",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/c_3/1",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/X/c_4/4",
+      "reason": "Feedback específico ou correção de generalização conceitual."
+    },
+    {
+      "path": "/banks/C/0/2",
+      "reason": "Qualificar a resposta nuclear e evitar caricatura ou omissão conceitual."
+    },
+    {
+      "path": "/banks/C/9/2",
+      "reason": "Qualificar a resposta nuclear e evitar caricatura ou omissão conceitual."
+    },
+    {
+      "path": "/banks/C/12/2",
+      "reason": "Qualificar a resposta nuclear e evitar caricatura ou omissão conceitual."
+    },
+    {
+      "path": "/banks/C/17/2",
+      "reason": "Qualificar a resposta nuclear e evitar caricatura ou omissão conceitual."
+    },
+    {
+      "path": "/banks/C/21/2",
+      "reason": "Qualificar a resposta nuclear e evitar caricatura ou omissão conceitual."
+    },
+    {
+      "path": "/banks/C/23/2",
+      "reason": "Qualificar a resposta nuclear e evitar caricatura ou omissão conceitual."
+    },
+    {
+      "path": "/banks/C/25/2",
+      "reason": "Qualificar a resposta nuclear e evitar caricatura ou omissão conceitual."
+    },
+    {
+      "path": "/banks/C/32/2",
+      "reason": "Qualificar a resposta nuclear e evitar caricatura ou omissão conceitual."
+    },
+    {
+      "path": "/banks/C/33/2",
+      "reason": "Qualificar a resposta nuclear e evitar caricatura ou omissão conceitual."
+    },
+    {
+      "path": "/banks/C/34/2",
+      "reason": "Qualificar a resposta nuclear e evitar caricatura ou omissão conceitual."
+    },
+    {
+      "path": "/banks/C/25/1",
+      "reason": "Separar a pergunta composta: Said permanece neste cartão; Escobar recebe cartão próprio sem perda da informação."
+    },
+    {
+      "path": "/banks/G/0/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/2/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/3/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/5/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/6/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/7/t",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/7/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/9/t",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/9/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/12/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/13/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/15/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/17/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/18/t",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/18/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/19/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/23/t",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/23/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/24/t",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/24/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/30/t",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/30/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/33/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/34/t",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/34/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/40/t",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/40/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/41/t",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/41/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/42/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/46/t",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/46/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/49/t",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/49/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/50/t",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/50/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/51/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/52/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/55/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/57/t",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/57/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/58/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/60/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/63/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/64/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/67/t",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/67/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/69/t",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/69/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/71/t",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/71/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/72/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/76/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/85/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/88/t",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/88/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/91/t",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/91/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/93/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    },
+    {
+      "path": "/banks/G/98/x",
+      "reason": "Precisar afirmação/justificativa e evitar universalização, mantendo a polaridade válida."
+    }
+  ],
+  "pending_integration": {
+    "implemented": false,
+    "integration_gate": true,
+    "current_key": "t1i_v21",
+    "previous_key": "t1i_v2",
+    "questions": [
+      {
+        "legacy_key": "pre_0",
+        "canonical_id": "v6-fund-q-pre-0",
+        "canonical_correct": "v6-fund-q-pre-0-o1",
+        "import_as": "historical-only; no new learning evidence or XP"
+      },
+      {
+        "legacy_key": "pre_1",
+        "canonical_id": "v6-fund-q-pre-1",
+        "canonical_correct": "v6-fund-q-pre-1-o1",
+        "import_as": "historical-only; no new learning evidence or XP"
+      },
+      {
+        "legacy_key": "pre_2",
+        "canonical_id": "v6-fund-q-pre-2",
+        "canonical_correct": "v6-fund-q-pre-2-o0",
+        "import_as": "historical-only; no new learning evidence or XP"
+      },
+      {
+        "legacy_key": "b_0_0",
+        "canonical_id": "v6-fund-q-b-0-0",
+        "canonical_correct": "v6-fund-q-b-0-0-o1",
+        "import_as": "historical-only; no new learning evidence or XP"
+      },
+      {
+        "legacy_key": "b_1_0",
+        "canonical_id": "v6-fund-q-b-1-0",
+        "canonical_correct": "v6-fund-q-b-1-0-o0",
+        "import_as": "historical-only; no new learning evidence or XP"
+      },
+      {
+        "legacy_key": "b_1_1",
+        "canonical_id": "v6-fund-q-b-1-1",
+        "canonical_correct": "v6-fund-q-b-1-1-o2",
+        "import_as": "historical-only; no new learning evidence or XP"
+      },
+      {
+        "legacy_key": "b_2_0",
+        "canonical_id": "v6-fund-q-b-2-0",
+        "canonical_correct": "v6-fund-q-b-2-0-o1",
+        "import_as": "historical-only; no new learning evidence or XP"
+      },
+      {
+        "legacy_key": "b_2_1",
+        "canonical_id": "v6-fund-q-b-2-1",
+        "canonical_correct": "v6-fund-q-b-2-1-o2",
+        "import_as": "historical-only; no new learning evidence or XP"
+      },
+      {
+        "legacy_key": "b_3_0",
+        "canonical_id": "v6-fund-q-b-3-0",
+        "canonical_correct": "v6-fund-q-b-3-0-o1",
+        "import_as": "historical-only; no new learning evidence or XP"
+      },
+      {
+        "legacy_key": "b_3_1",
+        "canonical_id": "v6-fund-q-b-3-1",
+        "canonical_correct": "v6-fund-q-b-3-1-o1",
+        "import_as": "historical-only; no new learning evidence or XP"
+      },
+      {
+        "legacy_key": "b_4_0",
+        "canonical_id": "v6-fund-q-b-4-0",
+        "canonical_correct": "v6-fund-q-b-4-0-o1",
+        "import_as": "historical-only; no new learning evidence or XP"
+      },
+      {
+        "legacy_key": "b_4_1",
+        "canonical_id": "v6-fund-q-b-4-1",
+        "canonical_correct": "v6-fund-q-b-4-1-o1",
+        "import_as": "historical-only; no new learning evidence or XP"
+      },
+      {
+        "legacy_key": "b_5_0",
+        "canonical_id": "v6-fund-q-b-5-0",
+        "canonical_correct": "v6-fund-q-b-5-0-o1",
+        "import_as": "historical-only; no new learning evidence or XP"
+      },
+      {
+        "legacy_key": "b_5_1",
+        "canonical_id": "v6-fund-q-b-5-1",
+        "canonical_correct": "v6-fund-q-b-5-1-o2",
+        "import_as": "historical-only; no new learning evidence or XP"
+      },
+      {
+        "legacy_key": "b_5_2",
+        "canonical_id": "v6-fund-q-b-5-2",
+        "canonical_correct": "v6-fund-q-b-5-2-o1",
+        "import_as": "historical-only; no new learning evidence or XP"
+      },
+      {
+        "legacy_key": "b_6_0",
+        "canonical_id": "v6-fund-q-b-6-0",
+        "canonical_correct": "v6-fund-q-b-6-0-o1",
+        "import_as": "historical-only; no new learning evidence or XP"
+      },
+      {
+        "legacy_key": "b_6_1",
+        "canonical_id": "v6-fund-q-b-6-1",
+        "canonical_correct": "v6-fund-q-b-6-1-o0",
+        "import_as": "historical-only; no new learning evidence or XP"
+      },
+      {
+        "legacy_key": "b_6_2",
+        "canonical_id": "v6-fund-q-b-6-2",
+        "canonical_correct": "v6-fund-q-b-6-2-o1",
+        "import_as": "historical-only; no new learning evidence or XP"
+      },
+      {
+        "legacy_key": "b_7_0",
+        "canonical_id": "v6-fund-q-b-7-0",
+        "canonical_correct": "v6-fund-q-b-7-0-o1",
+        "import_as": "historical-only; no new learning evidence or XP"
+      },
+      {
+        "legacy_key": "b_7_1",
+        "canonical_id": "v6-fund-q-b-7-1",
+        "canonical_correct": "v6-fund-q-b-7-1-o1",
+        "import_as": "historical-only; no new learning evidence or XP"
+      },
+      {
+        "legacy_key": "b_7_2",
+        "canonical_id": "v6-fund-q-b-7-2",
+        "canonical_correct": "v6-fund-q-b-7-2-o0",
+        "import_as": "historical-only; no new learning evidence or XP"
+      },
+      {
+        "legacy_key": "b_8_0",
+        "canonical_id": "v6-fund-q-b-8-0",
+        "canonical_correct": "v6-fund-q-b-8-0-o0",
+        "import_as": "historical-only; no new learning evidence or XP"
+      },
+      {
+        "legacy_key": "b_8_1",
+        "canonical_id": "v6-fund-q-b-8-1",
+        "canonical_correct": "v6-fund-q-b-8-1-o1",
+        "import_as": "historical-only; no new learning evidence or XP"
+      },
+      {
+        "legacy_key": "b_9_0",
+        "canonical_id": "v6-fund-q-b-9-0",
+        "canonical_correct": "v6-fund-q-b-9-0-o0",
+        "import_as": "historical-only; no new learning evidence or XP"
+      },
+      {
+        "legacy_key": "b_10_0",
+        "canonical_id": "v6-fund-q-b-10-0",
+        "canonical_correct": "v6-fund-q-b-10-0-o0",
+        "import_as": "historical-only; no new learning evidence or XP"
+      },
+      {
+        "legacy_key": "b_10_1",
+        "canonical_id": "v6-fund-q-b-10-1",
+        "canonical_correct": "v6-fund-q-b-10-1-o1",
+        "import_as": "historical-only; no new learning evidence or XP"
+      },
+      {
+        "legacy_key": "b_10_2",
+        "canonical_id": "v6-fund-q-b-10-2",
+        "canonical_correct": "v6-fund-q-b-10-2-o0",
+        "import_as": "historical-only; no new learning evidence or XP"
+      },
+      {
+        "legacy_key": "c_0",
+        "canonical_id": "v6-fund-q-c-0",
+        "canonical_correct": "v6-fund-q-c-0-o0",
+        "import_as": "historical-only; no new learning evidence or XP"
+      },
+      {
+        "legacy_key": "c_1",
+        "canonical_id": "v6-fund-q-c-1",
+        "canonical_correct": "v6-fund-q-c-1-o2",
+        "import_as": "historical-only; no new learning evidence or XP"
+      },
+      {
+        "legacy_key": "c_2",
+        "canonical_id": "v6-fund-q-c-2",
+        "canonical_correct": "v6-fund-q-c-2-o2",
+        "import_as": "historical-only; no new learning evidence or XP"
+      },
+      {
+        "legacy_key": "c_3",
+        "canonical_id": "v6-fund-q-c-3",
+        "canonical_correct": "v6-fund-q-c-3-o1",
+        "import_as": "historical-only; no new learning evidence or XP"
+      },
+      {
+        "legacy_key": "c_4",
+        "canonical_id": "v6-fund-q-c-4",
+        "canonical_correct": "v6-fund-q-c-4-o1",
+        "import_as": "historical-only; no new learning evidence or XP"
+      }
+    ],
+    "cards": [
+      {
+        "legacy_index": 0,
+        "canonical_id": "v6-fund-card-0",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 1,
+        "canonical_id": "v6-fund-card-1",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 2,
+        "canonical_id": "v6-fund-card-2",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 3,
+        "canonical_id": "v6-fund-card-3",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 4,
+        "canonical_id": "v6-fund-card-4",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 5,
+        "canonical_id": "v6-fund-card-5",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 6,
+        "canonical_id": "v6-fund-card-6",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 7,
+        "canonical_id": "v6-fund-card-7",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 8,
+        "canonical_id": "v6-fund-card-8",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 9,
+        "canonical_id": "v6-fund-card-9",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 10,
+        "canonical_id": "v6-fund-card-10",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 11,
+        "canonical_id": "v6-fund-card-11",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 12,
+        "canonical_id": "v6-fund-card-12",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 13,
+        "canonical_id": "v6-fund-card-13",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 14,
+        "canonical_id": "v6-fund-card-14",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 15,
+        "canonical_id": "v6-fund-card-15",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 16,
+        "canonical_id": "v6-fund-card-16",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 17,
+        "canonical_id": "v6-fund-card-17",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 18,
+        "canonical_id": "v6-fund-card-18",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 19,
+        "canonical_id": "v6-fund-card-19",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 20,
+        "canonical_id": "v6-fund-card-20",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 21,
+        "canonical_id": "v6-fund-card-21",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 22,
+        "canonical_id": "v6-fund-card-22",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 23,
+        "canonical_id": "v6-fund-card-23",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 24,
+        "canonical_id": "v6-fund-card-24",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 25,
+        "canonical_id": "v6-fund-card-25",
+        "import_as": "preserve-only; compound card split, no inferred retention"
+      },
+      {
+        "legacy_index": 26,
+        "canonical_id": "v6-fund-card-26",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 27,
+        "canonical_id": "v6-fund-card-27",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 28,
+        "canonical_id": "v6-fund-card-28",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 29,
+        "canonical_id": "v6-fund-card-29",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 30,
+        "canonical_id": "v6-fund-card-30",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 31,
+        "canonical_id": "v6-fund-card-31",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 32,
+        "canonical_id": "v6-fund-card-32",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 33,
+        "canonical_id": "v6-fund-card-33",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 34,
+        "canonical_id": "v6-fund-card-34",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 35,
+        "canonical_id": "v6-fund-card-35",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 36,
+        "canonical_id": "v6-fund-card-36",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 37,
+        "canonical_id": "v6-fund-card-37",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 38,
+        "canonical_id": "v6-fund-card-38",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 39,
+        "canonical_id": "v6-fund-card-39",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 40,
+        "canonical_id": "v6-fund-card-40",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 41,
+        "canonical_id": "v6-fund-card-41",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 42,
+        "canonical_id": "v6-fund-card-42",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      },
+      {
+        "legacy_index": 43,
+        "canonical_id": "v6-fund-card-43",
+        "import_as": "preserve binary rating as history, no inferred interval"
+      }
+    ],
+    "game": [
+      {
+        "legacy_index": 0,
+        "canonical_id": "v6-fund-game-0",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 1,
+        "canonical_id": "v6-fund-game-1",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 2,
+        "canonical_id": "v6-fund-game-2",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 3,
+        "canonical_id": "v6-fund-game-3",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 4,
+        "canonical_id": "v6-fund-game-4",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 5,
+        "canonical_id": "v6-fund-game-5",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 6,
+        "canonical_id": "v6-fund-game-6",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 7,
+        "canonical_id": "v6-fund-game-7",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 8,
+        "canonical_id": "v6-fund-game-8",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 9,
+        "canonical_id": "v6-fund-game-9",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 10,
+        "canonical_id": "v6-fund-game-10",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 11,
+        "canonical_id": "v6-fund-game-11",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 12,
+        "canonical_id": "v6-fund-game-12",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 13,
+        "canonical_id": "v6-fund-game-13",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 14,
+        "canonical_id": "v6-fund-game-14",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 15,
+        "canonical_id": "v6-fund-game-15",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 16,
+        "canonical_id": "v6-fund-game-16",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 17,
+        "canonical_id": "v6-fund-game-17",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 18,
+        "canonical_id": "v6-fund-game-18",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 19,
+        "canonical_id": "v6-fund-game-19",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 20,
+        "canonical_id": "v6-fund-game-20",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 21,
+        "canonical_id": "v6-fund-game-21",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 22,
+        "canonical_id": "v6-fund-game-22",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 23,
+        "canonical_id": "v6-fund-game-23",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 24,
+        "canonical_id": "v6-fund-game-24",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 25,
+        "canonical_id": "v6-fund-game-25",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 26,
+        "canonical_id": "v6-fund-game-26",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 27,
+        "canonical_id": "v6-fund-game-27",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 28,
+        "canonical_id": "v6-fund-game-28",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 29,
+        "canonical_id": "v6-fund-game-29",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 30,
+        "canonical_id": "v6-fund-game-30",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 31,
+        "canonical_id": "v6-fund-game-31",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 32,
+        "canonical_id": "v6-fund-game-32",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 33,
+        "canonical_id": "v6-fund-game-33",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 34,
+        "canonical_id": "v6-fund-game-34",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 35,
+        "canonical_id": "v6-fund-game-35",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 36,
+        "canonical_id": "v6-fund-game-36",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 37,
+        "canonical_id": "v6-fund-game-37",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 38,
+        "canonical_id": "v6-fund-game-38",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 39,
+        "canonical_id": "v6-fund-game-39",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 40,
+        "canonical_id": "v6-fund-game-40",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 41,
+        "canonical_id": "v6-fund-game-41",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 42,
+        "canonical_id": "v6-fund-game-42",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 43,
+        "canonical_id": "v6-fund-game-43",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 44,
+        "canonical_id": "v6-fund-game-44",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 45,
+        "canonical_id": "v6-fund-game-45",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 46,
+        "canonical_id": "v6-fund-game-46",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 47,
+        "canonical_id": "v6-fund-game-47",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 48,
+        "canonical_id": "v6-fund-game-48",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 49,
+        "canonical_id": "v6-fund-game-49",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 50,
+        "canonical_id": "v6-fund-game-50",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 51,
+        "canonical_id": "v6-fund-game-51",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 52,
+        "canonical_id": "v6-fund-game-52",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 53,
+        "canonical_id": "v6-fund-game-53",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 54,
+        "canonical_id": "v6-fund-game-54",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 55,
+        "canonical_id": "v6-fund-game-55",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 56,
+        "canonical_id": "v6-fund-game-56",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 57,
+        "canonical_id": "v6-fund-game-57",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 58,
+        "canonical_id": "v6-fund-game-58",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 59,
+        "canonical_id": "v6-fund-game-59",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 60,
+        "canonical_id": "v6-fund-game-60",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 61,
+        "canonical_id": "v6-fund-game-61",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 62,
+        "canonical_id": "v6-fund-game-62",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 63,
+        "canonical_id": "v6-fund-game-63",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 64,
+        "canonical_id": "v6-fund-game-64",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 65,
+        "canonical_id": "v6-fund-game-65",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 66,
+        "canonical_id": "v6-fund-game-66",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 67,
+        "canonical_id": "v6-fund-game-67",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 68,
+        "canonical_id": "v6-fund-game-68",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 69,
+        "canonical_id": "v6-fund-game-69",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 70,
+        "canonical_id": "v6-fund-game-70",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 71,
+        "canonical_id": "v6-fund-game-71",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 72,
+        "canonical_id": "v6-fund-game-72",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 73,
+        "canonical_id": "v6-fund-game-73",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 74,
+        "canonical_id": "v6-fund-game-74",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 75,
+        "canonical_id": "v6-fund-game-75",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 76,
+        "canonical_id": "v6-fund-game-76",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 77,
+        "canonical_id": "v6-fund-game-77",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 78,
+        "canonical_id": "v6-fund-game-78",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 79,
+        "canonical_id": "v6-fund-game-79",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 80,
+        "canonical_id": "v6-fund-game-80",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 81,
+        "canonical_id": "v6-fund-game-81",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 82,
+        "canonical_id": "v6-fund-game-82",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 83,
+        "canonical_id": "v6-fund-game-83",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 84,
+        "canonical_id": "v6-fund-game-84",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 85,
+        "canonical_id": "v6-fund-game-85",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 86,
+        "canonical_id": "v6-fund-game-86",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 87,
+        "canonical_id": "v6-fund-game-87",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 88,
+        "canonical_id": "v6-fund-game-88",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 89,
+        "canonical_id": "v6-fund-game-89",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 90,
+        "canonical_id": "v6-fund-game-90",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 91,
+        "canonical_id": "v6-fund-game-91",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 92,
+        "canonical_id": "v6-fund-game-92",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 93,
+        "canonical_id": "v6-fund-game-93",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 94,
+        "canonical_id": "v6-fund-game-94",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 95,
+        "canonical_id": "v6-fund-game-95",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 96,
+        "canonical_id": "v6-fund-game-96",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 97,
+        "canonical_id": "v6-fund-game-97",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 98,
+        "canonical_id": "v6-fund-game-98",
+        "import_as": "historical score/error; no new mastery evidence"
+      },
+      {
+        "legacy_index": 99,
+        "canonical_id": "v6-fund-game-99",
+        "import_as": "historical score/error; no new mastery evidence"
+      }
+    ],
+    "note": "Contrato editorial de integração. Este lote não altera o aplicativo ou o localStorage do estudante."
+  }
+}

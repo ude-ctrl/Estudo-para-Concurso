@@ -1,0 +1,2561 @@
+{
+  "schema_version": 1,
+  "unit_id": "fundamentos-geografia",
+  "editorial_version": "1.0.0",
+  "status": "APROVADA_CANONICA",
+  "reviewed_at": "2026-10-16",
+  "reviewer_kind": "delegated-ai",
+  "human_approval": null,
+  "scope": {
+    "all_resources_read": true,
+    "other_units_audited": 0,
+    "legacy_html_modified": false,
+    "full_platform_sufficiency_assessed": false
+  },
+  "counts": {
+    "missions": 11,
+    "sections": 22,
+    "recalls": 11,
+    "concepts": 27,
+    "questions": 48,
+    "authored_questions": 48,
+    "cards": 45,
+    "game": 100,
+    "writing": 2,
+    "supplements": 2,
+    "parity_records": 228
+  },
+  "confidence": {
+    "structural": "alta, com snapshot, vínculos e versão",
+    "conceptual": "moderada-alta no escopo explicitado, após correções e confrontação com fontes selecionadas",
+    "difficulty": "juízo editorial; sem calibração psicométrica",
+    "human_external_review": "não realizada; revisão delegada ao Codex"
+  },
+  "premium_criteria": [
+    {
+      "id": "correcao_conceitual",
+      "decision": "approved",
+      "assessment": "satisfactory-in-stated-scope",
+      "reviewer": "Codex",
+      "reviewer_kind": "ai",
+      "evidence": "Leitura integral dos bancos históricos e dos recursos novos; correções de Corrêa, não-lugar, historiografia, rede/território-rede, causalidade, escalas e generalizações V/F com antes/depois. Os 32 gabaritos históricos permanecem com o mesmo índice e texto corretos."
+    },
+    {
+      "id": "cobertura",
+      "decision": "approved",
+      "assessment": "satisfactory-in-stated-scope",
+      "reviewer": "Codex",
+      "reviewer_kind": "ai",
+      "evidence": "Matriz semântica do núcleo Fundamentos do edital consolidado, página 101. As 11 missões contemplam categorias, pensamento clássico/contemporâneo, produção, natureza/sociedade, escalas, perspectivas críticas/decoloniais/interculturais e leitura socioespacial. Não certifica as outras 24 unidades."
+    },
+    {
+      "id": "profundidade",
+      "decision": "approved",
+      "assessment": "satisfactory-in-stated-scope",
+      "reviewer": "Codex",
+      "reviewer_kind": "ai",
+      "evidence": "Blocos originais válidos preservados e 11 aprofundamentos novos: mecanismos, limites, contraexemplos e aplicações. Densidade não foi reduzida para caber em componentes."
+    },
+    {
+      "id": "clareza",
+      "decision": "approved",
+      "assessment": "satisfactory-in-stated-scope",
+      "reviewer": "Codex",
+      "reviewer_kind": "ai",
+      "evidence": "Definição, relação e exemplo distinguem-se; a leitura de evidências separa observação, hipótese e conclusão. Relações de lugar e territorialidade são contextualizadas."
+    },
+    {
+      "id": "exemplos",
+      "decision": "approved",
+      "assessment": "satisfactory-in-stated-scope",
+      "reviewer": "Codex",
+      "reviewer_kind": "ai",
+      "evidence": "Carajás tem fonte e referência histórica explícitas. Casos e tabela novos são identificados como hipotéticos. Povos e comunidades não são homogeneizados."
+    },
+    {
+      "id": "redundancia",
+      "decision": "approved",
+      "assessment": "satisfactory-in-stated-scope",
+      "reviewer": "Codex",
+      "reviewer_kind": "ai",
+      "evidence": "32 itens antigos preservados como Fixação; cinco famílias explicitam pares próximos sem novidade independente. Diagnóstico repetido não cria estoque novo. Conceitos retomados em outras missões são aplicação, não nova unidade concorrente."
+    },
+    {
+      "id": "terminologia",
+      "decision": "approved",
+      "assessment": "satisfactory-in-stated-scope",
+      "reviewer": "Codex",
+      "reviewer_kind": "ai",
+      "evidence": "Rede não é sinônimo automático de território-rede; forma não implica função; lugar não exige apenas afeto positivo; rótulos escolares não substituem historiografia. Natureza e ação social não são mutuamente excludentes."
+    },
+    {
+      "id": "lacunas",
+      "decision": "approved",
+      "assessment": "satisfactory-in-stated-scope",
+      "reviewer": "Codex",
+      "reviewer_kind": "ai",
+      "evidence": "Déficits de aplicação e integração tratados com 12 itens Concurso e quatro Elite A–E, além de novos recalls e aprofundamentos. Não há estoque de questões oficiais identificadas nem calibração empírica; esses limites permanecem explícitos."
+    },
+    {
+      "id": "temporalidade",
+      "decision": "approved",
+      "assessment": "satisfactory-in-stated-scope",
+      "reviewer": "Codex",
+      "reviewer_kind": "ai",
+      "evidence": "Perfil de concurso, LDB e BNCC possuem fonte, data e gatilho de revisão. Dados operacionais são históricos, não atuais. Eventos e obras recebem datas históricas; não se troca seu ano pelo ano da consulta."
+    },
+    {
+      "id": "nivel",
+      "decision": "approved",
+      "assessment": "satisfactory-in-stated-scope",
+      "reviewer": "Codex",
+      "reviewer_kind": "ai",
+      "evidence": "32 Fixação, 12 Concurso e quatro Elite; níveis editoriais D1–D3 e C1–C5. Seis itens de aplicação/integração constituem o Chefão canônico. O antigo rótulo Chefão não foi confundido com dificuldade avançada."
+    },
+    {
+      "id": "fontes",
+      "decision": "approved",
+      "assessment": "satisfactory-in-stated-scope",
+      "reviewer": "Codex",
+      "reviewer_kind": "ai",
+      "evidence": "Edital, legislação e BNCC consultados em fontes oficiais. Correções conceituais apoiadas por fontes acadêmicas/institucionais com alcance declarado. Excertos indexados, resumos e referências bibliográficas não são descritos como leitura integral de obras."
+    },
+    {
+      "id": "treino",
+      "decision": "approved",
+      "assessment": "satisfactory-in-stated-scope",
+      "reviewer": "Codex",
+      "reviewer_kind": "ai",
+      "evidence": "Todas as 48 questões possuem feedback por alternativa; 100 V/F têm justificativa; cartões incluem resposta, relação e exemplo. Discursivas mantêm comandos, modelos e rubricas didáticas. A revisão espaçada e o migrador serão requisitos da integração, não funcionalidades alegadas da base de dados."
+    }
+  ],
+  "authored_questions": [
+    {
+      "id": "v6-fund-q-pre-0",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "correct_option_id": "v6-fund-q-pre-0-o1",
+      "correct_option_text": "Ratzel",
+      "resource_sha256": "e2e694d519269bc0312f156310d0919c694a287b3db6103675e47ad6785da42f",
+      "source_ids": ["campos-2014"],
+      "content_evidence": ["v6-fund-theory-2", "v6-fund-depth-2"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. A associação entre Estado, território e espaço vital é de Ratzel. O rótulo didático de determinismo não resume toda a sua obra nem autoriza explicar diferenças sociais apenas pelo clima."
+      }
+    },
+    {
+      "id": "v6-fund-q-pre-1",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "correct_option_id": "v6-fund-q-pre-1-o1",
+      "correct_option_text": "Sistemas de objetos e de ações, indissociáveis",
+      "resource_sha256": "67ee1809cf0b5920c19187d2524c8ed32281f0a81b3e40bf18d8646fe1749ca5",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-3", "v6-fund-depth-3"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. A Natureza do Espaço (1996): conjunto indissociável, solidário e contraditório de sistemas de objetos e de ações. Quando a questão separa objetos de ações, desconfie."
+      }
+    },
+    {
+      "id": "v6-fund-q-pre-2",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "correct_option_id": "v6-fund-q-pre-2-o0",
+      "correct_option_text": "Haesbaert",
+      "resource_sha256": "f859745908f89b7482529c46c00f005ccfc97ae6a9032b7fe7d62af62db9fddb",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-5", "v6-fund-depth-5"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. Haesbaert discute território-zona, território-rede e multiterritorialidade. A organização em rede exige examinar apropriação, controle e poder nos pontos conectados, não apenas a presença de ligações técnicas."
+      }
+    },
+    {
+      "id": "v6-fund-q-b-0-0",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "correct_option_id": "v6-fund-q-b-0-0-o1",
+      "correct_option_text": "Vidal de La Blache",
+      "resource_sha256": "fbcb5078042730429562ada7b12b56f9c7384124d5315de7dc9d8db48c76acc5",
+      "source_ids": ["campos-2014"],
+      "content_evidence": ["v6-fund-theory-2", "v6-fund-depth-2"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. Vidal: gêneros de vida são o conjunto de técnicas, hábitos e organização social que um grupo desenvolve num meio. É a base do possibilismo e da Geografia regional (Princípios de Geografia Humana, 1922)."
+      }
+    },
+    {
+      "id": "v6-fund-q-b-1-0",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "correct_option_id": "v6-fund-q-b-1-0-o0",
+      "correct_option_text": "Richard Hartshorne",
+      "resource_sha256": "2c2de5cc7da29fee2b174ebd7c6e4790d07a668edd69aadbfdb50e07157e860e",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-1", "v6-fund-depth-1"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. Hartshorne, em The Nature of Geography (1939), sistematiza a ideia de diferenciação de áreas, em diálogo com a corologia de Hettner."
+      }
+    },
+    {
+      "id": "v6-fund-q-b-1-1",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "correct_option_id": "v6-fund-q-b-1-1-o2",
+      "correct_option_text": "Hettner — tradição corológica",
+      "resource_sha256": "66e0b47d697acff04ba2ee93616277eef8736ad8066ac951c51dfd991d4c262c",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-1", "v6-fund-depth-1"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. Hettner é referência da tradição corológica: compreender a diferenciação espacial por áreas e combinações de fenômenos."
+      }
+    },
+    {
+      "id": "v6-fund-q-b-2-0",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 2,
+      "correct_option_id": "v6-fund-q-b-2-0-o1",
+      "correct_option_text": "Determinismo",
+      "resource_sha256": "3d9bb917a0bc0a1f2129bcb58e3446489acfb720f5ff1e56943da1fe2efe1639",
+      "source_ids": ["campos-2014"],
+      "content_evidence": ["v6-fund-theory-2", "v6-fund-depth-2"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. A frase é exemplo de determinismo ambiental por atribuir diretamente uma condição social ao clima. Essa interpretação não descreve integralmente Ratzel; correntes e autores precisam ser situados historicamente."
+      }
+    },
+    {
+      "id": "v6-fund-q-b-2-1",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "correct_option_id": "v6-fund-q-b-2-1-o2",
+      "correct_option_text": "A Geografia serve, em primeiro lugar, para fazer a guerra.",
+      "resource_sha256": "7ada1433d0bb4ae82baafec30d6b39e0c5e6bb1f6b6cbdc08101597226878dd7",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-2", "v6-fund-depth-2"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. Em 1976, Lacoste questiona a separação entre um saber geográfico estratégico e um ensino apresentado como descritivo e despolitizado. A crítica não define toda prática docente como necessariamente alheia ao poder."
+      }
+    },
+    {
+      "id": "v6-fund-q-b-3-0",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 2,
+      "correct_option_id": "v6-fund-q-b-3-0-o1",
+      "correct_option_text": "Rugosidade",
+      "resource_sha256": "72fb19ec0a6385f92d681d66f71b3a9a8ccae398581c5ae101a7098e6b3ef178",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-3", "v6-fund-depth-3"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. Rugosidade: forma herdada que participa do espaço presente. O novo uso cultural ilustra mudança de função com permanência material, sem exigir que toda forma antiga tenha sido reutilizada."
+      }
+    },
+    {
+      "id": "v6-fund-q-b-3-1",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 2,
+      "correct_option_id": "v6-fund-q-b-3-1-o1",
+      "correct_option_text": "Um fluxo",
+      "resource_sha256": "9d64339bd3b2ebc921f85cbc4ba2b2fdfea08ffe2f95adbe6be90b495f6b9393",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-3", "v6-fund-depth-3"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. Fluxo material (Santos; Contel): o que circula. Fixos permitem fluxos, e fluxos recriam o significado dos fixos."
+      }
+    },
+    {
+      "id": "v6-fund-q-b-4-0",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 2,
+      "correct_option_id": "v6-fund-q-b-4-0-o1",
+      "correct_option_text": "Paisagem como camadas de tempo",
+      "resource_sha256": "ff026cb8ecebca5187678c84aca04890ed652df963a0631578b5800200aa7176",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-4", "v6-fund-depth-4"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. A paisagem é palimpsesto: formas novas sobre antigas (rugosidades). Comparar fotos de épocas diferentes trabalha temporalidade."
+      }
+    },
+    {
+      "id": "v6-fund-q-b-4-1",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 2,
+      "correct_option_id": "v6-fund-q-b-4-1-o1",
+      "correct_option_text": "Não-lugar (Augé)",
+      "resource_sha256": "f1238012aa52f6d7cf98edc864b39a21f39c2360b6b582a1af22c23023823a11",
+      "source_ids": ["auge-1994"],
+      "content_evidence": ["v6-fund-theory-4", "v6-fund-depth-4"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. Não-lugar, em Augé, é a leitura adequada da experiência de trânsito impessoal descrita. Ela não impede que trabalhadores ou outros usuários construam relações de lugar na mesma instalação."
+      }
+    },
+    {
+      "id": "v6-fund-q-b-5-0",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "correct_option_id": "v6-fund-q-b-5-0-o1",
+      "correct_option_text": "Pedro Geiger",
+      "resource_sha256": "182eb4ac5e074b1f5242b9a1c21c71eb8ca60439fa402f17f05eee78971e285e",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-5", "v6-fund-depth-5"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. Pedro Geiger propôs em 1967 a divisão geoeconômica (complexos Amazônia, Nordeste e Centro-Sul)."
+      }
+    },
+    {
+      "id": "v6-fund-q-b-5-1",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 2,
+      "correct_option_id": "v6-fund-q-b-5-1-o2",
+      "correct_option_text": "Território",
+      "resource_sha256": "0959627db4fceef18c47eeb91eeeefeaf43cd7cff7f0c920621673120d268fe9",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-5", "v6-fund-depth-5"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. Controle, dono, fronteira e poder são marcas de território. Em Raffestin, território envolve a projeção de relações de poder sobre o espaço."
+      }
+    },
+    {
+      "id": "v6-fund-q-b-5-2",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 2,
+      "correct_option_id": "v6-fund-q-b-5-2-o1",
+      "correct_option_text": "Redes de transporte e comunicação",
+      "resource_sha256": "7ce02083084a078af4450b555d9a73a47de50deb27b62c91d2515560bdc8665a",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-5", "v6-fund-depth-5"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. Transportes e comunicação podem sustentar a rede. A apropriação e o controle explicitados no comando permitem discutir território-rede; infraestrutura conectada sozinha não basta."
+      }
+    },
+    {
+      "id": "v6-fund-q-b-6-0",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 2,
+      "correct_option_id": "v6-fund-q-b-6-0-o1",
+      "correct_option_text": "Fluxos",
+      "resource_sha256": "3ba476789997ad6e9ca1cdce34870157c132b9872cd99fea459ed6579f8f3b2c",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-3", "v6-fund-depth-3"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. Fluxos são aquilo que circula entre os nós: mercadorias, pessoas, capital, energia ou informação."
+      }
+    },
+    {
+      "id": "v6-fund-q-b-6-1",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 2,
+      "correct_option_id": "v6-fund-q-b-6-1-o0",
+      "correct_option_text": "Um conjunto de centros urbanos funcionalmente articulados",
+      "resource_sha256": "87459227ecce7252e65d60e0fa91849fe4f268385cad9f17b1230cb0bde6ccbc",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-6", "v6-fund-depth-6"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. Corrêa analisa a rede urbana como centros funcionalmente articulados por fluxos e funções; não se reduz à infraestrutura física."
+      }
+    },
+    {
+      "id": "v6-fund-q-b-6-2",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 2,
+      "correct_option_id": "v6-fund-q-b-6-2-o1",
+      "correct_option_text": "Rede é conexão; território-rede envolve territorialização, controle e apropriação através de pontos conectados",
+      "resource_sha256": "bbbdc81b6eb2dc6d45116a5742c71b9ff8627022808bb38f6b2cf6eb3a972888",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-5", "v6-fund-depth-5"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. Correto: rede destaca nós, conexões e fluxos; território-rede destaca apropriação e controle territorial por meio de pontos conectados."
+      }
+    },
+    {
+      "id": "v6-fund-q-b-7-0",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "correct_option_id": "v6-fund-q-b-7-0-o1",
+      "correct_option_text": "Harvey",
+      "resource_sha256": "f278545985a68455f7cc0045a6777fabbc2883c6a0675e2d82c7bfde23b99c04",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-7", "v6-fund-depth-7"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. Harvey (A Condição Pós-Moderna, 1989): aceleração dos ritmos e encurtamento das distâncias, ligada à acumulação flexível. Massey acrescenta a geometria de poder."
+      }
+    },
+    {
+      "id": "v6-fund-q-b-7-1",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 2,
+      "correct_option_id": "v6-fund-q-b-7-1-o1",
+      "correct_option_text": "Escala geográfica",
+      "resource_sha256": "5f2f766b1d7f2fc24bd7fd8aa44d11405e30f791f073ed7259064f31a7484ae0",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-7", "v6-fund-depth-7"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. Escala geográfica = nível de análise (rua, município, bacia, clima global). Mudar de escala muda o que se enxerga (Castro; Callai)."
+      }
+    },
+    {
+      "id": "v6-fund-q-b-7-2",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "correct_option_id": "v6-fund-q-b-7-2-o0",
+      "correct_option_text": "Lefebvre",
+      "resource_sha256": "f01ea65f5d8bcb71e3f5ec92b8468f0b369f5c03c26928e76231973b7b9c5bb5",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-7", "v6-fund-depth-7"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. Em Lefebvre, a tríade articula práticas espaciais, representações do espaço e espaços de representação. Percebido, concebido e vivido são dimensões relacionadas, não territórios exclusivos de usuários ou planejadores."
+      }
+    },
+    {
+      "id": "v6-fund-q-b-8-0",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 2,
+      "correct_option_id": "v6-fund-q-b-8-0-o0",
+      "correct_option_text": "Quijano",
+      "resource_sha256": "bd6b5eccc15bb2a9fde01fa6d0ca890dc0df8197bc03b9e97bdfc27442180fb5",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-8", "v6-fund-depth-8"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. Colonialidade do poder (Quijano): a hierarquia que classifica povos e saberes persiste após o fim das colônias (europeu = moderno; demais = atrasados)."
+      }
+    },
+    {
+      "id": "v6-fund-q-b-8-1",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 2,
+      "correct_option_id": "v6-fund-q-b-8-1-o1",
+      "correct_option_text": "Reconhecer saberes diferentes em relação de igualdade",
+      "resource_sha256": "99184e2fb664986440a1ff86691560f17e986ec01a40fb82a5cb5a5354fd2699",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-8", "v6-fund-depth-8"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. Interculturalidade crítica: diálogo entre saberes em relação de igualdade, sem folclorizar nem hierarquizar. Apoia-se nas Leis 10.639/2003 e 11.645/2008."
+      }
+    },
+    {
+      "id": "v6-fund-q-b-9-0",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 2,
+      "correct_option_id": "v6-fund-q-b-9-0-o0",
+      "correct_option_text": "Fuso horário, zonas climáticas, localização e relevo",
+      "resource_sha256": "cae8f9fa7af620e4e91ef767a3cdf6969dd2bbf44842b542b0217ea3c5a66652",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-9", "v6-fund-depth-9"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. ‘Ver neve’ abre fuso horário (viagem), zonas climáticas, localização dos países e formas de relevo (altitude)."
+      }
+    },
+    {
+      "id": "v6-fund-q-b-10-0",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "correct_option_id": "v6-fund-q-b-10-0-o0",
+      "correct_option_text": "Forma, função, estrutura e processo",
+      "resource_sha256": "3e6413d856b05cd34519fb54191636f77cb695fa5a292954def15dd1fd27c060",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-10", "v6-fund-depth-10"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. Forma, função, estrutura e processo são quatro categorias articuladas em Espaço e Método. Relacionam configuração, atividade, organização social e transformação; não são quatro pares independentes."
+      }
+    },
+    {
+      "id": "v6-fund-q-b-10-1",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 2,
+      "correct_option_id": "v6-fund-q-b-10-1-o1",
+      "correct_option_text": "Ajuste espacial (spatial fix)",
+      "resource_sha256": "6a5b4ce77ba14d256f1b68f2f90c6b1e277817d9bb1e903be28ec1fdf6ed189b",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-10", "v6-fund-depth-10"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. Ajuste espacial: investimento e expansão geográfica buscam absorver excedentes e deslocar contradições da acumulação, sem garantir solução definitiva das crises."
+      }
+    },
+    {
+      "id": "v6-fund-q-b-10-2",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "correct_option_id": "v6-fund-q-b-10-2-o0",
+      "correct_option_text": "Agentes produtores do espaço urbano",
+      "resource_sha256": "049a963a116089bbe79ff11debe2f578210975e42ac09ba8f6eb5b452902c4a5",
+      "source_ids": ["correa-usp"],
+      "content_evidence": ["v6-fund-theory-10", "v6-fund-depth-10"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. São agentes produtores do espaço urbano. A classificação clássica também inclui proprietários dos meios de produção; os grupos citados no comando não constituem a lista completa."
+      }
+    },
+    {
+      "id": "v6-fund-q-c-0",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "correct_option_id": "v6-fund-q-c-0-o0",
+      "correct_option_text": "II, I, III",
+      "resource_sha256": "8ee0ec42c802b5e597909ffcda5f8ebde4ed7af7873cc51ccb36bbf6f2be01a6",
+      "source_ids": ["campos-2014"],
+      "content_evidence": ["v6-fund-theory-2", "v6-fund-depth-2"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. Vidal: possibilidades e gêneros de vida; Ratzel: Estado e espaço vital; Lacoste: saber geográfico estratégico. A sequência é II, I, III. A síntese didática não esgota a história das obras."
+      }
+    },
+    {
+      "id": "v6-fund-q-c-1",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "correct_option_id": "v6-fund-q-c-1-o2",
+      "correct_option_text": "Compressão do espaço e do tempo",
+      "resource_sha256": "76b2b6f81403871d5246b883f784ea45a8c8b1ac9ccd3770a1188e4abc79851b",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-7", "v6-fund-depth-7"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. Compressão espaço-tempo relaciona aceleração da circulação, ritmos de acumulação e experiência espacial. Os efeitos são desiguais; não há eliminação literal do espaço."
+      }
+    },
+    {
+      "id": "v6-fund-q-c-2",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 2,
+      "correct_option_id": "v6-fund-q-c-2-o2",
+      "correct_option_text": "Território",
+      "resource_sha256": "d1f360e407e2ccd80394c00c57f503318b409d2f2f15ffcf18f17bc07446d77c",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-5", "v6-fund-depth-5"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. Controle de acesso e fronteira = território (poder e limite). Raffestin e Haesbaert."
+      }
+    },
+    {
+      "id": "v6-fund-q-c-3",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "correct_option_id": "v6-fund-q-c-3-o1",
+      "correct_option_text": "Redes de transporte e comunicação",
+      "resource_sha256": "ec7a41d051d439b4a3e5774a88383cc8fbf17e88afce8bb2aa75a59feaa776c4",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-5", "v6-fund-depth-5"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. O suporte pode ser uma rede de transporte e comunicação. O enunciado acrescenta apropriação e controle, distinguindo territorialização em rede de simples conexão técnica."
+      }
+    },
+    {
+      "id": "v6-fund-q-c-4",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 2,
+      "correct_option_id": "v6-fund-q-c-4-o1",
+      "correct_option_text": "Diferentes níveis de análise (escalas) que se cruzam",
+      "resource_sha256": "a2fd83791852f0ebdea5817acec5d4e927a8ad7660abb3ff23700a4365f9114e",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-7", "v6-fund-depth-7"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. Escala geográfica: o regional e o local são recortes de análise que se cruzam com o global (Callai; Castro)."
+      }
+    },
+    {
+      "id": "v6-fund-q-concurso01",
+      "pool": "concurso",
+      "current_difficulty": 2,
+      "current_cognitive": 3,
+      "correct_option_id": "v6-fund-q-concurso01-o1",
+      "correct_option_text": "Articulação funcional e homogeneidade de um atributo.",
+      "resource_sha256": "42e4fdd1f1bdead970d026530b35d67963750acd6fc462011298479827d753d8",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-5", "v6-fund-depth-5"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. Deslocamentos e atendimento articulam uma região funcional; proporções semelhantes de cobertura definem homogeneidade no critério escolhido."
+      }
+    },
+    {
+      "id": "v6-fund-q-concurso02",
+      "pool": "concurso",
+      "current_difficulty": 2,
+      "current_cognitive": 3,
+      "correct_option_id": "v6-fund-q-concurso02-o2",
+      "correct_option_text": "Distinguir as experiências e examinar seus vínculos com identidade, relações e história.",
+      "resource_sha256": "556c82ab70d62fd26c121f95313c5a9eb0c77c911464398dee2e63919a89789e",
+      "source_ids": ["auge-1994"],
+      "content_evidence": ["v6-fund-theory-4", "v6-fund-depth-4"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. A mesma instalação pode ser vivida como passagem impessoal e como referência de relações e memória. O conceito depende da experiência analisada."
+      }
+    },
+    {
+      "id": "v6-fund-q-concurso03",
+      "pool": "concurso",
+      "current_difficulty": 2,
+      "current_cognitive": 4,
+      "correct_option_id": "v6-fund-q-concurso03-o0",
+      "correct_option_text": "Explicar a função didática dos rótulos e discutir obras, contextos e a construção historiográfica da oposição.",
+      "resource_sha256": "3fc93f4388a03e9ed533d90900868c815704a0681539f5b1dfcb4a32c63ab08f",
+      "source_ids": ["campos-2014"],
+      "content_evidence": ["v6-fund-theory-2", "v6-fund-depth-2"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. A síntese ajuda ao reconhecimento, mas precisa ser situada: influências e problemas compartilhados impedem reduzir os autores a um duelo simples."
+      }
+    },
+    {
+      "id": "v6-fund-q-concurso04",
+      "pool": "concurso",
+      "current_difficulty": 2,
+      "current_cognitive": 4,
+      "correct_option_id": "v6-fund-q-concurso04-o3",
+      "correct_option_text": "Investigar mecanismos e evidências em cada recorte e suas conexões, distinguindo hipóteses de conclusões.",
+      "resource_sha256": "20965d7a5d0a95c05bd9fb8b9d05da8aa43595137b4b834e4fea2ae125c774cd",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-7", "v6-fund-depth-7"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. Articular escalas envolve relacionar processos e conferir o que cada evidência permite afirmar, sem transformar observação em atribuição causal automática."
+      }
+    },
+    {
+      "id": "v6-fund-q-concurso05",
+      "pool": "concurso",
+      "current_difficulty": 2,
+      "current_cognitive": 3,
+      "correct_option_id": "v6-fund-q-concurso05-o4",
+      "correct_option_text": "A materialidade herdada e as novas ações se condicionam na reorganização dos usos e fluxos.",
+      "resource_sha256": "3314484585357f301fc0350ff0401a92dbc5510ddaf63ca7a5872c9f5bd73ce0",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-3", "v6-fund-depth-3"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. Objetos e ações são indissociáveis: regras de operação encontram condições materiais e alteram como elas participam da circulação."
+      }
+    },
+    {
+      "id": "v6-fund-q-concurso06",
+      "pool": "concurso",
+      "current_difficulty": 2,
+      "current_cognitive": 3,
+      "correct_option_id": "v6-fund-q-concurso06-o0",
+      "correct_option_text": "A combinação de apropriação, regras de acesso e controle dos pontos articulados.",
+      "resource_sha256": "828612a4c8cae943e2c12b92106fd7fa9b205ba7e6b1acd0383663e2708b4f7e",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-5", "v6-fund-depth-5"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. A dimensão territorial não decorre apenas das ligações: relações de uso e poder organizam a articulação descontínua."
+      }
+    },
+    {
+      "id": "v6-fund-q-concurso07",
+      "pool": "concurso",
+      "current_difficulty": 2,
+      "current_cognitive": 3,
+      "correct_option_id": "v6-fund-q-concurso07-o1",
+      "correct_option_text": "Relacionar representações de planejamento, práticas espaciais e experiências simbólicas, incluindo suas tensões.",
+      "resource_sha256": "f676d46a257528edd065e2c143a092728580c09e613c558f5ba6ddf8146809c5",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-7", "v6-fund-depth-7"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. Projeto, prática e experiência permitem discutir concebido, percebido e vivido em relação, sem atribuir exclusividade rígida a sujeitos ou áreas."
+      }
+    },
+    {
+      "id": "v6-fund-q-concurso08",
+      "pool": "concurso",
+      "current_difficulty": 2,
+      "current_cognitive": 4,
+      "correct_option_id": "v6-fund-q-concurso08-o2",
+      "correct_option_text": "Pode absorver excedentes e deslocar contradições, sem garantir solução definitiva das crises.",
+      "resource_sha256": "9b92fd2864a0c451b4926a9f50ce405bf7085ff7f1aede2dce7ead8fd9692133",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-10", "v6-fund-depth-10"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. A expansão e o ambiente construído podem funcionar como absorvedores de capital, mas carregam limites, riscos e novas contradições."
+      }
+    },
+    {
+      "id": "v6-fund-q-concurso09",
+      "pool": "concurso",
+      "current_difficulty": 2,
+      "current_cognitive": 4,
+      "correct_option_id": "v6-fund-q-concurso09-o3",
+      "correct_option_text": "Discutir autoria, contexto, critérios e evidências, preservando direitos e sem hierarquizar sujeitos.",
+      "resource_sha256": "7073fbcbcfd4fcb6de45f70b3abb255ca3b769f1696806a56bb44c7ce52d7925",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-8", "v6-fund-depth-8"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. O diálogo crítico reconhece pessoas e saberes, examina afirmações e não precisa apagar divergências nem equiparar automaticamente evidências."
+      }
+    },
+    {
+      "id": "v6-fund-q-concurso10",
+      "pool": "concurso",
+      "current_difficulty": 2,
+      "current_cognitive": 4,
+      "correct_option_id": "v6-fund-q-concurso10-o4",
+      "correct_option_text": "Confrontar pressupostos e resultados com condições locais, incluindo o que o modelo deixa de representar.",
+      "resource_sha256": "9241718b8e5816f8fe06b91ca9feb314810471a436eb380ac43ba4c94042cc22",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-2", "v6-fund-depth-2"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. A avaliação considera validade e alcance explicativo, articulando dados, hipóteses e particularidades territoriais."
+      }
+    },
+    {
+      "id": "v6-fund-q-concurso11",
+      "pool": "concurso",
+      "current_difficulty": 2,
+      "current_cognitive": 3,
+      "correct_option_id": "v6-fund-q-concurso11-o0",
+      "correct_option_text": "Reconhecer que agentes concretos podem articular posições produtivas, fundiárias e imobiliárias.",
+      "resource_sha256": "9ffd08a96e4b511f3444e32b5873e4a42fab95e65ba65743418a6e1b1ad7027b",
+      "source_ids": ["correa-usp"],
+      "content_evidence": ["v6-fund-theory-10", "v6-fund-depth-10"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. As categorias ajudam a compreender estratégias e interesses; não obrigam que cada empresa ocupe uma única posição social."
+      }
+    },
+    {
+      "id": "v6-fund-q-concurso12",
+      "pool": "concurso",
+      "current_difficulty": 3,
+      "current_cognitive": 4,
+      "correct_option_id": "v6-fund-q-concurso12-o1",
+      "correct_option_text": "A ampliação estratégica de alianças e arenas, sem garantia prévia de sucesso da demanda.",
+      "resource_sha256": "4ffd49019cdd705cd96b8e3ff2d7b566391506c2f43889169b63cf81eb96ba1e",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-10", "v6-fund-depth-10"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. Atores podem produzir articulações escalares para alterar recursos e alcance de suas ações. A estratégia não determina sozinha o resultado."
+      }
+    },
+    {
+      "id": "v6-fund-q-elite01",
+      "pool": "elite",
+      "current_difficulty": 3,
+      "current_cognitive": 5,
+      "correct_option_id": "v6-fund-q-elite01-o2",
+      "correct_option_text": "A acessibilidade temporal mudou desigualmente; investigar posições, regras e custos é necessário para explicar os efeitos.",
+      "resource_sha256": "35ab27a185964bca47ce3fed4b3abeefe8aa307893b09172eae22e373310dc20",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-7", "v6-fund-depth-7"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. Harvey e Massey ajudam a examinar circulação e desigualdade. Os dados mostram variação temporal, não mecanismos causais, distância física ou todos os componentes do acesso."
+      }
+    },
+    {
+      "id": "v6-fund-q-elite02",
+      "pool": "elite",
+      "current_difficulty": 3,
+      "current_cognitive": 5,
+      "correct_option_id": "v6-fund-q-elite02-o3",
+      "correct_option_text": "Região, território e lugar podem ser articulados, explicitando critérios, agentes, experiências e escalas de cada leitura.",
+      "resource_sha256": "26a38b5b4cd43fe4e3ad2bdbabb4ac4cabbdf3c7207c6e6ddded8e95f0cd597c",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-5", "v6-fund-depth-5"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. As categorias não são parcelas excludentes da superfície. Diferenças de limites podem revelar relações e problemas distintos; a articulação precisa ser argumentada."
+      }
+    },
+    {
+      "id": "v6-fund-q-elite03",
+      "pool": "elite",
+      "current_difficulty": 3,
+      "current_cognitive": 5,
+      "correct_option_id": "v6-fund-q-elite03-o4",
+      "correct_option_text": "Formular hipótese de herança material com mudança de uso e buscar documentos e relatos sobre agentes, função e acesso.",
+      "resource_sha256": "40ef83b0f32c2f763e654a89580da7f612dc6ee723a948b90dc824766bfb2fee",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-9", "v6-fund-depth-9"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. As imagens sustentam indícios, não a explicação completa. Cruzar fontes permite investigar rugosidade, ações, conflitos e sentidos sem tratar a aparência como prova suficiente de todas as relações."
+      }
+    },
+    {
+      "id": "v6-fund-q-elite04",
+      "pool": "elite",
+      "current_difficulty": 3,
+      "current_cognitive": 5,
+      "correct_option_id": "v6-fund-q-elite04-o0",
+      "correct_option_text": "Investigar regras e poderes sobre o acesso, discutir a diversidade dos relatos e confrontar afirmações com métodos e contextos explicitados.",
+      "resource_sha256": "16dbf00dacca1604e25a244dca49d83763fd8fe65a9de3fea47807d31a8ab66a",
+      "source_ids": ["bibliografia-conceitual"],
+      "content_evidence": ["v6-fund-theory-8", "v6-fund-depth-8"],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "decision": "approved",
+        "evidence": "Comando, resposta correta, plausibilidade dos distratores, comentários e alinhamento conceitual conferidos. A abordagem articula controle territorial, sujeitos diversos e critérios de evidência. Respeito não exige homogeneizar uma comunidade nem abandonar a análise de qualidade da água."
+      }
+    }
+  ],
+  "findings": [
+    {
+      "id": "F01",
+      "severity": "Alta",
+      "problem": "Enumeração incompleta dos agentes urbanos",
+      "resolution": "Lista completada e comentários contextualizados; proprietários produtivos não foram excluídos.",
+      "status": "resolved",
+      "blocks_promotion": true
+    },
+    {
+      "id": "F02",
+      "severity": "Alta",
+      "problem": "Não-lugar como atributo fixo de aeroporto",
+      "resolution": "Teoria, cartão, questão e comentários explicitam sujeito, prática e relação.",
+      "status": "resolved",
+      "blocks_promotion": true
+    },
+    {
+      "id": "F03",
+      "severity": "Alta",
+      "problem": "Ratzel/Vidal reduzidos a duelo e rótulos",
+      "resolution": "Nuance historiográfica estendida a treino e cartões, com fonte acadêmica e limites.",
+      "status": "resolved",
+      "blocks_promotion": true
+    },
+    {
+      "id": "F04",
+      "severity": "Alta",
+      "problem": "Rede equiparada automaticamente a território-rede",
+      "resolution": "Comandos e explicações exigem apropriação/controle, preservando respostas corretas.",
+      "status": "resolved",
+      "blocks_promotion": true
+    },
+    {
+      "id": "F05",
+      "severity": "Alta",
+      "problem": "Feedback de três questões ausente e Chefão A–E incompleto",
+      "resolution": "Doze comentários novos e quinta alternativa acrescentada a c_4; novo Chefão usa seis itens de integração/aplicação.",
+      "status": "resolved",
+      "blocks_promotion": true
+    },
+    {
+      "id": "F06",
+      "severity": "Alta",
+      "problem": "Predomínio de reconhecimento e dados sem interpretação",
+      "resolution": "16 itens novos e tabela hipotética, profundidade e recalls; classificações antigas não foram infladas.",
+      "status": "resolved",
+      "blocks_promotion": true
+    },
+    {
+      "id": "F07",
+      "severity": "Alta",
+      "problem": "Generalizações em V/F e causalidade sem evidência",
+      "resolution": "Enunciados/justificativas revisados com diferenças explícitas; polaridades históricas preservadas.",
+      "status": "resolved",
+      "blocks_promotion": true
+    },
+    {
+      "id": "F08",
+      "severity": "Média",
+      "problem": "Cartão composto e respostas pouco explicativas",
+      "resolution": "Said/Escobar separados em dois cartões; respostas nucleares qualificadas e relacionadas a exemplos.",
+      "status": "resolved",
+      "blocks_promotion": true
+    },
+    {
+      "id": "F09",
+      "severity": "Alta",
+      "problem": "Temporalidade e alegações de frequência da banca",
+      "resolution": "Perfil/dados normativos registrados; operação ferroviária datada em 2015; heurísticas não apresentadas como estatística de provas.",
+      "status": "resolved",
+      "blocks_promotion": true
+    }
+  ],
+  "limitations": [
+    "Não substitui estudo das demais áreas nem constitui auditoria das outras 24 unidades.",
+    "Não há questões oficiais identificadas neste banco.",
+    "Classificações de dificuldade não foram calibradas por candidatos reais.",
+    "Trechos indexados e resumos não equivalem à leitura integral dos livros; alcances constam das fontes.",
+    "Integração de interface e migração de progresso não foram implementadas neste lote."
+  ],
+  "suggestions": [
+    "Ampliar com questões reais cuja origem e direitos de uso estejam identificados.",
+    "Reavaliar dificuldade, ambiguidades e espaçamento após uso, sem converter acerto imediato em domínio.",
+    "Antes de habilitar a unidade, cumprir o contrato do consumidor e testar histórico de progresso."
+  ],
+  "assisted_review": {
+    "kind": "ai",
+    "reviewer": "Codex",
+    "human_manual_review": false,
+    "delegation_evidence": "MissaoAprovacaoGeo/V6_ISSUE13_FUNDAMENTOS_AUDITORIA.md",
+    "unit_id": "fundamentos-geografia",
+    "editorial_version": "1.0.0",
+    "reviewed_at": "2026-10-16",
+    "reviewed_payload_sha256": "0e67a28b6cbfccd76116bd7ec2c4c5836c08fc150282d75597df2b5a1c18baa8",
+    "resources": [
+      {
+        "kind": "unit",
+        "id": "fundamentos-geografia",
+        "sha256": "219b8072598bbbfc0fd01b80a41cfa2c91230c5387bcff412df01438b829f555"
+      },
+      {
+        "kind": "missions",
+        "id": "fundamentos-leitura-de-questoes",
+        "sha256": "fce1a2497f7917aeddb96e275c35562c0d6030305e3f1396ec04f16530d47de4"
+      },
+      {
+        "kind": "missions",
+        "id": "fundamentos-campo-conhecimento",
+        "sha256": "f5926677444d004f5612ca251530b13d88c349a6fd32090e25f0a46a0c77eeef"
+      },
+      {
+        "kind": "missions",
+        "id": "fundamentos-correntes",
+        "sha256": "f0842f3eb748faccbc237716b532a05a5bd6ac04067fe9921a87dcf45d10683a"
+      },
+      {
+        "kind": "missions",
+        "id": "fundamentos-espaco",
+        "sha256": "ba50d7acde0f82fb9ab6f6b5fe9baf4bc6f27b6bf54f53b6c88bade3570c409f"
+      },
+      {
+        "kind": "missions",
+        "id": "fundamentos-paisagem-lugar",
+        "sha256": "92abe81a02d7c58712e964cb0b86746694d5a99db9fd638431454e7ef27e0393"
+      },
+      {
+        "kind": "missions",
+        "id": "fundamentos-regiao-territorio",
+        "sha256": "009f6aaa2dc166d6f7a89eae25e4d67b7ea945b54625e84437af27c6eed63894"
+      },
+      {
+        "kind": "missions",
+        "id": "fundamentos-redes",
+        "sha256": "21e707e510251208d0e05987eec9a55a2a47a5bf0513bc9756d574649b15321a"
+      },
+      {
+        "kind": "missions",
+        "id": "fundamentos-producao-escalas",
+        "sha256": "8e866ce3be038d22ebfc7c761aaa7e096caba6995b5d711a0d8bc5b6f821ca86"
+      },
+      {
+        "kind": "missions",
+        "id": "fundamentos-decolonialidade",
+        "sha256": "e1013b53ec0f0a61b82b6ea1a0e6e6b66daeaab965d24c0ebb46ebb3ca8d1493"
+      },
+      {
+        "kind": "missions",
+        "id": "fundamentos-leitura-realidade",
+        "sha256": "3748b35e0034bc210ea3898c7b2f639cb83a292d797e295e9890f275c5a21f0a"
+      },
+      {
+        "kind": "missions",
+        "id": "fundamentos-autores-complementares",
+        "sha256": "ceee77095c7f157bbe651ccc6c56fafefd97dae63c6127a7f825d59f33cf37f5"
+      },
+      {
+        "kind": "concepts",
+        "id": "fund-leitura",
+        "sha256": "fc565c08cb756c6b5abc3cb9ca66c08fce69c2e11a692eec25a28925292e670e"
+      },
+      {
+        "kind": "concepts",
+        "id": "fund-campo",
+        "sha256": "190d5220e5c7f42b3e98c17ff3184de060bf6733ba983b9a0df376fe98ba6b2f"
+      },
+      {
+        "kind": "concepts",
+        "id": "fund-classicos",
+        "sha256": "3c368cfa6257a48530a7fe02e72fe90a654e67d4c0a099e88ae1b447419a5132"
+      },
+      {
+        "kind": "concepts",
+        "id": "fund-correntes",
+        "sha256": "3a53cb5dd226a5010083eacb870359e7e4890c776724b6e398dad19800b0cc6b"
+      },
+      {
+        "kind": "concepts",
+        "id": "fund-quantitativa",
+        "sha256": "5bf9a29775f531148726ed310258fdafff56156f7a984d11e32e35dde6f8913a"
+      },
+      {
+        "kind": "concepts",
+        "id": "fund-objetos-acoes",
+        "sha256": "1279fe8bbe250c2efd47ffa20fce55922c8f9d05d5a83cdfdee440eb8212b1ab"
+      },
+      {
+        "kind": "concepts",
+        "id": "fund-rugosidades",
+        "sha256": "c1260fc03405b9c5dec77468c7aab6828774d64ba1fee2f831404ccab8de254f"
+      },
+      {
+        "kind": "concepts",
+        "id": "fund-fixos-fluxos",
+        "sha256": "86ed5f7db11996c3b247ed6f712b71c267961ed8cdc5f3cab500245625a38a94"
+      },
+      {
+        "kind": "concepts",
+        "id": "fund-paisagem",
+        "sha256": "5cc04d5c3fc34bb5361f172b5b27360f7038235d60840e40aa24c0342e78710f"
+      },
+      {
+        "kind": "concepts",
+        "id": "fund-lugar",
+        "sha256": "8715a80d8b79328f73826332224f2380c4fcef553d52f573136d6c0848db1941"
+      },
+      {
+        "kind": "concepts",
+        "id": "fund-regiao",
+        "sha256": "fd0f6a15b93c41adfb1d85e37fac4525daba1a815a71d4acb98999ca75476547"
+      },
+      {
+        "kind": "concepts",
+        "id": "fund-territorio",
+        "sha256": "0b40a0eeb442368c38bdba2e0e7d385402f424296dc82b40fa88963b83599bbc"
+      },
+      {
+        "kind": "concepts",
+        "id": "fund-territorio-rede",
+        "sha256": "a510e6eaf4942bd94b0552740665316e3aa175e1eb445ca83433b8e3857bb39c"
+      },
+      {
+        "kind": "concepts",
+        "id": "fund-redes",
+        "sha256": "50a014166940fe67fa0334e9cd50bc553b846220d7b75839b2a63e3ca014a142"
+      },
+      {
+        "kind": "concepts",
+        "id": "fund-producao",
+        "sha256": "63b84ed29710696d321a89c140d933f5b076fbdb05b54874e0f751c0009b4dc7"
+      },
+      {
+        "kind": "concepts",
+        "id": "fund-escalas",
+        "sha256": "887ea29ae1baae690996bb56a6dd8ddb34aee3c757485e489c599cd377ab57e5"
+      },
+      {
+        "kind": "concepts",
+        "id": "fund-natureza",
+        "sha256": "6d1f3c00c3b81cf2094504770082cc9929a995740a4b163f5c233b75b9b46e0f"
+      },
+      {
+        "kind": "concepts",
+        "id": "fund-decolonial",
+        "sha256": "360d58e902fa6eeb4f521a966ecd18cafc7b9608207b14f40c13297ec0badafb"
+      },
+      {
+        "kind": "concepts",
+        "id": "fund-intercultural",
+        "sha256": "5468a4ce2ca4e893c5f68c1f3da0119a30b38876205e197713d3afbdb6ca3738"
+      },
+      {
+        "kind": "concepts",
+        "id": "fund-evidencias",
+        "sha256": "e6238c793712b77950bc661c1ae67e8594d665adba8d1df9d9fea99b65bf8675"
+      },
+      {
+        "kind": "concepts",
+        "id": "fund-forma-funcao",
+        "sha256": "c88ca3fef6c3deedfb7db6d997dd9566bc95a84f25ad0d3a57239f54665c50fa"
+      },
+      {
+        "kind": "concepts",
+        "id": "fund-ajuste",
+        "sha256": "d9dc978f700e3e03cff471ccf73c4058e30c0bd058c373a7994d84c72cbbdee9"
+      },
+      {
+        "kind": "concepts",
+        "id": "fund-agentes",
+        "sha256": "ed3d805cf3e344eadc02c5303fa47f00af6c1e9b8f3e803268a33aef9222938e"
+      },
+      {
+        "kind": "concepts",
+        "id": "fund-politica-escalas",
+        "sha256": "34df31b994652c40b1fcbf60b9b20cee909f8c9a7293c24e1bfdda2130f9ebf1"
+      },
+      {
+        "kind": "concepts",
+        "id": "fund-saber-poder",
+        "sha256": "11fbc2281c8dd37d39d806a737a0a8ebc8667e2fe50481f711e3b2ddd1903fdd"
+      },
+      {
+        "kind": "concepts",
+        "id": "fund-compressao",
+        "sha256": "8889e46290a3b83be315a2a45a9e3cdb97fcefb500fd85007d5a46085396a6df"
+      },
+      {
+        "kind": "concepts",
+        "id": "fund-direito-cidade",
+        "sha256": "390dc01f2a088358043aa437895d1a683999f1acf38a8fb75af9e993d224b525"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-pre-0",
+        "sha256": "e2e694d519269bc0312f156310d0919c694a287b3db6103675e47ad6785da42f"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-pre-1",
+        "sha256": "67ee1809cf0b5920c19187d2524c8ed32281f0a81b3e40bf18d8646fe1749ca5"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-pre-2",
+        "sha256": "f859745908f89b7482529c46c00f005ccfc97ae6a9032b7fe7d62af62db9fddb"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-b-0-0",
+        "sha256": "fbcb5078042730429562ada7b12b56f9c7384124d5315de7dc9d8db48c76acc5"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-b-1-0",
+        "sha256": "2c2de5cc7da29fee2b174ebd7c6e4790d07a668edd69aadbfdb50e07157e860e"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-b-1-1",
+        "sha256": "66e0b47d697acff04ba2ee93616277eef8736ad8066ac951c51dfd991d4c262c"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-b-2-0",
+        "sha256": "3d9bb917a0bc0a1f2129bcb58e3446489acfb720f5ff1e56943da1fe2efe1639"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-b-2-1",
+        "sha256": "7ada1433d0bb4ae82baafec30d6b39e0c5e6bb1f6b6cbdc08101597226878dd7"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-b-3-0",
+        "sha256": "72fb19ec0a6385f92d681d66f71b3a9a8ccae398581c5ae101a7098e6b3ef178"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-b-3-1",
+        "sha256": "9d64339bd3b2ebc921f85cbc4ba2b2fdfea08ffe2f95adbe6be90b495f6b9393"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-b-4-0",
+        "sha256": "ff026cb8ecebca5187678c84aca04890ed652df963a0631578b5800200aa7176"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-b-4-1",
+        "sha256": "f1238012aa52f6d7cf98edc864b39a21f39c2360b6b582a1af22c23023823a11"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-b-5-0",
+        "sha256": "182eb4ac5e074b1f5242b9a1c21c71eb8ca60439fa402f17f05eee78971e285e"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-b-5-1",
+        "sha256": "0959627db4fceef18c47eeb91eeeefeaf43cd7cff7f0c920621673120d268fe9"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-b-5-2",
+        "sha256": "7ce02083084a078af4450b555d9a73a47de50deb27b62c91d2515560bdc8665a"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-b-6-0",
+        "sha256": "3ba476789997ad6e9ca1cdce34870157c132b9872cd99fea459ed6579f8f3b2c"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-b-6-1",
+        "sha256": "87459227ecce7252e65d60e0fa91849fe4f268385cad9f17b1230cb0bde6ccbc"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-b-6-2",
+        "sha256": "bbbdc81b6eb2dc6d45116a5742c71b9ff8627022808bb38f6b2cf6eb3a972888"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-b-7-0",
+        "sha256": "f278545985a68455f7cc0045a6777fabbc2883c6a0675e2d82c7bfde23b99c04"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-b-7-1",
+        "sha256": "5f2f766b1d7f2fc24bd7fd8aa44d11405e30f791f073ed7259064f31a7484ae0"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-b-7-2",
+        "sha256": "f01ea65f5d8bcb71e3f5ec92b8468f0b369f5c03c26928e76231973b7b9c5bb5"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-b-8-0",
+        "sha256": "bd6b5eccc15bb2a9fde01fa6d0ca890dc0df8197bc03b9e97bdfc27442180fb5"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-b-8-1",
+        "sha256": "99184e2fb664986440a1ff86691560f17e986ec01a40fb82a5cb5a5354fd2699"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-b-9-0",
+        "sha256": "cae8f9fa7af620e4e91ef767a3cdf6969dd2bbf44842b542b0217ea3c5a66652"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-b-10-0",
+        "sha256": "3e6413d856b05cd34519fb54191636f77cb695fa5a292954def15dd1fd27c060"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-b-10-1",
+        "sha256": "6a5b4ce77ba14d256f1b68f2f90c6b1e277817d9bb1e903be28ec1fdf6ed189b"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-b-10-2",
+        "sha256": "049a963a116089bbe79ff11debe2f578210975e42ac09ba8f6eb5b452902c4a5"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-c-0",
+        "sha256": "8ee0ec42c802b5e597909ffcda5f8ebde4ed7af7873cc51ccb36bbf6f2be01a6"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-c-1",
+        "sha256": "76b2b6f81403871d5246b883f784ea45a8c8b1ac9ccd3770a1188e4abc79851b"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-c-2",
+        "sha256": "d1f360e407e2ccd80394c00c57f503318b409d2f2f15ffcf18f17bc07446d77c"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-c-3",
+        "sha256": "ec7a41d051d439b4a3e5774a88383cc8fbf17e88afce8bb2aa75a59feaa776c4"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-c-4",
+        "sha256": "a2fd83791852f0ebdea5817acec5d4e927a8ad7660abb3ff23700a4365f9114e"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-concurso01",
+        "sha256": "42e4fdd1f1bdead970d026530b35d67963750acd6fc462011298479827d753d8"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-concurso02",
+        "sha256": "556c82ab70d62fd26c121f95313c5a9eb0c77c911464398dee2e63919a89789e"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-concurso03",
+        "sha256": "3fc93f4388a03e9ed533d90900868c815704a0681539f5b1dfcb4a32c63ab08f"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-concurso04",
+        "sha256": "20965d7a5d0a95c05bd9fb8b9d05da8aa43595137b4b834e4fea2ae125c774cd"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-concurso05",
+        "sha256": "3314484585357f301fc0350ff0401a92dbc5510ddaf63ca7a5872c9f5bd73ce0"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-concurso06",
+        "sha256": "828612a4c8cae943e2c12b92106fd7fa9b205ba7e6b1acd0383663e2708b4f7e"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-concurso07",
+        "sha256": "f676d46a257528edd065e2c143a092728580c09e613c558f5ba6ddf8146809c5"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-concurso08",
+        "sha256": "9b92fd2864a0c451b4926a9f50ce405bf7085ff7f1aede2dce7ead8fd9692133"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-concurso09",
+        "sha256": "7073fbcbcfd4fcb6de45f70b3abb255ca3b769f1696806a56bb44c7ce52d7925"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-concurso10",
+        "sha256": "9241718b8e5816f8fe06b91ca9feb314810471a436eb380ac43ba4c94042cc22"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-concurso11",
+        "sha256": "9ffd08a96e4b511f3444e32b5873e4a42fab95e65ba65743418a6e1b1ad7027b"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-concurso12",
+        "sha256": "4ffd49019cdd705cd96b8e3ff2d7b566391506c2f43889169b63cf81eb96ba1e"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-elite01",
+        "sha256": "35ab27a185964bca47ce3fed4b3abeefe8aa307893b09172eae22e373310dc20"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-elite02",
+        "sha256": "26a38b5b4cd43fe4e3ad2bdbabb4ac4cabbdf3c7207c6e6ddded8e95f0cd597c"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-elite03",
+        "sha256": "40ef83b0f32c2f763e654a89580da7f612dc6ee723a948b90dc824766bfb2fee"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fund-q-elite04",
+        "sha256": "16dbf00dacca1604e25a244dca49d83763fd8fe65a9de3fea47807d31a8ab66a"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-0",
+        "sha256": "628004ae319dd04e201fc54e9b9f206909cb4bdb484e658416d070afaaccde45"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-1",
+        "sha256": "02a4bb6f1df57c7b7a5cdd650ecd68801e34d0217fcd1111ee5e3ffc283fc23e"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-2",
+        "sha256": "f1ef03a6d0638bf8510f596e188e2446606d787eecd5bb15d0ec4fdca3c67e0f"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-3",
+        "sha256": "cc4f7d8246006d4ff7f0f3adc69155183ea37a79621f80f6dffe9c900c338b9f"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-4",
+        "sha256": "2086e172e8ea29b5de5fc9749f6dccf89754c1c87a15795e190704e5472a1d3a"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-5",
+        "sha256": "c5ab3223cad507a5d3f65b57de51eb51c11b44312f94a46ce222e44bd88eba8e"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-6",
+        "sha256": "268ee5b866eca708543831e4d99543cbc15bdde874c3a36b6b39a27848dc7069"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-7",
+        "sha256": "6cb81fee60bea84e5b6843eb17ad379e6053ae3f8759287db64d0998ee10b1c6"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-8",
+        "sha256": "2f6c114cb1fbd26df9640baca9e6c267e2938a2e123e15ab326859deb207cced"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-9",
+        "sha256": "2abb21d40d7ea5da29efbef81751ed65562739a2760fbc37f45cfcff09b1f877"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-10",
+        "sha256": "7f6e12bd497b168c077d624164032ca4c204c77cd60a322e9ac2a134ce5dfab7"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-11",
+        "sha256": "c3fafdc9c1c60671e98a147f515d2617d08aec7d3c9c436941f52ca267c66ef7"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-12",
+        "sha256": "f01ac64552e2ca71fd236f7b30422d254117b7266e0dcb47f784f1b06630ec56"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-13",
+        "sha256": "b1bb8a9ace5847055139742e96b79ab2ceaa9dfdf58ccba45a7b90415d9ddd6f"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-14",
+        "sha256": "daa33495606cfb9834152b9e5c3507c59f148dac50423551b53bded9519af61e"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-15",
+        "sha256": "ecc770308f1adeeafff0373d4a8e73fbc5f5539f6de19dac2d359b8cd3bfaa47"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-16",
+        "sha256": "723c595509eafd872565ec062d219a63701404ec20ca5940558a7a4ad954e3e0"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-17",
+        "sha256": "50d4730ad18d00d3d04653f02a8825ad6e43af3943a421cec6b8885c7aa9b730"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-18",
+        "sha256": "1ca9bea524aa376ac3cb7b0bf3f2ad82676a98932e08db39f733d3278a2f066a"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-19",
+        "sha256": "0396578456244e2591b1ff1edc56b03932ab109a21b531f4083aa86450ebb3ad"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-20",
+        "sha256": "d7405b15d94c507a478f2306ecd616f7d90cd8156ac79f905a323a77810ac480"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-21",
+        "sha256": "7c081f1c8ddbc75affedae9f3f6707ad0a5023cd8c44e5c5d2b9c16d1044132b"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-22",
+        "sha256": "6d92c40154f9972de30570f0db65796ffab50e67a6c70874dffa332ed45b4201"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-23",
+        "sha256": "dae19ef68a4e4bd3927c41a2bd2d1e2a7737c7cdf23f62a0f3f9269aeb6f61d5"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-24",
+        "sha256": "7389c8bd4be1835ec50e429f5ecf8ccc39763fc1e5f0befb42a3602664173277"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-25",
+        "sha256": "0f28b40e7332ded8af553a4728464c3109ab81c99d1e940d7e902d43a45c5a4f"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-26",
+        "sha256": "40bc144ba0aefabfaa4ea6a42cf7d337eb7a99a342883df178ac8ff340564ee6"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-27",
+        "sha256": "0d9bfcaab8b23e193d9ff8ca768fa8624ed92d72c5bb905640e2c212d08c8cab"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-28",
+        "sha256": "240b15e83da323c9ca9519e48528c76d7a0954bace8ca17fa62ee614f9e49e87"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-29",
+        "sha256": "be4e2cec3da136beb9ee4d05a47d37eed576f7eca0a5557676a965a3d791b437"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-30",
+        "sha256": "0f27845c32056dd73878b0907896babd266052d25ebc7d642fee2f4eb4cbe613"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-31",
+        "sha256": "74f3a8ef1075f69c3da739724ad86cda3e6d123610964349aa72eb69868fb182"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-32",
+        "sha256": "6b09d386436f2d61b64b651814b2e8d560308ed0ffb2f018bf6b4fe06023f1c3"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-33",
+        "sha256": "c999d852b8a35935d32763eb139ce0e214dc436f8e334ce873a4b1a1b3086cb0"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-34",
+        "sha256": "5d141f5856260c01876588a146dbb63458d1120e88dc11da1a86896b40176745"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-35",
+        "sha256": "df2d554e32a15746e1cbe6dd25c5ff0d9883f177112ee72b4cacb164f1217d25"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-36",
+        "sha256": "63edbca37a668faeba6f6a5d87fe053b233cd1591e1a155c80085284ddaf000f"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-37",
+        "sha256": "82b654638570a8f782263b42ee276a5d89965633d81f406f8e392498e1efef8e"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-38",
+        "sha256": "d143bb2ccede771d9397f10ce3315e90ba008d861e4ad9e296457a02eddb0793"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-39",
+        "sha256": "4906de1fbe12f673e4279fa4cc77153609a62356ef120b3a934104d93ec3496a"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-40",
+        "sha256": "f67c1d7072223dbdd9a4dfc6807d2208536fde4e4b2cd51928a2525bd88bf0c3"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-41",
+        "sha256": "1aa3f7c6826c26c99f3a2a7cddb75bbea6ef631d1a08b9285501db92b84b3536"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-42",
+        "sha256": "0bacfa8a7d76b408d99aeb9c14632701153ffb14c30c513d8e5e3fcedcdee133"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-43",
+        "sha256": "95a51b57b5ed2b52d6258d49b3ede96a8457cb17b16864c8a7754b5ba3f33a98"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fund-card-escobar",
+        "sha256": "a2b91f3146d23a212ca634c93f5b47a691eab6b5e2099306543942ce796e8f06"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-0",
+        "sha256": "3fa57f04c9fe9cdf35edfe7f79040d297387fb028890950b8dafdf618aef1ec4"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-1",
+        "sha256": "38c05ce3660ba47db3add2f2ac8aa5d8fe743bfe27114784fd96d0bf19fb3f9c"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-2",
+        "sha256": "d5b29f065eaaa3f7d06bd317e9b20b69e800686da8a33e35732c1f88c3ab0837"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-3",
+        "sha256": "c3c530f79e322bd872128d43d28492b16c538e134573ced9e3372ff68e25c1e7"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-4",
+        "sha256": "2397d5ea99a6ef5c8137985e3b6047dfe7bf25b90c1ed5ce7db5cca319f98314"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-5",
+        "sha256": "0c64eceeacb6c159d52765dd593b178b349da8f60533dce9bd59aaa5d5067511"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-6",
+        "sha256": "2c087da6e736b72046e9361e06f9aa41036047025f707040768a3b92ea62db04"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-7",
+        "sha256": "0fb292755409a939685a0e2b899212c41101105df4af21d97f7d1b26a6b73f96"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-8",
+        "sha256": "ed260d2822a8b949af16d62460d7b31b1497cf3f160f8de8af79f3a5d57320c8"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-9",
+        "sha256": "ba73f3d30ab6239150ef6a3e4a98cc7efd1110d8e274e69bbbf86620dba2418a"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-10",
+        "sha256": "09e6c000a35554d739387d64bbf2ccf29ca43d3441ebae30a0d45bcad0966430"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-11",
+        "sha256": "a7c23355bb4c564e0713174dcca64c27dca7ae2ff5df007bf0d74ceb703b4161"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-12",
+        "sha256": "43ee44a5affadd54227d150dbb7d42d0f9caa7878062797f3ff3a45d632ccdbe"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-13",
+        "sha256": "fb706122549ba4aeb066cd54a8fa5b865dad79c160845799fac8fa33c681b02f"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-14",
+        "sha256": "b00a331ac828425509d93d81414b2a2b4a2c24a8275bd8eba2ee25bc6c866316"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-15",
+        "sha256": "5fb40ce14c7bac7994e3e243a0f4c94fbcb21a8313ce66513caf9c560b1a5c3e"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-16",
+        "sha256": "eab46729ad04600214c736938940e8a480241a3d48d32f79576fd9c7f964e038"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-17",
+        "sha256": "f9ad7ad0fdd77209cbfb75379c58b3e34786e841f8c971969f6e9b4c7073b5ac"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-18",
+        "sha256": "262d40ca71314ee30a2d891c9673a93751875d0bcdc205a9f8713aa11a4f52cf"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-19",
+        "sha256": "fd0da610870b0207bd551172d4e938c74519a4bc9f00b0973a0cf0706b54247b"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-20",
+        "sha256": "5b2c45b238419bba0ae5d24c1f932d6c68d405286f57b4d6c5ddfe4e3c26d3f3"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-21",
+        "sha256": "59215e3bcb504ad5d167d50b6de58c0ba7fc287f77b424bd23cd59b25573c14d"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-22",
+        "sha256": "42d4f90e05e69a538d22cc1d4c0d9cd390eeb27c7fd9467adcbe283880b12f22"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-23",
+        "sha256": "5b28538c028b73ab6a57e3153ca6a4855c4d7cc0f93e0d08026a5623abecaef2"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-24",
+        "sha256": "4ebbeee5d79e2ddfee3f5fe9f1cb141cc1047b2dc4a5cc08c02332f955ca8cac"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-25",
+        "sha256": "7479b395c896032363af8f9c79a4f000abb3d508f4c036a221a57370b6ce9593"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-26",
+        "sha256": "29b58f2dc96893176b23051b336addaf1fdfcc8736637a0e7d4afe8c36db68b4"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-27",
+        "sha256": "20406ad9ca97b36455720a1da8348c3330a5f286a0121ee6e33f784b8bfefccb"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-28",
+        "sha256": "7c46543947163fa3a62498e6bc09e7c1e9f6fdd30c952929a4307ca59a9a248c"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-29",
+        "sha256": "efbb70239a419d94e6809474d111a35c5b6fe3b0d7c9101e72c10f50a711b0d8"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-30",
+        "sha256": "74a53206f9c6f1228500ab948e0c271d0329d7d43e023fa99e35eae2031d6184"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-31",
+        "sha256": "18f8fc8dc55f9fa7335c651923b435a57eb3f72de2687d9d200de65a00f136c5"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-32",
+        "sha256": "bc5658c83b795cd6a06c0c253096c2b616c3ba66180f303daa7b0b5945051d19"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-33",
+        "sha256": "d95fed4cddb6bc1dbde95a3803008ea627cd914822d49606908ff73dfe8dbd5f"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-34",
+        "sha256": "a24ed411716970b2217c5a077b6b2eccc818aac33218c30be0f25e6a0f011c84"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-35",
+        "sha256": "6df89ce65d90504ec70a99a078e684bfa303ee70e9c4f72647d21708f98889c7"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-36",
+        "sha256": "ca2704445b28afb32f04f61c4b1deec1290eb25712fdb24613c82b6fb3cb1263"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-37",
+        "sha256": "cd9cf03cc072c840fb526183d2ed0889b4635c71100a8161f46a38afc24addd3"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-38",
+        "sha256": "d76f7970832897b17861b380678767ab04a964d35ebeff498ead748212afb82f"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-39",
+        "sha256": "8654d2899f86b81475d219c296278c81a4de4ac692df7bb19978bdd325453e3e"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-40",
+        "sha256": "a8180804165e9e0ffbf3d65104e458914692223c3cd19bf56d26dfc71eea94b2"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-41",
+        "sha256": "0e15e1705b813556d7cbd1a037c4c68c02ba3f46e0a72e985383ff8f3648fd64"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-42",
+        "sha256": "d42256148715ac2faca397958fc2650520651ccf88b757af4c1cc77397c9bb8c"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-43",
+        "sha256": "eb7f403e16c068caafa3ab5152749466d09ad338ed0192eaf7d6cfe3134dc925"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-44",
+        "sha256": "046057856fb63f679e9ffdce0597361fb52dfe432edbd68958c923d0d1608748"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-45",
+        "sha256": "93dc84ae64782ef14b8350c30c5cb65983786e5047af20e30ef3fcfe52545f08"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-46",
+        "sha256": "6c57cf3cea55fbf321e751961436aaea44a93ca2b31d4949a8b9547437dfbc54"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-47",
+        "sha256": "5017c3e09fb0892ab3b85c5f34dd2de785d5b23d5acf33f5ad884a18adbee466"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-48",
+        "sha256": "34549de577b8d48c3eba48e9b5dde780eac835aa5cfc29bac0a12d9f24d29fa9"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-49",
+        "sha256": "f0924d7f233cccf98965579302438e15b187391cd8b9157c07a95278461db72e"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-50",
+        "sha256": "c13beaf110b4b72201fbbe2d43548f2804803423456fc156f20345ebe22fd768"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-51",
+        "sha256": "66619ca7a6531e8341d4256bc16ea600da28353ec156756412685db9eb2a01f3"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-52",
+        "sha256": "5f96c11947468580da479e9cae6b807942a15b85ed5788416d16e784ef2747a1"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-53",
+        "sha256": "ab4de2d2568c6d4d7448a39d0040712a2397cee7f3a569bde426423d6c6d1d21"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-54",
+        "sha256": "d0fd1b89f3422406bd6872e42f6c79651d33643004a6f0d5bafda473643d0f82"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-55",
+        "sha256": "b9bc118c0272530adc2d8f4702a58f93cd2e6cbcbd18f2db402785b8f5f051cc"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-56",
+        "sha256": "4289aa1f5c3797b1764f8a9cf98526ddbefe32c8f2eb65261a46c3482be76982"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-57",
+        "sha256": "b6459eecd33a8d863f20be87bbb22a1f2218c0aaaca5c840c1933111651f66a9"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-58",
+        "sha256": "87c6c17cdbb3ddab1ff96e96415b8e4c6ff3043da5aa7530e934c273fa2a231a"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-59",
+        "sha256": "5511dc277ab18d4a18436ce2c9f871082d6aa3b4d447342013835fb9d9a9cb25"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-60",
+        "sha256": "38c7a9e50c740b579fdba1a5290899deb5e2c3789ee0ed2f1c4cf81f6fe358ff"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-61",
+        "sha256": "f573427c236e7cda993574b03a1f495751659434352ad88de8347bacd1979d4c"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-62",
+        "sha256": "e7c6219b322e3407e869d8cce0258c9cf11ce616484fac150458ad541cf7031d"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-63",
+        "sha256": "3528429f1f533e14dfe5b55928293b2b4f43c545340e4c686161e9b5f783e74c"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-64",
+        "sha256": "b15b0bc24dca42a854e0af0009a66de3554c2cc862137c0069c737fc686affa6"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-65",
+        "sha256": "45470e7c9f0420f0cecb2bbcc4ec08359e7c2c094410f8ce5fd895b73f38e311"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-66",
+        "sha256": "ef9b77d91a90c546eb2a1c98d0c486b6d727690b79fca3bc775bc8d6342864e9"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-67",
+        "sha256": "0acc1ac1f660e4ede3131277800c34922157a616eafafc140e542fe9076d8aac"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-68",
+        "sha256": "dd616fcd9b22bbacecd020564948c0a0b4c93cc59cd312d78e06501b379f671d"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-69",
+        "sha256": "15d6bcd5ae73cc067eb40f53e0e736f06024f527f918e81d05a858443e33fef6"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-70",
+        "sha256": "820e077f8d1b201e640d5e88b9de670b994e26faf99b41012791e5f80e699b9a"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-71",
+        "sha256": "2e5e31049cf1656630cfb1e7b3c6fac15b008ed64c8bc26464b1b07f70c548be"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-72",
+        "sha256": "a8256ac8ae1e58a0a7e1bd875bd47adccf06fe4213777b9693deb46e1845991d"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-73",
+        "sha256": "dea1a06f4d2db5786b59bd7ecefcc97a9cd07e637be22e57ab422c794eeeeeac"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-74",
+        "sha256": "1c433a6689a7eb3bdba8fb8f79a4f6ef56fbe68ac1b193020f808451a8ed9b51"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-75",
+        "sha256": "2914eebabc275fac92c5e50c123403c4199c0fc86f00741ca67bfff78cc32c88"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-76",
+        "sha256": "1bd869b5279b472a402301299aa871ebec42489f00ca2259e136194ff08cb3a6"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-77",
+        "sha256": "63e1192ed30f8f5523056b526389016582f2924bd95a4d6d811ff877005a8d25"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-78",
+        "sha256": "da8ae9dd9070738a64abd6f5b6c502f592920df786512d73015d4bbe53379f42"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-79",
+        "sha256": "9aaa8108f569288a904f758233553b4f989343efac49547965a6407ed2391601"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-80",
+        "sha256": "862bf8acdfd5afe2aa1ace023867b3e7d435ccbaa493f684e937fef2382ddcd6"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-81",
+        "sha256": "fe12399cfed5dbe6a5c1436451992ff64c3c0dc914647ce018d487e01ff7513a"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-82",
+        "sha256": "804d2437bbb15c6879f201470486b941fa20bf515e2aaaacf2af005c480fd5f8"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-83",
+        "sha256": "1c554a090bf196095853d9886d38c7695aa5a7d7cde2edfeac34ab3a85e868f5"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-84",
+        "sha256": "3bd612c58f15c592399c262f49fff08dd91b62907951f38864568d06a330a0c7"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-85",
+        "sha256": "40c6905d7067b0ce9912faaab2c93c8abeb3b86d6cc835ad04f1e84bbdb87731"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-86",
+        "sha256": "d3595c1d537101383ad0a191366fcae7f773b6984faaa25fd3884c78a7f59e6e"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-87",
+        "sha256": "3872ac430f35ceb9494688a737abc19c44f04665c10549e1a509a08c31499ba0"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-88",
+        "sha256": "bdfb2bd4952824c24c37e097f77b2d23666b2c59130b2f8f90264a3a52121ef3"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-89",
+        "sha256": "c3392302a941847cd17831bcfb46148f3ebed8fe1eee281d59b4c81dbebcbe2b"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-90",
+        "sha256": "78fe81135d5cf7a1964c9a897321db7c51af453fed1563f75d961a3f6a452d8c"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-91",
+        "sha256": "923e6f0fefb914bf0b77d13c79f01efd1f365ac51c9126a26b10993d52840d3c"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-92",
+        "sha256": "f5d4e31fcd31606e3f4ca1e354d470b52769ccdb8597e71f424eabaf4b3bf156"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-93",
+        "sha256": "9e67b0640864a20b20ceab2f1f034a96aed36f94105c60c0541a2ce761ea952f"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-94",
+        "sha256": "d04772a91c1decf446fcf1680cdf3e92e76d7aa63aa0a5b2957a546004708729"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-95",
+        "sha256": "54b73f36358cf8bf6e5ca8c24caf5b54366118b48f6cd524b3cb543573e31564"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-96",
+        "sha256": "d026819b8d8991e719cb136f92ca7c2a5fca6dc75799643a3736c5b6f92322ab"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-97",
+        "sha256": "568103954a09fd71c513991666644f3ead60818abf6f6772d40c33c2474c046e"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-98",
+        "sha256": "63289e09991f8227fa82c43e32a53c682c655e8660b16f711a93296c124848e6"
+      },
+      {
+        "kind": "game",
+        "id": "v6-fund-game-99",
+        "sha256": "ccaf169df4b54aa0a226e98229fb83a3d8afe34bf4af8befaa20df98df536373"
+      },
+      {
+        "kind": "writing",
+        "id": "v6-fund-writing-0",
+        "sha256": "f9cadaf7e556bd42b02d83d4ee68222e21575390a50d6e2f37053bc4ddc45b01"
+      },
+      {
+        "kind": "writing",
+        "id": "v6-fund-writing-1",
+        "sha256": "03e9d256cf3dbef112441e453c2453c3d1007371b736a1bb2ca0c17a1d168ccf"
+      },
+      {
+        "kind": "supplements",
+        "id": "v6-fund-supp-matrixBox",
+        "sha256": "9d6aac98b715fb0c21f31eccba6969e90068693a7e30e2ec7a730db655800de4"
+      },
+      {
+        "kind": "supplements",
+        "id": "v6-fund-supp-teacherBox",
+        "sha256": "67a0e88eac26c9fa9a4dcca2bd0107983ff8493e86f2af49007d34123ff54632"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-fund-theory-0",
+        "sha256": "d6a8b3acb8eeb93416afa790fd10bd5dd3a36d7099e519dee4a3ca9ffa577669"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-fund-depth-0",
+        "sha256": "e19cd4de07458c6c1191a2693c7e821d806c23e67a76c53f1c87840a60b604fc"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-fund-recall-0",
+        "sha256": "e02d85284d9ddae26284574be17f2e171e01fdb8d448dc4f51ba27a9ca7920ba"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-fund-theory-1",
+        "sha256": "b5a3977ed886b9d768c1f55413246583edfa3e2ffdc77d806a25871f81051b18"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-fund-depth-1",
+        "sha256": "b7e2e7eb1379b2cd34fb0581a8b4d71cac4ab486107ddcac115c88649093c63c"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-fund-recall-1",
+        "sha256": "037d97b705d6c2d1e4cfde01d86561299831c2409f1b87e1011e5bca87a04271"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-fund-theory-2",
+        "sha256": "007aff575239821cd04cc2d9045b5caf19fb2c115556db4c53062fcdcc352ba1"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-fund-depth-2",
+        "sha256": "e3bbc838cba556b1290009658d4d2cf0cdf64e8b21f3ceb0ea6296a270ded91a"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-fund-recall-2",
+        "sha256": "8867603b190d085cfce759820e9e23f7fdc1a8ade26087703d54315eb818f667"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-fund-theory-3",
+        "sha256": "808d275dabf845f289360cac8a9fdc2b5a7acfa9053e23e7366fec02f114035b"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-fund-depth-3",
+        "sha256": "1ff39dbe263fc10f4201025bdec904c5ca824a16b43c54b552e33fb201de6489"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-fund-recall-3",
+        "sha256": "33ea17abc5b4b50ff54b869564a803a6f4b75bbbf3fdb65d3ac53de9cc13d6b0"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-fund-theory-4",
+        "sha256": "040036584215dc9d2a8bdc4d57c9058daa7b9b1a043419631783c1cd42212f99"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-fund-depth-4",
+        "sha256": "c79f9566e87aa5484b5af6d4d862fd0891944e07c6f3eddf8f23a0b13a0e1ee6"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-fund-recall-4",
+        "sha256": "00dd7ea1b1faf39159308ad19933ff66dd504af393b86f876d36c47c87d219bd"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-fund-theory-5",
+        "sha256": "e7478cfba58c436e9a909989d1974736ce9c5ad533cd1554fe53651855c25a2b"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-fund-depth-5",
+        "sha256": "5d29474b8c9cf51f0ce5bb6389eeb81cad1eeae2a9af44690b95954c4b5914de"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-fund-recall-5",
+        "sha256": "ac7bca43584454ea5c36e892a9a27a9b9e82c2767aa87c0735c134940e2e9cba"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-fund-theory-6",
+        "sha256": "a88f4b039e5de867ab4c5bd77e8096f7d40fd0b787307ce4f0828a8bc406c719"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-fund-depth-6",
+        "sha256": "a83cd354f9020e0d1eddfd527f9cecfdc3ff579deb2934108074d72f567b3fe5"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-fund-recall-6",
+        "sha256": "ebfb4c4cb1f1f26dd532a96fa661e655aa553bca7f1c69865666b699beb6d5ec"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-fund-theory-7",
+        "sha256": "f3115ddc82311eda9e902bf4a04be9bc5e0b19adf5141b1674f272091ea339cd"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-fund-depth-7",
+        "sha256": "9d67bbce003f38fafe347d292369d6d2552d0a539b20dc85c8c0f47d4966dc5f"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-fund-recall-7",
+        "sha256": "b1dae2f26d2f7b4696f5afe321165527788520b76bb02e54c597f40050c9431c"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-fund-theory-8",
+        "sha256": "e226bc52cd0ee41a43cc1263cd112b8bef8d5f9467f1d743bb927438c7b05725"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-fund-depth-8",
+        "sha256": "69bb17fe1017a45abed39f2845edc95709a79ba77d829e82086f7d559e4f85fd"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-fund-recall-8",
+        "sha256": "555a1da338f1c0dd105362eff08519ca9cab8ccabd924baaf8e7a71d20ce39dc"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-fund-theory-9",
+        "sha256": "9ea7fc6745442022b18d11620b7de6d0429c00331c260c428624708e10316c4b"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-fund-depth-9",
+        "sha256": "7b15b3c490f621073e3ffbdf18b31e5745d06643e410ec095c0c038936900c46"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-fund-recall-9",
+        "sha256": "99eca330cd75c696c1d86dd072214cf81c1fefda4d5a2fdd0a91b7c396007c8c"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-fund-theory-10",
+        "sha256": "6e85ecae5164b93eaa2869ead1a6ac1b3e230e244e35e83ce39611af5d530f37"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-fund-depth-10",
+        "sha256": "2a83acede351c118247683b3a21a2d1a4332ffc4b119475cbd801cafc62d3657"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-fund-recall-10",
+        "sha256": "4fa75039696e8d01c2265336c6fe8d6196abf944f55ea4cea3efae11a1fceef5"
+      }
+    ],
+    "premium_criteria": [
+      {
+        "id": "correcao_conceitual",
+        "assessment": "reviewed-and-approved-in-stated-scope",
+        "reason": "Leitura integral dos bancos históricos e dos recursos novos; correções de Corrêa, não-lugar, historiografia, rede/território-rede, causalidade, escalas e generalizações V/F com antes/depois. Os 32 gabaritos históricos permanecem com o mesmo índice e texto corretos."
+      },
+      {
+        "id": "cobertura",
+        "assessment": "reviewed-and-approved-in-stated-scope",
+        "reason": "Matriz semântica do núcleo Fundamentos do edital consolidado, página 101. As 11 missões contemplam categorias, pensamento clássico/contemporâneo, produção, natureza/sociedade, escalas, perspectivas críticas/decoloniais/interculturais e leitura socioespacial. Não certifica as outras 24 unidades."
+      },
+      {
+        "id": "profundidade",
+        "assessment": "reviewed-and-approved-in-stated-scope",
+        "reason": "Blocos originais válidos preservados e 11 aprofundamentos novos: mecanismos, limites, contraexemplos e aplicações. Densidade não foi reduzida para caber em componentes."
+      },
+      {
+        "id": "clareza",
+        "assessment": "reviewed-and-approved-in-stated-scope",
+        "reason": "Definição, relação e exemplo distinguem-se; a leitura de evidências separa observação, hipótese e conclusão. Relações de lugar e territorialidade são contextualizadas."
+      },
+      {
+        "id": "exemplos",
+        "assessment": "reviewed-and-approved-in-stated-scope",
+        "reason": "Carajás tem fonte e referência histórica explícitas. Casos e tabela novos são identificados como hipotéticos. Povos e comunidades não são homogeneizados."
+      },
+      {
+        "id": "redundancia",
+        "assessment": "reviewed-and-approved-in-stated-scope",
+        "reason": "32 itens antigos preservados como Fixação; cinco famílias explicitam pares próximos sem novidade independente. Diagnóstico repetido não cria estoque novo. Conceitos retomados em outras missões são aplicação, não nova unidade concorrente."
+      },
+      {
+        "id": "terminologia",
+        "assessment": "reviewed-and-approved-in-stated-scope",
+        "reason": "Rede não é sinônimo automático de território-rede; forma não implica função; lugar não exige apenas afeto positivo; rótulos escolares não substituem historiografia. Natureza e ação social não são mutuamente excludentes."
+      },
+      {
+        "id": "lacunas",
+        "assessment": "reviewed-and-approved-in-stated-scope",
+        "reason": "Déficits de aplicação e integração tratados com 12 itens Concurso e quatro Elite A–E, além de novos recalls e aprofundamentos. Não há estoque de questões oficiais identificadas nem calibração empírica; esses limites permanecem explícitos."
+      },
+      {
+        "id": "temporalidade",
+        "assessment": "reviewed-and-approved-in-stated-scope",
+        "reason": "Perfil de concurso, LDB e BNCC possuem fonte, data e gatilho de revisão. Dados operacionais são históricos, não atuais. Eventos e obras recebem datas históricas; não se troca seu ano pelo ano da consulta."
+      },
+      {
+        "id": "nivel",
+        "assessment": "reviewed-and-approved-in-stated-scope",
+        "reason": "32 Fixação, 12 Concurso e quatro Elite; níveis editoriais D1–D3 e C1–C5. Seis itens de aplicação/integração constituem o Chefão canônico. O antigo rótulo Chefão não foi confundido com dificuldade avançada."
+      },
+      {
+        "id": "fontes",
+        "assessment": "reviewed-and-approved-in-stated-scope",
+        "reason": "Edital, legislação e BNCC consultados em fontes oficiais. Correções conceituais apoiadas por fontes acadêmicas/institucionais com alcance declarado. Excertos indexados, resumos e referências bibliográficas não são descritos como leitura integral de obras."
+      },
+      {
+        "id": "treino",
+        "assessment": "reviewed-and-approved-in-stated-scope",
+        "reason": "Todas as 48 questões possuem feedback por alternativa; 100 V/F têm justificativa; cartões incluem resposta, relação e exemplo. Discursivas mantêm comandos, modelos e rubricas didáticas. A revisão espaçada e o migrador serão requisitos da integração, não funcionalidades alegadas da base de dados."
+      }
+    ]
+  },
+  "editorial_approval": {
+    "kind": "delegated-ai",
+    "contract": "delegated-content-review-v1",
+    "reviewer": "Codex",
+    "human_manual_review": false,
+    "reviewed_at": "2026-10-16",
+    "delegation_evidence": "MissaoAprovacaoGeo/V6_ISSUE13_FUNDAMENTOS_AUDITORIA.md",
+    "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_FUNDAMENTOS_AUDITORIA.md",
+    "reviewed_digest": "0b6acb643e5e567fe3e586d5398df07834f28ad269d0805b64f508eeacbe322c"
+  }
+}
