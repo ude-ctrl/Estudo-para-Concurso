@@ -3,6 +3,14 @@
 Data: 15/10/2026
 Branch: `v6-piloto-cartografia`
 
+## Retorno posterior à implementação sensorial
+
+Em 16/10/2026 (America/Sao_Paulo), o usuário informou:
+
+> Continua a mesma coisa e sinceramente ? se não implciar em nada, vamos em frente e dar continuidade
+
+A [consolidação técnica](V6_FASE14_PADRAO_TECNICO.md) registra a autorização para continuidade documental e mantém a diferença visual ainda não percebida como ressalva. Não se conhece o endereço ou a versão aberta nesse retorno. O aceite anterior não foi retirado, mas não é estendido aos efeitos novos; não foi comunicado um novo resultado funcional. Não houve nova alteração de interface, conteúdo, publicação ou início da Issue #13 nesta rodada.
+
 ## Atualização após a segunda rodada
 
 O usuário aprovou a mudança visual e informou **“Testei, tudo ok.”** após testar a versão `67c38a7`. O [registro de aceite e próximos passos](V6_FASE14_ACEITE_USO_E_PROXIMOS_PASSOS.md) distingue esse aceite de uso da [reconferência técnica P1/P3 recebida](V6_FASE14_RECONFERENCIA_P1_P3.md), da revisão editorial ainda pendente e de autorização de publicação. A rejeição descrita abaixo corresponde à primeira entrega e permanece preservada no histórico.

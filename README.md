@@ -4,6 +4,8 @@
 
 Atualização do piloto: as [correções de treino contextual e favoritos](MissaoAprovacaoGeo/V6_FASE14_CORRECOES_P1_P3.md) passaram pela [reconferência comunicada pelo usuário](MissaoAprovacaoGeo/V6_FASE14_RECONFERENCIA_P1_P3.md). A rodada posterior de [Gamificação Sensorial](MissaoAprovacaoGeo/V6_FASE14_GAMIFICACAO_SENSORIAL_IMPLEMENTACAO.md) foi autorizada e implementada: percurso visual, Foco/Equilibrado/Imersivo, sons opcionais e celebrações proporcionais. **A nova experiência aguarda teste humano.** O padrão inicial é Equilibrado com som desligado. A Issue #13 e a promoção a Base Canônica não foram iniciadas.
 
+Continuidade: o usuário informou que ainda vê a mesma aparência e autorizou seguir sem implicações. O [padrão técnico consolidado](MissaoAprovacaoGeo/V6_FASE14_PADRAO_TECNICO.md) registra contratos e evidências, mantendo a ressalva visual e a revisão editorial pendentes. Esta consolidação é documental: não publica, não altera conteúdo e não inicia a Issue #13. A branch, por si só, não cria um endereço de prévia hospedada.
+
 A descrição abaixo registra a base histórica da biblioteca, anterior ao piloto.
 
 Biblioteca de estudos para concursos de Professor de Geografia. Esta primeira etapa reúne o acervo em uma interface React/TypeScript, com busca, filtros por área, favoritos, percurso e acesso a estudo, flashcards e games.

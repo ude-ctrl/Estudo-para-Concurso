@@ -1,5 +1,7 @@
 # V6 — Fase 14: Auditoria Premium do piloto
 
+**Continuidade documental — 16/10/2026, America/Sao_Paulo:** o usuário informou que continua vendo a mesma aparência e autorizou avançar se não houver implicações. A [referência técnica](V6_FASE14_PADRAO_TECNICO.md) consolida os contratos verificados, mantendo a ressalva sensorial e a revisão editorial pendentes. Não é uma nova auditoria nem um aceite visual presumido; esta rodada não altera implementação ou conteúdo.
+
 **Rodada sensorial posterior:** após a reconferência P1/P3 e a leitura das novas regras de governança, o usuário autorizou a [Gamificação Sensorial](V6_FASE14_GAMIFICACAO_SENSORIAL_IMPLEMENTACAO.md). Ela foi implementada sem alterar conteúdo ou critérios do motor pedagógico. O percurso, os sons opcionais e a intensidade aguardam novo teste humano. O aceite anterior continua registrado para a experiência anterior; não é atribuído automaticamente aos efeitos novos. A revisão editorial dos 36 itens permanece pendente e nenhuma Base Canônica foi promovida.
 
 ## Conferência Premium da camada sensorial

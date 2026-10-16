@@ -6,6 +6,8 @@ O usuário já aprovou o visual e o teste de uso. A reauditoria confirmou B1/B2/
 
 **Rodada posterior autorizada:** a [Gamificação Sensorial](V6_FASE14_GAMIFICACAO_SENSORIAL_IMPLEMENTACAO.md) acrescenta percurso visual, intensidade e sons opcionais. Essa experiência nova aguarda teste humano; o aceite anterior não é presumido para os novos efeitos. O próximo teste pode seguir o roteiro curto daquele relatório, sem repetir toda a auditoria P1/P3.
 
+**Continuidade registrada em 16/10/2026:** o usuário autorizou seguir, relatando que ainda vê a mesma aparência. A [referência técnica consolidada](V6_FASE14_PADRAO_TECNICO.md) mantém essa ressalva, sem declarar aprovação sensorial ou editorial. Uma branch no GitHub não gera endereço de prévia: a execução abaixo abre a cópia local, e o site público só muda após publicação autorizada.
+
 ## Executar
 
 Na cópia desta branch:

@@ -30,12 +30,15 @@ Em 16/10/2026 UTC, o usuário comunicou que a build, os 53 testes de integridade
 
 ## Situação atual
 
+Em 16/10/2026 (America/Sao_Paulo), o usuário informou que continua vendo a mesma aparência e autorizou dar continuidade se isso não trouxer implicações. Foi registrada a [consolidação do padrão técnico com ressalva sensorial](V6_FASE14_PADRAO_TECNICO.md). A continuidade desta rodada é documental; não atribui aprovação visual ou editorial, não publica e não inicia a Issue #13. O endereço e a versão efetivamente abertos pelo usuário não foram identificados.
+
 Depois da reconferência P1/P3, o usuário autorizou a rodada separada de [Gamificação Sensorial](V6_FASE14_GAMIFICACAO_SENSORIAL_IMPLEMENTACAO.md). O próximo passo é o teste humano dessa experiência nova, conforme a ordem de governança atualizada. A pendência editorial não foi convertida em outra exigência de repetir a auditoria técnica encerrada.
 
 | Etapa | Situação |
 | --- | --- |
 | Mudança visual e experiência anteriores | Aprovadas pelo usuário no chat |
-| Gamificação Sensorial | Rodada posterior autorizada e implementada; novo teste humano pendente |
+| Gamificação Sensorial | Implementada; usuário ainda não percebeu diferença e autorizou continuidade documental; aceite específico dos efeitos não confirmado |
+| Referência do padrão técnico | Consolidada com ressalva sensorial; não equivale ao encerramento integral do piloto |
 | Correções B1/B2/C1 e UX | Implementadas e documentadas na segunda rodada |
 | Verificação automatizada | Rodada sensorial: build, 63 testes de integridade/lógica, 146 cenários globais e 22 revalidações posteriores dos avisos aprovados |
 | Paridade | 685 registros rastreáveis e 31 HTMLs históricos preservados byte a byte |
@@ -48,7 +51,9 @@ O [relatório de testes](V6_FASE14_RELATORIO_TESTES.md) distingue a bateria sens
 
 ## Próximo passo concreto
 
-Testar a camada sensorial seguindo o roteiro curto do [relatório da rodada](V6_FASE14_GAMIFICACAO_SENSORIAL_IMPLEMENTACAO.md). Após esse retorno, fechar o padrão técnico V6. A Issue #13, a Auditoria Mestra das 28 unidades e as futuras promoções para Base Canônica ficam para a etapa posterior, em branch própria e sem início automático.
+Consultar a [referência técnica consolidada](V6_FASE14_PADRAO_TECNICO.md), com os contratos verificados e as pendências separadas. O retorno de continuidade já foi registrado, sem solicitar outra reconferência P1/P3. A diferença visual ainda não percebida permanece como ressalva; o roteiro curto do [relatório sensorial](V6_FASE14_GAMIFICACAO_SENSORIAL_IMPLEMENTACAO.md) continua disponível para sua avaliação, sem alegar que ela já passou.
+
+A Issue #13, a Auditoria Mestra das 28 unidades e as futuras promoções para Base Canônica ficam para depois do fechamento do piloto, em branch própria e mediante comando para iniciar essa etapa. Não foram iniciadas nesta consolidação.
 
 ### Histórico da reconferência P1/P3
 

@@ -5,6 +5,8 @@ Implementação sensorial: `83a616c4512ea48f082d2d85d7b61e7e510c34ae`; ajuste de
 
 **Situação: implementada para novo teste humano da experiência.** A reconferência P1/P3 anterior permanece registrada. Os 36 itens autorais continuam `human-review-pending`; esta camada não os aprova editorialmente.
 
+**Retorno posterior — 16/10/2026, America/Sao_Paulo:** o usuário ainda não percebeu mudança e autorizou dar continuidade se isso não trouxer implicações. A [consolidação técnica](V6_FASE14_PADRAO_TECNICO.md) registra o avanço documental e mantém a ressalva visual. Não foi confirmado qual endereço/versão foi aberto; o retorno não é apresentado como aprovação dos efeitos, autorização de publicação ou início da Issue #13.
+
 ## Autorização e escopo
 
 O usuário pediu a atualização de contexto com a proposta sensorial, a política de Base Canônica, a Issue #13 e o comentário mais recente da Issue #12. Depois do esclarecimento de que a revisão editorial pendente não cria outra rodada obrigatória de auditoria técnica P1/P3, autorizou o prosseguimento: **“Ok, vamos continuar.”**
@@ -106,4 +108,4 @@ O teste humano deve avaliar conforto, legibilidade, intensidade e sensação de 
 
 ## Critério de parada
 
-Parar para teste humano da experiência sensorial. Somente depois desse retorno caberá fechar o padrão técnico V6 e deliberar sobre as próximas etapas. Sem merge ou publicação, sem migrar outros módulos e sem iniciar a Issue #13 automaticamente.
+O retorno posterior do usuário permitiu consolidar documentalmente os contratos técnicos, mantendo explícita a diferença visual ainda não percebida. Isso não encerra integralmente o piloto nem inventa aceite da experiência sensorial. Sem merge ou publicação, sem migrar outros módulos e sem iniciar a Issue #13 automaticamente. O [registro de consolidação](V6_FASE14_PADRAO_TECNICO.md) delimita esse avanço e as pendências.

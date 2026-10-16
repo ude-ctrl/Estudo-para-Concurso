@@ -1,5 +1,7 @@
 # V6 — Fase 14: relatório de testes
 
+**Consolidação documental — 16/10/2026, America/Sao_Paulo:** os resultados abaixo foram vinculados à [referência técnica do piloto](V6_FASE14_PADRAO_TECNICO.md), após o usuário autorizar continuidade com ressalva sobre a aparência. Esta rodada não altera código ou banco e não reexecuta as suítes; mantém os commits, a cobertura e os limites das evidências anteriores. A validação desta rodada se limita à documentação e à ausência de alterações nos arquivos protegidos.
+
 ## Gamificação Sensorial — rodada posterior autorizada
 
 Execução: **16/10/2026 UTC**, somente em `v6-piloto-cartografia`. Funcionalidade em `83a616c`; ajuste do foco em `28ed734`; preparação dos testes em `704dd7c`. O refinamento posterior dos avisos está em `bdda892`, com revalidação própria descrita abaixo. [Escopo e decisões](V6_FASE14_GAMIFICACAO_SENSORIAL_IMPLEMENTACAO.md).
