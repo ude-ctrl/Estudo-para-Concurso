@@ -1,5 +1,28 @@
 # V6 — Fase 14: Auditoria Premium do piloto
 
+**Rodada sensorial posterior:** após a reconferência P1/P3 e a leitura das novas regras de governança, o usuário autorizou a [Gamificação Sensorial](V6_FASE14_GAMIFICACAO_SENSORIAL_IMPLEMENTACAO.md). Ela foi implementada sem alterar conteúdo ou critérios do motor pedagógico. O percurso, os sons opcionais e a intensidade aguardam novo teste humano. O aceite anterior continua registrado para a experiência anterior; não é atribuído automaticamente aos efeitos novos. A revisão editorial dos 36 itens permanece pendente e nenhuma Base Canônica foi promovida.
+
+## Conferência Premium da camada sensorial
+
+Esta é uma conferência da implementação com evidência automatizada, não um novo parecer independente ou aceite humano de conforto. [Resultados e commits](V6_FASE14_RELATORIO_TESTES.md): 63 testes de integridade/lógica, 146 cenários globais e 22 revalidações posteriores dos avisos aprovados.
+
+| Critério da proposta | Evidência e situação |
+| --- | --- |
+| Percurso e checkpoints | 17 missões por IDs estáveis; estados em texto/ícone; leitura isolada não conclui checkpoint; consulta sem bloqueios; teclado testado |
+| Intensidade | Foco/Equilibrado/Imersivo persistentes; mesmos conteúdo, gabaritos e critérios pedagógicos; padrão Equilibrado |
+| Áudio opcional | Desligado por padrão; opt-in, exemplo, API nativa e indisponível testados; sem música/downloads; som interrompido ao sair/ocultar/desligar |
+| Proporcionalidade | Acerto comum sem toast de conquista; Elite distinto; Chefão/erro/módulo com destaque próprio; conforto percebido aguarda teste humano |
+| Redução de movimento | Sistema e ajuste manual soberanos; partículas ausentes e animações desativadas; mudança durante celebração testada |
+| Prova | Sons, XP visual e celebrações suprimidos, inclusive com prova em andamento após sair da tela; motor de prova preservado |
+| XP e domínio | Mesma concessão do ledger; balanço sem novo prêmio; nível pessoal separado de conhecimento; repetição precoce sem XP extra |
+| Mobile e acesso | Viewports 360/390/430, modo escuro, pontos com alvo mínimo de 44 px, teclado e ampliação verificados; avisos no fluxo sem cobrir ações |
+| Tempo de leitura | Resumo de módulo sem expiração automática; foco/hover pausam os demais avisos; fechamento por teclado e retomada da expiração testados |
+| Persistência e restauração | Preferências e balanço opcionais no esquema 6; cópias anteriores aceitas; sem subtotal retroativo inventado; efeitos não repetidos no reload |
+| Preservação | Banco, gabaritos, IDs, 685 registros de paridade e 31 HTMLs mantidos; agenda, erros, domínio e B1/B2/C1 preservados |
+| Governança | Somente piloto; sem merge/publicação; sem início da Issue #13; sem promoção canônica ou aprovação editorial automática |
+
+**Parecer da implementação:** camada pronta para o teste humano previsto na proposta. Avaliação de sensação de recompensa, conforto dos sons e ausência de distração durante estudo real permanece humana; não se declara o padrão técnico V6 fechado antes desse retorno.
+
 **Atualização de aceite:** após a segunda rodada, o usuário aprovou o visual e informou **“Testei, tudo ok.”**. O [registro de aceite](V6_FASE14_ACEITE_USO_E_PROXIMOS_PASSOS.md) documenta esse resultado. A reconferência P1/P3 foi recebida sem bloqueador técnico remanescente nesse escopo. A revisão editorial individual dos itens novos permanece pendente; merge/publicação não foram autorizados.
 
 **Atualização após reauditoria:** o parecer trazido pelo usuário confirmou B1/B2/C1 e apontou P1 bloqueador no treino contextual, além de P3 menor no contador de favoritos. As [correções P1/P3](V6_FASE14_CORRECOES_P1_P3.md) foram implementadas sem modificar o banco pedagógico. O [parecer posterior de reconferência](V6_FASE14_RECONFERENCIA_P1_P3.md) informou que não resta bloqueador técnico no escopo P1/P3, com build, 53 testes de integridade/lógica, 100 cenários de navegador e oito verificações adicionais aprovados. O aceite de uso segue válido; não se amplia esse parecer para aprovação editorial integral.

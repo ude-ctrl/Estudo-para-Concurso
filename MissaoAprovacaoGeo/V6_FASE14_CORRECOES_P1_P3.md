@@ -2,7 +2,7 @@
 
 Execução: 16/10/2026 UTC (15/10/2026 em America/Sao_Paulo). Branch exclusiva: `v6-piloto-cartografia`.
 
-**Situação atualizada: reconferência recebida, sem bloqueador técnico remanescente no escopo P1/P3.** O [parecer comunicado pelo usuário](V6_FASE14_RECONFERENCIA_P1_P3.md) registra build, 53 testes de integridade/lógica, 100 cenários de navegador e oito verificações adicionais aprovados. O aceite visual e de uso permanece válido; a revisão editorial dos itens autorais continua pendente. Não houve merge, publicação, expansão de módulos ou implementação da proposta de gamificação sensorial.
+**Situação da rodada P1/P3: reconferência recebida, sem bloqueador técnico remanescente nesse escopo.** O [parecer comunicado pelo usuário](V6_FASE14_RECONFERENCIA_P1_P3.md) registra build, 53 testes de integridade/lógica, 100 cenários de navegador e oito verificações adicionais aprovados. O aceite visual e de uso permanece válido para a experiência anterior; a revisão editorial dos itens autorais continua pendente. Na rodada P1/P3 não houve merge, publicação, expansão de módulos ou implementação da proposta sensorial. A [Gamificação Sensorial posterior](V6_FASE14_GAMIFICACAO_SENSORIAL_IMPLEMENTACAO.md) foi autorizada separadamente e aguarda seu próprio teste humano.
 
 ## Parecer recebido e escopo
 

@@ -4,6 +4,8 @@ O piloto está isolado na branch `v6-piloto-cartografia`. Não substitui a bibli
 
 O usuário já aprovou o visual e o teste de uso. A reauditoria confirmou B1/B2/C1 e identificou P1/P3; as [correções](V6_FASE14_CORRECOES_P1_P3.md) passaram pela [reconferência recebida](V6_FASE14_RECONFERENCIA_P1_P3.md), sem bloqueador técnico remanescente nesse escopo. A revisão editorial dos 36 itens autorais permanece pendente. O [registro de aceite](V6_FASE14_ACEITE_USO_E_PROXIMOS_PASSOS.md) mantém o histórico. Merge/publicação continuam sem autorização.
 
+**Rodada posterior autorizada:** a [Gamificação Sensorial](V6_FASE14_GAMIFICACAO_SENSORIAL_IMPLEMENTACAO.md) acrescenta percurso visual, intensidade e sons opcionais. Essa experiência nova aguarda teste humano; o aceite anterior não é presumido para os novos efeitos. O próximo teste pode seguir o roteiro curto daquele relatório, sem repetir toda a auditoria P1/P3.
+
 ## Executar
 
 Na cópia desta branch:
@@ -27,7 +29,7 @@ Abra a raiz ou `/v6.html` no endereço do preview. Caminhos de assets relativos 
 
 A [segunda rodada de correções](V6_FASE14_CORRECOES_RODADA2.md) descreve as mudanças exigidas pela auditoria independente e pela rejeição inicial de UX. O aceite visual e de uso e o parecer de reconferência P1/P3 já foram recebidos. Os passos abaixo permanecem como roteiro de inspeção, sem exigir repetição integral para registrar esses resultados.
 
-## Revisar o piloto
+## Roteiro geral de consulta do piloto
 
 1. Entre em cada uma das três unidades e abra o seletor de missão. Há 17 missões e 50 explicações históricas, com complementos progressivamente revelados.
 2. Registre uma leitura, escreva uma evocação antes do modelo e faça uma rodada de Fixação. Compare o feedback e a procedência com o HTML original.
@@ -53,10 +55,11 @@ Não é necessário apagar dados históricos para experimentar. Importação de 
 | Mapa verificável | `V6_FASE14_PARIDADE.json` | Contagens e destino individual de cada registro histórico |
 | Motor independente da interface | `src/v6/engine.ts` | Agenda, evidências, erros, domínio, recompensas, seleção de questões e blueprint genérico |
 | Marcos e apresentação | `recognition.ts`, `Celebration.tsx`, `scripts/v6-editorial.mjs` | Microcelebrações sem XP adicional e revisão rastreável da embalagem editorial |
+| Experiência sensorial | `sensory.ts`, `SensoryUI.tsx`, `sound.ts` | Percurso, preferências, balanço de XP existente e eventos visuais/sonoros opcionais; Prova silenciosa |
 | Persistência | `src/v6/repository.ts`, `types.ts` | Envelope de estado, validação, revisões, recuperação e espelho do caderno global |
 | Ambientes | `Study.tsx`, `Training.tsx`, `Review.tsx`, `Exam.tsx` | Estudo, treino, revisão e prova separados |
 | Componentes e linguagem visual | `components.tsx`, `styles.css` | Feedback, procedência, tabelas/figura, tipografia, responsividade e acessibilidade |
-| Verificação | `tests/v6.test.mjs`, `tests/browser/v6.spec.ts` | Paridade, gabaritos, motor e fluxos reais de navegação |
+| Verificação | `tests/v6.test.mjs`, `tests/browser/v6.spec.ts`, `tests/browser/sensory.spec.ts` | Paridade, gabaritos, motor, áudio, preferências e fluxos reais de navegação |
 
 Os motores não executam JavaScript histórico. Texto e bancos são extraídos como literais pelo importador AST já existente. O HTML pedagógico é sanitizado e seus IDs recebem namespace. As funções antigas de XP, Game, revisão ou reset não são transplantadas.
 

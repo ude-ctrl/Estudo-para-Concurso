@@ -30,24 +30,31 @@ Em 16/10/2026 UTC, o usuário comunicou que a build, os 53 testes de integridade
 
 ## Situação atual
 
+Depois da reconferência P1/P3, o usuário autorizou a rodada separada de [Gamificação Sensorial](V6_FASE14_GAMIFICACAO_SENSORIAL_IMPLEMENTACAO.md). O próximo passo é o teste humano dessa experiência nova, conforme a ordem de governança atualizada. A pendência editorial não foi convertida em outra exigência de repetir a auditoria técnica encerrada.
+
 | Etapa | Situação |
 | --- | --- |
-| Mudança visual e experiência de uso | Aprovadas pelo usuário no chat |
+| Mudança visual e experiência anteriores | Aprovadas pelo usuário no chat |
+| Gamificação Sensorial | Rodada posterior autorizada e implementada; novo teste humano pendente |
 | Correções B1/B2/C1 e UX | Implementadas e documentadas na segunda rodada |
-| Verificação automatizada | Última bateria P1/P3: build, 53 testes de integridade/lógica e 100 cenários globais aprovados |
+| Verificação automatizada | Rodada sensorial: build, 63 testes de integridade/lógica, 146 cenários globais e 22 revalidações posteriores dos avisos aprovados |
 | Paridade | 685 registros rastreáveis e 31 HTMLs históricos preservados byte a byte |
 | Reavaliação técnica independente | Reconferência recebida: sem bloqueador técnico remanescente no escopo P1/P3; build, 53 testes, 100 cenários e oito verificações adicionais aprovados conforme parecer comunicado |
 | Revisão editorial dos itens autorais | Pendente; nenhuma promoção automática ao banco oficial |
 | Merge e publicação | Sem autorização; não executados |
 | Expansão para outro módulo | Sem autorização; não iniciada |
 
-O [relatório de testes](V6_FASE14_RELATORIO_TESTES.md) registra a última bateria P1/P3 e preserva os resultados históricos da segunda rodada: 51 testes de integridade/lógica, 72 cenários globais e 10 revalidações visuais.
+O [relatório de testes](V6_FASE14_RELATORIO_TESTES.md) distingue a bateria sensorial global da revalidação posterior dos avisos e preserva os resultados históricos de P1/P3 e da segunda rodada. A reconferência P1/P3 recebida permanece válida para aquele escopo, sem atribuição automática de aceite aos efeitos novos.
 
 ## Próximo passo concreto
 
+Testar a camada sensorial seguindo o roteiro curto do [relatório da rodada](V6_FASE14_GAMIFICACAO_SENSORIAL_IMPLEMENTACAO.md). Após esse retorno, fechar o padrão técnico V6. A Issue #13, a Auditoria Mestra das 28 unidades e as futuras promoções para Base Canônica ficam para a etapa posterior, em branch própria e sem início automático.
+
+### Histórico da reconferência P1/P3
+
 A [auditoria independente](V6_FASE14_AUDITORIA_INDEPENDENTE.md), na decisão de governança, pede **“solicitar nova auditoria independente”** após as correções. O mesmo pedido consta no [comentário da Issue #12](https://github.com/ude-ctrl/Estudo-para-Concurso/issues/12#issuecomment-6202083822): **“parar novamente para nova auditoria independente”**.
 
-Essa reavaliação identificou P1/P3; as correções foram implementadas e a reconferência recebida informou ausência de bloqueador técnico nesse escopo. A etapa de reconferência P1/P3 está encerrada. Cabe agora a decisão humana de merge/publicação, sem presumir aprovação editorial dos 36 itens autorais. Recomenda-se concluir a revisão editorial antes de promover esses itens a aprovados. Não é necessário repetir o teste de uso ou solicitar outra reconferência P1/P3 apenas para registrar o parecer.
+Essa reavaliação identificou P1/P3; as correções foram implementadas e a reconferência recebida informou ausência de bloqueador técnico nesse escopo. A etapa de reconferência P1/P3 está encerrada. A ordem posterior de governança acrescentou a Gamificação Sensorial e seu teste humano antes do fechamento do padrão técnico. A revisão editorial dos 36 itens autorais continua pendente antes de sua promoção a aprovados. Não é necessário solicitar outra reconferência P1/P3 apenas para registrar o parecer recebido.
 
 Roteiro da reauditoria anterior, preservado para rastreabilidade; o resultado da reconferência posterior está no [parecer P1/P3](V6_FASE14_RECONFERENCIA_P1_P3.md):
 

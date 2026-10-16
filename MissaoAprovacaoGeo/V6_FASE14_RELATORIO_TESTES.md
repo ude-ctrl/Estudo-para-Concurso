@@ -1,5 +1,27 @@
 # V6 — Fase 14: relatório de testes
 
+## Gamificação Sensorial — rodada posterior autorizada
+
+Execução: **16/10/2026 UTC**, somente em `v6-piloto-cartografia`. Funcionalidade em `83a616c`; ajuste do foco em `28ed734`; preparação dos testes em `704dd7c`. O refinamento posterior dos avisos está em `bdda892`, com revalidação própria descrita abaixo. [Escopo e decisões](V6_FASE14_GAMIFICACAO_SENSORIAL_IMPLEMENTACAO.md).
+
+**Resultado da bateria global: 63 testes de integridade/lógica e 146 cenários de navegador aprovados**, 73 pela raiz e 73 por `/Estudo-para-Concurso/`, sem falhas, ignorados ou resultados instáveis. A execução global de navegador verificou `704dd7c` e durou aproximadamente **294 segundos**. São os 100 cenários anteriores e 46 da camada sensorial. A build com TypeScript estrito, a geração reproduzível e a formatação dos arquivos de código/testes alterados passaram. Evidência estruturada: [resultado-sensorial.json](v6-evidencias/resultado-sensorial.json).
+
+Os 63 testes são cinco do acervo e 58 V6. As dez novas verificações de lógica cobrem preferências e backups anteriores, checkpoints sem falso domínio, balanço fiel ao ledger, ausência de XP adicional, precedência dos eventos, critérios de conclusão do módulo, nível separado de domínio, sequência civil, prova silenciosa e ciclo de vida do áudio.
+
+Os 23 cenários sensoriais por caminho cobrem percurso e navegação livre por teclado; persistência e restauração das preferências; feedback comum/Elite/erro; ausência de efeito em repetição imediata ou reload; áudio com opt-in, Web Audio nativo, API indisponível e retomada pendente cancelada; desligamento em outra aba e página oculta; Chefão em cinco combinações de intensidade/movimento; erro convertido; conclusão de módulo; balanço de revisão com Difícil sem erro; prova em andamento; dark mode e viewport mobile. A ampliação a 200% foi verificada no dashboard em 430 px. Os casos V6 observam exceções via `pageerror`.
+
+As rodadas preliminares de 38 cenários sensoriais e oito de áudio/ciclo de vida passaram. As revalidações de foco e de teclado/layout passaram em 12 execuções cada. Essas execuções se sobrepõem à bateria global; não são apresentadas como cenários exclusivos adicionais.
+
+Histórico preservado: a primeira bateria global teve 145 acertos e uma falha de foco no seletor Banco; a restauração passou a ocorrer após o commit da rota. A segunda teve 145 acertos e uma falha de primeiro Tab porque o teste podia encontrar o `h1` da tela de carregamento antes do workspace. Esse caso foi reproduzido com a resposta do banco pendente, e a preparação passou a aguardar a interface real antes de testar teclado ou medir layout. As exigências de foco e ausência de overflow foram mantidas. A bateria global posterior, citada acima, passou sem retries.
+
+Após a inspeção visual, o aviso de módulo passou a exigir dispensa manual, e os demais avisos pausam o fechamento durante foco/hover. A revalidação posterior exercita as celebrações antigas e novas, preservação de XP, ausência de repetição e de efeitos na Prova, movimento reduzido, foco e duração do aviso. O teste de expiração foi ajustado para retirar tanto o foco quanto o ponteiro antes de avançar o relógio; manter qualquer um deles sobre o cartão deve preservar a leitura. Os resultados dessa revalidação estão separados no JSON de evidências.
+
+**Revalidação posterior aprovada: 22 execuções**, 11 por caminho, no commit de testes `dbbf058` sobre a implementação `bdda892`; duração aproximada de 37 segundos, zero falhas, ignorados ou resultados instáveis. A build posterior ao refinamento dos avisos também passou. Essas 22 execuções são um recorte da suíte global com verificações de duração acrescentadas; não são 22 cenários exclusivos adicionais. O teste pontual de liberação de foco/ponteiro passou nos dois caminhos antes dessa revalidação completa dos avisos.
+
+**Preservação:** banco, gabaritos, registro de IDs e proposta sensorial original sem alterações; 685 registros de paridade e 31 HTMLs preservados. As regras de XP, agenda, erro, domínio, B1/B2/C1 e seleção de sessão P1 não foram reescritas. Os 36 itens autorais permanecem pendentes de revisão humana, sem promoção canônica; a prova oficial completa continua bloqueada por estoque aprovado insuficiente.
+
+As capturas foram inspecionadas para hierarquia, legibilidade, modo escuro e posição dos avisos. Usam fixtures, não progresso real do usuário. O Web Audio nativo foi exercitado, mas conforto e volume percebidos requerem o teste humano previsto nesta rodada. Não há alegação de teste físico iOS/Android, auditoria completa com leitores de tela, ganho pedagógico longitudinal ou medição de desempenho em redes móveis reais. Não foram adicionadas bibliotecas, música ou downloads de áudio. O aceite anterior não equivale ao aceite humano dos efeitos novos.
+
 ## Reconferência P1/P3 comunicada pelo usuário
 
 Em 16/10/2026 UTC, o usuário informou que reexecutou a build, os **53 testes de integridade/lógica e os 100 cenários de navegador**, todos aprovados, além de **oito verificações adicionais** dos fluxos solicitados. O parecer concluiu que **não resta bloqueador técnico no escopo P1/P3**; a revisão editorial dos itens autorais permanece pendente. O [registro integral da reconferência](V6_FASE14_RECONFERENCIA_P1_P3.md) delimita a procedência e o alcance desse resultado. Esta atualização é documental; não representa uma nova execução da suíte pela implementação.
