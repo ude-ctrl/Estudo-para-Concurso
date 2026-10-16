@@ -14,11 +14,11 @@
       "unit_id": "fundamentos-geografia",
       "module_id": "fundamentos",
       "title": "Conceitos, Categorias e Autores",
-      "status": "RASCUNHO",
-      "candidate_version": null,
-      "initial_snapshot_version": null,
-      "canonical_version": null,
-      "audit_started": false,
+      "status": "APROVADA_CANONICA",
+      "candidate_version": "1.0.0",
+      "initial_snapshot_version": "0.1.0",
+      "canonical_version": "1.0.0",
+      "audit_started": true,
       "runtime_enabled": false
     },
     {
@@ -324,12 +324,33 @@
     "reviewer_kind": "ai",
     "reviewer": "Codex",
     "authorization": "MissaoAprovacaoGeo/V6_ISSUE13_CONTRATO_REVISAO_DELEGADA.md",
-    "unit_ids": [
-      "cartografia-fundamentos",
-      "cartografia-representacao",
-      "geotecnologias"
-    ],
+    "unit_ids": ["cartografia-fundamentos", "cartografia-representacao", "geotecnologias"],
     "effective_at": "2026-10-16",
     "note": "Revisão editorial pelo assistente delegada pelo usuário; sem parecer humano fictício, sem merge/publicação e sem outros módulos."
-  }
+  },
+  "editorial_delegations": [
+    {
+      "contract": "delegated-content-review-v1",
+      "reviewer_kind": "ai",
+      "reviewer": "Codex",
+      "authorization": "MissaoAprovacaoGeo/V6_ISSUE13_FUNDAMENTOS_AUDITORIA.md",
+      "unit_ids": ["fundamentos-geografia"],
+      "effective_at": "2026-10-16",
+      "note": "Continuidade da revisão delegada após publicação de Cartografia; consolidação de Fundamentos sem ativação na interface ou publicação deste lote."
+    }
+  ],
+  "consolidation_lots": [
+    {
+      "id": "cartografia-piloto",
+      "kind": "pilot",
+      "unit_ids": ["cartografia-fundamentos", "cartografia-representacao", "geotecnologias"],
+      "baseline": "cartografia/baseline-piloto.json"
+    },
+    {
+      "id": "fundamentos-primeira-consolidacao",
+      "kind": "legacy-literals",
+      "unit_ids": ["fundamentos-geografia"],
+      "baseline": "fundamentos/baseline-fundamentos.json"
+    }
+  ]
 }

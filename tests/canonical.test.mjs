@@ -78,7 +78,7 @@ function resignFixture(x) {
   x.audit.human_approval.reviewed_digest = reviewDigest(x);
 }
 
-test('catálogo mantém os 28 IDs oficiais e somente as três candidatas deste lote', async () => {
+test('catálogo mantém os 28 IDs oficiais e habilita somente Cartografia no consumidor atual', async () => {
   const registry = JSON.parse(await readFile(resolve(baseRoot, 'manifest.json'), 'utf8'));
   const doc = await readFile(
     resolve(root, 'MissaoAprovacaoGeo/V6_CORRECOES_E_LACUNAS_FASE13.md'),
@@ -94,17 +94,19 @@ test('catálogo mantém os 28 IDs oficiais e somente as três candidatas deste l
   assert.equal(new Set(registry.units.map((u) => u.module_id)).size, 9);
   assert.deepEqual(
     registry.units.filter((u) => u.audit_started).map((u) => u.unit_id),
-    ids,
+    ['fundamentos-geografia', ...ids],
   );
   assert.equal(
     registry.units.filter((u) => u.status === 'RASCUNHO' && u.candidate_version === null).length,
-    25,
+    24,
   );
   assert.ok(
     registry.units.every((u) =>
       ids.includes(u.unit_id)
         ? u.canonical_version === '1.0.0' && u.runtime_enabled === true
-        : u.canonical_version === null && u.runtime_enabled === false,
+        : u.unit_id === 'fundamentos-geografia'
+          ? u.canonical_version === '1.0.0' && u.runtime_enabled === false
+          : u.canonical_version === null && u.runtime_enabled === false,
     ),
   );
 });
@@ -112,15 +114,17 @@ test('catálogo mantém os 28 IDs oficiais e somente as três candidatas deste l
 test('três unidades canônicas validam e preservam o inventário das candidatas iniciais', async () => {
   const result = await validateLot();
   assert.deepEqual(
-    result.summaries.map((s) => [s.unit, s.resources, s.parity, s.approved]),
+    result.summaries
+      .filter((s) => ids.includes(s.unit))
+      .map((s) => [s.unit, s.resources, s.parity, s.approved]),
     [
       [ids[0], 277, 272, true],
       [ids[1], 183, 172, true],
       [ids[2], 231, 241, true],
     ],
   );
-  assert.equal(result.untouchedUnits, 25);
-  assert.equal(result.canonicalUnits, 3);
+  assert.equal(result.untouchedUnits, 24);
+  assert.equal(result.canonicalUnits, 4);
   assert.ok(originals.every((x) => validateBundle(x, { at }).approved === false));
   const sum = (k) => originals.reduce((n, x) => n + x.audit.counts[k], 0);
   assert.deepEqual(
@@ -359,9 +363,10 @@ test('leitura funciona com somente o pacote de base, sem HTMLs, importadores ou 
   t.after(() => rm(temp, { recursive: true, force: true }));
   await cp(resolve(baseRoot, 'manifest.json'), resolve(temp, 'manifest.json'));
   await cp(resolve(baseRoot, 'cartografia'), resolve(temp, 'cartografia'), { recursive: true });
+  await cp(resolve(baseRoot, 'fundamentos'), resolve(temp, 'fundamentos'), { recursive: true });
   const copy = await readBundle(temp, ids[0], '0.1.0');
   assert.equal(validateBundle(copy, { at }).resources, 277);
-  assert.equal((await validateLot(temp)).canonicalUnits, 3);
+  assert.equal((await validateLot(temp)).canonicalUnits, 4);
   await assert.rejects(loadApprovedUnit(temp, ids[0], '0.1.0', { at }), /não aprovada/);
 });
 
@@ -390,6 +395,7 @@ test('nova candidata não substitui a versão aprovada nem exige reabrir o HTML 
   const temp = await mkdtemp(resolve(tmpdir(), 'v6-canonical-versions-'));
   t.after(() => rm(temp, { recursive: true, force: true }));
   await cp(resolve(baseRoot, 'cartografia'), resolve(temp, 'cartografia'), { recursive: true });
+  await cp(resolve(baseRoot, 'fundamentos'), resolve(temp, 'fundamentos'), { recursive: true });
   const registry = JSON.parse(await readFile(resolve(baseRoot, 'manifest.json'), 'utf8'));
   const entry = registry.units.find((u) => u.unit_id === ids[0]);
   for (const other of registry.units.filter(
@@ -451,7 +457,7 @@ test('nova candidata não substitui a versão aprovada nem exige reabrir o HTML 
   assert.equal((await loadApprovedUnit(temp, ids[0], '1.0.0', { at })).status, 'APROVADA_CANONICA');
   await assert.rejects(loadApprovedUnit(temp, ids[0], '1.1.0', { at }), /não aprovada/);
   const checked = await validateLot(temp, { at });
-  assert.equal(checked.canonicalUnits, 1);
+  assert.equal(checked.canonicalUnits, 2);
   assert.equal(checked.summaries[0].status, 'EM_AUDITORIA');
   assert.equal((await readBundle(temp, ids[0], '0.1.0')).base.status, 'EM_AUDITORIA');
 });
@@ -486,8 +492,8 @@ test('0.1.1 continua íntegra quando o catálogo evolui e mantém todos os recur
     assert.deepEqual(next.provenance.parity_records, originals[i].provenance.parity_records);
     assert.deepEqual(next.audit.counts, originals[i].audit.counts);
   }
-  assert.equal(lot.canonicalUnits, 3);
-  assert.equal(lot.untouchedUnits, 25);
+  assert.equal(lot.canonicalUnits, 4);
+  assert.equal(lot.untouchedUnits, 24);
 });
 
 test('revisão recusa diferença não declarada, valor anterior falso e pacote pai alterado', () => {
@@ -745,8 +751,8 @@ const currentMap = () =>
 test('0.1.2 continua íntegra após a promoção e preserva as identidades, alternativas e gabaritos de 0.1.1', async () => {
   const result = await validateLot(baseRoot, { at });
   assert.ok(result.summaries.every((s) => s.version === '1.0.0' && s.approved));
-  assert.equal(result.canonicalUnits, 3);
-  assert.equal(result.untouchedUnits, 25);
+  assert.equal(result.canonicalUnits, 4);
+  assert.equal(result.untouchedUnits, 24);
   for (const [i, next] of current.entries()) {
     assert.equal(validateBundle(next, { at }).approved, false);
     assert.equal(validateRevision(revised[i], next).preserved_resources, [277, 183, 231][i]);
@@ -973,6 +979,7 @@ test('cadeia valida também a revisão intermediária e recusa ciclos antes de c
   t.after(() => rm(temp, { recursive: true, force: true }));
   await cp(resolve(baseRoot, 'manifest.json'), resolve(temp, 'manifest.json'));
   await cp(resolve(baseRoot, 'cartografia'), resolve(temp, 'cartografia'), { recursive: true });
+  await cp(resolve(baseRoot, 'fundamentos'), resolve(temp, 'fundamentos'), { recursive: true });
   const registry = JSON.parse(await readFile(resolve(temp, 'manifest.json'), 'utf8'));
   Object.assign(
     registry.units.find((u) => u.unit_id === ids[0]),
