@@ -1,5 +1,7 @@
 # Base de Conhecimento V6
 
+**Encaminhamento atual:** o usuário delegou a auditoria e a revisão ao assistente. A [revisão integral de Cartografia por IA](../MissaoAprovacaoGeo/V6_ISSUE13_REVISAO_DELEGADA_CARTOGRAFIA.md) registra leitura, recálculos, fontes, testes e melhorias a cargo do Codex. Não é necessário pedir ao usuário que leia questões no GitHub para a conferência editorial avançar. Este parecer não simula os registros humanos exigidos pelo contrato de promoção descrito adiante e não modifica o consumo do site.
+
 Primeiro lote da [Issue #13](https://github.com/ude-ctrl/Estudo-para-Concurso/issues/13), autorizado após o [encerramento técnico com ressalva sensorial](../MissaoAprovacaoGeo/V6_FASE14_ENCERRAMENTO_TECNICO.md). Branch: `v6-base-canonica`.
 
 **As três candidatas atuais são `0.1.1`, todas `EM_AUDITORIA`; as edições iniciais `0.1.0` estão preservadas. Nenhuma é fonte canônica aprovada e nenhuma está conectada à build do site.** Os 36 itens autorais e as cinco questões legadas corrigidas permanecem pendentes de revisão humana. Não houve alteração do conteúdo usado pelo estudante.
