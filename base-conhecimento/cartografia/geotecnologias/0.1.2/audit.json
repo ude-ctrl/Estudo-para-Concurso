@@ -1,0 +1,2291 @@
+{
+  "schema_version": 1,
+  "unit_id": "geotecnologias",
+  "editorial_version": "0.1.2",
+  "status": "EM_AUDITORIA",
+  "reviewed_at": "2026-10-16",
+  "reviewer_kind": "AI-assisted editorial review; not independent human approval",
+  "human_approval": null,
+  "scope": {
+    "all_published_resources_read": true,
+    "legacy_htmls_not_rewritten": true,
+    "other_units_audited": 0,
+    "official_exam_fully_audited": false,
+    "inherited_full_read_from": "0.1.1",
+    "current_round": "Revisão das alterações sobre a leitura integral delegada de 0.1.1: 44 questões legadas, classificação de r11 e suporte do exercício cartográfico. Recursos não modificados conferidos por hash. Autoria por IA, sem nova certificação humana."
+  },
+  "counts": {
+    "missions": 7,
+    "sections": 17,
+    "recalls": 12,
+    "concepts": 13,
+    "questions": 52,
+    "authored_questions": 12,
+    "cards": 35,
+    "game": 89,
+    "writing": 2,
+    "supplements": 3,
+    "parity_records": 241
+  },
+  "confidence": {
+    "structural": "high — initial snapshot preserved and full declared revision comparison",
+    "basic_concepts": "moderate — assisted reading and selected primary sources",
+    "numerical_examples": "high for the calculations described",
+    "difficulty_calibration": "editorial reassessment only; no empirical calibration",
+    "human_premium": "pending"
+  },
+  "premium_criteria": [
+    {
+      "id": "correcao_conceitual",
+      "title": "Correção conceitual",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    },
+    {
+      "id": "cobertura",
+      "title": "Cobertura do escopo e perfil",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    },
+    {
+      "id": "profundidade",
+      "title": "Profundidade para concurso",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    },
+    {
+      "id": "clareza",
+      "title": "Clareza didática",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    },
+    {
+      "id": "exemplos",
+      "title": "Qualidade dos exemplos",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    },
+    {
+      "id": "redundancia",
+      "title": "Redundância editorial",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    },
+    {
+      "id": "terminologia",
+      "title": "Consistência terminológica",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    },
+    {
+      "id": "lacunas",
+      "title": "Identificação de lacunas",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    },
+    {
+      "id": "temporalidade",
+      "title": "Dados temporais",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    },
+    {
+      "id": "nivel",
+      "title": "Adequação ao nível de cobrança",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    },
+    {
+      "id": "fontes",
+      "title": "Confiabilidade das fontes",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    },
+    {
+      "id": "treino",
+      "title": "Qualidade do treino",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    }
+  ],
+  "authored_questions": [
+    {
+      "id": "v6-q-g01",
+      "resource_sha256": "1e5d2a1fd743b71764f200ad0d9667cdda3a38b5bfef2cb8d36d49cd07eea5f0",
+      "pool": "concurso",
+      "correct_option_id": "v6-q-g01-correct",
+      "correct_option_text": "Emissão própria de energia e capacidade de atravessar muitas nuvens, conforme frequência e condições.",
+      "current_difficulty": 2,
+      "current_cognitive": 3,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Radar é ativo e opera sem iluminação solar; micro-ondas são menos limitadas por muitas nuvens.",
+      "recommendation": "Manter ressalva de frequência/condições; não generalizar para qualquer sensor ativo ou chuva.",
+      "level_concern": false,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-theory-t03a-8",
+        "v6-theory-t17-0",
+        "v6-theory-t17-9",
+        "v6-theory-t17-11",
+        "sensores"
+      ],
+      "verification_basis": "Raciocínio/cálculo do enunciado e teoria preservada; não se atribui a uma fonte externa que não tratou deste item.",
+      "human_decision": "pending",
+      "human_reviewer": null
+    },
+    {
+      "id": "v6-q-g02",
+      "resource_sha256": "f9b3d0285a5a5990c6bcf08c8160fd2181b4f08fc4471107f4c46ed9a3f570a5",
+      "pool": "concurso",
+      "correct_option_id": "v6-q-g02-correct",
+      "correct_option_text": "16.384, associados à resolução radiométrica.",
+      "current_difficulty": 2,
+      "current_cognitive": 3,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "2¹⁴=16.384 códigos possíveis, associados à discretização radiométrica.",
+      "recommendation": "Manter “em princípio”: bits não comprovam sensibilidade efetiva ou precisão radiométrica do sensor.",
+      "level_concern": false,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-theory-t03a-9",
+        "v6-theory-t03a-10",
+        "v6-theory-t17-10",
+        "v6-theory-t17-12",
+        "resolucoes"
+      ],
+      "verification_basis": "Raciocínio/cálculo do enunciado e teoria preservada; não se atribui a uma fonte externa que não tratou deste item.",
+      "human_decision": "pending",
+      "human_reviewer": null
+    },
+    {
+      "id": "v6-q-g03",
+      "resource_sha256": "0bec445cb969fa1efbdf40fd3bb6401a09c568785195e86a8ca6656332854319",
+      "pool": "concurso",
+      "correct_option_id": "v6-q-g03-correct",
+      "correct_option_text": "Confirmar os referenciais e aplicar transformação apropriada, validando o alinhamento.",
+      "current_difficulty": 2,
+      "current_cognitive": 3,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Atribuir um rótulo não transforma coordenadas; confirmar referências, parâmetros, época e validar.",
+      "recommendation": "Reclassificação assistida aplicada: Aplicação do procedimento de compatibilização de referenciais; não é análise C4 pela simples presença de termos técnicos. Confirmar esta classificação na revisão humana.",
+      "level_concern": true,
+      "source_ids": [
+        "ibge-sirgas"
+      ],
+      "content_evidence": [
+        "v6-theory-t03a-13",
+        "v6-theory-t17-13",
+        "datum"
+      ],
+      "verification_basis": "Raciocínio do item, teoria preservada e fontes listadas, respeitando o nível de acesso de cada uma.",
+      "human_decision": "pending",
+      "human_reviewer": null,
+      "level_reassessment_version": "0.1.1"
+    },
+    {
+      "id": "v6-q-g04",
+      "resource_sha256": "6a53d730825fc872147849b67882eb8d06f8bff21e398d6f043864211f057154",
+      "pool": "concurso",
+      "correct_option_id": "v6-q-g04-correct",
+      "correct_option_text": "Compatibilizar dados, criar buffer dos rios e combinar a seleção espacial com os bairros vulneráveis.",
+      "current_difficulty": 3,
+      "current_cognitive": 4,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Buffer representa distância; seleção/interseção cruza a condição com bairros vulneráveis.",
+      "recommendation": "Rever família com Chefão legado de mesmas condições; 500 m é parâmetro hipotético, não regra jurídica.",
+      "level_concern": false,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-theory-t03a-11",
+        "v6-theory-t03a-12",
+        "v6-theory-t17-14",
+        "topologia"
+      ],
+      "verification_basis": "Raciocínio/cálculo do enunciado e teoria preservada; não se atribui a uma fonte externa que não tratou deste item.",
+      "human_decision": "pending",
+      "human_reviewer": null
+    },
+    {
+      "id": "v6-q-g05",
+      "resource_sha256": "6e4f896f9fa27d063b062c55f1cf19a1bdc4036e4e1534911618e027bc1cda18",
+      "pool": "concurso",
+      "correct_option_id": "v6-q-g05-correct",
+      "correct_option_text": "Obter metadados e avaliar adequação temporal, referência, precisão e método.",
+      "current_difficulty": 2,
+      "current_cognitive": 3,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Metadados permitem avaliar época, referência, precisão e método; zoom não os substitui.",
+      "recommendation": "Reclassificação assistida aplicada: Aplicação do controle de qualidade por metadados; ausência de dados é explícita e os distratores são pouco próximos. Confirmar esta classificação na revisão humana.",
+      "level_concern": true,
+      "source_ids": [
+        "inde-norma"
+      ],
+      "content_evidence": [
+        "v6-theory-t17-15",
+        "digital"
+      ],
+      "verification_basis": "Raciocínio do item, teoria preservada e fontes listadas, respeitando o nível de acesso de cada uma.",
+      "human_decision": "pending",
+      "human_reviewer": null,
+      "level_reassessment_version": "0.1.1"
+    },
+    {
+      "id": "v6-q-g06",
+      "resource_sha256": "adf4eac20b51f9003dfcc829fd8faad035bcf4875a2276b380786cfe794fca90",
+      "pool": "concurso",
+      "correct_option_id": "v6-q-g06-correct",
+      "correct_option_text": "Confunde um produto de alerta operacional com a estimativa anual consolidada do PRODES.",
+      "current_difficulty": 3,
+      "current_cognitive": 4,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Alertas operacionais DETER não são intercambiáveis com a taxa anual do PRODES.",
+      "recommendation": "Manter candidato; vincular documentação INPE com data, preservando a diferença entre estimativa e produto consolidado.",
+      "level_concern": false,
+      "source_ids": [
+        "inpe-deter",
+        "inpe-2026"
+      ],
+      "content_evidence": [
+        "v6-theory-t03a-14",
+        "v6-theory-t17-16",
+        "monitoramento"
+      ],
+      "verification_basis": "Raciocínio do item, teoria preservada e fontes listadas, respeitando o nível de acesso de cada uma.",
+      "human_decision": "pending",
+      "human_reviewer": null
+    },
+    {
+      "id": "v6-q-g07",
+      "resource_sha256": "dd8d8f877d2ca13a4e77e4440ba4f5dbdf764ef285873c3be466a9160d764c65",
+      "pool": "elite",
+      "correct_option_id": "v6-q-g07-correct",
+      "correct_option_text": "P tem NDVI 0,5 e Q cerca de −0,67; os valores são indícios espectrais e não identificam, sozinhos, espécie ou situação jurídica.",
+      "current_difficulty": 3,
+      "current_cognitive": 4,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "P=(0,6−0,2)/(0,6+0,2)=0,5; Q=(0,02−0,1)/(0,02+0,1)=−2/3.",
+      "recommendation": "Manter candidato de cálculo com limite inferencial; espectros são didáticos e comparáveis por premissa.",
+      "level_concern": false,
+      "source_ids": [
+        "usgs-ndvi"
+      ],
+      "content_evidence": [
+        "v6-theory-t03a-9",
+        "v6-theory-t03a-10",
+        "v6-theory-t17-10",
+        "v6-theory-t17-12",
+        "ndvi"
+      ],
+      "verification_basis": "Raciocínio do item, teoria preservada e fontes listadas, respeitando o nível de acesso de cada uma.",
+      "human_decision": "pending",
+      "human_reviewer": null
+    },
+    {
+      "id": "v6-q-g08",
+      "resource_sha256": "b61ea917c640d79c9e260bdb8f921b4dd113d6f3ead968adfe7d573c9c7fb3e4",
+      "pool": "elite",
+      "correct_option_id": "v6-q-g08-correct",
+      "correct_option_text": "Avaliar com amostra de referência independente, informar o desenho amostral e examinar omissões e comissões por classe.",
+      "current_difficulty": 4,
+      "current_cognitive": 5,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Avaliar nos próprios pixels de ajuste não estima bem generalização; referência independente deve examinar classes.",
+      "recommendation": "Manter candidato; amostragem e independência espacial merecem discussão na revisão humana.",
+      "level_concern": false,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-theory-t03a-9",
+        "v6-theory-t03a-10",
+        "v6-theory-t17-10",
+        "v6-theory-t17-12",
+        "classificacao"
+      ],
+      "verification_basis": "Raciocínio/cálculo do enunciado e teoria preservada; não se atribui a uma fonte externa que não tratou deste item.",
+      "human_decision": "pending",
+      "human_reviewer": null
+    },
+    {
+      "id": "v6-q-g09",
+      "resource_sha256": "6d2f711b30e90ed682d079665301b531ddeb503ee6acafe8ae3f8a552a630a0b",
+      "pool": "elite",
+      "correct_option_id": "v6-q-g09-correct",
+      "correct_option_text": "A interseção não localiza todos os moradores; é preciso estimar a distribuição populacional na faixa e declarar método e incerteza.",
+      "current_difficulty": 3,
+      "current_cognitive": 5,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Município parcialmente intersectado não localiza toda sua população na faixa; interpolação por área impõe hipótese.",
+      "recommendation": "Manter candidato de mudança de suporte espacial; não tratar ponderação como contagem exata.",
+      "level_concern": false,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-theory-t03a-11",
+        "v6-theory-t03a-12",
+        "v6-theory-t17-14",
+        "topologia"
+      ],
+      "verification_basis": "Raciocínio/cálculo do enunciado e teoria preservada; não se atribui a uma fonte externa que não tratou deste item.",
+      "human_decision": "pending",
+      "human_reviewer": null
+    },
+    {
+      "id": "v6-q-g10",
+      "resource_sha256": "de4d98ea7518b0cf07289a6cc1ae28267d343185ad24e7d3a90cf969a0edeaa2",
+      "pool": "elite",
+      "correct_option_id": "v6-q-g10-correct",
+      "correct_option_text": "Interpretar diferenças observáveis após conferir comparabilidade; atribuir causas requer evidências complementares às duas imagens.",
+      "current_difficulty": 3,
+      "current_cognitive": 4,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Comparabilidade de datas/sensores/processamento precede interpretação; causa social exige evidência adicional.",
+      "recommendation": "Par histórico, datas e transcrição agora acompanham o item; confirmar a apresentação acessível antes da aprovação.",
+      "level_concern": false,
+      "source_ids": [
+        "nasa-rio"
+      ],
+      "content_evidence": [
+        "v6-theory-t03a-8",
+        "v6-theory-t17-0",
+        "v6-theory-t17-9",
+        "v6-theory-t17-11",
+        "sensores"
+      ],
+      "verification_basis": "Raciocínio do item, teoria preservada e fontes listadas, respeitando o nível de acesso de cada uma.",
+      "human_decision": "pending",
+      "human_reviewer": null
+    },
+    {
+      "id": "v6-q-g11",
+      "resource_sha256": "e8ea412f1191cb71bb2365e32e9cb8d00302e2821f8326cdc02cccf3b2ec1451",
+      "pool": "elite",
+      "correct_option_id": "v6-q-g11-correct",
+      "correct_option_text": "Geocodificar endereços e interpolar chuva entre estações, avaliando a qualidade das posições e a incerteza da superfície estimada.",
+      "current_difficulty": 3,
+      "current_cognitive": 4,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Geocodificação posiciona endereços; interpolação estima chuva não observada; ambas exigem avaliação.",
+      "recommendation": "Manter candidato de integração e incerteza; reconhecer que estimativa não é observação direta.",
+      "level_concern": false,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-theory-t17-15",
+        "operacoes-digitais"
+      ],
+      "verification_basis": "Raciocínio/cálculo do enunciado e teoria preservada; não se atribui a uma fonte externa que não tratou deste item.",
+      "human_decision": "pending",
+      "human_reviewer": null
+    },
+    {
+      "id": "v6-q-g12",
+      "resource_sha256": "6389ebec9c66032b0e61aafd1688238a437e248726f5633e9e947b9bf7d1f6e1",
+      "pool": "elite",
+      "correct_option_id": "v6-q-g12-correct",
+      "correct_option_text": "Construir mapas de trajetos com legenda compartilhada, comparar barreiras e justificar alternativas, com recursos táteis ou textuais e avaliação do raciocínio.",
+      "current_difficulty": 3,
+      "current_cognitive": 5,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Mapear trajetos, comparar barreiras e justificar alternativas com acesso tátil/textual produz evidência do raciocínio.",
+      "recommendation": "Manter candidato; validar alinhamento pedagógico e fonte curricular antes de aprovação humana.",
+      "level_concern": false,
+      "source_ids": [
+        "mec-bncc"
+      ],
+      "content_evidence": [
+        "v6-theory-t17-17",
+        "ensino"
+      ],
+      "verification_basis": "Raciocínio do item, teoria preservada e fontes listadas, respeitando o nível de acesso de cada uma.",
+      "human_decision": "pending",
+      "human_reviewer": null
+    }
+  ],
+  "proposed_metadata_changes": [
+    {
+      "id": "v6-fix-b5782254d12f27da",
+      "before": {
+        "mission": "sensores-espectro",
+        "concept": "sensores"
+      },
+      "proposed": {
+        "mission": "resolucoes-indices-classificacao",
+        "concept": "resolucoes"
+      },
+      "reason": "Pixel/grade raster não tem como conceito principal fonte de energia do sensor.",
+      "before_sha256": "c9aa9def68dc20f42907a92f107b48f95638c43ecaf0ae4a16abb7454832fbb3",
+      "status": "applied-pending-human-review",
+      "applied": true,
+      "assisted_applied_at": "2026-10-16",
+      "human_decision": "pending"
+    }
+  ],
+  "question_families": [
+    {
+      "id": "familia-buffer-escolas-500",
+      "members": [
+        "v6-q-g04",
+        "v6-fix-df0accd0b0af1130"
+      ],
+      "reason": "Mesmas escolas a até 500 m de rios e dentro de bairros vulneráveis.",
+      "status": "linked-pending-human-review",
+      "applied": true
+    }
+  ],
+  "findings": [
+    {
+      "id": "CAN-EDITORIAL-001",
+      "severity": "promotion-blocker",
+      "status": "open",
+      "blocks_promotion": true,
+      "title": "Parecer humano Premium e aprovação dos itens ainda pendentes",
+      "resource_ids": [
+        "v6-q-g01",
+        "v6-q-g02",
+        "v6-q-g03",
+        "v6-q-g04",
+        "v6-q-g05",
+        "v6-q-g06",
+        "v6-q-g07",
+        "v6-q-g08",
+        "v6-q-g09",
+        "v6-q-g10",
+        "v6-q-g11",
+        "v6-q-g12"
+      ],
+      "decision": "Este parecer assistido e os testes não promovem uma unidade. Os 12 critérios e o conjunto integral precisam de decisão editorial documentada."
+    },
+    {
+      "id": "CAN-FEEDBACK-001",
+      "severity": "editorial-review",
+      "status": "addressed-pending-human-review",
+      "blocks_promotion": true,
+      "title": "Complementos genéricos e atribuições de conceitos exigem revisão por pertinência",
+      "resource_ids": [
+        "v6-fix-b5782254d12f27da"
+      ],
+      "decision": "Conferir as propostas de vínculo e os feedbacks por alternativa. Na questão v6-fix-b5782254d12f27da, o conceito de pixel recebe complemento sobre sensores passivos/térmicos. Os textos foram preservados nesta candidata.",
+      "assisted_resolution": {
+        "at": "2026-10-16",
+        "version": "0.1.2",
+        "kind": "ai",
+        "summary": "Correções de vínculo e feedback da rodada anterior preservadas e revistas. Nesta rodada, 23 questões desta unidade recebem explicação específica de cada alternativa incorreta. A explicação central continua preservada.",
+        "human_decision": "pending"
+      }
+    },
+    {
+      "id": "CAN-FONTE-001",
+      "severity": "editorial-review",
+      "status": "addressed-pending-human-review",
+      "blocks_promotion": true,
+      "title": "Afirmações sobre como a FGV já cobrou não possuem prova/ano/item identificados",
+      "resource_ids": [
+        "v6-theory-t17-0",
+        "v6-theory-t03a-9",
+        "v6-theory-t03a-12",
+        "v6-theory-t03a-14"
+      ],
+      "decision": "Tratar como orientação autoral até verificar exemplos de provas reais; o edital confirma programa/formato, não frequência histórica de cobrança.",
+      "assisted_resolution": {
+        "at": "2026-10-16",
+        "version": "0.1.1",
+        "summary": "Afirmações não documentadas sobre histórico/frequência de cobrança foram identificadas como orientação e exemplos autorais. O programa do edital permanece citado sem inventar prova/ano/item.",
+        "evidence": "provenance.json#revision",
+        "human_decision": "pending"
+      }
+    },
+    {
+      "id": "CAN-NIVEL-001",
+      "severity": "editorial-review",
+      "status": "addressed-pending-human-review",
+      "blocks_promotion": true,
+      "title": "Nível cognitivo/dificuldade e distratores precisam de decisão",
+      "resource_ids": [
+        "v6-q-g03",
+        "v6-q-g05"
+      ],
+      "decision": "Reclassificar ou reconstruir em nova versão após decisão editorial. Não há calibração psicométrica ou promoção pelo rótulo Elite.",
+      "assisted_resolution": {
+        "at": "2026-10-16",
+        "version": "0.1.1",
+        "summary": "Dez classificações revistas no conjunto segundo a Fase 6; cinco itens saem de Elite para Concurso. Sem alegação de dificuldade calibrada; validação humana pendente.",
+        "evidence": "provenance.json#revision",
+        "human_decision": "pending"
+      }
+    },
+    {
+      "id": "CAN-FAMILIA-001",
+      "severity": "editorial-review",
+      "status": "addressed-pending-human-review",
+      "blocks_promotion": true,
+      "title": "Famílias próximas entre novos itens e legado",
+      "resource_ids": [
+        "v6-q-g04",
+        "v6-fix-df0accd0b0af1130"
+      ],
+      "decision": "Os pares não são duplicatas exatas. Decidir identidade de família, rastreabilidade de reformulação e efeito na novidade antes da promoção; não apagar originais.",
+      "assisted_resolution": {
+        "at": "2026-10-16",
+        "version": "0.1.1",
+        "summary": "Cinco famílias declaradas no conjunto, com vínculo bidirecional nos itens e novidade independente desativada no contrato. Nenhuma formulação foi excluída. A aplicação atual não consome estes metadados.",
+        "evidence": "provenance.json#revision",
+        "human_decision": "pending"
+      }
+    },
+    {
+      "id": "CAN-VISUAL-003",
+      "severity": "editorial-review",
+      "status": "addressed-pending-human-review",
+      "blocks_promotion": true,
+      "title": "Questão referencia imagens apresentadas em outro contexto",
+      "resource_ids": [
+        "v6-q-g10"
+      ],
+      "decision": "O par NASA está na teoria de sensores. Decidir vinculação/exibição junto ao item para torná-lo autônomo, sem alterar o original silenciosamente.",
+      "assisted_resolution": {
+        "at": "2026-10-16",
+        "version": "0.1.1",
+        "summary": "Par Landsat histórico incluído no suporte da questão, com datas, sensores, créditos e transcrição. A questão é autônoma em relação à navegação prévia na teoria.",
+        "evidence": "provenance.json#revision",
+        "human_decision": "pending"
+      }
+    },
+    {
+      "id": "CAN-PRATICA-001",
+      "severity": "scope-limitation",
+      "status": "open",
+      "blocks_promotion": false,
+      "title": "Prática ativa tem um roteiro de escala, compartilhado pelo módulo",
+      "resource_ids": [],
+      "decision": "Preservado no suporte da unidade de fundamentos; não declarar três temas específicos de prática já implementados. Futuras ampliações exigem autoria/auditoria."
+    },
+    {
+      "id": "CAN-TEMPORAL-001",
+      "severity": "source-review",
+      "status": "addressed-pending-human-review",
+      "blocks_promotion": true,
+      "title": "Conferência direta de fonte ainda parcial",
+      "resource_ids": [
+        "ensino",
+        "v6-theory-t17-17"
+      ],
+      "decision": "Trecho indexado ou falha de acesso não equivale a conferência integral. Manter verified_at nulo no fato parcialmente verificado e resolver antes da promoção.",
+      "assisted_resolution": {
+        "at": "2026-10-16",
+        "version": "0.1.1",
+        "summary": "Fonte diretamente consultada: tabela de fusos do ON ou Quadro 1 da BNCC, conforme a unidade. Alcance do recorte e datas explicitados nos metadados.",
+        "evidence": "provenance.json#revision",
+        "human_decision": "pending"
+      }
+    },
+    {
+      "id": "CAN-SUPORTE-001",
+      "severity": "preservation",
+      "status": "resolved",
+      "blocks_promotion": false,
+      "title": "Dados pedagógicos da interface incluídos no pacote candidato",
+      "resource_ids": [
+        "v6-q-g07"
+      ],
+      "decision": "Tabelas extraídas de literais AST, perfil SVG preservado, precisão UTM e rubricas de prática registradas. Nada foi removido do piloto."
+    }
+  ],
+  "statements": [
+    "Candidata 0.1.2 derivada da base estruturada 0.1.1, preservada integralmente com 0.1.0. Nenhum HTML foi reextraído ou reinterpretado nesta correção.",
+    "44 questões legadas recebem explicações individualizadas das alternativas incorretas no conjunto. Todas as alternativas, seus IDs e os 161 gabaritos são preservados.",
+    "r11 passa a Concurso/D2/C3, preservando texto e opções. O conjunto contém 125 Fixação, 24 Concurso e 12 Elite, sem calibração psicométrica.",
+    "Revisão editorial realizada pelo Codex por delegação do usuário, com autoria por IA explícita e vínculo aos hashes do conteúdo. Não se exige que o estudante revise arquivos no GitHub.",
+    "A promoção e o consumo operacional permanecem distintos deste parecer; nenhum registro humano foi inventado. O site, o progresso e as outras 25 unidades não foram alterados."
+  ],
+  "technical_checks": "Consultar relatório de validação do lote; leitura editorial não é execução de navegador.",
+  "level_reassessment": [
+    {
+      "id": "v6-q-g03",
+      "before": {
+        "pool": "concurso",
+        "difficulty": 2,
+        "cognitive": 4
+      },
+      "after": {
+        "pool": "concurso",
+        "difficulty": 2,
+        "cognitive": 3
+      },
+      "reason": "Aplicação do procedimento de compatibilização de referenciais; não é análise C4 pela simples presença de termos técnicos.",
+      "method": "official-phase6-taxonomy; assisted review",
+      "psychometrically_calibrated": false,
+      "human_decision": "pending"
+    },
+    {
+      "id": "v6-q-g05",
+      "before": {
+        "pool": "concurso",
+        "difficulty": 2,
+        "cognitive": 4
+      },
+      "after": {
+        "pool": "concurso",
+        "difficulty": 2,
+        "cognitive": 3
+      },
+      "reason": "Aplicação do controle de qualidade por metadados; ausência de dados é explícita e os distratores são pouco próximos.",
+      "method": "official-phase6-taxonomy; assisted review",
+      "psychometrically_calibrated": false,
+      "human_decision": "pending"
+    }
+  ],
+  "pool_counts": {
+    "fixacao": 40,
+    "concurso": 6,
+    "elite": 6,
+    "real": 0
+  },
+  "assisted_fixes": {
+    "metadata_links": 1,
+    "legacy_questions_feedback_revised": 24,
+    "level_reassessments": 2,
+    "option_replacements": 0,
+    "human_approval_granted": false
+  },
+  "editorial_round": {
+    "version": "0.1.2",
+    "from_version": "0.1.1",
+    "feedback_question_ids": [
+      "v6-fix-ee65e05d0b8bce18",
+      "v6-fix-6c331742e5afd67d",
+      "v6-fix-0d1e0738f61b9aa7",
+      "v6-fix-bf862746b8832753",
+      "v6-fix-55c07d3e920f8178",
+      "v6-fix-ee3f6ddb1bce6d97",
+      "v6-fix-9861e84d10d843b5",
+      "v6-fix-d7c20c077dc81694",
+      "v6-fix-f6d3380c31b4466d",
+      "v6-fix-cbff9213c997624c",
+      "v6-fix-6ee5178c530e3757",
+      "v6-fix-a5b78f5ee8bc6325",
+      "v6-fix-d5f971faee0fc87f",
+      "v6-fix-67c40485ec0361b6",
+      "v6-fix-586335be47954c67",
+      "v6-fix-4dc57181021f476d",
+      "v6-fix-ec38ba5c24fee2e8",
+      "v6-fix-35d096cea007d390",
+      "v6-fix-bbbba4531de29989",
+      "v6-fix-d109a030a0d88278",
+      "v6-fix-832cbc5273858fd2",
+      "v6-fix-3c28ce6a0f885125",
+      "v6-fix-2e242804dd71e8fe"
+    ],
+    "feedback_options": [
+      {
+        "question_id": "v6-fix-ee65e05d0b8bce18",
+        "option_id": "v6-fix-ee65e05d0b8bce18-ob1cc4d8351",
+        "option_text": "projeção cartográfica isolada"
+      },
+      {
+        "question_id": "v6-fix-ee65e05d0b8bce18",
+        "option_id": "v6-fix-ee65e05d0b8bce18-o449a1d4ba6",
+        "option_text": "apenas GNSS"
+      },
+      {
+        "question_id": "v6-fix-ee65e05d0b8bce18",
+        "option_id": "v6-fix-ee65e05d0b8bce18-o280550fd7c",
+        "option_text": "escala gráfica"
+      },
+      {
+        "question_id": "v6-fix-6c331742e5afd67d",
+        "option_id": "v6-fix-6c331742e5afd67d-o58f4ed4f0d",
+        "option_text": "câmera óptica dependente de luz solar"
+      },
+      {
+        "question_id": "v6-fix-6c331742e5afd67d",
+        "option_id": "v6-fix-6c331742e5afd67d-ofa9e5ba494",
+        "option_text": "olho humano"
+      },
+      {
+        "question_id": "v6-fix-6c331742e5afd67d",
+        "option_id": "v6-fix-6c331742e5afd67d-o6c5380ca42",
+        "option_text": "fotografia aérea analógica passiva"
+      },
+      {
+        "question_id": "v6-fix-0d1e0738f61b9aa7",
+        "option_id": "v6-fix-0d1e0738f61b9aa7-o2515e08a32",
+        "option_text": "ausência de radiação solar"
+      },
+      {
+        "question_id": "v6-fix-0d1e0738f61b9aa7",
+        "option_id": "v6-fix-0d1e0738f61b9aa7-o0a77ac47bd",
+        "option_text": "impossibilidade de registrar vegetação"
+      },
+      {
+        "question_id": "v6-fix-0d1e0738f61b9aa7",
+        "option_id": "v6-fix-0d1e0738f61b9aa7-o5db4796d9c",
+        "option_text": "falta de coordenadas"
+      },
+      {
+        "question_id": "v6-fix-bf862746b8832753",
+        "option_id": "v6-fix-bf862746b8832753-o218320b9b5",
+        "option_text": "fuso horário"
+      },
+      {
+        "question_id": "v6-fix-bf862746b8832753",
+        "option_id": "v6-fix-bf862746b8832753-o0b668d939a",
+        "option_text": "projeção equivalente"
+      },
+      {
+        "question_id": "v6-fix-bf862746b8832753",
+        "option_id": "v6-fix-bf862746b8832753-o7a0a508167",
+        "option_text": "resolução temporal apenas"
+      },
+      {
+        "question_id": "v6-fix-55c07d3e920f8178",
+        "option_id": "v6-fix-55c07d3e920f8178-oed348d0d3f",
+        "option_text": "escala numérica"
+      },
+      {
+        "question_id": "v6-fix-55c07d3e920f8178",
+        "option_id": "v6-fix-55c07d3e920f8178-o584596c31b",
+        "option_text": "resolução geodésica"
+      },
+      {
+        "question_id": "v6-fix-55c07d3e920f8178",
+        "option_id": "v6-fix-55c07d3e920f8178-oa04149f44a",
+        "option_text": "equidistância altimétrica"
+      },
+      {
+        "question_id": "v6-fix-ee3f6ddb1bce6d97",
+        "option_id": "v6-fix-ee3f6ddb1bce6d97-o504a1fcfcc",
+        "option_text": "raio X"
+      },
+      {
+        "question_id": "v6-fix-ee3f6ddb1bce6d97",
+        "option_id": "v6-fix-ee3f6ddb1bce6d97-o37162e01ff",
+        "option_text": "ultravioleta extremo apenas"
+      },
+      {
+        "question_id": "v6-fix-ee3f6ddb1bce6d97",
+        "option_id": "v6-fix-ee3f6ddb1bce6d97-o8d6c507cb7",
+        "option_text": "som audível"
+      },
+      {
+        "question_id": "v6-fix-9861e84d10d843b5",
+        "option_id": "v6-fix-9861e84d10d843b5-ofbbb251bd1",
+        "option_text": "refletem tudo"
+      },
+      {
+        "question_id": "v6-fix-9861e84d10d843b5",
+        "option_id": "v6-fix-9861e84d10d843b5-ocefe97e9ca",
+        "option_text": "não têm coordenadas"
+      },
+      {
+        "question_id": "v6-fix-9861e84d10d843b5",
+        "option_id": "v6-fix-9861e84d10d843b5-o4ea9ba2fad",
+        "option_text": "são sensores ativos"
+      },
+      {
+        "question_id": "v6-fix-d7c20c077dc81694",
+        "option_id": "v6-fix-d7c20c077dc81694-o2f60a2f56b",
+        "option_text": "baixa reflectância em todas as bandas"
+      },
+      {
+        "question_id": "v6-fix-d7c20c077dc81694",
+        "option_id": "v6-fix-d7c20c077dc81694-oe81dce8cf9",
+        "option_text": "alta no vermelho e zero no NIR"
+      },
+      {
+        "question_id": "v6-fix-d7c20c077dc81694",
+        "option_id": "v6-fix-d7c20c077dc81694-o0006cdfc1b",
+        "option_text": "apenas micro-ondas"
+      },
+      {
+        "question_id": "v6-fix-f6d3380c31b4466d",
+        "option_id": "v6-fix-f6d3380c31b4466d-o89522d7344",
+        "option_text": "não existem amostras conhecidas"
+      },
+      {
+        "question_id": "v6-fix-f6d3380c31b4466d",
+        "option_id": "v6-fix-f6d3380c31b4466d-oda908bea93",
+        "option_text": "o mapa dispensa validação"
+      },
+      {
+        "question_id": "v6-fix-f6d3380c31b4466d",
+        "option_id": "v6-fix-f6d3380c31b4466d-oa2eff0ba09",
+        "option_text": "cada pixel vira uma coordenada GNSS"
+      },
+      {
+        "question_id": "v6-fix-cbff9213c997624c",
+        "option_id": "v6-fix-cbff9213c997624c-o2637592636",
+        "option_text": "SAD69 exclusivamente"
+      },
+      {
+        "question_id": "v6-fix-cbff9213c997624c",
+        "option_id": "v6-fix-cbff9213c997624c-o47eb3be8bf",
+        "option_text": "Mercator"
+      },
+      {
+        "question_id": "v6-fix-cbff9213c997624c",
+        "option_id": "v6-fix-cbff9213c997624c-o39d90059cd",
+        "option_text": "UTM"
+      },
+      {
+        "question_id": "v6-fix-6ee5178c530e3757",
+        "option_id": "v6-fix-6ee5178c530e3757-ob0c603505e",
+        "option_text": "a um tipo de projeção"
+      },
+      {
+        "question_id": "v6-fix-6ee5178c530e3757",
+        "option_id": "v6-fix-6ee5178c530e3757-o522bdab21e",
+        "option_text": "a um índice de vegetação"
+      },
+      {
+        "question_id": "v6-fix-6ee5178c530e3757",
+        "option_id": "v6-fix-6ee5178c530e3757-o2c893ec75d",
+        "option_text": "a uma escala gráfica"
+      },
+      {
+        "question_id": "v6-fix-a5b78f5ee8bc6325",
+        "option_id": "v6-fix-a5b78f5ee8bc6325-o37f587fa21",
+        "option_text": "pixels sem localização"
+      },
+      {
+        "question_id": "v6-fix-a5b78f5ee8bc6325",
+        "option_id": "v6-fix-a5b78f5ee8bc6325-o66c615dc9b",
+        "option_text": "apenas tabela"
+      },
+      {
+        "question_id": "v6-fix-a5b78f5ee8bc6325",
+        "option_id": "v6-fix-a5b78f5ee8bc6325-od25ed63b41",
+        "option_text": "curvas de fuso"
+      },
+      {
+        "question_id": "v6-fix-d5f971faee0fc87f",
+        "option_id": "v6-fix-d5f971faee0fc87f-o565ccfd12e",
+        "option_text": "lista sem coordenadas"
+      },
+      {
+        "question_id": "v6-fix-d5f971faee0fc87f",
+        "option_id": "v6-fix-d5f971faee0fc87f-o9615095d77",
+        "option_text": "texto corrido"
+      },
+      {
+        "question_id": "v6-fix-d5f971faee0fc87f",
+        "option_id": "v6-fix-d5f971faee0fc87f-o544828f998",
+        "option_text": "projeção conforme"
+      },
+      {
+        "question_id": "v6-fix-67c40485ec0361b6",
+        "option_id": "v6-fix-67c40485ec0361b6-o0cebe69831",
+        "option_text": "NDVI"
+      },
+      {
+        "question_id": "v6-fix-67c40485ec0361b6",
+        "option_id": "v6-fix-67c40485ec0361b6-o218320b9b5",
+        "option_text": "fuso horário"
+      },
+      {
+        "question_id": "v6-fix-67c40485ec0361b6",
+        "option_id": "v6-fix-67c40485ec0361b6-od113693cec",
+        "option_text": "anamorfose"
+      },
+      {
+        "question_id": "v6-fix-586335be47954c67",
+        "option_id": "v6-fix-586335be47954c67-o796705c6fb",
+        "option_text": "substituir coordenadas"
+      },
+      {
+        "question_id": "v6-fix-586335be47954c67",
+        "option_id": "v6-fix-586335be47954c67-o4cf93fcd05",
+        "option_text": "eliminar projeções"
+      },
+      {
+        "question_id": "v6-fix-586335be47954c67",
+        "option_id": "v6-fix-586335be47954c67-o90d801f720",
+        "option_text": "calcular fuso sem dados"
+      },
+      {
+        "question_id": "v6-fix-4dc57181021f476d",
+        "option_id": "v6-fix-4dc57181021f476d-o142a14b17d",
+        "option_text": "são exatamente o mesmo sistema"
+      },
+      {
+        "question_id": "v6-fix-4dc57181021f476d",
+        "option_id": "v6-fix-4dc57181021f476d-o837cf76a21",
+        "option_text": "dispensam imagens de satélite"
+      },
+      {
+        "question_id": "v6-fix-4dc57181021f476d",
+        "option_id": "v6-fix-4dc57181021f476d-oe075fcfd2f",
+        "option_text": "não podem ser usados no Pará"
+      },
+      {
+        "question_id": "v6-fix-ec38ba5c24fee2e8",
+        "option_id": "v6-fix-ec38ba5c24fee2e8-o96d5b43e3a",
+        "option_text": "eliminar conflitos automaticamente"
+      },
+      {
+        "question_id": "v6-fix-ec38ba5c24fee2e8",
+        "option_id": "v6-fix-ec38ba5c24fee2e8-o88ac38c626",
+        "option_text": "substituir licenciamento ambiental"
+      },
+      {
+        "question_id": "v6-fix-ec38ba5c24fee2e8",
+        "option_id": "v6-fix-ec38ba5c24fee2e8-od857319474",
+        "option_text": "provar causalidade sem campo"
+      },
+      {
+        "question_id": "v6-fix-35d096cea007d390",
+        "option_id": "v6-fix-35d096cea007d390-o0d3232ad0e",
+        "option_text": "começar por comandos técnicos sem problema geográfico"
+      },
+      {
+        "question_id": "v6-fix-35d096cea007d390",
+        "option_id": "v6-fix-35d096cea007d390-o0b0a5a9661",
+        "option_text": "evitar o espaço vivido"
+      },
+      {
+        "question_id": "v6-fix-35d096cea007d390",
+        "option_id": "v6-fix-35d096cea007d390-oe5c451ad98",
+        "option_text": "usar apenas mapas prontos"
+      },
+      {
+        "question_id": "v6-fix-bbbba4531de29989",
+        "option_id": "v6-fix-bbbba4531de29989-of644ec1fe9",
+        "option_text": "a ferramenta é o objetivo final"
+      },
+      {
+        "question_id": "v6-fix-bbbba4531de29989",
+        "option_id": "v6-fix-bbbba4531de29989-o8d7d272329",
+        "option_text": "quanto mais camadas, melhor a aula"
+      },
+      {
+        "question_id": "v6-fix-bbbba4531de29989",
+        "option_id": "v6-fix-bbbba4531de29989-o4a0ebbb205",
+        "option_text": "imagens dispensam mediação docente"
+      },
+      {
+        "question_id": "v6-fix-d109a030a0d88278",
+        "option_id": "v6-fix-d109a030a0d88278-ocb16de6f0c",
+        "option_text": "o número de bandas espectrais"
+      },
+      {
+        "question_id": "v6-fix-d109a030a0d88278",
+        "option_id": "v6-fix-d109a030a0d88278-o39f3ef3d6e",
+        "option_text": "a frequência de revisita"
+      },
+      {
+        "question_id": "v6-fix-d109a030a0d88278",
+        "option_id": "v6-fix-d109a030a0d88278-o033dcf5b28",
+        "option_text": "o número de níveis de cinza"
+      },
+      {
+        "question_id": "v6-fix-832cbc5273858fd2",
+        "option_id": "v6-fix-832cbc5273858fd2-o86d3d8f742",
+        "option_text": "espacial = frequência de revisita; temporal = tamanho do pixel"
+      },
+      {
+        "question_id": "v6-fix-832cbc5273858fd2",
+        "option_id": "v6-fix-832cbc5273858fd2-o52054b4bd4",
+        "option_text": "ambas medem número de bandas"
+      },
+      {
+        "question_id": "v6-fix-832cbc5273858fd2",
+        "option_id": "v6-fix-832cbc5273858fd2-o7d689e9f9b",
+        "option_text": "ambas são sinônimas de escala cartográfica"
+      },
+      {
+        "question_id": "v6-fix-832cbc5273858fd2",
+        "option_id": "v6-fix-832cbc5273858fd2-o7496683e99",
+        "option_text": "temporal mede apenas cores"
+      },
+      {
+        "question_id": "v6-fix-3c28ce6a0f885125",
+        "option_id": "v6-fix-3c28ce6a0f885125-o12233c8377",
+        "option_text": "usar projeção de Mercator apenas"
+      },
+      {
+        "question_id": "v6-fix-3c28ce6a0f885125",
+        "option_id": "v6-fix-3c28ce6a0f885125-oba4d857655",
+        "option_text": "calcular NDVI e dispensar SIG"
+      },
+      {
+        "question_id": "v6-fix-3c28ce6a0f885125",
+        "option_id": "v6-fix-3c28ce6a0f885125-odc3d1da2c4",
+        "option_text": "usar GNSS sem base cartográfica"
+      },
+      {
+        "question_id": "v6-fix-3c28ce6a0f885125",
+        "option_id": "v6-fix-3c28ce6a0f885125-odd823c2b99",
+        "option_text": "alterar o datum até coincidir"
+      },
+      {
+        "question_id": "v6-fix-2e242804dd71e8fe",
+        "option_id": "v6-fix-2e242804dd71e8fe-o4b57fba1b9",
+        "option_text": "a escala gráfica desaparecer"
+      },
+      {
+        "question_id": "v6-fix-2e242804dd71e8fe",
+        "option_id": "v6-fix-2e242804dd71e8fe-o9fad0b42fd",
+        "option_text": "o sensor virar passivo"
+      },
+      {
+        "question_id": "v6-fix-2e242804dd71e8fe",
+        "option_id": "v6-fix-2e242804dd71e8fe-o79ae4a38aa",
+        "option_text": "a latitude passar de 90°"
+      },
+      {
+        "question_id": "v6-fix-2e242804dd71e8fe",
+        "option_id": "v6-fix-2e242804dd71e8fe-o7b87204604",
+        "option_text": "o mapa se tornar equivalente"
+      }
+    ],
+    "level_reassessment": [],
+    "inherited_full_review": "MissaoAprovacaoGeo/V6_ISSUE13_REVISAO_DELEGADA_CARTOGRAFIA.md",
+    "content_reduced": false,
+    "correct_keys_changed": 0,
+    "canonical_promotion": false
+  },
+  "assisted_review": {
+    "kind": "ai",
+    "reviewer": "Codex",
+    "human_manual_review": false,
+    "reviewed_at": "2026-10-16",
+    "unit_id": "geotecnologias",
+    "editorial_version": "0.1.2",
+    "delegation_evidence": "Usuário: “Uma plataforma, auditada e revisada por você”, seguido de “Ok, vamos em frente”. Autoriza a condução da revisão e das correções pelo assistente; não é declaração de leitura humana por item nem autorização de merge/publicação.",
+    "method": "delta-review-on-fully-read-parent; preserved resources checked by hash; independently recomputed quantitative cases; precise source access limits retained",
+    "reviewed_payload_sha256": "eacd04af5b8f9116e8a359b7e5bf49095479742353f75a072de9fb2515106231",
+    "resources": [
+      {
+        "kind": "unit",
+        "id": "geotecnologias",
+        "sha256": "74069b56be98aa2f95a3aa322d991505c970e7e66bfaf3cbbd6e5cd22b00a198"
+      },
+      {
+        "kind": "missions",
+        "id": "sensores-espectro",
+        "sha256": "3690ea067933d7bced57341c3197d1ddfeab73080e5ebf5a6fd042377e2d0bc5"
+      },
+      {
+        "kind": "missions",
+        "id": "resolucoes-indices-classificacao",
+        "sha256": "95ad9d59fc2b25c0fc93e25088deef8fb9acd559109f2200bc11169b06f66061"
+      },
+      {
+        "kind": "missions",
+        "id": "gnss-referenciais",
+        "sha256": "f0383c0121c48cd78386da8752448a08f84ee761a5867ef25ce32d7be1549fb5"
+      },
+      {
+        "kind": "missions",
+        "id": "sig-modelos-operacoes",
+        "sha256": "53c028f65609149d6ec59324fa4e4c4ed9deafc8f0bbd57df06ee5ddf5f95858"
+      },
+      {
+        "kind": "missions",
+        "id": "geoprocessamento-dados-digitais",
+        "sha256": "f2b23d6a29dfc28911dd0eb21bcd000f86f3fe040a2576c760656e6b04b42823"
+      },
+      {
+        "kind": "missions",
+        "id": "amazonia-monitoramento",
+        "sha256": "c6c231a12623ed9d8e1d31af723458446d6ce598606ef6048d9970364dbdb50d"
+      },
+      {
+        "kind": "missions",
+        "id": "cartografia-escolar",
+        "sha256": "8b3bffcf9251e0a0bd46461e82d15a75544cc0ec4e6f431145ef77c07ab67410"
+      },
+      {
+        "kind": "concepts",
+        "id": "sensores",
+        "sha256": "ee6573dc9e5658cb21b7f7dc31ad5644fd4b197f97181b8ece5b522285fcb4e9"
+      },
+      {
+        "kind": "concepts",
+        "id": "espectro",
+        "sha256": "c9385ee0c376fa97f80ad666e1cb2c69b892d606a4b0a3ae9475e034daf897b7"
+      },
+      {
+        "kind": "concepts",
+        "id": "resolucoes",
+        "sha256": "9ac89effac558a3122bc201452a4d7d069a5c363c058cb83a78b403fdc08bd32"
+      },
+      {
+        "kind": "concepts",
+        "id": "ndvi",
+        "sha256": "e2846fbae1732eea85353ded31c9337fa32d0e813aa8462200eb067e5f3371b8"
+      },
+      {
+        "kind": "concepts",
+        "id": "classificacao",
+        "sha256": "50df4004682e88c8b00894e164fb16b7747c76e041005ddf68721b3ba9f830c6"
+      },
+      {
+        "kind": "concepts",
+        "id": "gnss",
+        "sha256": "e98d9ba10b7de72f1a5d1b4a3625766d2976529f2f2b22845c28445bce4bce17"
+      },
+      {
+        "kind": "concepts",
+        "id": "datum",
+        "sha256": "b6d7206005723b1476d20527c00e4bede88c8cba81b78c784c8671a749aad89f"
+      },
+      {
+        "kind": "concepts",
+        "id": "sig",
+        "sha256": "34f7b0333d7a9d43d7348c24b860e1fb9a7f1a7fb451ab2b7728dc7ef856c735"
+      },
+      {
+        "kind": "concepts",
+        "id": "topologia",
+        "sha256": "8d25f553340b1a34d5a18b3f10dcabdcfc80dfc7cb65347147a59c0382a024be"
+      },
+      {
+        "kind": "concepts",
+        "id": "digital",
+        "sha256": "34eef7dccd63a257aefa2bc82a492d2c8bcb8912a8b15bd8763e1e3a02ba73a2"
+      },
+      {
+        "kind": "concepts",
+        "id": "monitoramento",
+        "sha256": "5da21f8dd53df5267dda8228df6f566efb4119d3cba9b6e3b5ab99b70661c589"
+      },
+      {
+        "kind": "concepts",
+        "id": "ensino",
+        "sha256": "049f592a9ef747b2176c40cd15af16cd8bc624d296044f313c4789f0a1e5b3c1"
+      },
+      {
+        "kind": "concepts",
+        "id": "operacoes-digitais",
+        "sha256": "46c78ea82f0b324a68a2ef22c0c7ffa00bcc22ed5bd998904cc2b5518cbe1ffa"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-fb5599f3e9ad7f41",
+        "sha256": "629c23b9ceef89b25fd3aa25918cde78cb095a7222477c535a7de68762ae8566"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-b5782254d12f27da",
+        "sha256": "55cc61d0cb7d5d25065f9c162d4fc2995921b728afa762dff8de1b5875ab920d"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-833bebfe438093ed",
+        "sha256": "561385d4b8cae1a9ca918c01a6f752cd9af18738839cadeb4865505db5f0973a"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-86ce5d2c36ae03ef",
+        "sha256": "75f544f72f84f58f430a3240bfc7c6d16043e80d9bb4032e23a55b19cba5afbd"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-045511001dd9ef85",
+        "sha256": "67ff6ec9364a10dc913be208ab561142b9a0dc0096f71e2ca55bc7efa89ae452"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-588346b88674e99e",
+        "sha256": "dd1705cef27606d594afc397d17c3535a2fddcf4fe66482f0a9dd76af863770e"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-aab58af97c3cfca4",
+        "sha256": "93fb73192d07bf1f9d9db0435bd90330866b5bddb055692f2b7b855e444e1fe7"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-76cd267f432fd0a1",
+        "sha256": "61528043adb2fcd1c332b7808561d1bd1eb07a2dbf22c3582a7c225b86ac24ec"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-988d6242c5380fa0",
+        "sha256": "268403897214330bf6d7566386212fe6c5e796e35490934641ccbccb919a5fab"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-c2635f4a7e1dba37",
+        "sha256": "ad98d8ef1fdc138f1330f6d9730c35a7fe0f8c2f4de23959baaf77bb1d51ee9a"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-0fa0dea95642b75c",
+        "sha256": "b3c4eb5982ff07874d29be27415e5444154feebf9cb12a67a74b5495577e7dbb"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-9128c61e1ed75145",
+        "sha256": "f71bcbd6c4048708dcfcb6b77437b5cc68c360e55d46d69588a5a35cac3d834e"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-4fcee41852d78f7c",
+        "sha256": "5ded8c31ec0a9572f98fe68d5588a3f0c7501a4fc1797fd834b7dfe2e4f06646"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-dcb23160320df481",
+        "sha256": "c4fead6934e4483a56094255ad761601d7c16f841bcee23038b5873c1230eb12"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-3df001d3a09f53ef",
+        "sha256": "a3c47c2bd8439e2092e1cc71cc0b4cab9e7f93b1ebd658462d3347ffff6bcb85"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-c9007e14ce62d664",
+        "sha256": "6c4f3d38fd3b88bbf12f9da87642a68360d6d2c01dd4fdb03c198efd96417cd4"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-df0accd0b0af1130",
+        "sha256": "b66ea174e6114453f6dcc6414ec86c4baf1823b99916c202eafb2a687176ff61"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-ee65e05d0b8bce18",
+        "sha256": "c5e41e46f7f215bcdab3ea188f47413fc7939c81760b0d5a203c7b223d6a54ea"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-6c331742e5afd67d",
+        "sha256": "2d86c3447204c9f0686e91c51f6ed0c5880333416413a80d8ba4e52418295083"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-0d1e0738f61b9aa7",
+        "sha256": "31acd100469f47f8664b4d29aa6751bbf311f981b81aaae3feb4020e94538767"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-bf862746b8832753",
+        "sha256": "f2e58b06defbed2ce6db895599a664e672feaec17d4e1e56ffe384ef65510eef"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-55c07d3e920f8178",
+        "sha256": "c7fdc49f2178d1fa1cfef1e1c2ba19f0aa883b3a2db1cc35efb249b12c090a44"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-ee3f6ddb1bce6d97",
+        "sha256": "76f540600bf4dab2a32dd1553714d2ccdfe78c309f45cfe1c8fdc8ba3f8372f6"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-9861e84d10d843b5",
+        "sha256": "a1ffed4e420f2a60840b81a722f444f9066f1a2372e072d11d2d67b95616bf41"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-d7c20c077dc81694",
+        "sha256": "08fc0c9f611fb7cfd509f01a1b3b7c20e5a19158f82c7cdec000699a86b7491e"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-f6d3380c31b4466d",
+        "sha256": "5ffeda3a52b6d4f015859a63a320f8a85a1a420c00cc0b1f3285fc5e14d2863e"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-cbff9213c997624c",
+        "sha256": "adeea3bbdfcd61bf086b01c98d9ab7a1819c2034c3833a35ccf3565e27331fec"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-6ee5178c530e3757",
+        "sha256": "b0ec797e1b663f19d109ef8fa4c4c718b1803f6acf95ca40aae24c2d52a4364c"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-a5b78f5ee8bc6325",
+        "sha256": "eb3aee34896d86adaf11d6ddfaaaba1810e49ca35a258eed81c21ed76588bb0d"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-d5f971faee0fc87f",
+        "sha256": "238940a5cd0ac572995b72a6dbe4e4e5c2a74004d134b18cd992db7b202a1846"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-67c40485ec0361b6",
+        "sha256": "1a2f50326b4040b273dc6059f17fcfbd8ab707c429fcaae8dfc2348012865d30"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-586335be47954c67",
+        "sha256": "937f31764e950dc25dc0955ad5064966772ae5c1fe60f8f6137cf754beae693f"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-4dc57181021f476d",
+        "sha256": "699b967150386452478837ec01bf51bf1fb20aad579990bc59d0ec267dcc9364"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-ec38ba5c24fee2e8",
+        "sha256": "b1714d881c447586f2feb23508f711c0bf5c19722d99871e8abac9cd9c0621cc"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-35d096cea007d390",
+        "sha256": "a43987678674e269770c8a8e6e7af6e74af2cd002acac272361a2fc0b05fdb32"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-bbbba4531de29989",
+        "sha256": "0ea6ab6dd1f3b51f536aa845dff8f045800fe974c96751ec2143b7636856ae0f"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-d109a030a0d88278",
+        "sha256": "4fe8f0920d52f97046d6af18a400ba75fc02919abda7925f275a627a3431785b"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-832cbc5273858fd2",
+        "sha256": "cfff567018af76d882eeb7a75c8081c8d679911ea1c022fe8f33917ed1e82d27"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-3c28ce6a0f885125",
+        "sha256": "67103b6ce768db21fff6c134bef08cca2276c020814798e774ed49436f4dce14"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-2e242804dd71e8fe",
+        "sha256": "c5c6322cc318f7461f023c2d4c877f19749ad8b4dd99402a95ccca04811a8bc7"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-g01",
+        "sha256": "1e5d2a1fd743b71764f200ad0d9667cdda3a38b5bfef2cb8d36d49cd07eea5f0"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-g02",
+        "sha256": "f9b3d0285a5a5990c6bcf08c8160fd2181b4f08fc4471107f4c46ed9a3f570a5"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-g03",
+        "sha256": "0bec445cb969fa1efbdf40fd3bb6401a09c568785195e86a8ca6656332854319"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-g04",
+        "sha256": "6a53d730825fc872147849b67882eb8d06f8bff21e398d6f043864211f057154"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-g05",
+        "sha256": "6e4f896f9fa27d063b062c55f1cf19a1bdc4036e4e1534911618e027bc1cda18"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-g06",
+        "sha256": "adf4eac20b51f9003dfcc829fd8faad035bcf4875a2276b380786cfe794fca90"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-g07",
+        "sha256": "dd8d8f877d2ca13a4e77e4440ba4f5dbdf764ef285873c3be466a9160d764c65"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-g08",
+        "sha256": "b61ea917c640d79c9e260bdb8f921b4dd113d6f3ead968adfe7d573c9c7fb3e4"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-g09",
+        "sha256": "6d2f711b30e90ed682d079665301b531ddeb503ee6acafe8ae3f8a552a630a0b"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-g10",
+        "sha256": "de4d98ea7518b0cf07289a6cc1ae28267d343185ad24e7d3a90cf969a0edeaa2"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-g11",
+        "sha256": "e8ea412f1191cb71bb2365e32e9cb8d00302e2821f8326cdc02cccf3b2ec1451"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-g12",
+        "sha256": "6389ebec9c66032b0e61aafd1688238a437e248726f5633e9e947b9bf7d1f6e1"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-f61450254f596dd8",
+        "sha256": "faf221e9d781ec069fe8295e2e008cb1389488003c656ed4322eecc13cdfc579"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-cfd94872edc578b0",
+        "sha256": "7c45391ec40817082a150f96e020706161baee183f88e120634c65959798bc7c"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-0c8ef8dc17f69ab8",
+        "sha256": "5876d612a52acd44a0ead01f84e8accf716585604167c5c3dea6d9949c8ca28f"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-88c95b23e3e4f579",
+        "sha256": "5e327debd6e3344203ac769e842ce457738643df9379400cbdfe0f506e9230b9"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-b3d0b868173bda0b",
+        "sha256": "de7960ca95ffb2c8feafff96ee20b06418a5b1a8bcaaff4c7ca7331cda0709e2"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-d50bef6b75429bb7",
+        "sha256": "c54f111b9dcbb7afd8f982db6e2c468ecebdacc969d269aba12a50568fedb7c7"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-8501285539fa945f",
+        "sha256": "6aa3d355c990ff4b2bba5c034712cb6860ea92a89f14d213760166b6d0fa0b2b"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-1b4469e7d5dd6713",
+        "sha256": "dcf06c1514d339315ae7a198ebfea974ea648912be5e4475f810699757f00c72"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-2558bc128afd3b48",
+        "sha256": "d12d5654b7f3c3c82071b166f919ba173a9e8ff9f0842df80a339becab847ab7"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-1236457ab54ad1f7",
+        "sha256": "c95a591259ebf77632d35cbc69abfd8ff79d5c240f9341abb691baedcb9ae7f3"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-161c47f38584431b",
+        "sha256": "18cdc9afe6da0f30366e9f7328c5aaaaf2a1aa718a2a2a877029fdeafa5c0901"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-1508a6c113d41383",
+        "sha256": "6c27d061ffc4c862b215a1a5dcdcb733f28d990b62b1ea7a479cc748da21f483"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-b78fe8bef595432d",
+        "sha256": "25c2ba9354cff09ad955b4c722de0feeac97548660d72d00e2dd0b43df23717a"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-3ccc126bd656a327",
+        "sha256": "b5b7122e1adf6620f45d22c5e0407f3b5d1a67bcec2bb3bdf7b7e03334de0bdc"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-3af0a247b0b82e6b",
+        "sha256": "d15a376b2db869735b0aecdfc0e46e89d2d8dd6c7b4ef15517b95a9b2b83c2a6"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-3f13c2eef9617804",
+        "sha256": "234980edbea70706aa848d471bae50bbba9f5f1e411c3f066eec3360bce107cd"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-694ff7c886df3b30",
+        "sha256": "131fafab3cdb019c088b9f9d8a552c740530217f269f1b54c9a744fead6d1c74"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-1f5f0811a51e506f",
+        "sha256": "d26eef9c2d70dc08b4738dfffa6e35a18157c940816c95a87926498d32d5be1a"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-32befd8f9a5cba65",
+        "sha256": "cfc4bca53a0f8ef87ae8ac0c4956759493e8855d958f6df2bfbce4f3e9f0e562"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-90564584ca2c808c",
+        "sha256": "e5c5b577f75be16740bd01bdf1cacb8cffac512c0e1530f91427f11acfa9ab3b"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-5dceec350dd36af7",
+        "sha256": "f79c7a655762401c6a312b7b33922988c425be38ef7cc58d0fd724254380c6e7"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-ad1ddde85b453b9d",
+        "sha256": "d48ca2459f4d54838232e0805733718720a9d9439a16cdd7e87ae3c5f38dfd48"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-84bc34ec59268f93",
+        "sha256": "e5f20381035535d88bc45b6e93ce4338911d5c2b0b9545801a48526f45434caf"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-8c99c0f6659db961",
+        "sha256": "1e572bf637d6ea358eeeeee77da2320d6c3026a39a5951d3c5e4f5d975f64535"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-39760f12009303f8",
+        "sha256": "335ba3124f3a5e8ca91a0d05d8c0c8b6c3b4f81c88105adc44fe65e6e723222f"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-51619c5c059cec78",
+        "sha256": "35d4d1c011337fec4a9508b21ff8aac9d7db237beea4cb6c920224f488abaa52"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-2152a66315b206f2",
+        "sha256": "e711cb28297121acebb754e8d13f20a573c02e4cb961e282e4d50ca7522c396b"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-fa257ab1e2a2c99e",
+        "sha256": "b0d007fe45cf3da5a4f334faecd4f73fda8bcc32544d2d7795ca41142e2a107f"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-181b9b54085b16c2",
+        "sha256": "09ac02970bd3be799354e2666a18be27cedc9eda11b37c8bc7494fa88ec7d02b"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-f95a71f50efa3058",
+        "sha256": "03c916c44ef8377fbc1d8da2cdeedb5c1846169c2db8bcc00b568873388cd9bb"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-1f5006bf3b099a25",
+        "sha256": "cf5ac2a58440fa7dd3b93a8f234eb4c3adf814e85536d4b2df08ba0296609ff5"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-4c7085a0b6480d42",
+        "sha256": "e1c3411c7c5dfb3210976cba712ff80d9ac13610d22e47b165b5d4e59172744f"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-ca72bc63e3b9339d",
+        "sha256": "eef2b49051c6aea150be2bfd5b7d9ce8c42b464d5756a45ca005199de9f5b3fd"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-196f0307a9a8fe83",
+        "sha256": "f2a8c05d3dceefa3bf4b827ff074728b56c2d098da4eea3e28d8970fb7e313e0"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-0105a009c32792e0",
+        "sha256": "379c15b7dcda129e6f6a90f9b9048e8049feed94234a90a4a9fe8a74f5190594"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-b7164b254d4224f4",
+        "sha256": "e6b2df5ebe4184cbc66287cac0a864e0e3da0a99ec23f5b63887d8f053d6debc"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-ce3504b03727c767",
+        "sha256": "b56b8c4d4b4c85ab5951b0ba84edd83ea4cac558112d0bdb3c28afabe00c3da1"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-55a668e5f6afee75",
+        "sha256": "154072caf0b84ed9752c90d5283937b26228ec9b2ee573f022002f7afea4e10f"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-41db3127676139ac",
+        "sha256": "1df487f90e16b468a044710645f1ea8b2e340209d63f67441205590d6066e86d"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-fcb6ae959f76eed3",
+        "sha256": "ab689c85e286f0530a9512677feecedb0296f9495abf4c07c1fdd132f442e8a6"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-e39cdfc0ed638d0e",
+        "sha256": "731fc272df909328278a427f69d58c96a45c07f6667d1379e4deed9102add301"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-71ceb094558cf202",
+        "sha256": "b25ebcfa1ab57245b30ac8bb83c04c1f582c80a091b25cb84e945be61fa446a8"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-8e3a633373d255f3",
+        "sha256": "63fea89c63c6fe2ad4f3e2d09cb8726bab812851a7c3c1756d47e68ceaf4ef64"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-ddc8600cab00b902",
+        "sha256": "0875eaac4abcc9ff0756751ad7365068e94fb1b70e0278a4ef647f5d8b1d7bef"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-86ce30180b7e720d",
+        "sha256": "bae615fcb970874d4c9a3e8de21616efdaa5ed6f113a99e1cc92f4e233d681be"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-233cf62175a817f0",
+        "sha256": "8a76d98e929f770077cca9116d6f6ebba688dd246e0d10f0b0c5ee029106c105"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-222dba70ca28b868",
+        "sha256": "2c388c0cca0568d9ef8c48db5763a822c2adb9272edaaebedc01aa8f394eaf25"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-1afe88e48c98a211",
+        "sha256": "86c0a51b44f85adb3c7ad95f84306c09b69e9a05ac68831dce9949fc9315acc0"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-94397d3125c16d8c",
+        "sha256": "6472da74f9d6791826ea6208b15c6f22822b9105f1fe6a8305408ca48e106419"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-1a7f165a2208c90c",
+        "sha256": "17a06b5335e926099cb8dfa4ca84eb6ecd0922f96595218e8b6f0a8ec9d87ed4"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-6a91cf792712b37a",
+        "sha256": "970d2a638696c82ff43f307ba749fc8d56f3b1397481cc6a30d3571289f01b40"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-224089ad86f4c02e",
+        "sha256": "7a4b5612b123f115afe71d97a2c30dd33babd246524984fb1f1772ce629e8d36"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-faef8667c14ffe05",
+        "sha256": "ec8be82bbcacc30f66c4b402f21ca54e8c1ace2f784b412a4586f7cd6f4c7ac5"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-ddf70a2fed96cf9a",
+        "sha256": "cda23c72359abd9357ab864cf972af9f0fe2dc477101821009051917d4d61906"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-a0436e5bb812a82a",
+        "sha256": "43c3c77e7757a530dc29713f21af5f37649f411540a450209db638f46443db47"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-37bef2fc75df7613",
+        "sha256": "a9bd5fe27aa13ec73651ab31e4badeddd5293e2d3e22ce3e8ff16348fdca9912"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-30e19e907212a0c9",
+        "sha256": "464d2d9749624974c35944067f1d8f2fa42590e0267f0570d8a7a3dc344b7828"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-21577678a75d5933",
+        "sha256": "40613fc7c76f4e605c3213794c78b327026c4ed35bab878bd1dd98bb41470a65"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-2178cb15391e2865",
+        "sha256": "2f26935ba3f13f114a7c2513771f032e7e3179c2b9a6a74255749599abb34bec"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-408ab5399f549cbf",
+        "sha256": "a696c3b9fb0fb8129ac41ff796c3547d715d231ca46315532fda807e096de856"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-f8718cdade2523d6",
+        "sha256": "42d9cbd886968d995bafb0f5b4caa92998cc685a70ec34c18e20bec29810acad"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-370db00a1021dde8",
+        "sha256": "e2427d349ef72090b0aecbc3509fbd28006116a13a77e4aa0651defa9eb9e0fb"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-6dd58003de108ec4",
+        "sha256": "6a8128c36fb388ed7aa90f0a51916ee965ef0a47858e545fd1e1d7344101e842"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-a9f7cea30918ca51",
+        "sha256": "3bf4dc1887cbdd2cfe00e0b6b21a6efc01f0e55383e7408937736ffce5c95a12"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-7a8769a5506854b1",
+        "sha256": "417846f728ae582fde99175d03622bfb99db7856c1b5aee568f9ea90c09622ae"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-1945cef120384a29",
+        "sha256": "b5e408266e15e9e710c9a5c53905521d7edbb7e7a1395f5b03be7752052588d7"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-b97b6519b0bee2dc",
+        "sha256": "3902946371fd2124ef3e8cc05d8ca4a807451b1e8750e6135984d65c166cc84b"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-fabcd012c8b758d9",
+        "sha256": "cb48c9fcc7b3475d52de8ddf749879286822d927b9154d678258b5645160a7d3"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-f5f4fcf9c6cbafd7",
+        "sha256": "65f7f7f183e9f1ec3ab67833ac192bf42e4c22d2fc6547cfc11029035bb44a84"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-5b786afe89983e96",
+        "sha256": "cbcef0bca53eaa36af559c53bd16e8ae621cb86e5719df8b6d3b8784bebbb011"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-83d8820755fe7407",
+        "sha256": "1ba6e20df357768fb99db8db087d0637fc58ab9408716501723245241a907776"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-150d5dbfdfb939ea",
+        "sha256": "0d06f9f0931247cf83371ae0603dc6043053daa2741ebb18dbeb68882ef77c79"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-679cf061a365e4a4",
+        "sha256": "2f88fe8f40ee49788e9f9b89fef0979970509c164e2b228653ae4fbd21ae8e54"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-4de03cf40624db64",
+        "sha256": "a22be5af29449f5168158b61ebf00b8b20caea2c30622ffe51a6c6f39bbe95d9"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-27335e3c8d314195",
+        "sha256": "5f7d4f701d03ab56bde322529a3a3f75e25e6531ff89de4f397d40641aed77a4"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-7e698859eaed3851",
+        "sha256": "b1810e63294ccbee87f8ba7fdc141c7ef69360635662f955f4b68df82db17a09"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-f8819fc2fffc770d",
+        "sha256": "f557193f0486f1758eaaae9a6f572a8eef824f637bb6fbeea29f97a9c99ce31e"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-f63a579826cf65c5",
+        "sha256": "a3915d8b0fc2a027fefa180ba98e90b54ad0abbb14f4bd8e0a35f5898acc632d"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-d7179d5ca4482370",
+        "sha256": "75425e641dcd0c5fd8df8d4697ccb0b5524405f70b9de34fb004129eaa10822c"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-aee825d1f0380da9",
+        "sha256": "d0ee42824f52925fc77e936bd3739a22caf8c65fe6edfbf37a40f7ad1269ca73"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-9e61bcd66b0806a1",
+        "sha256": "6ea08c5386aaa1ce781deef411d87c78919614ebc784ea30f1b40c3d4a7bb3c6"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-cd7d5aa6b613f43d",
+        "sha256": "5c74c66982c84a76614e803179a4d2e331cf593ca218089c1bed2168d24eaeb6"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-e49b354864d3df0f",
+        "sha256": "3b594af7ef588d6518a97465c441396e4ac2d82e8bd5a50adecedece99f992d2"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-4c5ea38df0c040fb",
+        "sha256": "d41551fb530f7e2816207d1526f88e10662c848a2dd88b39a5d29de7009dac79"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-272efbe11468099b",
+        "sha256": "3b51f504955bbd635cb0e870b3ff6afea904f8ccbe8ed88e34be67d0d4e8af4e"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-ae9fb66c0dbeae15",
+        "sha256": "3fa1b5fca41e154a0020329a3968846e8baa46af4e5d87da5ba3796b46bd29cc"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-5ad9fc02585fec31",
+        "sha256": "6f316178ae23621c6d04562f6fa525323a9d6b83496e8023ded239c8c03c61f7"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-45fe284ea3eb9b76",
+        "sha256": "caff9cc1217e3286d5da0aa90afad2e2e9b3a60004eb92def55624a58e320246"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-e7660a1406823816",
+        "sha256": "7b74c0ea4b1360463ad4053ed17c6340a66e36a8e9d98afd23a368681f40a6b0"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-3a04a51a6f44e507",
+        "sha256": "56ab8d96742949003e7cb779c1090b516b9b378d6d9e24ca0ff15f0e87bd6f41"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-150ca833894fc1d4",
+        "sha256": "5bb8388fb010643646a516238d40e718ae96d99085a7a90dc94b1f1c9fe8acf3"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-c329b4876201a9ed",
+        "sha256": "f2394d2524253520997d4a210c0cc44c5e67371d2150a2914069b92b831fa0fc"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-538c673038caf7b1",
+        "sha256": "51a22225684ed3b5cd0dd74d40ee99f91c27422471bcba43cb5c221a9a70cf26"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-538b3328da7b4d63",
+        "sha256": "10dc73abbe9211874a094aefaac3f839a91b402c12d4140f8fd7205318057b65"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-dc1f993593e42efe",
+        "sha256": "417b45994377d013065c24cd69b67efcd02707184b2d011e541263077e3174c6"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-4c43df363afb5ce4",
+        "sha256": "afa6785b65ef95424f7e69ea1c82e6ddfeb5a6c7fbfcbc38290d804c4bb78bb9"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-5740c5c46bbe7281",
+        "sha256": "ceac1b3ba90a920ee3714ec72e825d498cbabbe68a4274b130434c8bd1807dc0"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-0795c3e594f4d88a",
+        "sha256": "f626f712f168603b82dda0bae32cb214335e016c18ed5afc109c2d599681250c"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-5a72d6755f54efd4",
+        "sha256": "1b3850b3a00d63d18c986587ba61f3f36fbd5b7c7757d25cedcb682741cedc35"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-ca2796d51a1bc478",
+        "sha256": "f53eb4b9f84871df9ea38678bd79587090818957c8e05690d9845cf866bc7a40"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-36dbc4a9fe8dcadb",
+        "sha256": "7030442094231dc0856835a3c398925d94231bc43e202d9c13f57d25d17784fd"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-42a141225591257f",
+        "sha256": "08ad779619607a2463ca2b0b065379e316762f98781438861d407d40d9a6a1cc"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-16fe5d4a85123178",
+        "sha256": "70deafe9609dd083b365af1aee8a7eadd46c7c412cb00182e0548b777873919e"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-3d6bdfcb1764feaf",
+        "sha256": "b3e49ec4d4bf29bf3ab1ecf03ca986b36459fdd75bd1a1904388223e4127b73f"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-c4b9c9ca4ad3a7ae",
+        "sha256": "68e94b60eb113ae368eccf717e0f257cc5fde3a355de05b30946094e4ce06c19"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-893fad65149bf42a",
+        "sha256": "622e0444067b76d75e06b1edaf4c4fc4cfce501264589e297fea05d1f6cfb86b"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-f43351711713daec",
+        "sha256": "e4ea921c2ac2b1ac5519f5e83252603437f6617cf350a272ee39c5a01b6d21db"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-840f4ece8bc5672a",
+        "sha256": "b20797987fdc25282b34a098d2b4a5b6fca37b6a07bdd7238b9257c9e64aaa29"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-e6a67be09e50e263",
+        "sha256": "ea487950a0c02cd4d25e728b5905e853db5b00ef30eddac16637729ec099992e"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-3da93e2a061aa2ea",
+        "sha256": "694e6fd9b35055d140678b0813ea99849b84af30af969f43d983029a5df3851a"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-0976cdb6447a2802",
+        "sha256": "de3378982feb25a52653a778ca0a79f0ed9242b564fdf2103bb064abe37dae3b"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-683b019eec78f7ea",
+        "sha256": "b874f43d8b0c64e0605a8077508d8ca7a1cf2e14cb30d1d11e238649ca92a688"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-b98e17fe7473abb6",
+        "sha256": "dc0290e7b3e2eaf449fd7032d97a42d918519b0825862683cfa3ba4b5192cd67"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-851686b9326765e5",
+        "sha256": "5b45042be37cd5b9250897037ddea5b7950018a9c02243c22cb98ebec6690ef2"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-e2487b550fc3be10",
+        "sha256": "59beb1c347b68e15097eadade4e051b1c0900168af6db5da409013a27eaad4c5"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-92af7043926191dd",
+        "sha256": "629086c5b66e1fd80641cf8ece9c40955d05c0ba937183ff93d6c16d918046bb"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-d11377b3343d9e6e",
+        "sha256": "4d92ef947a03e491a2567952f7683a8a35da7af1c54b64e3a7e620cf7ffc5db0"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-efa412b9333343c1",
+        "sha256": "70eef96ff6af65ebab76d553914a93bfb6af9b882c10831632232423213b8b84"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-7ab2af0a23583aca",
+        "sha256": "dc6ce9942285ffec2d246eb2336ad32069aaebde9a73c35d6661ba76f9d0fb30"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-4378667fad4000ff",
+        "sha256": "5d919c93abe6c5792fe0daddf318d271bc2083cf74d1f2c7196c2e166dd2a470"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-e69272db455e09e8",
+        "sha256": "f1a889858f04d4b6816e5e90039b4203beca17767c7bb9b9ef0782b65b8eb79a"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-ac7336128ccc6be8",
+        "sha256": "92972759420a05dd63e8a59999063c967772542b41f2529c183a96e3a956f80a"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-12669d16f388a9d9",
+        "sha256": "54725c2437c2cdd64b8bee81ad011c0c3796bff34ac8c8add02560a15e793df7"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-9ce6934e75dd7f4b",
+        "sha256": "2eb1eb9ab9ea197119f13107a6e21b9a0f99a88077937828f86793f61113adfc"
+      },
+      {
+        "kind": "writing",
+        "id": "v6-disc-ecd0480b1d96b9fe",
+        "sha256": "627441bc84e3c01368567867b584c92623262ef675a79dca51450a760f954fd7"
+      },
+      {
+        "kind": "writing",
+        "id": "v6-disc-cebde5648b83ef01",
+        "sha256": "0cd9735d0c50f89c7078adca85cd0c3e232ed712f2225215d1aa2972b76504f1"
+      },
+      {
+        "kind": "supplements",
+        "id": "v6-supp-021b99dc7c9e1c80",
+        "sha256": "2307788a84b9c780080dd233e9254904e9a2a78c3e3ea3e4e8f7e8b2347d1246"
+      },
+      {
+        "kind": "supplements",
+        "id": "v6-supp-4acb6f0b2e79ee29",
+        "sha256": "e4a5b85f78043385cd227df2f44e8ea43da82b1dc6d1ff4ca79a2eb9bb5cd397"
+      },
+      {
+        "kind": "supplements",
+        "id": "v6-supp-8d71ce08ed5883e8",
+        "sha256": "d7f242e130467391d8141959aa9e7521758a87a09aacee2505b393c0751c3b58"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t03a-8",
+        "sha256": "eda0c654e177f2cfc30d0dff1cdf61fe39ebd01a524352fddc9404afb9daaf11"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t17-0",
+        "sha256": "bb8d487d83068fd10fba175c36068290f2d6a3b766cc918bcf9eb2bfe8e3a631"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t17-9",
+        "sha256": "52e8191010758f26b400395c331335f5d5a68cc56341a698cf5458d0e3c995d0"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t17-11",
+        "sha256": "08fedc14eb7699d6fc0852c20784eb28f3ff29a7eb7a90d54bc0d74eff24bb85"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-9dfb7bafb6d994be",
+        "sha256": "0de87bac9d0aded73dda2a6edd2cb4e62789e21dfdba9fcadc67be4497aa8ee7"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-ae8383daeef519b8",
+        "sha256": "8123dbd7e83c3f738b64ea49b4918daa762c2e7b5953bbe8fc1aed6bc69c6dbb"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-5283b179b986b481",
+        "sha256": "ba182e4069e098a776b4f503cf1f3109da5d6868fb3f644cdd189629c9134bcc"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t03a-9",
+        "sha256": "05cc91a7a1d7eef3aef7db40410ce51487fffcf85db2298e0c91ab5efa4f8ee6"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t03a-10",
+        "sha256": "8b946f2e5ac9312c16319fce30c3547efcc3cb2a4c7eb7c153fc362918601bbb"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t17-10",
+        "sha256": "aeb1870c86cc57b26ccbe4830a764f65c33ad594ec5347a3d118975dc3fcba18"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t17-12",
+        "sha256": "e9168384574dc1d2b2850a2d2c644931672ebe162ebc11605bc4321ef7ba6a90"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-7f8de4afd0788726",
+        "sha256": "fcf328d70ced13fb62ab0d5c425a3a44ac9da739142ce4555d5b99f07dfc0769"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-b1ca38c91e844166",
+        "sha256": "2d7b6d2c73dd6a78d734f92e0717b19c699d2d43143ac7916fcd0d0a8e10791f"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t03a-13",
+        "sha256": "de180b8196eee6495c1d756b5ebc1e444e8959a45dc2837b5a912b20e4659807"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t17-13",
+        "sha256": "44ac1ccb1bc6255d859f3e0822219891bd1ff6e0ff449b154545dfff4c03e8c3"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-096c4c4d76193620",
+        "sha256": "02f053b263c01de6ff33151ef2c70e4f0b6de7afc0c75fc8173f210899d04fe3"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-5958e5324810b4d6",
+        "sha256": "9b2432ea0085be71eb64c20c635f4961bbdc2ffa9761ad36f6952e6802fb7653"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t03a-11",
+        "sha256": "58563be7f55da919ab59e54a72d05ac5838715561911ea7a1064b27d24535e4a"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t03a-12",
+        "sha256": "7bd00323f178d7e79120c19972ab683e4449fdb8f01bde36dd2f0e8e431fcc07"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t17-14",
+        "sha256": "daa4a3d3ebe2d0d0c2da7b6e7b574b31baba93ad5b53fd6b726d92b9a2509f44"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-ba69cb823a2267c4",
+        "sha256": "1f758872d4ddff5e9e135cd94b4dc87058f967d8e7239ecc7b847a807f7651ae"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-d537f209f3f785c8",
+        "sha256": "73d82df65ef2cc5862c6a3997e6a7961d8c3579e53457c1567f25a75e54217a4"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t17-15",
+        "sha256": "02d90063645a7865fc6af8783a989c65f39a7c7fa0956e04912f6a08dfedc941"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t03a-14",
+        "sha256": "78f608fb8dbc5fc740fbe2dcdab565026c7be0eaceffb78292834a8e2d497fb8"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t17-16",
+        "sha256": "1d868c8c5994f1360a97ca5a46fa0e60d06fd526a6ad73deacac5c82ec8f646d"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-04d3910594d8d966",
+        "sha256": "cac57105be406600df8797211242b0407b822ce7d8e5590592e5340d9bc0f453"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-3992bc5fc2e91332",
+        "sha256": "f274694c0ac5cd3085eb2f541893881e45ed732d4ef5e502e6e04f39ff1d74d4"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t17-17",
+        "sha256": "bf0a0a419d4a01f5f440d2980e11a1f4287646715a270f23f0efc6c1be4db8b5"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-e069785ddb4209db",
+        "sha256": "bccd71fec019bdfe2d99fe026b6fcae21994464413ad60bc2b5e9e0b716acc3d"
+      }
+    ],
+    "premium_criteria": [
+      {
+        "id": "correcao_conceitual",
+        "assessment": "satisfactory",
+        "reason": "Conceitos, respostas e contrastes herdados da leitura integral; nenhum gabarito a trocar identificado. Correções atuais tornam explícito o erro de cada distrator selecionado."
+      },
+      {
+        "id": "cobertura",
+        "assessment": "satisfactory-in-scope",
+        "reason": "As 17 missões do conjunto cobrem o recorte de Cartografia do edital. A avaliação não cobre as outras 25 unidades nem todo o programa do concurso."
+      },
+      {
+        "id": "profundidade",
+        "assessment": "satisfactory-with-limitations",
+        "reason": "Fundamentos, aplicação, cálculos e limites de inferência preservados. O estoque de treino avançado é limitado; não constitui prova oficial completa."
+      },
+      {
+        "id": "clareza",
+        "assessment": "improved",
+        "reason": "Explicações dos 44 itens identificados substituem os prefixos genéricos por análise específica de cada alternativa incorreta."
+      },
+      {
+        "id": "exemplos",
+        "assessment": "satisfactory-in-scope",
+        "reason": "Exemplos hipotéticos continuam identificados; nenhum exemplo válido foi resumido ou removido. O mapa autoral declara suas medidas e referências."
+      },
+      {
+        "id": "redundancia",
+        "assessment": "satisfactory-with-limitations",
+        "reason": "Identidades e variantes preservadas; cinco famílias existentes continuam explícitas. Ausência de duplicata exata não implica independência entre todas as atividades."
+      },
+      {
+        "id": "terminologia",
+        "assessment": "satisfactory",
+        "reason": "Preservadas as distinções entre latitude/longitude, escala geográfica/cartográfica, datum/projeção, SIG/GNSS, raster/vetor e as operações digitais."
+      },
+      {
+        "id": "lacunas",
+        "assessment": "identified",
+        "reason": "Permanecem o estoque insuficiente para prova oficial, a prática compartilhada de escala e limitações de acesso aos binários externos. São trabalho do assistente, não tarefa obrigatória do estudante."
+      },
+      {
+        "id": "temporalidade",
+        "assessment": "satisfactory-in-scope",
+        "reason": "Os fatos temporais e suas fontes/datas permanecem delimitados. Coordenadas e medidas do novo mapa são hipotéticas, não observações territoriais atuais."
+      },
+      {
+        "id": "nivel",
+        "assessment": "editorial-reassessment",
+        "reason": "Além das dez reclassificações anteriores, r11 passa de Elite/D3/C5 para Concurso/D2/C3. Não há alegação de dificuldade calibrada."
+      },
+      {
+        "id": "fontes",
+        "assessment": "satisfactory-with-limitations",
+        "reason": "Fatos normativos e institucionais usam as fontes oficiais registradas. A grade e a escala do PDF IBGE não são afirmadas sem conferência; o exercício obrigatório possui suporte autoral autossuficiente."
+      },
+      {
+        "id": "treino",
+        "assessment": "improved",
+        "reason": "Gabaritos e alternativas preservados, feedbacks individualizados e A–E nos 36 itens Concurso/Elite. O parecer por IA não simula uma questão real da banca nem certificação externa."
+      }
+    ],
+    "conclusion": "Revisão por IA concluída no escopo das candidatas, com ressalvas explícitas e sem promoção automática.",
+    "limitations": [
+      "Dificuldade não calibrada empiricamente.",
+      "Referências externas podem exigir acesso de rede; os binários não receberam nova inspeção visual nesta rodada.",
+      "O banco completo de prova e a prática específica de cada unidade permanecem fora desta correção."
+    ]
+  }
+}

@@ -1,0 +1,550 @@
+{
+  "phase": "14",
+  "round": 2,
+  "branch": "v6-piloto-cartografia",
+  "humanApproval": "pending",
+  "implementationCommits": {
+    "globalSuite": "e400d863b3a3e69c2eae710527bef76ad192bb35",
+    "visualFollowup": "bf421cd86c904544bcd6b36d8800263d2a78461d"
+  },
+  "build": "passed at visualFollowup",
+  "unitAndIntegrity": {
+    "total": 51,
+    "passed": 51,
+    "failed": 0
+  },
+  "globalBrowserSuite": {
+    "stats": {
+      "startTime": "2026-10-15T23:26:13.316Z",
+      "duration": 122020.814,
+      "expected": 72,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "cases": [
+      {
+        "scenario": "biblioteca mostra todo o acervo e suas contagens",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 1082
+      },
+      {
+        "scenario": "busca ignora acentos e Cartografia histórica não aparece como opção de estudo",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 1360
+      },
+      {
+        "scenario": "favoritos persistem e podem ser removidos",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 1380
+      },
+      {
+        "scenario": "uma resposta na página existente atualiza o catálogo e permite retomar",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 1304
+      },
+      {
+        "scenario": "atalhos abrem flashcards e game sem perder a navegação",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 1395
+      },
+      {
+        "scenario": "progresso legado é lido sem contar respostas inválidas",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 1645
+      },
+      {
+        "scenario": "exportação contém uma cópia identificada do progresso",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 1231
+      },
+      {
+        "scenario": "todas as páginas originais e dados são servidos no caminho publicado",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 1492
+      },
+      {
+        "scenario": "celular tem menu funcional e não transborda horizontalmente",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 1537
+      },
+      {
+        "scenario": "endereço principal abre V6; outros módulos ficam acessíveis sem duplicar Cartografia",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 2521
+      },
+      {
+        "scenario": "Cartografia não auditada não é pesquisável, favoritada ou recomendada; URL antiga leva à V6",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 1940
+      },
+      {
+        "scenario": "biblioteca mostra todo o acervo e suas contagens",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 1059
+      },
+      {
+        "scenario": "busca ignora acentos e Cartografia histórica não aparece como opção de estudo",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 1687
+      },
+      {
+        "scenario": "favoritos persistem e podem ser removidos",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 1609
+      },
+      {
+        "scenario": "uma resposta na página existente atualiza o catálogo e permite retomar",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 1538
+      },
+      {
+        "scenario": "atalhos abrem flashcards e game sem perder a navegação",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 1410
+      },
+      {
+        "scenario": "progresso legado é lido sem contar respostas inválidas",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 1414
+      },
+      {
+        "scenario": "exportação contém uma cópia identificada do progresso",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 1690
+      },
+      {
+        "scenario": "todas as páginas originais e dados são servidos no caminho publicado",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 1279
+      },
+      {
+        "scenario": "celular tem menu funcional e não transborda horizontalmente",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 1546
+      },
+      {
+        "scenario": "endereço principal abre V6; outros módulos ficam acessíveis sem duplicar Cartografia",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 2943
+      },
+      {
+        "scenario": "Cartografia não auditada não é pesquisável, favoritada ou recomendada; URL antiga leva à V6",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 2180
+      },
+      {
+        "scenario": "V6: três unidades, cinco destinos mobile, retomada e portal histórico",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 974
+      },
+      {
+        "scenario": "V6: celebração de Chefão normal, sem repetição ou distração em Prova",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 1716
+      },
+      {
+        "scenario": "V6: celebração de Chefão system-reduced, sem repetição ou distração em Prova",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 1901
+      },
+      {
+        "scenario": "V6: celebração de Chefão manual-reduced, sem repetição ou distração em Prova",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 1837
+      },
+      {
+        "scenario": "V6: um acerto comum ensina sem celebração por alternativa",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 1203
+      },
+      {
+        "scenario": "V6: estudo orienta treino da mesma missão sem rótulos Cartografia I/II",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 1842
+      },
+      {
+        "scenario": "V6: Difícil agenda recuperação com esforço e mantém Caderno de Erros vazio",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 1395
+      },
+      {
+        "scenario": "V6: 17 missões acessíveis, teoria preservada, IDs únicos e registro de leitura",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 2618
+      },
+      {
+        "scenario": "V6: questão registra tentativa, explica distrator e alimenta o caderno",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 1586
+      },
+      {
+        "scenario": "V6: recall exige tentativa, rascunho sobrevive e modelo precede autoavaliação",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 1627
+      },
+      {
+        "scenario": "V6: flashcard só libera quatro avaliações após tentativa e verso; agenda persiste",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 1611
+      },
+      {
+        "scenario": "V6: V/F sempre justifica, timer é opcional e encerrar não causa callback inválido",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 1259
+      },
+      {
+        "scenario": "V6: prova salva seleção e relógio, não corrige antes e corrige omissões no fim",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 1706
+      },
+      {
+        "scenario": "V6: prazo de prova continua fora da tela e bloqueia a prova oficial sem estoque",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 966
+      },
+      {
+        "scenario": "V6: discursiva conserva texto e rubrica e não libera modelo antes de finalizar",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 1385
+      },
+      {
+        "scenario": "V6: prática percorre plano, defesa e dez dimensões da rubrica",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 2460
+      },
+      {
+        "scenario": "V6: importação é explícita, mantém bruto e ambiguidades sem criar domínio",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 1610
+      },
+      {
+        "scenario": "V6: exportar e restaurar mantém rascunhos; cópia incompatível não substitui estado",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 1148
+      },
+      {
+        "scenario": "V6: dark mode, teclado, movimento reduzido e layouts 360–430 px",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 3080
+      },
+      {
+        "scenario": "V6: mídia externa indisponível tem descrição e explicação continua acessível",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 1111
+      },
+      {
+        "scenario": "V6: quota indisponível informa memória temporária e permite backup",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 852
+      },
+      {
+        "scenario": "V6: teclado seleciona alternativas e outra aba preserva preferências recentes",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 1275
+      },
+      {
+        "scenario": "V6: diagnóstico e pós-teste usam os mesmos IDs com comparação transparente",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 2098
+      },
+      {
+        "scenario": "V6: equivalência de distratores históricos é explicada sem trocar o gabarito",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 1311
+      },
+      {
+        "scenario": "V6: três unidades, cinco destinos mobile, retomada e portal histórico",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 1076
+      },
+      {
+        "scenario": "V6: celebração de Chefão normal, sem repetição ou distração em Prova",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 2685
+      },
+      {
+        "scenario": "V6: celebração de Chefão system-reduced, sem repetição ou distração em Prova",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 1836
+      },
+      {
+        "scenario": "V6: celebração de Chefão manual-reduced, sem repetição ou distração em Prova",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 2007
+      },
+      {
+        "scenario": "V6: um acerto comum ensina sem celebração por alternativa",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 1197
+      },
+      {
+        "scenario": "V6: estudo orienta treino da mesma missão sem rótulos Cartografia I/II",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 2015
+      },
+      {
+        "scenario": "V6: Difícil agenda recuperação com esforço e mantém Caderno de Erros vazio",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 920
+      },
+      {
+        "scenario": "V6: 17 missões acessíveis, teoria preservada, IDs únicos e registro de leitura",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 3017
+      },
+      {
+        "scenario": "V6: questão registra tentativa, explica distrator e alimenta o caderno",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 2000
+      },
+      {
+        "scenario": "V6: recall exige tentativa, rascunho sobrevive e modelo precede autoavaliação",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 1761
+      },
+      {
+        "scenario": "V6: flashcard só libera quatro avaliações após tentativa e verso; agenda persiste",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 1676
+      },
+      {
+        "scenario": "V6: V/F sempre justifica, timer é opcional e encerrar não causa callback inválido",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 1177
+      },
+      {
+        "scenario": "V6: prova salva seleção e relógio, não corrige antes e corrige omissões no fim",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 1336
+      },
+      {
+        "scenario": "V6: prazo de prova continua fora da tela e bloqueia a prova oficial sem estoque",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 986
+      },
+      {
+        "scenario": "V6: discursiva conserva texto e rubrica e não libera modelo antes de finalizar",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 1908
+      },
+      {
+        "scenario": "V6: prática percorre plano, defesa e dez dimensões da rubrica",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 3384
+      },
+      {
+        "scenario": "V6: importação é explícita, mantém bruto e ambiguidades sem criar domínio",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 1420
+      },
+      {
+        "scenario": "V6: exportar e restaurar mantém rascunhos; cópia incompatível não substitui estado",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 1088
+      },
+      {
+        "scenario": "V6: dark mode, teclado, movimento reduzido e layouts 360–430 px",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 2608
+      },
+      {
+        "scenario": "V6: mídia externa indisponível tem descrição e explicação continua acessível",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 849
+      },
+      {
+        "scenario": "V6: quota indisponível informa memória temporária e permite backup",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 867
+      },
+      {
+        "scenario": "V6: teclado seleciona alternativas e outra aba preserva preferências recentes",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 2417
+      },
+      {
+        "scenario": "V6: diagnóstico e pós-teste usam os mesmos IDs com comparação transparente",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 2073
+      },
+      {
+        "scenario": "V6: equivalência de distratores históricos é explicada sem trocar o gabarito",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 1390
+      },
+      {
+        "scenario": "V6: prática noturna e após meia-noite conta dois dias locais",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 1114
+      },
+      {
+        "scenario": "V6: prática noturna e após meia-noite conta dois dias locais",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 1142
+      }
+    ]
+  },
+  "visualFollowupSuite": {
+    "scope": "Celebrações no fluxo sem sobrepor controles, temas, entrada e responsividade; nenhum motor pedagógico mudou depois da bateria global.",
+    "stats": {
+      "startTime": "2026-10-15T23:29:19.526Z",
+      "duration": 25113.049000000003,
+      "expected": 10,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "cases": [
+      {
+        "scenario": "endereço principal abre V6; outros módulos ficam acessíveis sem duplicar Cartografia",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 2417
+      },
+      {
+        "scenario": "endereço principal abre V6; outros módulos ficam acessíveis sem duplicar Cartografia",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 3151
+      },
+      {
+        "scenario": "V6: celebração de Chefão normal, sem repetição ou distração em Prova",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 2260
+      },
+      {
+        "scenario": "V6: celebração de Chefão system-reduced, sem repetição ou distração em Prova",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 1950
+      },
+      {
+        "scenario": "V6: celebração de Chefão manual-reduced, sem repetição ou distração em Prova",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 2166
+      },
+      {
+        "scenario": "V6: dark mode, teclado, movimento reduzido e layouts 360–430 px",
+        "project": "root",
+        "status": "expected",
+        "durationMs": 2809
+      },
+      {
+        "scenario": "V6: celebração de Chefão normal, sem repetição ou distração em Prova",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 1998
+      },
+      {
+        "scenario": "V6: celebração de Chefão system-reduced, sem repetição ou distração em Prova",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 1858
+      },
+      {
+        "scenario": "V6: celebração de Chefão manual-reduced, sem repetição ou distração em Prova",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 1919
+      },
+      {
+        "scenario": "V6: dark mode, teclado, movimento reduzido e layouts 360–430 px",
+        "project": "github-pages",
+        "status": "expected",
+        "durationMs": 2396
+      }
+    ]
+  },
+  "preservation": {
+    "historicalHtmlFiles": 31,
+    "unchangedBytes": true,
+    "parityRecords": 685,
+    "editorialPresentationEdits": 7,
+    "pedagogicalContentRemoved": false
+  },
+  "protectedRefs": {
+    "main": "d33acb4b544ea01ed501807603f9b9288f9ac830",
+    "v6-planejamento": "2761cf4b8a6f828b55d4d405b92f74bb4025f26d"
+  },
+  "limits": [
+    "No human visual/pedagogical approval yet",
+    "No production publication or merge",
+    "Authorial items still human-review-pending",
+    "Only Cartography migrated"
+  ]
+}

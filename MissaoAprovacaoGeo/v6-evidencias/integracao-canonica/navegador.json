@@ -1,0 +1,1035 @@
+{
+  "global_suite": {
+    "stats": {
+      "startTime": "2026-10-16T20:21:24.407Z",
+      "duration": 200629.79799999998,
+      "expected": 166,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "cases": [
+      {
+        "title": "Canônica: aplicativo usa as três edições aprovadas e apresenta fontes atuais",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1509
+      },
+      {
+        "title": "Canônica: mapa na leitura real 390px light, teclado e redução de movimento",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 990
+      },
+      {
+        "title": "Canônica: mapa na leitura real 390px dark, teclado e redução de movimento",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1022
+      },
+      {
+        "title": "Canônica: mapa na leitura real 320px dark, teclado e redução de movimento",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 986
+      },
+      {
+        "title": "Canônica: perfil e nota sem escala são apresentados junto aos valores de cálculo",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 870
+      },
+      {
+        "title": "Canônica: Landsat mantém datas, créditos e transcrição quando imagens externas falham",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 913
+      },
+      {
+        "title": "Canônica: seleção aposentada de GMS permanece histórica e exige escolha atual",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1181
+      },
+      {
+        "title": "Canônica: caderno conserva erro de associação anterior sem transferi-lo a outro conceito",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 986
+      },
+      {
+        "title": "Canônica: feedback de escala explica o fator do erro com o gabarito preservado",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 981
+      },
+      {
+        "title": "Canônica: prova anterior retoma ordem, resposta e cronômetro sem prêmio por atualização",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 983
+      },
+      {
+        "title": "Canônica: aplicativo usa as três edições aprovadas e apresenta fontes atuais",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 914
+      },
+      {
+        "title": "Canônica: mapa na leitura real 390px light, teclado e redução de movimento",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 926
+      },
+      {
+        "title": "Canônica: mapa na leitura real 390px dark, teclado e redução de movimento",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 892
+      },
+      {
+        "title": "Canônica: mapa na leitura real 320px dark, teclado e redução de movimento",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 873
+      },
+      {
+        "title": "Canônica: perfil e nota sem escala são apresentados junto aos valores de cálculo",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 849
+      },
+      {
+        "title": "Canônica: Landsat mantém datas, créditos e transcrição quando imagens externas falham",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 860
+      },
+      {
+        "title": "Canônica: seleção aposentada de GMS permanece histórica e exige escolha atual",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 905
+      },
+      {
+        "title": "Canônica: caderno conserva erro de associação anterior sem transferi-lo a outro conceito",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 814
+      },
+      {
+        "title": "Canônica: feedback de escala explica o fator do erro com o gabarito preservado",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 852
+      },
+      {
+        "title": "Canônica: prova anterior retoma ordem, resposta e cronômetro sem prêmio por atualização",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 904
+      },
+      {
+        "title": "biblioteca mostra todo o acervo e suas contagens",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 861
+      },
+      {
+        "title": "busca ignora acentos e Cartografia histórica não aparece como opção de estudo",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1236
+      },
+      {
+        "title": "favoritos persistem e podem ser removidos",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1231
+      },
+      {
+        "title": "uma resposta na página existente atualiza o catálogo e permite retomar",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1386
+      },
+      {
+        "title": "atalhos abrem flashcards e game sem perder a navegação",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1344
+      },
+      {
+        "title": "progresso legado é lido sem contar respostas inválidas",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 893
+      },
+      {
+        "title": "exportação contém uma cópia identificada do progresso",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 837
+      },
+      {
+        "title": "todas as páginas originais e dados são servidos no caminho publicado",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 924
+      },
+      {
+        "title": "celular tem menu funcional e não transborda horizontalmente",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 927
+      },
+      {
+        "title": "endereço principal abre V6; outros módulos ficam acessíveis sem duplicar Cartografia",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1713
+      },
+      {
+        "title": "Cartografia não auditada não é pesquisável, favoritada ou recomendada; URL antiga leva à V6",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1687
+      },
+      {
+        "title": "P3: contador considera favoritos ativos únicos e mantém os arquivados na cópia",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1183
+      },
+      {
+        "title": "biblioteca mostra todo o acervo e suas contagens",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1070
+      },
+      {
+        "title": "busca ignora acentos e Cartografia histórica não aparece como opção de estudo",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1579
+      },
+      {
+        "title": "favoritos persistem e podem ser removidos",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1203
+      },
+      {
+        "title": "uma resposta na página existente atualiza o catálogo e permite retomar",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1212
+      },
+      {
+        "title": "atalhos abrem flashcards e game sem perder a navegação",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1421
+      },
+      {
+        "title": "progresso legado é lido sem contar respostas inválidas",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 771
+      },
+      {
+        "title": "exportação contém uma cópia identificada do progresso",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 879
+      },
+      {
+        "title": "todas as páginas originais e dados são servidos no caminho publicado",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 955
+      },
+      {
+        "title": "celular tem menu funcional e não transborda horizontalmente",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 892
+      },
+      {
+        "title": "endereço principal abre V6; outros módulos ficam acessíveis sem duplicar Cartografia",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1791
+      },
+      {
+        "title": "Cartografia não auditada não é pesquisável, favoritada ou recomendada; URL antiga leva à V6",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1652
+      },
+      {
+        "title": "P3: contador considera favoritos ativos únicos e mantém os arquivados na cópia",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1098
+      },
+      {
+        "title": "Sensorial: preferências persistem e backup anterior restaura os padrões sem tocar conteúdo",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1353
+      },
+      {
+        "title": "Sensorial: percurso tem estados explícitos, consulta livre e navegação por teclado",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1144
+      },
+      {
+        "title": "Sensorial: fixacao tem feedback proporcional, som desligado e nenhuma conquista por alternativa",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1354
+      },
+      {
+        "title": "Sensorial: elite tem feedback proporcional, som desligado e nenhuma conquista por alternativa",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1397
+      },
+      {
+        "title": "Sensorial: erro recebe indicação neutra e explicação, sem punição sonora ou efeito forte",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 835
+      },
+      {
+        "title": "Sensorial: áudio exige opt-in, é curto e Foco desliga sons sem premiar preferências",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1146
+      },
+      {
+        "title": "Sensorial: áudio opt-in responde a evento real e nunca é repetido por reload",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1008
+      },
+      {
+        "title": "Sensorial: áudio indisponível mantém feedback, teclado e preferências funcionais",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 991
+      },
+      {
+        "title": "Sensorial: áudio pendente é cancelado ao navegar para Prova",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 834
+      },
+      {
+        "title": "Sensorial: Chefão balanced/no-preference/false respeita intensidade e movimento",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1053
+      },
+      {
+        "title": "Sensorial: Chefão immersive/no-preference/false respeita intensidade e movimento",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1088
+      },
+      {
+        "title": "Sensorial: Chefão focus/no-preference/false respeita intensidade e movimento",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1087
+      },
+      {
+        "title": "Sensorial: Chefão immersive/reduce/false respeita intensidade e movimento",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 919
+      },
+      {
+        "title": "Sensorial: Chefão immersive/no-preference/true respeita intensidade e movimento",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 955
+      },
+      {
+        "title": "Sensorial: erro convertido recebe destaque somente após recuperação já validada pelo motor",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1038
+      },
+      {
+        "title": "Sensorial: módulo concluído é raro, proporcional e mantém domínio e agenda independentes",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1450
+      },
+      {
+        "title": "Sensorial: revisão consolida XP real do bloco e mantém Difícil sem erro",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1235
+      },
+      {
+        "title": "Sensorial: Prova permanece silenciosa e sem XP, inclusive ao sair com prova ativa",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1118
+      },
+      {
+        "title": "Sensorial: mobile, dark e ampliação preservam controles e percurso sem overflow",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1354
+      },
+      {
+        "title": "Sensorial: Web Audio nativo só cria contexto e toca após escolha e gesto explícitos",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1106
+      },
+      {
+        "title": "Sensorial: ocultar a página interrompe sons e efeitos sem repetir recompensas ao voltar",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 919
+      },
+      {
+        "title": "Sensorial: desligar som em outra aba atualiza a preferência sem reproduzir efeitos",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1266
+      },
+      {
+        "title": "Sensorial: redução de movimento do sistema prevalece mesmo durante uma celebração imersiva",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 864
+      },
+      {
+        "title": "Sensorial: preferências persistem e backup anterior restaura os padrões sem tocar conteúdo",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1330
+      },
+      {
+        "title": "Sensorial: percurso tem estados explícitos, consulta livre e navegação por teclado",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1130
+      },
+      {
+        "title": "Sensorial: fixacao tem feedback proporcional, som desligado e nenhuma conquista por alternativa",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1425
+      },
+      {
+        "title": "Sensorial: elite tem feedback proporcional, som desligado e nenhuma conquista por alternativa",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1441
+      },
+      {
+        "title": "Sensorial: erro recebe indicação neutra e explicação, sem punição sonora ou efeito forte",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 839
+      },
+      {
+        "title": "Sensorial: áudio exige opt-in, é curto e Foco desliga sons sem premiar preferências",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1130
+      },
+      {
+        "title": "Sensorial: áudio opt-in responde a evento real e nunca é repetido por reload",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 975
+      },
+      {
+        "title": "Sensorial: áudio indisponível mantém feedback, teclado e preferências funcionais",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1042
+      },
+      {
+        "title": "Sensorial: áudio pendente é cancelado ao navegar para Prova",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 842
+      },
+      {
+        "title": "Sensorial: Chefão balanced/no-preference/false respeita intensidade e movimento",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 969
+      },
+      {
+        "title": "Sensorial: Chefão immersive/no-preference/false respeita intensidade e movimento",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1192
+      },
+      {
+        "title": "Sensorial: Chefão focus/no-preference/false respeita intensidade e movimento",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1060
+      },
+      {
+        "title": "Sensorial: Chefão immersive/reduce/false respeita intensidade e movimento",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 962
+      },
+      {
+        "title": "Sensorial: Chefão immersive/no-preference/true respeita intensidade e movimento",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 940
+      },
+      {
+        "title": "Sensorial: erro convertido recebe destaque somente após recuperação já validada pelo motor",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1004
+      },
+      {
+        "title": "Sensorial: módulo concluído é raro, proporcional e mantém domínio e agenda independentes",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1465
+      },
+      {
+        "title": "Sensorial: revisão consolida XP real do bloco e mantém Difícil sem erro",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1143
+      },
+      {
+        "title": "Sensorial: Prova permanece silenciosa e sem XP, inclusive ao sair com prova ativa",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1105
+      },
+      {
+        "title": "Sensorial: mobile, dark e ampliação preservam controles e percurso sem overflow",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1469
+      },
+      {
+        "title": "Sensorial: Web Audio nativo só cria contexto e toca após escolha e gesto explícitos",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1351
+      },
+      {
+        "title": "Sensorial: ocultar a página interrompe sons e efeitos sem repetir recompensas ao voltar",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 877
+      },
+      {
+        "title": "Sensorial: desligar som em outra aba atualiza a preferência sem reproduzir efeitos",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1135
+      },
+      {
+        "title": "Sensorial: redução de movimento do sistema prevalece mesmo durante uma celebração imersiva",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 825
+      },
+      {
+        "title": "V6: três unidades, cinco destinos mobile, retomada e portal histórico",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1139
+      },
+      {
+        "title": "V6: celebração de Chefão normal, sem repetição ou distração em Prova",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1480
+      },
+      {
+        "title": "V6: celebração de Chefão system-reduced, sem repetição ou distração em Prova",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1314
+      },
+      {
+        "title": "V6: celebração de Chefão manual-reduced, sem repetição ou distração em Prova",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1296
+      },
+      {
+        "title": "V6: um acerto comum ensina sem celebração por alternativa",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 823
+      },
+      {
+        "title": "V6: estudo orienta treino da mesma missão sem rótulos Cartografia I/II",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1431
+      },
+      {
+        "title": "P1: Escalas respeita o atalho com Orientação em andamento em ./",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1732
+      },
+      {
+        "title": "P1: Escalas respeita o atalho com Orientação concluída em ./",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1889
+      },
+      {
+        "title": "P1: Escalas respeita o atalho com Orientação em andamento em ./v6.html",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1800
+      },
+      {
+        "title": "P1: Escalas respeita o atalho com Orientação concluída em ./v6.html",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1852
+      },
+      {
+        "title": "P1: Diagnosticar com sessão anterior questions/fixacao/false",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1170
+      },
+      {
+        "title": "P1: Diagnosticar com sessão anterior questions/fixacao/true",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1053
+      },
+      {
+        "title": "P1: Diagnosticar com sessão anterior questions/diagnostico/true",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1036
+      },
+      {
+        "title": "P1: Diagnosticar com sessão anterior game/fila/false",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1069
+      },
+      {
+        "title": "P1: Diagnosticar com sessão anterior cards/fila/false",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1099
+      },
+      {
+        "title": "P1: mudança de missão e banco na mesma tela sincroniza filtros e permite voltar à rodada compatível",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1039
+      },
+      {
+        "title": "P1: Continuar retoma sessão antiga sem impor a missão de retomada artificial",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 774
+      },
+      {
+        "title": "P1: destino de diagnóstico sem sessão persiste ao continuar e recarregar",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1081
+      },
+      {
+        "title": "P1: escolher Game em um treino contextual abre a rodada da unidade e permite retornar às questões",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1285
+      },
+      {
+        "title": "V6: Difícil agenda recuperação com esforço e mantém Caderno de Erros vazio",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 904
+      },
+      {
+        "title": "V6: 17 missões acessíveis, teoria preservada, IDs únicos e registro de leitura",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1943
+      },
+      {
+        "title": "V6: questão registra tentativa, explica distrator e alimenta o caderno",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1254
+      },
+      {
+        "title": "V6: recall exige tentativa, rascunho sobrevive e modelo precede autoavaliação",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1188
+      },
+      {
+        "title": "V6: flashcard só libera quatro avaliações após tentativa e verso; agenda persiste",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1087
+      },
+      {
+        "title": "V6: V/F sempre justifica, timer é opcional e encerrar não causa callback inválido",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 920
+      },
+      {
+        "title": "V6: prova salva seleção e relógio, não corrige antes e corrige omissões no fim",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1416
+      },
+      {
+        "title": "V6: prazo de prova continua fora da tela e bloqueia a prova oficial sem estoque",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 956
+      },
+      {
+        "title": "V6: discursiva conserva texto e rubrica e não libera modelo antes de finalizar",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1380
+      },
+      {
+        "title": "V6: prática percorre plano, defesa e dez dimensões da rubrica",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1646
+      },
+      {
+        "title": "V6: importação é explícita, mantém bruto e ambiguidades sem criar domínio",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1116
+      },
+      {
+        "title": "V6: exportar e restaurar mantém rascunhos; cópia incompatível não substitui estado",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 928
+      },
+      {
+        "title": "V6: dark mode, teclado, movimento reduzido e layouts 360–430 px",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 2503
+      },
+      {
+        "title": "V6: mídia externa indisponível tem descrição e explicação continua acessível",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 811
+      },
+      {
+        "title": "V6: quota indisponível informa memória temporária e permite backup",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 816
+      },
+      {
+        "title": "V6: teclado seleciona alternativas e outra aba preserva preferências recentes",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1282
+      },
+      {
+        "title": "V6: diagnóstico e pós-teste usam os mesmos IDs com comparação transparente",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1502
+      },
+      {
+        "title": "V6: correção versionada elimina equivalência dos distratores sem trocar o gabarito",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 866
+      },
+      {
+        "title": "V6: três unidades, cinco destinos mobile, retomada e portal histórico",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1126
+      },
+      {
+        "title": "V6: celebração de Chefão normal, sem repetição ou distração em Prova",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1405
+      },
+      {
+        "title": "V6: celebração de Chefão system-reduced, sem repetição ou distração em Prova",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1280
+      },
+      {
+        "title": "V6: celebração de Chefão manual-reduced, sem repetição ou distração em Prova",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1281
+      },
+      {
+        "title": "V6: um acerto comum ensina sem celebração por alternativa",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 955
+      },
+      {
+        "title": "V6: estudo orienta treino da mesma missão sem rótulos Cartografia I/II",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1648
+      },
+      {
+        "title": "P1: Escalas respeita o atalho com Orientação em andamento em ./",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1878
+      },
+      {
+        "title": "P1: Escalas respeita o atalho com Orientação concluída em ./",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1931
+      },
+      {
+        "title": "P1: Escalas respeita o atalho com Orientação em andamento em ./v6.html",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1644
+      },
+      {
+        "title": "P1: Escalas respeita o atalho com Orientação concluída em ./v6.html",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1812
+      },
+      {
+        "title": "P1: Diagnosticar com sessão anterior questions/fixacao/false",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1032
+      },
+      {
+        "title": "P1: Diagnosticar com sessão anterior questions/fixacao/true",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1077
+      },
+      {
+        "title": "P1: Diagnosticar com sessão anterior questions/diagnostico/true",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1127
+      },
+      {
+        "title": "P1: Diagnosticar com sessão anterior game/fila/false",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1050
+      },
+      {
+        "title": "P1: Diagnosticar com sessão anterior cards/fila/false",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1074
+      },
+      {
+        "title": "P1: mudança de missão e banco na mesma tela sincroniza filtros e permite voltar à rodada compatível",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1046
+      },
+      {
+        "title": "P1: Continuar retoma sessão antiga sem impor a missão de retomada artificial",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 796
+      },
+      {
+        "title": "P1: destino de diagnóstico sem sessão persiste ao continuar e recarregar",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1037
+      },
+      {
+        "title": "P1: escolher Game em um treino contextual abre a rodada da unidade e permite retornar às questões",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1260
+      },
+      {
+        "title": "V6: Difícil agenda recuperação com esforço e mantém Caderno de Erros vazio",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 880
+      },
+      {
+        "title": "V6: 17 missões acessíveis, teoria preservada, IDs únicos e registro de leitura",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1921
+      },
+      {
+        "title": "V6: questão registra tentativa, explica distrator e alimenta o caderno",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1267
+      },
+      {
+        "title": "V6: recall exige tentativa, rascunho sobrevive e modelo precede autoavaliação",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1144
+      },
+      {
+        "title": "V6: flashcard só libera quatro avaliações após tentativa e verso; agenda persiste",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1092
+      },
+      {
+        "title": "V6: V/F sempre justifica, timer é opcional e encerrar não causa callback inválido",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 903
+      },
+      {
+        "title": "V6: prova salva seleção e relógio, não corrige antes e corrige omissões no fim",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1315
+      },
+      {
+        "title": "V6: prazo de prova continua fora da tela e bloqueia a prova oficial sem estoque",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 936
+      },
+      {
+        "title": "V6: discursiva conserva texto e rubrica e não libera modelo antes de finalizar",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1399
+      },
+      {
+        "title": "V6: prática percorre plano, defesa e dez dimensões da rubrica",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1571
+      },
+      {
+        "title": "V6: importação é explícita, mantém bruto e ambiguidades sem criar domínio",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1070
+      },
+      {
+        "title": "V6: exportar e restaurar mantém rascunhos; cópia incompatível não substitui estado",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 863
+      },
+      {
+        "title": "V6: dark mode, teclado, movimento reduzido e layouts 360–430 px",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 2553
+      },
+      {
+        "title": "V6: mídia externa indisponível tem descrição e explicação continua acessível",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 894
+      },
+      {
+        "title": "V6: quota indisponível informa memória temporária e permite backup",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 852
+      },
+      {
+        "title": "V6: teclado seleciona alternativas e outra aba preserva preferências recentes",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1353
+      },
+      {
+        "title": "V6: diagnóstico e pós-teste usam os mesmos IDs com comparação transparente",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1498
+      },
+      {
+        "title": "V6: correção versionada elimina equivalência dos distratores sem trocar o gabarito",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 829
+      },
+      {
+        "title": "V6: prática noturna e após meia-noite conta dois dias locais",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1125
+      },
+      {
+        "title": "V6: prática noturna e após meia-noite conta dois dias locais",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 1073
+      }
+    ]
+  },
+  "profile_recheck": {
+    "stats": {
+      "startTime": "2026-10-16T20:27:01.938Z",
+      "duration": 3856.781,
+      "expected": 2,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "overlaps_global_suite": true,
+    "cases": [
+      {
+        "title": "Canônica: perfil e nota sem escala são apresentados junto aos valores de cálculo",
+        "project": "root",
+        "status": "passed",
+        "duration_ms": 1044
+      },
+      {
+        "title": "Canônica: perfil e nota sem escala são apresentados junto aos valores de cálculo",
+        "project": "github-pages",
+        "status": "passed",
+        "duration_ms": 989
+      }
+    ]
+  }
+}

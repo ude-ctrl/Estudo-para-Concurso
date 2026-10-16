@@ -1,0 +1,2838 @@
+{
+  "phase": 14,
+  "scope": "Cartografia — optional Sensory Gamification",
+  "branch": "v6-piloto-cartografia",
+  "baseCommit": "e2f30e40c86e83380421ffba26b04eebac017907",
+  "featureCommit": "83a616c4512ea48f082d2d85d7b61e7e510c34ae",
+  "verifiedImplementationCommit": "bdda892af8c6d4fc52a52637c4eaadd0564e06dd",
+  "globalImplementationAndTestsCommit": "704dd7cfed548f28e7866cc028c4769b4d1fd891",
+  "followUpTestsCommit": "dbbf05855caf2d7844481be771692049e3a69b5c",
+  "verifiedCommitIncludingTestReadiness": "704dd7cfed548f28e7866cc028c4769b4d1fd891",
+  "humanUsageStatus": "pending new human test of the sensory layer; earlier usage approval and P1/P3 reconfirmation retained for earlier scope",
+  "environment": {
+    "node": "24.19.0",
+    "chromium": "154.0.8037.57",
+    "vite": "6.4.4",
+    "projects": {
+      "root": "/",
+      "github-pages": "/Estudo-para-Concurso/"
+    }
+  },
+  "unitAndIntegrity": {
+    "command": "npm test",
+    "passed": 63,
+    "failed": 0,
+    "skipped": 0,
+    "legacy": 5,
+    "v6": 58,
+    "cases": [
+      "os 31 HTMLs originais e as cópias publicadas permanecem byte a byte iguais ao acervo auditado",
+      "contagens de cada página coincidem com a auditoria independente",
+      "evocação, suplementos, fontes e estruturas completas sobrevivem à extração",
+      "fontes de Cartografia ficam apenas no arquivo de auditoria, com IDs e chaves preservados",
+      "importador recusa executar expressões de código dentro dos dados",
+      "contrato: exatamente as três unidades e as 17 missões oficiais do piloto",
+      "as três fontes conservam bytes, 50 etapas, 125 questões, 150 cards, 300 V/F e 39 recalls",
+      "todo registro tem destino canônico, ID de origem e hash verificável; contexto também é preservado",
+      "125 gabaritos, alternativas, feedbacks e papéis históricos preservados sem conversão silenciosa",
+      "fusão semântica reduz C/G e conserva todas as formulações e justificativas",
+      "suplementos e 6 procedências discursivas preservados; fonte secundária estritamente limitada",
+      "IDs únicos, referências válidas e nenhum enunciado/alternativa duplicado exato",
+      "36 itens novos, 12 por unidade, A–E, letras balanceadas e revisão humana pendente",
+      "conferência independente dos cálculos autorais e dos dados das figuras",
+      "HTML publicado não executa mecanismos legados nem produz IDs duplicados",
+      "agenda: intervalos iniciais e avaliações atrasadas seguem a política declarada",
+      "retentativa precoce não empurra o vencimento para um futuro artificial",
+      "fila vencida finita tem precedência sobre cartões novos",
+      "XP: abrir/ler/virar não premia e repetir acerto imediato não multiplica pontos",
+      "revisão vencida concede uma recompensa; repetir Fácil não faz farming",
+      "erro imediato não resolve; depois de intervalo, acerto objetivo resolve",
+      "falsa sensação de domínio reabre dificuldade e antecipa cartões relacionados",
+      "domínio fica sem número até haver estudo, diversidade, cobertura e retenção",
+      "prova: sem IDs repetidos, alternativas estáveis, letras equilibradas, novidade e diversidade",
+      "estoque insuficiente bloqueia perfil oficial e prova maior que banco",
+      "migração preserva bruto, é idempotente, não cria XP/domínio e não altera fontes",
+      "índices T03 ambíguos e T17 v25 não são interpretados como evidência",
+      "cópias corrompidas e esquema estranho são rejeitados; estado válido volta integral",
+      "registro congelado mantém identidades separadas das revisões editoriais",
+      "guias introdutórios encaminham questões ao conceito cobrado e todos os novos conceitos têm cartão",
+      "motor genérico monta as 60 posições do blueprint sem migrar disciplinas do piloto",
+      "erro só atinge domínio após intervalo, outro item e revisões consistentes",
+      "primeira revalidação de cartão legado usa intervalo inicial e não presume revisão vencida",
+      "cada Errei retorna uma vez na sessão; fila não cresce indefinidamente",
+      "redundância numérica histórica está sinalizada, sem alterar o gabarito válido",
+      "restauração rejeita históricos internos defeituosos e chaves que alterariam protótipos",
+      "persistência preserva bruto corrompido e mantém rascunhos em falha de quota",
+      "transações leem revisão recente e caderno global preserva outros módulos",
+      "restauração preserva cópia anterior e rejeita arquivo defeituoso antes de substituir",
+      "marcos: navegação e leitura sem recuperação não geram celebração nem XP",
+      "marcos: unidade requer todas as explicações e recuperação por missão, sem fabricar domínio",
+      "marcos: Chefão requer rodada completa da unidade, pelo menos 80% e não repete conquista",
+      "marcos: revisões só ficam em dia quando os vencidos reais terminam; importados não bastam",
+      "marcos: sete dias exigem prática significativa e não acrescentam pontos",
+      "marcos: erro convertido exige recuperação já validada pelo motor",
+      "marcos: backups anteriores permanecem válidos e marcos inválidos são rejeitados",
+      "B1: provas equilibradas não têm ciclo periódico nem três letras iguais em sequência",
+      "B2: Difícil é recuperação com esforço, intervalo curto, sem criar ou reabrir erro",
+      "C1: dias civis em UTC−3 e calendário com mudança de offset não perdem a sequência",
+      "UX: a camada canônica troca só a embalagem editorial e mantém originais integrais",
+      "restaurar backup anterior não mantém marcos ou sessão ausentes da cópia",
+      "P1: compatibilidade exige todos os IDs no destino, tipo e banco solicitado",
+      "P1: retomada conserva banco opcional e aceita backups anteriores sem inventar banco",
+      "sensorial: preferências opcionais mantêm backups antigos; valores e resumos inválidos são rejeitados",
+      "sensorial: percurso distingue leitura, recuperação e pendências sem fabricar domínio ou bloquear consulta",
+      "sensorial: resumo contabiliza somente XP real da rodada e não incorpora atividade paralela",
+      "sensorial: revisões devidas entram no balanço; virar, repetir cedo e preferências não rendem XP",
+      "sensorial: eventos comuns não são conquistas; repetição imediata e recarga não repetem efeitos",
+      "sensorial: expedição exige todas as missões com recuperação e os três Chefões, sem XP novo",
+      "sensorial: nível é somente XP e melhor sequência preserva intervalos civis e retomadas",
+      "sensorial: prova, discursiva e defesa em andamento mantêm o modo silencioso",
+      "sensorial: áudio é lazy, opcional, curto, limitado e interrompido ao sair ou mudar preferências",
+      "sensorial: liberação de áudio pendente não toca depois de cancelamento e falhas não quebram o estudo"
+    ]
+  },
+  "build": {
+    "command": "npm run build",
+    "status": "passed",
+    "strictTypeScript": true
+  },
+  "generationCheck": {
+    "command": "node scripts/build-v6.mjs --check",
+    "status": "passed"
+  },
+  "formatting": {
+    "scope": "all changed source and test files",
+    "status": "passed"
+  },
+  "fullBrowser": {
+    "command": "PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:e2e -- --reporter=json",
+    "stats": {
+      "startTime": "2026-10-16T07:34:57.526Z",
+      "duration": 294342.795,
+      "expected": 146,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "cases": [
+      {
+        "file": "platform.spec.ts",
+        "title": "biblioteca mostra todo o acervo e suas contagens",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 848,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "busca ignora acentos e Cartografia histórica não aparece como opção de estudo",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1102,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "favoritos persistem e podem ser removidos",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1742,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "uma resposta na página existente atualiza o catálogo e permite retomar",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1594,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "atalhos abrem flashcards e game sem perder a navegação",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2035,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "progresso legado é lido sem contar respostas inválidas",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1248,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "exportação contém uma cópia identificada do progresso",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1197,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "todas as páginas originais e dados são servidos no caminho publicado",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1152,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "celular tem menu funcional e não transborda horizontalmente",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1115,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "endereço principal abre V6; outros módulos ficam acessíveis sem duplicar Cartografia",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2554,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "Cartografia não auditada não é pesquisável, favoritada ou recomendada; URL antiga leva à V6",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2567,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "P3: contador considera favoritos ativos únicos e mantém os arquivados na cópia",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1547,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "biblioteca mostra todo o acervo e suas contagens",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1382,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "busca ignora acentos e Cartografia histórica não aparece como opção de estudo",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 3037,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "favoritos persistem e podem ser removidos",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2672,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "uma resposta na página existente atualiza o catálogo e permite retomar",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1829,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "atalhos abrem flashcards e game sem perder a navegação",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1999,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "progresso legado é lido sem contar respostas inválidas",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1567,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "exportação contém uma cópia identificada do progresso",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1598,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "todas as páginas originais e dados são servidos no caminho publicado",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1757,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "celular tem menu funcional e não transborda horizontalmente",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2034,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "endereço principal abre V6; outros módulos ficam acessíveis sem duplicar Cartografia",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2728,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "Cartografia não auditada não é pesquisável, favoritada ou recomendada; URL antiga leva à V6",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2823,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "P3: contador considera favoritos ativos únicos e mantém os arquivados na cópia",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1768,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: preferências persistem e backup anterior restaura os padrões sem tocar conteúdo",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2224,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: percurso tem estados explícitos, consulta livre e navegação por teclado",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2245,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: fixacao tem feedback proporcional, som desligado e nenhuma conquista por alternativa",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2434,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: elite tem feedback proporcional, som desligado e nenhuma conquista por alternativa",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 3152,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: erro recebe indicação neutra e explicação, sem punição sonora ou efeito forte",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1649,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: áudio exige opt-in, é curto e Foco desliga sons sem premiar preferências",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2022,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: áudio opt-in responde a evento real e nunca é repetido por reload",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1299,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: áudio indisponível mantém feedback, teclado e preferências funcionais",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1920,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: áudio pendente é cancelado ao navegar para Prova",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1531,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: Chefão balanced/no-preference/false respeita intensidade e movimento",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2332,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: Chefão immersive/no-preference/false respeita intensidade e movimento",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2153,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: Chefão focus/no-preference/false respeita intensidade e movimento",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1815,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: Chefão immersive/reduce/false respeita intensidade e movimento",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1239,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: Chefão immersive/no-preference/true respeita intensidade e movimento",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1371,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: erro convertido recebe destaque somente após recuperação já validada pelo motor",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2351,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: módulo concluído é raro, proporcional e mantém domínio e agenda independentes",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2885,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: revisão consolida XP real do bloco e mantém Difícil sem erro",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2085,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: Prova permanece silenciosa e sem XP, inclusive ao sair com prova ativa",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1947,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: mobile, dark e ampliação preservam controles e percurso sem overflow",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1751,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: Web Audio nativo só cria contexto e toca após escolha e gesto explícitos",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1308,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: ocultar a página interrompe sons e efeitos sem repetir recompensas ao voltar",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1240,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: desligar som em outra aba atualiza a preferência sem reproduzir efeitos",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2061,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: redução de movimento do sistema prevalece mesmo durante uma celebração imersiva",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1752,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: preferências persistem e backup anterior restaura os padrões sem tocar conteúdo",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2880,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: percurso tem estados explícitos, consulta livre e navegação por teclado",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1874,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: fixacao tem feedback proporcional, som desligado e nenhuma conquista por alternativa",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2407,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: elite tem feedback proporcional, som desligado e nenhuma conquista por alternativa",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1952,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: erro recebe indicação neutra e explicação, sem punição sonora ou efeito forte",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1235,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: áudio exige opt-in, é curto e Foco desliga sons sem premiar preferências",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1698,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: áudio opt-in responde a evento real e nunca é repetido por reload",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2654,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: áudio indisponível mantém feedback, teclado e preferências funcionais",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1616,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: áudio pendente é cancelado ao navegar para Prova",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1212,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: Chefão balanced/no-preference/false respeita intensidade e movimento",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1518,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: Chefão immersive/no-preference/false respeita intensidade e movimento",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1590,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: Chefão focus/no-preference/false respeita intensidade e movimento",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1893,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: Chefão immersive/reduce/false respeita intensidade e movimento",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1792,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: Chefão immersive/no-preference/true respeita intensidade e movimento",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1696,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: erro convertido recebe destaque somente após recuperação já validada pelo motor",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1934,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: módulo concluído é raro, proporcional e mantém domínio e agenda independentes",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2137,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: revisão consolida XP real do bloco e mantém Difícil sem erro",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1251,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: Prova permanece silenciosa e sem XP, inclusive ao sair com prova ativa",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1131,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: mobile, dark e ampliação preservam controles e percurso sem overflow",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2590,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: Web Audio nativo só cria contexto e toca após escolha e gesto explícitos",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1731,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: ocultar a página interrompe sons e efeitos sem repetir recompensas ao voltar",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1230,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: desligar som em outra aba atualiza a preferência sem reproduzir efeitos",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1858,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: redução de movimento do sistema prevalece mesmo durante uma celebração imersiva",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1193,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: três unidades, cinco destinos mobile, retomada e portal histórico",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 3019,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: celebração de Chefão normal, sem repetição ou distração em Prova",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2459,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: celebração de Chefão system-reduced, sem repetição ou distração em Prova",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2069,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: celebração de Chefão manual-reduced, sem repetição ou distração em Prova",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2156,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: um acerto comum ensina sem celebração por alternativa",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1618,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: estudo orienta treino da mesma missão sem rótulos Cartografia I/II",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2450,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Escalas respeita o atalho com Orientação em andamento em ./",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2803,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Escalas respeita o atalho com Orientação concluída em ./",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2501,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Escalas respeita o atalho com Orientação em andamento em ./v6.html",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 3536,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Escalas respeita o atalho com Orientação concluída em ./v6.html",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 4698,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Diagnosticar com sessão anterior questions/fixacao/false",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1910,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Diagnosticar com sessão anterior questions/fixacao/true",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1464,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Diagnosticar com sessão anterior questions/diagnostico/true",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2411,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Diagnosticar com sessão anterior game/fila/false",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2658,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Diagnosticar com sessão anterior cards/fila/false",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2029,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: mudança de missão e banco na mesma tela sincroniza filtros e permite voltar à rodada compatível",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2559,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Continuar retoma sessão antiga sem impor a missão de retomada artificial",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1410,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: destino de diagnóstico sem sessão persiste ao continuar e recarregar",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2577,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: escolher Game em um treino contextual abre a rodada da unidade e permite retornar às questões",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2490,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: Difícil agenda recuperação com esforço e mantém Caderno de Erros vazio",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1751,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: 17 missões acessíveis, teoria preservada, IDs únicos e registro de leitura",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 3187,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: questão registra tentativa, explica distrator e alimenta o caderno",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2106,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: recall exige tentativa, rascunho sobrevive e modelo precede autoavaliação",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1594,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: flashcard só libera quatro avaliações após tentativa e verso; agenda persiste",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1803,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: V/F sempre justifica, timer é opcional e encerrar não causa callback inválido",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1430,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: prova salva seleção e relógio, não corrige antes e corrige omissões no fim",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2491,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: prazo de prova continua fora da tela e bloqueia a prova oficial sem estoque",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1427,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: discursiva conserva texto e rubrica e não libera modelo antes de finalizar",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2291,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: prática percorre plano, defesa e dez dimensões da rubrica",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 3268,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: importação é explícita, mantém bruto e ambiguidades sem criar domínio",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2505,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: exportar e restaurar mantém rascunhos; cópia incompatível não substitui estado",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1817,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: dark mode, teclado, movimento reduzido e layouts 360–430 px",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 4351,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: mídia externa indisponível tem descrição e explicação continua acessível",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1562,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: quota indisponível informa memória temporária e permite backup",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2050,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: teclado seleciona alternativas e outra aba preserva preferências recentes",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2910,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: diagnóstico e pós-teste usam os mesmos IDs com comparação transparente",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2388,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: equivalência de distratores históricos é explicada sem trocar o gabarito",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1392,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: três unidades, cinco destinos mobile, retomada e portal histórico",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1148,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: celebração de Chefão normal, sem repetição ou distração em Prova",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1460,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: celebração de Chefão system-reduced, sem repetição ou distração em Prova",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2097,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: celebração de Chefão manual-reduced, sem repetição ou distração em Prova",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2481,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: um acerto comum ensina sem celebração por alternativa",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1567,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: estudo orienta treino da mesma missão sem rótulos Cartografia I/II",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2281,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Escalas respeita o atalho com Orientação em andamento em ./",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2145,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Escalas respeita o atalho com Orientação concluída em ./",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2466,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Escalas respeita o atalho com Orientação em andamento em ./v6.html",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2800,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Escalas respeita o atalho com Orientação concluída em ./v6.html",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2647,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Diagnosticar com sessão anterior questions/fixacao/false",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1471,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Diagnosticar com sessão anterior questions/fixacao/true",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1482,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Diagnosticar com sessão anterior questions/diagnostico/true",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1093,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Diagnosticar com sessão anterior game/fila/false",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1099,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Diagnosticar com sessão anterior cards/fila/false",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1616,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: mudança de missão e banco na mesma tela sincroniza filtros e permite voltar à rodada compatível",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1945,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Continuar retoma sessão antiga sem impor a missão de retomada artificial",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1454,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: destino de diagnóstico sem sessão persiste ao continuar e recarregar",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1772,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: escolher Game em um treino contextual abre a rodada da unidade e permite retornar às questões",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1801,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: Difícil agenda recuperação com esforço e mantém Caderno de Erros vazio",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1387,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: 17 missões acessíveis, teoria preservada, IDs únicos e registro de leitura",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 3249,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: questão registra tentativa, explica distrator e alimenta o caderno",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1778,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: recall exige tentativa, rascunho sobrevive e modelo precede autoavaliação",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1619,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: flashcard só libera quatro avaliações após tentativa e verso; agenda persiste",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1535,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: V/F sempre justifica, timer é opcional e encerrar não causa callback inválido",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1432,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: prova salva seleção e relógio, não corrige antes e corrige omissões no fim",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1372,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: prazo de prova continua fora da tela e bloqueia a prova oficial sem estoque",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1032,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: discursiva conserva texto e rubrica e não libera modelo antes de finalizar",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2496,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: prática percorre plano, defesa e dez dimensões da rubrica",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2478,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: importação é explícita, mantém bruto e ambiguidades sem criar domínio",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1698,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: exportar e restaurar mantém rascunhos; cópia incompatível não substitui estado",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1371,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: dark mode, teclado, movimento reduzido e layouts 360–430 px",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 3196,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: mídia externa indisponível tem descrição e explicação continua acessível",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 900,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: quota indisponível informa memória temporária e permite backup",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1018,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: teclado seleciona alternativas e outra aba preserva preferências recentes",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2177,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: diagnóstico e pós-teste usam os mesmos IDs com comparação transparente",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2133,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: equivalência de distratores históricos é explicada sem trocar o gabarito",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1285,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: prática noturna e após meia-noite conta dois dias locais",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2004,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: prática noturna e após meia-noite conta dois dias locais",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1351,
+            "retry": 0
+          }
+        ]
+      }
+    ]
+  },
+  "preliminaryTargetedRuns": {
+    "sensory": {
+      "startTime": "2026-10-16T01:21:18.092Z",
+      "duration": 62285.233,
+      "expected": 38,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "audioLifecycle": {
+      "startTime": "2026-10-16T01:26:24.074Z",
+      "duration": 10038.104000000001,
+      "expected": 8,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "meaning": "Preliminary overlapping coverage; not extra unique cases beyond the final full suite."
+  },
+  "focusRegression": {
+    "beforeCorrection": {
+      "stats": {
+        "startTime": "2026-10-16T07:19:25.603Z",
+        "duration": 346558.819,
+        "expected": 145,
+        "skipped": 0,
+        "unexpected": 1,
+        "flaky": 0
+      },
+      "failures": [
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: mudança de missão e banco na mesma tela sincroniza filtros e permite voltar à rodada compatível",
+          "project": "github-pages",
+          "status": "unexpected",
+          "runs": [
+            {
+              "status": "failed",
+              "durationMs": 9654,
+              "retry": 0
+            }
+          ],
+          "errors": [
+            "Error: expect(locator).toBeFocused() failed\n\nLocator:  getByRole('combobox', { name: 'Banco', exact: true })\nExpected: focused\nReceived: inactive\nTimeout:  7000ms\n\nCall log:\n  - Expect \"toBeFocused\" getByRole('combobox', { name: 'Banco', exact: true }) with timeout 7000ms\n  - waiting for getByRole('combobox', { name: 'Banco', exact: true })\n    18 × locator resolved to <select data-training-filter=\"bank\">…</select>\n       - unexpected value \"inactive\"\n"
+          ]
+        }
+      ]
+    },
+    "afterCorrection": {
+      "stats": {
+        "startTime": "2026-10-16T07:26:10.226Z",
+        "duration": 29364.002,
+        "expected": 12,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "cases": [
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: mudança de missão e banco na mesma tela sincroniza filtros e permite voltar à rodada compatível",
+          "project": "root",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1932,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: mudança de missão e banco na mesma tela sincroniza filtros e permite voltar à rodada compatível",
+          "project": "root",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1268,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: mudança de missão e banco na mesma tela sincroniza filtros e permite voltar à rodada compatível",
+          "project": "root",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1557,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: mudança de missão e banco na mesma tela sincroniza filtros e permite voltar à rodada compatível",
+          "project": "root",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1837,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: mudança de missão e banco na mesma tela sincroniza filtros e permite voltar à rodada compatível",
+          "project": "root",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1393,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: mudança de missão e banco na mesma tela sincroniza filtros e permite voltar à rodada compatível",
+          "project": "root",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1430,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: mudança de missão e banco na mesma tela sincroniza filtros e permite voltar à rodada compatível",
+          "project": "github-pages",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1317,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: mudança de missão e banco na mesma tela sincroniza filtros e permite voltar à rodada compatível",
+          "project": "github-pages",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1400,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: mudança de missão e banco na mesma tela sincroniza filtros e permite voltar à rodada compatível",
+          "project": "github-pages",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1622,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: mudança de missão e banco na mesma tela sincroniza filtros e permite voltar à rodada compatível",
+          "project": "github-pages",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1621,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: mudança de missão e banco na mesma tela sincroniza filtros e permite voltar à rodada compatível",
+          "project": "github-pages",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1605,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: mudança de missão e banco na mesma tela sincroniza filtros e permite voltar à rodada compatível",
+          "project": "github-pages",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1280,
+              "retry": 0
+            }
+          ]
+        }
+      ]
+    },
+    "reason": "One keyboard-focus failure in first full suite. Restore focus after route commit, keeping original regression assertions unchanged."
+  },
+  "testReadinessRegression": {
+    "beforeCorrection": {
+      "stats": {
+        "startTime": "2026-10-16T07:27:04.628Z",
+        "duration": 263270.00200000004,
+        "expected": 145,
+        "skipped": 0,
+        "unexpected": 1,
+        "flaky": 0
+      },
+      "failures": [
+        {
+          "file": "v6.spec.ts",
+          "title": "V6: dark mode, teclado, movimento reduzido e layouts 360–430 px",
+          "project": "root",
+          "status": "unexpected",
+          "runs": [
+            {
+              "status": "failed",
+              "durationMs": 7937,
+              "retry": 0
+            }
+          ],
+          "errors": [
+            "Error: expect(locator).toBeFocused() failed\n\nLocator:  locator('.skip-link')\nExpected: focused\nReceived: inactive\nTimeout:  7000ms\n\nCall log:\n  - Expect \"toBeFocused\" locator('.skip-link') with timeout 7000ms\n  - waiting for locator('.skip-link')\n    15 × locator resolved to <a href=\"#conteudo\" class=\"skip-link\">Pular para o conteúdo</a>\n       - unexpected value \"inactive\"\n"
+          ]
+        }
+      ]
+    },
+    "afterCorrection": {
+      "stats": {
+        "startTime": "2026-10-16T07:33:45.822Z",
+        "duration": 40384.199,
+        "expected": 12,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "cases": [
+        {
+          "file": "sensory.spec.ts",
+          "title": "Sensorial: mobile, dark e ampliação preservam controles e percurso sem overflow",
+          "project": "root",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1851,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "sensory.spec.ts",
+          "title": "Sensorial: mobile, dark e ampliação preservam controles e percurso sem overflow",
+          "project": "root",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 2551,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "sensory.spec.ts",
+          "title": "Sensorial: mobile, dark e ampliação preservam controles e percurso sem overflow",
+          "project": "root",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 2413,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "sensory.spec.ts",
+          "title": "Sensorial: mobile, dark e ampliação preservam controles e percurso sem overflow",
+          "project": "github-pages",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 2249,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "sensory.spec.ts",
+          "title": "Sensorial: mobile, dark e ampliação preservam controles e percurso sem overflow",
+          "project": "github-pages",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 2263,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "sensory.spec.ts",
+          "title": "Sensorial: mobile, dark e ampliação preservam controles e percurso sem overflow",
+          "project": "github-pages",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1500,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "V6: dark mode, teclado, movimento reduzido e layouts 360–430 px",
+          "project": "root",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 3861,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "V6: dark mode, teclado, movimento reduzido e layouts 360–430 px",
+          "project": "root",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 2673,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "V6: dark mode, teclado, movimento reduzido e layouts 360–430 px",
+          "project": "root",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 4017,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "V6: dark mode, teclado, movimento reduzido e layouts 360–430 px",
+          "project": "github-pages",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 3452,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "V6: dark mode, teclado, movimento reduzido e layouts 360–430 px",
+          "project": "github-pages",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 3258,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "V6: dark mode, teclado, movimento reduzido e layouts 360–430 px",
+          "project": "github-pages",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 3423,
+              "retry": 0
+            }
+          ]
+        }
+      ]
+    },
+    "reason": "The loading view also has an h1. Keyboard and viewport tests now await the actual workspace, preserving all focus and overflow assertions. Delayed-JSON reproduction: early Tab failed to reach skip link; Tab after actual Home loaded reached it."
+  },
+  "postGlobalCelebrationCheck": {
+    "implementationCommit": "bdda892af8c6d4fc52a52637c4eaadd0564e06dd",
+    "testCommit": "dbbf05855caf2d7844481be771692049e3a69b5c",
+    "stats": {
+      "startTime": "2026-10-16T07:45:38.287Z",
+      "duration": 37072.438,
+      "expected": 22,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "cases": [
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: Chefão balanced/no-preference/false respeita intensidade e movimento",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1514,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: Chefão immersive/no-preference/false respeita intensidade e movimento",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1109,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: Chefão focus/no-preference/false respeita intensidade e movimento",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1114,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: Chefão immersive/reduce/false respeita intensidade e movimento",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1211,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: Chefão immersive/no-preference/true respeita intensidade e movimento",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1865,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: erro convertido recebe destaque somente após recuperação já validada pelo motor",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1584,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: módulo concluído é raro, proporcional e mantém domínio e agenda independentes",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2254,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: redução de movimento do sistema prevalece mesmo durante uma celebração imersiva",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1245,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: Chefão balanced/no-preference/false respeita intensidade e movimento",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1733,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: Chefão immersive/no-preference/false respeita intensidade e movimento",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1424,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: Chefão focus/no-preference/false respeita intensidade e movimento",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1516,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: Chefão immersive/reduce/false respeita intensidade e movimento",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1572,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: Chefão immersive/no-preference/true respeita intensidade e movimento",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1015,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: erro convertido recebe destaque somente após recuperação já validada pelo motor",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1038,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: módulo concluído é raro, proporcional e mantém domínio e agenda independentes",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1780,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "sensory.spec.ts",
+        "title": "Sensorial: redução de movimento do sistema prevalece mesmo durante uma celebração imersiva",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1269,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: celebração de Chefão normal, sem repetição ou distração em Prova",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1681,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: celebração de Chefão system-reduced, sem repetição ou distração em Prova",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1522,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: celebração de Chefão manual-reduced, sem repetição ou distração em Prova",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1971,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: celebração de Chefão normal, sem repetição ou distração em Prova",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2109,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: celebração de Chefão system-reduced, sem repetição ou distração em Prova",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1563,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: celebração de Chefão manual-reduced, sem repetição ou distração em Prova",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1732,
+            "retry": 0
+          }
+        ]
+      }
+    ],
+    "meaning": "Targeted validation after a small accessibility refinement: module summary remains until dismissed; other notices pause expiration on hover or keyboard focus. Overlaps global suite, not extra unique cases.",
+    "intermediateTestCorrection": {
+      "stats": {
+        "startTime": "2026-10-16T07:42:20.773Z",
+        "duration": 42967.373,
+        "expected": 20,
+        "skipped": 0,
+        "unexpected": 2,
+        "flaky": 0
+      },
+      "failures": [
+        {
+          "file": "sensory.spec.ts",
+          "title": "Sensorial: Chefão focus/no-preference/false respeita intensidade e movimento",
+          "project": "root",
+          "status": "unexpected",
+          "runs": [
+            {
+              "status": "failed",
+              "durationMs": 7916,
+              "retry": 0
+            }
+          ],
+          "errors": [
+            "Error: expect(locator).toHaveCount(expected) failed\n\nLocator:  locator('.milestone-toast')\nExpected: 0\nReceived: 1\nTimeout:  7000ms\n\nCall log:\n  - Expect \"toHaveCount\" locator('.milestone-toast') with timeout 7000ms\n  - waiting for locator('.milestone-toast')\n    18 × locator resolved to 1 element\n       - unexpected value \"1\"\n"
+          ]
+        },
+        {
+          "file": "sensory.spec.ts",
+          "title": "Sensorial: Chefão focus/no-preference/false respeita intensidade e movimento",
+          "project": "github-pages",
+          "status": "unexpected",
+          "runs": [
+            {
+              "status": "failed",
+              "durationMs": 8001,
+              "retry": 0
+            }
+          ],
+          "errors": [
+            "Error: expect(locator).toHaveCount(expected) failed\n\nLocator:  locator('.milestone-toast')\nExpected: 0\nReceived: 1\nTimeout:  7000ms\n\nCall log:\n  - Expect \"toHaveCount\" locator('.milestone-toast') with timeout 7000ms\n  - waiting for locator('.milestone-toast')\n    18 × locator resolved to 1 element\n       - unexpected value \"1\"\n"
+          ]
+        }
+      ],
+      "reason": "The expiration test now releases both focus and hover before advancing time, preserving the requirement to keep a notice open while interacted with."
+    }
+  },
+  "preservation": {
+    "historicalHTMLsByteIdentical": 31,
+    "traceableParityRecords": 685,
+    "publishedContentBankUnchanged": true,
+    "frozenIDsUnchanged": true,
+    "originalSensoryProposalUnchanged": true,
+    "authorialQuestionsHumanReviewPending": 36,
+    "completeOfficialExam": "blocked by insufficient approved stock"
+  },
+  "preferences": {
+    "defaultExperience": "balanced",
+    "defaultSound": "off",
+    "oldBackups": "accepted with absent optional preferences and absent session sensory summary",
+    "storageSchema": 6
+  },
+  "captures": [
+    {
+      "path": "MissaoAprovacaoGeo/v6-evidencias/sensorial-percurso-mobile.png",
+      "sha256": "77e9e38ccf6600292245dd0269853e0c2abea794acd9c95551db160b034c3b22",
+      "bytes": 318460,
+      "meaning": "Production build screenshot with test fixtures; not actual user progress."
+    },
+    {
+      "path": "MissaoAprovacaoGeo/v6-evidencias/sensorial-percurso-dark-mobile.png",
+      "sha256": "2bb60d210cfcde423d4c93ada4cd848fd8f54211c65579c7fcc7276f8613fde0",
+      "bytes": 293342,
+      "meaning": "Production build screenshot with test fixtures; not actual user progress."
+    },
+    {
+      "path": "MissaoAprovacaoGeo/v6-evidencias/sensorial-chefao-mobile.png",
+      "sha256": "643a258daad5a00aa0956432fad9f456b12481169ae81bed293fb57dc3c498ee",
+      "bytes": 137721,
+      "meaning": "Production build screenshot with test fixtures; not actual user progress."
+    },
+    {
+      "path": "MissaoAprovacaoGeo/v6-evidencias/sensorial-modulo-desktop.png",
+      "sha256": "51eb1baba33b4a1c5c1f9cd4b91ce2785377834b0a9841a8a16e6ba94f3bacfd",
+      "bytes": 311947,
+      "meaning": "Production build screenshot with test fixtures; not actual user progress."
+    }
+  ],
+  "governance": {
+    "mainObserved": "d33acb4b544ea01ed501807603f9b9288f9ac830",
+    "planningObserved": "fc8023b9b99cf2978f21e613e43d232aa53643b0",
+    "merge": false,
+    "deployment": false,
+    "issue13Started": false,
+    "otherModulesMigrated": false,
+    "canonicalUnitsPromoted": false
+  },
+  "limits": [
+    "Chromium on desktop with mobile viewports; no physical iOS/Android validation",
+    "Native and mocked Web Audio graph tested; subjective sound comfort requires human test",
+    "No full screen-reader audit, longitudinal learning validation or field performance study",
+    "Levels and journey completion do not establish mastery or exam readiness",
+    "Old sessions without sensory accounting do not receive a guessed retroactive XP subtotal"
+  ]
+}

@@ -81,8 +81,9 @@ export function readProgress(lesson: Lesson): Progress {
 
 export function exportProgress(catalog: Catalog, preferences: Preferences): boolean {
   try {
+    const sources = [...catalog.lessons, ...(catalog.legacyBackupSources || [])];
     const keys = new Set(
-      catalog.lessons.flatMap((lesson) =>
+      sources.flatMap((lesson) =>
         [lesson.storage.current, lesson.storage.previous].filter((key): key is string =>
           Boolean(key),
         ),
@@ -98,7 +99,7 @@ export function exportProgress(catalog: Catalog, preferences: Preferences): bool
       schemaVersion: 1,
       exportedAt: new Date().toISOString(),
       preferences,
-      sources: catalog.lessons.map(({ id, sourceHash, storage }) => ({ id, sourceHash, storage })),
+      sources: sources.map(({ id, sourceHash, storage }) => ({ id, sourceHash, storage })),
       legacyStorage,
     };
     const url = URL.createObjectURL(

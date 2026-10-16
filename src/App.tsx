@@ -27,6 +27,7 @@ import {
   writePreferences,
 } from './storage';
 import type { Preferences } from './storage';
+import { canonicalLegacyRoute } from './legacy-routes';
 import type { Catalog, Category, Lesson, Progress, StudyMode } from './types';
 
 const assetUrl = (path: string) => `${import.meta.env.BASE_URL}${path}`;
@@ -380,6 +381,10 @@ export default function App() {
               a.title.localeCompare(b.title, 'pt-BR'),
       );
   }, [catalog, query, category, sort, view, preferences.favorites, progress]);
+  useEffect(() => {
+    const canonical = canonicalLegacyRoute(location.hash);
+    if (canonical) location.replace(assetUrl('index.html') + '#' + canonical);
+  }, [route]);
   const toggleFavorite = (id: string) =>
     setPreferences((previous) => ({
       ...previous,
@@ -413,6 +418,9 @@ export default function App() {
   const lesson = catalog.lessons.find((item) => item.id === route.id),
     resource = catalog.resources.find((item) => item.id === route.id);
   const lastLesson = catalog.lessons.find((item) => item.id === preferences.lastVisited);
+  const favoriteCount = catalog.lessons.filter((item) =>
+    preferences.favorites.includes(item.id),
+  ).length;
   const started = catalog.lessons.filter((item) => progress.get(item.id)?.started).length;
   const complete = catalog.lessons.filter((item) => progress.get(item.id)?.percent === 100).length;
   const heading =
@@ -467,7 +475,7 @@ export default function App() {
             onClick={() => openView('library')}
           >
             <Library size={19} />
-            Biblioteca<span>{catalog.totals.lessons}</span>
+            Outros materiais<span>{catalog.totals.lessons}</span>
           </button>
           <button
             className={view === 'progress' && !route.id ? 'active' : ''}
@@ -482,9 +490,16 @@ export default function App() {
           >
             <Bookmark size={19} />
             Favoritos
-            {preferences.favorites.length > 0 && <span>{preferences.favorites.length}</span>}
+            {favoriteCount > 0 && <span>{favoriteCount}</span>}
           </button>
         </nav>
+        <a className="resource-link" href={assetUrl('index.html')}>
+          <Compass size={19} />
+          <span>
+            Cartografia V6<small>Continuar meu percurso</small>
+          </span>
+          <ArrowRight size={14} />
+        </a>
         <div className="sidebar-divider" />
         <div className="sidebar-label">PREPARAÇÃO</div>
         <a className="resource-link" href={`#/recurso/${catalog.resources[0]?.id}`}>
@@ -559,6 +574,17 @@ export default function App() {
               </div>
             </header>
             <main className="library-content">
+              <section className="resume-card" aria-label="Percurso canônico de Cartografia">
+                <Compass size={26} aria-hidden="true" />
+                <div>
+                  <span>CARTOGRAFIA V6</span>
+                  <h2>Um módulo. Três unidades. Um percurso.</h2>
+                  <p>Cartografia agora tem seu próprio ambiente de aprendizagem.</p>
+                </div>
+                <a href={assetUrl('index.html')}>
+                  Continuar Cartografia V6 <ArrowRight size={17} />
+                </a>
+              </section>
               <section className="welcome">
                 <div>
                   <div className="eyebrow">
@@ -691,9 +717,11 @@ export default function App() {
                       onChange={(event) => setCategory(event.target.value)}
                     >
                       <option>Todas as áreas</option>
-                      {categories.map((value) => (
-                        <option key={value}>{value}</option>
-                      ))}
+                      {categories
+                        .filter((value) => catalog.lessons.some((item) => item.category === value))
+                        .map((value) => (
+                          <option key={value}>{value}</option>
+                        ))}
                     </select>
                     <ChevronDown size={15} />
                   </label>

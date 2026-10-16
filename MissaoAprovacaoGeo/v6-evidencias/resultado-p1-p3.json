@@ -1,0 +1,1866 @@
+{
+  "phase": 14,
+  "scope": [
+    "P1 — destino solicitado do treino contextual e diagnóstico",
+    "P3 — contador de favoritos ativos"
+  ],
+  "branch": "v6-piloto-cartografia",
+  "implementationCommit": "c872886fbe544a265a0e9e038e7e10fdc95ee5f2",
+  "baseAuditedCommit": "12857159cdadd2c091b595d5c69a0aa9cba55445",
+  "executionDateUTC": "2026-10-16",
+  "humanUsageApproval": "retained from user; no new editorial approval inferred",
+  "independentTechnicalRelease": "pending independent reconfirmation of P1 correction",
+  "environment": {
+    "node": "24.19.0",
+    "chromium": "154.0.8037.57",
+    "vite": "6.4.4",
+    "projects": {
+      "root": "/",
+      "github-pages": "/Estudo-para-Concurso/"
+    },
+    "browserExecutable": "/usr/bin/chromium"
+  },
+  "build": {
+    "command": "npm run build",
+    "status": "passed",
+    "strictTypeScript": true
+  },
+  "unitAndIntegrity": {
+    "command": "npm test",
+    "total": 53,
+    "legacy": 5,
+    "v6": 48,
+    "passed": 53,
+    "failed": 0,
+    "skipped": 0
+  },
+  "reproducibleContentCheck": {
+    "command": "node scripts/build-v6.mjs --check",
+    "status": "passed"
+  },
+  "formattingCheck": {
+    "scope": "all changed source/test files",
+    "status": "passed"
+  },
+  "fullBrowser": {
+    "command": "PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:e2e -- --reporter=json",
+    "stats": {
+      "startTime": "2026-10-16T00:19:31.628Z",
+      "duration": 171899.737,
+      "expected": 100,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "cases": [
+      {
+        "file": "platform.spec.ts",
+        "title": "biblioteca mostra todo o acervo e suas contagens",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 948,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "busca ignora acentos e Cartografia histórica não aparece como opção de estudo",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1157,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "favoritos persistem e podem ser removidos",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1052,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "uma resposta na página existente atualiza o catálogo e permite retomar",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1809,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "atalhos abrem flashcards e game sem perder a navegação",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1960,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "progresso legado é lido sem contar respostas inválidas",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1043,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "exportação contém uma cópia identificada do progresso",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1102,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "todas as páginas originais e dados são servidos no caminho publicado",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1307,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "celular tem menu funcional e não transborda horizontalmente",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1320,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "endereço principal abre V6; outros módulos ficam acessíveis sem duplicar Cartografia",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2123,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "Cartografia não auditada não é pesquisável, favoritada ou recomendada; URL antiga leva à V6",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1703,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "P3: contador considera favoritos ativos únicos e mantém os arquivados na cópia",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1816,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "biblioteca mostra todo o acervo e suas contagens",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 841,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "busca ignora acentos e Cartografia histórica não aparece como opção de estudo",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1450,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "favoritos persistem e podem ser removidos",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1700,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "uma resposta na página existente atualiza o catálogo e permite retomar",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1881,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "atalhos abrem flashcards e game sem perder a navegação",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1623,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "progresso legado é lido sem contar respostas inválidas",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1065,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "exportação contém uma cópia identificada do progresso",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 966,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "todas as páginas originais e dados são servidos no caminho publicado",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1180,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "celular tem menu funcional e não transborda horizontalmente",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1012,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "endereço principal abre V6; outros módulos ficam acessíveis sem duplicar Cartografia",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2312,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "Cartografia não auditada não é pesquisável, favoritada ou recomendada; URL antiga leva à V6",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2708,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "platform.spec.ts",
+        "title": "P3: contador considera favoritos ativos únicos e mantém os arquivados na cópia",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1720,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: três unidades, cinco destinos mobile, retomada e portal histórico",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1625,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: celebração de Chefão normal, sem repetição ou distração em Prova",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2127,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: celebração de Chefão system-reduced, sem repetição ou distração em Prova",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2088,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: celebração de Chefão manual-reduced, sem repetição ou distração em Prova",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1899,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: um acerto comum ensina sem celebração por alternativa",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 873,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: estudo orienta treino da mesma missão sem rótulos Cartografia I/II",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1843,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Escalas respeita o atalho com Orientação em andamento em ./",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 3108,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Escalas respeita o atalho com Orientação concluída em ./",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2641,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Escalas respeita o atalho com Orientação em andamento em ./v6.html",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2313,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Escalas respeita o atalho com Orientação concluída em ./v6.html",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2391,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Diagnosticar com sessão anterior questions/fixacao/false",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1762,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Diagnosticar com sessão anterior questions/fixacao/true",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1402,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Diagnosticar com sessão anterior questions/diagnostico/true",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1358,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Diagnosticar com sessão anterior game/fila/false",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1361,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Diagnosticar com sessão anterior cards/fila/false",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1358,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: mudança de missão e banco na mesma tela sincroniza filtros e permite voltar à rodada compatível",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1512,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Continuar retoma sessão antiga sem impor a missão de retomada artificial",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 967,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: destino de diagnóstico sem sessão persiste ao continuar e recarregar",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1223,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: escolher Game em um treino contextual abre a rodada da unidade e permite retornar às questões",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1188,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: Difícil agenda recuperação com esforço e mantém Caderno de Erros vazio",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1200,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: 17 missões acessíveis, teoria preservada, IDs únicos e registro de leitura",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 3555,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: questão registra tentativa, explica distrator e alimenta o caderno",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2077,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: recall exige tentativa, rascunho sobrevive e modelo precede autoavaliação",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1450,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: flashcard só libera quatro avaliações após tentativa e verso; agenda persiste",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1108,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: V/F sempre justifica, timer é opcional e encerrar não causa callback inválido",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 913,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: prova salva seleção e relógio, não corrige antes e corrige omissões no fim",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1996,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: prazo de prova continua fora da tela e bloqueia a prova oficial sem estoque",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1398,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: discursiva conserva texto e rubrica e não libera modelo antes de finalizar",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2114,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: prática percorre plano, defesa e dez dimensões da rubrica",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2622,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: importação é explícita, mantém bruto e ambiguidades sem criar domínio",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1490,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: exportar e restaurar mantém rascunhos; cópia incompatível não substitui estado",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 885,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: dark mode, teclado, movimento reduzido e layouts 360–430 px",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2775,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: mídia externa indisponível tem descrição e explicação continua acessível",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1610,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: quota indisponível informa memória temporária e permite backup",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1349,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: teclado seleciona alternativas e outra aba preserva preferências recentes",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2000,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: diagnóstico e pós-teste usam os mesmos IDs com comparação transparente",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2132,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: equivalência de distratores históricos é explicada sem trocar o gabarito",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1001,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: três unidades, cinco destinos mobile, retomada e portal histórico",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1550,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: celebração de Chefão normal, sem repetição ou distração em Prova",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1931,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: celebração de Chefão system-reduced, sem repetição ou distração em Prova",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1494,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: celebração de Chefão manual-reduced, sem repetição ou distração em Prova",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1286,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: um acerto comum ensina sem celebração por alternativa",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1247,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: estudo orienta treino da mesma missão sem rótulos Cartografia I/II",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2703,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Escalas respeita o atalho com Orientação em andamento em ./",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 3160,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Escalas respeita o atalho com Orientação concluída em ./",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2853,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Escalas respeita o atalho com Orientação em andamento em ./v6.html",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1709,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Escalas respeita o atalho com Orientação concluída em ./v6.html",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2555,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Diagnosticar com sessão anterior questions/fixacao/false",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1739,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Diagnosticar com sessão anterior questions/fixacao/true",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1559,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Diagnosticar com sessão anterior questions/diagnostico/true",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1640,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Diagnosticar com sessão anterior game/fila/false",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1649,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Diagnosticar com sessão anterior cards/fila/false",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1356,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: mudança de missão e banco na mesma tela sincroniza filtros e permite voltar à rodada compatível",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1055,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Continuar retoma sessão antiga sem impor a missão de retomada artificial",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 743,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: destino de diagnóstico sem sessão persiste ao continuar e recarregar",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1590,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: escolher Game em um treino contextual abre a rodada da unidade e permite retornar às questões",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1926,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: Difícil agenda recuperação com esforço e mantém Caderno de Erros vazio",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1072,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: 17 missões acessíveis, teoria preservada, IDs únicos e registro de leitura",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2546,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: questão registra tentativa, explica distrator e alimenta o caderno",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1347,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: recall exige tentativa, rascunho sobrevive e modelo precede autoavaliação",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1220,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: flashcard só libera quatro avaliações após tentativa e verso; agenda persiste",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1593,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: V/F sempre justifica, timer é opcional e encerrar não causa callback inválido",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1787,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: prova salva seleção e relógio, não corrige antes e corrige omissões no fim",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1888,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: prazo de prova continua fora da tela e bloqueia a prova oficial sem estoque",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1239,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: discursiva conserva texto e rubrica e não libera modelo antes de finalizar",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2119,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: prática percorre plano, defesa e dez dimensões da rubrica",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 2044,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: importação é explícita, mantém bruto e ambiguidades sem criar domínio",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1132,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: exportar e restaurar mantém rascunhos; cópia incompatível não substitui estado",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 938,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: dark mode, teclado, movimento reduzido e layouts 360–430 px",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 4258,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: mídia externa indisponível tem descrição e explicação continua acessível",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1313,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: quota indisponível informa memória temporária e permite backup",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1063,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: teclado seleciona alternativas e outra aba preserva preferências recentes",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1717,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: diagnóstico e pós-teste usam os mesmos IDs com comparação transparente",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1655,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: equivalência de distratores históricos é explicada sem trocar o gabarito",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 867,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: prática noturna e após meia-noite conta dois dias locais",
+        "project": "root",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1915,
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "V6: prática noturna e após meia-noite conta dois dias locais",
+        "project": "github-pages",
+        "status": "expected",
+        "runs": [
+          {
+            "status": "passed",
+            "durationMs": 1501,
+            "retry": 0
+          }
+        ]
+      }
+    ]
+  },
+  "regressionBeforeFix": {
+    "meaning": "Expected failures of new regression assertions against 1285715, before the functional correction; not final-suite failures.",
+    "stats": {
+      "startTime": "2026-10-16T00:11:03.422Z",
+      "duration": 18361.582,
+      "expected": 0,
+      "skipped": 0,
+      "unexpected": 2,
+      "flaky": 0
+    },
+    "cases": [
+      {
+        "file": "platform.spec.ts",
+        "title": "Cartografia não auditada não é pesquisável, favoritada ou recomendada; URL antiga leva à V6",
+        "project": "root",
+        "status": "unexpected",
+        "runs": [
+          {
+            "status": "failed",
+            "durationMs": 8041,
+            "retry": 0
+          }
+        ],
+        "errors": [
+          "Error: expect(locator).toHaveText(expected) failed\n\nLocator:  locator('.main-nav').getByRole('button', { name: /Favoritos/ })\nExpected: \"Favoritos\"\nReceived: \"Favoritos1\"\nTimeout:  7000ms\n\nCall log:\n  - Expect \"toHaveText\" locator('.main-nav').getByRole('button', { name: /Favoritos/ }) with timeout 7000ms\n  - waiting for locator('.main-nav').getByRole('button', { name: /Favoritos/ })\n    18 × locator resolved to <button class=\"\">…</button>\n       - unexpected value \"Favoritos1\"\n"
+        ]
+      },
+      {
+        "file": "v6.spec.ts",
+        "title": "P1: Escalas respeita o atalho com Orientação em andamento em ./",
+        "project": "root",
+        "status": "unexpected",
+        "runs": [
+          {
+            "status": "failed",
+            "durationMs": 8406,
+            "retry": 0
+          }
+        ],
+        "errors": [
+          "Error: expect(locator).toHaveValue(expected) failed\n\nLocator: getByRole('combobox', { name: 'Missão', exact: true })\nExpected: \"escalas-e-medidas\"\nTimeout: 7000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toHaveValue\" getByRole('combobox', { name: 'Missão', exact: true }) with timeout 7000ms\n  - waiting for getByRole('combobox', { name: 'Missão', exact: true })\n"
+        ]
+      }
+    ]
+  },
+  "targetedBeforeFull": {
+    "meaning": "Supplementary targeted runs, overlapping coverage of final full suite; not additional unique scenarios. Focus/Game run includes final keyboard and Game refinements.",
+    "p1P3": {
+      "stats": {
+        "startTime": "2026-10-16T00:15:14.650Z",
+        "duration": 39461.284,
+        "expected": 28,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "cases": [
+        {
+          "file": "platform.spec.ts",
+          "title": "Cartografia não auditada não é pesquisável, favoritada ou recomendada; URL antiga leva à V6",
+          "project": "root",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1971,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "platform.spec.ts",
+          "title": "P3: contador considera favoritos ativos únicos e mantém os arquivados na cópia",
+          "project": "root",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1263,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "platform.spec.ts",
+          "title": "Cartografia não auditada não é pesquisável, favoritada ou recomendada; URL antiga leva à V6",
+          "project": "github-pages",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1797,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "platform.spec.ts",
+          "title": "P3: contador considera favoritos ativos únicos e mantém os arquivados na cópia",
+          "project": "github-pages",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1102,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: Escalas respeita o atalho com Orientação em andamento em ./",
+          "project": "root",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1881,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: Escalas respeita o atalho com Orientação concluída em ./",
+          "project": "root",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1968,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: Escalas respeita o atalho com Orientação em andamento em ./v6.html",
+          "project": "root",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 2004,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: Escalas respeita o atalho com Orientação concluída em ./v6.html",
+          "project": "root",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1979,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: Diagnosticar com sessão anterior questions/fixacao/false",
+          "project": "root",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1072,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: Diagnosticar com sessão anterior questions/fixacao/true",
+          "project": "root",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1078,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: Diagnosticar com sessão anterior questions/diagnostico/true",
+          "project": "root",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1038,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: Diagnosticar com sessão anterior game/fila/false",
+          "project": "root",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1076,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: Diagnosticar com sessão anterior cards/fila/false",
+          "project": "root",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1062,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: mudança de missão e banco na mesma tela sincroniza filtros e permite voltar à rodada compatível",
+          "project": "root",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 960,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: Continuar retoma sessão antiga sem impor a missão de retomada artificial",
+          "project": "root",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 742,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: destino de diagnóstico sem sessão persiste ao continuar e recarregar",
+          "project": "root",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1060,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: Escalas respeita o atalho com Orientação em andamento em ./",
+          "project": "github-pages",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1737,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: Escalas respeita o atalho com Orientação concluída em ./",
+          "project": "github-pages",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1829,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: Escalas respeita o atalho com Orientação em andamento em ./v6.html",
+          "project": "github-pages",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1685,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: Escalas respeita o atalho com Orientação concluída em ./v6.html",
+          "project": "github-pages",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1841,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: Diagnosticar com sessão anterior questions/fixacao/false",
+          "project": "github-pages",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1023,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: Diagnosticar com sessão anterior questions/fixacao/true",
+          "project": "github-pages",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1075,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: Diagnosticar com sessão anterior questions/diagnostico/true",
+          "project": "github-pages",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1038,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: Diagnosticar com sessão anterior game/fila/false",
+          "project": "github-pages",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1014,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: Diagnosticar com sessão anterior cards/fila/false",
+          "project": "github-pages",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1011,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: mudança de missão e banco na mesma tela sincroniza filtros e permite voltar à rodada compatível",
+          "project": "github-pages",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 943,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: Continuar retoma sessão antiga sem impor a missão de retomada artificial",
+          "project": "github-pages",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 778,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: destino de diagnóstico sem sessão persiste ao continuar e recarregar",
+          "project": "github-pages",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1098,
+              "retry": 0
+            }
+          ]
+        }
+      ]
+    },
+    "focusAndGame": {
+      "stats": {
+        "startTime": "2026-10-16T00:18:58.126Z",
+        "duration": 6851.759,
+        "expected": 4,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "cases": [
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: mudança de missão e banco na mesma tela sincroniza filtros e permite voltar à rodada compatível",
+          "project": "root",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1208,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: escolher Game em um treino contextual abre a rodada da unidade e permite retornar às questões",
+          "project": "root",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1210,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: mudança de missão e banco na mesma tela sincroniza filtros e permite voltar à rodada compatível",
+          "project": "github-pages",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1303,
+              "retry": 0
+            }
+          ]
+        },
+        {
+          "file": "v6.spec.ts",
+          "title": "P1: escolher Game em um treino contextual abre a rodada da unidade e permite retornar às questões",
+          "project": "github-pages",
+          "status": "expected",
+          "runs": [
+            {
+              "status": "passed",
+              "durationMs": 1373,
+              "retry": 0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "preservation": {
+    "legacyHTMLsByteIdentical": 31,
+    "traceableParityRecords": 685,
+    "publishedContentBankUnchanged": true,
+    "frozenIDRegistryUnchanged": true,
+    "sensoryGamificationProposalUnchanged": true,
+    "storageSchema": 6,
+    "newOptionalResumeField": "pool; older backups without it remain accepted"
+  },
+  "protectedRefsBeforeAndAfterCorrection": {
+    "main": "d33acb4b544ea01ed501807603f9b9288f9ac830",
+    "v6-planejamento": "2761cf4b8a6f828b55d4d405b92f74bb4025f26d"
+  },
+  "limits": [
+    "36 authorial questions remain human-review-pending",
+    "Complete official exam remains blocked by insufficient approved stock",
+    "Existing single working queue policy retained; explicit start replaces it without removing accumulated evidence",
+    "No merge, deployment, additional module migration or sensory gamification implementation",
+    "No claim of independent approval, device coverage beyond stated environment or longitudinal pedagogical validation"
+  ]
+}

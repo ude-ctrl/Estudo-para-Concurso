@@ -10,6 +10,10 @@ const baseline = JSON.parse(
 );
 const expectedPages = JSON.parse(await readFile(join(root, 'tests/fixtures/counts.json'), 'utf8'));
 const catalog = await importContent();
+const archive = JSON.parse(
+  await readFile(join(root, 'public/content/archive-catalog.json'), 'utf8'),
+);
+const allLessons = [...catalog.lessons, ...archive.lessons];
 const sha = (bytes) => createHash('sha256').update(bytes).digest('hex');
 
 test('os 31 HTMLs originais e as cópias publicadas permanecem byte a byte iguais ao acervo auditado', async () => {
@@ -28,7 +32,7 @@ test('os 31 HTMLs originais e as cópias publicadas permanecem byte a byte iguai
 });
 
 test('contagens de cada página coincidem com a auditoria independente', () => {
-  assert.deepEqual(catalog.totals, {
+  assert.deepEqual(archive.historicalTotals, {
     pages: 31,
     lessons: 30,
     stages: 542,
@@ -38,15 +42,23 @@ test('contagens de cada página coincidem com a auditoria independente', () => {
     recall: 452,
   });
   assert.equal(catalog.resources.length, 1);
+  assert.equal(catalog.lessons.length, 26);
+  assert.equal(archive.lessons.length, 4);
+  assert.equal(
+    catalog.lessons.some((lesson) => lesson.category === 'Cartografia'),
+    false,
+  );
+  assert.equal(catalog.totals.flashcards, 1294);
+  assert.equal(catalog.legacyBackupSources.length, 4);
   for (const expected of expectedPages) {
-    const lesson = catalog.lessons.find((lesson) => lesson.sourcePath === expected.sourcePath);
+    const lesson = allLessons.find((lesson) => lesson.sourcePath === expected.sourcePath);
     assert.ok(lesson, expected.sourcePath);
     assert.deepEqual(lesson.counts, expected.counts, expected.sourcePath);
   }
 });
 
 test('evocação, suplementos, fontes e estruturas completas sobrevivem à extração', async () => {
-  for (const lesson of catalog.lessons) {
+  for (const lesson of allLessons) {
     const content = JSON.parse(await readFile(join(root, 'public', lesson.contentUrl), 'utf8'));
     assert.equal(content.contentVersion, lesson.sourceHash);
     for (const name of ['matrixBox', 'discBox', 'teacherBox'])
@@ -65,15 +77,15 @@ test('evocação, suplementos, fontes e estruturas completas sobrevivem à extra
   assert.equal(content.banks.G.filter((item) => item.v).length, 68);
 });
 
-test('variantes são mantidas como lições e versões distintas, com as chaves legadas registradas', () => {
-  const cartografia = catalog.lessons.filter((lesson) => lesson.number === 3);
+test('fontes de Cartografia ficam apenas no arquivo de auditoria, com IDs e chaves preservados', () => {
+  const cartografia = allLessons.filter((lesson) => lesson.number === 3);
   assert.equal(cartografia.length, 2);
   assert.notEqual(cartografia[0].id, cartografia[1].id);
   assert.notEqual(cartografia[0].sourceHash, cartografia[1].sourceHash);
   assert.equal(cartografia[0].storage.current, 'seducpa_t3_carto2_v26');
   assert.equal(cartografia[1].storage.current, 'seducpa_t3_carto2_v26');
-  assert.equal(catalog.lessons.filter((lesson) => lesson.number === 17).length, 2);
-  assert.equal(catalog.lessons.filter((lesson) => lesson.number === 18).length, 2);
+  assert.equal(allLessons.filter((lesson) => lesson.number === 17).length, 2);
+  assert.equal(allLessons.filter((lesson) => lesson.number === 18).length, 2);
 });
 
 test('importador recusa executar expressões de código dentro dos dados', () => {

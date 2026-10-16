@@ -172,6 +172,7 @@ export async function importContent() {
   const manifest = {
     schemaVersion: 1,
     lessons: [],
+    legacyBackupSources: [],
     resources: [],
     totals: {
       pages: names.length,
@@ -184,6 +185,7 @@ export async function importContent() {
     },
   };
   const imports = [];
+  const archive = [];
   for (const name of names) {
     const sourcePath = `MissaoAprovacaoGeo/${name}`,
       bytes = await readFile(join(sourceDir, name)),
@@ -244,7 +246,11 @@ export async function importContent() {
         legacyQuestionKeys,
         legacyQuestionOptions,
       };
-      manifest.lessons.push(lesson);
+      if (lesson.category === 'Cartografia') {
+        archive.push(lesson);
+        const { id, sourceHash, storage } = lesson;
+        manifest.legacyBackupSources.push({ id, sourceHash, storage });
+      } else manifest.lessons.push(lesson);
       for (const key of ['stages', 'questions', 'flashcards', 'game', 'recall'])
         manifest.totals[key] += counts[key];
       imports.push({
@@ -259,7 +265,20 @@ export async function importContent() {
       });
     }
   }
-  manifest.totals.lessons = manifest.lessons.length;
+  const historicalTotals = {
+    ...manifest.totals,
+    lessons: manifest.lessons.length + archive.length,
+  };
+  manifest.totals = {
+    pages: manifest.lessons.length + manifest.resources.length,
+    lessons: manifest.lessons.length,
+    ...Object.fromEntries(
+      ['stages', 'questions', 'flashcards', 'game', 'recall'].map((key) => [
+        key,
+        manifest.lessons.reduce((n, lesson) => n + lesson.counts[key], 0),
+      ]),
+    ),
+  };
   // Extraction is complete before replacing generated outputs.
   await rm(outputDir, { recursive: true, force: true });
   await rm(legacyDir, { recursive: true, force: true });
@@ -269,8 +288,12 @@ export async function importContent() {
   for (const entry of imports)
     await writeFile(join(outputDir, entry.file), JSON.stringify(entry.value));
   await writeFile(join(outputDir, 'catalog.json'), JSON.stringify(manifest));
+  await writeFile(
+    join(outputDir, 'archive-catalog.json'),
+    JSON.stringify({ schemaVersion: 1, lessons: archive, historicalTotals }),
+  );
   console.log(
-    `Importação íntegra: ${manifest.totals.pages} HTMLs, ${manifest.totals.lessons} missões, ${manifest.totals.questions} questões, ${manifest.totals.flashcards} flashcards e ${manifest.totals.game} itens de game.`,
+    `Importação íntegra: ${names.length} HTMLs preservados; ${manifest.lessons.length} materiais de outros módulos; ${archive.length} fontes de Cartografia somente no arquivo de auditoria.`,
   );
   return manifest;
 }

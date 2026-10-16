@@ -1,0 +1,335 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-16",
+  "timezone": "America/Sao_Paulo",
+  "issue": 13,
+  "authorization": "MissaoAprovacaoGeo/V6_FASE14_ENCERRAMENTO_TECNICO.md",
+  "policy": {
+    "url": "https://github.com/ude-ctrl/Estudo-para-Concurso/blob/v6-planejamento/MissaoAprovacaoGeo/V6_POLITICA_BASE_CANONICA_CONTEUDO.md",
+    "branch_commit": "fc8023b9b99cf2978f21e613e43d232aa53643b0",
+    "git_blob": "4d998e2172ff3e851b1847553fa4562640af4d70"
+  },
+  "units": [
+    {
+      "unit_id": "fundamentos-geografia",
+      "module_id": "fundamentos",
+      "title": "Conceitos, Categorias e Autores",
+      "status": "RASCUNHO",
+      "candidate_version": null,
+      "initial_snapshot_version": null,
+      "canonical_version": null,
+      "audit_started": false,
+      "runtime_enabled": false
+    },
+    {
+      "unit_id": "cartografia-fundamentos",
+      "module_id": "cartografia",
+      "title": "Orientação, Coordenadas, Fusos e Escala",
+      "status": "APROVADA_CANONICA",
+      "candidate_version": "1.0.0",
+      "initial_snapshot_version": "0.1.0",
+      "canonical_version": "1.0.0",
+      "audit_started": true,
+      "runtime_enabled": true
+    },
+    {
+      "unit_id": "cartografia-representacao",
+      "module_id": "cartografia",
+      "title": "Projeções e Representação Cartográfica",
+      "status": "APROVADA_CANONICA",
+      "candidate_version": "1.0.0",
+      "initial_snapshot_version": "0.1.0",
+      "canonical_version": "1.0.0",
+      "audit_started": true,
+      "runtime_enabled": true
+    },
+    {
+      "unit_id": "geotecnologias",
+      "module_id": "cartografia",
+      "title": "Sensoriamento Remoto, SIG e Geotecnologias",
+      "status": "APROVADA_CANONICA",
+      "candidate_version": "1.0.0",
+      "initial_snapshot_version": "0.1.0",
+      "canonical_version": "1.0.0",
+      "audit_started": true,
+      "runtime_enabled": true
+    },
+    {
+      "unit_id": "climatologia",
+      "module_id": "fisica",
+      "title": "Climatologia",
+      "status": "RASCUNHO",
+      "candidate_version": null,
+      "initial_snapshot_version": null,
+      "canonical_version": null,
+      "audit_started": false,
+      "runtime_enabled": false
+    },
+    {
+      "unit_id": "tectonica-relevo",
+      "module_id": "fisica",
+      "title": "Tectônica, Geologia e Relevo",
+      "status": "RASCUNHO",
+      "candidate_version": null,
+      "initial_snapshot_version": null,
+      "canonical_version": null,
+      "audit_started": false,
+      "runtime_enabled": false
+    },
+    {
+      "unit_id": "solos-erosao",
+      "module_id": "fisica",
+      "title": "Solos, Erosão e Riscos Geomorfológicos",
+      "status": "RASCUNHO",
+      "candidate_version": null,
+      "initial_snapshot_version": null,
+      "canonical_version": null,
+      "audit_started": false,
+      "runtime_enabled": false
+    },
+    {
+      "unit_id": "hidrologia",
+      "module_id": "fisica",
+      "title": "Hidrologia e Recursos Hídricos",
+      "status": "RASCUNHO",
+      "candidate_version": null,
+      "initial_snapshot_version": null,
+      "canonical_version": null,
+      "audit_started": false,
+      "runtime_enabled": false
+    },
+    {
+      "unit_id": "biomas-dominios",
+      "module_id": "fisica",
+      "title": "Biomas e Domínios Morfoclimáticos",
+      "status": "RASCUNHO",
+      "candidate_version": null,
+      "initial_snapshot_version": null,
+      "canonical_version": null,
+      "audit_started": false,
+      "runtime_enabled": false
+    },
+    {
+      "unit_id": "ambiente-energia",
+      "module_id": "fisica",
+      "title": "Ambiente, Conservação e Energia",
+      "status": "RASCUNHO",
+      "candidate_version": null,
+      "initial_snapshot_version": null,
+      "canonical_version": null,
+      "audit_started": false,
+      "runtime_enabled": false
+    },
+    {
+      "unit_id": "populacao-povos-tradicionais",
+      "module_id": "humana",
+      "title": "População, Migrações e Povos Tradicionais",
+      "status": "RASCUNHO",
+      "candidate_version": null,
+      "initial_snapshot_version": null,
+      "canonical_version": null,
+      "audit_started": false,
+      "runtime_enabled": false
+    },
+    {
+      "unit_id": "geografia-urbana",
+      "module_id": "humana",
+      "title": "Geografia Urbana e Redes Urbanas",
+      "status": "RASCUNHO",
+      "candidate_version": null,
+      "initial_snapshot_version": null,
+      "canonical_version": null,
+      "audit_started": false,
+      "runtime_enabled": false
+    },
+    {
+      "unit_id": "geografia-agraria",
+      "module_id": "humana",
+      "title": "Geografia Agrária e Questão Fundiária",
+      "status": "RASCUNHO",
+      "candidate_version": null,
+      "initial_snapshot_version": null,
+      "canonical_version": null,
+      "audit_started": false,
+      "runtime_enabled": false
+    },
+    {
+      "unit_id": "industria-economia-redes",
+      "module_id": "humana",
+      "title": "Indústria, Economia, Redes e Logística",
+      "status": "RASCUNHO",
+      "candidate_version": null,
+      "initial_snapshot_version": null,
+      "canonical_version": null,
+      "audit_started": false,
+      "runtime_enabled": false
+    },
+    {
+      "unit_id": "geopolitica-ordem-mundial",
+      "module_id": "geopolitica",
+      "title": "Geopolítica, Poder e Ordem Mundial",
+      "status": "RASCUNHO",
+      "candidate_version": null,
+      "initial_snapshot_version": null,
+      "canonical_version": null,
+      "audit_started": false,
+      "runtime_enabled": false
+    },
+    {
+      "unit_id": "geopolitica-ii-geoeconomia-asia",
+      "module_id": "geopolitica",
+      "title": "Geoeconomia e Conflitos Contemporâneos",
+      "status": "RASCUNHO",
+      "candidate_version": null,
+      "initial_snapshot_version": null,
+      "canonical_version": null,
+      "audit_started": false,
+      "runtime_enabled": false
+    },
+    {
+      "unit_id": "brasil-territorio-regionalizacao",
+      "module_id": "brasil",
+      "title": "Brasil: Formação Territorial, Regionalização e Integração",
+      "status": "RASCUNHO",
+      "candidate_version": null,
+      "initial_snapshot_version": null,
+      "canonical_version": null,
+      "audit_started": false,
+      "runtime_enabled": false
+    },
+    {
+      "unit_id": "amazonia-natureza-sistemas",
+      "module_id": "amazonia-para",
+      "title": "Amazônia: Natureza e Sistemas Ambientais",
+      "status": "RASCUNHO",
+      "candidate_version": null,
+      "initial_snapshot_version": null,
+      "canonical_version": null,
+      "audit_started": false,
+      "runtime_enabled": false
+    },
+    {
+      "unit_id": "amazonia-formacao-redes",
+      "module_id": "amazonia-para",
+      "title": "Amazônia: Formação Territorial, Redes e Urbanização",
+      "status": "RASCUNHO",
+      "candidate_version": null,
+      "initial_snapshot_version": null,
+      "canonical_version": null,
+      "audit_started": false,
+      "runtime_enabled": false
+    },
+    {
+      "unit_id": "amazonia-conflitos-desenvolvimento",
+      "module_id": "amazonia-para",
+      "title": "Amazônia: Conflitos, Grandes Projetos e Desenvolvimento",
+      "status": "RASCUNHO",
+      "candidate_version": null,
+      "initial_snapshot_version": null,
+      "canonical_version": null,
+      "audit_started": false,
+      "runtime_enabled": false
+    },
+    {
+      "unit_id": "para-territorio-populacao-regionalizacao",
+      "module_id": "amazonia-para",
+      "title": "Pará: Território, População e Regionalização",
+      "status": "RASCUNHO",
+      "candidate_version": null,
+      "initial_snapshot_version": null,
+      "canonical_version": null,
+      "audit_started": false,
+      "runtime_enabled": false
+    },
+    {
+      "unit_id": "para-economia-infraestrutura-ambiente",
+      "module_id": "amazonia-para",
+      "title": "Pará: Economia, Infraestrutura e Ambiente",
+      "status": "RASCUNHO",
+      "candidate_version": null,
+      "initial_snapshot_version": null,
+      "canonical_version": null,
+      "audit_started": false,
+      "runtime_enabled": false
+    },
+    {
+      "unit_id": "ensino-geografia-bncc",
+      "module_id": "educacao",
+      "title": "BNCC e Ensino de Geografia",
+      "status": "RASCUNHO",
+      "candidate_version": null,
+      "initial_snapshot_version": null,
+      "canonical_version": null,
+      "audit_started": false,
+      "runtime_enabled": false
+    },
+    {
+      "unit_id": "legislacao-educacao",
+      "module_id": "educacao",
+      "title": "Legislação e Fundamentos da Educação",
+      "status": "RASCUNHO",
+      "candidate_version": null,
+      "initial_snapshot_version": null,
+      "canonical_version": null,
+      "audit_started": false,
+      "runtime_enabled": false
+    },
+    {
+      "unit_id": "fundamentos-pedagogicos",
+      "module_id": "educacao",
+      "title": "Fundamentos Pedagógicos, Aprendizagem e Inclusão",
+      "status": "RASCUNHO",
+      "candidate_version": null,
+      "initial_snapshot_version": null,
+      "canonical_version": null,
+      "audit_started": false,
+      "runtime_enabled": false
+    },
+    {
+      "unit_id": "lingua-portuguesa",
+      "module_id": "basicos",
+      "title": "Língua Portuguesa — FGV",
+      "status": "RASCUNHO",
+      "candidate_version": null,
+      "initial_snapshot_version": null,
+      "canonical_version": null,
+      "audit_started": false,
+      "runtime_enabled": false
+    },
+    {
+      "unit_id": "raciocinio-logico",
+      "module_id": "basicos",
+      "title": "Raciocínio Lógico — FGV",
+      "status": "RASCUNHO",
+      "candidate_version": null,
+      "initial_snapshot_version": null,
+      "canonical_version": null,
+      "audit_started": false,
+      "runtime_enabled": false
+    },
+    {
+      "unit_id": "atualidades",
+      "module_id": "basicos",
+      "title": "Atualidades do Pará e Sociedade",
+      "status": "RASCUNHO",
+      "candidate_version": null,
+      "initial_snapshot_version": null,
+      "canonical_version": null,
+      "audit_started": false,
+      "runtime_enabled": false
+    }
+  ],
+  "editorial_governance": {
+    "contract": "delegated-content-review-v1",
+    "reviewer_kind": "ai",
+    "reviewer": "Codex",
+    "authorization": "MissaoAprovacaoGeo/V6_ISSUE13_CONTRATO_REVISAO_DELEGADA.md",
+    "unit_ids": [
+      "cartografia-fundamentos",
+      "cartografia-representacao",
+      "geotecnologias"
+    ],
+    "effective_at": "2026-10-16",
+    "note": "Revisão editorial pelo assistente delegada pelo usuário; sem parecer humano fictício, sem merge/publicação e sem outros módulos."
+  }
+}

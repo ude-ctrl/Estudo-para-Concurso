@@ -1,0 +1,349 @@
+{
+  "date": "2026-10-15",
+  "branch": "v6-piloto-cartografia",
+  "environment": {
+    "node": "24.19.0",
+    "chromium": "154.0.8037.57",
+    "browserExecutable": "/usr/bin/chromium"
+  },
+  "build": "passed",
+  "legacyIntegrityTests": 5,
+  "v6IntegrityAndEngineTests": 34,
+  "browser": {
+    "startTime": "2026-10-15T20:43:30.796Z",
+    "duration": 67715.11200000001,
+    "expected": 54,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "browserCases": [
+    {
+      "name": "biblioteca mostra todo o acervo e suas contagens",
+      "project": "root",
+      "status": "expected",
+      "durationMs": 826
+    },
+    {
+      "name": "busca ignora acentos e filtros mantêm as versões",
+      "project": "root",
+      "status": "expected",
+      "durationMs": 1038
+    },
+    {
+      "name": "favoritos persistem e podem ser removidos",
+      "project": "root",
+      "status": "expected",
+      "durationMs": 1035
+    },
+    {
+      "name": "uma resposta na página existente atualiza o catálogo e permite retomar",
+      "project": "root",
+      "status": "expected",
+      "durationMs": 1196
+    },
+    {
+      "name": "atalhos abrem flashcards e game sem perder a navegação",
+      "project": "root",
+      "status": "expected",
+      "durationMs": 1306
+    },
+    {
+      "name": "progresso legado é lido sem contar respostas inválidas",
+      "project": "root",
+      "status": "expected",
+      "durationMs": 752
+    },
+    {
+      "name": "exportação contém uma cópia identificada do progresso",
+      "project": "root",
+      "status": "expected",
+      "durationMs": 775
+    },
+    {
+      "name": "todas as páginas originais e dados são servidos no caminho publicado",
+      "project": "root",
+      "status": "expected",
+      "durationMs": 916
+    },
+    {
+      "name": "celular tem menu funcional e não transborda horizontalmente",
+      "project": "root",
+      "status": "expected",
+      "durationMs": 924
+    },
+    {
+      "name": "biblioteca mostra todo o acervo e suas contagens",
+      "project": "github-pages",
+      "status": "expected",
+      "durationMs": 885
+    },
+    {
+      "name": "busca ignora acentos e filtros mantêm as versões",
+      "project": "github-pages",
+      "status": "expected",
+      "durationMs": 1058
+    },
+    {
+      "name": "favoritos persistem e podem ser removidos",
+      "project": "github-pages",
+      "status": "expected",
+      "durationMs": 1117
+    },
+    {
+      "name": "uma resposta na página existente atualiza o catálogo e permite retomar",
+      "project": "github-pages",
+      "status": "expected",
+      "durationMs": 1411
+    },
+    {
+      "name": "atalhos abrem flashcards e game sem perder a navegação",
+      "project": "github-pages",
+      "status": "expected",
+      "durationMs": 1337
+    },
+    {
+      "name": "progresso legado é lido sem contar respostas inválidas",
+      "project": "github-pages",
+      "status": "expected",
+      "durationMs": 814
+    },
+    {
+      "name": "exportação contém uma cópia identificada do progresso",
+      "project": "github-pages",
+      "status": "expected",
+      "durationMs": 839
+    },
+    {
+      "name": "todas as páginas originais e dados são servidos no caminho publicado",
+      "project": "github-pages",
+      "status": "expected",
+      "durationMs": 1037
+    },
+    {
+      "name": "celular tem menu funcional e não transborda horizontalmente",
+      "project": "github-pages",
+      "status": "expected",
+      "durationMs": 986
+    },
+    {
+      "name": "V6: três unidades, cinco destinos mobile, retomada e portal histórico",
+      "project": "root",
+      "status": "expected",
+      "durationMs": 951
+    },
+    {
+      "name": "V6: 17 missões acessíveis, teoria preservada, IDs únicos e registro de leitura",
+      "project": "root",
+      "status": "expected",
+      "durationMs": 1935
+    },
+    {
+      "name": "V6: questão registra tentativa, explica distrator e alimenta o caderno",
+      "project": "root",
+      "status": "expected",
+      "durationMs": 1129
+    },
+    {
+      "name": "V6: recall exige tentativa, rascunho sobrevive e modelo precede autoavaliação",
+      "project": "root",
+      "status": "expected",
+      "durationMs": 1111
+    },
+    {
+      "name": "V6: flashcard só libera quatro avaliações após tentativa e verso; agenda persiste",
+      "project": "root",
+      "status": "expected",
+      "durationMs": 1073
+    },
+    {
+      "name": "V6: V/F sempre justifica, timer é opcional e encerrar não causa callback inválido",
+      "project": "root",
+      "status": "expected",
+      "durationMs": 919
+    },
+    {
+      "name": "V6: prova salva seleção e relógio, não corrige antes e corrige omissões no fim",
+      "project": "root",
+      "status": "expected",
+      "durationMs": 1229
+    },
+    {
+      "name": "V6: prazo de prova continua fora da tela e bloqueia a prova oficial sem estoque",
+      "project": "root",
+      "status": "expected",
+      "durationMs": 945
+    },
+    {
+      "name": "V6: discursiva conserva texto e rubrica e não libera modelo antes de finalizar",
+      "project": "root",
+      "status": "expected",
+      "durationMs": 1358
+    },
+    {
+      "name": "V6: prática percorre plano, defesa e dez dimensões da rubrica",
+      "project": "root",
+      "status": "expected",
+      "durationMs": 1557
+    },
+    {
+      "name": "V6: importação é explícita, mantém bruto e ambiguidades sem criar domínio",
+      "project": "root",
+      "status": "expected",
+      "durationMs": 1010
+    },
+    {
+      "name": "V6: exportar e restaurar mantém rascunhos; cópia incompatível não substitui estado",
+      "project": "root",
+      "status": "expected",
+      "durationMs": 834
+    },
+    {
+      "name": "V6: dark mode, teclado, movimento reduzido e layouts 360–430 px",
+      "project": "root",
+      "status": "expected",
+      "durationMs": 2227
+    },
+    {
+      "name": "V6: mídia externa indisponível tem descrição e explicação continua acessível",
+      "project": "root",
+      "status": "expected",
+      "durationMs": 1288
+    },
+    {
+      "name": "V6: quota indisponível informa memória temporária e permite backup",
+      "project": "root",
+      "status": "expected",
+      "durationMs": 1397
+    },
+    {
+      "name": "V6: teclado seleciona alternativas e outra aba preserva preferências recentes",
+      "project": "root",
+      "status": "expected",
+      "durationMs": 1631
+    },
+    {
+      "name": "V6: diagnóstico e pós-teste usam os mesmos IDs com comparação transparente",
+      "project": "root",
+      "status": "expected",
+      "durationMs": 1418
+    },
+    {
+      "name": "V6: equivalência de distratores históricos é explicada sem trocar o gabarito",
+      "project": "root",
+      "status": "expected",
+      "durationMs": 786
+    },
+    {
+      "name": "V6: três unidades, cinco destinos mobile, retomada e portal histórico",
+      "project": "github-pages",
+      "status": "expected",
+      "durationMs": 1037
+    },
+    {
+      "name": "V6: 17 missões acessíveis, teoria preservada, IDs únicos e registro de leitura",
+      "project": "github-pages",
+      "status": "expected",
+      "durationMs": 2109
+    },
+    {
+      "name": "V6: questão registra tentativa, explica distrator e alimenta o caderno",
+      "project": "github-pages",
+      "status": "expected",
+      "durationMs": 1258
+    },
+    {
+      "name": "V6: recall exige tentativa, rascunho sobrevive e modelo precede autoavaliação",
+      "project": "github-pages",
+      "status": "expected",
+      "durationMs": 1112
+    },
+    {
+      "name": "V6: flashcard só libera quatro avaliações após tentativa e verso; agenda persiste",
+      "project": "github-pages",
+      "status": "expected",
+      "durationMs": 1104
+    },
+    {
+      "name": "V6: V/F sempre justifica, timer é opcional e encerrar não causa callback inválido",
+      "project": "github-pages",
+      "status": "expected",
+      "durationMs": 916
+    },
+    {
+      "name": "V6: prova salva seleção e relógio, não corrige antes e corrige omissões no fim",
+      "project": "github-pages",
+      "status": "expected",
+      "durationMs": 1297
+    },
+    {
+      "name": "V6: prazo de prova continua fora da tela e bloqueia a prova oficial sem estoque",
+      "project": "github-pages",
+      "status": "expected",
+      "durationMs": 904
+    },
+    {
+      "name": "V6: discursiva conserva texto e rubrica e não libera modelo antes de finalizar",
+      "project": "github-pages",
+      "status": "expected",
+      "durationMs": 1346
+    },
+    {
+      "name": "V6: prática percorre plano, defesa e dez dimensões da rubrica",
+      "project": "github-pages",
+      "status": "expected",
+      "durationMs": 1648
+    },
+    {
+      "name": "V6: importação é explícita, mantém bruto e ambiguidades sem criar domínio",
+      "project": "github-pages",
+      "status": "expected",
+      "durationMs": 1067
+    },
+    {
+      "name": "V6: exportar e restaurar mantém rascunhos; cópia incompatível não substitui estado",
+      "project": "github-pages",
+      "status": "expected",
+      "durationMs": 827
+    },
+    {
+      "name": "V6: dark mode, teclado, movimento reduzido e layouts 360–430 px",
+      "project": "github-pages",
+      "status": "expected",
+      "durationMs": 2396
+    },
+    {
+      "name": "V6: mídia externa indisponível tem descrição e explicação continua acessível",
+      "project": "github-pages",
+      "status": "expected",
+      "durationMs": 841
+    },
+    {
+      "name": "V6: quota indisponível informa memória temporária e permite backup",
+      "project": "github-pages",
+      "status": "expected",
+      "durationMs": 827
+    },
+    {
+      "name": "V6: teclado seleciona alternativas e outra aba preserva preferências recentes",
+      "project": "github-pages",
+      "status": "expected",
+      "durationMs": 1868
+    },
+    {
+      "name": "V6: diagnóstico e pós-teste usam os mesmos IDs com comparação transparente",
+      "project": "github-pages",
+      "status": "expected",
+      "durationMs": 2086
+    },
+    {
+      "name": "V6: equivalência de distratores históricos é explicada sem trocar o gabarito",
+      "project": "github-pages",
+      "status": "expected",
+      "durationMs": 1041
+    }
+  ],
+  "externalResourcesBlockedDuringBrowserTests": true,
+  "humanApproval": "pending",
+  "implementationCommit": "410e3ac"
+}

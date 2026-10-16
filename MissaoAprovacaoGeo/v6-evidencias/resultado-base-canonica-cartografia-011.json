@@ -1,0 +1,378 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-16T09:33:17-03:00",
+  "timezone": "America/Sao_Paulo",
+  "branch": "v6-base-canonica",
+  "verified_commit": "033fde91839cc2a120249439f3aa156c86899efa",
+  "previous_delivery_commit": "02151ebe08a98705bd2ec46931d84534d029c4c3",
+  "candidate_version": "0.1.1",
+  "initial_snapshot_version": "0.1.0",
+  "environment": {
+    "node": "v24.19.0",
+    "vite": "6.4.4",
+    "execution": "local"
+  },
+  "checks": {
+    "build": {
+      "command": "npm run build",
+      "exit_code": 0,
+      "output": "\n> missao-aprovacao-geografia@0.1.0 build\n> npm run import:content && npm run import:v6 && tsc --noEmit && vite build\n\n\n> missao-aprovacao-geografia@0.1.0 import:content\n> node scripts/import-content.mjs\n\nImportação íntegra: 31 HTMLs preservados; 26 materiais de outros módulos; 4 fontes de Cartografia somente no arquivo de auditoria.\n\n> missao-aprovacao-geografia@0.1.0 import:v6\n> node scripts/build-v6.mjs\n\n{\"stages\":50,\"questions\":161,\"legacyQuestions\":125,\"authored\":36,\"cards\":120,\"legacyCards\":151,\"game\":256,\"legacyGame\":302,\"recalls\":39,\"canonicalRecalls\":39,\"writing\":6}\nvite v6.4.4 building for production...\ntransforming...\n✓ 1600 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/biblioteca.html                     0.74 kB │ gzip:  0.43 kB\ndist/v6.html                             0.98 kB │ gzip:  0.54 kB\ndist/index.html                          0.98 kB │ gzip:  0.54 kB\ndist/assets/portal-ozacjLQX.css         18.42 kB │ gzip:  4.87 kB\ndist/assets/main-DO0usI-t.css           37.70 kB │ gzip:  8.41 kB\ndist/assets/portal-BKylBOax.js          23.54 kB │ gzip:  7.62 kB\ndist/assets/main-CiSc2hue.js           124.21 kB │ gzip: 39.11 kB\ndist/assets/legacy-routes-C9LWSb9Z.js  228.57 kB │ gzip: 71.00 kB\n✓ built in 2.03s\n"
+    },
+    "tests": {
+      "command": "npm test",
+      "exit_code": 0,
+      "total": 93,
+      "passed": 93,
+      "failed": 0,
+      "skipped": 0,
+      "suites": [
+        {
+          "file": "tests/content.test.mjs",
+          "tests": 5,
+          "passed": 5,
+          "failed": 0
+        },
+        {
+          "file": "tests/v6.test.mjs",
+          "tests": 58,
+          "passed": 58,
+          "failed": 0
+        },
+        {
+          "file": "tests/canonical.test.mjs",
+          "tests": 30,
+          "passed": 30,
+          "failed": 0
+        }
+      ],
+      "output": "\n> missao-aprovacao-geografia@0.1.0 test\n> node tests/content.test.mjs && node --experimental-strip-types tests/v6.test.mjs && node tests/canonical.test.mjs\n\nImportação íntegra: 31 HTMLs preservados; 26 materiais de outros módulos; 4 fontes de Cartografia somente no arquivo de auditoria.\n✔ os 31 HTMLs originais e as cópias publicadas permanecem byte a byte iguais ao acervo auditado (23.321188ms)\n✔ contagens de cada página coincidem com a auditoria independente (0.379184ms)\n✔ evocação, suplementos, fontes e estruturas completas sobrevivem à extração (19.254166ms)\n✔ fontes de Cartografia ficam apenas no arquivo de auditoria, com IDs e chaves preservados (0.202348ms)\n✔ importador recusa executar expressões de código dentro dos dados (0.634736ms)\nℹ tests 5\nℹ suites 0\nℹ pass 5\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 52.992425\n✔ contrato: exatamente as três unidades e as 17 missões oficiais do piloto (2.289282ms)\n✔ as três fontes conservam bytes, 50 etapas, 125 questões, 150 cards, 300 V/F e 39 recalls (76.548565ms)\n✔ todo registro tem destino canônico, ID de origem e hash verificável; contexto também é preservado (15.161366ms)\n✔ 125 gabaritos, alternativas, feedbacks e papéis históricos preservados sem conversão silenciosa (2.162594ms)\n✔ fusão semântica reduz C/G e conserva todas as formulações e justificativas (4.582695ms)\n✔ suplementos e 6 procedências discursivas preservados; fonte secundária estritamente limitada (0.60903ms)\n✔ IDs únicos, referências válidas e nenhum enunciado/alternativa duplicado exato (1.833064ms)\n✔ 36 itens novos, 12 por unidade, A–E, letras balanceadas e revisão humana pendente (0.550532ms)\n✔ conferência independente dos cálculos autorais e dos dados das figuras (0.967738ms)\n✔ HTML publicado não executa mecanismos legados nem produz IDs duplicados (7.49306ms)\n✔ agenda: intervalos iniciais e avaliações atrasadas seguem a política declarada (0.337936ms)\n✔ retentativa precoce não empurra o vencimento para um futuro artificial (0.122981ms)\n✔ fila vencida finita tem precedência sobre cartões novos (7.510869ms)\n✔ XP: abrir/ler/virar não premia e repetir acerto imediato não multiplica pontos (4.071315ms)\n✔ revisão vencida concede uma recompensa; repetir Fácil não faz farming (0.477746ms)\n✔ erro imediato não resolve; depois de intervalo, acerto objetivo resolve (0.584783ms)\n✔ falsa sensação de domínio reabre dificuldade e antecipa cartões relacionados (0.356848ms)\n✔ domínio fica sem número até haver estudo, diversidade, cobertura e retenção (1.204618ms)\n✔ prova: sem IDs repetidos, alternativas estáveis, letras equilibradas, novidade e diversidade (2.807273ms)\n✔ estoque insuficiente bloqueia perfil oficial e prova maior que banco (0.89514ms)\n✔ migração preserva bruto, é idempotente, não cria XP/domínio e não altera fontes (1.104027ms)\n✔ índices T03 ambíguos e T17 v25 não são interpretados como evidência (0.57801ms)\n✔ cópias corrompidas e esquema estranho são rejeitados; estado válido volta integral (1.284592ms)\n✔ registro congelado mantém identidades separadas das revisões editoriais (1.682559ms)\n✔ guias introdutórios encaminham questões ao conceito cobrado e todos os novos conceitos têm cartão (0.510371ms)\n✔ motor genérico monta as 60 posições do blueprint sem migrar disciplinas do piloto (0.563369ms)\n✔ erro só atinge domínio após intervalo, outro item e revisões consistentes (0.755826ms)\n✔ primeira revalidação de cartão legado usa intervalo inicial e não presume revisão vencida (0.295415ms)\n✔ cada Errei retorna uma vez na sessão; fila não cresce indefinidamente (1.105366ms)\n✔ redundância numérica histórica está sinalizada, sem alterar o gabarito válido (0.154458ms)\n✔ restauração rejeita históricos internos defeituosos e chaves que alterariam protótipos (0.306767ms)\n✔ persistência preserva bruto corrompido e mantém rascunhos em falha de quota (0.825921ms)\n✔ transações leem revisão recente e caderno global preserva outros módulos (0.574619ms)\n✔ restauração preserva cópia anterior e rejeita arquivo defeituoso antes de substituir (0.502112ms)\n✔ marcos: navegação e leitura sem recuperação não geram celebração nem XP (0.70799ms)\n✔ marcos: unidade requer todas as explicações e recuperação por missão, sem fabricar domínio (1.031316ms)\n✔ marcos: Chefão requer rodada completa da unidade, pelo menos 80% e não repete conquista (2.032282ms)\n✔ marcos: revisões só ficam em dia quando os vencidos reais terminam; importados não bastam (0.749993ms)\n✔ marcos: sete dias exigem prática significativa e não acrescentam pontos (0.28519ms)\n✔ marcos: erro convertido exige recuperação já validada pelo motor (0.837921ms)\n✔ marcos: backups anteriores permanecem válidos e marcos inválidos são rejeitados (1.250038ms)\n✔ B1: provas equilibradas não têm ciclo periódico nem três letras iguais em sequência (33.422288ms)\n✔ B2: Difícil é recuperação com esforço, intervalo curto, sem criar ou reabrir erro (0.417479ms)\n✔ C1: dias civis em UTC−3 e calendário com mudança de offset não perdem a sequência (1.10266ms)\n✔ UX: a camada canônica troca só a embalagem editorial e mantém originais integrais (0.997171ms)\n✔ restaurar backup anterior não mantém marcos ou sessão ausentes da cópia (0.365771ms)\n✔ P1: compatibilidade exige todos os IDs no destino, tipo e banco solicitado (0.312845ms)\n✔ P1: retomada conserva banco opcional e aceita backups anteriores sem inventar banco (0.509034ms)\n✔ sensorial: preferências opcionais mantêm backups antigos; valores e resumos inválidos são rejeitados (0.893984ms)\n✔ sensorial: percurso distingue leitura, recuperação e pendências sem fabricar domínio ou bloquear consulta (0.566772ms)\n✔ sensorial: resumo contabiliza somente XP real da rodada e não incorpora atividade paralela (0.894438ms)\n✔ sensorial: revisões devidas entram no balanço; virar, repetir cedo e preferências não rendem XP (0.522897ms)\n✔ sensorial: eventos comuns não são conquistas; repetição imediata e recarga não repetem efeitos (0.451487ms)\n✔ sensorial: expedição exige todas as missões com recuperação e os três Chefões, sem XP novo (1.87107ms)\n✔ sensorial: nível é somente XP e melhor sequência preserva intervalos civis e retomadas (0.519098ms)\n✔ sensorial: prova, discursiva e defesa em andamento mantêm o modo silencioso (0.167206ms)\n✔ sensorial: áudio é lazy, opcional, curto, limitado e interrompido ao sair ou mudar preferências (1.425231ms)\n✔ sensorial: liberação de áudio pendente não toca depois de cancelamento e falhas não quebram o estudo (0.34688ms)\nℹ tests 58\nℹ suites 0\nℹ pass 58\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 204.01134\n✔ catálogo mantém os 28 IDs oficiais e somente as três candidatas deste lote (18.234948ms)\n✔ três versões completas validam sem serem aprovadas e preservam o inventário (207.526514ms)\n✔ reconstrução recupera exatamente o banco original, incluindo variantes e contexto (18.514306ms)\n✔ aliases entre unidades acompanham o destino final e mantêm a missão de origem (9.2096ms)\n✔ dados visuais, precisão UTM e prática preservam o suporte antes escondido na interface (0.481698ms)\n✔ candidatas e conteúdo apenas aprovado com ressalvas são recusados para uso operacional (16.739396ms)\n✔ trocar somente o status não contorna os achados impeditivos (7.780404ms)\n✔ aprovação futura exige todos os critérios, recursos e itens revisados (251.983266ms)\n✔ alteração editorial após o parecer invalida o digest mesmo com hashes locais recalculados (39.246866ms)\n✔ fonte parcial, dado vencido e data de verificação futura impedem promoção (111.900361ms)\n✔ mutação de texto ou perda de variante é detectada sem depender das contagens (8.793613ms)\n✔ gabarito inexistente e falta do visual são recusados mesmo em snapshot recalculado (22.125104ms)\n✔ originais, inventário e matriz Premium não podem ser substituídos por registros incompletos (26.540107ms)\n✔ reconstrução não ignora recursos extras nem referências divergentes (12.637485ms)\n✔ as 12 propostas de vínculo e as cinco famílias permanecem explícitas e não aplicadas (1.769464ms)\n✔ leitura funciona com somente o pacote de base, sem HTMLs, importadores ou banco ativo (143.765666ms)\n✔ IDs e versões de caminho inválidos são recusados antes de acessar arquivos (0.16105ms)\n✔ pacote de outra unidade ou versão é recusado mesmo sob um caminho registrado (13.058893ms)\n✔ nova candidata não substitui a versão aprovada nem exige reabrir o HTML legado (200.890365ms)\n✔ 0.1.1 é a candidata do catálogo e mantém 0.1.0, todos os recursos e procedências (110.813704ms)\n✔ revisão recusa diferença não declarada, valor anterior falso e pacote pai alterado (42.28725ms)\n✔ mesmo uma revisão declarada não permite perder recursos, mudar gabarito ou alterar procedência (64.310457ms)\n✔ as 12 associações são corrigidas na candidata sem apagar as propostas e valores iniciais (1.117268ms)\n✔ distrator GMS tem identidade nova, valores distintos e não remapeia respostas antigas (15.855014ms)\n✔ cinco questões legadas recebem feedbacks específicos mantendo enunciados e respostas corretas (0.82396ms)\n✔ dez níveis são reavaliados e cinco itens saem de Elite sem inflar dificuldade ou alterar questões (28.481267ms)\n✔ cinco famílias vinculam dez questões sem contá-las como novidade independente (26.880773ms)\n✔ perfil mantém números e SVG e explicita esquema sem escala; par Landsat acompanha g10 (25.321782ms)\n✔ fontes parciais têm conferência direta delimitada e o endpoint USGS não recebe verificação inventada (0.223939ms)\n✔ candidatas corrigidas continuam sem aprovação humana, sem consumo operacional e sem falsas provas FGV (11.799591ms)\nℹ tests 30\nℹ suites 0\nℹ pass 30\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 1448.31718\n"
+    },
+    "canonical": {
+      "command": "npm run check:canonical",
+      "exit_code": 0,
+      "summaries": [
+        {
+          "unit": "cartografia-fundamentos",
+          "version": "0.1.1",
+          "status": "EM_AUDITORIA",
+          "resources": 277,
+          "parity": 272,
+          "approved": false
+        },
+        {
+          "unit": "cartografia-representacao",
+          "version": "0.1.1",
+          "status": "EM_AUDITORIA",
+          "resources": 183,
+          "parity": 172,
+          "approved": false
+        },
+        {
+          "unit": "geotecnologias",
+          "version": "0.1.1",
+          "status": "EM_AUDITORIA",
+          "resources": 231,
+          "parity": 241,
+          "approved": false
+        }
+      ],
+      "untouchedUnits": 25,
+      "canonicalUnits": 0
+    },
+    "generated_pilot": {
+      "command": "node scripts/build-v6.mjs --check",
+      "exit_code": 0,
+      "output": "{\"stages\":50,\"questions\":161,\"legacyQuestions\":125,\"authored\":36,\"cards\":120,\"legacyCards\":151,\"game\":256,\"legacyGame\":302,\"recalls\":39,\"canonicalRecalls\":39,\"writing\":6}\n"
+    },
+    "prettier": {
+      "command": "npx prettier --check scripts/canonical-content.mjs tests/canonical.test.mjs",
+      "exit_code": 0
+    },
+    "protected_files": {
+      "command": "git diff --exit-code 02151ebe08a98705bd2ec46931d84534d029c4c3 -- src public .github package.json package-lock.json '*.html' scripts tests ':(exclude)scripts/canonical-content.mjs' ':(exclude)tests/canonical.test.mjs' 'base-conhecimento/cartografia/*/0.1.0/*' base-conhecimento/cartografia/baseline-piloto.json",
+      "exit_code": 0
+    },
+    "diff_check": {
+      "command": "git diff --check",
+      "exit_code": 0
+    },
+    "new_browser_run": false,
+    "local_document_links": {
+      "files_checked": 25,
+      "missing": []
+    }
+  },
+  "preservation": {
+    "pilot_bank_sha256": "f45c4d769c05822869ef8030d83915cd14039bc237d750b2985ce303f25ada5c",
+    "reconstruct_original_bank_from_initial_editions": true,
+    "preserved_correct_option_ids_and_texts": 161,
+    "pedagogical_resources": 691,
+    "parity_records": 685,
+    "previous_editorial_changes": 7,
+    "cross_unit_aliases": 4,
+    "initial_files_sha256": {
+      "cartografia-fundamentos": {
+        "audit.json": "f46f65f49c722cfc45a2fb1323fac17605b0c187303448dd1e1d4c32f5f29d30",
+        "audit.md": "0791ec85159a59c69afc218f1ddb6689e009ac055fff02204a0b0797c7c9a46f",
+        "changelog.md": "e89aac470e3ac3a761ab7c6f06e82c49c6e78e6b96c98913fad4313877fc929b",
+        "content.json": "346805707898a1ed9cefd6cdb147828956fd36d36af614f96f4ee85eab218afb",
+        "provenance.json": "8866c919e3d993ebfc4e71897b7ad907618d7d089c2aae0d9c91bdbf004cbac1"
+      },
+      "cartografia-representacao": {
+        "audit.json": "eba49d357822bc14f813734e784112d2e1a4b2563342542bc3a7b302d75474cd",
+        "audit.md": "a8e3f3b4b64b1f62765ed1405211cc6a0fd767161fdeb43b4217dee0cca2ebfc",
+        "changelog.md": "72b9ce4eaabc333f61a576790403ed182b2363d482d5a3f7572e983bac5a2a69",
+        "content.json": "82e605d90d0e64718bbedb1b37beba0580a4a4af07f746328dc5ae0e566ed866",
+        "provenance.json": "b85402ec1da739c9631416a7bbb93320b0be31804d4e5279be790ddb0222ea16"
+      },
+      "geotecnologias": {
+        "audit.json": "4e10bd5e7ea5717d8558f1d03369190f542ec1e3832e358e3a5e982dbe709710",
+        "audit.md": "5fba377e620388a0d5e836321a06d9e8dde38ecdea5f8c1ecf7e295e8a51cb59",
+        "changelog.md": "e9f78ca27cf3a81f417c97b181eaa7cd23f5569a9e918350f9080f1b858f4733",
+        "content.json": "a1f49ce29fbcfccd9e035ed65c3f4aa48bc9bda79abe8e5fc49d9012047b2e71",
+        "provenance.json": "d72506ead9097d85929a4cee90170520e35d60f86acb139c605ba6655ec75c85"
+      }
+    },
+    "historical_html_sha256": {
+      "MissaoAprovacaoGeo/SEDUC_PA_Auditoria_Mestra_18_Temas.html": "2c71c77cd01f6dff7990ecddf30e969174d3f35466b5ba2bd7a6af47de46a21c",
+      "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html": "06bc7c51d80146f6b2f82a0c247d0d7babe56462dc33543ff025353ead69e683",
+      "MissaoAprovacaoGeo/SEDUC_PA_Tema_02_Cartografia_I_MATRIZ_OFICIAL_V2_6.html": "cc976ddf7ca014693868786b4a6d306ba9d9d04a6fd13283856fb77662610906",
+      "MissaoAprovacaoGeo/SEDUC_PA_Tema_03_Cartografia_II_MATRIZ_OFICIAL_V2_6.html": "7d2fbc117ac7a2763e1e19848ac390b139d4c2b7e0082c2fc68b2ead05846b4a",
+      "MissaoAprovacaoGeo/SEDUC_PA_Tema_03_Cartografia_II_MATRIZ_OFICIAL_V2_6_AUDITADA.html": "3295adad462b654cfdc8d27b280e2bb7e85593de228d5f45456de46aa0dde8aa",
+      "MissaoAprovacaoGeo/SEDUC_PA_Tema_04_Climatologia_MATRIZ_OFICIAL_V2_6.html": "d0dd9fb621034a60e547989da86f25ad318f853e22e0a68d7c6df684c3a29e20",
+      "MissaoAprovacaoGeo/SEDUC_PA_Tema_05_Tectonica_e_Relevo_MATRIZ_OFICIAL_V2_6.html": "6f52e76e3fb4a3a71499a6d705902dc079d468353d305fd4f29fdaef1fbbd650",
+      "MissaoAprovacaoGeo/SEDUC_PA_Tema_06_Solos_e_Erosao_MATRIZ_OFICIAL_V2_6_AUDITADA.html": "7812eec2099ddee07c575c43ac584967e78bc500d765d8d0932810878123c2b0",
+      "MissaoAprovacaoGeo/SEDUC_PA_Tema_07_Hidrologia_MATRIZ_OFICIAL_V2_6_AUDITADA.html": "cea1a39b7d5ea36ebec1a0c2d490fae5e3e367e4dd9bcdef58fecd0e12440cf9",
+      "MissaoAprovacaoGeo/SEDUC_PA_Tema_08_Biomas_e_Dominios_MATRIZ_OFICIAL_V2_6_AUDITADA.html": "01f65753bf92fe04eacbb90d01ee7d3b9eeb1a44ffaf33a91b47ba313ec32694",
+      "MissaoAprovacaoGeo/SEDUC_PA_Tema_09_Ambiente_e_Energia_MATRIZ_OFICIAL_V2_6_AUDITADA.html": "b571cf4aea63e51b5d689cbb08e2568b0f645d38b423a1364eb5f0f392fc72b6",
+      "MissaoAprovacaoGeo/SEDUC_PA_Tema_10_Populacao_e_Povos_Tradicionais_MATRIZ_OFICIAL_V2_6_AUDITADA.html": "e64517d09c2d56897dc785fdebb28ec4a87a5652cfc1dc43641fafc26b5cefb2",
+      "MissaoAprovacaoGeo/SEDUC_PA_Tema_11_Geografia_Urbana.html": "27a3420574a27a4b249e6afb61e1dc2f8028be64fc4b50b68184cb863fbda1f5",
+      "MissaoAprovacaoGeo/SEDUC_PA_Tema_12_Geografia_Agraria.html": "2c9d1013b3b4d9c7510232089252390dc14eb84535ef3cdb7513f8d0e296cf1a",
+      "MissaoAprovacaoGeo/SEDUC_PA_Tema_13_Industria_Economia_e_Redes.html": "9a1757edaaa9b001b419c4dcef0d16177d460d3a030ee4d5f286be1d809cf940",
+      "MissaoAprovacaoGeo/SEDUC_PA_Tema_14_Geopolitica_Globalizacao_e_Ordem_Mundial.html": "65734ab986ff46bcf2d4e4a5892b02a5ee13c1d670c3f772d11a32c51d96d73d",
+      "MissaoAprovacaoGeo/SEDUC_PA_Tema_15_Amazonia_Natureza_Territorio_e_Desenvolvimento.html": "43282bc1771e68705d3d3b92fd9a595c2f9d4f797847613440d0cd30a31242da",
+      "MissaoAprovacaoGeo/SEDUC_PA_Tema_16_Geografia_do_Brasil_e_do_Para.html": "836396d38f992486c2d791fa21ae01f1e041a18b9cde683f8fce1a886d18b90c",
+      "MissaoAprovacaoGeo/SEDUC_PA_Tema_17_Amazonia_Natureza_e_Sistemas_Ambientais_MATRIZ_OFICIAL_V2_6_AUDITADA.html": "04d0793fe5a240a79afcd9d55b051ddf6e927407df257b3f4972e75df7f32dea",
+      "MissaoAprovacaoGeo/SEDUC_PA_Tema_17_Cartografia_Geotecnologias_e_Representacao_do_Espaco.html": "a04ee219ef78757498e611179c6657cf578ca680da3520a3e8c9710a383d094f",
+      "MissaoAprovacaoGeo/SEDUC_PA_Tema_18_Amazonia_Formacao_Territorial_e_Redes_MATRIZ_OFICIAL_V2_6_AUDITADA.html": "c345bdc25bafe3be2f00b03f41070488ad0b0423777a7627d953f0d695982053",
+      "MissaoAprovacaoGeo/SEDUC_PA_Tema_18_BNCC_e_Ensino_de_Geografia.html": "49f13486d6b8c46939e67ff38e312d917219c6bf20e40d7049ad3da4d72e55e9",
+      "MissaoAprovacaoGeo/SEDUC_PA_Tema_19_Amazonia_Conflitos_e_Desenvolvimento_MATRIZ_OFICIAL_V2_6_AUDITADA.html": "1bb33249d89c920ceafe8edf424cba869085f35bbc67fdbf8528e9d2b3f4237f",
+      "MissaoAprovacaoGeo/SEDUC_PA_Tema_20_Para_Territorio_Populacao_e_Regionalizacao_MATRIZ_OFICIAL_V2_6_AUDITADA.html": "00479a96f61746dd559302a9eb5ff9eb13f51b261ac4bf8b948f88a51069005f",
+      "MissaoAprovacaoGeo/SEDUC_PA_Tema_21_Para_Economia_Infraestrutura_e_Ambiente_MATRIZ_OFICIAL_V2_6_AUDITADA.html": "0ff48fe9d66c1c9f4155f579c52f05767e315a093d14fbc4051619374907f119",
+      "MissaoAprovacaoGeo/SEDUC_PA_Tema_22_BNCC_e_Ensino_de_Geografia_MATRIZ_OFICIAL_V2_6_AUDITADA.html": "daac13b65a9ff637944e753fff0d08b4a44bc561035fa5b5a154fae5ba80a8de",
+      "MissaoAprovacaoGeo/SEDUC_PA_Tema_23_Legislacao_e_Fundamentos_da_Educacao_MATRIZ_OFICIAL_V2_6_AUDITADA.html": "fd40157267e4c97eca22a5630c7747a85fba34fd0c002155b3dae773e4521ce4",
+      "MissaoAprovacaoGeo/SEDUC_PA_Tema_24_Fundamentos_Pedagogicos_MATRIZ_OFICIAL_V2_6_AUDITADA.html": "510c9d38be94eed06c1cb68787c0377349a11884ff7a03ccb670c452b34be1b0",
+      "MissaoAprovacaoGeo/SEDUC_PA_Tema_25_Lingua_Portuguesa_FGV_MATRIZ_OFICIAL_V2_6_AUDITADA.html": "6d306db5b6627ad676b47553fd74a6b4b0ebcbc00036f7e7c3c19abc5e8ddaf6",
+      "MissaoAprovacaoGeo/SEDUC_PA_Tema_26_Raciocinio_Logico_FGV_MATRIZ_OFICIAL_V2_6_AUDITADA.html": "8ff32f317661b530ee392d3a05a2439c546eea154844804340267dcc67c62d2c",
+      "MissaoAprovacaoGeo/SEDUC_PA_Tema_27_Atualidades_do_Para_e_Sociedade_MATRIZ_OFICIAL_V2_6_AUDITADA.html": "6651bd535519689e8c3b6381cc96967fcba9bf67ab17e256ad4607510036278e"
+    },
+    "originals_and_published_copies_byte_equal": true,
+    "active_content_changed": false,
+    "progress_migration_performed": false
+  },
+  "candidates": [
+    {
+      "unit": "cartografia-fundamentos",
+      "version": "0.1.1",
+      "status": "EM_AUDITORIA",
+      "resources": 277,
+      "parity": 272,
+      "approved": false,
+      "counts": {
+        "missions": 5,
+        "sections": 19,
+        "recalls": 17,
+        "concepts": 10,
+        "questions": 60,
+        "authored_questions": 12,
+        "cards": 54,
+        "game": 106,
+        "writing": 2,
+        "supplements": 3,
+        "parity_records": 272
+      },
+      "pool_counts": {
+        "fixacao": 48,
+        "concurso": 8,
+        "elite": 4,
+        "real": 0
+      },
+      "assisted_fixes": {
+        "metadata_links": 10,
+        "legacy_questions_feedback_revised": 3,
+        "level_reassessments": 3,
+        "option_replacements": 1,
+        "human_approval_granted": false
+      },
+      "declared_field_changes": 107,
+      "human_pending_questions": 15,
+      "human_approval": null,
+      "file_sha256": {
+        "audit.json": "a78f322d7865eddedc1395f76b75343e623ee91b0080911002c32f05fcdbae55",
+        "audit.md": "073b0bc1b6d8ccede5a851589eeb174e642c157b53c1b103e52a81ab57d5fba6",
+        "changelog.md": "09943465ec8c03db431cf573f472afa63fe0ec49a77545d6c5ee2a57fd092009",
+        "changes.md": "06e7869c6d868dea72885f4ef77939217e9e168b43dbe1379154d45e9b687edc",
+        "content.json": "56698940f106902ee2e682c9e4bf280758e56e6a2d7829b3ed873ed2566fc5a8",
+        "provenance.json": "fabf36a7337fefe3d59db000936cccd25d4e6a45e652c5d36ed8f8e29682922e",
+        "review.md": "e8fe0c080bf58fe889f170a3f371b72d96b741ae8db1c555441d98f6ca5d50d0"
+      }
+    },
+    {
+      "unit": "cartografia-representacao",
+      "version": "0.1.1",
+      "status": "EM_AUDITORIA",
+      "resources": 183,
+      "parity": 172,
+      "approved": false,
+      "counts": {
+        "missions": 5,
+        "sections": 14,
+        "recalls": 10,
+        "concepts": 10,
+        "questions": 49,
+        "authored_questions": 12,
+        "cards": 31,
+        "game": 61,
+        "writing": 2,
+        "supplements": 0,
+        "parity_records": 172
+      },
+      "pool_counts": {
+        "fixacao": 37,
+        "concurso": 9,
+        "elite": 3,
+        "real": 0
+      },
+      "assisted_fixes": {
+        "metadata_links": 1,
+        "legacy_questions_feedback_revised": 1,
+        "level_reassessments": 5,
+        "option_replacements": 0,
+        "human_approval_granted": false
+      },
+      "declared_field_changes": 93,
+      "human_pending_questions": 13,
+      "human_approval": null,
+      "file_sha256": {
+        "audit.json": "fb1f2c1edcc9c893ec34211d8ea4e41387260cfc52257aafc761f0264327e269",
+        "audit.md": "2487c4286767198c935c63ec2c977d32f69530aaa4c8bbb7ea7f28aacaae6638",
+        "changelog.md": "aebf85252d4688244335dcc15cefe4a736fb98484a680cbe60080460b6ee5aaf",
+        "changes.md": "37426188159f294419b2192515bc4f8cee2d02d42f34357184a2b4b8d8584b33",
+        "content.json": "6aa80e8245c8382b251c7aa559490ca44a2997777a1eb8516b0ed278912e79f3",
+        "provenance.json": "c2a934b1669d8b631654bceebd1aae9e7adb4252cd156ecd85b67d5be7c8b259",
+        "review.md": "7e026b4acfd52fac94255fbb04d15ee614d0a65cd1c24c81f22fa0f2290a4491"
+      }
+    },
+    {
+      "unit": "geotecnologias",
+      "version": "0.1.1",
+      "status": "EM_AUDITORIA",
+      "resources": 231,
+      "parity": 241,
+      "approved": false,
+      "counts": {
+        "missions": 7,
+        "sections": 17,
+        "recalls": 12,
+        "concepts": 13,
+        "questions": 52,
+        "authored_questions": 12,
+        "cards": 35,
+        "game": 89,
+        "writing": 2,
+        "supplements": 3,
+        "parity_records": 241
+      },
+      "pool_counts": {
+        "fixacao": 40,
+        "concurso": 6,
+        "elite": 6,
+        "real": 0
+      },
+      "assisted_fixes": {
+        "metadata_links": 1,
+        "legacy_questions_feedback_revised": 1,
+        "level_reassessments": 2,
+        "option_replacements": 0,
+        "human_approval_granted": false
+      },
+      "declared_field_changes": 80,
+      "human_pending_questions": 13,
+      "human_approval": null,
+      "file_sha256": {
+        "audit.json": "5b2f37961779a724ea0954a8899b295cacb7aeb67e46959e3df24204ec04e51a",
+        "audit.md": "bf3fa48cd72d19ea4486565845f0c32a66a64b54a0c40f9f06cf8d3299e2241d",
+        "changelog.md": "7f53b623493f46f154599cf4f39f47f041979fee75c23c4da4b12b9a9c122420",
+        "changes.md": "39c5eb1bf8ecea4710340bb05acfae6d47e254e69496fc52a43ad4251d878ab2",
+        "content.json": "46f1cb3b80bb1b6cf33879dd48db1746e2a5b0b75c103f35380fc9fb12d7a302",
+        "provenance.json": "70f7be7a7be16fb24bb0a38641c28c6750120c1126c8f2d4977cb3885b5fcb61",
+        "review.md": "b6b97091c7c5e0f7774ba7dd608199df0927921dd455d6ad21444f6bfd7c5470"
+      }
+    }
+  ],
+  "editorial": {
+    "status": "EM_AUDITORIA",
+    "canonical_units": 0,
+    "metadata_links_corrected": 12,
+    "legacy_feedbacks_corrected": 20,
+    "legacy_questions_feedback_corrected": 5,
+    "question_level_reassessments": 10,
+    "elite_to_concurso": 5,
+    "linked_families": 5,
+    "retired_incorrect_option_ids": 1,
+    "authored_questions_human_pending": 36,
+    "revised_legacy_questions_human_pending": 5,
+    "question_pools": {
+      "fixacao": 125,
+      "concurso": 23,
+      "elite": 13,
+      "real": 0
+    },
+    "other_units_not_started": 25,
+    "distinct_sources": 18,
+    "directly_checked_sources": 17,
+    "historical_endpoint_not_directly_checked": "usgs-utm-range",
+    "psychometrically_calibrated": false
+  },
+  "media_binary_access_attempts": [
+    {
+      "file": "mercator.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Mercator-proj.png",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "file": "gall-peters.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Gall-peters.png",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "file": "rio-1984.jpg",
+      "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/88000/88103/rio_oli_1984263.jpg",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "file": "rio-2015.jpg",
+      "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/88000/88103/rio_oli_2015268.jpg",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "file": "ibge-fusos.pdf",
+      "url": "https://atlasescolar.ibge.gov.br/images/mapas/pdf/brasil-federacao-e-territorio-pontos-extremos-e-fuso-horario-p-97.pdf",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    }
+  ],
+  "protected_remote_refs_before_push": {
+    "main": "d33acb4b544ea01ed501807603f9b9288f9ac830",
+    "v6-planejamento": "fc8023b9b99cf2978f21e613e43d232aa53643b0",
+    "v6-piloto-cartografia": "690692389b8c665c7eff4bb7b34d10be5fdabba8",
+    "v6-base-canonica": "02151ebe08a98705bd2ec46931d84534d029c4c3"
+  },
+  "limits": [
+    "No human Premium approval is supplied by this round.",
+    "IBGE map access and its graphic elements remain unconfirmed and block promotion of Fundamentos.",
+    "Media description pages and NASA article/credits were checked directly; binary downloads were blocked at proxy, so no new binary hash or visual verification is claimed.",
+    "No new browser suite was run: the candidate is not consumed by the application.",
+    "Future activation requires versioned evidence, family-aware novelty, retired option history and an accessible media adapter.",
+    "No other module migration, production merge or deployment was performed."
+  ]
+}
