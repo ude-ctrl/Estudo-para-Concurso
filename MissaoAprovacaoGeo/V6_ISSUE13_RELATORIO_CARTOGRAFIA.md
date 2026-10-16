@@ -1,5 +1,7 @@
 # V6 — Issue #13: primeiro lote de Cartografia
 
+**Rodada posterior autorizada:** as correções candidatas `0.1.1` estão no [relatório de mudanças](V6_ISSUE13_CORRECOES_CARTOGRAFIA_011.md), com comparação antes/depois e roteiros de revisão. As três unidades continuam `EM_AUDITORIA`. O relatório abaixo preserva os achados e o inventário da edição inicial `0.1.0`, inclusive a classificação anterior dos bancos.
+
 Data: 16/10/2026, America/Sao_Paulo. Branch: `v6-base-canonica`.
 Referência preservada do piloto: `690692389b8c665c7eff4bb7b34d10be5fdabba8`.
 

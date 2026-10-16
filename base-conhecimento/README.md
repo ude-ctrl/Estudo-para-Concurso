@@ -2,15 +2,17 @@
 
 Primeiro lote da [Issue #13](https://github.com/ude-ctrl/Estudo-para-Concurso/issues/13), autorizado após o [encerramento técnico com ressalva sensorial](../MissaoAprovacaoGeo/V6_FASE14_ENCERRAMENTO_TECNICO.md). Branch: `v6-base-canonica`.
 
-**As três versões presentes são candidatas `EM_AUDITORIA`. Nenhuma é fonte canônica aprovada e nenhuma está conectada à build do site.** Os 36 itens autorais permanecem pendentes de revisão humana. Não houve alteração do conteúdo usado pelo estudante.
+**As três candidatas atuais são `0.1.1`, todas `EM_AUDITORIA`; as edições iniciais `0.1.0` estão preservadas. Nenhuma é fonte canônica aprovada e nenhuma está conectada à build do site.** Os 36 itens autorais e as cinco questões legadas corrigidas permanecem pendentes de revisão humana. Não houve alteração do conteúdo usado pelo estudante.
 
 ## Ler o primeiro lote
 
 | Unidade | Versão | Parecer assistido e pendências |
 | --- | --- | --- |
-| `cartografia-fundamentos` | `0.1.0` | [Auditoria](cartografia/cartografia-fundamentos/0.1.0/audit.md) |
-| `cartografia-representacao` | `0.1.0` | [Auditoria](cartografia/cartografia-representacao/0.1.0/audit.md) |
-| `geotecnologias` | `0.1.0` | [Auditoria](cartografia/geotecnologias/0.1.0/audit.md) |
+| `cartografia-fundamentos` | `0.1.1` | [Auditoria](cartografia/cartografia-fundamentos/0.1.1/audit.md) · [Questões](cartografia/cartografia-fundamentos/0.1.1/review.md) |
+| `cartografia-representacao` | `0.1.1` | [Auditoria](cartografia/cartografia-representacao/0.1.1/audit.md) · [Questões](cartografia/cartografia-representacao/0.1.1/review.md) |
+| `geotecnologias` | `0.1.1` | [Auditoria](cartografia/geotecnologias/0.1.1/audit.md) · [Questões](cartografia/geotecnologias/0.1.1/review.md) |
+
+O [relatório da rodada `0.1.1`](../MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_011.md) apresenta as correções, fontes, antes/depois, reclassificações e a estratégia de progresso. A primeira edição permanece acessível nos históricos de cada pacote.
 
 O [manifesto](manifest.json) registra os 28 IDs definidos na documentação oficial. Somente as três unidades acima têm auditoria iniciada e versão candidata; as outras 25 estão como `RASCUNHO`, sem conteúdo exportado ou auditado nesta etapa. `runtime_enabled` descreve consumo da base canônica, não disponibilidade dos materiais históricos no site.
 
@@ -23,6 +25,8 @@ Cada versão fica em `<módulo>/<unit_id>/<versão>/`, separando:
 - `audit.json`: matriz Premium, conferência dos 12 itens autorais da unidade, achados e propostas não aplicadas;
 - `audit.md`: parecer legível com decisões pendentes e sugestões;
 - `changelog.md`: histórico da versão e classificação de futuras alterações.
+
+As edições corrigidas também incluem `changes.md`, com comparação antes/depois, e `review.md`, com as questões completas para revisão humana. A procedência registra o hash do pacote pai e todas as diferenças editoriais; a validação rejeita diferenças não declaradas, perda de recursos e alteração de gabarito no contrato desta correção.
 
 O conteúdo preserva as 17 missões, 50 explicações, 39 recalls, 33 conceitos de apoio, 161 questões, 120 cartões, 256 V/F, seis discursivas e seis suplementos do piloto. As alternativas continuam vinculadas por ID. O suporte guarda também as quatro tabelas, o perfil SVG, a precisão de faixa UTM e o roteiro/rubricas de prática anteriormente definidos na interface.
 
@@ -46,7 +50,7 @@ Não há comando que aprove automaticamente as candidatas. As aprovações usada
 
 O [registro do snapshot inicial](cartografia/baseline-piloto.json) fixa o commit `6906923`, a ordem e o hash do banco do piloto. A reconstrução feita com os três pacotes iniciais recupera exatamente esse banco, sem reler os HTMLs históricos. A checagem inicial considera aliases pelo destino canônico final; a missão original de cada procedência é preservada. Quatro aliases cruzam unidades e os três cabeçalhos históricos continuam no arquivo de procedência.
 
-Depois de versionada, a edição inicial permanece rastreável. Uma revisão não sobrescreve o conteúdo aprovado para simplificar código: cria versão editorial e mantém a anterior. Patch corrige sem ampliar escopo; minor amplia de forma compatível; major reestrutura ou substitui. As propostas presentes em `audit.json` ainda não foram aplicadas.
+Depois de versionada, a edição inicial permanece rastreável. Uma revisão não sobrescreve o conteúdo aprovado para simplificar código: cria versão editorial e mantém a anterior. Patch corrige sem ampliar escopo; minor amplia de forma compatível; major reestrutura ou substitui. As propostas de `0.1.0` foram aplicadas explicitamente nas candidatas `0.1.1`, mantendo os valores anteriores e a decisão humana pendente.
 
 O manifesto distingue `initial_snapshot_version`, `candidate_version` e `canonical_version`. A comparação com o piloto utiliza a versão inicial congelada; uma edição editorial futura não precisa reescrever o snapshot histórico. A primeira promoção deve gerar uma edição aprovada separada, preservando `0.1.0` como candidata inicial. Antes de qualquer promoção, conteúdo alterado deve ter procedência e parecer correspondentes à nova versão.
 

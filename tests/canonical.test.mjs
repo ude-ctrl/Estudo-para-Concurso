@@ -13,6 +13,8 @@ import {
   reconstructPilot,
   loadApprovedUnit,
   reviewDigest,
+  editorialDiff,
+  validateRevision,
 } from '../scripts/canonical-content.mjs';
 
 const baseRoot = resolve(root, 'base-conhecimento');
@@ -396,6 +398,16 @@ test('nova candidata não substitui a versão aprovada nem exige reabrir o HTML 
   ]) {
     for (const doc of [bundle.base, bundle.audit, bundle.provenance])
       doc.editorial_version = version;
+    if (version === '1.1.0')
+      bundle.provenance.revision = {
+        schema_version: 1,
+        kind: 'correction-with-preservation',
+        from_version: '0.1.0',
+        to_version: version,
+        parent_bundle_sha256: sha(originals[0]),
+        option_replacements: [],
+        changes: [],
+      };
     if (bundle.audit.human_approval)
       bundle.audit.human_approval.reviewed_digest = reviewDigest(bundle);
     const dir = resolve(temp, 'cartografia', ids[0], version);
@@ -414,4 +426,285 @@ test('nova candidata não substitui a versão aprovada nem exige reabrir o HTML 
   assert.equal(checked.canonicalUnits, 1);
   assert.equal(checked.summaries[0].status, 'EM_AUDITORIA');
   assert.equal((await readBundle(temp, ids[0], '0.1.0')).base.status, 'EM_AUDITORIA');
+});
+
+const revised = await Promise.all(ids.map((id) => readBundle(baseRoot, id, '0.1.1')));
+const revisionClone = (i = 0) => structuredClone(revised[i]);
+const revisionPayload = (x) => ({
+  content: x.base.content,
+  support: x.base.support,
+  metadata: x.base.metadata,
+});
+function redeclareRevision(x, i = 0) {
+  seal(x);
+  x.provenance.revision.changes = editorialDiff(
+    revisionPayload(originals[i]),
+    revisionPayload(x),
+  ).map((c) => ({
+    ...c,
+    reason: 'Mutação sintética declarada para verificar as outras salvaguardas.',
+  }));
+}
+
+test('0.1.1 é a candidata do catálogo e mantém 0.1.0, todos os recursos e procedências', async () => {
+  const lot = await validateLot(baseRoot, { at });
+  assert.ok(lot.summaries.every((s) => s.version === '0.1.1' && !s.approved));
+  for (const [i, next] of revised.entries()) {
+    assert.equal(validateBundle(next, { at }).approved, false);
+    const check = validateRevision(originals[i], next);
+    assert.equal(check.preserved_resources, [277, 183, 231][i]);
+    assert.ok(check.changes > 0);
+    assert.deepEqual(next.provenance.archive, originals[i].provenance.archive);
+    assert.deepEqual(next.provenance.parity_records, originals[i].provenance.parity_records);
+    assert.deepEqual(next.audit.counts, originals[i].audit.counts);
+  }
+  assert.equal(lot.canonicalUnits, 0);
+  assert.equal(lot.untouchedUnits, 25);
+});
+
+test('revisão recusa diferença não declarada, valor anterior falso e pacote pai alterado', () => {
+  const missing = revisionClone();
+  missing.provenance.revision.changes.pop();
+  assert.throws(() => validateRevision(originals[0], missing), /não declarada/);
+  const falseBefore = revisionClone();
+  falseBefore.provenance.revision.changes[0].before = 'valor anterior inventado';
+  assert.throws(() => validateRevision(originals[0], falseBefore), /antes\/depois/);
+  const changed = revisionClone();
+  changed.base.content.cards[0].back += ' Mudança não declarada.';
+  seal(changed);
+  assert.throws(() => validateRevision(originals[0], changed), /não declarada/);
+  const parent = clone();
+  parent.audit.reviewed_at = '2026-10-15';
+  assert.throws(() => validateRevision(parent, revised[0]), /Pacote pai/);
+});
+
+test('mesmo uma revisão declarada não permite perder recursos, mudar gabarito ou alterar procedência', () => {
+  const changedKey = revisionClone();
+  changedKey.base.content.questions[0].correct = changedKey.base.content.questions[0].options.find(
+    (o) => o.id !== changedKey.base.content.questions[0].correct,
+  ).id;
+  redeclareRevision(changedKey);
+  assert.throws(() => validateRevision(originals[0], changedKey), /ID do gabarito/);
+  const changedAnswer = revisionClone();
+  const question = changedAnswer.base.content.questions[0];
+  question.options.find((o) => o.id === question.correct).text += ' Outra resposta.';
+  redeclareRevision(changedAnswer);
+  assert.throws(() => validateRevision(originals[0], changedAnswer), /texto da resposta correta/);
+  const lost = revisionClone();
+  const removed = lost.base.content.cards.pop();
+  lost.base.metadata.resources = lost.base.metadata.resources.filter((r) => r.id !== removed.id);
+  lost.audit.counts.cards--;
+  redeclareRevision(lost);
+  assert.throws(() => validateRevision(originals[0], lost), /perdeu ou substituiu recurso/);
+  const archive = revisionClone();
+  archive.provenance.archive[0].original = { editado: true };
+  assert.throws(() => validateRevision(originals[0], archive), /Procedência histórica/);
+});
+
+test('as 12 associações são corrigidas na candidata sem apagar as propostas e valores iniciais', () => {
+  let count = 0;
+  revised.forEach((next, i) => {
+    const old = new Map(resources(originals[i].base).map(({ value }) => [value.id, value]));
+    const current = new Map(resources(next.base).map(({ value }) => [value.id, value]));
+    for (const p of next.audit.proposed_metadata_changes) {
+      count++;
+      assert.equal(p.applied, true);
+      assert.equal(p.human_decision, 'pending');
+      assert.deepEqual(
+        { mission: old.get(p.id).mission, concept: old.get(p.id).concept },
+        p.before,
+      );
+      assert.deepEqual(
+        { mission: current.get(p.id).mission, concept: current.get(p.id).concept },
+        p.proposed,
+      );
+      assert.equal(sha(old.get(p.id)), p.before_sha256);
+    }
+  });
+  assert.equal(count, 12);
+});
+
+test('distrator GMS tem identidade nova, valores distintos e não remapeia respostas antigas', () => {
+  const id = 'v6-fix-ae06798f90e822d3';
+  const q = revised[0].base.content.questions.find((q) => q.id === id);
+  const numeric = (text) => Number(text.replace('−', '-').replace(',', '.').replace('°', ''));
+  const values = q.options.map((o) => numeric(o.text));
+  assert.equal(new Set(values).size, values.length);
+  assert.equal(numeric(q.options.find((o) => o.id === q.correct).text), -(42 + 30 / 60));
+  assert.equal(q.correct, originals[0].base.content.questions.find((q) => q.id === id).correct);
+  const replacement = revised[0].provenance.revision.option_replacements[0];
+  assert.equal(replacement.old_text, '−42,30°');
+  assert.equal(replacement.new_text, '−42,05°');
+  assert.equal(replacement.progress_mapping, null);
+  assert.ok(!q.options.some((o) => o.id === replacement.retired_option_id));
+  assert.ok(q.options.some((o) => o.id === replacement.replacement_option_id));
+  const unmapped = revisionClone();
+  unmapped.provenance.revision.option_replacements = [];
+  assert.throws(() => validateRevision(originals[0], unmapped), /Troca de alternativa/);
+  const remapped = revisionClone();
+  remapped.provenance.revision.option_replacements[0].progress_mapping = 'automatic';
+  assert.throws(() => validateRevision(originals[0], remapped), /migração silenciosa/);
+});
+
+test('cinco questões legadas recebem feedbacks específicos mantendo enunciados e respostas corretas', () => {
+  let count = 0;
+  revised.forEach((next, i) => {
+    for (const q of next.base.content.questions) {
+      const previous = originals[i].base.content.questions.find((x) => x.id === q.id);
+      if (q.refs.length && q.options.some((o, j) => o.feedback !== previous.options[j].feedback)) {
+        count++;
+        assert.equal(q.prompt, previous.prompt);
+        assert.equal(q.correct, previous.correct);
+        assert.ok(q.options.every((o) => o.feedback.length > 40 && o.feedback !== 'Correto.'));
+        assert.equal(q.status, 'human-review-pending');
+      }
+    }
+  });
+  assert.equal(count, 5);
+  const gms = revised[0].base.content.questions.find((q) => q.id === 'v6-fix-ae06798f90e822d3');
+  assert.ok(gms.options.every((o) => !/altitude|latitude/i.test(o.feedback)));
+  const pixel = revised[2].base.content.questions.find((q) => q.id === 'v6-fix-b5782254d12f27da');
+  assert.ok(pixel.options.every((o) => !/térmic|passiv/i.test(o.feedback)));
+});
+
+test('dez níveis são reavaliados e cinco itens saem de Elite sem inflar dificuldade ou alterar questões', () => {
+  const reassessed = revised.flatMap((x) => x.audit.level_reassessment);
+  assert.equal(reassessed.length, 10);
+  assert.deepEqual(
+    reassessed
+      .filter((r) => r.before.pool === 'elite')
+      .map((r) => r.id)
+      .sort(),
+    ['v6-q-f08', 'v6-q-f12', 'v6-q-r07', 'v6-q-r08', 'v6-q-r10'],
+  );
+  for (const r of reassessed) {
+    const before = originals.flatMap((x) => x.base.content.questions).find((q) => q.id === r.id);
+    const after = revised.flatMap((x) => x.base.content.questions).find((q) => q.id === r.id);
+    assert.equal(r.psychometrically_calibrated, false);
+    assert.equal(r.human_decision, 'pending');
+    assert.equal(after.pool, 'concurso');
+    assert.equal(after.difficulty, 2);
+    assert.ok(after.cognitive === 2 || after.cognitive === 3);
+    assert.deepEqual(after.options, before.options);
+    assert.equal(after.prompt, before.prompt);
+    assert.equal(after.correct, before.correct);
+    assert.ok(after.roles.includes(after.pool) && !after.roles.includes('elite'));
+  }
+  const pools = (list) =>
+    ['fixacao', 'concurso', 'elite'].map(
+      (pool) => list.flatMap((x) => x.base.content.questions).filter((q) => q.pool === pool).length,
+    );
+  assert.deepEqual(pools(originals), [125, 18, 18]);
+  assert.deepEqual(pools(revised), [125, 23, 13]);
+  const wrongLevel = revisionClone();
+  wrongLevel.base.content.questions[0].difficulty = 5;
+  seal(wrongLevel);
+  assert.throws(() => validateBundle(wrongLevel, { at }), /Classificação cognitiva/);
+  const wrongAudit = revisionClone();
+  wrongAudit.audit.authored_questions[0].current_cognitive = 5;
+  assert.throws(() => validateBundle(wrongAudit, { at }), /Parecer e classificação/);
+});
+
+test('cinco famílias vinculam dez questões sem contá-las como novidade independente', () => {
+  const families = revised.flatMap((x) => x.base.metadata.question_families);
+  assert.equal(families.length, 5);
+  assert.equal(
+    families.reduce((n, f) => n + f.members.length, 0),
+    10,
+  );
+  assert.ok(families.every((f) => f.independent_novelty === false));
+  const broken = revisionClone();
+  const id = broken.base.metadata.question_families[0].members[0];
+  delete broken.base.content.questions.find((q) => q.id === id).family_id;
+  seal(broken);
+  assert.throws(() => validateBundle(broken, { at }), /vínculo bidirecional/);
+  const novelty = revisionClone();
+  novelty.base.metadata.question_families[0].independent_novelty = true;
+  seal(novelty);
+  assert.throws(() => validateBundle(novelty, { at }), /decisão de novidade/);
+});
+
+test('perfil mantém números e SVG e explicita esquema sem escala; par Landsat acompanha g10', () => {
+  const profile = revised[1].base.support.visuals.find((v) => v.id === 'perfil');
+  const old = originals[1].base.support.visuals.find((v) => v.id === 'perfil');
+  assert.equal(profile.svg, old.svg);
+  assert.deepEqual(profile.rows, old.rows);
+  assert.match(profile.caption, /sem escala/);
+  assert.match(
+    revised[1].base.content.questions.find((q) => q.id === 'v6-q-r09').prompt,
+    /não deve ser medida/,
+  );
+  const q = revised[2].base.content.questions.find((q) => q.id === 'v6-q-g10');
+  const pair = revised[2].base.support.visuals.find((v) => v.id === q.visual);
+  assert.equal(pair.kind, 'image-pair');
+  assert.deepEqual(
+    pair.images.map((i) => [i.acquired_at, i.sensor]),
+    [
+      ['1984-09-19', 'Landsat 5/TM'],
+      ['2015-09-25', 'Landsat 8/OLI'],
+    ],
+  );
+  assert.ok(pair.images.every((i) => i.alt.length > 40 && i.credit.includes('Jesse Allen')));
+  assert.ok(pair.transcript.length > 100);
+  assert.match(q.prompt, /sem descrever a situação atual/);
+  const corrupt = revisionClone(2);
+  corrupt.base.support.visuals.find((v) => v.id === q.visual).images[0].alt = '';
+  seal(corrupt);
+  assert.throws(() => validateBundle(corrupt, { at }), /Par de imagens incompleto/);
+  const missingSource = revisionClone(2);
+  missingSource.base.support.visuals.find((v) => v.id === q.visual).source_id = 'fonte-inexistente';
+  seal(missingSource);
+  assert.throws(() => validateBundle(missingSource, { at }), /Par de imagens sem fonte/);
+});
+
+test('fontes parciais têm conferência direta delimitada e o endpoint USGS não recebe verificação inventada', () => {
+  const sources = revised.flatMap((x) => x.base.metadata.sources);
+  assert.ok(
+    sources
+      .filter((s) => ['on-estados', 'mec-bncc', 'fgdc-utm-range'].includes(s.id))
+      .every((s) => s.verification === 'direct' && s.verified_at === '2026-10-16'),
+  );
+  const usgs = sources.find((s) => s.id === 'usgs-utm-range');
+  assert.equal(usgs.verified_at, null);
+  assert.equal(usgs.superseded_for_verification_by, 'fgdc-utm-range');
+  assert.ok(
+    revised
+      .flatMap((x) => x.base.metadata.temporal_claims)
+      .every((t) => t.verification === 'verified'),
+  );
+  const mercator = revised[1].base.support.media.find((m) => m.url.includes('Mercator'));
+  assert.equal(mercator.license, 'CC-BY-SA-3.0');
+  assert.ok(mercator.credit.includes('Jecowa'));
+  assert.equal(mercator.modified_in_this_revision, false);
+  assert.ok(
+    revised[0].audit.findings.some(
+      (f) => f.id === 'CAN-MIDIA-IBGE-001' && f.status === 'open' && f.blocks_promotion,
+    ),
+  );
+});
+
+test('candidatas corrigidas continuam sem aprovação humana, sem consumo operacional e sem falsas provas FGV', async () => {
+  for (const [i, next] of revised.entries()) {
+    await assert.rejects(loadApprovedUnit(baseRoot, ids[i], '0.1.1', { at }), /não aprovada/);
+    assert.equal(next.audit.human_approval, null);
+    assert.ok(next.audit.premium_criteria.every((c) => c.decision === 'pending-human-review'));
+    assert.ok(
+      next.audit.authored_questions.every(
+        (q) => q.human_decision === 'pending' && q.human_reviewer === null,
+      ),
+    );
+    const theory = next.base.content.missions
+      .flatMap((m) => m.sections)
+      .map((s) => [s.title, s.hook, s.html].join(' '))
+      .join(' ');
+    assert.doesNotMatch(
+      theory,
+      /FGV já|FGV costuma|FGV tende|FGV gosta|banca raramente|banca gosta/,
+    );
+    assert.equal(
+      next.base.metadata.presentation_policy.historical_premium_footer_is_current_approval,
+      false,
+    );
+  }
+  assert.equal(revised.flatMap((x) => x.audit.authored_questions).length, 36);
 });

@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { isDeepStrictEqual } from 'node:util';
 
 export const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 export const statuses = [
@@ -63,6 +64,145 @@ export function resources(base) {
       ...m.recalls.map((value) => ({ kind: 'recall', value })),
     ]),
   ];
+}
+
+// Leaf changes keep long theory blocks out of unrelated diffs and retain exact old/new values.
+export function editorialDiff(before, after, path = '') {
+  if (isDeepStrictEqual(before, after)) return [];
+  const object = (x) => x !== null && typeof x === 'object';
+  if (object(before) && object(after) && Array.isArray(before) === Array.isArray(after)) {
+    const keys = [...new Set([...Object.keys(before), ...Object.keys(after)])];
+    return keys.flatMap((key) => {
+      const child = path + '/' + key.replaceAll('~', '~0').replaceAll('/', '~1');
+      const hasBefore = Object.hasOwn(before, key),
+        hasAfter = Object.hasOwn(after, key);
+      if (hasBefore && hasAfter) return editorialDiff(before[key], after[key], child);
+      return [
+        {
+          path: child,
+          before_exists: hasBefore,
+          before: hasBefore ? before[key] : null,
+          after_exists: hasAfter,
+          after: hasAfter ? after[key] : null,
+        },
+      ];
+    });
+  }
+  return [{ path, before_exists: true, before, after_exists: true, after }];
+}
+
+export function validateRevision(parent, next) {
+  const revision = next.provenance.revision;
+  requireThat(
+    revision?.schema_version === 1 && revision.kind === 'correction-with-preservation',
+    'Revisão editorial sem contrato de preservação',
+  );
+  requireThat(
+    parent.base.unit_id === next.base.unit_id &&
+      parent.base.module_id === next.base.module_id &&
+      revision.from_version === parent.base.editorial_version &&
+      revision.to_version === next.base.editorial_version &&
+      revision.from_version !== revision.to_version,
+    'Revisão de outra unidade/versão',
+  );
+  requireThat(revision.parent_bundle_sha256 === sha(parent), 'Pacote pai da revisão alterado');
+  const payload = (bundle) => ({
+    content: bundle.base.content,
+    support: bundle.base.support,
+    metadata: bundle.base.metadata,
+  });
+  const expected = editorialDiff(payload(parent), payload(next));
+  const fields = ['path', 'before_exists', 'before', 'after_exists', 'after'];
+  const actual = revision.changes.map((change) =>
+    Object.fromEntries(fields.map((key) => [key, change[key]])),
+  );
+  requireThat(
+    isDeepStrictEqual(expected, actual),
+    'Alteração editorial não declarada ou antes/depois incorreto',
+  );
+  requireThat(
+    revision.changes.every((change) => nonempty(change.reason)),
+    'Revisão sem justificativa',
+  );
+  const identity = (bundle) => resources(bundle.base).map(({ kind, value }) => [kind, value.id]);
+  requireThat(
+    isDeepStrictEqual(identity(parent), identity(next)),
+    'Revisão perdeu ou substituiu recurso pedagógico',
+  );
+  for (const field of [
+    'archive',
+    'parity_records',
+    'sources',
+    'secondary',
+    'previous_editorial_changes',
+  ]) {
+    requireThat(
+      isDeepStrictEqual(parent.provenance[field], next.provenance[field]),
+      'Procedência histórica alterada pela revisão: ' + field,
+    );
+  }
+  const replacements = revision.option_replacements;
+  unique(
+    replacements.map((x) => x.retired_option_id),
+    'Alternativas substituídas',
+  );
+  const used = new Set();
+  for (const previous of parent.base.content.questions) {
+    const current = next.base.content.questions.find((q) => q.id === previous.id);
+    requireThat(
+      previous.correct === current.correct,
+      'Revisão alterou o ID do gabarito: ' + previous.id,
+    );
+    requireThat(
+      previous.options.find((o) => o.id === previous.correct).text ===
+        current.options.find((o) => o.id === current.correct)?.text,
+      'Revisão alterou o texto da resposta correta: ' + previous.id,
+    );
+    requireThat(
+      isDeepStrictEqual(previous.refs, current.refs),
+      'Origem da questão alterada: ' + previous.id,
+    );
+    requireThat(
+      previous.options.length === current.options.length,
+      'Quantidade de alternativas alterada: ' + previous.id,
+    );
+    previous.options.forEach((option, index) => {
+      const replacement = current.options[index];
+      if (option.id === replacement.id) return;
+      const record = replacements.find(
+        (x) =>
+          x.question_id === previous.id &&
+          x.retired_option_id === option.id &&
+          x.replacement_option_id === replacement.id,
+      );
+      requireThat(
+        record && option.id !== previous.correct && record.progress_mapping === null,
+        'Troca de alternativa sem registro ou com migração silenciosa: ' + previous.id,
+      );
+      used.add(record.retired_option_id);
+    });
+  }
+  requireThat(
+    used.size === replacements.length,
+    'Registro de substituição sem alternativa correspondente',
+  );
+  for (const visual of parent.base.support.visuals) {
+    const current = next.base.support.visuals.find((v) => v.id === visual.id);
+    requireThat(
+      current &&
+        isDeepStrictEqual(current.heads, visual.heads) &&
+        isDeepStrictEqual(current.rows, visual.rows) &&
+        current.svg === visual.svg,
+      'Revisão perdeu dados de tabela ou o SVG preservado: ' + visual.id,
+    );
+  }
+  return {
+    unit: next.base.unit_id,
+    from: revision.from_version,
+    to: revision.to_version,
+    changes: expected.length,
+    preserved_resources: identity(parent).length,
+  };
 }
 
 // The human attestation binds the actual content, sources, findings and review decisions.
@@ -183,6 +323,15 @@ export function validateBundle(bundle, { approved = false, at = new Date().toISO
   );
   for (const q of b.content.questions) {
     requireThat(
+      Number.isInteger(q.difficulty) &&
+        q.difficulty >= 1 &&
+        q.difficulty <= 4 &&
+        Number.isInteger(q.cognitive) &&
+        q.cognitive >= 1 &&
+        q.cognitive <= 5,
+      `Classificação cognitiva/dificuldade inválida: ${q.id}`,
+    );
+    requireThat(
       ['fixacao', 'concurso', 'elite', 'real'].includes(q.pool),
       `Banco desconhecido: ${q.id}`,
     );
@@ -214,6 +363,46 @@ export function validateBundle(bundle, { approved = false, at = new Date().toISO
       typeof g.truth === 'boolean' && nonempty(g.justification),
       `V/F sem justificativa: ${g.id}`,
     );
+  const families = b.metadata.question_families || [];
+  unique(
+    families.map((f) => f.id),
+    'Famílias',
+  );
+  const questionById = new Map(b.content.questions.map((q) => [q.id, q]));
+  for (const family of families) {
+    unique(family.members, family.id);
+    requireThat(
+      family.members.length >= 2 &&
+        family.members.every((id) => questionById.get(id)?.family_id === family.id),
+      'Família sem vínculo bidirecional: ' + family.id,
+    );
+    requireThat(
+      nonempty(family.reason) && family.independent_novelty === false,
+      'Família sem decisão de novidade: ' + family.id,
+    );
+  }
+  for (const q of b.content.questions)
+    if (q.family_id)
+      requireThat(
+        families.some((f) => f.id === q.family_id && f.members.includes(q.id)),
+        'Questão sem família correspondente: ' + q.id,
+      );
+  for (const visual of b.support.visuals)
+    if (visual.kind === 'image-pair') {
+      requireThat(
+        visual.images.length === 2 &&
+          nonempty(visual.caption) &&
+          nonempty(visual.transcript) &&
+          visual.images.every(
+            (i) =>
+              /^https:\/\//.test(i.url) &&
+              nonempty(i.alt) &&
+              nonempty(i.credit) &&
+              Number.isFinite(dateValue(i.acquired_at)),
+          ),
+        'Par de imagens incompleto: ' + visual.id,
+      );
+    }
   const classified = b.metadata.resources.map((r) => r.id);
   unique(classified, 'Classificação');
   requireThat(
@@ -236,6 +425,12 @@ export function validateBundle(bundle, { approved = false, at = new Date().toISO
     'Fontes',
   );
   const availableSources = new Map(b.metadata.sources.map((s) => [s.id, s]));
+  for (const visual of b.support.visuals)
+    if (visual.kind === 'image-pair')
+      requireThat(
+        availableSources.has(visual.source_id) && availableSources.has(visual.usage_source_id),
+        'Par de imagens sem fonte/créditos registrados: ' + visual.id,
+      );
   const current = dateValue(at);
   requireThat(Number.isFinite(current), 'Data de verificação inválida');
   for (const t of b.metadata.temporal_claims) {
@@ -282,6 +477,13 @@ export function validateBundle(bundle, { approved = false, at = new Date().toISO
     requireThat(
       q && row.correct_option_id === q.correct && row.resource_sha256 === sha(q),
       `Revisão de outra versão do item: ${row.id}`,
+    );
+    requireThat(
+      row.pool === q.pool &&
+        row.current_difficulty === q.difficulty &&
+        row.current_cognitive === q.cognitive &&
+        row.correct_option_text === q.options.find((o) => o.id === q.correct).text,
+      `Parecer e classificação/gabarito do item divergem: ${row.id}`,
     );
     requireThat(
       row.source_ids.every((id) => availableSources.has(id)),
@@ -477,6 +679,15 @@ export async function validateLot(baseRoot = resolve(root, 'base-conhecimento'),
         ? bundle
         : await readBundle(baseRoot, unit.unit_id, unit.initial_snapshot_version);
     validateBundle(snapshot, { at });
+    if (unit.candidate_version !== unit.initial_snapshot_version) {
+      const revision = bundle.provenance.revision;
+      const parent =
+        revision?.from_version === unit.initial_snapshot_version
+          ? snapshot
+          : await readBundle(baseRoot, unit.unit_id, revision?.from_version);
+      validateBundle(parent, { at });
+      validateRevision(parent, bundle);
+    }
     bundles.push(snapshot);
   }
   const baseline = JSON.parse(
