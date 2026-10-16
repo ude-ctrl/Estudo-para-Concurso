@@ -1,0 +1,2842 @@
+{
+  "schema_version": 1,
+  "unit_id": "cartografia-fundamentos",
+  "editorial_version": "1.0.0",
+  "status": "APROVADA_CANONICA",
+  "reviewed_at": "2026-10-16",
+  "reviewer_kind": "delegated-ai",
+  "human_approval": null,
+  "scope": {
+    "all_published_resources_read": true,
+    "legacy_htmls_not_rewritten": true,
+    "other_units_audited": 0,
+    "official_exam_fully_audited": false,
+    "inherited_full_read_from": "0.1.1",
+    "current_round": "Primeira promoção canônica: decisão editorial Premium delegada ao Codex sobre os textos revisados de 0.1.2 e contratos de integração. Candidatas anteriores e pareceres históricos preservados; nenhuma reescrita pedagógica."
+  },
+  "counts": {
+    "missions": 5,
+    "sections": 19,
+    "recalls": 17,
+    "concepts": 10,
+    "questions": 60,
+    "authored_questions": 12,
+    "cards": 54,
+    "game": 106,
+    "writing": 2,
+    "supplements": 3,
+    "parity_records": 272
+  },
+  "confidence": {
+    "structural": "high — initial snapshot preserved and full declared revision comparison",
+    "basic_concepts": "moderate — assisted reading and selected primary sources",
+    "numerical_examples": "high for the calculations described",
+    "difficulty_calibration": "editorial reassessment only; no empirical calibration",
+    "human_premium": "not-performed; editorial review delegated to Codex (AI)",
+    "canonical_decision": "approved for the stated Cartography scope by delegated AI review; not an external human certification"
+  },
+  "premium_criteria": [
+    {
+      "id": "correcao_conceitual",
+      "title": "Correção conceitual",
+      "decision": "approved",
+      "evidence": "Conceitos, respostas e contrastes herdados da leitura integral; nenhum gabarito a trocar identificado. Correções atuais tornam explícito o erro de cada distrator selecionado.",
+      "limit": "Parecer editorial por IA no escopo declarado; não certificação humana nem calibração empírica.",
+      "reviewer_kind": "ai",
+      "reviewer": "Codex",
+      "assessment": "satisfactory"
+    },
+    {
+      "id": "cobertura",
+      "title": "Cobertura do escopo e perfil",
+      "decision": "approved",
+      "evidence": "As 17 missões do conjunto cobrem o recorte de Cartografia do edital. A avaliação não cobre as outras 25 unidades nem todo o programa do concurso.",
+      "limit": "Parecer editorial por IA no escopo declarado; não certificação humana nem calibração empírica.",
+      "reviewer_kind": "ai",
+      "reviewer": "Codex",
+      "assessment": "satisfactory-in-scope"
+    },
+    {
+      "id": "profundidade",
+      "title": "Profundidade para concurso",
+      "decision": "approved",
+      "evidence": "Fundamentos, aplicação, cálculos e limites de inferência preservados. O estoque de treino avançado é limitado; não constitui prova oficial completa.",
+      "limit": "Parecer editorial por IA no escopo declarado; não certificação humana nem calibração empírica.",
+      "reviewer_kind": "ai",
+      "reviewer": "Codex",
+      "assessment": "satisfactory-with-limitations"
+    },
+    {
+      "id": "clareza",
+      "title": "Clareza didática",
+      "decision": "approved",
+      "evidence": "Explicações dos 44 itens identificados substituem os prefixos genéricos por análise específica de cada alternativa incorreta.",
+      "limit": "Parecer editorial por IA no escopo declarado; não certificação humana nem calibração empírica.",
+      "reviewer_kind": "ai",
+      "reviewer": "Codex",
+      "assessment": "improved"
+    },
+    {
+      "id": "exemplos",
+      "title": "Qualidade dos exemplos",
+      "decision": "approved",
+      "evidence": "Exemplos hipotéticos continuam identificados; nenhum exemplo válido foi resumido ou removido. O mapa autoral declara suas medidas e referências.",
+      "limit": "Parecer editorial por IA no escopo declarado; não certificação humana nem calibração empírica.",
+      "reviewer_kind": "ai",
+      "reviewer": "Codex",
+      "assessment": "satisfactory-in-scope"
+    },
+    {
+      "id": "redundancia",
+      "title": "Redundância editorial",
+      "decision": "approved",
+      "evidence": "Identidades e variantes preservadas; cinco famílias existentes continuam explícitas. Ausência de duplicata exata não implica independência entre todas as atividades.",
+      "limit": "Parecer editorial por IA no escopo declarado; não certificação humana nem calibração empírica.",
+      "reviewer_kind": "ai",
+      "reviewer": "Codex",
+      "assessment": "satisfactory-with-limitations"
+    },
+    {
+      "id": "terminologia",
+      "title": "Consistência terminológica",
+      "decision": "approved",
+      "evidence": "Preservadas as distinções entre latitude/longitude, escala geográfica/cartográfica, datum/projeção, SIG/GNSS, raster/vetor e as operações digitais.",
+      "limit": "Parecer editorial por IA no escopo declarado; não certificação humana nem calibração empírica.",
+      "reviewer_kind": "ai",
+      "reviewer": "Codex",
+      "assessment": "satisfactory"
+    },
+    {
+      "id": "lacunas",
+      "title": "Identificação de lacunas",
+      "decision": "approved",
+      "evidence": "Permanecem o estoque insuficiente para prova oficial, a prática compartilhada de escala e limitações de acesso aos binários externos. São trabalho do assistente, não tarefa obrigatória do estudante.",
+      "limit": "Parecer editorial por IA no escopo declarado; não certificação humana nem calibração empírica.",
+      "reviewer_kind": "ai",
+      "reviewer": "Codex",
+      "assessment": "identified"
+    },
+    {
+      "id": "temporalidade",
+      "title": "Dados temporais",
+      "decision": "approved",
+      "evidence": "Os fatos temporais e suas fontes/datas permanecem delimitados. Coordenadas e medidas do novo mapa são hipotéticas, não observações territoriais atuais.",
+      "limit": "Parecer editorial por IA no escopo declarado; não certificação humana nem calibração empírica.",
+      "reviewer_kind": "ai",
+      "reviewer": "Codex",
+      "assessment": "satisfactory-in-scope"
+    },
+    {
+      "id": "nivel",
+      "title": "Adequação ao nível de cobrança",
+      "decision": "approved",
+      "evidence": "Além das dez reclassificações anteriores, r11 passa de Elite/D3/C5 para Concurso/D2/C3. Não há alegação de dificuldade calibrada.",
+      "limit": "Parecer editorial por IA no escopo declarado; não certificação humana nem calibração empírica.",
+      "reviewer_kind": "ai",
+      "reviewer": "Codex",
+      "assessment": "editorial-reassessment"
+    },
+    {
+      "id": "fontes",
+      "title": "Confiabilidade das fontes",
+      "decision": "approved",
+      "evidence": "Fatos normativos e institucionais usam as fontes oficiais registradas. A grade e a escala do PDF IBGE não são afirmadas sem conferência; o exercício obrigatório possui suporte autoral autossuficiente.",
+      "limit": "Parecer editorial por IA no escopo declarado; não certificação humana nem calibração empírica.",
+      "reviewer_kind": "ai",
+      "reviewer": "Codex",
+      "assessment": "satisfactory-with-limitations"
+    },
+    {
+      "id": "treino",
+      "title": "Qualidade do treino",
+      "decision": "approved",
+      "evidence": "Gabaritos e alternativas preservados, feedbacks individualizados e A–E nos 36 itens Concurso/Elite. O parecer por IA não simula uma questão real da banca nem certificação externa.",
+      "limit": "Parecer editorial por IA no escopo declarado; não certificação humana nem calibração empírica.",
+      "reviewer_kind": "ai",
+      "reviewer": "Codex",
+      "assessment": "improved"
+    }
+  ],
+  "authored_questions": [
+    {
+      "id": "v6-q-f01",
+      "resource_sha256": "e15fc62960229e776cf60c2499194eaa6cbf374a3343735ff54af1ada1a71769",
+      "pool": "concurso",
+      "correct_option_id": "v6-q-f01-correct",
+      "correct_option_text": "3,6 km.",
+      "current_difficulty": 2,
+      "current_cognitive": 3,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "7,2×50.000 cm = 3,6 km; as demais opções erram a conversão.",
+      "recommendation": "Rever família com o Chefão legado de mesmos dados; confirmar valor como Concurso.",
+      "level_concern": false,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-theory-t02-10",
+        "v6-theory-t02-11",
+        "v6-theory-t02-12",
+        "v6-theory-t02-13",
+        "v6-theory-t17-2",
+        "escala"
+      ],
+      "verification_basis": "Raciocínio/cálculo do enunciado e teoria preservada; não se atribui a uma fonte externa que não tratou deste item.",
+      "human_decision": "pending",
+      "human_reviewer": null,
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "approved",
+        "reviewer": "Codex",
+        "reviewed_at": "2026-10-16",
+        "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_012.md",
+        "reason": "7,2×50.000 cm = 3,6 km; as demais opções erram a conversão."
+      }
+    },
+    {
+      "id": "v6-q-f02",
+      "resource_sha256": "89743607fbaa50598b6144918a34b5a46dcb0b005b9156e6b0337168f5bd5610",
+      "pool": "concurso",
+      "correct_option_id": "v6-q-f02-correct",
+      "correct_option_text": "−12,5°.",
+      "current_difficulty": 2,
+      "current_cognitive": 3,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "30/60=0,5; aplicar o sinal sul ao conjunto resulta em −12,5°.",
+      "recommendation": "Manter como candidato de aplicação procedimental; revisão humana de linguagem e distratores pendente.",
+      "level_concern": false,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-theory-t02-2",
+        "v6-theory-t02-3",
+        "v6-theory-t02-4",
+        "v6-theory-t02-5",
+        "v6-theory-t02-6",
+        "v6-theory-t17-3",
+        "gms"
+      ],
+      "verification_basis": "Raciocínio/cálculo do enunciado e teoria preservada; não se atribui a uma fonte externa que não tratou deste item.",
+      "human_decision": "pending",
+      "human_reviewer": null,
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "approved",
+        "reviewer": "Codex",
+        "reviewed_at": "2026-10-16",
+        "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_012.md",
+        "reason": "30/60=0,5; aplicar o sinal sul ao conjunto resulta em −12,5°."
+      }
+    },
+    {
+      "id": "v6-q-f03",
+      "resource_sha256": "bec938be636e80f43e06375ebb93f09f67d22e33d31cda7779e06a0a3006830a",
+      "pool": "concurso",
+      "correct_option_id": "v6-q-f03-correct",
+      "correct_option_text": "1h30 de terça-feira.",
+      "current_difficulty": 2,
+      "current_cognitive": 3,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "UTC−3 está 2 h à frente de UTC−5; 23h30 de segunda vira 1h30 de terça.",
+      "recommendation": "Conferir diretamente a tabela estadual e vincular a data de verificação do fuso do Pará.",
+      "level_concern": false,
+      "source_ids": [
+        "on-fusos",
+        "on-estados",
+        "lei-fusos"
+      ],
+      "content_evidence": [
+        "v6-theory-t02-7",
+        "v6-theory-t02-8",
+        "v6-theory-t02-9",
+        "v6-theory-t17-4",
+        "fusos"
+      ],
+      "verification_basis": "Raciocínio do item, teoria preservada e fontes listadas, respeitando o nível de acesso de cada uma.",
+      "human_decision": "pending",
+      "human_reviewer": null,
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "approved",
+        "reviewer": "Codex",
+        "reviewed_at": "2026-10-16",
+        "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_012.md",
+        "reason": "UTC−3 está 2 h à frente de UTC−5; 23h30 de segunda vira 1h30 de terça."
+      }
+    },
+    {
+      "id": "v6-q-f04",
+      "resource_sha256": "49d970d99d1dfea1143c2af4683bac2406ea78fbd4c074f6b0234bf0e050cd65",
+      "pool": "concurso",
+      "correct_option_id": "v6-q-f04-correct",
+      "correct_option_text": "Oeste, medido a partir do norte indicado.",
+      "current_difficulty": 2,
+      "current_cognitive": 3,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Azimute geográfico de 270° corresponde a oeste; rotação do papel não altera a referência.",
+      "recommendation": "Manter candidato; a referência geográfica está expressa e distingue norte magnético.",
+      "level_concern": false,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-theory-t02-1",
+        "orientacao"
+      ],
+      "verification_basis": "Raciocínio/cálculo do enunciado e teoria preservada; não se atribui a uma fonte externa que não tratou deste item.",
+      "human_decision": "pending",
+      "human_reviewer": null,
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "approved",
+        "reviewer": "Codex",
+        "reviewed_at": "2026-10-16",
+        "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_012.md",
+        "reason": "Azimute geográfico de 270° corresponde a oeste; rotação do papel não altera a referência."
+      }
+    },
+    {
+      "id": "v6-q-f05",
+      "resource_sha256": "6d590d3db8a9d8916c9c2e45fca13bbb6ac64cf78c8bb223fe31c874d8f6c5a6",
+      "pool": "concurso",
+      "correct_option_id": "v6-q-f05-correct",
+      "correct_option_text": "Planta em escala grande, com legenda e referência de orientação.",
+      "current_difficulty": 2,
+      "current_cognitive": 3,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Planta em escala grande atende ao detalhe interno do edifício; as outras opções falham na finalidade.",
+      "recommendation": "Reclassificação assistida aplicada: Aplicação da escolha entre planta, carta e mapa em situação escolar. O comando não exige decompor evidências para C4. Confirmar esta classificação na revisão humana.",
+      "level_concern": true,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-theory-t17-1",
+        "v6-theory-t02-0",
+        "v6-theory-t02-14",
+        "linguagem"
+      ],
+      "verification_basis": "Raciocínio/cálculo do enunciado e teoria preservada; não se atribui a uma fonte externa que não tratou deste item.",
+      "human_decision": "pending",
+      "human_reviewer": null,
+      "level_reassessment_version": "0.1.1",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "approved",
+        "reviewer": "Codex",
+        "reviewed_at": "2026-10-16",
+        "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_012.md",
+        "reason": "Planta em escala grande atende ao detalhe interno do edifício; as outras opções falham na finalidade."
+      }
+    },
+    {
+      "id": "v6-q-f06",
+      "resource_sha256": "c4c66bb3ac6278b11192d0f76c2199361194c22a5893024a0cfa8f6389c85d99",
+      "pool": "concurso",
+      "correct_option_id": "v6-q-f06-correct",
+      "correct_option_text": "A nova escala numérica é 1:40.000 e a barra redimensionada continua válida.",
+      "current_difficulty": 3,
+      "current_cognitive": 3,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Ampliação linear por 2 reduz 80.000 a 40.000; barra ampliada junto conserva a relação.",
+      "recommendation": "Rever família com v6-fix-ba07a3382fd4f8f0; não contar mera quinta alternativa como salto de dificuldade.",
+      "level_concern": false,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-theory-t02-10",
+        "v6-theory-t02-11",
+        "v6-theory-t02-12",
+        "v6-theory-t02-13",
+        "v6-theory-t17-2",
+        "redimensionamento"
+      ],
+      "verification_basis": "Raciocínio/cálculo do enunciado e teoria preservada; não se atribui a uma fonte externa que não tratou deste item.",
+      "human_decision": "pending",
+      "human_reviewer": null,
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "approved",
+        "reviewer": "Codex",
+        "reviewed_at": "2026-10-16",
+        "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_012.md",
+        "reason": "Ampliação linear por 2 reduz 80.000 a 40.000; barra ampliada junto conserva a relação."
+      }
+    },
+    {
+      "id": "v6-q-f07",
+      "resource_sha256": "36288d7d1f45fb84bf5a8d8552852baaef36f42d97326ee688eb839efc14fd69",
+      "pool": "elite",
+      "correct_option_id": "v6-q-f07-correct",
+      "correct_option_text": "Área real de 1 km²; desenho de 16 cm² na nova escala 1:25.000.",
+      "current_difficulty": 3,
+      "current_cognitive": 4,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "4×(0,5 km)²=1 km²; dobrar os lados dá 16 cm² e escala 1:25.000.",
+      "recommendation": "Integra área e redimensionamento; confirmar dificuldade sem alterar as unidades ou o gabarito.",
+      "level_concern": false,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-theory-t02-10",
+        "v6-theory-t02-11",
+        "v6-theory-t02-12",
+        "v6-theory-t02-13",
+        "v6-theory-t17-2",
+        "area"
+      ],
+      "verification_basis": "Raciocínio/cálculo do enunciado e teoria preservada; não se atribui a uma fonte externa que não tratou deste item.",
+      "human_decision": "pending",
+      "human_reviewer": null,
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "approved",
+        "reviewer": "Codex",
+        "reviewed_at": "2026-10-16",
+        "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_012.md",
+        "reason": "4×(0,5 km)²=1 km²; dobrar os lados dá 16 cm² e escala 1:25.000."
+      }
+    },
+    {
+      "id": "v6-q-f08",
+      "resource_sha256": "41bf8c5c59851cb40a4f3ba5451a3d45d55a5b5ab3451897fa52f1366125cd37",
+      "pool": "concurso",
+      "correct_option_id": "v6-q-f08-correct",
+      "correct_option_text": "B fica ao sul de A e C fica a oeste de A.",
+      "current_difficulty": 2,
+      "current_cognitive": 3,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Na tabela, −5° fica ao sul de −1°; −52° fica a oeste de −48°.",
+      "recommendation": "Reclassificação assistida aplicada: Aplicação direta de sinais e eixos da tabela de coordenadas; distratores distantes do nível Elite. Confirmar esta classificação na revisão humana.",
+      "level_concern": true,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-theory-t02-2",
+        "v6-theory-t02-3",
+        "v6-theory-t02-4",
+        "v6-theory-t02-5",
+        "v6-theory-t02-6",
+        "v6-theory-t17-3",
+        "latitude"
+      ],
+      "verification_basis": "Raciocínio/cálculo do enunciado e teoria preservada; não se atribui a uma fonte externa que não tratou deste item.",
+      "human_decision": "pending",
+      "human_reviewer": null,
+      "level_reassessment_version": "0.1.1",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "approved",
+        "reviewer": "Codex",
+        "reviewed_at": "2026-10-16",
+        "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_012.md",
+        "reason": "Na tabela, −5° fica ao sul de −1°; −52° fica a oeste de −48°."
+      }
+    },
+    {
+      "id": "v6-q-f09",
+      "resource_sha256": "5ca6db3c4fdfe89c25d2d6202a2660464f5b23b27eba0d609204c37ac67899fa",
+      "pool": "elite",
+      "correct_option_id": "v6-q-f09-correct",
+      "correct_option_text": "Às 8h de terça-feira em B.",
+      "current_difficulty": 3,
+      "current_cognitive": 4,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "22h+5h=3h de terça na origem; diferença UTC+2−(−3)=5h; chegada 8h.",
+      "recommendation": "Manter candidato de integração horário, duração e data; fusos são premissas declaradas.",
+      "level_concern": false,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-theory-t02-7",
+        "v6-theory-t02-8",
+        "v6-theory-t02-9",
+        "v6-theory-t17-4",
+        "fusos"
+      ],
+      "verification_basis": "Raciocínio/cálculo do enunciado e teoria preservada; não se atribui a uma fonte externa que não tratou deste item.",
+      "human_decision": "pending",
+      "human_reviewer": null,
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "approved",
+        "reviewer": "Codex",
+        "reviewed_at": "2026-10-16",
+        "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_012.md",
+        "reason": "22h+5h=3h de terça na origem; diferença UTC+2−(−3)=5h; chegada 8h."
+      }
+    },
+    {
+      "id": "v6-q-f10",
+      "resource_sha256": "a45b104f4ecb4cbdbe4ec4aecc29a86995ceb68e320b56c68be52d3fedc94a64",
+      "pool": "elite",
+      "correct_option_id": "v6-q-f10-correct",
+      "correct_option_text": "Examinar B como base potencialmente compatível, verificando levantamento e precisão; a ampliação de A não recupera os detalhes ausentes.",
+      "current_difficulty": 3,
+      "current_cognitive": 4,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Ampliar base antiga não recupera geometria; a base recente exige verificar método e precisão.",
+      "recommendation": "Manter candidato de avaliação técnica; 1990/2025 são datas do cenário hipotético, não levantamentos verificados.",
+      "level_concern": false,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-theory-t17-1",
+        "v6-theory-t02-0",
+        "v6-theory-t02-14",
+        "linguagem"
+      ],
+      "verification_basis": "Raciocínio/cálculo do enunciado e teoria preservada; não se atribui a uma fonte externa que não tratou deste item.",
+      "human_decision": "pending",
+      "human_reviewer": null,
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "approved",
+        "reviewer": "Codex",
+        "reviewed_at": "2026-10-16",
+        "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_012.md",
+        "reason": "Ampliar base antiga não recupera geometria; a base recente exige verificar método e precisão."
+      }
+    },
+    {
+      "id": "v6-q-f11",
+      "resource_sha256": "4c7966e325f2e90902011decf5dc52b6140a6c72f6b17b61fa0c52b4967ef239",
+      "pool": "elite",
+      "correct_option_id": "v6-q-f11-correct",
+      "correct_option_text": "Reordenar para (−48, −1), após conferir os campos; o referencial comum não demonstra erro posicional nulo.",
+      "current_difficulty": 3,
+      "current_cognitive": 4,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "A camada exige longitude,latitude: reordenar para (−48,−1); referencial comum não prova erro zero.",
+      "recommendation": "Manter candidato; conferir interpretação da ordem de eixos e plausibilidade dos distratores.",
+      "level_concern": false,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-theory-t02-2",
+        "v6-theory-t02-3",
+        "v6-theory-t02-4",
+        "v6-theory-t02-5",
+        "v6-theory-t02-6",
+        "v6-theory-t17-3",
+        "longitude"
+      ],
+      "verification_basis": "Raciocínio/cálculo do enunciado e teoria preservada; não se atribui a uma fonte externa que não tratou deste item.",
+      "human_decision": "pending",
+      "human_reviewer": null,
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "approved",
+        "reviewer": "Codex",
+        "reviewed_at": "2026-10-16",
+        "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_012.md",
+        "reason": "A camada exige longitude,latitude: reordenar para (−48,−1); referencial comum não prova erro zero."
+      }
+    },
+    {
+      "id": "v6-q-f12",
+      "resource_sha256": "0de8adcb3233322d44b686a2f3bc5bf35bcf7f5430a5e4a0b377ff2b4759ede0",
+      "pool": "concurso",
+      "correct_option_id": "v6-q-f12-correct",
+      "correct_option_text": "A escala geográfica da análise pode ser regional e as bases cartográficas locais podem ter escala grande.",
+      "current_difficulty": 2,
+      "current_cognitive": 2,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Abrangência regional da análise não impede uso de plantas locais em grande escala.",
+      "recommendation": "Reclassificação assistida aplicada: Compreensão da distinção entre abrangência analítica e razão métrica; a distinção já conduz à resposta sem integração difícil. Confirmar esta classificação na revisão humana.",
+      "level_concern": true,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-theory-t02-10",
+        "v6-theory-t02-11",
+        "v6-theory-t02-12",
+        "v6-theory-t02-13",
+        "v6-theory-t17-2",
+        "escala"
+      ],
+      "verification_basis": "Raciocínio/cálculo do enunciado e teoria preservada; não se atribui a uma fonte externa que não tratou deste item.",
+      "human_decision": "pending",
+      "human_reviewer": null,
+      "level_reassessment_version": "0.1.1",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "approved",
+        "reviewer": "Codex",
+        "reviewed_at": "2026-10-16",
+        "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_012.md",
+        "reason": "Abrangência regional da análise não impede uso de plantas locais em grande escala."
+      }
+    }
+  ],
+  "proposed_metadata_changes": [
+    {
+      "id": "v6-fix-4c42e2e9b5d093a7",
+      "before": {
+        "mission": "escalas-e-medidas",
+        "concept": "redimensionamento"
+      },
+      "proposed": {
+        "mission": "escalas-e-medidas",
+        "concept": "escala"
+      },
+      "reason": "O comando trata do procedimento geral de escala, não de redimensionamento.",
+      "before_sha256": "75c1cc8ebe80549559771b065ed2551d3237955aff4373e52c917c7d4b83c6b6",
+      "status": "applied-pending-human-review",
+      "applied": true,
+      "assisted_applied_at": "2026-10-16",
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "approved",
+        "reviewer": "Codex",
+        "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_012.md"
+      }
+    },
+    {
+      "id": "v6-fix-3735d553a70c574c",
+      "before": {
+        "mission": "coordenadas-gms",
+        "concept": "latitude"
+      },
+      "proposed": {
+        "mission": "coordenadas-gms",
+        "concept": "longitude"
+      },
+      "reason": "A diferença cobrada é leste/oeste entre longitudes.",
+      "before_sha256": "9debfd96286bb39dfaea38ae7dbeb23ae605b71a80ea2ae58d2fb2cd5f886fa1",
+      "status": "applied-pending-human-review",
+      "applied": true,
+      "assisted_applied_at": "2026-10-16",
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "approved",
+        "reviewer": "Codex",
+        "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_012.md"
+      }
+    },
+    {
+      "id": "v6-fix-ae06798f90e822d3",
+      "before": {
+        "mission": "coordenadas-gms",
+        "concept": "latitude"
+      },
+      "proposed": {
+        "mission": "coordenadas-gms",
+        "concept": "gms"
+      },
+      "reason": "A operação central é converter minutos de arco e aplicar sinal oeste.",
+      "before_sha256": "24d1361115097fd741de9d01086bd002b72e4002727c239e6a23707953610fb0",
+      "status": "applied-pending-human-review",
+      "applied": true,
+      "assisted_applied_at": "2026-10-16",
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "approved",
+        "reviewer": "Codex",
+        "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_012.md"
+      }
+    },
+    {
+      "id": "v6-vf-ed85f8a4e29b84b6",
+      "before": {
+        "mission": "coordenadas-gms",
+        "concept": "latitude"
+      },
+      "proposed": {
+        "mission": "coordenadas-gms",
+        "concept": "gms"
+      },
+      "reason": "Conversão entre minutos e segundos de arco.",
+      "before_sha256": "cf1455ae8770efdc0a0b5542b63d142bae203f4b52cb69de03478584fd484181",
+      "status": "applied-pending-human-review",
+      "applied": true,
+      "assisted_applied_at": "2026-10-16",
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "approved",
+        "reviewer": "Codex",
+        "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_012.md"
+      }
+    },
+    {
+      "id": "v6-vf-5f14c1fe1dd5d149",
+      "before": {
+        "mission": "coordenadas-gms",
+        "concept": "latitude"
+      },
+      "proposed": {
+        "mission": "coordenadas-gms",
+        "concept": "gms"
+      },
+      "reason": "Conversão sexagesimal para graus decimais.",
+      "before_sha256": "ac5c94e4f323313b9e5f1c2efd0302c276dd6dfe0765cd21d1d4281f9117707d",
+      "status": "applied-pending-human-review",
+      "applied": true,
+      "assisted_applied_at": "2026-10-16",
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "approved",
+        "reviewer": "Codex",
+        "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_012.md"
+      }
+    },
+    {
+      "id": "v6-vf-4de26d6a6d22ba10",
+      "before": {
+        "mission": "coordenadas-gms",
+        "concept": "latitude"
+      },
+      "proposed": {
+        "mission": "coordenadas-gms",
+        "concept": "gms"
+      },
+      "reason": "Conversão sexagesimal para graus decimais.",
+      "before_sha256": "b91cb40cb37c6ef626063fb2e78b66347f9be45345fb8995c0c7641a0a1af9e1",
+      "status": "applied-pending-human-review",
+      "applied": true,
+      "assisted_applied_at": "2026-10-16",
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "approved",
+        "reviewer": "Codex",
+        "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_012.md"
+      }
+    },
+    {
+      "id": "v6-vf-dbf4f96d27078992",
+      "before": {
+        "mission": "coordenadas-gms",
+        "concept": "latitude"
+      },
+      "proposed": {
+        "mission": "coordenadas-gms",
+        "concept": "gms"
+      },
+      "reason": "Conversão de GMS, com sinal do hemisfério.",
+      "before_sha256": "db9e77d0b4c3b5281488d0f85df7c0c934d921d4ec0e49da703ef407591d912d",
+      "status": "applied-pending-human-review",
+      "applied": true,
+      "assisted_applied_at": "2026-10-16",
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "approved",
+        "reviewer": "Codex",
+        "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_012.md"
+      }
+    },
+    {
+      "id": "v6-vf-2552ea56a33202b6",
+      "before": {
+        "mission": "coordenadas-gms",
+        "concept": "latitude"
+      },
+      "proposed": {
+        "mission": "coordenadas-gms",
+        "concept": "gms"
+      },
+      "reason": "Conversão de GMS, com sinal oeste.",
+      "before_sha256": "aa978d6fe2aa7115c68c9985e795fa4357dc553bd5cb5cbe6cd2758cbde7f5e5",
+      "status": "applied-pending-human-review",
+      "applied": true,
+      "assisted_applied_at": "2026-10-16",
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "approved",
+        "reviewer": "Codex",
+        "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_012.md"
+      }
+    },
+    {
+      "id": "v6-vf-21917d1867c75d57",
+      "before": {
+        "mission": "coordenadas-gms",
+        "concept": "gms"
+      },
+      "proposed": {
+        "mission": "escalas-e-medidas",
+        "concept": "escala"
+      },
+      "reason": "Unidades de cálculo de escala foram associadas à missão de coordenadas.",
+      "before_sha256": "859fcecb9b8618eadac5cea6525988f31240b0ca7e26ec5b8492bf5c3274e828",
+      "status": "applied-pending-human-review",
+      "applied": true,
+      "assisted_applied_at": "2026-10-16",
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "approved",
+        "reviewer": "Codex",
+        "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_012.md"
+      }
+    },
+    {
+      "id": "v6-vf-2ad33e2a415f1868",
+      "before": {
+        "mission": "coordenadas-gms",
+        "concept": "gms"
+      },
+      "proposed": {
+        "mission": "escalas-e-medidas",
+        "concept": "escala"
+      },
+      "reason": "Unidades de cálculo de escala foram associadas à missão de coordenadas.",
+      "before_sha256": "1325dcc00b554f408ed8a2585ed81dd9c08e201dd9ba34a85ba2163206c1dbc6",
+      "status": "applied-pending-human-review",
+      "applied": true,
+      "assisted_applied_at": "2026-10-16",
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "approved",
+        "reviewer": "Codex",
+        "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_012.md"
+      }
+    }
+  ],
+  "question_families": [
+    {
+      "id": "familia-distancia-72-50000",
+      "members": [
+        "v6-q-f01",
+        "v6-fix-8a27b1529f0b322d"
+      ],
+      "reason": "Mesmos 7,2 cm, escala 1:50.000 e resultado de 3,6 km.",
+      "independent_novelty": false,
+      "policy": "Formulações preservadas; familiaridade, diversidade, novidade e barreiras a XP imediato são avaliadas pela família. Mudança de formulação não cria evidência independente no mesmo intervalo.",
+      "editorial_status": "approved"
+    },
+    {
+      "id": "familia-ampliacao-80000",
+      "members": [
+        "v6-q-f06",
+        "v6-fix-ba07a3382fd4f8f0"
+      ],
+      "reason": "Mesma escala 1:80.000 ampliada linearmente para 200%.",
+      "independent_novelty": false,
+      "policy": "Formulações preservadas; familiaridade, diversidade, novidade e barreiras a XP imediato são avaliadas pela família. Mudança de formulação não cria evidência independente no mesmo intervalo.",
+      "editorial_status": "approved"
+    },
+    {
+      "id": "familia-coordenadas-abc",
+      "members": [
+        "v6-q-f08",
+        "v6-fix-56b356298605e196"
+      ],
+      "reason": "Mesmos pontos A/B/C e relações norte/sul e leste/oeste, com forma de apresentação diferente.",
+      "independent_novelty": false,
+      "policy": "Formulações preservadas; familiaridade, diversidade, novidade e barreiras a XP imediato são avaliadas pela família. Mudança de formulação não cria evidência independente no mesmo intervalo.",
+      "editorial_status": "approved"
+    }
+  ],
+  "findings": [
+    {
+      "id": "CAN-EDITORIAL-001",
+      "severity": "promotion-blocker",
+      "status": "resolved",
+      "blocks_promotion": true,
+      "title": "Parecer humano Premium e aprovação dos itens ainda pendentes",
+      "resource_ids": [
+        "v6-q-f01",
+        "v6-q-f02",
+        "v6-q-f03",
+        "v6-q-f04",
+        "v6-q-f05",
+        "v6-q-f06",
+        "v6-q-f07",
+        "v6-q-f08",
+        "v6-q-f09",
+        "v6-q-f10",
+        "v6-q-f11",
+        "v6-q-f12"
+      ],
+      "decision": "Este parecer assistido e os testes não promovem uma unidade. Os 12 critérios e o conjunto integral precisam de decisão editorial documentada.",
+      "editorial_resolution": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "at": "2026-10-16",
+        "version": "1.0.0",
+        "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CONTRATO_REVISAO_DELEGADA.md",
+        "decision": "Auditoria editorial integral e deltas de 0.1.2 concluídos pelo Codex por delegação do usuário. Os 12 critérios e as decisões por item são registrados como IA, sem autoria humana fictícia."
+      }
+    },
+    {
+      "id": "CAN-FEEDBACK-001",
+      "severity": "editorial-review",
+      "status": "resolved",
+      "blocks_promotion": true,
+      "title": "Complementos genéricos e atribuições de conceitos exigem revisão por pertinência",
+      "resource_ids": [
+        "v6-fix-4c42e2e9b5d093a7",
+        "v6-fix-3735d553a70c574c",
+        "v6-fix-ae06798f90e822d3",
+        "v6-vf-ed85f8a4e29b84b6",
+        "v6-vf-5f14c1fe1dd5d149",
+        "v6-vf-4de26d6a6d22ba10",
+        "v6-vf-dbf4f96d27078992",
+        "v6-vf-2552ea56a33202b6",
+        "v6-vf-21917d1867c75d57",
+        "v6-vf-2ad33e2a415f1868"
+      ],
+      "decision": "Conferir as propostas de vínculo e os feedbacks por alternativa. Na questão v6-fix-ae06798f90e822d3, a resposta de GMS recebe contraste sobre altitude/latitude. Os textos foram preservados nesta candidata.",
+      "assisted_resolution": {
+        "at": "2026-10-16",
+        "version": "0.1.2",
+        "kind": "ai",
+        "summary": "Correções de vínculo e feedback da rodada anterior preservadas e revistas. Nesta rodada, 10 questões desta unidade recebem explicação específica de cada alternativa incorreta. A explicação central continua preservada.",
+        "human_decision": "pending"
+      },
+      "editorial_resolution": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "at": "2026-10-16",
+        "version": "1.0.0",
+        "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CONTRATO_REVISAO_DELEGADA.md",
+        "decision": "Os 12 vínculos corrigidos e as explicações específicas de 49 questões legadas (cinco em 0.1.1 e 44 em 0.1.2) foram revistos. Enunciados e respostas corretas preservados. Históricos de associações anteriores não são remapeados como aprendizagem de outro conceito."
+      }
+    },
+    {
+      "id": "CAN-FONTE-001",
+      "severity": "editorial-review",
+      "status": "resolved",
+      "blocks_promotion": true,
+      "title": "Afirmações sobre como a FGV já cobrou não possuem prova/ano/item identificados",
+      "resource_ids": [
+        "v6-theory-t02-0",
+        "v6-theory-t02-3",
+        "v6-theory-t02-4",
+        "v6-theory-t02-5",
+        "v6-theory-t02-6",
+        "v6-theory-t02-9",
+        "v6-theory-t02-13"
+      ],
+      "decision": "Tratar como orientação autoral até verificar exemplos de provas reais; o edital confirma programa/formato, não frequência histórica de cobrança.",
+      "assisted_resolution": {
+        "at": "2026-10-16",
+        "version": "0.1.1",
+        "summary": "Afirmações não documentadas sobre histórico/frequência de cobrança foram identificadas como orientação e exemplos autorais. O programa do edital permanece citado sem inventar prova/ano/item.",
+        "evidence": "provenance.json#revision",
+        "human_decision": "pending"
+      },
+      "editorial_resolution": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "at": "2026-10-16",
+        "version": "1.0.0",
+        "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CONTRATO_REVISAO_DELEGADA.md",
+        "decision": "As afirmações não comprovadas de frequência/histórico FGV foram qualificadas como orientação autoral nas edições anteriores; o edital sustenta o programa. Não são apresentadas como questões reais da banca."
+      }
+    },
+    {
+      "id": "CAN-NIVEL-001",
+      "severity": "editorial-review",
+      "status": "resolved",
+      "blocks_promotion": true,
+      "title": "Nível cognitivo/dificuldade e distratores precisam de decisão",
+      "resource_ids": [
+        "v6-q-f05",
+        "v6-q-f08",
+        "v6-q-f12"
+      ],
+      "decision": "Reclassificar ou reconstruir em nova versão após decisão editorial. Não há calibração psicométrica ou promoção pelo rótulo Elite.",
+      "assisted_resolution": {
+        "at": "2026-10-16",
+        "version": "0.1.1",
+        "summary": "Dez classificações revistas no conjunto segundo a Fase 6; cinco itens saem de Elite para Concurso. Sem alegação de dificuldade calibrada; validação humana pendente.",
+        "evidence": "provenance.json#revision",
+        "human_decision": "pending"
+      },
+      "editorial_resolution": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "at": "2026-10-16",
+        "version": "1.0.0",
+        "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CONTRATO_REVISAO_DELEGADA.md",
+        "decision": "Onze classificações reavaliadas nas edições anteriores, incluindo r11 em Concurso/D2/C3. Parecer editorial compatível com o comando; dificuldade não calibrada empiricamente. Nenhum aumento artificial de Elite."
+      }
+    },
+    {
+      "id": "CAN-FAMILIA-001",
+      "severity": "editorial-review",
+      "status": "resolved",
+      "blocks_promotion": true,
+      "title": "Famílias próximas entre novos itens e legado",
+      "resource_ids": [
+        "v6-q-f01",
+        "v6-fix-8a27b1529f0b322d",
+        "v6-q-f06",
+        "v6-fix-ba07a3382fd4f8f0",
+        "v6-q-f08",
+        "v6-fix-56b356298605e196"
+      ],
+      "decision": "Os pares não são duplicatas exatas. Decidir identidade de família, rastreabilidade de reformulação e efeito na novidade antes da promoção; não apagar originais.",
+      "assisted_resolution": {
+        "at": "2026-10-16",
+        "version": "0.1.1",
+        "summary": "Cinco famílias declaradas no conjunto, com vínculo bidirecional nos itens e novidade independente desativada no contrato. Nenhuma formulação foi excluída. A aplicação atual não consome estes metadados.",
+        "evidence": "provenance.json#revision",
+        "human_decision": "pending"
+      },
+      "editorial_resolution": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "at": "2026-10-16",
+        "version": "1.0.0",
+        "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CONTRATO_REVISAO_DELEGADA.md",
+        "decision": "Cinco famílias declaradas e preservadas. O consumidor aplica a família à novidade, diversidade, recuperação em outro contexto e barreiras a recompensa imediata; as formulações continuam disponíveis."
+      }
+    },
+    {
+      "id": "CAN-GMS-001",
+      "severity": "editorial-review",
+      "status": "resolved",
+      "blocks_promotion": true,
+      "title": "Dois distratores numericamente equivalentes no legado de GMS",
+      "resource_ids": [
+        "v6-fix-ae06798f90e822d3"
+      ],
+      "decision": "−42,3° e −42,30° são equivalentes e incorretos; −42,5° continua sendo a correta. Decidir manutenção com ressalva ou nova versão do item; original preservado.",
+      "assisted_resolution": {
+        "at": "2026-10-16",
+        "version": "0.1.1",
+        "summary": "Distrator numericamente redundante substituído por −42,05° com novo ID. O ID e valor do gabarito −42,5° são preservados; resposta antiga não é remapeada para a alternativa nova.",
+        "evidence": "provenance.json#revision",
+        "human_decision": "pending"
+      },
+      "editorial_resolution": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "at": "2026-10-16",
+        "version": "1.0.0",
+        "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CONTRATO_REVISAO_DELEGADA.md",
+        "decision": "Distrator numericamente equivalente substituído em 0.1.1 por nova identidade; gabarito preservado. O consumidor mantém o ID/texto aposentados no histórico e não os remapeia para a opção nova."
+      }
+    },
+    {
+      "id": "CAN-TEMPORAL-001",
+      "severity": "source-review",
+      "status": "resolved",
+      "blocks_promotion": true,
+      "title": "Conferência direta de fonte ainda parcial",
+      "resource_ids": [
+        "fusos",
+        "v6-fix-ce0a056c611ab242",
+        "v6-q-f03",
+        "v6-fc-a259e3963c78ffbb",
+        "v6-fc-bb3de28c722ddd84",
+        "v6-fc-7dd4b0996f1edfb1",
+        "v6-fc-0ff888d3040aa56a",
+        "v6-vf-747c2b0df9e1325b",
+        "v6-vf-7594daf0aee1067c",
+        "v6-vf-1d51e42f2335afbb",
+        "v6-vf-d155830b8235395e",
+        "v6-vf-5bd81ef3254a984e",
+        "v6-vf-d995b22cec4ea4f7",
+        "v6-vf-56a9fc1bed220792",
+        "v6-vf-8f51c0c6e35754fe",
+        "v6-supp-ecacec940765a30c",
+        "v6-theory-t02-4",
+        "v6-theory-t02-8",
+        "v6-recall-77116d32fb7c5779"
+      ],
+      "decision": "Trecho indexado ou falha de acesso não equivale a conferência integral. Manter verified_at nulo no fato parcialmente verificado e resolver antes da promoção.",
+      "assisted_resolution": {
+        "at": "2026-10-16",
+        "version": "0.1.1",
+        "summary": "Fonte diretamente consultada: tabela de fusos do ON ou Quadro 1 da BNCC, conforme a unidade. Alcance do recorte e datas explicitados nos metadados.",
+        "evidence": "provenance.json#revision",
+        "human_decision": "pending"
+      },
+      "editorial_resolution": {
+        "kind": "ai",
+        "reviewer": "Codex",
+        "at": "2026-10-16",
+        "version": "1.0.0",
+        "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CONTRATO_REVISAO_DELEGADA.md",
+        "decision": "Fatos temporais conferidos nas fontes diretas registradas, dentro do recorte declarado. Mantidos source/data/verified_at/review_due_at, sem inventar abertura dos endpoints históricos parcialmente acessíveis."
+      }
+    },
+    {
+      "id": "CAN-SUPORTE-001",
+      "severity": "preservation",
+      "status": "resolved",
+      "blocks_promotion": false,
+      "title": "Dados pedagógicos da interface incluídos no pacote candidato",
+      "resource_ids": [
+        "v6-q-f08"
+      ],
+      "decision": "Tabelas extraídas de literais AST, perfil SVG preservado, precisão UTM e rubricas de prática registradas. Nada foi removido do piloto."
+    },
+    {
+      "id": "CAN-MIDIA-IBGE-001",
+      "severity": "source-access-limitation",
+      "status": "mitigated",
+      "blocks_promotion": false,
+      "title": "Acesso direto ao PDF cartográfico IBGE ainda não confirmado",
+      "resource_ids": [
+        "v6-theory-t02-8",
+        "v6-theory-t02-14"
+      ],
+      "decision": "Fonte histórica e exercício gráfico preservados. Conferir o arquivo IBGE e seus elementos em acesso humano ou fonte oficial equivalente antes da promoção. A tabela do ON resolve a configuração civil textual, mas não comprova a escala ou a grade do PDF.",
+      "assisted_resolution": {
+        "at": "2026-10-16",
+        "version": "0.1.2",
+        "kind": "ai",
+        "summary": "A dependência obrigatória do PDF não conferido foi eliminada. Exercício de leitura autossuficiente com mapa autoral, alternativa textual e grade/escala verificáveis; quadro de fusos baseado nas fontes oficiais já registradas. O acesso ao PDF continua não concluído; não foi declarado verificado, quebrado ou descartado.",
+        "evidence": "content.json#support.visuals:mapa-leitura-horizonte",
+        "human_decision": "pending"
+      }
+    }
+  ],
+  "statements": [
+    "Primeira edição canônica, promovida após auditoria Premium por IA delegada explicitamente ao Codex.",
+    "Teoria, enunciados, alternativas, gabaritos, explicações, recalls, flashcards, V/F, discursivas, suplementos e suporte de 0.1.2 preservados.",
+    "As decisões humanas anteriores continuam sem preenchimento fictício; a aprovação editorial delegada é um registro distinto.",
+    "Somente estas três unidades têm consumo canônico habilitado. Sem merge, publicação ou migração de outros módulos.",
+    "Histórico do piloto preservado; atualização sem XP, conquistas, novas datas de retenção ou remapeamento silencioso de respostas.",
+    "PDF IBGE complementar, par Landsat histórico, dificuldade editorial não calibrada, prática compartilhada e prova completa ainda limitada pelo estoque das outras áreas."
+  ],
+  "technical_checks": "Consultar relatório de validação do lote; leitura editorial não é execução de navegador.",
+  "level_reassessment": [
+    {
+      "id": "v6-q-f05",
+      "before": {
+        "pool": "concurso",
+        "difficulty": 2,
+        "cognitive": 4
+      },
+      "after": {
+        "pool": "concurso",
+        "difficulty": 2,
+        "cognitive": 3
+      },
+      "reason": "Aplicação da escolha entre planta, carta e mapa em situação escolar. O comando não exige decompor evidências para C4.",
+      "method": "official-phase6-taxonomy; assisted review",
+      "psychometrically_calibrated": false,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "approved",
+        "reviewer": "Codex",
+        "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_012.md",
+        "reason": "Aplicação da escolha entre planta, carta e mapa em situação escolar. O comando não exige decompor evidências para C4."
+      }
+    },
+    {
+      "id": "v6-q-f08",
+      "before": {
+        "pool": "elite",
+        "difficulty": 3,
+        "cognitive": 4
+      },
+      "after": {
+        "pool": "concurso",
+        "difficulty": 2,
+        "cognitive": 3
+      },
+      "reason": "Aplicação direta de sinais e eixos da tabela de coordenadas; distratores distantes do nível Elite.",
+      "method": "official-phase6-taxonomy; assisted review",
+      "psychometrically_calibrated": false,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "approved",
+        "reviewer": "Codex",
+        "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_012.md",
+        "reason": "Aplicação direta de sinais e eixos da tabela de coordenadas; distratores distantes do nível Elite."
+      }
+    },
+    {
+      "id": "v6-q-f12",
+      "before": {
+        "pool": "elite",
+        "difficulty": 3,
+        "cognitive": 4
+      },
+      "after": {
+        "pool": "concurso",
+        "difficulty": 2,
+        "cognitive": 2
+      },
+      "reason": "Compreensão da distinção entre abrangência analítica e razão métrica; a distinção já conduz à resposta sem integração difícil.",
+      "method": "official-phase6-taxonomy; assisted review",
+      "psychometrically_calibrated": false,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "approved",
+        "reviewer": "Codex",
+        "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_012.md",
+        "reason": "Compreensão da distinção entre abrangência analítica e razão métrica; a distinção já conduz à resposta sem integração difícil."
+      }
+    }
+  ],
+  "pool_counts": {
+    "fixacao": 48,
+    "concurso": 8,
+    "elite": 4,
+    "real": 0
+  },
+  "assisted_fixes": {
+    "metadata_links": 10,
+    "legacy_questions_feedback_revised": 13,
+    "level_reassessments": 3,
+    "option_replacements": 1,
+    "human_approval_granted": false,
+    "editorial_approval_granted": true
+  },
+  "editorial_round": {
+    "version": "1.0.0",
+    "from_version": "0.1.2",
+    "kind": "canonical-promotion",
+    "pedagogical_text_changed": false,
+    "contract": "delegated-content-review-v1"
+  },
+  "assisted_review": {
+    "kind": "ai",
+    "reviewer": "Codex",
+    "human_manual_review": false,
+    "reviewed_at": "2026-10-16",
+    "unit_id": "cartografia-fundamentos",
+    "editorial_version": "1.0.0",
+    "delegation_evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CONTRATO_REVISAO_DELEGADA.md",
+    "method": "delta-review-on-fully-read-parent; preserved resources checked by hash; independently recomputed quantitative cases; precise source access limits retained",
+    "reviewed_payload_sha256": "e327542d02d2b6ad6815b33199d795020f0fabd938ae12720a262bc7364fe7ef",
+    "resources": [
+      {
+        "kind": "unit",
+        "id": "cartografia-fundamentos",
+        "sha256": "0ffba06c8bbbd2a0dd90b129f60b68d77767304aba431851fff74686cc162e2b"
+      },
+      {
+        "kind": "missions",
+        "id": "linguagem-cartografica",
+        "sha256": "4f26128bdf0e3526bd7c9e2b0eaf6ab9ce81a38d663cdfc8415f458390ed2f56"
+      },
+      {
+        "kind": "missions",
+        "id": "orientacao-azimute",
+        "sha256": "3ad52f2ca2069abbc32c30fdcc5cc2a1d93f96b5e568a3d06687056dd0cc5d78"
+      },
+      {
+        "kind": "missions",
+        "id": "coordenadas-gms",
+        "sha256": "1c87c73f8cea75397b2d8662df1e0ed2539d37f48dd76ae3fe813e0bea1694a1"
+      },
+      {
+        "kind": "missions",
+        "id": "fusos-utc-data",
+        "sha256": "7262b51088cc288e8d256cf741525d52e804fff3c16e05c96754eb1062b4f876"
+      },
+      {
+        "kind": "missions",
+        "id": "escalas-e-medidas",
+        "sha256": "53512d36d909c668c7d8a732fc4b4178b318b6264e3c8f35955bd1a18cebdefc"
+      },
+      {
+        "kind": "concepts",
+        "id": "linguagem",
+        "sha256": "8ca24520d7139615578c762f68d0988925e659fd1c0a93eb62cd6e5111514288"
+      },
+      {
+        "kind": "concepts",
+        "id": "orientacao",
+        "sha256": "4345df259f193329155e272deca3638bf64a5d9909a18ba089ad9867267d5c19"
+      },
+      {
+        "kind": "concepts",
+        "id": "latitude",
+        "sha256": "45fe24940fe9a8d0852bf44bdeb843a653627c672d92f04af86517aaf2be07d1"
+      },
+      {
+        "kind": "concepts",
+        "id": "longitude",
+        "sha256": "5a63eb7fa70133d65fe59477828f6a98f2f4a27c866ee80f0b0aa9c084b36eb0"
+      },
+      {
+        "kind": "concepts",
+        "id": "gms",
+        "sha256": "edc4c327dd50971b60dadba6d214ca1230884285caa4d4dec5bdf597889af47f"
+      },
+      {
+        "kind": "concepts",
+        "id": "fusos",
+        "sha256": "dea814bdf9d7d4d8d98d9ee658e95829648cdcb847527556a025e269b067acac"
+      },
+      {
+        "kind": "concepts",
+        "id": "lid",
+        "sha256": "37be28f530682b3288a41fafebf820d6065d8e79b27e6b2a757dee424f818ed5"
+      },
+      {
+        "kind": "concepts",
+        "id": "escala",
+        "sha256": "fe6f0cf2cc204eda5ff522b53c30ff036b6326ef4c166240cd864abeb6fbe7c4"
+      },
+      {
+        "kind": "concepts",
+        "id": "area",
+        "sha256": "4f2ad3c9f4c6d21836cc01668fdec70a3ea45e5ce5cbe3c04ec2888dab2dc201"
+      },
+      {
+        "kind": "concepts",
+        "id": "redimensionamento",
+        "sha256": "6734a7115c2b063a97cec89338bd6cf2d295adcf541774c70743bb1b16d0eb1d"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-4c42e2e9b5d093a7",
+        "sha256": "fb6ebc74af7667b636b46c0ca0f8d89657f6b50ed7b1bdb1d48c4a0131ade301"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-bccdc769d88ccd06",
+        "sha256": "47ec58734ee7fd37bbb0cf730bba414cb469d5a3db4ede6dee046e30b5b7572d"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-ec0e644dde0c49c4",
+        "sha256": "f10d2817efe89d2f7bd47d145f16662a0985e8d65ee73d5f26560d7e091ce5ac"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-eb86fa6c989933cc",
+        "sha256": "20d22b1d019ac927cf6d77ea271922df7cabf8abb3cf9a3f4f15424f9da2f1b4"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-6bbe67e30a50e258",
+        "sha256": "5fd785c4cd2ec2fa9af64535d2160b85aca48422939287746b15661bde718998"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-3fb13240602b868b",
+        "sha256": "d71e880c8a77cab0b1fd6d063b71f32ad3cede3b7fcd7d213b8c18c5aded0813"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-ad3f0074a7e0a8e6",
+        "sha256": "d9dac66dd23b0f58aed44f3b78065536833d311c04bd54f8a370680d94b1786c"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-f707a05ee2ab642f",
+        "sha256": "3da4e819fbb8607f66076be238ba6f1575f68ab0d3e69dcd50fdcad975ef4f6f"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-f1b45304a19a61b8",
+        "sha256": "bb3a3227418675bb2bb5483b1cb0b55ee81ec36fa4c30d22a88b32ab0b9535bd"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-09e47a60c30d70e9",
+        "sha256": "f26b673527c8d9a5f6b74e5c84f27ea56019f3a314c402aad8e9f1897176cd82"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-190cac3f6985590e",
+        "sha256": "ae446a919dd3d0461cf497b1eca06692841091dac4ce326f2ae0dfb51415c868"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-3735d553a70c574c",
+        "sha256": "8ca08cdbd0581487418eccd58d1cf3cf89963872b8184d45c296efa2701c5e3c"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-ae06798f90e822d3",
+        "sha256": "15e821dd82bf850083479679cf8c0286458db314d19701233ff23800898f9441"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-b5a227a4695fa7d0",
+        "sha256": "7e94d85240c62ab85da4ffa3890092befa18851b3c0fb06eac209cd392367300"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-921f6c66f1a18d4a",
+        "sha256": "f1231b4e241771f5ec290ee37811b02fc293f10d838301e69ca21bbd032cddcd"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-f4785d7c2e276670",
+        "sha256": "7dd60b001b38e5dc0425f02358a02503d57511acb5188cbc1a1c29a42ebc94e5"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-ce0a056c611ab242",
+        "sha256": "02195f0e31b52a3faa4a85624b99ec75d62b70a2770aa7ca4536b60a07cd16aa"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-62f0416f41438e13",
+        "sha256": "e6ca1fd992b4c58ba5501d025d53b91f19a8b888b262de0cf967a1b17182c62d"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-9d667a70d08d4a5b",
+        "sha256": "578f13e9b025b11e2e93c24a47afcae05548679c057ad36a9113c7a8b3901a75"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-5c56c52cdc2d10e5",
+        "sha256": "7d959e8c9d2bb5fb2d65937a39a2a8c0e38f07c5d8dd80fc5932bdec3c7a944b"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-6de40dba724f0055",
+        "sha256": "39eacd6d1674a962f2c9cfeeb167a4a8ff14415ea1c87bcb56acb0807b9ea994"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-e9cc352d93ffeea6",
+        "sha256": "e09fe5dc65beb48714e6f4d110b4b7208ab1f4bce6f52641cb1601b49eb75d4e"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-d3b66da76f246248",
+        "sha256": "a54d4bbcbb19f92aeca7116594df3738ff4d38e031d4b2c463445c60c8c60f8e"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-5f0730f3bd5ef3ce",
+        "sha256": "db09260866ad982d5391a8a94440c929ca8a1c69a03ec964498b50594d2d84a3"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-ba07a3382fd4f8f0",
+        "sha256": "781b3d0fc22d84bfa330574cf38e0420a7a128fc1b62c542dfa366117230b684"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-f0b05f778294703e",
+        "sha256": "97d5fa57e9be80a96efb5583f66221ba1ef82afe2fce73a7e30008af6335ea3e"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-e42ba9b8b341f66f",
+        "sha256": "7ac9a114b4fd5fb3adb108daedc5ad4233bf1f8b8199cb4442d378a19110fb97"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-3cf3fe896b79ebba",
+        "sha256": "659f0a97ec1d67cee543511b955dc0a9b6c0525b0c31d6409cb0682b876321a3"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-98f180b92edc32a7",
+        "sha256": "59c4e89de24d08ff239a440a79c7fd824d7378ac22e54b07f5ce8e6bf2dd8011"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-dd7f8316f5a2a345",
+        "sha256": "a36b8956b554605b76eebe3262417e78321dbf8ca7da5db037f3fb8bc84e74bb"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-81d39388e7e83625",
+        "sha256": "70a45529ca806d1a67a041f7b4b59335168ca6f21ecc2457eec25365da41790b"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-fc3cb4f05cf4dcd9",
+        "sha256": "9fda199130f1c29e59144760a05e93963a519713e2978ad8d7757d65ca2fddee"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-59a03e4071862572",
+        "sha256": "da729a29bfc24be40e4b96aa942e63095f44287b528337f6ac8fc028c4c7efc8"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-8a27b1529f0b322d",
+        "sha256": "87959c0cf0152f277ab35474b91e783d9f6242becfd7e3fb4e1cd91229a3d659"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-56b356298605e196",
+        "sha256": "5090a55d506c8b10b35cdda2f3bd62bee7ec3fd70404a211f6b76fa4815805f5"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-d57efa12d8d469c7",
+        "sha256": "0fd88af0095073e8d788e26a9c197263b5d40517cf402034d4cd5187e9898fed"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-4240d9a66446c554",
+        "sha256": "d2b42d883ec20721cf7518eb6eabd22e381c0d434374f35385e56825e0f72b5b"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-fdd24e6701e2ed7d",
+        "sha256": "3150f431dfeb08dff4f5d610cbc54c2a122f9c74bf6387a368918cccd358a9a0"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-d6c7dfafd8e85899",
+        "sha256": "1b30072c5b12ae439cae493069aba5dafab38d3e332eb663cc96861f2fea69bf"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-e0928f0d1e78eddd",
+        "sha256": "c36c4653261f2d0e000a9014ac29509ec83bc40e320351cf64544a9c34b64eb4"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-021ea0f23f590e47",
+        "sha256": "a895a249c14fa7500e7e063c5ab7e1207dd14edd9c1511d8e2f4c9b23739f18d"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-d7f5c9687a4e3050",
+        "sha256": "846b9d3f11e8071bc68dedb82669cfdabb32690c83ad30b04f63b7b98bdd8701"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-1a998af4f14615ef",
+        "sha256": "17a00c6d573e1c45c11753edd15c4199f5e169f3567dbb1bcd0f36c4a5855dd7"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-190545c170ff650b",
+        "sha256": "955fd040ba41f9af22cf93c1bf7eb393dec91b219ed2a997d68723de514f8c1e"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-d29a15811dfcee29",
+        "sha256": "dfdb07dc460194db23a559cd7a7b4d9cb197905e562cd387128cd868b0ffeff7"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-b410c9c2bff563a0",
+        "sha256": "3e71a8f8f0394650f53f3486204c394ee685ff7b9e1f701c5a8e9411d26cf215"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-3685fc1570f91cc0",
+        "sha256": "9008592540ddd2464fd638829a73922f45002de243ad07406461eda57455f886"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-ace8da47b352aa60",
+        "sha256": "1f3b556b2924056101a42bb4810c8fbbcc5b23b488eacb54b13567b99d7d448d"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-f01",
+        "sha256": "e15fc62960229e776cf60c2499194eaa6cbf374a3343735ff54af1ada1a71769"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-f02",
+        "sha256": "89743607fbaa50598b6144918a34b5a46dcb0b005b9156e6b0337168f5bd5610"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-f03",
+        "sha256": "bec938be636e80f43e06375ebb93f09f67d22e33d31cda7779e06a0a3006830a"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-f04",
+        "sha256": "49d970d99d1dfea1143c2af4683bac2406ea78fbd4c074f6b0234bf0e050cd65"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-f05",
+        "sha256": "6d590d3db8a9d8916c9c2e45fca13bbb6ac64cf78c8bb223fe31c874d8f6c5a6"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-f06",
+        "sha256": "c4c66bb3ac6278b11192d0f76c2199361194c22a5893024a0cfa8f6389c85d99"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-f07",
+        "sha256": "36288d7d1f45fb84bf5a8d8552852baaef36f42d97326ee688eb839efc14fd69"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-f08",
+        "sha256": "41bf8c5c59851cb40a4f3ba5451a3d45d55a5b5ab3451897fa52f1366125cd37"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-f09",
+        "sha256": "5ca6db3c4fdfe89c25d2d6202a2660464f5b23b27eba0d609204c37ac67899fa"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-f10",
+        "sha256": "a45b104f4ecb4cbdbe4ec4aecc29a86995ceb68e320b56c68be52d3fedc94a64"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-f11",
+        "sha256": "4c7966e325f2e90902011decf5dc52b6140a6c72f6b17b61fa0c52b4967ef239"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-f12",
+        "sha256": "0de8adcb3233322d44b686a2f3bc5bf35bcf7f5430a5e4a0b377ff2b4759ede0"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-1a62052bb05ac4e9",
+        "sha256": "b044491ab8c40beeb6ea3c9fa157337abd1fef829fe20e7f8b51d269bbdfd2e1"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-83c4caf2bb43e393",
+        "sha256": "9bc37ef01aed21d9da4887bb919039fe205272fc2ca442c82490f6c146cb4749"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-93d24996236a296d",
+        "sha256": "d58b9e3c9a9279474111c091fd462316d9c898a4df326bcb349a790dc38cbaec"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-24998739fdcea7c8",
+        "sha256": "4d3000ac7448e55438c7d8ccb763e74683adf92c142b76e19a1ccdba1990c6be"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-f2ea566b42bb82b2",
+        "sha256": "d74aea6e387791013dd0a80c213ecd2e2024e4b3ac77c1c80b382e7fb58da9a7"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-9c8435dadcdf9fd2",
+        "sha256": "c2a66dd7514ac9f1ee9fb9825f556bdf34c7a154e004465719307cae8e5c8ae9"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-97afd75672c9cf85",
+        "sha256": "83fefd4cd4aec12c8893c1d431171b4a0d2b6ed22637115c0091d4334a05c63c"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-09ef19bc422f54ce",
+        "sha256": "5ea9077ccc6cca95d464ed06a45c404eeb3a0a39dc7c86fee9761fabccab1584"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-9c1c33f4ea85faea",
+        "sha256": "fda4bf8d8c7f23e2cb408b141beeddc16ff4bc8121a53e1b887f8f63c1d1049e"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-b90e27597b929e52",
+        "sha256": "500ac8469065fcab3ea764c0b8c755a218e3aed0fe3f37de887e5ddd08f7cefa"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-fc2acbb0cb361ebc",
+        "sha256": "243fbfb97527a8e58464bde7cf1f89305098d0db426897a04d7e2fece6b47b15"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-f19c47fa085cc450",
+        "sha256": "4ab321974812c2fc56270cfbadafb7f461b974f8d068cd832d734701f5076e46"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-d97b58db4868235c",
+        "sha256": "e54336ee7868cccd734c3b996e54208d5fa8798ca6a8fcf0d7a3e98efdf0eb27"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-a0ac98aef7f99a79",
+        "sha256": "150bfdf282b8283d13391fd853082e61a0b8ac1dcebb0a2c94072cfedf8ae932"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-0574b87e229dcbd2",
+        "sha256": "ea6db6c1814b3c45741c263385a0e45aa30bca4e929c87267f65e67a54ecbb50"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-9b75b9d33965368d",
+        "sha256": "d65958f1bfcb408ffcec270d6d31ee1febf1e418ccc96fb36d6a9ecae8016975"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-8a133fb6f2bbf056",
+        "sha256": "5c059e38291df90fa07bcc6cae64f97a540290d975a05a000fe3af6021848825"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-3679b93a5a7ca88e",
+        "sha256": "a0c5009c95004d1258ad769ddd88b39c5005661425d7eda504e44272cec2b5ab"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-0018a62741df9a30",
+        "sha256": "42ca3efff5f9d916969fde33077302adaba32b93fb661bce35027294ff5c3337"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-172214be3be2381f",
+        "sha256": "1f569fda8cc1ac9bcff9868f0b20f61e3f924b23a55b695a67a8a5fb9cab60f1"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-2464ec2384417449",
+        "sha256": "f45ccd4a7303df015fffb02fb88805b7c4ac80e0ab04c631bcd11314df9afd6c"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-bd562b162914911a",
+        "sha256": "dc9012d249f89c358d26ba9d8fae1759b3f867d274c2d36449d99d15937553b3"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-13b3e0ce9cfccd47",
+        "sha256": "d6bacfa5440d9b4bd353d33741961170619474e3bc2033705f702188fd257390"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-4b1da1cfa4792536",
+        "sha256": "caaa9682bc002e9b5c8df5d855a705badb0020d3e107b33e0cd4795a676f6a3b"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-e50dc72fba3d0ba9",
+        "sha256": "9fa61b53795211612e2ec070851d0e07343617f84bc71290a9e46ecbbce5bc39"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-a259e3963c78ffbb",
+        "sha256": "8f21ba4ff505c80851874c240d346eed26eaa7c33a9189f42f7005b8c4a29df5"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-bb3de28c722ddd84",
+        "sha256": "e17c8558d3a207587f6be52b65781041b93e22d905b61da256ccffd31d2afa47"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-7dd4b0996f1edfb1",
+        "sha256": "bb8e7b8879f4fc95df72253e1ebef71c7b2c0378ac75b3b66a6b35ee00ca7d9f"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-0ff888d3040aa56a",
+        "sha256": "fb5ea8df020f47b5d010008379791a05814737fa1f35f77286f6c3f9bb3346a3"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-38036d7ccea7f3c5",
+        "sha256": "4f2dd2653b1f64c94cc192c71526f5f595a729ff2e3a4e1728046556f62c1f63"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-672c8d7b38a95cee",
+        "sha256": "1a70af6f56f3d3e36745d980410772bcd00dc87bcfa8e4ceb0e4d6415db92ff0"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-869542ed56b02537",
+        "sha256": "a95346b1e88093d831586eac2a9a0cc08c6cb164d2154c10f6695b03101a3645"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-aec1b6c1d97479a5",
+        "sha256": "1b498db770baece58960ee537cf3992def6d96df24574ade44487c0d3882769b"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-27495ee8ee0b8b3e",
+        "sha256": "8e4b585c53ff22345042087875dc922030c977b127f5159b0b30befe7ab642f5"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-db4c28df088665d2",
+        "sha256": "c554575a6d44d7423bdce64a8c28ed37c8856c0b52ed91c1189bfed40d9cd007"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-11c601921484603c",
+        "sha256": "9a051dce72949d883dd878b5d15c2f55bfece0acffe3a34909f4b945dd7b3726"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-d46759a121ca492f",
+        "sha256": "4227756fa85ea8cb6765b6e7642d3f1bda557b293767dd3c60d51170f625fc60"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-e727adbfbe5dd906",
+        "sha256": "08cd41aa88bce7594d7adac858016d8c295db5d172cdc81401b625ff155396b3"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-1b677b52ca36da53",
+        "sha256": "2adc4fa0c52651aac15e484c19b7680f5af34bff901f8f54d84f2d1388a27ca3"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-907dfafb43439623",
+        "sha256": "ea2ff42af07432c92a0f1e99f2afb033fe758579931c5cb2b8b1e87df54b074c"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-53743f4123989c38",
+        "sha256": "8eefb148bafee374fa86ee70b4e2459367fe54535439f6bfa5205b4fadc6a4dd"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-224939a37ec33bc5",
+        "sha256": "9030b5c6112708b541847887225c708d398bd3a5c31c161a761de208953452d5"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-89c7dbb7a471d625",
+        "sha256": "cd64e6b77fee150f20e58d15cae9597878e5829e8e05ea2a0c71cd7a4ebe28fe"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-b259e7d848416d58",
+        "sha256": "c206f7abed5433706106f1a464de3e7b4b6672a242f8fcc90e1a68b05ba8663a"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-f2cde3495ec4f84b",
+        "sha256": "35692ff9f04f09fe39d0e5c34197ad6269c4f21b35a51783652a5fd95f0b0595"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-1616f54881f793a7",
+        "sha256": "c9dba2a1bc82fd098af615675d52e36d2b2828236ef23506e0e13fb5c41f2a8b"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-acbd3a75ffc5c3d9",
+        "sha256": "1003302eebaa6b2d2a6899b6e2b02d13aa9635ae72b6e041134af295d8c7baf4"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-f8d30a1fc48e134b",
+        "sha256": "b09c79091739f937648b84e482891715b74a71c4d38f316766a7c83137e7fc30"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-96a22658d4b3f1b1",
+        "sha256": "20cc7ea14b38da928dcc5373f51e763f1da0e7ce3bc03faaca81202216fec5dc"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-4b93fdd80d2bef75",
+        "sha256": "66356158a4be64cbe349d3e4c9afe92f10f781c12c9fb117c2f3d2730cfaa5f8"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-c00471e3638581d0",
+        "sha256": "94d1387e48f0554c0e20c795ee63e442622a67c7b0e3d3aed440903044264b0d"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-427cd9a5f2809c3b",
+        "sha256": "1e4828e5cf1709bdd881c8f924f35eacc7a1959daa85ca371e0f4c845f06d755"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-34a5c55313f9da5d",
+        "sha256": "2b999c8863b4fa6b886872922250884eef37e2377b694d5305ecf8b613f8de77"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-area-escala",
+        "sha256": "0dc79a8ffa43950c1e01bd41d35c41402e34e2d483615dbcf3250c7ff183c68b"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-61f7eb669037ad2d",
+        "sha256": "d398fd28209c707f20bf6b4fc1d20c4081d84727a61432fd1a51c21b6568f906"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-e9ad9640bb472099",
+        "sha256": "fe576f9f588f5a0cec9638325ae2e17f2d5d6cc1a3940c8f25a99964b7477a7e"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-b358d6916b0eceab",
+        "sha256": "a82ee73eee2ef0e573e6b697cf4b120c5c5f32c7834a9a70fbe5de6c9bb8da43"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-ca1868b05073d9f6",
+        "sha256": "a518fa9ee24ae911898e8961112b962fc118dd59103778a70b575674a92340b4"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-0a48342767e0fdfc",
+        "sha256": "e845ba700c0c130af6d50ae02d8c648666632021eaca39965d1d39a254922d6d"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-d68ebd86eaa74c6f",
+        "sha256": "1cd280d6f7ddfcd4085506122f04e2d15bcf6be9b7188ff21ca95bca8bf45ad5"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-9d18f342d4675c7c",
+        "sha256": "d5322cccb1a7f01d231057cf0bcd4691dd53f5bc13241c4f4039653f1bf874c7"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-77462c61c7b078d8",
+        "sha256": "7e85c8f59da6f9a17e0de07a05ae1d13b8ea15bb3efd66a00bbdf59966fe5c58"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-e31ccb7c589c4cb6",
+        "sha256": "a32eb6e0b1014f8e9ac0a65ba37915acc6c8dfbac88e0fb2ecc98d6c06457bc9"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-1fe984fa79edd665",
+        "sha256": "d93355dce49a1c47dffb2097fb9671067c5de3c178b2d3d154ac10e586536e88"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-ead99dee65abcca3",
+        "sha256": "49265806c1e9a694fd389561a6c9b01905e352ecc289638e4528361c5ad3a1d3"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-8be4ecb276cd2124",
+        "sha256": "5132768c71c352f73d3b13c5045f5767e183d5401cf597283a372d9ad63ec585"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-9e8ea66804b67e14",
+        "sha256": "4fddbb2a010927ee2b3ba74fe0425e3e27f14912ec5c432a4cca4d21c36ace12"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-d7c0edb3c626f8ba",
+        "sha256": "621cfd37673ca2dd5e688fa7cdb4c2328708d0d5b32bdeea10f64069105b1e1d"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-b23a11a71b1f9d74",
+        "sha256": "41e6baf246f9b5536f1f25e9de91e4f31c29e95c48ca07ee92360930acf5ad4c"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-2baa38807e30ce77",
+        "sha256": "448c5c6f5a14f6f60157198df5023224fae7b0be37cb24395bcc41ebee3d0cf8"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-71359a3a64a4bcbe",
+        "sha256": "caf58c340837dcea2b5c71e16a59ef9838b9224514664202d090c3b88d48807f"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-72505a931bdb57b5",
+        "sha256": "f6c2d4cdf79649f3aebc31e222ab6d2cf38db4ae3139931677726bd82e4e5f2c"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-3c31a9517e800bfd",
+        "sha256": "06c6ef4425039a4d04ceae1c243927bf43e04948dcb39fb27a868f38d4b5814c"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-5ea0c7b68f1419c6",
+        "sha256": "50c44a0525bb13ba9c0bead91b3f5ae942691607825f02769edd9d2bd4fd9827"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-a3b093cf4b780c62",
+        "sha256": "17f4b52ad60e5073dba5eb57fdf5ce3a68dbb82a40417afbe1320ba157a9c811"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-4b57cfa2f64a92a6",
+        "sha256": "269556636e9166ead044c0c0c003cdcf13c3aa74d5704880b75e038d6235a0f2"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-20c7d843185b3d98",
+        "sha256": "d89e339459e24e0a8107ca7faa9348d9140f967f0c3a007337b2fcc636b531bf"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-49ae753b0baff6d4",
+        "sha256": "297f7315145a7da121e1bc8d65e079e3509ebbaa4916fcc96eea8fd8b26f57fa"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-e2c5a4ec652d9c61",
+        "sha256": "b375a19a9a256c46b6608dc9ba8b513e81f50209d479b2a7117dedb6a47b9812"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-07e48acf1e540e4a",
+        "sha256": "67387b45234ddee67be1d82a3417084499cba820332a20a276aa15833185358f"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-11b5cf319176cb3c",
+        "sha256": "6a1059918b28dcd5b4adf7248647bba91f8317e8be41fd2ef8a08c1e6c5ae13a"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-cf9ee0f9ba9eeac2",
+        "sha256": "c2b22679b4303ed27d7bb35180b91226ac3086277a59814641fa970fc32380ed"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-190d6b819cf5ba09",
+        "sha256": "d70fef2182902083df93c4ae0c35054c651a2c0d57764452adf8d31910da0e5d"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-974de3d2b0c9928d",
+        "sha256": "b95171210faf7950f24c60c4d94e08369e57a107c31b641a53f896fe31334795"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-02585271db608288",
+        "sha256": "b22e159fd733b1aacb4bb9b516087a79299a4736c6b5e949f7664af0a09b02ae"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-98bb5251b68d7a2e",
+        "sha256": "3ac4eb5118ad395251b28ccfb78156f7ec2edc79015c5da8f23138a6c41c6ce8"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-c35c616dff501299",
+        "sha256": "8233edbe92aa07d0c3fc312594ef5540e3f33e4cd615c32ac5ffb210115e998d"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-ed85f8a4e29b84b6",
+        "sha256": "934d6914753d95d73a1229b834d1f638dbc7a8e257c77a0a7640e2b8a2554c29"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-5f14c1fe1dd5d149",
+        "sha256": "9cd82e61e8f34da987baf8091c4f6cd2a7ca38c193775c82d5deeb34ee4d01fb"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-4de26d6a6d22ba10",
+        "sha256": "1121f8820f1069f9c513b9776228ddbb3e93798fd2adf8f8b2b946c9f7640b0b"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-e81a0569ab4282ff",
+        "sha256": "95959082a7fcc7a11a9e6ff4c4fc23a8f00f9102c597d1167a3fb073843e60c9"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-1dac5800f0e84825",
+        "sha256": "aec9dda3dc5aae5eba7ac756aaaf3855dfa922dabe6dfdb7d97a79511376d08c"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-dbf4f96d27078992",
+        "sha256": "a15a223751f1acffe7c0b03955afded9ae19bb023ad4ccc00970cc2643e9e816"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-2552ea56a33202b6",
+        "sha256": "9569b9009682144a4af5065abeab53e7b310f99cbe0aae0df0e4135e1da713fa"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-c5bdfa3e13ffe52a",
+        "sha256": "1ef64c1bb08aa3084bb2785a987d676fa45a43a1d082438626e41503624297e3"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-de657cb00fe09094",
+        "sha256": "ce1f3b84a8854272609dc8765210f69d0f5ef013d4d516c27ce31c3bc6043ab1"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-c2f9884dc8e635c7",
+        "sha256": "5475ddaf970df1af8e00c837a114b532fef6a1c229561496062d75239bd6795c"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-75354bb9f5a5067b",
+        "sha256": "ca301030f010e2db386ba76098aefc00faa6349a8eff9b878e57c16ed05eea00"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-3d4fa74eb7af396f",
+        "sha256": "ab1be3ca5b12292d06a0c19e4eb8f8de82261aab6fea79bf5fca53dd01e75350"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-426e98506e008ad9",
+        "sha256": "ed1a63a6938088bf34132080102afff89781a1dec54c2cf7cf36751bf2d83950"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-c10f9075ac617d64",
+        "sha256": "09e6dbc4df9068145de373afc7a50975f331a10df3bfb1189b25302142767960"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-f4142bf8e8279bbb",
+        "sha256": "0c32d5c1972c31ff0c436c43fdd3e525c1eca1d15041e6f5ce4ae3a2987dfea1"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-747c2b0df9e1325b",
+        "sha256": "d69928b4d4932a94b3fdf30ce191d89fb8310d3f0bc3e737acbe1354a945676d"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-7594daf0aee1067c",
+        "sha256": "42804ddd5434f22c8dcb172f4bc3a0e282fbd9c8379ba91b4fdf4a95c5080ab1"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-1d51e42f2335afbb",
+        "sha256": "404285f18f60ffa24641a56df19835cb5b78a3a8b3b388a3e43ac07298e00380"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-d155830b8235395e",
+        "sha256": "0d7ca63f51f92fb7ced26c50c63e203090a1f83b8063b5104cab0a47e199ed5f"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-5bd81ef3254a984e",
+        "sha256": "2aa3670d8691b4c7ef0258863a2477449e21e74b070f761ebd84bb62dd8ea56c"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-d995b22cec4ea4f7",
+        "sha256": "4dc5ccc44106849c9c6e717ec3e9eb909beef444f94c24cd64b59917b545c161"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-56a9fc1bed220792",
+        "sha256": "850f8b376922b22c1a609fe5b458a3a2059d08665d5a40f22547a5a0f7013fcb"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-8f51c0c6e35754fe",
+        "sha256": "0589d0ef620b940395500023328645cd5d409c95d70539bfac01f863d6f7d907"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-5a158a7b32948444",
+        "sha256": "3e5c06cd150895742b155750d048be44bba7e4f29e568886ab58dd8bfb68fb13"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-8ff9992864df48be",
+        "sha256": "4548c352bd3da9d7f172b341c059f2b6ffe3b3cfcb114da57a616a1bf35e1b9c"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-1df14d1ba75a5c42",
+        "sha256": "a2e8ccfce9ec6fe751325bf7f8b92422417ad74967d121a7e9b684175b231264"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-23fc947954fe2160",
+        "sha256": "353f3f2679113d4b9c07f9c3eea0d00401a2dff50cf64f2b05c42dd68547876a"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-f3201e8453e68dfa",
+        "sha256": "306561d7a5bbaa8d909cb777fbc8dd90762422a6c51f02e6449a47b105039f7c"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-16071916f379c255",
+        "sha256": "48b777bf34705fb7608bcb51f5dcc31687e636b07972e3a61ca0b0b6c273e9d4"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-bc27d4e1268592b8",
+        "sha256": "d1719ad6bbdcf741d3dd21905b3ff7c49ce0d0588dce3639bc661bc8b8205259"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-e31bf2a236577e82",
+        "sha256": "749a9468ebaaaac36a3777004999c667d2fca56e660faa04b0b3d03205ee0327"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-e1880b5ab6c48310",
+        "sha256": "2122bd403e7f43645bf85c57cf4e28f5dbad1a2044a073408744e9cf1daf70cc"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-a3fc3aca361479f6",
+        "sha256": "341393abb409cc2714f4cbfed0afb89bc110f1da822ef1a310f95e0816ad6d36"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-86f3950ba81892f9",
+        "sha256": "b885c22ed23eafe7c5c1c06023cd3d9c0c3ab8e8ef6c1174a039381adab7a1de"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-c2959cbe7b8f0ad5",
+        "sha256": "d577dec4bb649ffc46b4b6cd3f417596298b78bcfa748fecfb9b37d5b4fad627"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-e5d977ecb0f5cb12",
+        "sha256": "8aadf4012f4b6a295b985ff982998535cca5281da9395371f00d44a59a336ab4"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-747f95dfb9c10f0a",
+        "sha256": "68129066b3f79b82551a8f3a40d8a3b06f7373ae375a7f856899f1386de34599"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-aaeb3d6910421d5c",
+        "sha256": "c831fae7624b8ed5308dfd59907f8e66b092652841cfc4b20dbd6344745d3627"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-f09097e75fc85cdb",
+        "sha256": "e0e84a1584cce0a4de8b2898d7bfa8528e622b85c398385388948b410f0f77a7"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-cffac931fe6eb521",
+        "sha256": "2045965f1c11ee336fc431250a0d92f4be53f5300ce1c10d7d466996c970d6b6"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-b34c8094ca6d1398",
+        "sha256": "c0b67a72bbe0410334a0a53e70e6122f18f89ce998e901872a5820a433d32bf3"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-7f2d8cd01b2f9898",
+        "sha256": "12e8661ae93b127313ab8420d1c8e125d5109b09fea9c9037dfa9b50bdb32c81"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-ea3913d89e7a301c",
+        "sha256": "5f2a5b2822614b41b9cf605d2310f8fea12c45869da11a6b4af320e20de771de"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-b27867a15a7c84bd",
+        "sha256": "ac2c2ea6ede8534101029f0600fac69d7a432ed38925a8b4ef79c6ac8116d342"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-e45e9f4fed9cba11",
+        "sha256": "25ee3b5e8fa01e768d7f37bcc417954bdf7ecadf1fd642d081ddb67d55d060fc"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-30efc4bccaf92d0d",
+        "sha256": "a843ddff6197818252f007a3f22d0f67f5241d88a20d52c553bb861d2b4fc656"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-bfaee66f550dd928",
+        "sha256": "79fa6d9aa3ded83e59998620771e13d5f70d5033e008bdefa944c5cab531006b"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-cc3b15eff7107daf",
+        "sha256": "407fa767a50d51a147cda0ad848a288abd257a7f57591a1c8706bad5660d3c9d"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-d2de99ab3b0ed9b6",
+        "sha256": "78e919680cd5bf8c2818b81e712bd99f42f0789f247c4aeb558ab841ef2a8f6c"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-3874bfb615e7c8bc",
+        "sha256": "fb2d8586c15475dffc0c16f26ffd4c417e7ecc55409287131fb17df2ea87a8fa"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-5fc030be256a400a",
+        "sha256": "4ef9e8f637d2c992923f48d33033bc3b49bb2aa0561c656f1a7ea3e9e3f94287"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-05337d0178b5aa11",
+        "sha256": "8c5d56dffd7ba87acae745a73c5479cf46a4fbbb68e85e6d4a77fc9d4d2780b9"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-496b03bb0cb32497",
+        "sha256": "1b9414d99a40d6a063ff9a7f54c984795a08d09e1775ab3178647279c5695c4c"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-154fbb33c234d5da",
+        "sha256": "0f3654dfb2ad0fe527cd86815b8a4e9706a464d27a86b633e4506de8483dafd2"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-f0d2e2ed8f6fe653",
+        "sha256": "c22a3bcc53d3f484fa1578e71a1a81ca384bbf1e8362e500bf605cc09a83b3be"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-e1554b941a2fde1e",
+        "sha256": "ec9854f0091c27cdc786a06f93609f4f9601206f584fe6e79bc9ec95efbc7483"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-46c8696d588f96bf",
+        "sha256": "54e126d7bcd7fbc69e4c1c26657edbb86f22c3b56b798dd0982f757543866b96"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-87c181efd27ddcc7",
+        "sha256": "2c2a6075f4cf7389cb1622edef06ede879b4f2fc66e4bb16e3036816e3cc0f32"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-a14b3ac816e2e3d1",
+        "sha256": "a2ff385d222e7fdc0890c4290cb99a1f1a9bf5b0d9cf08e6a9dfdbc50cbf4824"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-d24e1f9e376de0fb",
+        "sha256": "8c1c7ad48fba57a0f8de48dcb48acd78d166c99d0016f815d93656bd6d419b33"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-591cda7c4d9c4b66",
+        "sha256": "b2163900152d62c951b468a3794f33612431619ba82b2d0d26fbde51fde9d9bb"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-e1a4b18deedb7578",
+        "sha256": "313f16d0f0d589aa924193b919a71daa605f93520aef6db0ff742deb51ef3af1"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-8186eedb3cd81bc6",
+        "sha256": "4bda1246d8e09e3352d4a13b522fdaab9f8242cbfda9f7d3b4da38b8c01ed0f4"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-e2512532cc797277",
+        "sha256": "e7f32c688eaafdd052a6137d083e2d788e21d605468bf5d93ca500b1af142de5"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-ec6dc4885fbd5041",
+        "sha256": "ff0b5fc56f13269f7672703c2ed0f565e564d288656313dbdfa41191ba21e082"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-21917d1867c75d57",
+        "sha256": "b183d6221ee81970095288574ef51237b520c0f9cbd845aafbecefc6c684109f"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-2ad33e2a415f1868",
+        "sha256": "0812a897cbf59348e1c264b9f6ea0ee425493496030316c55d4e0c07c1d9de17"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-1b3ad2f4e511e2f7",
+        "sha256": "f252836177d9fb66adf3ad1f0e9177bcdbd25b3e04b2e197a3f1876c5a2e2b91"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-1ddb1ca731a24933",
+        "sha256": "8bb2330b443533e150110fcc6e50de6f8e40dc915755679a254597839b9dbaef"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-13656fb15db22e3f",
+        "sha256": "f535b57b4750b048923f6c1d0f912595358268a0d0d0601b21bbabb140e81828"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-d8f764dd07c5c1f6",
+        "sha256": "c9c5747353ed7b655025e6b0ef59d55def73781541067c6b77f0b47bf9f6f8dd"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-5844ec835cb912a1",
+        "sha256": "562d5b8d8671d4a0727981a47cc63e42a070c7f282204d0f98231b8807b80e0c"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-2f38dac33da845d7",
+        "sha256": "8106cba24dc1385c7e43e214d63102769859d21574ecb80ec269c3f8937aadc0"
+      },
+      {
+        "kind": "writing",
+        "id": "v6-disc-d2563ade4e72b5ed",
+        "sha256": "1e9a9cb5f991d9e098da2c22c771eea2324ef12fde3dc01a9c783e09632e4ef5"
+      },
+      {
+        "kind": "writing",
+        "id": "v6-disc-0827343e57d9d542",
+        "sha256": "2b531e1f1d2dbd3e97333ebc8b4c224cb0bc6552783b2fc024fc278aa380bff9"
+      },
+      {
+        "kind": "supplements",
+        "id": "v6-supp-ecacec940765a30c",
+        "sha256": "29b07cd4567c7b24e497cf654d0ebfe482f520ac219cd8d1958d71c0598f5925"
+      },
+      {
+        "kind": "supplements",
+        "id": "v6-supp-c04fa1bca8d102a3",
+        "sha256": "4ef11b3e6f1de0015ea0843dc079cd10891989591db6757c1250174470a40478"
+      },
+      {
+        "kind": "supplements",
+        "id": "v6-supp-a451913b9e2f73a6",
+        "sha256": "35e02fdaa769aac2df3e647e7cfce2cf780e5001ecb4dc24ea4c767c44468144"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t17-1",
+        "sha256": "eb609cfbac6eb21f157e87614da5542d8f62a81e8598f4d0da82e6e9f486e765"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t02-0",
+        "sha256": "088f0e7cce8deed47c0088311792466243d45566efcff1e2f7e506f25c4c6a7f"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t02-14",
+        "sha256": "f5379b506cff76e04335fb1c8d6135ec6f0ccc31a4dd55a2b5c85991afee5987"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-af03d6ab5d10acbb",
+        "sha256": "0a900dbca63750f13cd51d56bfb44a993dbbfe9e4483a6a6a236727ec3a53451"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-e67b6f58bf838826",
+        "sha256": "d6e6aa29a0f36a2b418dd966f9c465c20d3aa5be6d310b2aa7dfd99327fd6e41"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t02-1",
+        "sha256": "b76fe854790fa267db32d59c842021c8454596b27381a6dd8c7bf96e7b4c2bf9"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-d7dd8b0b7bba095a",
+        "sha256": "c20f973da3379d2d2a98e8addb6e2e22fca4378df92eea3483de5b05fede338b"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t02-2",
+        "sha256": "3ec31ee687b8f010e9285a768840b94a63c1633ba447d63bacc2586702d32d9e"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t02-3",
+        "sha256": "366215ca3225d0e12f3123ececd60ca55c1c72463f252fe8ac1194bf441c1a2e"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t02-4",
+        "sha256": "8e9b89b5107d01fad24d3e11236f36ab5ba1534a35abe58e53771a3c7529dc03"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t02-5",
+        "sha256": "7b1e2067ef315e8f7d38e5276a2dc146e2dfc930471517cc09290b1d87c76dbb"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t02-6",
+        "sha256": "c0b62040621ac482e7c092162fd93396a0a1ff4961c4b5295c3c12ff4c8ed9b4"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t17-3",
+        "sha256": "3856c8d666a5c32653eebfc3da6a401ed64664e5bfabf7dbbb7057f41fae9e59"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-46da7abd5bab95e9",
+        "sha256": "80396bb907f9b2f89ae5e7d011e58aa0469c1fa6efcfe9276e42410e8a915725"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-9235b093d76af5dd",
+        "sha256": "ab122d92805d4502cdb098f4f3fc297f0c3e833b6d87d58e82a91b1532f19f9a"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-d0a982e17ba48a68",
+        "sha256": "68a80868bfc74645ffec331ba47d41f40555a91f060e6ff49c16074263626a2e"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-e675d143352085da",
+        "sha256": "0d218def0e48b1e7686eb486a2afc9acaef3551a361bfe7e9f1c8bad066e2c77"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-85768274b53644c7",
+        "sha256": "a83228b501de8b8b3e9187918d4c0c581110d18aa77f0c97290c3a1af331c78d"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t02-7",
+        "sha256": "01cfcb921be073ce0fe780d1c8068e3e0b5df6012ed802b7e3353fdebb7f6da5"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t02-8",
+        "sha256": "04b6457b0254528b8dbac3956ced72063246e8fd9316c9bd1f4860177c176056"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t02-9",
+        "sha256": "d8c57e7d4e1c95a9792f5ef462d561ae86f4dd4781c52f676693197b13459ef6"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t17-4",
+        "sha256": "9c3b216a3d6c13e4e6c4af40ce7012d71240624eb186f7c7699dfd1c3b5a3c9f"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-07cc8e378fa10cc7",
+        "sha256": "4d4cc3f1d7da1757f9639a5d1e70eacae2e5278a0850a680693a4f56ecded438"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-77116d32fb7c5779",
+        "sha256": "da22afd8cc31b1d66c4c6e8b6f764a47cf6370c5dddce3dce57e44624a755f7b"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-84b97a34606f1664",
+        "sha256": "6a99d3597b6c81cb29440ca426b028104df86a9e121beb3c08f13e5d42c3e9ea"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-e92eaf6a212cf90f",
+        "sha256": "099d264aa6b38ce003cfcbc69ef6c7292ac3af51549d07978d6b54fb8237a2b2"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t02-10",
+        "sha256": "6acc5b8aad0485d7cb65c4f0ae2c154006d882b8b8d7965db4181a5091946495"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t02-11",
+        "sha256": "80db3b4c3977f498a17bf6457c599c8513b9fe7a3dfb1c8b44fd3638dd00d353"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t02-12",
+        "sha256": "936b6a6e345d39420565f923789862185609a4b6613606af49d839c3309fcecb"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t02-13",
+        "sha256": "d153f276daed5c8fd6564ed6dde76d5aa4759bb4e474ed93baa2dda940e42d53"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t17-2",
+        "sha256": "2010fddf5b5dc4a90fe7cb536d10256917b1dae837e5499e7183d2da057249d5"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-7e54980a1e26ae4a",
+        "sha256": "b644ec489d7a9ae38cfd63d03388471e00cc496b5e5537cc1f6b3f36caeec1f4"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-169c1c0662de8397",
+        "sha256": "74753a4b390312256633aa115418e5009aaaa7aa2108ddeb8e5d81d33de8e5ca"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-3b941dcda9531574",
+        "sha256": "ce4ffead410e4dc001ec7ba4f8894cd2d10952815f011c510f9abd31c1f583d1"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-4bb776b2b33a8823",
+        "sha256": "78a7389e2f221e04b4815981921b3e5ed13503457a82f9a25878825950631e7f"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-b6a208062ed0d279",
+        "sha256": "9466245b7f2a585cb933b9468188da424bcdeeaaa8d7927cf3e135981a067361"
+      }
+    ],
+    "premium_criteria": [
+      {
+        "id": "correcao_conceitual",
+        "assessment": "satisfactory",
+        "reason": "Conceitos, respostas e contrastes herdados da leitura integral; nenhum gabarito a trocar identificado. Correções atuais tornam explícito o erro de cada distrator selecionado."
+      },
+      {
+        "id": "cobertura",
+        "assessment": "satisfactory-in-scope",
+        "reason": "As 17 missões do conjunto cobrem o recorte de Cartografia do edital. A avaliação não cobre as outras 25 unidades nem todo o programa do concurso."
+      },
+      {
+        "id": "profundidade",
+        "assessment": "satisfactory-with-limitations",
+        "reason": "Fundamentos, aplicação, cálculos e limites de inferência preservados. O estoque de treino avançado é limitado; não constitui prova oficial completa."
+      },
+      {
+        "id": "clareza",
+        "assessment": "improved",
+        "reason": "Explicações dos 44 itens identificados substituem os prefixos genéricos por análise específica de cada alternativa incorreta."
+      },
+      {
+        "id": "exemplos",
+        "assessment": "satisfactory-in-scope",
+        "reason": "Exemplos hipotéticos continuam identificados; nenhum exemplo válido foi resumido ou removido. O mapa autoral declara suas medidas e referências."
+      },
+      {
+        "id": "redundancia",
+        "assessment": "satisfactory-with-limitations",
+        "reason": "Identidades e variantes preservadas; cinco famílias existentes continuam explícitas. Ausência de duplicata exata não implica independência entre todas as atividades."
+      },
+      {
+        "id": "terminologia",
+        "assessment": "satisfactory",
+        "reason": "Preservadas as distinções entre latitude/longitude, escala geográfica/cartográfica, datum/projeção, SIG/GNSS, raster/vetor e as operações digitais."
+      },
+      {
+        "id": "lacunas",
+        "assessment": "identified",
+        "reason": "Permanecem o estoque insuficiente para prova oficial, a prática compartilhada de escala e limitações de acesso aos binários externos. São trabalho do assistente, não tarefa obrigatória do estudante."
+      },
+      {
+        "id": "temporalidade",
+        "assessment": "satisfactory-in-scope",
+        "reason": "Os fatos temporais e suas fontes/datas permanecem delimitados. Coordenadas e medidas do novo mapa são hipotéticas, não observações territoriais atuais."
+      },
+      {
+        "id": "nivel",
+        "assessment": "editorial-reassessment",
+        "reason": "Além das dez reclassificações anteriores, r11 passa de Elite/D3/C5 para Concurso/D2/C3. Não há alegação de dificuldade calibrada."
+      },
+      {
+        "id": "fontes",
+        "assessment": "satisfactory-with-limitations",
+        "reason": "Fatos normativos e institucionais usam as fontes oficiais registradas. A grade e a escala do PDF IBGE não são afirmadas sem conferência; o exercício obrigatório possui suporte autoral autossuficiente."
+      },
+      {
+        "id": "treino",
+        "assessment": "improved",
+        "reason": "Gabaritos e alternativas preservados, feedbacks individualizados e A–E nos 36 itens Concurso/Elite. O parecer por IA não simula uma questão real da banca nem certificação externa."
+      }
+    ],
+    "conclusion": "Revisão por IA concluída no escopo das candidatas, com ressalvas explícitas e sem promoção automática.",
+    "limitations": [
+      "Dificuldade não calibrada empiricamente.",
+      "Referências externas podem exigir acesso de rede; os binários não receberam nova inspeção visual nesta rodada.",
+      "O banco completo de prova e a prática específica de cada unidade permanecem fora desta correção."
+    ]
+  },
+  "previous_editorial_round": {
+    "version": "0.1.2",
+    "from_version": "0.1.1",
+    "feedback_question_ids": [
+      "v6-fix-d6c7dfafd8e85899",
+      "v6-fix-e0928f0d1e78eddd",
+      "v6-fix-021ea0f23f590e47",
+      "v6-fix-d7f5c9687a4e3050",
+      "v6-fix-1a998af4f14615ef",
+      "v6-fix-190545c170ff650b",
+      "v6-fix-d29a15811dfcee29",
+      "v6-fix-b410c9c2bff563a0",
+      "v6-fix-3685fc1570f91cc0",
+      "v6-fix-ace8da47b352aa60"
+    ],
+    "feedback_options": [
+      {
+        "question_id": "v6-fix-d6c7dfafd8e85899",
+        "option_id": "v6-fix-d6c7dfafd8e85899-ob6700dbfc1",
+        "option_text": "planisfério 1:50.000.000"
+      },
+      {
+        "question_id": "v6-fix-d6c7dfafd8e85899",
+        "option_id": "v6-fix-d6c7dfafd8e85899-o350ff06946",
+        "option_text": "mapa estadual 1:2.000.000"
+      },
+      {
+        "question_id": "v6-fix-d6c7dfafd8e85899",
+        "option_id": "v6-fix-d6c7dfafd8e85899-obb49fd3d9d",
+        "option_text": "carta continental 1:20.000.000"
+      },
+      {
+        "question_id": "v6-fix-e0928f0d1e78eddd",
+        "option_id": "v6-fix-e0928f0d1e78eddd-o6b98851a47",
+        "option_text": "definir o datum"
+      },
+      {
+        "question_id": "v6-fix-e0928f0d1e78eddd",
+        "option_id": "v6-fix-e0928f0d1e78eddd-o115e5c4112",
+        "option_text": "determinar o fuso horário"
+      },
+      {
+        "question_id": "v6-fix-e0928f0d1e78eddd",
+        "option_id": "v6-fix-e0928f0d1e78eddd-ob09f38a517",
+        "option_text": "corrigir distorções da projeção"
+      },
+      {
+        "question_id": "v6-fix-021ea0f23f590e47",
+        "option_id": "v6-fix-021ea0f23f590e47-o1955c89cab",
+        "option_text": "2 km"
+      },
+      {
+        "question_id": "v6-fix-021ea0f23f590e47",
+        "option_id": "v6-fix-021ea0f23f590e47-o3dbd69071e",
+        "option_text": "200 km"
+      },
+      {
+        "question_id": "v6-fix-021ea0f23f590e47",
+        "option_id": "v6-fix-021ea0f23f590e47-o96482bfc36",
+        "option_text": "2.000 km"
+      },
+      {
+        "question_id": "v6-fix-d7f5c9687a4e3050",
+        "option_id": "v6-fix-d7f5c9687a4e3050-o903f461f32",
+        "option_text": "1:250.000"
+      },
+      {
+        "question_id": "v6-fix-d7f5c9687a4e3050",
+        "option_id": "v6-fix-d7f5c9687a4e3050-o0d4c9dbc5d",
+        "option_text": "são iguais"
+      },
+      {
+        "question_id": "v6-fix-d7f5c9687a4e3050",
+        "option_id": "v6-fix-d7f5c9687a4e3050-o493b968b66",
+        "option_text": "depende da projeção"
+      },
+      {
+        "question_id": "v6-fix-1a998af4f14615ef",
+        "option_id": "v6-fix-1a998af4f14615ef-o2e84780013",
+        "option_text": "ao sul do Equador e a leste de Greenwich"
+      },
+      {
+        "question_id": "v6-fix-1a998af4f14615ef",
+        "option_id": "v6-fix-1a998af4f14615ef-oe62bb01a76",
+        "option_text": "ao norte e a leste"
+      },
+      {
+        "question_id": "v6-fix-1a998af4f14615ef",
+        "option_id": "v6-fix-1a998af4f14615ef-o73eeca305e",
+        "option_text": "sobre Greenwich"
+      },
+      {
+        "question_id": "v6-fix-190545c170ff650b",
+        "option_id": "v6-fix-190545c170ff650b-o51c24bc71a",
+        "option_text": "do Equador"
+      },
+      {
+        "question_id": "v6-fix-190545c170ff650b",
+        "option_id": "v6-fix-190545c170ff650b-o8937e6bf11",
+        "option_text": "do Trópico de Capricórnio"
+      },
+      {
+        "question_id": "v6-fix-190545c170ff650b",
+        "option_id": "v6-fix-190545c170ff650b-o1f83fdbb4d",
+        "option_text": "do polo Norte"
+      },
+      {
+        "question_id": "v6-fix-d29a15811dfcee29",
+        "option_id": "v6-fix-d29a15811dfcee29-of4926b3c9a",
+        "option_text": "1 h"
+      },
+      {
+        "question_id": "v6-fix-d29a15811dfcee29",
+        "option_id": "v6-fix-d29a15811dfcee29-of6f984a412",
+        "option_text": "2 h"
+      },
+      {
+        "question_id": "v6-fix-d29a15811dfcee29",
+        "option_id": "v6-fix-d29a15811dfcee29-o1e2e2db5fd",
+        "option_text": "4 h"
+      },
+      {
+        "question_id": "v6-fix-b410c9c2bff563a0",
+        "option_id": "v6-fix-b410c9c2bff563a0-oc766747918",
+        "option_text": "atrasado"
+      },
+      {
+        "question_id": "v6-fix-b410c9c2bff563a0",
+        "option_id": "v6-fix-b410c9c2bff563a0-oe5aa647727",
+        "option_text": "no mesmo horário necessariamente"
+      },
+      {
+        "question_id": "v6-fix-b410c9c2bff563a0",
+        "option_id": "v6-fix-b410c9c2bff563a0-obe390c1600",
+        "option_text": "sem relação com o tempo"
+      },
+      {
+        "question_id": "v6-fix-3685fc1570f91cc0",
+        "option_id": "v6-fix-3685fc1570f91cc0-o18b8659615",
+        "option_text": "250 m"
+      },
+      {
+        "question_id": "v6-fix-3685fc1570f91cc0",
+        "option_id": "v6-fix-3685fc1570f91cc0-o488dce2087",
+        "option_text": "25 km"
+      },
+      {
+        "question_id": "v6-fix-3685fc1570f91cc0",
+        "option_id": "v6-fix-3685fc1570f91cc0-ob9e4fa2245",
+        "option_text": "250 km"
+      },
+      {
+        "question_id": "v6-fix-ace8da47b352aa60",
+        "option_id": "v6-fix-ace8da47b352aa60-oe0221f9d83",
+        "option_text": "1,5 km"
+      },
+      {
+        "question_id": "v6-fix-ace8da47b352aa60",
+        "option_id": "v6-fix-ace8da47b352aa60-o13e2d6e0c8",
+        "option_text": "150 km"
+      },
+      {
+        "question_id": "v6-fix-ace8da47b352aa60",
+        "option_id": "v6-fix-ace8da47b352aa60-o73af1f00fd",
+        "option_text": "1.500 km"
+      },
+      {
+        "question_id": "v6-fix-ace8da47b352aa60",
+        "option_id": "v6-fix-ace8da47b352aa60-oab845a6a60",
+        "option_text": "0,15 km"
+      }
+    ],
+    "level_reassessment": [],
+    "inherited_full_review": "MissaoAprovacaoGeo/V6_ISSUE13_REVISAO_DELEGADA_CARTOGRAFIA.md",
+    "content_reduced": false,
+    "correct_keys_changed": 0,
+    "canonical_promotion": false
+  },
+  "editorial_approval": {
+    "kind": "delegated-ai",
+    "contract": "delegated-content-review-v1",
+    "reviewer": "Codex",
+    "human_manual_review": false,
+    "reviewed_at": "2026-10-16",
+    "delegation_evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CONTRATO_REVISAO_DELEGADA.md",
+    "evidence": "MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_012.md",
+    "reviewed_digest": "9515c097cf7a36442843451c8ffbf1ee2377830785923a5f12d392ba6a2c6d39"
+  }
+}

@@ -25,34 +25,34 @@
       "unit_id": "cartografia-fundamentos",
       "module_id": "cartografia",
       "title": "Orientação, Coordenadas, Fusos e Escala",
-      "status": "EM_AUDITORIA",
-      "candidate_version": "0.1.2",
+      "status": "APROVADA_CANONICA",
+      "candidate_version": "1.0.0",
       "initial_snapshot_version": "0.1.0",
-      "canonical_version": null,
+      "canonical_version": "1.0.0",
       "audit_started": true,
-      "runtime_enabled": false
+      "runtime_enabled": true
     },
     {
       "unit_id": "cartografia-representacao",
       "module_id": "cartografia",
       "title": "Projeções e Representação Cartográfica",
-      "status": "EM_AUDITORIA",
-      "candidate_version": "0.1.2",
+      "status": "APROVADA_CANONICA",
+      "candidate_version": "1.0.0",
       "initial_snapshot_version": "0.1.0",
-      "canonical_version": null,
+      "canonical_version": "1.0.0",
       "audit_started": true,
-      "runtime_enabled": false
+      "runtime_enabled": true
     },
     {
       "unit_id": "geotecnologias",
       "module_id": "cartografia",
       "title": "Sensoriamento Remoto, SIG e Geotecnologias",
-      "status": "EM_AUDITORIA",
-      "candidate_version": "0.1.2",
+      "status": "APROVADA_CANONICA",
+      "candidate_version": "1.0.0",
       "initial_snapshot_version": "0.1.0",
-      "canonical_version": null,
+      "canonical_version": "1.0.0",
       "audit_started": true,
-      "runtime_enabled": false
+      "runtime_enabled": true
     },
     {
       "unit_id": "climatologia",
@@ -318,5 +318,18 @@
       "audit_started": false,
       "runtime_enabled": false
     }
-  ]
+  ],
+  "editorial_governance": {
+    "contract": "delegated-content-review-v1",
+    "reviewer_kind": "ai",
+    "reviewer": "Codex",
+    "authorization": "MissaoAprovacaoGeo/V6_ISSUE13_CONTRATO_REVISAO_DELEGADA.md",
+    "unit_ids": [
+      "cartografia-fundamentos",
+      "cartografia-representacao",
+      "geotecnologias"
+    ],
+    "effective_at": "2026-10-16",
+    "note": "Revisão editorial pelo assistente delegada pelo usuário; sem parecer humano fictício, sem merge/publicação e sem outros módulos."
+  }
 }

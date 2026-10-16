@@ -17,7 +17,7 @@ import { Home, Study } from './Study';
 import { Training } from './Training';
 import { Review, Errors } from './Review';
 import { Exam } from './Exam';
-import { Html } from './components';
+import { Html, EditorialSources } from './components';
 import { importLegacy, STATE_KEY } from './engine';
 import { Repository, downloadState } from './repository';
 import { Celebration } from './Celebration';
@@ -300,6 +300,7 @@ function Settings({
           ))}
         </details>
       </section>
+      <EditorialSources />
       <section className="panel">
         <h2>Rastreabilidade e fontes</h2>
         <p>
@@ -313,7 +314,7 @@ function Settings({
           </a>{' '}
           ·{' '}
           <a
-            href="https://github.com/ude-ctrl/Estudo-para-Concurso/blob/v6-piloto-cartografia/MissaoAprovacaoGeo/V6_FASE14_MAPA_PARIDADE.md"
+            href="https://github.com/ude-ctrl/Estudo-para-Concurso/blob/v6-base-canonica/MissaoAprovacaoGeo/V6_ISSUE13_PARIDADE_INTEGRACAO.json"
             target="_blank"
             rel="noreferrer"
           >
@@ -337,16 +338,19 @@ function Settings({
 function Workspace({ content }: { content: Content }) {
   const [repo] = useState(() => {
       try {
-        return new Repository(localStorage);
+        return new Repository(localStorage, content);
       } catch {
-        return new Repository({
-          getItem: () => {
-            throw Error('Indisponível');
+        return new Repository(
+          {
+            getItem: () => {
+              throw Error('Indisponível');
+            },
+            setItem: () => {
+              throw Error('Indisponível');
+            },
           },
-          setItem: () => {
-            throw Error('Indisponível');
-          },
-        });
+          content,
+        );
       }
     }),
     [state, setState] = useState(repo.state),
@@ -732,9 +736,11 @@ export function App() {
       })
       .then((data) => {
         if (
-          data.version !== '6.0.0-piloto.1' ||
+          data.version !== '6.1.0-canonica.1' ||
           data.units?.length !== 3 ||
-          !Array.isArray(data.questions)
+          !Array.isArray(data.questions) ||
+          !data.editorial?.release ||
+          !data.support?.visuals
         )
           throw Error('Banco incompatível');
         setContent(data);

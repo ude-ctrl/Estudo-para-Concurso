@@ -55,6 +55,7 @@ export interface Option {
   errorType: ErrorType;
 }
 export interface Question {
+  family_id?: string;
   qualityFlags?: string[];
   id: string;
   mission: string;
@@ -115,6 +116,13 @@ export interface ArchiveEntry {
 }
 export interface Content {
   version: string;
+  support?: {
+    visuals: VisualResource[];
+    editorial_notes: { id: string; target: string; text: string; source_ids?: string[] }[];
+    teaching_practice: TeachingPractice[];
+    media: { url: string; credit?: string; license?: string; source_id?: string }[];
+  };
+  editorial?: EditorialRelease;
   units: { id: UnitId; title: string; description: string }[];
   missions: Mission[];
   concepts: Concept[];
@@ -134,6 +142,79 @@ export interface Content {
     counts: Record<string, number>;
   }[];
 }
+export interface VisualResource {
+  id: string;
+  kind?: string;
+  caption: string;
+  heads?: string[];
+  rows?: (string | number)[][];
+  svg?: string;
+  author?: string;
+  source_id?: string;
+  usage_source_id?: string;
+  measurement_note?: string;
+  transcript?: string;
+  images?: {
+    url: string;
+    alt: string;
+    caption: string;
+    acquired_at: string;
+    sensor: string;
+    credit: string;
+  }[];
+}
+export interface TeachingPractice {
+  id: string;
+  mission: string;
+  title: string;
+  initial_topic: string;
+  plan_fields: [string, string, string][];
+  rubric: [string, string][];
+  instructions: string[];
+  limitation: string;
+}
+export interface EditorialRelease {
+  release: string;
+  legacy_version: string;
+  units: Record<
+    UnitId,
+    {
+      version: string;
+      status: string;
+      reviewer_kind: string;
+      reviewer: string;
+      reviewed_at: string;
+      digest: string;
+    }
+  >;
+  question_families: { id: string; members: string[]; independent_novelty: boolean }[];
+  retired_options: {
+    unit_id: UnitId;
+    question_id: string;
+    retired_option_id: string;
+    replacement_option_id: string;
+    old_text: string;
+    new_text: string;
+    retired_in: string;
+    progress_mapping: null;
+  }[];
+  unit_metadata: Record<
+    UnitId,
+    {
+      sources: { id: string; title: string; url: string; verified_at?: string | null }[];
+      temporal_claims: {
+        id: string;
+        resource_ids: string[];
+        source_ids: string[];
+        reference_date?: string;
+        reference_year?: number;
+        verified_at: string | null;
+        review_due_at: string | null;
+        note: string;
+      }[];
+    }
+  >;
+}
 export interface Review {
   due: number;
   last: number;
@@ -144,6 +225,9 @@ export interface Review {
   history: { at: number; rating: Rating; interval: number }[];
 }
 export interface Evidence {
+  editorialVersion?: string;
+  familyId?: string;
+  choice?: string;
   id: string;
   item: string;
   concept: string;
@@ -175,6 +259,7 @@ export interface ErrorRecord {
   falseMastery: boolean;
 }
 export interface ExamSession {
+  editorialVersions?: Record<string, string>;
   id: string;
   ids: string[];
   answers: Record<string, string>;
@@ -255,4 +340,8 @@ export interface State {
   significantDays: string[];
   calendarPolicy?: 'local-v1';
   legacySignificantDays?: string[];
+  contentRevision?: { release: string; units: Record<string, string>; appliedAt: number };
+  contentHistory?: {
+    errors: { key: string; record: ErrorRecord; version: string; reason: string }[];
+  };
 }

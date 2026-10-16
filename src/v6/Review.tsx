@@ -5,6 +5,7 @@ import { errorLabels, priorityErrors, rateCard, reviewQueue, schedule } from './
 import { Mastery } from './Study';
 import type { ErrorType, Rating, UnitId } from './types';
 import { RoundProgress, RoundSummary } from './SensoryUI';
+import { learningIdentity } from './content-progress';
 const ratings: { id: Rating; label: string }[] = [
   { id: 'errei', label: 'Errei' },
   { id: 'dificil', label: 'Difícil' },
@@ -382,7 +383,18 @@ export function Errors() {
                     .filter((q) => q.concept === err.concept)
                     .sort(
                       (a, b) =>
-                        Number(err.itemIds.includes(a.id)) - Number(err.itemIds.includes(b.id)),
+                        Number(
+                          err.itemIds.some(
+                            (id) =>
+                              learningIdentity(content, id) === learningIdentity(content, a.id),
+                          ),
+                        ) -
+                        Number(
+                          err.itemIds.some(
+                            (id) =>
+                              learningIdentity(content, id) === learningIdentity(content, b.id),
+                          ),
+                        ),
                     );
                   if (!qs.length) {
                     go(err.unit, 'revisao', err.mission);
@@ -392,7 +404,17 @@ export function Errors() {
                     s.session = {
                       id: crypto.randomUUID(),
                       kind: 'questions',
-                      ids: qs.slice(0, 3).map((q) => q.id),
+                      ids: qs
+                        .filter(
+                          (q, i, all) =>
+                            all.findIndex(
+                              (other) =>
+                                learningIdentity(content, other.id) ===
+                                learningIdentity(content, q.id),
+                            ) === i,
+                        )
+                        .slice(0, 3)
+                        .map((q) => q.id),
                       position: 0,
                       repeat: [],
                       pool: 'recuperacao',
@@ -406,6 +428,40 @@ export function Errors() {
             </article>
           );
         })
+      )}
+      {!!state.contentHistory?.errors.length && (
+        <details className="panel">
+          <summary>
+            Histórico preservado de versões anteriores ({state.contentHistory.errors.length})
+          </summary>
+          <p>
+            Alguns itens tiveram sua associação conceitual corrigida. Os registros originais
+            continuam aqui; não foram transferidos como respostas a outro conceito. Seu XP e suas
+            revisões permanecem preservados.
+          </p>
+          {state.contentHistory.errors
+            .filter((entry) => !unit || entry.record.unit === unit)
+            .map((entry, index) => (
+              <article key={entry.key + ':' + index}>
+                <h3>
+                  {content.concepts.find((c) => c.id === entry.record.concept)?.name ||
+                    entry.record.concept}
+                </h3>
+                <p>{entry.record.misconception}</p>
+                <p>
+                  {entry.record.count} ocorrência(s) · {entry.record.status.replaceAll('-', ' ')} ·{' '}
+                  {new Date(entry.record.last).toLocaleDateString('pt-BR')}
+                </p>
+                <ul>
+                  {entry.record.events.map((event, i) => (
+                    <li key={i}>
+                      {new Date(event.at).toLocaleDateString('pt-BR')}: {event.note}
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+        </details>
       )}
       <details className="panel">
         <summary>Sobre a classificação</summary>

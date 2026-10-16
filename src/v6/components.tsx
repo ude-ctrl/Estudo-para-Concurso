@@ -1,6 +1,7 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import type { Content, LegacyRef, Question, UnitId } from './types';
 import { ResponseSignal } from './SensoryUI';
+import { useV6 } from './context';
 export function Provenance({ refs }: { refs: LegacyRef[] }) {
   return (
     <details className="provenance">
@@ -23,7 +24,7 @@ export function Provenance({ refs }: { refs: LegacyRef[] }) {
           </p>
         ))
       ) : (
-        <p>Conteúdo autoral V6, sujeito à revisão humana do piloto.</p>
+        <p>Conteúdo autoral V6. Revisão editorial por IA registrada na base canônica.</p>
       )}
     </details>
   );
@@ -32,23 +33,26 @@ export function Html({ html }: { html: string }) {
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const imgs = ref.current?.querySelectorAll('img');
+    const cleanup: (() => void)[] = [];
     imgs?.forEach((img) => {
       img.loading = 'lazy';
-      img.addEventListener(
-        'error',
-        () => {
-          img.hidden = true;
-          const p = document.createElement('p');
-          p.className = 'media-fallback';
-          p.textContent =
-            'Imagem externa indisponível. ' +
-            img.alt +
-            ' Consulte a descrição e a fonte deste recurso.';
-          img.after(p);
-        },
-        { once: true },
-      );
+      const fallback = () => {
+        if (img.dataset.fallback) return;
+        img.dataset.fallback = 'shown';
+        img.hidden = true;
+        const p = document.createElement('p');
+        p.className = 'media-fallback';
+        p.textContent =
+          'Imagem externa indisponível. ' +
+          img.alt +
+          ' Consulte a descrição e a fonte deste recurso.';
+        img.after(p);
+      };
+      img.addEventListener('error', fallback, { once: true });
+      cleanup.push(() => img.removeEventListener('error', fallback));
+      if (img.complete && img.naturalWidth === 0) fallback();
     });
+    return () => cleanup.forEach((fn) => fn());
   }, [html]);
   return <div ref={ref} className="theory" dangerouslySetInnerHTML={{ __html: html }} />;
 }
@@ -74,94 +78,88 @@ export function ModeLink({
   );
 }
 export function Visual({ id }: { id?: string }) {
-  if (!id) return null;
-  const tables: Record<string, { caption: string; heads: string[]; rows: (string | number)[][] }> =
-    {
-      coordenadas: {
-        caption: 'Coordenadas geográficas — ordem latitude, longitude',
-        heads: ['Ponto', 'Latitude', 'Longitude'],
-        rows: [
-          ['A', '−1°', '−48°'],
-          ['B', '−5°', '−48°'],
-          ['C', '−1°', '−52°'],
-        ],
-      },
-      densidade: {
-        caption: 'Municípios hipotéticos — população e área',
-        heads: ['Município', 'Habitantes', 'Área (km²)'],
-        rows: [
-          ['A', '10.000', 10],
-          ['B', '20.000', 100],
-        ],
-      },
-      espectral: {
-        caption: 'Reflectâncias adimensionais de alvos hipotéticos',
-        heads: ['Alvo', 'Vermelho', 'NIR'],
-        rows: [
-          ['P', '0,20', '0,60'],
-          ['Q', '0,10', '0,02'],
-        ],
-      },
-      perfil: {
-        caption: 'Perfil hipotético A–B',
-        heads: ['Ponto', 'Distância horizontal (m)', 'Altitude (m)'],
-        rows: [
-          ['A', 0, 100],
-          ['B', 200, 140],
-        ],
-      },
-    };
-  const t = tables[id];
-  if (!t) return null;
+  const { content } = useV6();
+  const [failed, setFailed] = useState<Record<string, boolean>>({});
+  const visual = content.support?.visuals.find((v) => v.id === id);
+  if (!visual) return null;
+  const sources = Object.values(content.editorial?.unit_metadata || {}).flatMap((u) => u.sources);
   return (
     <figure className="visual">
-      <figcaption>{t.caption}</figcaption>
-      {id === 'perfil' && (
-        <svg
-          viewBox="0 0 460 170"
-          role="img"
-          aria-label="Seção entre A, a 100 metros de altitude, e B, a 140 metros; distância horizontal de 200 metros."
-        >
-          <path d="M50 20V130H420" fill="none" stroke="currentColor" />
-          <path d="M50 115L150 93L255 85L400 35V130H50Z" fill="var(--soft)" />
-          <path
-            d="M50 115L150 93L255 85L400 35"
-            fill="none"
-            stroke="var(--green)"
-            strokeWidth="3"
-          />
-          <text x="52" y="106">
-            A · 100 m
-          </text>
-          <text x="315" y="25">
-            B · 140 m
-          </text>
-          <text x="165" y="156">
-            200 m horizontais
-          </text>
-        </svg>
+      <figcaption>{visual.caption}</figcaption>
+      {visual.svg && (
+        <div className="canonical-graphic" dangerouslySetInnerHTML={{ __html: visual.svg }} />
       )}
-      <div className="table-scroll">
-        <table>
-          <thead>
-            <tr>
-              {t.heads.map((h) => (
-                <th key={h}>{h}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {t.rows.map((r, i) => (
-              <tr key={i}>
-                {r.map((v, j) => (
-                  <td key={j}>{v}</td>
+      {visual.images && (
+        <div className="image-pair">
+          {visual.images.map((image) => (
+            <figure key={image.url}>
+              {failed[image.url] ? (
+                <p className="media-fallback">Imagem externa indisponível. {image.alt}</p>
+              ) : (
+                <img
+                  src={image.url}
+                  alt={image.alt}
+                  loading="lazy"
+                  decoding="async"
+                  onError={() => setFailed((previous) => ({ ...previous, [image.url]: true }))}
+                />
+              )}
+              <figcaption>{image.caption}</figcaption>
+              <p className="micro">{image.credit}</p>
+            </figure>
+          ))}
+        </div>
+      )}
+      {visual.heads && visual.rows && (
+        <div className="table-scroll" role="region" aria-label={visual.caption} tabIndex={0}>
+          <table aria-label={visual.caption}>
+            <thead>
+              <tr>
+                {visual.heads.map((head) => (
+                  <th scope="col" key={head}>
+                    {head}
+                  </th>
                 ))}
               </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-      <p className="micro">Dados didáticos V6. Não representam levantamento oficial.</p>
+            </thead>
+            <tbody>
+              {visual.rows.map((row, i) => (
+                <tr key={i}>
+                  {row.map((value, j) =>
+                    j === 0 ? (
+                      <th scope="row" key={j}>
+                        {value}
+                      </th>
+                    ) : (
+                      <td key={j}>{value}</td>
+                    ),
+                  )}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+      {visual.measurement_note && <p className="editorial-note">{visual.measurement_note}</p>}
+      {visual.transcript && <p className="media-transcript">{visual.transcript}</p>}
+      {visual.author && <p className="micro">{visual.author}</p>}
+      {[visual.source_id, visual.usage_source_id]
+        .filter((id): id is string => !!id)
+        .map((id) => {
+          const source = sources.find((s) => s.id === id);
+          return (
+            source && (
+              <p className="micro" key={id}>
+                <a href={source.url} target="_blank" rel="noreferrer">
+                  {source.title}
+                </a>
+              </p>
+            )
+          );
+        })}
+      {!visual.kind && (
+        <p className="micro">Dados didáticos V6. Não representam levantamento oficial.</p>
+      )}
     </figure>
   );
 }
@@ -243,6 +241,59 @@ export function Feedback({
         <a href={studyLink(content, q.mission)}>Rever a explicação</a>.
       </p>
     </section>
+  );
+}
+export function EditorialSources({ unit }: { unit?: UnitId }) {
+  const { content } = useV6();
+  if (!content.editorial) return null;
+  const date = (value: string) =>
+    new Date(value.length === 10 ? value + 'T12:00:00' : value).toLocaleDateString('pt-BR');
+  return (
+    <details className="panel editorial-sources">
+      <summary>Fontes e atualização do conteúdo</summary>
+      {content.units
+        .filter((u) => !unit || u.id === unit)
+        .map((u) => {
+          const version = content.editorial!.units[u.id];
+          const metadata = content.editorial!.unit_metadata[u.id];
+          return (
+            <section key={u.id}>
+              <h3>{u.title}</h3>
+              <p>
+                Edição {version.version}, revisada por {version.reviewer} (IA) em{' '}
+                {date(version.reviewed_at)}. Autoria de estudo; não é certificação externa da banca.
+              </p>
+              <ul>
+                {metadata.sources.map((source) => (
+                  <li key={source.id}>
+                    <a href={source.url} target="_blank" rel="noreferrer">
+                      {source.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <details>
+                <summary>Referências temporais e alcance da conferência</summary>
+                {metadata.temporal_claims.map((claim) => (
+                  <article key={claim.id}>
+                    <p>
+                      Referência:{' '}
+                      {claim.reference_date ? date(claim.reference_date) : claim.reference_year}.
+                      Conferência: {claim.verified_at ? date(claim.verified_at) : 'pendente'}.
+                    </p>
+                    <p>{claim.note}</p>
+                    {claim.review_due_at && Date.now() >= Date.parse(claim.review_due_at) && (
+                      <p className="editorial-note">
+                        Esta referência temporal precisa de nova conferência.
+                      </p>
+                    )}
+                  </article>
+                ))}
+              </details>
+            </section>
+          );
+        })}
+    </details>
   );
 }
 export function CompassArt() {

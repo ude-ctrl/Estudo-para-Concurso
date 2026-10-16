@@ -57,6 +57,27 @@ body {
   margin: 0;
   min-width: 320px;
 }
+.canonical-graphic svg {
+  background: var(--card);
+}
+.canonical-graphic svg text {
+  fill: currentColor;
+  font-size: 24px;
+}
+.image-pair {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: 1rem;
+}
+.image-pair figure {
+  min-width: 0;
+  margin: 0;
+}
+.image-pair img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 button,
 input,
 select,

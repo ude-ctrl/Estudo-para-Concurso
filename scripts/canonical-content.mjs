@@ -205,10 +205,12 @@ export function validateRevision(parent, next) {
   };
 }
 
-// The human attestation binds the actual content, sources, findings and review decisions.
+// The attestation binds the actual content, sources, findings and review decisions.
 // A local hash detects accidental drift; it is not identity verification or a digital signature.
 export function reviewDigest({ base, provenance, audit }) {
-  return sha({ base, provenance, audit: { ...audit, human_approval: null } });
+  const decisions = { ...audit, human_approval: null };
+  if (Object.hasOwn(decisions, 'editorial_approval')) decisions.editorial_approval = null;
+  return sha({ base, provenance, audit: decisions });
 }
 
 export function validateSchematicMap(visual) {
@@ -656,12 +658,33 @@ export function validateBundle(bundle, { approved = false, at = new Date().toISO
       b.content.questions.every((q) => q.status !== 'human-review-pending'),
       'Questão autoral ainda pendente',
     );
-    requireThat(
-      a.authored_questions.every(
-        (q) => q.human_decision === 'approved' && nonempty(q.human_reviewer),
-      ),
-      'Revisão humana dos itens pendente',
-    );
+    const delegated = a.editorial_approval?.kind === 'delegated-ai';
+    if (delegated) {
+      requireThat(
+        a.human_approval === null && a.assisted_review?.kind === 'ai',
+        'Revisão delegada não pode simular aprovação humana',
+      );
+      requireThat(
+        a.authored_questions.every(
+          (q) =>
+            q.editorial_decision?.kind === 'ai' &&
+            q.editorial_decision.decision === 'approved' &&
+            q.editorial_decision.reviewer === a.assisted_review.reviewer &&
+            nonempty(q.editorial_decision.evidence) &&
+            q.human_reviewer === null &&
+            q.human_decision === 'pending',
+        ),
+        'Revisão delegada dos itens pendente ou autoria humana fictícia',
+      );
+    } else {
+      requireThat(!a.editorial_approval, 'Tipo de aprovação editorial desconhecido');
+      requireThat(
+        a.authored_questions.every(
+          (q) => q.human_decision === 'approved' && nonempty(q.human_reviewer),
+        ),
+        'Revisão humana dos itens pendente',
+      );
+    }
     for (const t of b.metadata.temporal_claims) {
       requireThat(
         t.verification === 'verified' && t.verified_at !== null,
@@ -674,11 +697,21 @@ export function validateBundle(bundle, { approved = false, at = new Date().toISO
       if (t.review_due_at)
         requireThat(dateValue(t.review_due_at) > current, `Dado temporal vencido: ${t.id}`);
     }
-    const approval = a.human_approval;
+    const approval = delegated ? a.editorial_approval : a.human_approval;
     requireThat(
-      approval?.kind === 'human' && nonempty(approval.reviewer) && nonempty(approval.evidence),
-      'Aprovação humana não registrada',
+      approval?.kind === (delegated ? 'delegated-ai' : 'human') &&
+        nonempty(approval.reviewer) &&
+        nonempty(approval.evidence),
+      'Aprovação humana ou editorial delegada não registrada',
     );
+    if (delegated)
+      requireThat(
+        approval.contract === 'delegated-content-review-v1' &&
+          approval.reviewer === a.assisted_review.reviewer &&
+          approval.human_manual_review === false &&
+          nonempty(approval.delegation_evidence),
+        'Aprovação delegada sem contrato ou delegação explícita',
+      );
     requireThat(
       Number.isFinite(dateValue(approval.reviewed_at)) &&
         dateValue(approval.reviewed_at) <= current,
@@ -688,7 +721,11 @@ export function validateBundle(bundle, { approved = false, at = new Date().toISO
       approval.reviewed_digest === reviewDigest(bundle),
       'Aprovação não corresponde a este conteúdo',
     );
-  } else requireThat(a.human_approval === null, 'Candidata não deve simular aprovação canônica');
+  } else
+    requireThat(
+      a.human_approval === null && !a.editorial_approval,
+      'Candidata não deve simular aprovação canônica',
+    );
   return {
     unit: b.unit_id,
     version: b.editorial_version,
@@ -719,6 +756,21 @@ export async function readBundle(baseRoot, unit, version) {
   return { base, provenance, audit };
 }
 
+function validateRegisteredApproval(registry, bundle) {
+  if (bundle.audit.editorial_approval?.kind === 'delegated-ai') {
+    const policy = registry.editorial_governance;
+    requireThat(
+      policy?.contract === 'delegated-content-review-v1' &&
+        policy.reviewer_kind === 'ai' &&
+        policy.reviewer === bundle.audit.editorial_approval.reviewer &&
+        policy.authorization === bundle.audit.editorial_approval.delegation_evidence &&
+        Array.isArray(policy.unit_ids) &&
+        policy.unit_ids.includes(bundle.base.unit_id),
+      'Aprovação delegada fora do contrato/escopo autorizado no catálogo',
+    );
+  }
+}
+
 export async function loadApprovedUnit(baseRoot, unit, version, options = {}) {
   const bundle = await readBundle(baseRoot, unit, version);
   const registry = JSON.parse(await readFile(resolve(baseRoot, 'manifest.json'), 'utf8'));
@@ -727,6 +779,8 @@ export async function loadApprovedUnit(baseRoot, unit, version, options = {}) {
     entry.canonical_version === version,
     'Base não aprovada no catálogo: uso operacional bloqueado',
   );
+  requireThat(entry.runtime_enabled, 'Consumo canônico desabilitado no catálogo');
+  validateRegisteredApproval(registry, bundle);
   validateBundle(bundle, { ...options, approved: true });
   return bundle.base;
 }
@@ -801,22 +855,7 @@ export async function validateLot(baseRoot = resolve(root, 'base-conhecimento'),
   const active = registry.units.filter((u) => u.candidate_version !== null);
   const bundles = [],
     summaries = [];
-  for (const unit of active) {
-    const bundle = await readBundle(baseRoot, unit.unit_id, unit.candidate_version);
-    requireThat(unit.status === bundle.base.status, 'Catálogo e base divergem');
-    if (unit.canonical_version !== null) {
-      const canonical =
-        unit.canonical_version === unit.candidate_version
-          ? bundle
-          : await readBundle(baseRoot, unit.unit_id, unit.canonical_version);
-      validateBundle(canonical, { approved: true, at });
-    }
-    summaries.push(validateBundle(bundle, { at }));
-    const snapshot =
-      unit.initial_snapshot_version === unit.candidate_version
-        ? bundle
-        : await readBundle(baseRoot, unit.unit_id, unit.initial_snapshot_version);
-    validateBundle(snapshot, { at });
+  async function checkLineage(unit, bundle, snapshot) {
     let revisionBundle = bundle;
     const lineage = new Set();
     while (revisionBundle.base.editorial_version !== unit.initial_snapshot_version) {
@@ -830,13 +869,33 @@ export async function validateLot(baseRoot = resolve(root, 'base-conhecimento'),
         'Ciclo na cadeia de versões: ' + unit.unit_id,
       );
       const parent =
-        revision?.from_version === unit.initial_snapshot_version
+        revision.from_version === unit.initial_snapshot_version
           ? snapshot
-          : await readBundle(baseRoot, unit.unit_id, revision?.from_version);
+          : await readBundle(baseRoot, unit.unit_id, revision.from_version);
       validateBundle(parent, { at });
       validateRevision(parent, revisionBundle);
       revisionBundle = parent;
     }
+  }
+  for (const unit of active) {
+    const bundle = await readBundle(baseRoot, unit.unit_id, unit.candidate_version);
+    requireThat(unit.status === bundle.base.status, 'Catálogo e base divergem');
+    const snapshot =
+      unit.initial_snapshot_version === unit.candidate_version
+        ? bundle
+        : await readBundle(baseRoot, unit.unit_id, unit.initial_snapshot_version);
+    validateBundle(snapshot, { at });
+    if (unit.canonical_version !== null) {
+      const canonical =
+        unit.canonical_version === unit.candidate_version
+          ? bundle
+          : await readBundle(baseRoot, unit.unit_id, unit.canonical_version);
+      validateBundle(canonical, { approved: true, at });
+      validateRegisteredApproval(registry, canonical);
+      if (canonical !== bundle) await checkLineage(unit, canonical, snapshot);
+    }
+    summaries.push(validateBundle(bundle, { at }));
+    await checkLineage(unit, bundle, snapshot);
     bundles.push(snapshot);
   }
   const baseline = JSON.parse(

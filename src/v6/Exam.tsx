@@ -4,6 +4,7 @@ import { Feedback, Provenance } from './components';
 import { QuestionForm } from './Training';
 import { blueprintAvailability, examPool, finishExam, makeExam } from './engine';
 import type { State, UnitId, Writing } from './types';
+import { questionExposure } from './content-progress';
 function useNow(active: boolean) {
   const [now, setNow] = useState(Date.now());
   useEffect(() => {
@@ -35,7 +36,7 @@ export function Objective() {
     const pool = examPool(content, unit);
     return (
       <div className="panel exam-setup">
-        <span className="eyebrow">Prova do módulo · autoral experimental</span>
+        <span className="eyebrow">Prova do módulo · autoral</span>
         <h2>Concentre-se até encerrar.</h2>
         <p>
           Somente itens Concurso e FGV Elite A–E. O gabarito e as explicações ficam disponíveis
@@ -81,9 +82,9 @@ export function Objective() {
           </label>
         </div>
         <p>
-          {pool.length} itens disponíveis · {pool.filter((q) => !state.exposures[q.id]).length}{' '}
-          ainda não vistos. A montagem prioriza novidade e diversidade de missões; não repete IDs na
-          mesma prova.
+          {pool.length} itens disponíveis ·{' '}
+          {pool.filter((q) => !questionExposure(content, state, q.id)).length} ainda não vistos. A
+          montagem prioriza novidade e diversidade de missões; não repete IDs na mesma prova.
         </p>
         <button
           className="primary"
@@ -97,7 +98,8 @@ export function Objective() {
           Iniciar prova do piloto
         </button>
         <p className="micro">
-          Os itens novos estão pendentes de revisão humana. O pool oficial permanece separado.
+          Questões autorais revisadas. Esta prova cobre Cartografia; o simulado completo exige todas
+          as áreas.
         </p>
         <details>
           <summary>Perfil oficial SEDUC-PA e estoque necessário</summary>
@@ -609,68 +611,14 @@ export function Discursive() {
     </>
   );
 }
-const planFields = [
-  ['objetivos', 'Objetivos', 'O que o estudante será capaz de explicar ou fazer?'],
-  ['conteudos', 'Conteúdos', 'Selecione conceitos coerentes com o tema e a duração.'],
-  ['previos', 'Conhecimentos prévios', 'Como verificará noções de proporção e orientação?'],
-  ['metodologia', 'Metodologia', 'Que ação dos alunos torna visível o raciocínio geográfico?'],
-  [
-    'recursos',
-    'Recursos',
-    'Planeje com quadro e marcador; tecnologias são propostas pedagógicas, não recursos presumidos da defesa.',
-  ],
-  ['avaliacao', 'Avaliação', 'Qual produção, resposta ou explicação mostrará aprendizagem?'],
-  ['inclusao', 'Inclusão', 'Preveja acesso tátil, verbal ou outra alternativa de participação.'],
-  ['sintese', 'Síntese', 'Como retomará a pergunta e verificará a conclusão?'],
-  [
-    'quadro',
-    'Plano de quadro',
-    'Distribua título, exemplo, esquema, cálculo e síntese de forma legível.',
-  ],
-];
-const practiceRubric = [
-  [
-    'Alinhamento curricular e objetivos',
-    'O plano deve ligar objetivo, conteúdo e ação observável.',
-  ],
-  [
-    'Sequência e metodologia',
-    'As etapas devem partir de conhecimentos prévios e desenvolver uma investigação coerente.',
-  ],
-  [
-    'Avaliação e inclusão',
-    'Defina evidência de aprendizagem e alternativa concreta de participação.',
-  ],
-  ['Viabilidade do plano', 'Selecione tempo, recursos e fechamento compatíveis com a aula.'],
-  [
-    'Domínio conceitual na defesa',
-    'Explique escala como razão e compare frações com unidades corretas.',
-  ],
-  [
-    'Clareza e estrutura da exposição',
-    'Apresente problema, explicação, exemplo e síntese sem acumular conceitos soltos.',
-  ],
-  [
-    'Uso do quadro e recursos',
-    'Organize desenho e cálculo legíveis; não dependa de equipamento não previsto.',
-  ],
-  [
-    'Articulação pedagógica',
-    'Explique o que os alunos fazem e como você verifica sua compreensão.',
-  ],
-  [
-    'Postura, linguagem e tempo',
-    'Use linguagem precisa e ajuste o ritmo ao tempo de treino configurado.',
-  ],
-  [
-    'Resposta e reflexão',
-    'Justifique escolhas e reconheça limites, erros prováveis e alternativas.',
-  ],
-];
 export function Practical() {
   const { content, state, update, notify } = useV6(),
     p = state.practical,
     now = useNow(!!p.deadline && ['plano', 'defesa'].includes(p.phase));
+  const practice = content.support?.teaching_practice[0];
+  if (!practice) return <p>Atividade de aula indisponível nesta edição.</p>;
+  const planFields = practice.plan_fields,
+    practiceRubric = practice.rubric;
   const checks = p.checks;
   const setChecks = (fn: (a: number[]) => number[]) =>
     update((s) => {
@@ -679,16 +627,13 @@ export function Practical() {
   const fields = Object.fromEntries(
     planFields.map(([id]) => [id, state.drafts['practice:' + id] || '']),
   );
-  const chosen = content.missions.find((m) => m.id === 'escalas-e-medidas')!;
+  const chosen = content.missions.find((m) => m.id === practice.mission)!;
   return (
     <>
       <section className="panel">
         <span className="eyebrow">Professor em ação · treino autoral</span>
-        <h2>Planejar, defender e revisar uma aula</h2>
-        <p>
-          Plano manuscrito e defesa oral com quadro e marcador. A rubrica de treino tem 4 dimensões
-          para o plano e 6 para a defesa; não é espelho oficial.
-        </p>
+        <h2>{practice.title}</h2>
+        <p>{practice.instructions[0]}</p>
         <label className="field-label">
           Tema
           <input
@@ -733,9 +678,7 @@ export function Practical() {
             />
           </label>
         </div>
-        <p className="micro">
-          Tempos configuráveis de treino. Não são durações oficiais atribuídas ao edital.
-        </p>
+        <p className="micro">{practice.instructions[1]}</p>
         {p.deadline && ['plano', 'defesa'].includes(p.phase) && (
           <p role="timer">
             {p.phase === 'plano' ? 'Planejamento' : 'Defesa'}: {timeLeft(p.deadline - now)}{' '}
@@ -744,10 +687,7 @@ export function Practical() {
         )}
         {p.phase === 'plano' && (
           <>
-            <p>
-              Faça primeiro o plano em papel. Use os campos para guardar a transcrição e a intenção
-              de cada etapa.
-            </p>
+            <p>{practice.instructions[2]}</p>
             {!p.started && (
               <button
                 disabled={
@@ -798,10 +738,7 @@ export function Practical() {
         {p.phase === 'defesa' && (
           <>
             <h3>Defenda suas escolhas</h3>
-            <p>
-              Use quadro e marcador. Apresente o objetivo, desenvolva um exemplo, explique o que a
-              turma fará e como avaliará. O timer continua após recarregar.
-            </p>
+            <p>{practice.instructions[3]}</p>
             <details>
               <summary>Consultar a transcrição do plano</summary>
               {planFields.map(([id, label]) => (

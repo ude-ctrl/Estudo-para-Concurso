@@ -101,22 +101,27 @@ test('catálogo mantém os 28 IDs oficiais e somente as três candidatas deste l
     25,
   );
   assert.ok(
-    registry.units.every((u) => u.canonical_version === null && u.runtime_enabled === false),
+    registry.units.every((u) =>
+      ids.includes(u.unit_id)
+        ? u.canonical_version === '1.0.0' && u.runtime_enabled === true
+        : u.canonical_version === null && u.runtime_enabled === false,
+    ),
   );
 });
 
-test('três versões completas validam sem serem aprovadas e preservam o inventário', async () => {
+test('três unidades canônicas validam e preservam o inventário das candidatas iniciais', async () => {
   const result = await validateLot();
   assert.deepEqual(
     result.summaries.map((s) => [s.unit, s.resources, s.parity, s.approved]),
     [
-      [ids[0], 277, 272, false],
-      [ids[1], 183, 172, false],
-      [ids[2], 231, 241, false],
+      [ids[0], 277, 272, true],
+      [ids[1], 183, 172, true],
+      [ids[2], 231, 241, true],
     ],
   );
   assert.equal(result.untouchedUnits, 25);
-  assert.equal(result.canonicalUnits, 0);
+  assert.equal(result.canonicalUnits, 3);
+  assert.ok(originals.every((x) => validateBundle(x, { at }).approved === false));
   const sum = (k) => originals.reduce((n, x) => n + x.audit.counts[k], 0);
   assert.deepEqual(
     [
@@ -356,7 +361,7 @@ test('leitura funciona com somente o pacote de base, sem HTMLs, importadores ou 
   await cp(resolve(baseRoot, 'cartografia'), resolve(temp, 'cartografia'), { recursive: true });
   const copy = await readBundle(temp, ids[0], '0.1.0');
   assert.equal(validateBundle(copy, { at }).resources, 277);
-  assert.equal((await validateLot(temp)).canonicalUnits, 0);
+  assert.equal((await validateLot(temp)).canonicalUnits, 3);
   await assert.rejects(loadApprovedUnit(temp, ids[0], '0.1.0', { at }), /não aprovada/);
 });
 
@@ -387,6 +392,14 @@ test('nova candidata não substitui a versão aprovada nem exige reabrir o HTML 
   await cp(resolve(baseRoot, 'cartografia'), resolve(temp, 'cartografia'), { recursive: true });
   const registry = JSON.parse(await readFile(resolve(baseRoot, 'manifest.json'), 'utf8'));
   const entry = registry.units.find((u) => u.unit_id === ids[0]);
+  for (const other of registry.units.filter(
+    (u) => ids.includes(u.unit_id) && u.unit_id !== ids[0],
+  )) {
+    other.status = 'EM_AUDITORIA';
+    other.candidate_version = '0.1.2';
+    other.canonical_version = null;
+    other.runtime_enabled = false;
+  }
   entry.canonical_version = '1.0.0';
   entry.candidate_version = '1.1.0';
   entry.status = 'EM_AUDITORIA';
@@ -400,16 +413,29 @@ test('nova candidata não substitui a versão aprovada nem exige reabrir o HTML 
   ]) {
     for (const doc of [bundle.base, bundle.audit, bundle.provenance])
       doc.editorial_version = version;
-    if (version === '1.1.0')
-      bundle.provenance.revision = {
-        schema_version: 1,
-        kind: 'correction-with-preservation',
-        from_version: '0.1.0',
-        to_version: version,
-        parent_bundle_sha256: sha(originals[0]),
-        option_replacements: [],
-        changes: [],
-      };
+    bundle.provenance.revision = {
+      schema_version: 1,
+      kind: 'correction-with-preservation',
+      from_version: '0.1.0',
+      to_version: version,
+      parent_bundle_sha256: sha(originals[0]),
+      option_replacements: [],
+      changes: editorialDiff(
+        {
+          content: originals[0].base.content,
+          support: originals[0].base.support,
+          metadata: originals[0].base.metadata,
+        },
+        {
+          content: bundle.base.content,
+          support: bundle.base.support,
+          metadata: bundle.base.metadata,
+        },
+      ).map((change) => ({
+        ...change,
+        reason: 'Promoção/candidata sintética com cadeia explícita.',
+      })),
+    };
     if (bundle.audit.human_approval)
       bundle.audit.human_approval.reviewed_digest = reviewDigest(bundle);
     const dir = resolve(temp, 'cartografia', ids[0], version);
@@ -450,7 +476,7 @@ function redeclareRevision(x, i = 0) {
 
 test('0.1.1 continua íntegra quando o catálogo evolui e mantém todos os recursos e procedências', async () => {
   const lot = await validateLot(baseRoot, { at });
-  assert.ok(lot.summaries.every((s) => !s.approved));
+  assert.ok(lot.summaries.every((s) => s.approved));
   for (const [i, next] of revised.entries()) {
     assert.equal(validateBundle(next, { at }).approved, false);
     const check = validateRevision(originals[i], next);
@@ -460,7 +486,7 @@ test('0.1.1 continua íntegra quando o catálogo evolui e mantém todos os recur
     assert.deepEqual(next.provenance.parity_records, originals[i].provenance.parity_records);
     assert.deepEqual(next.audit.counts, originals[i].audit.counts);
   }
-  assert.equal(lot.canonicalUnits, 0);
+  assert.equal(lot.canonicalUnits, 3);
   assert.equal(lot.untouchedUnits, 25);
 });
 
@@ -716,10 +742,10 @@ const currentClone = (i = 0) => structuredClone(current[i]);
 const currentMap = () =>
   structuredClone(current[0].base.support.visuals.find((v) => v.kind === 'schematic-map'));
 
-test('0.1.2 valida a cadeia completa e preserva as identidades, alternativas e gabaritos de 0.1.1', async () => {
+test('0.1.2 continua íntegra após a promoção e preserva as identidades, alternativas e gabaritos de 0.1.1', async () => {
   const result = await validateLot(baseRoot, { at });
-  assert.ok(result.summaries.every((s) => s.version === '0.1.2' && !s.approved));
-  assert.equal(result.canonicalUnits, 0);
+  assert.ok(result.summaries.every((s) => s.version === '1.0.0' && s.approved));
+  assert.equal(result.canonicalUnits, 3);
   assert.equal(result.untouchedUnits, 25);
   for (const [i, next] of current.entries()) {
     assert.equal(validateBundle(next, { at }).approved, false);
@@ -947,6 +973,17 @@ test('cadeia valida também a revisão intermediária e recusa ciclos antes de c
   t.after(() => rm(temp, { recursive: true, force: true }));
   await cp(resolve(baseRoot, 'manifest.json'), resolve(temp, 'manifest.json'));
   await cp(resolve(baseRoot, 'cartografia'), resolve(temp, 'cartografia'), { recursive: true });
+  const registry = JSON.parse(await readFile(resolve(temp, 'manifest.json'), 'utf8'));
+  Object.assign(
+    registry.units.find((u) => u.unit_id === ids[0]),
+    {
+      candidate_version: '0.1.2',
+      canonical_version: null,
+      runtime_enabled: false,
+      status: 'EM_AUDITORIA',
+    },
+  );
+  await writeFile(resolve(temp, 'manifest.json'), JSON.stringify(registry));
   const parent = structuredClone(revised[0]);
   parent.provenance.revision.changes.pop();
   await writeFile(
@@ -961,4 +998,83 @@ test('cadeia valida também a revisão intermediária e recusa ciclos antes de c
   child.provenance.revision.from_version = '0.1.2';
   await writeFile(childPath, JSON.stringify(child.provenance));
   await assert.rejects(validateLot(temp, { at }), /Ciclo na cadeia/);
+});
+
+const canonical = await Promise.all(ids.map((id) => readBundle(baseRoot, id, '1.0.0')));
+test('1.0.0 aprova por revisão delegada explícita, preservando integralmente os textos de 0.1.2', async () => {
+  for (const [i, next] of canonical.entries()) {
+    assert.equal(validateBundle(next, { approved: true, at }).approved, true);
+    assert.equal(
+      (await loadApprovedUnit(baseRoot, ids[i], '1.0.0', { at })).editorial_version,
+      '1.0.0',
+    );
+    assert.equal(next.audit.human_approval, null);
+    assert.equal(next.audit.editorial_approval.kind, 'delegated-ai');
+    assert.ok(
+      next.audit.authored_questions.every(
+        (q) =>
+          q.human_reviewer === null &&
+          q.human_decision === 'pending' &&
+          q.editorial_decision.kind === 'ai',
+      ),
+    );
+    const payload = (x) => ({
+      ...x.base.content,
+      questions: x.base.content.questions.map(({ status, reviewNotes, ...q }) => q),
+    });
+    assert.deepEqual(payload(next), payload(current[i]));
+    assert.deepEqual(next.base.support, current[i].base.support);
+    assert.deepEqual(next.base.metadata.temporal_claims, current[i].base.metadata.temporal_claims);
+    assert.equal(validateRevision(current[i], next).preserved_resources, [277, 183, 231][i]);
+  }
+});
+
+test('revisão delegada recusa decisão por item ausente, autoria humana fictícia e alteração posterior', () => {
+  const missing = structuredClone(canonical[0]);
+  delete missing.audit.authored_questions[0].editorial_decision;
+  assert.throws(() => validateBundle(missing, { at }), /Revisão delegada dos itens/);
+  const falseHuman = structuredClone(canonical[0]);
+  falseHuman.audit.authored_questions[0].human_reviewer = 'Nome fictício';
+  assert.throws(() => validateBundle(falseHuman, { at }), /autoria humana fictícia/);
+  const changed = structuredClone(canonical[0]);
+  changed.audit.findings[0].editorial_resolution.decision += ' Alteração posterior.';
+  assert.throws(() => validateBundle(changed, { at }), /Aprovação não corresponde/);
+  const noDelegation = structuredClone(canonical[0]);
+  noDelegation.audit.editorial_approval.delegation_evidence = '';
+  assert.throws(() => validateBundle(noDelegation, { at }), /delegação explícita/);
+});
+
+test('consumo delegado exige escopo autorizado no catálogo e habilitação explícita', async (t) => {
+  const temp = await mkdtemp(resolve(tmpdir(), 'v6-delegated-approval-'));
+  t.after(() => rm(temp, { recursive: true, force: true }));
+  await cp(baseRoot, temp, { recursive: true });
+  const registry = JSON.parse(await readFile(resolve(temp, 'manifest.json'), 'utf8'));
+  registry.editorial_governance.unit_ids = ids.slice(1);
+  await writeFile(resolve(temp, 'manifest.json'), JSON.stringify(registry));
+  await assert.rejects(loadApprovedUnit(temp, ids[0], '1.0.0', { at }), /fora do contrato\/escopo/);
+  registry.editorial_governance.unit_ids = ids;
+  registry.units.find((u) => u.unit_id === ids[0]).runtime_enabled = false;
+  await writeFile(resolve(temp, 'manifest.json'), JSON.stringify(registry));
+  await assert.rejects(loadApprovedUnit(temp, ids[0], '1.0.0', { at }), /desabilitado/);
+});
+
+test('cadeia da canônica continua validada quando existe outra candidata em auditoria', async (t) => {
+  const temp = await mkdtemp(resolve(tmpdir(), 'v6-canonical-separate-lineage-'));
+  t.after(() => rm(temp, { recursive: true, force: true }));
+  await cp(baseRoot, temp, { recursive: true });
+  const registry = JSON.parse(await readFile(resolve(temp, 'manifest.json'), 'utf8'));
+  Object.assign(
+    registry.units.find((u) => u.unit_id === ids[0]),
+    { candidate_version: '0.1.2', status: 'EM_AUDITORIA' },
+  );
+  await writeFile(resolve(temp, 'manifest.json'), JSON.stringify(registry));
+  const changed = structuredClone(canonical[0]);
+  changed.provenance.revision.changes.pop();
+  changed.audit.editorial_approval.reviewed_digest = reviewDigest(changed);
+  for (const [name, value] of [
+    ['provenance.json', changed.provenance],
+    ['audit.json', changed.audit],
+  ])
+    await writeFile(resolve(temp, 'cartografia', ids[0], '1.0.0', name), JSON.stringify(value));
+  await assert.rejects(validateLot(temp, { at }), /não declarada/);
 });

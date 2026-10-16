@@ -5,6 +5,7 @@ import { attempt, identifyGame, nextQuestions } from './engine';
 import type { Question, State } from './types';
 import { parseTrainingPool, trainingHref, trainingSessionMatches } from './training-session';
 import { ResponseSignal, RoundProgress, RoundSummary } from './SensoryUI';
+import { questionExposure } from './content-progress';
 function diagnostic(state: State, key: string): { hits: number; total: number } | null {
   try {
     const value = JSON.parse(state.drafts[key] || 'null');
@@ -27,9 +28,20 @@ export function QuestionForm({
   locked?: boolean;
 }) {
   const name = 'choice-' + q.id;
+  const { content } = useV6();
+  const validChoice = q.options.some((o) => o.id === choice);
+  const retired = content.editorial?.retired_options.find(
+    (o) => o.question_id === q.id && o.retired_option_id === choice,
+  );
   return (
     <>
       <Visual id={q.visual} />
+      {retired && (
+        <p className="editorial-note">
+          Sua seleção anterior, {retired.old_text}, pertence a uma versão preservada no histórico.
+          {!locked && ' Escolha uma das alternativas atuais para responder.'}
+        </p>
+      )}
       <fieldset className="question-options" disabled={locked}>
         <legend>{q.prompt}</legend>
         {q.options.map((o, i) => (
@@ -47,7 +59,7 @@ export function QuestionForm({
         ))}
       </fieldset>
       {onConfirm && (
-        <button className="primary" disabled={!choice || locked} onClick={onConfirm}>
+        <button className="primary" disabled={!validChoice || locked} onClick={onConfirm}>
           Confirmar resposta
         </button>
       )}
@@ -138,6 +150,7 @@ export function QuestionRunner() {
           update((s) => {
             if (s.session?.id !== ses.id || s.session?.answered) return;
             const option = q.options.find((o) => o.id === choice)!;
+            if (!option) return;
             attempt(s, content, {
               item: q.id,
               correct: choice === q.correct,
@@ -145,6 +158,7 @@ export function QuestionRunner() {
               at: Date.now(),
               type: option.errorType,
               context: ses.id,
+              choice,
             });
             s.exposures[q.id] = Date.now();
             s.session!.answered = true;
@@ -515,7 +529,7 @@ export function Training() {
                                 (e) => e.concept === a.concept && e.status === 'aberto',
                               ),
                             ) ||
-                          (s.exposures[a.id] || 0) - (s.exposures[b.id] || 0) ||
+                          questionExposure(content, s, a.id) - questionExposure(content, s, b.id) ||
                           a.id.localeCompare(b.id),
                       )
                       .slice(0, 10)

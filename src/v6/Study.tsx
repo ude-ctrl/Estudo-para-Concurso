@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ArrowRight, BookOpen, Check, RotateCcw } from 'lucide-react';
 import { useV6 } from './context';
-import { CompassArt, Html, ModeLink, Provenance, studyLink } from './components';
+import { CompassArt, Html, ModeLink, Provenance, EditorialSources, studyLink } from './components';
 import { attempt, mastery, priorityErrors } from './engine';
 import { describeMilestone } from './recognition';
 import { trainingHref, trainingSessionMatches } from './training-session';
@@ -258,8 +258,7 @@ export function Home() {
         )}
       </div>
       <p className="pilot-note">
-        Este piloto contém apenas Cartografia. Conteúdo autoral de Concurso e FGV Elite aguarda
-        revisão humana. Os demais módulos continuam disponíveis em{' '}
+        Este ambiente reúne Cartografia revisada. Os demais módulos continuam disponíveis em{' '}
         <a href="./biblioteca.html">outros materiais</a>.
       </p>
     </>
@@ -375,7 +374,12 @@ export function Study() {
       <div className="study-layout">
         <div className="reading-column">
           {sections.map((sec, i) => (
-            <details className="reading-section" key={sec.id} open={i === 0 || undefined}>
+            <details
+              className="reading-section"
+              data-resource-id={sec.id}
+              key={sec.id}
+              open={i === 0 || undefined}
+            >
               <summary>
                 <span>
                   {sec.title}
@@ -391,13 +395,13 @@ export function Study() {
               <div className="reading-body">
                 <p className="hook">{sec.hook}</p>
                 <Html html={sec.html} />
-                {m.id === 'mercator-peters-utm' && sec.title.includes('UTM') && (
-                  <aside className="editorial-note">
-                    Precisão V6: o sistema UTM é convencionalmente utilizado entre 80°S e 84°N; as
-                    áreas polares utilizam sistemas apropriados. “60 fusos” não significa cobertura
-                    polar pela projeção UTM.
-                  </aside>
-                )}
+                {content.support?.editorial_notes
+                  .filter((note) => note.target === sec.id)
+                  .map((note) => (
+                    <aside className="editorial-note" key={note.id}>
+                      {note.text}
+                    </aside>
+                  ))}
                 <button
                   className={state.read[sec.id] ? 'subtle' : 'primary'}
                   onClick={() =>
@@ -456,6 +460,7 @@ export function Study() {
         </div>
         <aside className="study-aside">
           <Mastery unit={route.unit} />
+          <EditorialSources unit={route.unit} />
           <details>
             <summary>Revisão integradora e aplicação em aula</summary>
             {content.supplements

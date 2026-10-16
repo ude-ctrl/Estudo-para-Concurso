@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { parseFragment } from 'parse5';
-import { buildV6 } from '../scripts/build-v6.mjs';
+import { readBundle, reconstructPilot } from '../scripts/canonical-content.mjs';
 import { extract, root, walk } from '../scripts/import-content.mjs';
 import {
   DAY,
@@ -41,7 +41,16 @@ import {
   sensoryQuiet,
 } from '../src/v6/sensory.ts';
 import { SensoryAudio, soundPatterns } from '../src/v6/sound.ts';
-const { content: c, parity } = await buildV6(),
+// Frozen pilot regression checks retain their original assertions. The operational canonical
+// bank and its new consumer contract are exercised separately in canonical-runtime.test.mjs.
+const snapshotRoot = root + '/base-conhecimento';
+const snapshotUnits = ['cartografia-fundamentos', 'cartografia-representacao', 'geotecnologias'];
+const frozen = await Promise.all(snapshotUnits.map((id) => readBundle(snapshotRoot, id, '0.1.0')));
+const c = reconstructPilot(
+    frozen,
+    JSON.parse(await readFile(snapshotRoot + '/cartografia/baseline-piloto.json', 'utf8')),
+  ),
+  parity = JSON.parse(await readFile(root + '/MissaoAprovacaoGeo/V6_FASE14_PARIDADE.json', 'utf8')),
   now = Date.UTC(2026, 9, 15, 12),
   sha = (x) =>
     createHash('sha256')

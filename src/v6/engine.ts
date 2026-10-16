@@ -12,6 +12,13 @@ import type {
   UnitId,
 } from './types.ts';
 import { parseTrainingPool } from './training-session.ts';
+import {
+  editorialVersion,
+  familyMembers,
+  learningEvidence,
+  learningIdentity,
+  questionExposure,
+} from './content-progress.ts';
 export const DAY = 86_400_000;
 export const STATE_KEY = 'missaoGeo.v6.cartografia';
 export const ERROR_KEY = 'missaoGeo.v6.errors';
@@ -134,6 +141,7 @@ export function attempt(
     type?: ErrorType;
     rating?: Rating;
     context?: string;
+    choice?: string;
   },
 ): Evidence {
   const item = [...content.questions, ...content.cards, ...content.game].find(
@@ -145,7 +153,8 @@ export function attempt(
   if (!m) throw Error('Atividade desconhecida.');
   const concept = item?.concept || recall?.concept || m.conceptIds[0];
   const c = content.concepts.find((c) => c.id === concept)!;
-  const previous = s.evidence.filter((e) => e.item === args.item).at(-1);
+  const identity = learningIdentity(content, args.item);
+  const previous = s.evidence.filter((e) => learningIdentity(content, e.item) === identity).at(-1);
   const delayed = !!previous && args.at - previous.at >= DAY;
   const eligible = !previous || delayed;
   const evidence: Evidence = {
@@ -162,6 +171,9 @@ export function attempt(
     difficulty: 'difficulty' in (item || {}) ? (item as Question).difficulty : 1,
     rating: args.rating,
     context: args.context,
+    editorialVersion: editorialVersion(content, m.unit),
+    familyId: identity === args.item ? undefined : identity,
+    choice: args.choice,
   };
   s.evidence.push(evidence);
   if (eligible) significant(s, args.at);
@@ -249,13 +261,11 @@ export function attempt(
               ['bom', 'facil'].includes(h.rating) && (i === 0 || h.at - hs[i - 1].at >= DAY),
           ).length || 0) >= 2,
       );
-      const novelContext = err.delayedItems.some((id) => !err.itemIds.includes(id));
-      if (
-        err.delayedItems.length >= 2 &&
-        novelContext &&
-        consistentFC &&
-        args.at - err.last >= 7 * DAY
-      ) {
+      const contexts = new Set(err.delayedItems.map((id) => learningIdentity(content, id)));
+      const novelContext = [...contexts].some(
+        (id) => !err.itemIds.some((item) => learningIdentity(content, item) === id),
+      );
+      if (contexts.size >= 2 && novelContext && consistentFC && args.at - err.last >= 7 * DAY) {
         err.status = 'dominado-apos-erro';
         err.falseMastery = false;
         award(s, 'error:' + key + ':' + err.last, 15, 'Erro recuperado de forma estável', args.at);
@@ -263,12 +273,18 @@ export function attempt(
     }
   }
   if (args.correct && eligible) {
-    if (args.kind === 'boss')
-      award(s, 'boss:' + args.item, 25, 'Primeiro acerto do Chefão', args.at);
+    const rewarded =
+      familyMembers(content, args.item).some(
+        (id) => s.awards['first:' + id] || s.awards['boss:' + id],
+      ) ||
+      s.awards['first:' + identity] ||
+      s.awards['boss:' + identity];
+    if (args.kind === 'boss' && !rewarded)
+      award(s, 'boss:' + identity, 25, 'Primeiro acerto do Chefão', args.at);
     else if (args.kind === 'recall')
       award(s, 'recall:' + args.item + ':' + localDay(args.at), 4, 'Evocação ativa', args.at);
-    else if (args.kind !== 'flashcard' && args.kind !== 'game')
-      award(s, 'first:' + args.item, 4, 'Primeira recuperação objetiva', args.at);
+    else if (args.kind !== 'flashcard' && args.kind !== 'game' && !rewarded)
+      award(s, 'first:' + identity, 4, 'Primeira recuperação objetiva', args.at);
     if (delayed && previous && !previous.correct)
       award(
         s,
@@ -309,11 +325,11 @@ export function mastery(content: Content, s: State, unit: UnitId) {
   const concepts = content.concepts.filter((c) =>
     content.missions.some((m) => m.id === c.mission && m.unit === unit),
   );
-  const all = s.evidence.filter((e) => e.unit === unit && e.eligible),
+  const all = learningEvidence(content, s).filter((e) => e.unit === unit && e.eligible),
     objective = all.filter((e) =>
       ['fixacao', 'concurso', 'elite', 'exam', 'boss'].includes(e.kind),
     );
-  const distinct = new Set(objective.map((e) => e.item)).size,
+  const distinct = new Set(objective.map((e) => learningIdentity(content, e.item))).size,
     covered = new Set(objective.map((e) => e.concept)),
     coverage = covered.size / concepts.length;
   const hasRead = content.missions
@@ -368,7 +384,7 @@ export function mastery(content: Content, s: State, unit: UnitId) {
       : qs.length >= 3
         ? 1
         : 0;
-    const C = Math.min(1, new Set(qs.map((e) => e.item)).size / 3);
+    const C = Math.min(1, new Set(qs.map((e) => learningIdentity(content, e.item))).size / 3);
     return {
       id: c.id,
       name: c.name,
@@ -456,10 +472,11 @@ export function makeExam(
   seed?: string,
 ): ExamSession {
   const pool = examPool(content, unit);
+  const independentStock = new Set(pool.map((q) => learningIdentity(content, q.id))).size;
   if (
     !Number.isInteger(count) ||
     count < 1 ||
-    count > pool.length ||
+    count > independentStock ||
     !Number.isFinite(minutes) ||
     minutes < 1 ||
     minutes > 300
@@ -474,16 +491,28 @@ export function makeExam(
   }
   for (const b of buckets.values())
     b.sort(
-      (a, b) => (s.exposures[a.id] || 0) - (s.exposures[b.id] || 0) || a.id.localeCompare(b.id),
+      (a, b) =>
+        questionExposure(content, s, a.id) - questionExposure(content, s, b.id) ||
+        a.id.localeCompare(b.id),
     );
   const selected: Question[] = [];
+  const selectedFamilies = new Set<string>();
   while (selected.length < count) {
     const candidates = [...buckets.values()]
       .filter((b) => b.length)
-      .sort((a, b) => (s.exposures[a[0].id] || 0) - (s.exposures[b[0].id] || 0));
+      .sort(
+        (a, b) => questionExposure(content, s, a[0].id) - questionExposure(content, s, b[0].id),
+      );
     if (!candidates.length) break;
     for (const b of candidates) {
-      if (selected.length < count) selected.push(b.shift()!);
+      if (selected.length < count) {
+        const question = b.shift()!;
+        const family = learningIdentity(content, question.id);
+        if (!selectedFamilies.has(family)) {
+          selected.push(question);
+          selectedFamilies.add(family);
+        }
+      }
     }
   }
   // Generate once per session, then persist optionOrder. Balance alone must not reveal a cycle.
@@ -532,7 +561,10 @@ export function makeExam(
     deadline: at + minutes * 60_000,
     current: 0,
     profile: unit || 'modulo-cartografia',
-    novelty: selected.filter((q) => !s.exposures[q.id]).length,
+    novelty: selected.filter((q) => !questionExposure(content, s, q.id)).length,
+    editorialVersions: Object.fromEntries(
+      content.units.map((u) => [u.id, editorialVersion(content, u.id)]),
+    ),
   };
 }
 export function finishExam(s: State, content: Content, at: number) {
@@ -549,6 +581,7 @@ export function finishExam(s: State, content: Content, at: number) {
       at,
       type: option?.errorType,
       context: exam.id,
+      choice: exam.answers[id],
     });
     s.exposures[id] = at;
   }
@@ -572,6 +605,31 @@ export function parseState(raw: string): State {
     }
   };
   inspect(o);
+  const versionMap = (x: unknown) =>
+    isObject(x) &&
+    Object.values(x).every((v) => typeof v === 'string' && v.length > 0 && v.length < 100);
+  if (
+    o.contentRevision !== undefined &&
+    (!isObject(o.contentRevision) ||
+      typeof o.contentRevision.release !== 'string' ||
+      !versionMap(o.contentRevision.units) ||
+      !Number.isFinite(o.contentRevision.appliedAt))
+  )
+    throw Error('Versão editorial do progresso inválida.');
+  if (
+    o.contentHistory !== undefined &&
+    (!isObject(o.contentHistory) ||
+      !Array.isArray(o.contentHistory.errors) ||
+      o.contentHistory.errors.some(
+        (entry) =>
+          !isObject(entry) ||
+          typeof entry.key !== 'string' ||
+          typeof entry.version !== 'string' ||
+          typeof entry.reason !== 'string' ||
+          !isObject(entry.record),
+      ))
+  )
+    throw Error('Histórico editorial inválido.');
   for (const k of ['read', 'drafts', 'reviews', 'errors', 'awards', 'migrations', 'exposures'])
     if (!isObject(o[k])) throw Error('Campo inválido: ' + k);
   for (const k of [
@@ -653,8 +711,15 @@ export function parseState(raw: string): State {
       ![1, 2, 3, 4].includes(Number(e.difficulty))
     )
       throw Error('Evidência inválida.');
+    for (const key of ['editorialVersion', 'familyId', 'choice'])
+      if (e[key] !== undefined && typeof e[key] !== 'string')
+        throw Error('Vínculo editorial da evidência inválido.');
   }
-  for (const e of Object.values(o.errors as Record<string, unknown>)) {
+  const archivedErrors = o.contentHistory
+    ? (o.contentHistory as { errors: { record: unknown }[] }).errors.map((entry) => entry.record)
+    : [];
+  const errorRecords = [...Object.values(o.errors as Record<string, unknown>), ...archivedErrors];
+  for (const e of errorRecords) {
     if (
       !isObject(e) ||
       typeof e.id !== 'string' ||
@@ -722,7 +787,7 @@ export function parseState(raw: string): State {
       typeof h.ambiguous !== 'boolean'
     )
       throw Error('Histórico legado inválido.');
-  for (const e of Object.values(o.errors as Record<string, unknown>)) {
+  for (const e of errorRecords) {
     const err = e as Record<string, unknown>;
     if (!strings(err.itemIds) || !strings(err.delayedItems))
       throw Error('IDs do caderno inválidos.');
@@ -773,6 +838,8 @@ export function parseState(raw: string): State {
       )
     )
       throw Error('Prova inválida.');
+    if (e.editorialVersions !== undefined && !versionMap(e.editorialVersions))
+      throw Error('Versão editorial da prova inválida.');
   }
   if (o.session) {
     const x = o.session;
@@ -963,7 +1030,11 @@ export function nextQuestions(content: Content, s: State, pool: string, unit: st
             ? q.roles.includes('diagnostico')
             : q.pool === pool),
     )
-    .sort((a, b) => (s.exposures[a.id] || 0) - (s.exposures[b.id] || 0) || a.id.localeCompare(b.id))
+    .sort(
+      (a, b) =>
+        questionExposure(content, s, a.id) - questionExposure(content, s, b.id) ||
+        a.id.localeCompare(b.id),
+    )
     .slice(0, limit)
     .map((q) => q.id);
 }

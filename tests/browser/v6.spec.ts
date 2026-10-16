@@ -839,7 +839,7 @@ test('V6: diagnóstico e pós-teste usam os mesmos IDs com comparação transpar
   }
   await expect(page.getByText(/melhora imediata não comprova retenção/)).toBeVisible();
 });
-test('V6: equivalência de distratores históricos é explicada sem trocar o gabarito', async ({
+test('V6: correção versionada elimina equivalência dos distratores sem trocar o gabarito', async ({
   page,
 }) => {
   const q = content.questions.find((q) =>
@@ -865,5 +865,9 @@ test('V6: equivalência de distratores históricos é explicada sem trocar o gab
     .check();
   await page.getByRole('button', { name: 'Confirmar resposta' }).click();
   await page.getByText('Comparar alternativas e aprofundar', { exact: true }).click();
-  await expect(page.getByText(/Observação de notação:/)).toContainText('−42,5°');
+  await expect(page.locator('.feedback')).toContainText('−42,5°');
+  await expect(page.getByText(/Observação de notação:/)).toHaveCount(0);
+  await expect(page.locator('.option-explanation').filter({ hasText: '−42,05°' })).toContainText(
+    '600',
+  );
 });

@@ -1,17 +1,22 @@
 import { ERROR_KEY, STATE_KEY, fresh, parseState } from './engine.ts';
-import type { State } from './types.ts';
+import type { Content, State } from './types.ts';
+import { reconcileContent } from './content-progress.ts';
 type StorageLike = Pick<Storage, 'getItem' | 'setItem'>;
 export class Repository {
   state: State = fresh();
   warning = '';
   readonly store: StorageLike;
-  constructor(store: StorageLike) {
+  readonly content?: Content;
+  constructor(store: StorageLike, content?: Content) {
     this.store = store;
+    this.content = content;
+    let restoredRaw: string | null = null;
     try {
       const raw = store.getItem(STATE_KEY);
       if (raw) {
         try {
           this.state = parseState(raw);
+          restoredRaw = raw;
         } catch {
           this.warning =
             'O progresso salvo está inválido. O conteúdo continua disponível; a cópia bruta foi preservada para recuperação.';
@@ -22,6 +27,25 @@ export class Repository {
       this.warning =
         'Armazenamento indisponível. O progresso desta sessão está só na memória; exporte uma cópia antes de sair.';
     }
+    const next = structuredClone(this.state);
+    if (this.prepare(next, restoredRaw, Date.now())) {
+      this.state = next;
+      this.commit(() => {});
+    }
+  }
+  private prepare(state: State, raw: string | null, at: number) {
+    if (!this.content?.editorial) return false;
+    const changed = reconcileContent(state, this.content, at);
+    if (!changed) return false;
+    if (raw) {
+      const key = STATE_KEY + '.before-canonical-' + this.content.editorial.release;
+      try {
+        if (!this.store.getItem(key)) this.store.setItem(key, raw);
+      } catch {
+        // Affected records are also preserved in the authoritative exported contentHistory.
+      }
+    }
+    return true;
   }
   commit(fn: (state: State) => void, at = Date.now()): State {
     let latest = this.state;
@@ -35,7 +59,9 @@ export class Repository {
       /* The original recovery copy remains untouched. */
     }
     const next = structuredClone(latest);
+    this.prepare(next, JSON.stringify(latest), at);
     fn(next);
+    this.prepare(next, JSON.stringify(next), at);
     next.revision = latest.revision + 1;
     next.updated = at;
     try {
@@ -74,7 +100,10 @@ export class Repository {
   reload() {
     try {
       const raw = this.store.getItem(STATE_KEY);
-      if (raw) this.state = parseState(raw);
+      if (raw) {
+        this.state = parseState(raw);
+        if (this.prepare(this.state, raw, Date.now())) this.commit(() => {});
+      }
     } catch {
       this.warning = 'Outra aba gravou um estado inválido. A sessão atual foi mantida.';
     }
