@@ -1,0 +1,899 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-16T20:33:11.851782+00:00",
+  "branch": "v6-base-canonica",
+  "verified_implementation_commit": "8ab19368fb402a606d5645160e67d482ad850b19",
+  "preserved_parent_commit": "2ab491ddf78d44573769927e3f07183e2f601210",
+  "runtime_version": "6.1.0-canonica.1",
+  "editorial_versions": {
+    "cartografia-fundamentos": {
+      "version": "1.0.0",
+      "status": "APROVADA_CANONICA",
+      "reviewer_kind": "delegated-ai",
+      "reviewer": "Codex",
+      "reviewed_at": "2026-10-16",
+      "digest": "9515c097cf7a36442843451c8ffbf1ee2377830785923a5f12d392ba6a2c6d39"
+    },
+    "cartografia-representacao": {
+      "version": "1.0.0",
+      "status": "APROVADA_CANONICA",
+      "reviewer_kind": "delegated-ai",
+      "reviewer": "Codex",
+      "reviewed_at": "2026-10-16",
+      "digest": "9b9afac258e2798bc48705c5da1708f62ea6c99e590ddfb39e9f49c1a50a6e61"
+    },
+    "geotecnologias": {
+      "version": "1.0.0",
+      "status": "APROVADA_CANONICA",
+      "reviewer_kind": "delegated-ai",
+      "reviewer": "Codex",
+      "reviewed_at": "2026-10-16",
+      "digest": "ffc3e10420656740b224f790b32aea4eab22376493fd7e256ea58d70d7faa630"
+    }
+  },
+  "reviewer_kind": "delegated-ai",
+  "human_manual_review": false,
+  "scope": [
+    "cartografia-fundamentos",
+    "cartografia-representacao",
+    "geotecnologias"
+  ],
+  "untouched_units": 25,
+  "commands": [
+    {
+      "command": "npm run build",
+      "result": "passed",
+      "sha256": "12fcb0d57016dffc6a6c4c9aea67cf063dfa4588a6a5aad3a64ac08bf32b81eb",
+      "output": "\n> missao-aprovacao-geografia@0.1.0 build\n> npm run import:content && npm run import:v6 && tsc --noEmit && vite build\n\n\n> missao-aprovacao-geografia@0.1.0 import:content\n> node scripts/import-content.mjs\n\nImportação íntegra: 31 HTMLs preservados; 26 materiais de outros módulos; 4 fontes de Cartografia somente no arquivo de auditoria.\n\n> missao-aprovacao-geografia@0.1.0 import:v6\n> node scripts/build-v6.mjs\n\n{\"stages\":50,\"questions\":161,\"legacyQuestions\":125,\"authored\":36,\"cards\":120,\"legacyCards\":151,\"game\":256,\"legacyGame\":302,\"recalls\":39,\"canonicalRecalls\":39,\"writing\":6}\nvite v6.4.4 building for production...\ntransforming...\n✓ 1601 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/biblioteca.html                     0.74 kB │ gzip:  0.43 kB\ndist/v6.html                             0.98 kB │ gzip:  0.54 kB\ndist/index.html                          0.98 kB │ gzip:  0.54 kB\ndist/assets/portal-ozacjLQX.css         18.42 kB │ gzip:  4.87 kB\ndist/assets/main-VOxYawnG.css           38.00 kB │ gzip:  8.51 kB\ndist/assets/portal-BKylBOax.js          23.54 kB │ gzip:  7.62 kB\ndist/assets/main-CWwm2WoY.js           129.45 kB │ gzip: 40.28 kB\ndist/assets/legacy-routes-C9LWSb9Z.js  228.57 kB │ gzip: 71.00 kB\n✓ built in 2.24s\n"
+    },
+    {
+      "command": "npm test",
+      "result": "passed",
+      "sha256": "6a48054051d2e6964a71db6b05c534ddbe211686bc54c9984009be4f094b9442",
+      "output": "\n> missao-aprovacao-geografia@0.1.0 test\n> node tests/content.test.mjs && node --experimental-strip-types tests/v6.test.mjs && node tests/canonical.test.mjs && node --experimental-strip-types tests/canonical-runtime.test.mjs\n\nImportação íntegra: 31 HTMLs preservados; 26 materiais de outros módulos; 4 fontes de Cartografia somente no arquivo de auditoria.\n✔ os 31 HTMLs originais e as cópias publicadas permanecem byte a byte iguais ao acervo auditado (26.62993ms)\n✔ contagens de cada página coincidem com a auditoria independente (0.39002ms)\n✔ evocação, suplementos, fontes e estruturas completas sobrevivem à extração (16.127261ms)\n✔ fontes de Cartografia ficam apenas no arquivo de auditoria, com IDs e chaves preservados (0.229631ms)\n✔ importador recusa executar expressões de código dentro dos dados (0.421349ms)\nℹ tests 5\nℹ suites 0\nℹ pass 5\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 48.431949\n✔ contrato: exatamente as três unidades e as 17 missões oficiais do piloto (2.095917ms)\n✔ as três fontes conservam bytes, 50 etapas, 125 questões, 150 cards, 300 V/F e 39 recalls (172.960789ms)\n✔ todo registro tem destino canônico, ID de origem e hash verificável; contexto também é preservado (75.586504ms)\n✔ 125 gabaritos, alternativas, feedbacks e papéis históricos preservados sem conversão silenciosa (1.925899ms)\n✔ fusão semântica reduz C/G e conserva todas as formulações e justificativas (10.838276ms)\n✔ suplementos e 6 procedências discursivas preservados; fonte secundária estritamente limitada (2.920871ms)\n✔ IDs únicos, referências válidas e nenhum enunciado/alternativa duplicado exato (3.89561ms)\n✔ 36 itens novos, 12 por unidade, A–E, letras balanceadas e revisão humana pendente (0.418792ms)\n✔ conferência independente dos cálculos autorais e dos dados das figuras (4.042333ms)\n✔ HTML publicado não executa mecanismos legados nem produz IDs duplicados (43.661165ms)\n✔ agenda: intervalos iniciais e avaliações atrasadas seguem a política declarada (0.526158ms)\n✔ retentativa precoce não empurra o vencimento para um futuro artificial (2.552831ms)\n✔ fila vencida finita tem precedência sobre cartões novos (7.126066ms)\n✔ XP: abrir/ler/virar não premia e repetir acerto imediato não multiplica pontos (2.679084ms)\n✔ revisão vencida concede uma recompensa; repetir Fácil não faz farming (0.484854ms)\n✔ erro imediato não resolve; depois de intervalo, acerto objetivo resolve (0.54637ms)\n✔ falsa sensação de domínio reabre dificuldade e antecipa cartões relacionados (0.238841ms)\n✔ domínio fica sem número até haver estudo, diversidade, cobertura e retenção (1.294385ms)\n✔ prova: sem IDs repetidos, alternativas estáveis, letras equilibradas, novidade e diversidade (3.070709ms)\n✔ estoque insuficiente bloqueia perfil oficial e prova maior que banco (0.851498ms)\n✔ migração preserva bruto, é idempotente, não cria XP/domínio e não altera fontes (1.047747ms)\n✔ índices T03 ambíguos e T17 v25 não são interpretados como evidência (0.558323ms)\n✔ cópias corrompidas e esquema estranho são rejeitados; estado válido volta integral (1.234245ms)\n✔ registro congelado mantém identidades separadas das revisões editoriais (1.739982ms)\n✔ guias introdutórios encaminham questões ao conceito cobrado e todos os novos conceitos têm cartão (0.419096ms)\n✔ motor genérico monta as 60 posições do blueprint sem migrar disciplinas do piloto (0.582107ms)\n✔ erro só atinge domínio após intervalo, outro item e revisões consistentes (0.605502ms)\n✔ primeira revalidação de cartão legado usa intervalo inicial e não presume revisão vencida (0.220864ms)\n✔ cada Errei retorna uma vez na sessão; fila não cresce indefinidamente (1.030325ms)\n✔ redundância numérica histórica está sinalizada, sem alterar o gabarito válido (0.156744ms)\n✔ restauração rejeita históricos internos defeituosos e chaves que alterariam protótipos (0.314309ms)\n✔ persistência preserva bruto corrompido e mantém rascunhos em falha de quota (0.60154ms)\n✔ transações leem revisão recente e caderno global preserva outros módulos (0.454736ms)\n✔ restauração preserva cópia anterior e rejeita arquivo defeituoso antes de substituir (0.334038ms)\n✔ marcos: navegação e leitura sem recuperação não geram celebração nem XP (0.589787ms)\n✔ marcos: unidade requer todas as explicações e recuperação por missão, sem fabricar domínio (1.144333ms)\n✔ marcos: Chefão requer rodada completa da unidade, pelo menos 80% e não repete conquista (1.53444ms)\n✔ marcos: revisões só ficam em dia quando os vencidos reais terminam; importados não bastam (0.846548ms)\n✔ marcos: sete dias exigem prática significativa e não acrescentam pontos (0.406082ms)\n✔ marcos: erro convertido exige recuperação já validada pelo motor (0.970784ms)\n✔ marcos: backups anteriores permanecem válidos e marcos inválidos são rejeitados (0.726258ms)\n✔ B1: provas equilibradas não têm ciclo periódico nem três letras iguais em sequência (48.663481ms)\n✔ B2: Difícil é recuperação com esforço, intervalo curto, sem criar ou reabrir erro (0.333696ms)\n✔ C1: dias civis em UTC−3 e calendário com mudança de offset não perdem a sequência (1.485813ms)\n✔ UX: a camada canônica troca só a embalagem editorial e mantém originais integrais (0.95727ms)\n✔ restaurar backup anterior não mantém marcos ou sessão ausentes da cópia (0.372483ms)\n✔ P1: compatibilidade exige todos os IDs no destino, tipo e banco solicitado (0.396056ms)\n✔ P1: retomada conserva banco opcional e aceita backups anteriores sem inventar banco (0.524073ms)\n✔ sensorial: preferências opcionais mantêm backups antigos; valores e resumos inválidos são rejeitados (1.149019ms)\n✔ sensorial: percurso distingue leitura, recuperação e pendências sem fabricar domínio ou bloquear consulta (0.780351ms)\n✔ sensorial: resumo contabiliza somente XP real da rodada e não incorpora atividade paralela (0.882309ms)\n✔ sensorial: revisões devidas entram no balanço; virar, repetir cedo e preferências não rendem XP (0.589978ms)\n✔ sensorial: eventos comuns não são conquistas; repetição imediata e recarga não repetem efeitos (0.551611ms)\n✔ sensorial: expedição exige todas as missões com recuperação e os três Chefões, sem XP novo (2.194214ms)\n✔ sensorial: nível é somente XP e melhor sequência preserva intervalos civis e retomadas (0.47598ms)\n✔ sensorial: prova, discursiva e defesa em andamento mantêm o modo silencioso (0.21063ms)\n✔ sensorial: áudio é lazy, opcional, curto, limitado e interrompido ao sair ou mudar preferências (1.330649ms)\n✔ sensorial: liberação de áudio pendente não toca depois de cancelamento e falhas não quebram o estudo (0.381471ms)\nℹ tests 58\nℹ suites 0\nℹ pass 58\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 426.038637\n✔ catálogo mantém os 28 IDs oficiais e somente as três candidatas deste lote (16.988883ms)\n✔ três unidades canônicas validam e preservam o inventário das candidatas iniciais (367.371464ms)\n✔ reconstrução recupera exatamente o banco original, incluindo variantes e contexto (18.466111ms)\n✔ aliases entre unidades acompanham o destino final e mantêm a missão de origem (5.962824ms)\n✔ dados visuais, precisão UTM e prática preservam o suporte antes escondido na interface (0.409728ms)\n✔ candidatas e conteúdo apenas aprovado com ressalvas são recusados para uso operacional (18.488781ms)\n✔ trocar somente o status não contorna os achados impeditivos (10.657603ms)\n✔ aprovação futura exige todos os critérios, recursos e itens revisados (149.849771ms)\n✔ alteração editorial após o parecer invalida o digest mesmo com hashes locais recalculados (46.893395ms)\n✔ fonte parcial, dado vencido e data de verificação futura impedem promoção (163.408231ms)\n✔ mutação de texto ou perda de variante é detectada sem depender das contagens (13.697431ms)\n✔ gabarito inexistente e falta do visual são recusados mesmo em snapshot recalculado (52.203014ms)\n✔ originais, inventário e matriz Premium não podem ser substituídos por registros incompletos (37.48548ms)\n✔ reconstrução não ignora recursos extras nem referências divergentes (16.946448ms)\n✔ as 12 propostas de vínculo e as cinco famílias permanecem explícitas e não aplicadas (1.018226ms)\n✔ leitura funciona com somente o pacote de base, sem HTMLs, importadores ou banco ativo (354.8122ms)\n✔ IDs e versões de caminho inválidos são recusados antes de acessar arquivos (0.171469ms)\n✔ pacote de outra unidade ou versão é recusado mesmo sob um caminho registrado (23.346639ms)\n✔ nova candidata não substitui a versão aprovada nem exige reabrir o HTML legado (618.816966ms)\n✔ 0.1.1 continua íntegra quando o catálogo evolui e mantém todos os recursos e procedências (653.471321ms)\n✔ revisão recusa diferença não declarada, valor anterior falso e pacote pai alterado (107.029947ms)\n✔ mesmo uma revisão declarada não permite perder recursos, mudar gabarito ou alterar procedência (163.239613ms)\n✔ as 12 associações são corrigidas na candidata sem apagar as propostas e valores iniciais (7.381452ms)\n✔ distrator GMS tem identidade nova, valores distintos e não remapeia respostas antigas (19.819295ms)\n✔ cinco questões legadas recebem feedbacks específicos mantendo enunciados e respostas corretas (3.472782ms)\n✔ dez níveis são reavaliados e cinco itens saem de Elite sem inflar dificuldade ou alterar questões (25.420828ms)\n✔ cinco famílias vinculam dez questões sem contá-las como novidade independente (36.842409ms)\n✔ perfil mantém números e SVG e explicita esquema sem escala; par Landsat acompanha g10 (26.7072ms)\n✔ fontes parciais têm conferência direta delimitada e o endpoint USGS não recebe verificação inventada (0.292789ms)\n✔ candidatas corrigidas continuam sem aprovação humana, sem consumo operacional e sem falsas provas FGV (14.578837ms)\n✔ 0.1.2 continua íntegra após a promoção e preserva as identidades, alternativas e gabaritos de 0.1.1 (569.252283ms)\n✔ 44 questões perdem os feedbacks genéricos e 137 distratores recebem explicações individuais (1.271273ms)\n✔ r11 passa para Concurso sem reescrever o item ou inflar o estoque Elite (0.292913ms)\n✔ mapa hipotético tem grade, escala, símbolos e posições coerentes com o SVG e a alternativa textual (7.222204ms)\n✔ mapa obrigatório é autossuficiente e PDF histórico fica complementar sem acesso inventado (18.234366ms)\n✔ mapa rejeita escala incoerente, coordenadas fora do recorte e conteúdo ativo ou sem acesso textual (1.081731ms)\n✔ parecer por IA identifica delegação, cobre os recursos e não permite conteúdo alterado ou autoria humana fictícia (85.839908ms)\n✔ cadeia valida também a revisão intermediária e recusa ciclos antes de carregar o próprio pacote (202.2191ms)\n✔ 1.0.0 aprova por revisão delegada explícita, preservando integralmente os textos de 0.1.2 (201.361651ms)\n✔ revisão delegada recusa decisão por item ausente, autoria humana fictícia e alteração posterior (89.165669ms)\n✔ consumo delegado exige escopo autorizado no catálogo e habilitação explícita (43.850264ms)\n✔ cadeia da canônica continua validada quando existe outra candidata em auditoria (136.630247ms)\nℹ tests 42\nℹ suites 0\nℹ pass 42\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 4344.29085\n✔ banco operacional contém exatamente a base revisada das três unidades e seus suportes (3.170649ms)\n✔ build canônica funciona apenas com os pacotes, sem HTMLs ou importadores legados (854.059942ms)\n✔ tentativa atual registra versão editorial e alternativa, sem apagar sua identidade de origem (1.262853ms)\n✔ migração conserva agenda, XP, rascunhos, tentativas e cópia exata; não transfere erro a outro conceito (6.371181ms)\n✔ erro misto conserva cópia integral e mantém somente ocorrências compatíveis no caderno ativo (0.471048ms)\n✔ restaurar backup antigo executa a mesma migração, sem novo XP ou perda do histórico (1.511677ms)\n✔ gravação posterior de aba antiga é reconciliada mesmo com o marcador atual presente (0.99273ms)\n✔ migração sem armazenamento mantém dados em memória e permite exportação válida (1.198863ms)\n✔ trocar formulações da mesma família não gera XP imediato nem diversidade independente (2.317045ms)\n✔ evidências antigas de familiares próximos são preservadas e não inflam domínio atual (1.586275ms)\n✔ estimativa aplica a classificação canônica sem reescrever o registro histórico de Elite (0.25971ms)\n✔ família conhecida pelo legado reduz novidade e é ordenada depois das não vistas (8.966257ms)\n✔ prova recusa estoque artificialmente inflado por duas questões da mesma família (6.475092ms)\n✔ recompensa antiga por um membro impede primeiro-acerto duplicado por outro (0.394323ms)\n✔ outro membro da mesma família não satisfaz os dois contextos para erro convertido (1.289885ms)\n✔ prova registra respostas e versões e mantém gabaritos após retomar a sessão (0.863604ms)\n✔ backup recusa versões e histórico editorial malformados sem rejeitar esquema 6 antigo (1.187202ms)\nℹ tests 17\nℹ suites 0\nℹ pass 17\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 899.698069\n"
+    },
+    {
+      "command": "npm run check:canonical",
+      "result": "passed",
+      "sha256": "c4f9ba73ffdd68587c74ee6170b11ab0b760275b51f0a5a9b6c58caf735f1477",
+      "output": "\n> missao-aprovacao-geografia@0.1.0 check:canonical\n> node scripts/canonical-content.mjs\n\n{\n  \"summaries\": [\n    {\n      \"unit\": \"cartografia-fundamentos\",\n      \"version\": \"1.0.0\",\n      \"status\": \"APROVADA_CANONICA\",\n      \"resources\": 277,\n      \"parity\": 272,\n      \"approved\": true\n    },\n    {\n      \"unit\": \"cartografia-representacao\",\n      \"version\": \"1.0.0\",\n      \"status\": \"APROVADA_CANONICA\",\n      \"resources\": 183,\n      \"parity\": 172,\n      \"approved\": true\n    },\n    {\n      \"unit\": \"geotecnologias\",\n      \"version\": \"1.0.0\",\n      \"status\": \"APROVADA_CANONICA\",\n      \"resources\": 231,\n      \"parity\": 241,\n      \"approved\": true\n    }\n  ],\n  \"untouchedUnits\": 25,\n  \"canonicalUnits\": 3\n}\n"
+    },
+    {
+      "command": "node scripts/build-v6.mjs --check",
+      "result": "passed",
+      "sha256": "cd4b1350a36ebedb301f0844d741080cca230ce850498a65fe59ae979ac37314",
+      "output": "{\"stages\":50,\"questions\":161,\"legacyQuestions\":125,\"authored\":36,\"cards\":120,\"legacyCards\":151,\"game\":256,\"legacyGame\":302,\"recalls\":39,\"canonicalRecalls\":39,\"writing\":6}\n"
+    },
+    {
+      "command": "Prettier --check",
+      "result": "passed",
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20",
+      "output": "Checking formatting...\nAll matched files use Prettier code style!\n"
+    }
+  ],
+  "node_tests": {
+    "total": 122,
+    "content": 5,
+    "frozen_pilot_engine": 58,
+    "canonical_contract": 42,
+    "canonical_consumer": 17,
+    "failed": 0,
+    "skipped": 0
+  },
+  "browser": {
+    "global": {
+      "startTime": "2026-10-16T20:21:24.407Z",
+      "duration": 200629.79799999998,
+      "expected": 166,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "profile_recheck": {
+      "startTime": "2026-10-16T20:27:01.938Z",
+      "duration": 3856.781,
+      "expected": 2,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "profile_cases_overlap_global": true,
+    "results": "integracao-canonica/navegador.json",
+    "global_source_inputs": "integracao-canonica/fontes-suite-global.json",
+    "source_delta_after_global_run": [
+      {
+        "path": "src/v6/styles.css",
+        "global_suite_sha256": "d8c498a6726cef6a5a17de7f6b1450c8e72f372df33be817c2539b63c995699d",
+        "final_sha256": "313c5cbbe90e54c1481fcf823f2d83dc999869585824eaa5b9fa9c47161f0128"
+      },
+      {
+        "path": "tests/browser/canonical.spec.ts",
+        "global_suite_sha256": "5c08b3fee2a161dd41e0af723955d1293361e7e4af05a7e93e4995168af67c19",
+        "final_sha256": "38b6fb606add9acd6a8c460ea52a126649e1414243abe5769a0a50cf03695f54"
+      }
+    ],
+    "final_delta_validation": "Final build and both profile scenarios passed; only profile label font-size and its assertion changed after the global suite. Global runtime JS/data inputs remained identical.",
+    "external_network_requests": "blocked by test routes; external assets intentionally fail gracefully",
+    "observed_javascript_errors": 0,
+    "raw_global_report_sha256": "d17fd74587916c032b39067594431c7680b7c54ffbf85ae839864041b7e3b539",
+    "raw_profile_report_sha256": "486872ad3510c734bba0085e407d1a4d3dbb9857870725a5f1a2ccfd2f3e7d93"
+  },
+  "math_verification": {
+    "schema_version": 1,
+    "reviewer_kind": "ai",
+    "reviewer": "Codex",
+    "review_date": "2026-10-16",
+    "reviewed_version": "1.0.0",
+    "source_commit": "8ab19368fb402a606d5645160e67d482ad850b19",
+    "runtime_bank_sha256": "574b248f3b9180dac5633d5d304eddc5598a98e4f150df8b087ecee341b2af05",
+    "checks": [
+      {
+        "item_id": "v6-fix-ae06798f90e822d3",
+        "unit_id": "cartografia-fundamentos",
+        "formula": "-(42+30/60)",
+        "computed": "-85/2",
+        "expected": "-85/2",
+        "correct_option_id": "v6-fix-ae06798f90e822d3-oe65276cfd6",
+        "correct_text": "−42,5°",
+        "checks": "independent recalculation + candidate answer text",
+        "passed": true
+      },
+      {
+        "item_id": "v6-fix-d57efa12d8d469c7",
+        "unit_id": "cartografia-fundamentos",
+        "formula": "round(-(20+45/60+14/3600),3)",
+        "computed": "-20.754",
+        "expected": "-20.754",
+        "correct_option_id": "v6-fix-d57efa12d8d469c7-od0874266df",
+        "correct_text": "−20,754°",
+        "checks": "independent recalculation + candidate answer text",
+        "passed": true
+      },
+      {
+        "item_id": "v6-fix-d3b66da76f246248",
+        "unit_id": "cartografia-fundamentos",
+        "formula": "6.5*100000/100000 km",
+        "computed": "13/2",
+        "expected": "13/2",
+        "correct_option_id": "v6-fix-d3b66da76f246248-occ450b4d78",
+        "correct_text": "6,5 km",
+        "checks": "independent recalculation + candidate answer text",
+        "passed": true
+      },
+      {
+        "item_id": "v6-fix-5f0730f3bd5ef3ce",
+        "unit_id": "cartografia-fundamentos",
+        "formula": "12*100000/4",
+        "computed": "300000",
+        "expected": "300000",
+        "correct_option_id": "v6-fix-5f0730f3bd5ef3ce-o5479d65d5d",
+        "correct_text": "1:300.000",
+        "checks": "independent recalculation + candidate answer text",
+        "passed": true
+      },
+      {
+        "item_id": "v6-fix-ba07a3382fd4f8f0",
+        "unit_id": "cartografia-fundamentos",
+        "formula": "80000/2",
+        "computed": "40000",
+        "expected": "40000",
+        "correct_option_id": "v6-fix-ba07a3382fd4f8f0-o18dc311d41",
+        "correct_text": "1:40.000",
+        "checks": "independent recalculation + candidate answer text",
+        "passed": true
+      },
+      {
+        "item_id": "v6-fix-81d39388e7e83625",
+        "unit_id": "cartografia-fundamentos",
+        "formula": "8*25000/100000 km",
+        "computed": "2",
+        "expected": "2",
+        "correct_option_id": "v6-fix-81d39388e7e83625-o1955c89cab",
+        "correct_text": "2 km",
+        "checks": "independent recalculation + candidate answer text",
+        "passed": true
+      },
+      {
+        "item_id": "v6-fix-8a27b1529f0b322d",
+        "unit_id": "cartografia-fundamentos",
+        "formula": "7.2*50000/100000 km",
+        "computed": "18/5",
+        "expected": "18/5",
+        "correct_option_id": "v6-fix-8a27b1529f0b322d-odf0318ecc7",
+        "correct_text": "3,6 km",
+        "checks": "independent recalculation + candidate answer text",
+        "passed": true
+      },
+      {
+        "item_id": "v6-fix-4240d9a66446c554",
+        "unit_id": "cartografia-fundamentos",
+        "formula": "14+(-5-(-3))",
+        "computed": "12",
+        "expected": "12",
+        "correct_option_id": "v6-fix-4240d9a66446c554-o5313a5cbf5",
+        "correct_text": "12h",
+        "checks": "independent recalculation + candidate answer text",
+        "passed": true
+      },
+      {
+        "item_id": "v6-fix-f4785d7c2e276670",
+        "unit_id": "cartografia-fundamentos",
+        "formula": "75/15 hours",
+        "computed": "5",
+        "expected": "5",
+        "correct_option_id": "v6-fix-f4785d7c2e276670-od4b2910989",
+        "correct_text": "5 h",
+        "checks": "independent recalculation + candidate answer text",
+        "passed": true
+      },
+      {
+        "item_id": "v6-fix-921f6c66f1a18d4a",
+        "unit_id": "cartografia-fundamentos",
+        "formula": "45/15 hours, east positive",
+        "computed": "3",
+        "expected": "3",
+        "correct_option_id": "v6-fix-921f6c66f1a18d4a-oc30223bdd0",
+        "correct_text": "3 h adiantada",
+        "checks": "independent recalculation + candidate answer text",
+        "passed": true
+      },
+      {
+        "item_id": "v6-fix-59a03e4071862572",
+        "unit_id": "cartografia-fundamentos",
+        "formula": "30/15 hours",
+        "computed": "2",
+        "expected": "2",
+        "correct_option_id": "v6-fix-59a03e4071862572-oc4c01b3861",
+        "correct_text": "2 horas",
+        "checks": "independent recalculation + candidate answer text",
+        "passed": true
+      },
+      {
+        "item_id": "v6-fix-021ea0f23f590e47",
+        "unit_id": "cartografia-fundamentos",
+        "formula": "4*500000/100000 km",
+        "computed": "20",
+        "expected": "20",
+        "correct_option_id": "v6-fix-021ea0f23f590e47-occ63f92001",
+        "correct_text": "20 km",
+        "checks": "independent recalculation + candidate answer text",
+        "passed": true
+      },
+      {
+        "item_id": "v6-fix-3685fc1570f91cc0",
+        "unit_id": "cartografia-fundamentos",
+        "formula": "1*250000/100000 km",
+        "computed": "5/2",
+        "expected": "5/2",
+        "correct_option_id": "v6-fix-3685fc1570f91cc0-ob4057d80ae",
+        "correct_text": "2,5 km",
+        "checks": "independent recalculation + candidate answer text",
+        "passed": true
+      },
+      {
+        "item_id": "v6-fix-ace8da47b352aa60",
+        "unit_id": "cartografia-fundamentos",
+        "formula": "6*250000/100000 km",
+        "computed": "15",
+        "expected": "15",
+        "correct_option_id": "v6-fix-ace8da47b352aa60-o11dd4090d1",
+        "correct_text": "15 km",
+        "checks": "independent recalculation + candidate answer text",
+        "passed": true
+      },
+      {
+        "item_id": "v6-q-f01",
+        "unit_id": "cartografia-fundamentos",
+        "formula": "7.2*50000/100000 km",
+        "computed": "18/5",
+        "expected": "18/5",
+        "correct_option_id": "v6-q-f01-correct",
+        "correct_text": "3,6 km.",
+        "checks": "independent recalculation + candidate answer text",
+        "passed": true
+      },
+      {
+        "item_id": "v6-q-f02",
+        "unit_id": "cartografia-fundamentos",
+        "formula": "-(12+30/60)",
+        "computed": "-25/2",
+        "expected": "-25/2",
+        "correct_option_id": "v6-q-f02-correct",
+        "correct_text": "−12,5°.",
+        "checks": "independent recalculation + candidate answer text",
+        "passed": true
+      },
+      {
+        "item_id": "v6-q-f03",
+        "unit_id": "cartografia-fundamentos",
+        "formula": "Monday 23:30 + ((-3)-(-5))*60 minutes; divmod by 1440",
+        "computed": "(1, 90)",
+        "expected": "(1, 90)",
+        "correct_option_id": "v6-q-f03-correct",
+        "correct_text": "1h30 de terça-feira.",
+        "checks": "independent recalculation + candidate answer text",
+        "passed": true
+      },
+      {
+        "item_id": "v6-q-f06",
+        "unit_id": "cartografia-fundamentos",
+        "formula": "80000/2",
+        "computed": "40000",
+        "expected": "40000",
+        "correct_option_id": "v6-q-f06-correct",
+        "correct_text": "A nova escala numérica é 1:40.000 e a barra redimensionada continua válida.",
+        "checks": "independent recalculation + candidate answer text",
+        "passed": true
+      },
+      {
+        "item_id": "v6-q-f07",
+        "unit_id": "cartografia-fundamentos",
+        "formula": "(4*(50000/100000)^2 km2,4*2^2 cm2,50000/2)",
+        "computed": "(Fraction(1, 1), 16, Fraction(25000, 1))",
+        "expected": "(Fraction(1, 1), 16, Fraction(25000, 1))",
+        "correct_option_id": "v6-q-f07-correct",
+        "correct_text": "Área real de 1 km²; desenho de 16 cm² na nova escala 1:25.000.",
+        "checks": "independent recalculation + candidate answer text",
+        "passed": true
+      },
+      {
+        "item_id": "v6-q-f09",
+        "unit_id": "cartografia-fundamentos",
+        "formula": "Monday 22h + 5h flight + (2-(-3))h; divmod by 24",
+        "computed": "(1, 8)",
+        "expected": "(1, 8)",
+        "correct_option_id": "v6-q-f09-correct",
+        "correct_text": "Às 8h de terça-feira em B.",
+        "checks": "independent recalculation + candidate answer text",
+        "passed": true
+      },
+      {
+        "item_id": "v6-q-r04",
+        "unit_id": "cartografia-representacao",
+        "formula": "40/200*100 percent",
+        "computed": "20",
+        "expected": "20",
+        "correct_option_id": "v6-q-r04-correct",
+        "correct_text": "20%.",
+        "checks": "independent recalculation + candidate answer text",
+        "passed": true
+      },
+      {
+        "item_id": "v6-q-r07",
+        "unit_id": "cartografia-representacao",
+        "formula": "(10000/10,20000/100) hab/km2",
+        "computed": "(Fraction(1000, 1), Fraction(200, 1))",
+        "expected": "(Fraction(1000, 1), Fraction(200, 1))",
+        "correct_option_id": "v6-q-r07-correct",
+        "correct_text": "A: 1.000 hab./km²; B: 200 hab./km²; coroplético de densidade com legenda explícita.",
+        "checks": "independent recalculation + candidate answer text",
+        "passed": true
+      },
+      {
+        "item_id": "v6-q-r09",
+        "unit_id": "cartografia-representacao",
+        "formula": "(50000/10000 exaggeration,40/200*100 slope)",
+        "computed": "(Fraction(5, 1), Fraction(20, 1))",
+        "expected": "(Fraction(5, 1), Fraction(20, 1))",
+        "correct_option_id": "v6-q-r09-correct",
+        "correct_text": "Exagero vertical de 5 vezes e declividade média real de 20%.",
+        "checks": "independent recalculation + candidate answer text",
+        "passed": true
+      },
+      {
+        "item_id": "v6-q-g02",
+        "unit_id": "geotecnologias",
+        "formula": "2**14 levels",
+        "computed": "16384",
+        "expected": "16384",
+        "correct_option_id": "v6-q-g02-correct",
+        "correct_text": "16.384, associados à resolução radiométrica.",
+        "checks": "independent recalculation + candidate answer text",
+        "passed": true
+      },
+      {
+        "item_id": "v6-q-g07",
+        "unit_id": "geotecnologias",
+        "formula": "((.6-.2)/(.6+.2),(.02-.1)/(.02+.1))",
+        "computed": "(Fraction(1, 2), Fraction(-2, 3))",
+        "expected": "(Fraction(1, 2), Fraction(-2, 3))",
+        "correct_option_id": "v6-q-g07-correct",
+        "correct_text": "P tem NDVI 0,5 e Q cerca de −0,67; os valores são indícios espectrais e não identificam, sozinhos, espécie ou situação jurídica.",
+        "checks": "independent recalculation + candidate answer text",
+        "passed": true
+      }
+    ],
+    "passed": 25,
+    "failed": 0,
+    "limitation": "These checks validate the stated quantitative operations and current keys, not empirical item difficulty or all semantic correctness."
+  },
+  "counts": {
+    "stages": 50,
+    "questions": 161,
+    "legacyQuestions": 125,
+    "authored": 36,
+    "cards": 120,
+    "legacyCards": 151,
+    "game": 256,
+    "legacyGame": 302,
+    "recalls": 39,
+    "canonicalRecalls": 39,
+    "writing": 6
+  },
+  "resource_identities": 691,
+  "provenance_records": 685,
+  "duplicate_checks": {
+    "questions": [],
+    "cards": [],
+    "true_false": [],
+    "options_within_question": [],
+    "invalid_keys": []
+  },
+  "frozen_version_files": [
+    {
+      "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.0/audit.json",
+      "sha256": "f46f65f49c722cfc45a2fb1323fac17605b0c187303448dd1e1d4c32f5f29d30",
+      "bytes": 30092
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.0/audit.md",
+      "sha256": "0791ec85159a59c69afc218f1ddb6689e009ac055fff02204a0b0797c7c9a46f",
+      "bytes": 12126
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.0/changelog.md",
+      "sha256": "e89aac470e3ac3a761ab7c6f06e82c49c6e78e6b96c98913fad4313877fc929b",
+      "bytes": 858
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.0/content.json",
+      "sha256": "346805707898a1ed9cefd6cdb147828956fd36d36af614f96f4ee85eab218afb",
+      "bytes": 440604
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.0/provenance.json",
+      "sha256": "8866c919e3d993ebfc4e71897b7ad907618d7d089c2aae0d9c91bdbf004cbac1",
+      "bytes": 318602
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.1/audit.json",
+      "sha256": "a78f322d7865eddedc1395f76b75343e623ee91b0080911002c32f05fcdbae55",
+      "bytes": 36162
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.1/audit.md",
+      "sha256": "073b0bc1b6d8ccede5a851589eeb174e642c157b53c1b103e52a81ab57d5fba6",
+      "bytes": 5953
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.1/changelog.md",
+      "sha256": "09943465ec8c03db431cf573f472afa63fe0ec49a77545d6c5ee2a57fd092009",
+      "bytes": 717
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.1/changes.md",
+      "sha256": "06e7869c6d868dea72885f4ef77939217e9e168b43dbe1379154d45e9b687edc",
+      "bytes": 38584
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.1/content.json",
+      "sha256": "56698940f106902ee2e682c9e4bf280758e56e6a2d7829b3ed873ed2566fc5a8",
+      "bytes": 446006
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.1/provenance.json",
+      "sha256": "fabf36a7337fefe3d59db000936cccd25d4e6a45e652c5d36ed8f8e29682922e",
+      "bytes": 411206
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.1/review.md",
+      "sha256": "e8fe0c080bf58fe889f170a3f371b72d96b741ae8db1c555441d98f6ca5d50d0",
+      "bytes": 22613
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.2/audit.json",
+      "sha256": "a5762eb100348e9fcee9a2c0c6d2925602712ee7808025f41693d63aa992fe8b",
+      "bytes": 93671
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.2/audit.md",
+      "sha256": "f8fd5f4e797299d963877802a4b13716318324c0383de2bf01326485442c21bb",
+      "bytes": 8466
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.2/changelog.md",
+      "sha256": "3872664631157f0a9931520dc30263f0c953590a493eb087d2ec1aad0dc59f44",
+      "bytes": 571
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.2/changes.md",
+      "sha256": "8e5d0734464f90b3e914f9e97bb76ff7a898a219eae6ad4b9129b6438c397246",
+      "bytes": 46563
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.2/content.json",
+      "sha256": "9ccd46a4b4c51804df2d5f6496b6517476f57df71d626d7be6462ce8b0b69705",
+      "bytes": 458699
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.2/provenance.json",
+      "sha256": "f0bfe83301b881607fa901c2c8c4e3f83aa18c29eb84b5e711c4403186cccf88",
+      "bytes": 392433
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.2/review.md",
+      "sha256": "8676aabaca0c72d6c8b606a224045399aed170e91b797b446bcf9e18b3835eeb",
+      "bytes": 51163
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.0/audit.json",
+      "sha256": "eba49d357822bc14f813734e784112d2e1a4b2563342542bc3a7b302d75474cd",
+      "bytes": 24571
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.0/audit.md",
+      "sha256": "a8e3f3b4b64b1f62765ed1405211cc6a0fd767161fdeb43b4217dee0cca2ebfc",
+      "bytes": 13284
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.0/changelog.md",
+      "sha256": "72b9ce4eaabc333f61a576790403ed182b2363d482d5a3f7572e983bac5a2a69",
+      "bytes": 860
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.0/content.json",
+      "sha256": "82e605d90d0e64718bbedb1b37beba0580a4a4af07f746328dc5ae0e566ed866",
+      "bytes": 327862
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.0/provenance.json",
+      "sha256": "b85402ec1da739c9631416a7bbb93320b0be31804d4e5279be790ddb0222ea16",
+      "bytes": 213296
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.1/audit.json",
+      "sha256": "fb1f2c1edcc9c893ec34211d8ea4e41387260cfc52257aafc761f0264327e269",
+      "bytes": 30785
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.1/audit.md",
+      "sha256": "2487c4286767198c935c63ec2c977d32f69530aaa4c8bbb7ea7f28aacaae6638",
+      "bytes": 6697
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.1/changelog.md",
+      "sha256": "aebf85252d4688244335dcc15cefe4a736fb98484a680cbe60080460b6ee5aaf",
+      "bytes": 719
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.1/changes.md",
+      "sha256": "37426188159f294419b2192515bc4f8cee2d02d42f34357184a2b4b8d8584b33",
+      "bytes": 30014
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.1/content.json",
+      "sha256": "6aa80e8245c8382b251c7aa559490ca44a2997777a1eb8516b0ed278912e79f3",
+      "bytes": 334980
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.1/provenance.json",
+      "sha256": "c2a934b1669d8b631654bceebd1aae9e7adb4252cd156ecd85b67d5be7c8b259",
+      "bytes": 288968
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.1/review.md",
+      "sha256": "7e026b4acfd52fac94255fbb04d15ee614d0a65cd1c24c81f22fa0f2290a4491",
+      "bytes": 21211
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.2/audit.json",
+      "sha256": "9bc7db17d283c77fc22a8c9e69176d338243a2d98e173ffac336b213ab771d6f",
+      "bytes": 74380
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.2/audit.md",
+      "sha256": "ac1072804c5608c0031fe760d7f876954a6dea07e3cfb72532ec8c9738938a48",
+      "bytes": 8061
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.2/changelog.md",
+      "sha256": "cc83bff2128c0321b4a571585ee49d5efdb138b686a6af0604d05c03124313e6",
+      "bytes": 573
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.2/changes.md",
+      "sha256": "ad832aeb7e9819cd1bd0e00fdae0cd60294bae305bf9b0cccbeb0895d7814c7e",
+      "bytes": 29876
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.2/content.json",
+      "sha256": "7bccd7519362c7a4c690dfd41b8bceecd5a2cf06c23764e1f7c9fcedab29de19",
+      "bytes": 333668
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.2/provenance.json",
+      "sha256": "136951d4549c033bb782045d45252d4bee21c1f2c8aab1654e9cc977d6404960",
+      "bytes": 265902
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.2/review.md",
+      "sha256": "298073414e2eae4a9985d0662db2a1a09df6648623a15876b179c2e83c97d9e7",
+      "bytes": 49963
+    },
+    {
+      "path": "base-conhecimento/cartografia/geotecnologias/0.1.0/audit.json",
+      "sha256": "4e10bd5e7ea5717d8558f1d03369190f542ec1e3832e358e3a5e982dbe709710",
+      "bytes": 25204
+    },
+    {
+      "path": "base-conhecimento/cartografia/geotecnologias/0.1.0/audit.md",
+      "sha256": "5fba377e620388a0d5e836321a06d9e8dde38ecdea5f8c1ecf7e295e8a51cb59",
+      "bytes": 13938
+    },
+    {
+      "path": "base-conhecimento/cartografia/geotecnologias/0.1.0/changelog.md",
+      "sha256": "e9f78ca27cf3a81f417c97b181eaa7cd23f5569a9e918350f9080f1b858f4733",
+      "bytes": 849
+    },
+    {
+      "path": "base-conhecimento/cartografia/geotecnologias/0.1.0/content.json",
+      "sha256": "a1f49ce29fbcfccd9e035ed65c3f4aa48bc9bda79abe8e5fc49d9012047b2e71",
+      "bytes": 407781
+    },
+    {
+      "path": "base-conhecimento/cartografia/geotecnologias/0.1.0/provenance.json",
+      "sha256": "d72506ead9097d85929a4cee90170520e35d60f86acb139c605ba6655ec75c85",
+      "bytes": 295103
+    },
+    {
+      "path": "base-conhecimento/cartografia/geotecnologias/0.1.1/audit.json",
+      "sha256": "5b2f37961779a724ea0954a8899b295cacb7aeb67e46959e3df24204ec04e51a",
+      "bytes": 29126
+    },
+    {
+      "path": "base-conhecimento/cartografia/geotecnologias/0.1.1/audit.md",
+      "sha256": "bf3fa48cd72d19ea4486565845f0c32a66a64b54a0c40f9f06cf8d3299e2241d",
+      "bytes": 6510
+    },
+    {
+      "path": "base-conhecimento/cartografia/geotecnologias/0.1.1/changelog.md",
+      "sha256": "7f53b623493f46f154599cf4f39f47f041979fee75c23c4da4b12b9a9c122420",
+      "bytes": 708
+    },
+    {
+      "path": "base-conhecimento/cartografia/geotecnologias/0.1.1/changes.md",
+      "sha256": "39c5eb1bf8ecea4710340bb05acfae6d47e254e69496fc52a43ad4251d878ab2",
+      "bytes": 26532
+    },
+    {
+      "path": "base-conhecimento/cartografia/geotecnologias/0.1.1/content.json",
+      "sha256": "46f1cb3b80bb1b6cf33879dd48db1746e2a5b0b75c103f35380fc9fb12d7a302",
+      "bytes": 415464
+    },
+    {
+      "path": "base-conhecimento/cartografia/geotecnologias/0.1.1/provenance.json",
+      "sha256": "70f7be7a7be16fb24bb0a38641c28c6750120c1126c8f2d4977cb3885b5fcb61",
+      "bytes": 360397
+    },
+    {
+      "path": "base-conhecimento/cartografia/geotecnologias/0.1.1/review.md",
+      "sha256": "b6b97091c7c5e0f7774ba7dd608199df0927921dd455d6ad21444f6bfd7c5470",
+      "bytes": 25532
+    },
+    {
+      "path": "base-conhecimento/cartografia/geotecnologias/0.1.2/audit.json",
+      "sha256": "2bc2345d10588626a893458b6b621a24fd8abd3ce912015b3de2391e121fb8ef",
+      "bytes": 86199
+    },
+    {
+      "path": "base-conhecimento/cartografia/geotecnologias/0.1.2/audit.md",
+      "sha256": "d2e0bdb7dda84a8412bd775423dbf5d29320d28c61c1db7d0fbf3584e07981fd",
+      "bytes": 8074
+    },
+    {
+      "path": "base-conhecimento/cartografia/geotecnologias/0.1.2/changelog.md",
+      "sha256": "188faaf2da35dfd63814aa24025d0b18bd8873a7d30ef315fbeaf8d8efa90ff7",
+      "bytes": 562
+    },
+    {
+      "path": "base-conhecimento/cartografia/geotecnologias/0.1.2/changes.md",
+      "sha256": "0d65fdf4db4b304f8650885033ffbff3e5e74e2f3e01500e05b2ee04bebfd2c3",
+      "bytes": 59033
+    },
+    {
+      "path": "base-conhecimento/cartografia/geotecnologias/0.1.2/content.json",
+      "sha256": "7bb2352b7f1d756d2739597d004c07d5d61b1da56236dc22c94e4690d9c95798",
+      "bytes": 413837
+    },
+    {
+      "path": "base-conhecimento/cartografia/geotecnologias/0.1.2/provenance.json",
+      "sha256": "f5edde8a69dbb4d315990bcdf2b70748bace091e8c238e638f3d4d7f0ea19bc5",
+      "bytes": 397392
+    },
+    {
+      "path": "base-conhecimento/cartografia/geotecnologias/0.1.2/review.md",
+      "sha256": "525fd1da634595c9bd8b9ff215cda1803c79b0f20c4b6ee9534e7292509494b0",
+      "bytes": 58758
+    }
+  ],
+  "approved_version_files": [
+    {
+      "path": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/audit.json",
+      "sha256": "c6dc22dbacdea40777581e6d2358ca77bb9fb70c78a9ede31be06b50db7e3634",
+      "bytes": 107556
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/audit.md",
+      "sha256": "e6062e1f1b001dbd83cb8c7d28044dc89df808e2819ad59ac538010dae3b192d",
+      "bytes": 6472
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/changelog.md",
+      "sha256": "16d18ebce62f1e5a2af32b9435e50643a78db1875ae7d1e38ca137fda7e29bba",
+      "bytes": 464
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/changes.md",
+      "sha256": "ecbe4f055bfa4de0b925f6a28b937cbd5376788a7996133609e9902c434ac7f4",
+      "bytes": 685
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+      "sha256": "3107aeaf8bec872fb243f852107457784f515cc865f9ddd4c2147e561449d70a",
+      "bytes": 459940
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/provenance.json",
+      "sha256": "e24b349337c3a32709a95dbe3c1f41bf6698fde5a128a2e1527ab1b700208c12",
+      "bytes": 518631
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/review.md",
+      "sha256": "c073b0d7b5db07c4e972518ddc2abb077d0b8eddd916a94462763ebeb536e142",
+      "bytes": 394
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/audit.json",
+      "sha256": "aadf92e14d8bd3c3d18896de78c7e05d3c67082b9888b4a2b99c4efd33eee0e3",
+      "bytes": 87803
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/audit.md",
+      "sha256": "6f93579804206be3998ffe3131270be7d3b96a3d7abb05f4bc6d9a317ab5f806",
+      "bytes": 6321
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/changelog.md",
+      "sha256": "16d18ebce62f1e5a2af32b9435e50643a78db1875ae7d1e38ca137fda7e29bba",
+      "bytes": 464
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/changes.md",
+      "sha256": "ae001918194f34f82839f7e9da5931bec4da225bdab06d5349bc1fae0f702b3f",
+      "bytes": 687
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+      "sha256": "99a719319c4b8ace339b5141630ee8a0d5a216d51be752f5c6977e46c281b185",
+      "bytes": 334288
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/provenance.json",
+      "sha256": "c633c843a4a30630984960a9bb0fe0f8de35e590b6cf0ea08d49406d5f59e5c5",
+      "bytes": 362307
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/review.md",
+      "sha256": "98738d3d9cbe53414067ca6bc296001a1f38f788aea2fa52be6d2a57a5b98df3",
+      "bytes": 396
+    },
+    {
+      "path": "base-conhecimento/cartografia/geotecnologias/1.0.0/audit.json",
+      "sha256": "d4f0361921ce5d1b17f5c3d4c3c303601d4407cf009188f393a34dc1912993e4",
+      "bytes": 97928
+    },
+    {
+      "path": "base-conhecimento/cartografia/geotecnologias/1.0.0/audit.md",
+      "sha256": "daaee6997dab1035084827c208f14a029574d69e2381d12a6021a8500f30cb57",
+      "bytes": 6327
+    },
+    {
+      "path": "base-conhecimento/cartografia/geotecnologias/1.0.0/changelog.md",
+      "sha256": "16d18ebce62f1e5a2af32b9435e50643a78db1875ae7d1e38ca137fda7e29bba",
+      "bytes": 464
+    },
+    {
+      "path": "base-conhecimento/cartografia/geotecnologias/1.0.0/changes.md",
+      "sha256": "a62d43562e1029fd5cb8a934fb46b97c5d2ec3dcd8fec6a722743305410fb6c3",
+      "bytes": 676
+    },
+    {
+      "path": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+      "sha256": "a4d1b399e62a41529919d0fbfefd470a09fae2af40852a266297fe6d792b284d",
+      "bytes": 413193
+    },
+    {
+      "path": "base-conhecimento/cartografia/geotecnologias/1.0.0/provenance.json",
+      "sha256": "1702fdef7e8a85c9a318e26872cea28fad4749fa2de1346ce10816389a236ea4",
+      "bytes": 477052
+    },
+    {
+      "path": "base-conhecimento/cartografia/geotecnologias/1.0.0/review.md",
+      "sha256": "cf5be4b330078e36cc6ad3233c17a3898909f934929fb28daaaf877b4b1a8633",
+      "bytes": 385
+    }
+  ],
+  "runtime_bank": {
+    "path": "public/v6/cartografia.json",
+    "sha256": "574b248f3b9180dac5633d5d304eddc5598a98e4f150df8b087ecee341b2af05",
+    "bytes": 1437428
+  },
+  "protected_paths_unchanged": [
+    "*.html",
+    ".github",
+    "package-lock.json",
+    "src/App.tsx",
+    "src/legacy-routes.ts",
+    "base-conhecimento/cartografia/baseline-piloto.json",
+    "base-conhecimento/cartografia/*/0.1.0/*",
+    "base-conhecimento/cartografia/*/0.1.1/*",
+    "base-conhecimento/cartografia/*/0.1.2/*",
+    "MissaoAprovacaoGeo/V6_FASE14_PARIDADE.json"
+  ],
+  "artifacts": [
+    {
+      "path": "integracao-canonica/fontes-suite-global.json",
+      "sha256": "0785be7e8e1ea55543e7cbe64d315e8ed9d3c0e5869c6740383adcc0b25a3b76",
+      "bytes": 10252
+    },
+    {
+      "path": "integracao-canonica/landsat-descricao-indisponivel.png",
+      "sha256": "c9442aba885bb2720d7866ab82eee33c9b77377f167185cec54a4628a1f676d9",
+      "bytes": 84480
+    },
+    {
+      "path": "integracao-canonica/mapa-claro-390.png",
+      "sha256": "c355c002c8b7b7d6a4bd7e8392d0825486a253c010fba7555340f1af7110726c",
+      "bytes": 15582
+    },
+    {
+      "path": "integracao-canonica/mapa-escuro-320.png",
+      "sha256": "fd20e7f8cc7bd278a520bd4475d0a683c1b1269ee8ea2e28173091cd0a6703fe",
+      "bytes": 11648
+    },
+    {
+      "path": "integracao-canonica/mapa-escuro-390.png",
+      "sha256": "9f515c32d629c69963540ba058a27d928bed123d4751f1924c02732c85b5e345",
+      "bytes": 15647
+    },
+    {
+      "path": "integracao-canonica/navegador.json",
+      "sha256": "b7b93822654f57debc579d05766e265c5036ee5274cd5c6eaa618e6017dcbb98",
+      "bytes": 34389
+    },
+    {
+      "path": "integracao-canonica/perfil-escuro-mobile.png",
+      "sha256": "199584ee9e7715e4a264000d56c2da8e61b66022d90f52488c7ef1dc4a964337",
+      "bytes": 31931
+    }
+  ],
+  "protected_remote_refs_observed_before_delivery": {
+    "main": "d33acb4b544ea01ed501807603f9b9288f9ac830",
+    "v6-planejamento": "fc8023b9b99cf2978f21e613e43d232aa53643b0",
+    "v6-piloto-cartografia": "690692389b8c665c7eff4bb7b34d10be5fdabba8"
+  },
+  "delivery": {
+    "merge": false,
+    "publication": false,
+    "pages_workflow_run": false,
+    "other_modules_migrated": false
+  },
+  "limits": [
+    "No empirical difficulty calibration or learning-outcome guarantee.",
+    "External image binaries and legacy IBGE PDF access remain unconfirmed; descriptions and optional status are preserved.",
+    "No new human comfort test of sensory intensity/audio.",
+    "Full official exam remains unavailable; other areas have not been migrated.",
+    "Progress remains local, with no cross-device synchronization.",
+    "Canonical temporal references retain their explicit verification dates and review deadlines."
+  ]
+}
