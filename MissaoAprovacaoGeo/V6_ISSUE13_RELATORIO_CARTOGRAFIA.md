@@ -9,6 +9,8 @@ A Issue #13 foi iniciada após o usuário autorizar o [encerramento técnico com
 
 **As três unidades permanecem `EM_AUDITORIA`; nenhuma foi promovida para `APROVADA_CANONICA`.** Testes técnicos e este parecer assistido não substituem aprovação editorial humana. O registro das 28 unidades não significa execução de 28 auditorias: as outras 25 não receberam auditoria, exportação de conteúdo ou migração neste lote.
 
+A [verificação técnica do lote](V6_ISSUE13_RELATORIO_TESTES_CARTOGRAFIA.md) registra build e **82 testes aprovados**, reconstrução exata do banco e bloqueios contra promoção incompleta. Seus resultados não resolvem as pendências editoriais abaixo.
+
 ## Inventário integral das candidatas
 
 | Unidade | Missões | Teoria | Questões | Cards | V/F | Recalls | Discursivas | Procedências |

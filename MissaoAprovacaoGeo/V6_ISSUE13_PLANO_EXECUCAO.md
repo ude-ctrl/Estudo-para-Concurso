@@ -35,3 +35,7 @@ Depois de uma futura promoção para `APROVADA_CANONICA`, a versão aprovada ser
 Cada uma das três candidatas deve ter conteúdo completo, auditoria, procedência, versão, achados e status explícito. A verificação técnica deve demonstrar preservação e rejeição de uma promoção incompleta. A aprovação editorial humana não pode ser substituída por sucesso dos testes ou por este comando de implementação.
 
 Não fazer merge, publicar, iniciar outros módulos ou encerrar a Issue no GitHub automaticamente.
+
+## Entrega do primeiro lote
+
+As três candidatas `0.1.0` e os pareceres assistidos estão disponíveis no [relatório de Cartografia](V6_ISSUE13_RELATORIO_CARTOGRAFIA.md). A [verificação técnica](V6_ISSUE13_RELATORIO_TESTES_CARTOGRAFIA.md) passou com build e 82 testes. Nenhuma unidade foi promovida: a revisão humana e a resolução dos achados editoriais permanecem como próxima etapa.
