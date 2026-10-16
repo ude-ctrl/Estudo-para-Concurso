@@ -711,7 +711,8 @@ test('V6: exportar e restaurar mantém rascunhos; cópia incompatível não subs
 test('V6: dark mode, teclado, movimento reduzido e layouts 360–430 px', async ({ page }, info) => {
   await page.emulateMedia({ colorScheme: 'dark', reducedMotion: 'reduce' });
   await page.goto('./v6.html');
-  await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+  // The loading screen also has an h1; wait for the workspace before testing its tab order.
+  await expect(page.locator('.welcome h1')).toBeVisible();
   expect(
     await page.evaluate(() =>
       getComputedStyle(document.documentElement).getPropertyValue('--paper').trim(),
@@ -733,7 +734,7 @@ test('V6: dark mode, teclado, movimento reduzido e layouts 360–430 px', async 
       './v6.html#/configuracoes',
     ]) {
       await page.goto(url);
-      await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+      await expect(page.locator('#conteudo')).toBeVisible();
       expect(
         await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),
       ).toBeTruthy();
@@ -754,6 +755,7 @@ test('V6: dark mode, teclado, movimento reduzido e layouts 360–430 px', async 
       .evaluate((el) => getComputedStyle(el).transitionDuration),
   ).toBe('0s');
   await page.goto('./v6.html');
+  await expect(page.locator('.welcome h1')).toBeVisible();
   await page.screenshot({ path: info.outputPath('v6-home-mobile.png'), fullPage: true });
 });
 test('V6: mídia externa indisponível tem descrição e explicação continua acessível', async ({

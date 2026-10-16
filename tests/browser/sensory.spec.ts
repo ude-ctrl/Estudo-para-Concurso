@@ -574,6 +574,7 @@ test('Sensorial: mobile, dark e ampliação preservam controles e percurso sem o
 }, info) => {
   await page.emulateMedia({ colorScheme: 'dark', reducedMotion: 'reduce' });
   await page.goto('./');
+  await expect(page.locator('.journey-map')).toBeVisible();
   for (const width of [360, 390, 430]) {
     await page.setViewportSize({ width, height: 844 });
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(
