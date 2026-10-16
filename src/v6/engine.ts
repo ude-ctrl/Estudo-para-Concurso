@@ -11,6 +11,7 @@ import type {
   State,
   UnitId,
 } from './types.ts';
+import { parseTrainingPool } from './training-session.ts';
 export const DAY = 86_400_000;
 export const STATE_KEY = 'missaoGeo.v6.cartografia';
 export const ERROR_KEY = 'missaoGeo.v6.errors';
@@ -739,6 +740,7 @@ export function parseState(raw: string): State {
     o.resume &&
     (!isObject(o.resume) ||
       typeof o.resume.mission !== 'string' ||
+      (o.resume.pool !== undefined && parseTrainingPool(o.resume.pool) === undefined) ||
       !['cartografia-fundamentos', 'cartografia-representacao', 'geotecnologias'].includes(
         String(o.resume.unit),
       ) ||

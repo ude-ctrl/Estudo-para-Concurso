@@ -418,6 +418,9 @@ export default function App() {
   const lesson = catalog.lessons.find((item) => item.id === route.id),
     resource = catalog.resources.find((item) => item.id === route.id);
   const lastLesson = catalog.lessons.find((item) => item.id === preferences.lastVisited);
+  const favoriteCount = catalog.lessons.filter((item) =>
+    preferences.favorites.includes(item.id),
+  ).length;
   const started = catalog.lessons.filter((item) => progress.get(item.id)?.started).length;
   const complete = catalog.lessons.filter((item) => progress.get(item.id)?.percent === 100).length;
   const heading =
@@ -487,7 +490,7 @@ export default function App() {
           >
             <Bookmark size={19} />
             Favoritos
-            {preferences.favorites.length > 0 && <span>{preferences.favorites.length}</span>}
+            {favoriteCount > 0 && <span>{favoriteCount}</span>}
           </button>
         </nav>
         <a className="resource-link" href={assetUrl('index.html')}>

@@ -1,5 +1,7 @@
 export type UnitId = 'cartografia-fundamentos' | 'cartografia-representacao' | 'geotecnologias';
 export type Mode = 'estudo' | 'treino' | 'revisao' | 'prova';
+export type TrainingPool =
+  'fixacao' | 'concurso' | 'elite' | 'diagnostico' | 'pos-teste' | 'chefao';
 export type Rating = 'errei' | 'dificil' | 'bom' | 'facil';
 export type ErrorType = 'E1' | 'E2' | 'E3' | 'E4' | 'E5' | 'E6' | 'E7' | 'E8';
 export interface LegacyRef {
@@ -204,7 +206,7 @@ export interface State {
     ambiguous: boolean;
   }[];
   exposures: Record<string, number>;
-  resume?: { unit: UnitId; mode: Mode; mission: string };
+  resume?: { unit: UnitId; mode: Mode; mission: string; pool?: TrainingPool };
   exam?: ExamSession;
   writingHistory: {
     id: string;

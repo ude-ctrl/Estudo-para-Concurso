@@ -1,10 +1,11 @@
 import { createContext, useContext } from 'react';
-import type { Content, Mode, State, UnitId } from './types';
+import type { Content, Mode, State, TrainingPool, UnitId } from './types';
 export interface Route {
   page: 'home' | 'unit' | 'errors' | 'settings';
   unit: UnitId;
   mode: Mode;
   mission: string;
+  pool?: TrainingPool;
 }
 export const V6Context = createContext<{
   content: Content;

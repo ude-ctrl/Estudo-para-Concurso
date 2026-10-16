@@ -24,6 +24,7 @@ import { Celebration } from './Celebration';
 import { recognize } from './recognition';
 import type { Milestone } from './recognition';
 import { canonicalLegacyRoute } from '../legacy-routes';
+import { parseTrainingPool, trainingHref } from './training-session';
 import type { Content, Mode, State, UnitId } from './types';
 const firstUnit: UnitId = 'cartografia-fundamentos';
 function parseRoute(): Route {
@@ -55,6 +56,7 @@ function parseRoute(): Route {
     unit,
     mode,
     mission: url.searchParams.get('missao') || '',
+    pool: mode === 'treino' ? parseTrainingPool(url.searchParams.get('banco')) : undefined,
   };
 }
 function Settings({
@@ -381,10 +383,25 @@ function Workspace({ content }: { content: Content }) {
   }
   useEffect(() => {
     const onHash = () => {
-      setRoute(parseRoute());
+      const next = parseRoute();
+      const focusedFilter = document.activeElement?.getAttribute('data-training-filter');
+      const keepFilterFocus =
+        next.page === 'unit' &&
+        next.mode === 'treino' &&
+        (focusedFilter === 'bank' || focusedFilter === 'mission');
+      setRoute(next);
       setCelebration(null);
       window.scrollTo({ top: 0, behavior: 'instant' });
       requestAnimationFrame(() => {
+        const filter = keepFilterFocus
+          ? main.current?.querySelector<HTMLElement>(
+              `select[data-training-filter="${focusedFilter}"]`,
+            )
+          : null;
+        if (filter) {
+          filter.focus();
+          return;
+        }
         const heading = main.current?.querySelector<HTMLElement>('h1');
         heading?.setAttribute('tabindex', '-1');
         heading?.focus();
@@ -406,14 +423,17 @@ function Workspace({ content }: { content: Content }) {
   useEffect(() => {
     if (route.page === 'unit') {
       const ms = content.missions.filter((m) => m.unit === route.unit),
-        mission = ms.find((m) => m.id === route.mission)?.id || ms[0].id;
+        mission =
+          ms.find((m) => m.id === route.mission)?.id || (route.mode === 'estudo' ? ms[0].id : ''),
+        pool = route.mode === 'treino' ? route.pool : undefined;
       if (
         state.resume?.unit !== route.unit ||
         state.resume?.mode !== route.mode ||
-        state.resume?.mission !== mission
+        state.resume?.mission !== mission ||
+        state.resume?.pool !== pool
       )
         update((s) => {
-          s.resume = { unit: route.unit, mode: route.mode, mission };
+          s.resume = { unit: route.unit, mode: route.mode, mission, pool };
         });
     }
   }, [route, content]);
@@ -563,7 +583,7 @@ function Workspace({ content }: { content: Content }) {
           ) : route.mode === 'estudo' ? (
             <Study key={route.mission + route.unit} />
           ) : route.mode === 'treino' ? (
-            <Training key={route.unit} />
+            <Training key={trainingHref(route.unit, route.mission, route.pool)} />
           ) : route.mode === 'revisao' ? (
             <Review key={route.unit} />
           ) : (

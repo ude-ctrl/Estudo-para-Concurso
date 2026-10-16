@@ -208,6 +208,9 @@ test('Cartografia não auditada não é pesquisável, favoritada ou recomendada;
   );
   await page.goto('./biblioteca.html');
   await expect(page.locator('.resume-card')).not.toContainText('Cartografia II');
+  await expect(page.locator('.main-nav').getByRole('button', { name: /Favoritos/ })).toHaveText(
+    'Favoritos',
+  );
   await page.getByRole('searchbox').fill('Cartografia II');
   await expect(page.locator('.lesson-card')).toHaveCount(0);
   await page.getByRole('button', { name: 'Limpar busca', exact: true }).click();
@@ -233,4 +236,37 @@ test('Cartografia não auditada não é pesquisável, favoritada ou recomendada;
   );
   await page.goto(`./#/missao/${t01.id}`);
   await expect(page.frameLocator('iframe').locator('#tab-study')).toBeVisible();
+});
+
+test('P3: contador considera favoritos ativos únicos e mantém os arquivados na cópia', async ({
+  page,
+}) => {
+  const key = 'missao-geografia:preferences:v1';
+  const favorites = ['lesson-76fbd0d2b7a4', 'lesson-76fbd0d2b7a4', t01.id, t01.id, 'unknown-id'];
+  await page.addInitScript(
+    ({ key, favorites }) => {
+      if (!localStorage.getItem(key))
+        localStorage.setItem(key, JSON.stringify({ favorites, lastVisited: null }));
+    },
+    { key, favorites },
+  );
+  await page.goto('./biblioteca.html');
+  const button = page.locator('.main-nav').getByRole('button', { name: /Favoritos/ });
+  await expect(button).toHaveText('Favoritos1');
+  await button.click();
+  await expect(page.locator('.lesson-card')).toHaveCount(1);
+  const downloaded = page.waitForEvent('download');
+  await page.getByRole('button', { name: 'Salvar cópia do progresso', exact: true }).click();
+  const backup = JSON.parse(await readFile((await (await downloaded).path())!, 'utf8'));
+  expect(backup.preferences.favorites).toEqual(favorites);
+  await page
+    .getByRole('button', { name: `Remover dos favoritos: ${t01.title}`, exact: true })
+    .click();
+  await expect(button).toHaveText('Favoritos');
+  await expect(page.locator('.lesson-card')).toHaveCount(0);
+  await page.reload();
+  await expect(button).toHaveText('Favoritos');
+  expect(
+    await page.evaluate((key) => JSON.parse(localStorage.getItem(key)!).favorites, key),
+  ).toEqual(favorites.filter((id) => id !== t01.id));
 });

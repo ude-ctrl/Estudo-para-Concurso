@@ -4,6 +4,7 @@ import { useV6 } from './context';
 import { CompassArt, Html, ModeLink, Provenance, studyLink } from './components';
 import { attempt, mastery, priorityErrors, streak, totalXP } from './engine';
 import { describeMilestone } from './recognition';
+import { trainingHref, trainingSessionMatches } from './training-session';
 import type { Recall, UnitId } from './types';
 export function Mastery({ unit }: { unit: UnitId }) {
   const { content, state } = useV6();
@@ -49,7 +50,23 @@ export function Home() {
     );
   const sections = content.missions.flatMap((m) => m.sections),
     read = sections.filter((x) => state.read[x.id]).length;
-  const nextMission = content.missions.find((m) => m.id === resume?.mission) || content.missions[0];
+  const nextMission =
+    content.missions.find((m) => m.id === resume?.mission) ||
+    content.missions.find((m) => m.unit === resume?.unit) ||
+    content.missions[0];
+  const canResumeTraining =
+    resume?.mode === 'treino' &&
+    trainingSessionMatches(content, state.session, { unit: resume.unit });
+  const resumeHref =
+    resume?.mode === 'treino'
+      ? trainingHref(
+          resume.unit,
+          canResumeTraining ? '' : resume.mission,
+          canResumeTraining ? undefined : resume.pool,
+        )
+      : resume
+        ? `#/unidade/${resume.unit}/${resume.mode}${resume.mission ? '?missao=' + resume.mission : ''}`
+        : '';
   const weak = priorityErrors(state)
     .filter((e) => e.status !== 'dominado-apos-erro')
     .slice(0, 3);
@@ -80,7 +97,7 @@ export function Home() {
             dueUnit
               ? `#/unidade/${dueUnit}/revisao`
               : resume
-                ? `#/unidade/${resume.unit}/${resume.mode}?missao=${resume.mission}`
+                ? resumeHref
                 : `#/unidade/${first}/estudo`
           }
         >
@@ -93,11 +110,7 @@ export function Home() {
         </a>
         <a
           className="quiet-link"
-          href={
-            due && resume
-              ? `#/unidade/${resume.unit}/${resume.mode}?missao=${resume.mission}`
-              : `#/unidade/${resume?.unit || first}/revisao`
-          }
+          href={due && resume ? resumeHref : `#/unidade/${resume?.unit || first}/revisao`}
         >
           {due && resume ? 'Continuar meu percurso' : 'Preparar minha revisão'}
         </a>

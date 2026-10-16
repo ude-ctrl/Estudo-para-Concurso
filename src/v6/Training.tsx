@@ -3,6 +3,7 @@ import { useV6 } from './context';
 import { Feedback, Provenance, Visual, studyLink } from './components';
 import { attempt, identifyGame, nextQuestions } from './engine';
 import type { Question, State } from './types';
+import { parseTrainingPool, trainingHref, trainingSessionMatches } from './training-session';
 function diagnostic(state: State, key: string): { hits: number; total: number } | null {
   try {
     const value = JSON.parse(state.drafts[key] || 'null');
@@ -100,8 +101,18 @@ export function QuestionRunner() {
     <article className="exercise" ref={ref} tabIndex={-1}>
       <div className="exercise-meta">
         <span>
-          {q.pool === 'elite' ? 'FGV Elite' : q.pool === 'concurso' ? 'Concurso' : 'Fixação'} · D
-          {q.difficulty} · C{q.cognitive}
+          {ses.pool === 'diagnostico'
+            ? 'Diagnóstico'
+            : ses.pool === 'pos-teste'
+              ? 'Pós-teste'
+              : ses.pool === 'chefao'
+                ? 'Chefão'
+                : q.pool === 'elite'
+                  ? 'FGV Elite'
+                  : q.pool === 'concurso'
+                    ? 'Concurso'
+                    : 'Fixação'}{' '}
+          · D{q.difficulty} · C{q.cognitive}
         </span>
         <span>
           {ses.position + 1} / {ses.ids.length}
@@ -317,20 +328,16 @@ export function GameRunner() {
 }
 export function Training() {
   const { content, state, route, update } = useV6(),
-    [pool, setPool] = useState(
-      new URLSearchParams(location.hash.split('?')[1]).get('banco') === 'diagnostico'
-        ? 'diagnostico'
-        : 'fixacao',
-    ),
+    pool = route.pool || 'fixacao',
+    mission = route.mission,
     [game, setGame] = useState(false),
     [timed, setTimed] = useState(false),
-    [mission, setMission] = useState(route.mission || '');
-  const active =
-    state.session &&
-    state.session.kind !== 'cards' &&
-    state.session.ids.some((id) =>
-      [...content.questions, ...content.game].some((x) => x.id === id && x.unit === route.unit),
+    [completedOnEntry] = useState(() =>
+      state.session && state.session.position >= state.session.ids.length ? state.session.id : null,
     );
+  const active =
+    trainingSessionMatches(content, state.session, route) &&
+    (!(route.mission || route.pool) || state.session?.id !== completedOnEntry);
   const available = content.questions.filter(
     (q) =>
       q.unit === route.unit &&
@@ -372,7 +379,17 @@ export function Training() {
             <>
               <label className="field-label">
                 Banco
-                <select value={pool} onChange={(e) => setPool(e.target.value)}>
+                <select
+                  data-training-filter="bank"
+                  value={pool}
+                  onChange={(e) => {
+                    location.hash = trainingHref(
+                      route.unit,
+                      mission,
+                      parseTrainingPool(e.target.value),
+                    );
+                  }}
+                >
                   <option value="fixacao">Fixação — fundamentos e memória</option>
                   <option value="concurso">Concurso — aplicação A–E</option>
                   <option value="elite">FGV Elite — integração A–E</option>
@@ -383,7 +400,13 @@ export function Training() {
               </label>
               <label className="field-label">
                 Missão
-                <select value={mission} onChange={(e) => setMission(e.target.value)}>
+                <select
+                  data-training-filter="mission"
+                  value={mission}
+                  onChange={(e) => {
+                    location.hash = trainingHref(route.unit, e.target.value, pool);
+                  }}
+                >
                   <option value="">Todas desta unidade</option>
                   {content.missions
                     .filter((m) => m.unit === route.unit)
@@ -437,8 +460,8 @@ export function Training() {
           ) : (
             <>
               <p>
-                Verdadeiro ou falso, sempre com explicação. Não há perda de vidas nem bônus por
-                repetir o mesmo acerto.
+                Rodada da unidade: verdadeiro ou falso, sempre com explicação. Não há perda de vidas
+                nem bônus por repetir o mesmo acerto.
               </p>
               <label className="check">
                 <input
@@ -450,7 +473,7 @@ export function Training() {
               </label>
               <button
                 className="primary"
-                onClick={() =>
+                onClick={() => {
                   update((s) => {
                     const ids = content.game
                       .filter((g) => g.unit === route.unit)
@@ -479,8 +502,10 @@ export function Training() {
                       repeat: [],
                       deadline: timed ? Date.now() + 20_000 : undefined,
                     };
-                  })
-                }
+                  });
+                  // Starting the unit Game is an explicit change of activity, not a question-bank route.
+                  location.hash = trainingHref(route.unit);
+                }}
               >
                 Iniciar 10 afirmações
               </button>

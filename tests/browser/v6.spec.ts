@@ -168,6 +168,294 @@ test('V6: estudo orienta treino da mesma missão sem rótulos Cartografia I/II',
   }
 });
 
+for (const entry of ['./', './v6.html'])
+  for (const finished of [false, true]) {
+    test(`P1: Escalas respeita o atalho com Orientação ${finished ? 'concluída' : 'em andamento'} em ${entry}`, async ({
+      page,
+    }) => {
+      const training = `${entry}#/unidade/${fund}/treino?missao=orientacao-azimute`;
+      await page.goto(training);
+      await page.getByRole('button', { name: 'Iniciar questões', exact: true }).click();
+      const initial = await page.evaluate(
+        (key) => JSON.parse(localStorage.getItem(key)!),
+        STATE_KEY,
+      );
+      const n = finished ? initial.session.ids.length : 1;
+      for (let i = 0; i < n; i++) {
+        const q = content.questions.find((q) => q.id === initial.session.ids[i])!;
+        await expect(page.locator('.question-options legend')).toHaveText(q.prompt);
+        await page
+          .getByRole('radio')
+          .nth(q.options.findIndex((o) => o.id === q.correct))
+          .check();
+        await page.getByRole('button', { name: 'Confirmar resposta', exact: true }).click();
+        await page
+          .getByRole('button', {
+            name: i + 1 === initial.session.ids.length ? 'Concluir rodada' : 'Próxima questão',
+            exact: true,
+          })
+          .click();
+      }
+      if (finished)
+        await expect(
+          page.getByRole('heading', { name: 'Rodada concluída', exact: true }),
+        ).toBeVisible();
+      const before = await page.evaluate(
+        (key) => JSON.parse(localStorage.getItem(key)!),
+        STATE_KEY,
+      );
+      await page.goto(`${entry}#/unidade/${fund}/estudo?missao=escalas-e-medidas`);
+      await page
+        .getByRole('button', { name: 'Registrar que estudei esta explicação', exact: true })
+        .first()
+        .click();
+      await page
+        .getByRole('link', { name: 'Testar este raciocínio sem consulta', exact: true })
+        .click();
+      await expect(page.getByRole('combobox', { name: 'Missão', exact: true })).toHaveValue(
+        'escalas-e-medidas',
+      );
+      await expect(page.locator('.exercise')).toHaveCount(0);
+      await expect(
+        page.getByRole('heading', { name: 'Rodada concluída', exact: true }),
+      ).toHaveCount(0);
+      await page.reload();
+      await expect(page.getByRole('combobox', { name: 'Missão', exact: true })).toHaveValue(
+        'escalas-e-medidas',
+      );
+      let saved = await page.evaluate((key) => JSON.parse(localStorage.getItem(key)!), STATE_KEY);
+      expect(saved.session).toEqual(before.session);
+      expect(saved.evidence).toEqual(before.evidence);
+      expect(saved.awards).toEqual(before.awards);
+      await page.getByRole('button', { name: 'Iniciar questões', exact: true }).click();
+      await expect(page.locator('.exercise')).toContainText('Escalas e medidas');
+      saved = await page.evaluate((key) => JSON.parse(localStorage.getItem(key)!), STATE_KEY);
+      expect(saved.session.id).not.toBe(before.session.id);
+      expect(
+        saved.session.ids.every(
+          (id: string) =>
+            content.questions.find((q) => q.id === id)?.mission === 'escalas-e-medidas',
+        ),
+      ).toBe(true);
+      expect(saved.evidence).toEqual(before.evidence);
+      expect(saved.awards).toEqual(before.awards);
+      await page.reload();
+      await expect(page.locator('.exercise')).toContainText('Escalas e medidas');
+      await page
+        .locator('.main-navigation')
+        .getByRole('link', { name: 'Início', exact: true })
+        .click();
+      await page.getByRole('link', { name: 'Continuar de onde parei', exact: true }).click();
+      await expect(page.locator('.exercise')).toContainText('Escalas e medidas');
+      expect(
+        await page.evaluate((key) => JSON.parse(localStorage.getItem(key)!).session.id, STATE_KEY),
+      ).toBe(saved.session.id);
+    });
+  }
+
+for (const previous of [
+  { kind: 'questions', pool: 'fixacao', finished: false },
+  { kind: 'questions', pool: 'fixacao', finished: true },
+  { kind: 'questions', pool: 'diagnostico', finished: true },
+  { kind: 'game', pool: undefined, finished: false },
+  { kind: 'cards', pool: undefined, finished: false },
+] as const) {
+  test(`P1: Diagnosticar com sessão anterior ${previous.kind}/${previous.pool || 'fila'}/${previous.finished}`, async ({
+    page,
+  }) => {
+    const state = fresh();
+    const ids =
+      previous.kind === 'questions'
+        ? content.questions
+            .filter(
+              (q) =>
+                q.unit === fund &&
+                (previous.pool === 'diagnostico'
+                  ? q.roles.includes('diagnostico')
+                  : q.mission === 'orientacao-azimute' && q.pool === 'fixacao'),
+            )
+            .map((q) => q.id)
+        : (previous.kind === 'game' ? content.game : content.cards)
+            .filter((item) => item.unit === fund)
+            .slice(0, 3)
+            .map((item) => item.id);
+    state.session = {
+      id: 'round-before-diagnostic',
+      kind: previous.kind,
+      pool: previous.pool,
+      ids,
+      position: previous.finished ? ids.length : 0,
+      repeat: [],
+    };
+    await page.addInitScript(
+      ({ key, state }) => {
+        if (!localStorage.getItem(key)) localStorage.setItem(key, JSON.stringify(state));
+      },
+      { key: STATE_KEY, state },
+    );
+    await page.goto('./');
+    await page.getByRole('link', { name: 'Diagnosticar', exact: true }).click();
+    await expect(page.getByRole('combobox', { name: 'Banco', exact: true })).toHaveValue(
+      'diagnostico',
+    );
+    await expect(page.getByRole('combobox', { name: 'Missão', exact: true })).toHaveValue('');
+    await expect(page.locator('.exercise, .session-finish')).toHaveCount(0);
+    expect(
+      await page.evaluate((key) => JSON.parse(localStorage.getItem(key)!).session, STATE_KEY),
+    ).toEqual(state.session);
+    await page.getByRole('button', { name: 'Iniciar questões', exact: true }).click();
+    await expect(page.locator('.exercise-meta')).toContainText('Diagnóstico');
+    const saved = await page.evaluate((key) => JSON.parse(localStorage.getItem(key)!), STATE_KEY);
+    expect(saved.session.pool).toBe('diagnostico');
+    expect(saved.session.id).not.toBe(state.session.id);
+    expect(
+      saved.session.ids.every((id: string) =>
+        content.questions.some(
+          (q) => q.id === id && q.unit === fund && q.roles.includes('diagnostico'),
+        ),
+      ),
+    ).toBe(true);
+    expect(saved.evidence).toEqual(state.evidence);
+    expect(saved.awards).toEqual(state.awards);
+    await page.reload();
+    await expect(page.locator('.exercise-meta')).toContainText('Diagnóstico');
+    expect(
+      await page.evaluate((key) => JSON.parse(localStorage.getItem(key)!).session.id, STATE_KEY),
+    ).toBe(saved.session.id);
+  });
+}
+
+test('P1: mudança de missão e banco na mesma tela sincroniza filtros e permite voltar à rodada compatível', async ({
+  page,
+}) => {
+  await page.goto(path(fund, 'treino', 'orientacao-azimute'));
+  await page.getByRole('button', { name: 'Iniciar questões', exact: true }).click();
+  await page.evaluate((unit) => {
+    location.hash = `/unidade/${unit}/treino?missao=escalas-e-medidas`;
+  }, fund);
+  await expect(page.getByRole('combobox', { name: 'Missão', exact: true })).toHaveValue(
+    'escalas-e-medidas',
+  );
+  await page.getByRole('combobox', { name: 'Banco', exact: true }).focus();
+  await page.getByRole('combobox', { name: 'Banco', exact: true }).selectOption('concurso');
+  await expect(page).toHaveURL(/banco=concurso/);
+  await expect(page.getByRole('combobox', { name: 'Banco', exact: true })).toBeFocused();
+  await page.keyboard.press('ArrowDown');
+  await expect(page.getByRole('combobox', { name: 'Banco', exact: true })).toHaveValue('elite');
+  await expect(page.getByRole('combobox', { name: 'Banco', exact: true })).toBeFocused();
+  await page.keyboard.press('ArrowUp');
+  await expect(page.getByRole('combobox', { name: 'Banco', exact: true })).toHaveValue('concurso');
+  await page.getByRole('combobox', { name: 'Missão', exact: true }).focus();
+  await page.getByRole('combobox', { name: 'Missão', exact: true }).selectOption('coordenadas-gms');
+  await expect(page).toHaveURL(/missao=coordenadas-gms/);
+  await expect(page.getByRole('combobox', { name: 'Missão', exact: true })).toBeFocused();
+  await page.getByRole('button', { name: 'Iniciar questões', exact: true }).click();
+  await expect(page.locator('.exercise-meta')).toContainText('Concurso');
+  const saved = await page.evaluate((key) => JSON.parse(localStorage.getItem(key)!), STATE_KEY);
+  expect(
+    saved.session.ids.every(
+      (id: string) => content.questions.find((q) => q.id === id)?.mission === 'coordenadas-gms',
+    ),
+  ).toBe(true);
+  await page.evaluate((unit) => {
+    location.hash = `/unidade/${unit}/treino?banco=diagnostico`;
+  }, fund);
+  await expect(page.getByRole('combobox', { name: 'Banco', exact: true })).toHaveValue(
+    'diagnostico',
+  );
+  await expect(page.getByRole('combobox', { name: 'Missão', exact: true })).toHaveValue('');
+  await page.goBack();
+  await expect(page.locator('.exercise-meta')).toContainText('Concurso');
+  expect(
+    await page.evaluate((key) => JSON.parse(localStorage.getItem(key)!).session.id, STATE_KEY),
+  ).toBe(saved.session.id);
+});
+
+test('P1: Continuar retoma sessão antiga sem impor a missão de retomada artificial', async ({
+  page,
+}) => {
+  const state = fresh(),
+    q = content.questions.find(
+      (q) => q.unit === fund && q.mission === 'orientacao-azimute' && q.pool === 'concurso',
+    )!;
+  state.session = {
+    id: 'saved-before-p1',
+    kind: 'questions',
+    pool: 'concurso',
+    ids: [q.id],
+    position: 0,
+    repeat: [],
+  };
+  state.resume = { unit: fund, mode: 'treino', mission: 'linguagem-cartografica' };
+  await page.addInitScript(
+    ({ key, state }) => {
+      if (!localStorage.getItem(key)) localStorage.setItem(key, JSON.stringify(state));
+    },
+    { key: STATE_KEY, state },
+  );
+  await page.goto('./');
+  await page.getByRole('link', { name: 'Continuar de onde parei', exact: true }).click();
+  await expect(page.locator('.exercise')).toContainText('Orientação e azimute');
+  await expect(page.locator('.exercise-meta')).toContainText('Concurso');
+  expect(
+    await page.evaluate((key) => JSON.parse(localStorage.getItem(key)!).session.id, STATE_KEY),
+  ).toBe(state.session.id);
+});
+
+test('P1: destino de diagnóstico sem sessão persiste ao continuar e recarregar', async ({
+  page,
+}) => {
+  await page.goto('./');
+  await page.getByRole('link', { name: 'Diagnosticar', exact: true }).click();
+  await expect(page.getByRole('combobox', { name: 'Banco', exact: true })).toHaveValue(
+    'diagnostico',
+  );
+  await page.getByRole('link', { name: 'Início', exact: true }).click();
+  await page.getByRole('link', { name: 'Continuar de onde parei', exact: true }).click();
+  await expect(page.getByRole('combobox', { name: 'Banco', exact: true })).toHaveValue(
+    'diagnostico',
+  );
+  await expect(page.getByRole('combobox', { name: 'Missão', exact: true })).toHaveValue('');
+  await page.reload();
+  await expect(page.getByRole('combobox', { name: 'Banco', exact: true })).toHaveValue(
+    'diagnostico',
+  );
+  expect(
+    await page.evaluate((key) => JSON.parse(localStorage.getItem(key)!).resume, STATE_KEY),
+  ).toMatchObject({ unit: fund, mode: 'treino', mission: '', pool: 'diagnostico' });
+});
+
+test('P1: escolher Game em um treino contextual abre a rodada da unidade e permite retornar às questões', async ({
+  page,
+}) => {
+  await page.goto(path(fund, 'treino', 'escalas-e-medidas'));
+  await page.getByRole('button', { name: 'Game V/F', exact: true }).click();
+  await expect(page.getByText('Rodada da unidade:', { exact: false })).toBeVisible();
+  await page.getByRole('button', { name: 'Iniciar 10 afirmações', exact: true }).click();
+  await expect(page.locator('.game-exercise')).toBeVisible();
+  await expect(page).not.toHaveURL(/[?&](missao|banco)=/);
+  const saved = await page.evaluate((key) => JSON.parse(localStorage.getItem(key)!), STATE_KEY);
+  expect(saved.session.kind).toBe('game');
+  await page.reload();
+  await expect(page.locator('.game-exercise')).toBeVisible();
+  await page.goto(path(fund, 'estudo', 'escalas-e-medidas'));
+  await page
+    .getByRole('button', { name: 'Registrar que estudei esta explicação', exact: true })
+    .first()
+    .click();
+  await page
+    .getByRole('link', { name: 'Testar este raciocínio sem consulta', exact: true })
+    .click();
+  await expect(page.getByRole('combobox', { name: 'Missão', exact: true })).toHaveValue(
+    'escalas-e-medidas',
+  );
+  expect(
+    await page.evaluate((key) => JSON.parse(localStorage.getItem(key)!).session.id, STATE_KEY),
+  ).toBe(saved.session.id);
+  await page.getByRole('button', { name: 'Iniciar questões', exact: true }).click();
+  await expect(page.locator('.exercise')).toContainText('Escalas e medidas');
+});
+
 test('V6: Difícil agenda recuperação com esforço e mantém Caderno de Erros vazio', async ({
   page,
 }) => {

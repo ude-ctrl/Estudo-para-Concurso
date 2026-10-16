@@ -29,6 +29,7 @@ import { assembleBlueprint, officialBlueprint } from '../src/v6/engine.ts';
 import { Repository } from '../src/v6/repository.ts';
 import { recognize } from '../src/v6/recognition.ts';
 import { editorialReplacements } from '../scripts/v6-editorial.mjs';
+import { trainingSessionMatches } from '../src/v6/training-session.ts';
 const { content: c, parity } = await buildV6(),
   now = Date.UTC(2026, 9, 15, 12),
   sha = (x) =>
@@ -798,4 +799,54 @@ test('restaurar backup anterior não mantém marcos ou sessão ausentes da cópi
   assert.equal(r.state.session, undefined);
   assert.equal(r.state.milestones, undefined);
   assert.equal(JSON.parse(m.getItem(STATE_KEY + '.before-restore')).milestones['streak:7'], now);
+});
+
+test('P1: compatibilidade exige todos os IDs no destino, tipo e banco solicitado', () => {
+  const unit = 'cartografia-fundamentos',
+    mission = 'orientacao-azimute';
+  const question = c.questions.find((q) => q.mission === mission && q.pool === 'fixacao');
+  const otherMission = c.questions.find((q) => q.unit === unit && q.mission !== mission);
+  const otherUnit = c.questions.find((q) => q.unit !== unit);
+  const session = {
+    id: 'old-save',
+    kind: 'questions',
+    ids: [question.id],
+    pool: 'fixacao',
+    position: 0,
+    repeat: [],
+  };
+  assert.equal(trainingSessionMatches(c, session, { unit }), true);
+  assert.equal(trainingSessionMatches(c, session, { unit, mission }), true);
+  assert.equal(trainingSessionMatches(c, session, { unit, mission: 'escalas-e-medidas' }), false);
+  assert.equal(trainingSessionMatches(c, session, { unit, pool: 'diagnostico' }), false);
+  for (const id of [otherMission.id, otherUnit.id, 'unknown-id'])
+    assert.equal(
+      trainingSessionMatches(c, { ...session, ids: [question.id, id] }, { unit, mission }),
+      false,
+    );
+  assert.equal(
+    trainingSessionMatches(c, { ...session, ids: [question.id, otherUnit.id] }, { unit }),
+    false,
+  );
+  assert.equal(trainingSessionMatches(c, { ...session, ids: [] }, { unit }), false);
+  assert.equal(trainingSessionMatches(c, undefined, { unit }), false);
+  const game = { ...session, kind: 'game', ids: [c.game.find((g) => g.unit === unit).id] };
+  assert.equal(trainingSessionMatches(c, game, { unit }), true);
+  assert.equal(trainingSessionMatches(c, game, { unit, mission }), false);
+  assert.equal(trainingSessionMatches(c, game, { unit, pool: 'diagnostico' }), false);
+  assert.equal(trainingSessionMatches(c, { ...session, kind: 'cards' }, { unit }), false);
+});
+test('P1: retomada conserva banco opcional e aceita backups anteriores sem inventar banco', () => {
+  const s = fresh();
+  s.resume = { unit: 'cartografia-fundamentos', mode: 'treino', mission: '' };
+  assert.deepEqual(parseState(JSON.stringify(s)), s);
+  assert.equal(parseState(JSON.stringify(s)).resume.pool, undefined);
+  for (const pool of ['fixacao', 'concurso', 'elite', 'diagnostico', 'pos-teste', 'chefao']) {
+    s.resume.pool = pool;
+    assert.equal(parseState(JSON.stringify(s)).resume.pool, pool);
+  }
+  for (const pool of [null, [], ['fixacao'], {}, 1, 'outro']) {
+    s.resume.pool = pool;
+    assert.throws(() => parseState(JSON.stringify(s)), /Retomada/);
+  }
 });
