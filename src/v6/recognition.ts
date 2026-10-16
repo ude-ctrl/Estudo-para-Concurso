@@ -1,5 +1,6 @@
 import { localDay, streak } from './engine.ts';
 import type { Content, State } from './types.ts';
+import { expeditionComplete, missionComplete } from './sensory.ts';
 
 export interface Milestone {
   id: string;
@@ -10,7 +11,17 @@ export interface Milestone {
 export function describeMilestone(id: string, content: Content): Milestone {
   const [kind, key] = id.split(':');
   const unit = content.units.find((u) => u.id === key);
+  const mission = content.missions.find((m) => m.id === key);
+  const concept = content.concepts.find((c) => c.id === key);
   const copy: Record<string, [string, string]> = {
+    mission: [
+      'Checkpoint alcançado',
+      `${mission?.title || 'Missão'}: leitura completa e recuperação registradas. Conclusão do percurso não significa domínio.`,
+    ],
+    module: [
+      'Expedição Cartográfica concluída',
+      'As três unidades tiveram leitura, recuperação e Chefão superado. Seu percurso está completo; a estimativa de domínio e as revisões continuam independentes.',
+    ],
     unit: [
       'Percurso da unidade concluído',
       `${unit?.title || 'Unidade'}: todas as explicações registradas e recuperação em cada missão. A retenção continua sendo verificada após intervalos.`,
@@ -25,7 +36,7 @@ export function describeMilestone(id: string, content: Content): Milestone {
     ],
     error: [
       'Erro convertido em domínio',
-      'Você confirmou a recuperação em outro contexto e após intervalos. Esse avanço veio de evidência de aprendizagem.',
+      `${concept?.name || 'Um raciocínio'}: recuperação confirmada em outro contexto e após intervalos. Esse avanço veio de evidência de aprendizagem.`,
     ],
     streak: [
       `${key} dias de ritmo`,
@@ -100,6 +111,11 @@ export function recognize(content: Content, before: State, after: State, at: num
     const stillDue = cards.some((c) => after.reviews[c.id]?.due <= at);
     if (unit && wasDue && !stillDue) ids.push('reviews:' + unit + ':' + localDay(at));
   }
+  for (const mission of content.missions)
+    if (!missionComplete(mission, before) && missionComplete(mission, after))
+      ids.push('mission:' + mission.id);
+  if (!expeditionComplete(content, before) && expeditionComplete(content, after, ids))
+    ids.push('module:cartografia');
   const earned = [...new Set(ids)].filter((id) => after.milestones?.[id] === undefined);
   if (earned.length) {
     after.milestones ??= {};

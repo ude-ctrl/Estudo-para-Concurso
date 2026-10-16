@@ -4,6 +4,7 @@ import { Provenance, studyLink } from './components';
 import { errorLabels, priorityErrors, rateCard, reviewQueue, schedule } from './engine';
 import { Mastery } from './Study';
 import type { ErrorType, Rating, UnitId } from './types';
+import { RoundProgress, RoundSummary } from './SensoryUI';
 const ratings: { id: Rating; label: string }[] = [
   { id: 'errei', label: 'Errei' },
   { id: 'dificil', label: 'Difícil' },
@@ -28,6 +29,7 @@ function Cards() {
     return (
       <div className="session-finish">
         <h2>Revisão concluída por hoje</h2>
+        <RoundSummary />
         <p>
           A agenda foi atualizada a cada avaliação. Cartões com dificuldade voltam antes; os demais
           ganham intervalo.
@@ -66,6 +68,7 @@ function Cards() {
           {ses.position + 1} / {ses.ids.length}
         </span>
       </div>
+      <RoundProgress />
       <h2 tabIndex={-1} ref={front}>
         {card.front}
       </h2>

@@ -4,6 +4,7 @@ import { Feedback, Provenance, Visual, studyLink } from './components';
 import { attempt, identifyGame, nextQuestions } from './engine';
 import type { Question, State } from './types';
 import { parseTrainingPool, trainingHref, trainingSessionMatches } from './training-session';
+import { ResponseSignal, RoundProgress, RoundSummary } from './SensoryUI';
 function diagnostic(state: State, key: string): { hits: number; total: number } | null {
   try {
     const value = JSON.parse(state.drafts[key] || 'null');
@@ -79,6 +80,7 @@ export function QuestionRunner() {
     return (
       <div className="session-finish">
         <h2>Rodada concluída</h2>
+        <RoundSummary />
         <p>
           {state.evidence.filter((e) => e.context === ses.id && e.correct).length} de{' '}
           {ses.ids.length} respostas corretas nesta rodada. Repetições próximas não acrescentam
@@ -118,6 +120,7 @@ export function QuestionRunner() {
           {ses.position + 1} / {ses.ids.length}
         </span>
       </div>
+      <RoundProgress />
       <p className="micro">
         {content.missions.find((m) => m.id === q.mission)?.title} · {q.origin}
       </p>
@@ -227,6 +230,7 @@ export function GameRunner() {
     return (
       <div className="session-finish">
         <h2>Rodada de V/F concluída</h2>
+        <RoundSummary />
         <p>
           As justificativas fazem parte do treino. Os erros continuam no caderno para recuperação
           após intervalo.
@@ -255,6 +259,7 @@ export function GameRunner() {
           </span>
         )}
       </div>
+      <RoundProgress />
       <h2>{g.statement}</h2>
       <p>Decida primeiro. Depois, confira o mecanismo e a formulação correta.</p>
       <div className="button-row">
@@ -268,6 +273,7 @@ export function GameRunner() {
       {ses.answered && (
         <>
           <div ref={feedbackRef} className="feedback" tabIndex={-1}>
+            <ResponseSignal item={g.id} />
             <h3>
               {state.drafts[key] === String(g.truth)
                 ? 'Decisão correta'
@@ -421,6 +427,26 @@ export function Training() {
                 {available.length} questões disponíveis. Até 10 por rodada, priorizando as menos
                 vistas.
               </p>
+              {pool === 'chefao' && (
+                <aside className="boss-briefing">
+                  <span className="eyebrow">Chefão da Expedição</span>
+                  <h3>Conecte o que você estudou.</h3>
+                  <p>
+                    Uma rodada integradora com feedback explicativo. O primeiro desafio superado com
+                    pelo menos 80% de acertos recebe um marco; repetir não multiplica a conquista.
+                  </p>
+                  <details>
+                    <summary>Raciocínios deste desafio</summary>
+                    <ul>
+                      {[...new Set(available.map((question) => question.concept))].map((id) => (
+                        <li key={id}>
+                          {content.concepts.find((concept) => concept.id === id)?.name}
+                        </li>
+                      ))}
+                    </ul>
+                  </details>
+                </aside>
+              )}
               <button
                 className="primary"
                 disabled={!available.length}

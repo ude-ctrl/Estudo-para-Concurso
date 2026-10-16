@@ -1,5 +1,6 @@
 import { createContext, useContext } from 'react';
 import type { Content, Mode, State, TrainingPool, UnitId } from './types';
+import type { SensoryEvent } from './sensory';
 export interface Route {
   page: 'home' | 'unit' | 'errors' | 'settings';
   unit: UnitId;
@@ -13,6 +14,9 @@ export const V6Context = createContext<{
   update: (fn: (s: State) => void) => void;
   notify: (s: string) => void;
   route: Route;
+  quiet: boolean;
+  signal: SensoryEvent | null;
+  previewSound: () => void;
   go: (unit: UnitId, mode: Mode, mission?: string) => void;
 } | null>(null);
 export function useV6() {

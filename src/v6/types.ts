@@ -3,6 +3,8 @@ export type Mode = 'estudo' | 'treino' | 'revisao' | 'prova';
 export type TrainingPool =
   'fixacao' | 'concurso' | 'elite' | 'diagnostico' | 'pos-teste' | 'chefao';
 export type Rating = 'errei' | 'dificil' | 'bom' | 'facil';
+export type Experience = 'focus' | 'balanced' | 'immersive';
+export type Sound = 'off' | 'soft' | 'immersive';
 export type ErrorType = 'E1' | 'E2' | 'E3' | 'E4' | 'E5' | 'E6' | 'E7' | 'E8';
 export interface LegacyRef {
   legacy_source: string;
@@ -188,7 +190,13 @@ export interface State {
   schema: 6;
   revision: number;
   updated: number;
-  preferences: { theme: 'system' | 'light' | 'dark'; motion: 'system' | 'reduce' };
+  preferences: {
+    theme: 'system' | 'light' | 'dark';
+    motion: 'system' | 'reduce';
+    // Additive preferences: old schema-6 backups use Balanced with sound Off.
+    experience?: Experience;
+    sound?: Sound;
+  };
   read: Record<string, number>;
   drafts: Record<string, string>;
   reviews: Record<string, Review>;
@@ -241,6 +249,8 @@ export interface State {
     answered?: boolean;
     pool?: string;
     repeat: string[];
+    // Presentation accounting only; never grants XP or changes learning evidence.
+    sensorySummary?: { xp: number; reviews: number; converted: number };
   };
   significantDays: string[];
   calendarPolicy?: 'local-v1';

@@ -22,7 +22,10 @@ import { importLegacy, STATE_KEY } from './engine';
 import { Repository, downloadState } from './repository';
 import { Celebration } from './Celebration';
 import { recognize } from './recognition';
-import type { Milestone } from './recognition';
+import { ExperienceControls } from './SensoryUI';
+import { recordSessionSummary, sensoryEvents, sensoryPreferences, sensoryQuiet } from './sensory';
+import type { SensoryEvent } from './sensory';
+import { SensoryAudio } from './sound';
 import { canonicalLegacyRoute } from '../legacy-routes';
 import { parseTrainingPool, trainingHref } from './training-session';
 import type { Content, Mode, State, UnitId } from './types';
@@ -169,6 +172,7 @@ function Settings({
           </select>
         </label>
       </section>
+      <ExperienceControls />
       <section className="panel">
         <h2>Backup e restauração</h2>
         <p>
@@ -348,7 +352,9 @@ function Workspace({ content }: { content: Content }) {
     [state, setState] = useState(repo.state),
     [route, setRoute] = useState(parseRoute),
     [message, setMessage] = useState(''),
-    [celebration, setCelebration] = useState<Milestone | null>(null),
+    [celebration, setCelebration] = useState<SensoryEvent | null>(null),
+    [signal, setSignal] = useState<SensoryEvent | null>(null),
+    [audio] = useState(() => new SensoryAudio()),
     [systemDark, setSystemDark] = useState(
       () => matchMedia('(prefers-color-scheme: dark)').matches,
     ),
@@ -356,20 +362,97 @@ function Workspace({ content }: { content: Content }) {
     main = useRef<HTMLElement>(null);
   function update(fn: (s: State) => void) {
     try {
-      let earned: Milestone[] = [];
+      let events: SensoryEvent[] = [];
       const next = repo.commit((s) => {
         const before = structuredClone(s);
         fn(s);
-        earned = recognize(content, before, s, Date.now());
+        recordSessionSummary(before, s);
+        const earned = recognize(content, before, s, Date.now());
+        events = sensoryEvents(content, before, s, earned);
       });
       setState(next);
-      if (earned.length && !(route.page === 'unit' && route.mode === 'prova'))
-        setCelebration(earned[0]);
+      if (!sensoryQuiet(parseRoute(), next)) {
+        setSignal(events.find((event) => event.item) || null);
+        const milestone = events.find((event) => event.importance >= 3);
+        if (milestone) setCelebration(milestone);
+        if (events[0])
+          audio.play(
+            events[0].kind,
+            sensoryPreferences(next).sound,
+            events[0].importance,
+            canPlaySound,
+          );
+      } else {
+        audio.pause();
+        setSignal(null);
+        setCelebration(null);
+      }
     } catch (e) {
       setMessage(e instanceof Error ? e.message : 'Não foi possível registrar a atividade.');
     }
   }
   const dismissCelebration = useCallback(() => setCelebration(null), []);
+  const quiet = sensoryQuiet(route, state);
+  function canPlaySound() {
+    return (
+      document.visibilityState === 'visible' &&
+      !sensoryQuiet(parseRoute(), repo.state) &&
+      sensoryPreferences(repo.state).sound !== 'off'
+    );
+  }
+  async function previewSound() {
+    const requestedHash = location.hash;
+    const requestedSound = sensoryPreferences(repo.state).sound;
+    if (!canPlaySound()) {
+      setMessage(
+        'O exemplo sonoro fica disponível com efeitos habilitados e fora de uma prova em andamento.',
+      );
+      return;
+    }
+    const unlocked = await audio.unlock();
+    if (
+      location.hash !== requestedHash ||
+      sensoryPreferences(repo.state).sound !== requestedSound ||
+      !canPlaySound()
+    )
+      return;
+    if (!unlocked) {
+      setMessage('Áudio indisponível neste navegador. Todo feedback continua disponível em texto.');
+      return;
+    }
+    audio.play('mission', sensoryPreferences(repo.state).sound, 5, canPlaySound);
+  }
+  useEffect(() => {
+    function gesture(event: Event) {
+      if (event.isTrusted && canPlaySound()) void audio.unlock();
+    }
+    function hide() {
+      if (document.visibilityState !== 'visible') {
+        audio.pause();
+        setSignal(null);
+        setCelebration(null);
+      }
+    }
+    function leave() {
+      audio.pause();
+      setSignal(null);
+      setCelebration(null);
+    }
+    document.addEventListener('pointerdown', gesture, true);
+    document.addEventListener('keydown', gesture, true);
+    document.addEventListener('visibilitychange', hide);
+    window.addEventListener('pagehide', leave);
+    return () => {
+      document.removeEventListener('pointerdown', gesture, true);
+      document.removeEventListener('keydown', gesture, true);
+      document.removeEventListener('visibilitychange', hide);
+      window.removeEventListener('pagehide', leave);
+      audio.dispose();
+    };
+  }, [audio, repo]);
+  useEffect(() => {
+    audio.pause();
+  }, [audio, state.preferences.sound, state.preferences.experience, quiet]);
   const dark =
     state.preferences.theme === 'dark' || (state.preferences.theme === 'system' && systemDark);
   useEffect(() => {
@@ -390,6 +473,8 @@ function Workspace({ content }: { content: Content }) {
         next.mode === 'treino' &&
         (focusedFilter === 'bank' || focusedFilter === 'mission');
       setRoute(next);
+      audio.pause();
+      setSignal(null);
       setCelebration(null);
       window.scrollTo({ top: 0, behavior: 'instant' });
       requestAnimationFrame(() => {
@@ -409,6 +494,9 @@ function Workspace({ content }: { content: Content }) {
     };
     const onStorage = (e: StorageEvent) => {
       if (e.key === STATE_KEY) {
+        audio.pause();
+        setSignal(null);
+        setCelebration(null);
         setState({ ...repo.reload() });
         setMessage('Progresso atualizado por outra aba. Os dados mais recentes foram carregados.');
       }
@@ -419,7 +507,7 @@ function Workspace({ content }: { content: Content }) {
       window.removeEventListener('hashchange', onHash);
       window.removeEventListener('storage', onStorage);
     };
-  }, [repo]);
+  }, [repo, audio]);
   useEffect(() => {
     if (route.page === 'unit') {
       const ms = content.missions.filter((m) => m.unit === route.unit),
@@ -440,7 +528,9 @@ function Workspace({ content }: { content: Content }) {
   useEffect(() => {
     document.documentElement.dataset.theme = state.preferences.theme;
     document.documentElement.dataset.motion = state.preferences.motion;
-  }, [state.preferences]);
+    document.documentElement.dataset.experience = sensoryPreferences(state).experience;
+    document.documentElement.dataset.quiet = String(quiet);
+  }, [state.preferences, quiet]);
   // A deadline is absolute. Leaving the exam screen or reloading does not pause the clock.
   useEffect(() => {
     if (
@@ -467,7 +557,9 @@ function Workspace({ content }: { content: Content }) {
     ['prova', 'Prova', ClipboardCheck],
   ] as const;
   return (
-    <V6Context value={{ content, state, update, notify: setMessage, route, go }}>
+    <V6Context
+      value={{ content, state, update, notify: setMessage, route, go, quiet, signal, previewSound }}
+    >
       <a
         className="skip-link"
         href="#conteudo"
@@ -589,10 +681,7 @@ function Workspace({ content }: { content: Content }) {
           ) : (
             <Exam key={route.unit} />
           )}
-          <Celebration
-            milestone={route.page === 'unit' && route.mode === 'prova' ? null : celebration}
-            onDismiss={dismissCelebration}
-          />
+          <Celebration milestone={quiet ? null : celebration} onDismiss={dismissCelebration} />
           <footer className="site-footer">
             <span>Aprender com profundidade. Avançar com evidência.</span>
             <a href="./biblioteca.html">Outros materiais</a>

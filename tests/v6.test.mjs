@@ -30,6 +30,17 @@ import { Repository } from '../src/v6/repository.ts';
 import { recognize } from '../src/v6/recognition.ts';
 import { editorialReplacements } from '../scripts/v6-editorial.mjs';
 import { trainingSessionMatches } from '../src/v6/training-session.ts';
+import {
+  bestStreak,
+  expeditionComplete,
+  missionJourney,
+  personalLevel,
+  recordSessionSummary,
+  sensoryEvents,
+  sensoryPreferences,
+  sensoryQuiet,
+} from '../src/v6/sensory.ts';
+import { SensoryAudio, soundPatterns } from '../src/v6/sound.ts';
 const { content: c, parity } = await buildV6(),
   now = Date.UTC(2026, 9, 15, 12),
   sha = (x) =>
@@ -560,7 +571,7 @@ test('marcos: unidade requer todas as explicações e recuperação por missão,
   const xp = totalXP(s);
   assert.deepEqual(
     recognize(c, before, s, now).map((m) => m.id),
-    ['unit:' + unit],
+    ['unit:' + unit, 'mission:' + missions.at(-1).id],
   );
   assert.equal(totalXP(s), xp);
   assert.equal(mastery(c, s, unit).score, null);
@@ -848,5 +859,418 @@ test('P1: retomada conserva banco opcional e aceita backups anteriores sem inven
   for (const pool of [null, [], ['fixacao'], {}, 1, 'outro']) {
     s.resume.pool = pool;
     assert.throws(() => parseState(JSON.stringify(s)), /Retomada/);
+  }
+});
+
+test('sensorial: preferências opcionais mantêm backups antigos; valores e resumos inválidos são rejeitados', () => {
+  const state = fresh();
+  assert.deepEqual(sensoryPreferences(parseState(JSON.stringify(state))), {
+    experience: 'balanced',
+    sound: 'off',
+  });
+  for (const experience of ['focus', 'balanced', 'immersive'])
+    for (const sound of ['off', 'soft', 'immersive']) {
+      state.preferences.experience = experience;
+      state.preferences.sound = sound;
+      assert.deepEqual(sensoryPreferences(parseState(JSON.stringify(state))), {
+        experience,
+        sound,
+      });
+    }
+  for (const key of ['experience', 'sound'])
+    for (const value of [null, [], ['off'], {}, true, 'outro'])
+      assert.throws(
+        () =>
+          parseState(
+            JSON.stringify({ ...state, preferences: { ...state.preferences, [key]: value } }),
+          ),
+        /sensorial/,
+      );
+  state.session = {
+    id: 'summary',
+    kind: 'questions',
+    ids: [q.id],
+    position: 0,
+    repeat: [],
+    sensorySummary: { xp: 14, reviews: 1, converted: 0 },
+  };
+  assert.deepEqual(parseState(JSON.stringify(state)), state);
+  for (const value of [
+    null,
+    [],
+    { xp: -1, reviews: 0, converted: 0 },
+    { xp: 1, reviews: '2', converted: 0 },
+    { xp: 1, reviews: 0, converted: 0.5 },
+  ])
+    assert.throws(
+      () =>
+        parseState(
+          JSON.stringify({ ...state, session: { ...state.session, sensorySummary: value } }),
+        ),
+      /Resumo sensorial/,
+    );
+});
+
+test('sensorial: percurso distingue leitura, recuperação e pendências sem fabricar domínio ou bloquear consulta', () => {
+  const state = fresh(),
+    mission = c.missions.find((m) => m.id === q.mission);
+  const snapshot = JSON.stringify(state);
+  assert.equal(missionJourney(c, state, mission, now).status, 'ready');
+  assert.equal(JSON.stringify(state), snapshot);
+  for (const section of mission.sections) state.read[section.id] = now;
+  assert.equal(missionJourney(c, state, mission, now).status, 'reading');
+  assert.equal(missionJourney(c, state, mission, now).complete, false);
+  const before = structuredClone(state);
+  attempt(state, c, { item: q.id, correct: true, kind: q.pool, at: now });
+  const xp = totalXP(state);
+  const earned = recognize(c, before, state, now);
+  assert.ok(earned.some((m) => m.id === 'mission:' + mission.id));
+  assert.equal(missionJourney(c, state, mission, now).status, 'complete');
+  assert.equal(mastery(c, state, mission.unit).score, null);
+  assert.equal(totalXP(state), xp);
+  assert.deepEqual(recognize(c, state, state, now), []);
+  const card = c.cards.find((card) => card.mission === mission.id);
+  state.reviews[card.id] = schedule(undefined, 'bom', now - 5 * DAY);
+  assert.equal(missionJourney(c, state, mission, now).status, 'due');
+  delete state.reviews[card.id];
+  attempt(state, c, { item: q.id, correct: false, kind: q.pool, at: now + DAY });
+  for (const id of Object.keys(state.reviews)) delete state.reviews[id];
+  assert.equal(missionJourney(c, state, mission, now + DAY).status, 'fragile');
+});
+
+test('sensorial: resumo contabiliza somente XP real da rodada e não incorpora atividade paralela', () => {
+  let before = fresh(),
+    state = structuredClone(before);
+  state.session = { id: 'round-account', kind: 'questions', ids: [q.id], position: 0, repeat: [] };
+  recordSessionSummary(before, state);
+  assert.deepEqual(state.session.sensorySummary, { xp: 0, reviews: 0, converted: 0 });
+  before = structuredClone(state);
+  const unrelated = c.questions.find((other) => other.mission !== q.mission);
+  attempt(state, c, {
+    item: unrelated.id,
+    correct: true,
+    kind: unrelated.pool,
+    at: now,
+    context: 'other-round',
+  });
+  recordSessionSummary(before, state);
+  assert.equal(state.session.sensorySummary.xp, 0);
+  before = structuredClone(state);
+  attempt(state, c, {
+    item: q.id,
+    correct: true,
+    kind: q.pool,
+    at: now,
+    context: state.session.id,
+  });
+  const ledger = structuredClone(state.awards),
+    evidence = structuredClone(state.evidence);
+  recordSessionSummary(before, state);
+  assert.equal(state.session.sensorySummary.xp, 4);
+  assert.deepEqual(state.awards, ledger);
+  assert.deepEqual(state.evidence, evidence);
+  state = parseState(JSON.stringify(state));
+  before = structuredClone(state);
+  attempt(state, c, {
+    item: q.id,
+    correct: true,
+    kind: q.pool,
+    at: now + 1000,
+    context: state.session.id,
+  });
+  recordSessionSummary(before, state);
+  assert.equal(state.session.sensorySummary.xp, 4);
+  const old = fresh();
+  old.session = { id: 'old-round', kind: 'questions', ids: [q.id], position: 0, repeat: [] };
+  before = structuredClone(old);
+  attempt(old, c, { item: q.id, correct: true, kind: q.pool, at: now, context: 'old-round' });
+  recordSessionSummary(before, old);
+  assert.equal(old.session.sensorySummary, undefined);
+});
+
+test('sensorial: revisões devidas entram no balanço; virar, repetir cedo e preferências não rendem XP', () => {
+  const state = fresh(),
+    card = c.cards[0];
+  state.reviews[card.id] = schedule(undefined, 'bom', now - 5 * DAY);
+  let before = structuredClone(state);
+  state.session = { id: 'review-account', kind: 'cards', ids: [card.id], position: 0, repeat: [] };
+  recordSessionSummary(before, state);
+  before = structuredClone(state);
+  rateCard(state, c, card.id, 'dificil', now);
+  state.session.position++;
+  recordSessionSummary(before, state);
+  assert.deepEqual(state.session.sensorySummary, { xp: 8, reviews: 1, converted: 0 });
+  assert.equal(Object.keys(state.errors).length, 0);
+  const xp = totalXP(state);
+  before = structuredClone(state);
+  state.preferences.experience = 'immersive';
+  state.preferences.sound = 'soft';
+  const milestones = recognize(c, before, state, now);
+  assert.deepEqual(sensoryEvents(c, before, state, milestones), []);
+  assert.equal(totalXP(state), xp);
+  assert.deepEqual(state.session.sensorySummary, { xp: 8, reviews: 1, converted: 0 });
+});
+
+test('sensorial: eventos comuns não são conquistas; repetição imediata e recarga não repetem efeitos', () => {
+  const state = fresh();
+  let before = structuredClone(state);
+  attempt(state, c, { item: q.id, correct: true, kind: 'elite', at: now });
+  const snapshot = JSON.stringify(state);
+  const events = sensoryEvents(c, before, state, recognize(c, before, state, now));
+  assert.equal(events.length, 1);
+  assert.equal(events[0].kind, 'elite');
+  assert.equal(events[0].xp, 0);
+  assert.ok(events[0].importance < 3);
+  assert.equal(JSON.stringify(state), snapshot);
+  before = structuredClone(state);
+  attempt(state, c, { item: q.id, correct: true, kind: 'elite', at: now + 1000 });
+  assert.deepEqual(sensoryEvents(c, before, state, recognize(c, before, state, now + 1000)), []);
+  const restored = parseState(JSON.stringify(state));
+  assert.deepEqual(sensoryEvents(c, restored, restored, []), []);
+  const next = structuredClone(restored);
+  const other = c.questions.find((other) => other.id !== q.id);
+  attempt(next, c, { item: other.id, correct: false, kind: other.pool, at: now + 2000 });
+  assert.equal(sensoryEvents(c, restored, next, [])[0].kind, 'incorrect');
+});
+
+test('sensorial: expedição exige todas as missões com recuperação e os três Chefões, sem XP novo', () => {
+  const state = fresh();
+  for (const mission of c.missions) {
+    for (const section of mission.sections) state.read[section.id] = now;
+    const question = c.questions.find((question) => question.mission === mission.id);
+    attempt(state, c, { item: question.id, correct: true, kind: question.pool, at: now });
+  }
+  state.milestones = Object.fromEntries(
+    c.units.slice(0, -1).map((unit) => ['boss:' + unit.id, now]),
+  );
+  assert.equal(expeditionComplete(c, state), false);
+  const questions = c.questions.filter(
+    (question) => question.unit === c.units.at(-1).id && question.roles.includes('chefao'),
+  );
+  state.session = {
+    id: 'last-boss',
+    kind: 'questions',
+    pool: 'chefao',
+    ids: questions.map((question) => question.id),
+    position: questions.length - 1,
+    repeat: [],
+  };
+  for (const question of questions)
+    attempt(state, c, {
+      item: question.id,
+      correct: true,
+      kind: 'boss',
+      at: now,
+      context: state.session.id,
+    });
+  const before = structuredClone(state);
+  state.session.position++;
+  const ledger = structuredClone(state.awards);
+  const earned = recognize(c, before, state, now);
+  assert.ok(earned.some((milestone) => milestone.id === 'module:cartografia'));
+  assert.equal(expeditionComplete(c, state), true);
+  const events = sensoryEvents(c, before, state, earned);
+  assert.equal(events[0].kind, 'module');
+  assert.ok(
+    events.find((event) => event.kind === 'boss').importance >
+      events.find((event) => event.kind === 'block').importance,
+  );
+  assert.deepEqual(state.awards, ledger);
+  assert.deepEqual(recognize(c, before, state, now + DAY), []);
+  assert.equal(mastery(c, state, c.units[0].id).score, null);
+  const missing = structuredClone(state);
+  delete missing.awards['mission:' + c.missions[0].id];
+  assert.equal(expeditionComplete(c, missing), false);
+});
+
+test('sensorial: nível é somente XP e melhor sequência preserva intervalos civis e retomadas', () => {
+  const state = fresh();
+  assert.equal(personalLevel(state).level, 1);
+  for (const [xp, level] of [
+    [79, 1],
+    [80, 2],
+    [319, 2],
+    [320, 3],
+    [720, 4],
+  ]) {
+    state.awards.sample = { at: now, xp, reason: 'fixture' };
+    const result = personalLevel(state);
+    assert.equal(result.level, level);
+    assert.ok(result.progress >= 0 && result.progress < result.span);
+    assert.equal(mastery(c, state, c.units[0].id).score, null);
+  }
+  state.significantDays = [
+    '2026-03-10',
+    '2026-03-07',
+    '2026-03-08',
+    '2026-03-09',
+    '2026-03-10',
+    '2026-10-15',
+  ];
+  assert.equal(bestStreak(state), 4);
+  assert.equal(streak(state, Date.parse('2026-10-16T12:00:00Z')), 1);
+});
+
+test('sensorial: prova, discursiva e defesa em andamento mantêm o modo silencioso', () => {
+  const home = { page: 'home', mode: 'estudo' },
+    exam = { page: 'unit', mode: 'prova' };
+  const state = fresh();
+  assert.equal(sensoryQuiet(home, state), false);
+  assert.equal(sensoryQuiet(exam, state), true);
+  state.exam = makeExam(c, state, 5, 20, now);
+  assert.equal(sensoryQuiet(home, state), true);
+  state.exam.finished = now + 1000;
+  assert.equal(sensoryQuiet(home, state), false);
+  state.practical.started = now;
+  state.practical.phase = 'defesa';
+  assert.equal(sensoryQuiet(home, state), true);
+  state.practical.phase = 'concluida';
+  assert.equal(sensoryQuiet(home, state), false);
+});
+
+test('sensorial: áudio é lazy, opcional, curto, limitado e interrompido ao sair ou mudar preferências', async () => {
+  const oldWindow = globalThis.window;
+  let created = 0,
+    starts = 0,
+    stopped = 0,
+    clock = 1000;
+  const originalNow = Object.getOwnPropertyDescriptor(performance, 'now');
+  Object.defineProperty(performance, 'now', { configurable: true, value: () => clock });
+  class FakeAudio {
+    state = 'running';
+    currentTime = 0;
+    destination = {};
+    constructor() {
+      created++;
+    }
+    async resume() {
+      this.state = 'running';
+    }
+    async suspend() {
+      this.state = 'suspended';
+    }
+    async close() {
+      this.state = 'closed';
+    }
+    createOscillator() {
+      return {
+        type: '',
+        frequency: { setValueAtTime() {} },
+        connect() {},
+        disconnect() {},
+        start() {
+          starts++;
+        },
+        stop() {
+          stopped++;
+        },
+      };
+    }
+    createGain() {
+      return {
+        gain: {
+          setValueAtTime() {},
+          linearRampToValueAtTime() {},
+          exponentialRampToValueAtTime() {},
+        },
+        connect() {},
+        disconnect() {},
+      };
+    }
+  }
+  globalThis.window = { AudioContext: FakeAudio };
+  const audio = new SensoryAudio();
+  try {
+    assert.equal(created, 0);
+    assert.equal(
+      audio.play('correct', 'soft', 1, () => true),
+      false,
+    );
+    assert.equal(await audio.unlock(), true);
+    assert.equal(created, 1);
+    assert.equal(
+      audio.play('correct', 'off', 1, () => true),
+      false,
+    );
+    assert.equal(
+      audio.play('correct', 'soft', 1, () => false),
+      false,
+    );
+    assert.equal(starts, 0);
+    assert.equal(
+      audio.play('correct', 'soft', 1, () => true),
+      true,
+    );
+    assert.equal(starts, 2);
+    assert.equal(
+      audio.play('correct', 'soft', 1, () => true),
+      false,
+    );
+    assert.equal(
+      audio.play('boss', 'soft', 8, () => true),
+      true,
+    );
+    assert.equal(starts, 7);
+    audio.pause();
+    assert.ok(stopped >= 7);
+    clock += 1000;
+    assert.equal(
+      audio.play('correct', 'soft', 1, () => true),
+      false,
+    );
+    assert.equal(await audio.unlock(), true);
+    assert.equal(
+      audio.play('correct', 'immersive', 1, () => true),
+      true,
+    );
+    for (const pattern of Object.values(soundPatterns))
+      assert.ok(pattern.length * 0.075 + 0.14 < 0.6);
+  } finally {
+    audio.dispose();
+    if (oldWindow === undefined) delete globalThis.window;
+    else globalThis.window = oldWindow;
+    if (originalNow) Object.defineProperty(performance, 'now', originalNow);
+    else delete performance.now;
+  }
+});
+
+test('sensorial: liberação de áudio pendente não toca depois de cancelamento e falhas não quebram o estudo', async () => {
+  const oldWindow = globalThis.window;
+  let release;
+  class Suspended {
+    state = 'suspended';
+    resume() {
+      return new Promise((resolve) => {
+        release = () => {
+          this.state = 'running';
+          resolve();
+        };
+      });
+    }
+    async close() {
+      this.state = 'closed';
+    }
+  }
+  try {
+    globalThis.window = { AudioContext: Suspended };
+    const audio = new SensoryAudio();
+    const pending = audio.unlock();
+    audio.stop();
+    release();
+    assert.equal(await pending, false);
+    audio.dispose();
+    globalThis.window = {};
+    assert.equal(await new SensoryAudio().unlock(), false);
+    globalThis.window = {
+      AudioContext: class {
+        constructor() {
+          throw Error('unsupported');
+        }
+      },
+    };
+    assert.equal(await new SensoryAudio().unlock(), false);
+  } finally {
+    if (oldWindow === undefined) delete globalThis.window;
+    else globalThis.window = oldWindow;
   }
 });

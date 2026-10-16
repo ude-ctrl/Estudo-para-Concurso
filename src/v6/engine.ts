@@ -588,6 +588,16 @@ export function parseState(raw: string): State {
     !['system', 'reduce'].includes(String(o.preferences.motion))
   )
     throw Error('Preferências inválidas.');
+  for (const [key, allowed] of [
+    ['experience', ['focus', 'balanced', 'immersive']],
+    ['sound', ['off', 'soft', 'immersive']],
+  ] as const)
+    if (
+      o.preferences[key] !== undefined &&
+      (typeof o.preferences[key] !== 'string' ||
+        !(allowed as readonly string[]).includes(o.preferences[key] as string))
+    )
+      throw Error('Preferência sensorial inválida.');
   if (!Number.isSafeInteger(o.revision) || Number(o.revision) < 0 || !Number.isFinite(o.updated))
     throw Error('Revisão inválida.');
   if (
@@ -778,6 +788,16 @@ export function parseState(raw: string): State {
       (x.deadline !== undefined && !Number.isFinite(x.deadline))
     )
       throw Error('Sessão inválida.');
+    if (
+      x.sensorySummary !== undefined &&
+      (!isObject(x.sensorySummary) ||
+        ['xp', 'reviews', 'converted'].some(
+          (key) =>
+            !Number.isSafeInteger((x.sensorySummary as Record<string, unknown>)[key]) ||
+            Number((x.sensorySummary as Record<string, unknown>)[key]) < 0,
+        ))
+    )
+      throw Error('Resumo sensorial inválido.');
   }
   if (o.calendarPolicy === undefined) {
     // Earlier V6 builds used UTC days. Retain that history and reconstruct only dated evidence.

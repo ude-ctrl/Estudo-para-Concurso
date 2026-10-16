@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import type { Content, LegacyRef, Question, UnitId } from './types';
+import { ResponseSignal } from './SensoryUI';
 export function Provenance({ refs }: { refs: LegacyRef[] }) {
   return (
     <details className="provenance">
@@ -184,6 +185,7 @@ export function Feedback({
       aria-label="Feedback explicativo"
       tabIndex={-1}
     >
+      <ResponseSignal item={q.id} />
       <h3>
         {omitted
           ? 'Questão sem resposta'

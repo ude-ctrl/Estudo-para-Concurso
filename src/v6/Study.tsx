@@ -2,10 +2,11 @@ import { useState } from 'react';
 import { ArrowRight, BookOpen, Check, RotateCcw } from 'lucide-react';
 import { useV6 } from './context';
 import { CompassArt, Html, ModeLink, Provenance, studyLink } from './components';
-import { attempt, mastery, priorityErrors, streak, totalXP } from './engine';
+import { attempt, mastery, priorityErrors } from './engine';
 import { describeMilestone } from './recognition';
 import { trainingHref, trainingSessionMatches } from './training-session';
 import type { Recall, UnitId } from './types';
+import { JourneyMap, ProgressionPanel, ResponseSignal } from './SensoryUI';
 export function Mastery({ unit }: { unit: UnitId }) {
   const { content, state } = useV6();
   const m = mastery(content, state, unit);
@@ -40,7 +41,7 @@ export function Mastery({ unit }: { unit: UnitId }) {
   );
 }
 export function Home() {
-  const { content, state } = useV6(),
+  const { content, state, quiet } = useV6(),
     resume = state.resume;
   const due = content.cards.filter((c) => state.reviews[c.id]?.due <= Date.now()).length;
   const dueUnit = content.cards.find((c) => state.reviews[c.id]?.due <= Date.now())?.unit;
@@ -127,6 +128,7 @@ export function Home() {
         <span aria-hidden="true">→</span>
         <a href={`#/unidade/${resume?.unit || first}/revisao`}>Revisar após intervalo</a>
       </nav>
+      <JourneyMap current={nextMission.id} />
       {weak.length > 0 && (
         <section className="weak-points">
           <h2>Transforme dificuldades em próximos passos</h2>
@@ -207,56 +209,53 @@ export function Home() {
           <p>Retome a confusão, explique o mecanismo e teste novamente após um intervalo.</p>
           <a href="#/caderno">Abrir Caderno Global de Erros →</a>
         </article>
-        <article>
-          <Check size={22} />
-          <h3>Consistência, sem corrida por pontos</h3>
-          <p>
-            {totalXP(state)} XP de aprendizagem · {streak(state, Date.now())} dia(s) de prática na
-            sequência atual.
-          </p>
-          <details>
-            <summary>Como os pontos funcionam</summary>
-            <p>
-              Abrir páginas, virar cartões e repetir respostas imediatamente não gera XP. Os pontos
-              valorizam recuperação, revisão vencida e melhora após intervalo.
-            </p>
-            <ul>
-              {Object.entries(state.awards)
-                .slice(-8)
-                .map(([id, a]) => (
-                  <li key={id}>
-                    {a.reason}: {a.xp} XP
-                  </li>
-                ))}
-            </ul>
-          </details>
-          <details className="milestone-history">
-            <summary>Seus marcos de aprendizagem</summary>
-            {Object.keys(state.milestones || {}).length ? (
-              <ul>
-                {Object.entries(state.milestones || {})
-                  .sort((a, b) => b[1] - a[1])
-                  .slice(0, 8)
-                  .map(([id, at]) => {
-                    const milestone = describeMilestone(id, content);
-                    return (
-                      <li key={id}>
-                        <strong>{milestone.title}</strong>
-                        <p>{milestone.description}</p>
-                        <small>{new Date(at).toLocaleDateString('pt-BR')}</small>
-                      </li>
-                    );
-                  })}
-              </ul>
-            ) : (
+        {!quiet && (
+          <article className="progression-card">
+            <ProgressionPanel />
+            <details>
+              <summary>Como os pontos funcionam</summary>
               <p>
-                Os marcos aparecem ao concluir unidades com recuperação, superar Chefões, colocar
-                revisões vencidas em dia, recuperar erros de forma estável e manter dias de prática
-                significativa. Ler ou clicar sozinho não gera conquistas.
+                Abrir páginas, virar cartões e repetir respostas imediatamente não gera XP. Os
+                pontos valorizam recuperação, revisão vencida e melhora após intervalo.
               </p>
-            )}
-          </details>
-        </article>
+              <ul>
+                {Object.entries(state.awards)
+                  .slice(-8)
+                  .map(([id, a]) => (
+                    <li key={id}>
+                      {a.reason}: {a.xp} XP
+                    </li>
+                  ))}
+              </ul>
+            </details>
+            <details className="milestone-history">
+              <summary>Seus marcos de aprendizagem</summary>
+              {Object.keys(state.milestones || {}).length ? (
+                <ul>
+                  {Object.entries(state.milestones || {})
+                    .sort((a, b) => b[1] - a[1])
+                    .slice(0, 8)
+                    .map(([id, at]) => {
+                      const milestone = describeMilestone(id, content);
+                      return (
+                        <li key={id}>
+                          <strong>{milestone.title}</strong>
+                          <p>{milestone.description}</p>
+                          <small>{new Date(at).toLocaleDateString('pt-BR')}</small>
+                        </li>
+                      );
+                    })}
+                </ul>
+              ) : (
+                <p>
+                  Os marcos aparecem ao concluir unidades com recuperação, superar Chefões, colocar
+                  revisões vencidas em dia, recuperar erros de forma estável e manter dias de
+                  prática significativa. Ler ou clicar sozinho não gera conquistas.
+                </p>
+              )}
+            </details>
+          </article>
+        )}
       </div>
       <p className="pilot-note">
         Este piloto contém apenas Cartografia. Conteúdo autoral de Concurso e FGV Elite aguarda
@@ -303,6 +302,7 @@ function RecallBox({ recall }: { recall: Recall }) {
       </button>
       {show && tried && (
         <div className="feedback">
+          <ResponseSignal item={recall.id} />
           <p>{recall.model}</p>
           <details>
             <summary>Pontos para conferir na sua resposta</summary>
@@ -370,15 +370,7 @@ export function Study() {
       </div>
       <details className="outline">
         <summary>Escolher missão nesta unidade</summary>
-        <ol>
-          {ms.map((x) => (
-            <li key={x.id}>
-              <a aria-current={x.id === m.id ? 'page' : undefined} href={studyLink(content, x.id)}>
-                {x.title}
-              </a>
-            </li>
-          ))}
-        </ol>
+        <JourneyMap unit={route.unit} current={m.id} />
       </details>
       <div className="study-layout">
         <div className="reading-column">
