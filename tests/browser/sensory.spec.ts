@@ -363,6 +363,7 @@ for (const setup of [
     page,
   }, info) => {
     await page.emulateMedia({ reducedMotion: setup.reduced });
+    if (setup.mode === 'focus') await page.clock.install();
     await page.setViewportSize({ width: 390, height: 844 });
     await mockAudio(page);
     const state = fresh();
@@ -406,6 +407,14 @@ for (const setup of [
     expect(effect!.y).toBeGreaterThanOrEqual(action!.y + action!.height);
     expect((await saved(page)).awards).toEqual(state.awards);
     expect(await tones(page)).toEqual([]);
+    if (setup.mode === 'focus') {
+      await page.getByRole('button', { name: 'Dispensar celebração', exact: true }).focus();
+      await page.clock.fastForward(11_000);
+      await expect(page.locator('.milestone-toast')).toHaveCount(1);
+      await page.getByRole('button', { name: 'Preparar outra rodada', exact: true }).focus();
+      await page.clock.fastForward(9_001);
+      await expect(page.locator('.milestone-toast')).toHaveCount(0);
+    }
     if (setup.mode === 'immersive' && !setup.manual && setup.reduced === 'no-preference')
       await page.screenshot({
         path: info.outputPath('sensorial-chefao-mobile.png'),
@@ -464,6 +473,7 @@ test('Sensorial: módulo concluído é raro, proporcional e mantém domínio e a
   page,
 }, info) => {
   await page.emulateMedia({ reducedMotion: 'no-preference' });
+  await page.clock.install();
   const state = fresh();
   state.preferences.experience = 'immersive';
   for (const mission of content.missions) {
@@ -503,6 +513,8 @@ test('Sensorial: módulo concluído é raro, proporcional e mantém domínio e a
   );
   await expect(page.locator('.sensory-particles i')).toHaveCount(12);
   await page.locator('.expedition-summary summary').click();
+  await page.clock.fastForward(11_000);
+  await expect(page.locator('.milestone-toast.sensory-module')).toBeVisible();
   await expect(page.locator('.expedition-summary')).toContainText('17/17');
   await expect(page.locator('.expedition-summary')).toContainText('3/3');
   await expect(page.locator('.expedition-summary')).toContainText('ainda sem evidência suficiente');

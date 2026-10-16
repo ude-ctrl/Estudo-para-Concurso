@@ -14,6 +14,8 @@ export function Celebration({
 }) {
   const { state } = useV6();
   const immersive = sensoryPreferences(state).experience === 'immersive';
+  const [hovered, setHovered] = useState(false),
+    [focused, setFocused] = useState(false);
   const [systemReduced, setSystemReduced] = useState(
     () => matchMedia('(prefers-reduced-motion: reduce)').matches,
   );
@@ -33,10 +35,15 @@ export function Celebration({
           ? Sparkles
           : CheckCircle2;
   useEffect(() => {
-    if (!milestone) return;
+    setHovered(false);
+    setFocused(false);
+  }, [milestone?.id]);
+  useEffect(() => {
+    // An interactive module summary must remain available while it is being read.
+    if (!milestone || milestone.kind === 'module' || hovered || focused) return;
     const timer = setTimeout(onDismiss, 9_000);
     return () => clearTimeout(timer);
-  }, [milestone, onDismiss]);
+  }, [milestone, onDismiss, hovered, focused]);
   // Keep the live region mounted before its text changes for assistive technologies.
   return (
     <div className="celebration-region" role="status" aria-live="polite" aria-atomic="true">
@@ -45,6 +52,12 @@ export function Celebration({
           className={'milestone-toast sensory-' + milestone.kind}
           key={milestone.id}
           data-importance={milestone.importance}
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
+          onFocusCapture={() => setFocused(true)}
+          onBlurCapture={(event) => {
+            if (!event.currentTarget.contains(event.relatedTarget)) setFocused(false);
+          }}
         >
           {immersive && !reduce && milestone.importance >= 8 && (
             <div className="sensory-particles" aria-hidden="true">
