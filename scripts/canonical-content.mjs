@@ -758,7 +758,13 @@ export async function readBundle(baseRoot, unit, version) {
 
 function validateRegisteredApproval(registry, bundle) {
   if (bundle.audit.editorial_approval?.kind === 'delegated-ai') {
-    const policy = registry.editorial_governance;
+    const policies = [registry.editorial_governance, ...(registry.editorial_delegations || [])];
+    const matches = policies.filter((p) => p?.unit_ids?.includes(bundle.base.unit_id));
+    requireThat(
+      matches.length === 1,
+      'Aprovação delegada fora do contrato/escopo autorizado no catálogo',
+    );
+    const policy = matches[0];
     requireThat(
       policy?.contract === 'delegated-content-review-v1' &&
         policy.reviewer_kind === 'ai' &&
@@ -834,6 +840,191 @@ export function reconstructPilot(bundles, baseline) {
   return result;
 }
 
+// Initial literal consolidation is evidence only. Approved content is read from its bundle,
+// never rebuilt from the historical HTML. These checks protect the first frozen candidate.
+export function validateLiteralSnapshot(bundle, baseline) {
+  requireThat(
+    baseline.schema_version === 1 &&
+      baseline.kind === 'legacy-literals' &&
+      baseline.unit_ids.length === 1 &&
+      baseline.unit_ids[0] === bundle.base.unit_id,
+    'Snapshot literal de outra unidade ou esquema',
+  );
+  requireThat(sha(baseline.extracted) === baseline.extracted_sha256, 'Snapshot literal alterado');
+  requireThat(
+    bundle.provenance.snapshot.source_path === baseline.source_path &&
+      bundle.provenance.snapshot.source_sha256 === baseline.source_sha256 &&
+      bundle.provenance.source_commit === baseline.source_commit,
+    'Fonte histórica divergente do snapshot literal',
+  );
+  requireThat(
+    sha({
+      content: bundle.base.content,
+      support: bundle.base.support,
+      metadata: bundle.base.metadata,
+    }) === baseline.initial_payload_sha256 &&
+      sha(bundle.provenance.archive) === baseline.initial_archive_sha256 &&
+      sha(bundle.provenance.previous_editorial_changes) === baseline.initial_changes_sha256,
+    'Primeira consolidação literal alterada depois de fixada',
+  );
+  requireThat(
+    isDeepStrictEqual(
+      resources(bundle.base).map((r) => r.value.id),
+      baseline.initial_resource_ids,
+    ),
+    'Consolidação perdeu ou substituiu recurso',
+  );
+  requireThat(
+    isDeepStrictEqual(bundle.provenance.legacy_bindings, baseline.bindings) &&
+      baseline.bindings.length === bundle.provenance.parity_records.length,
+    'Mapa de vínculos literais divergente',
+  );
+  unique(
+    baseline.bindings.map((b) => b.legacy_id),
+    'Vínculos literais',
+  );
+  const pointer = (value, path) => {
+    requireThat(typeof path === 'string' && path.startsWith('/'), 'Ponteiro literal inválido');
+    return path
+      .slice(1)
+      .split('/')
+      .map((s) => s.replaceAll('~1', '/').replaceAll('~0', '~'))
+      .reduce((node, key) => {
+        requireThat(
+          !['__proto__', 'constructor', 'prototype'].includes(key) &&
+            node !== null &&
+            typeof node === 'object' &&
+            Object.hasOwn(node, key),
+          'Ponteiro literal sem original',
+        );
+        return node[key];
+      }, value);
+  };
+  for (const binding of baseline.bindings) {
+    const whole = pointer(baseline.extracted, binding.pointer);
+    const original = binding.fields
+      ? Object.fromEntries(binding.fields.map((key) => [key, whole[key]]))
+      : whole;
+    const item = bundle.provenance.archive.find((a) =>
+      a.refs.some(
+        (r) => r.legacy_source === baseline.source_path && r.legacy_id === binding.legacy_id,
+      ),
+    );
+    requireThat(
+      item?.id === binding.canonical_id &&
+        sha(original) === binding.sha256 &&
+        isDeepStrictEqual(original, item.original),
+      'Original literal sem destino íntegro: ' + binding.legacy_id,
+    );
+  }
+  const corrected = structuredClone(baseline.extracted);
+  for (const change of bundle.provenance.previous_editorial_changes) {
+    const parts = change.path
+      .slice(1)
+      .split('/')
+      .map((s) => s.replaceAll('~1', '/').replaceAll('~0', '~'));
+    const key = parts.pop();
+    requireThat(
+      !parts.concat(key).some((s) => ['__proto__', 'constructor', 'prototype'].includes(s)),
+      'Caminho de correção literal inválido',
+    );
+    const parent = parts.reduce((node, part) => node?.[part], corrected);
+    requireThat(
+      parent &&
+        typeof parent === 'object' &&
+        Object.hasOwn(parent, key) === change.before_exists &&
+        (!change.before_exists || isDeepStrictEqual(parent[key], change.before)) &&
+        change.after_exists &&
+        nonempty(change.reason),
+      'Antes/depois da correção literal divergente',
+    );
+    parent[key] = structuredClone(change.after);
+  }
+  requireThat(
+    sha(corrected) === baseline.corrected_literals_sha256,
+    'Correções literais não reproduzem a versão declarada',
+  );
+  const byRef = (items, legacyId) =>
+    items.find((item) =>
+      item.refs?.some(
+        (ref) => ref.legacy_source === baseline.source_path && ref.legacy_id === legacyId,
+      ),
+    );
+  const sections = bundle.base.content.missions.flatMap((m) => m.sections);
+  corrected.banks.B.forEach((stage, i) => {
+    const section = byRef(sections, `B[${i}]`);
+    requireThat(
+      section?.html === stage.h && section.title === stage.t && section.hook === stage.hook,
+      'Teoria canônica diverge da correção declarada: ' + i,
+    );
+    if (stage.r) {
+      const recall = byRef(
+        bundle.base.content.missions.flatMap((m) => m.recalls),
+        `B[${i}].recall`,
+      );
+      requireThat(
+        recall?.prompt === stage.r && recall.model === stage.ra,
+        'Recall histórico divergente',
+      );
+    }
+  });
+  const legacyQuestions = (banks) => [
+    ...banks.PRE.map((q, i) => [`pre_${i}`, q]),
+    ...banks.B.flatMap((stage, i) => stage.qs.map((q, j) => [`b_${i}_${j}`, q])),
+    ...banks.CH.map((q, i) => [`c_${i}`, q]),
+  ];
+  const originalQuestions = new Map(legacyQuestions(baseline.extracted.banks));
+  requireThat(
+    baseline.preserve_answer_keys === true,
+    'Contrato literal exige preservação dos gabaritos neste lote',
+  );
+  for (const [key, q] of legacyQuestions(corrected.banks)) {
+    const current = byRef(bundle.base.content.questions, key),
+      original = originalQuestions.get(key);
+    requireThat(
+      current?.prompt === q.p &&
+        isDeepStrictEqual(
+          current.options.map((o) => o.text),
+          q.o,
+        ) &&
+        current.correct === current.options[q.c]?.id &&
+        isDeepStrictEqual(
+          current.options.map((o) => o.feedback),
+          corrected.banks.X[key],
+        ) &&
+        current.explanation === corrected.banks.X[key][q.c],
+      'Questão canônica diverge da correção declarada: ' + key,
+    );
+    requireThat(
+      q.c === original.c && q.o[q.c] === original.o[original.c],
+      'Gabarito histórico alterado no lote literal',
+    );
+  }
+  corrected.banks.C.forEach((card, i) => {
+    const current = byRef(bundle.base.content.cards, `C[${i}]`);
+    requireThat(
+      current?.front === card[1] && current.answer === card[2] && current.back.includes(card[2]),
+      'Cartão diverge da correção declarada',
+    );
+  });
+  corrected.banks.G.forEach((game, i) => {
+    const current = byRef(bundle.base.content.game, `G[${i}]`);
+    requireThat(
+      current?.statement === game.t && current.truth === game.v && current.justification === game.x,
+      'V/F diverge da correção declarada',
+    );
+    requireThat(
+      game.v === baseline.extracted.banks.G[i].v,
+      'Polaridade histórica alterada no lote literal',
+    );
+  });
+  return {
+    unit: bundle.base.unit_id,
+    records: baseline.bindings.length,
+    source_sha256: baseline.source_sha256,
+  };
+}
+
 export async function validateLot(baseRoot = resolve(root, 'base-conhecimento'), { at } = {}) {
   const registry = JSON.parse(await readFile(resolve(baseRoot, 'manifest.json'), 'utf8'));
   requireThat(
@@ -852,7 +1043,27 @@ export async function validateLot(baseRoot = resolve(root, 'base-conhecimento'),
     registry.units.every((u) => !u.runtime_enabled || u.canonical_version !== null),
     'Consumo canônico habilitado antes da aprovação',
   );
-  const active = registry.units.filter((u) => u.candidate_version !== null);
+  const lots = registry.consolidation_lots || [
+    {
+      id: 'cartografia-piloto',
+      kind: 'pilot',
+      unit_ids: ['cartografia-fundamentos', 'cartografia-representacao', 'geotecnologias'],
+      baseline: 'cartografia/baseline-piloto.json',
+    },
+  ];
+  const declared = lots.flatMap((lot) => lot.unit_ids);
+  unique(
+    lots.map((lot) => lot.id),
+    'Lotes de consolidação',
+  );
+  unique(declared, 'Unidades dos lotes');
+  const registeredActive = registry.units.filter((u) => u.candidate_version !== null);
+  requireThat(
+    declared.length === registeredActive.length &&
+      declared.every((id) => registeredActive.some((u) => u.unit_id === id)),
+    'Escopo dos lotes de consolidação divergente',
+  );
+  const active = declared.map((id) => registeredActive.find((u) => u.unit_id === id));
   const bundles = [],
     summaries = [];
   async function checkLineage(unit, bundle, snapshot) {
@@ -898,15 +1109,23 @@ export async function validateLot(baseRoot = resolve(root, 'base-conhecimento'),
     await checkLineage(unit, bundle, snapshot);
     bundles.push(snapshot);
   }
-  const baseline = JSON.parse(
-    await readFile(resolve(baseRoot, 'cartografia', 'baseline-piloto.json'), 'utf8'),
-  );
-  requireThat(
-    active.length === baseline.unit_ids.length &&
-      active.every((u) => baseline.unit_ids.includes(u.unit_id)),
-    'Escopo do primeiro lote divergente',
-  );
-  reconstructPilot(bundles, baseline);
+  for (const lot of lots) {
+    requireThat(
+      typeof lot.baseline === 'string' && /^[a-z0-9/-]+\.json$/.test(lot.baseline),
+      'Caminho de snapshot do lote inválido',
+    );
+    const baseline = JSON.parse(await readFile(resolve(baseRoot, lot.baseline), 'utf8'));
+    requireThat(
+      isDeepStrictEqual(lot.unit_ids, baseline.unit_ids),
+      'Escopo do snapshot divergente',
+    );
+    const selected = lot.unit_ids.map((id) => bundles.find((b) => b.base.unit_id === id));
+    if (lot.kind === 'pilot') reconstructPilot(selected, baseline);
+    else if (lot.kind === 'legacy-literals') {
+      requireThat(selected.length === 1, 'Lote literal deve conter uma unidade');
+      validateLiteralSnapshot(selected[0], baseline);
+    } else throw new Error('Tipo de consolidação desconhecido');
+  }
   return {
     summaries,
     untouchedUnits: registry.units.filter((u) => u.candidate_version === null).length,
