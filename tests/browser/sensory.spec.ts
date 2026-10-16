@@ -412,7 +412,9 @@ for (const setup of [
       await page.clock.fastForward(11_000);
       await expect(page.locator('.milestone-toast')).toHaveCount(1);
       await page.getByRole('button', { name: 'Preparar outra rodada', exact: true }).focus();
-      await page.clock.fastForward(9_001);
+      // Both keyboard focus and pointer hover deliberately keep the notice readable.
+      await page.mouse.move(0, 0);
+      await page.clock.runFor(10_000);
       await expect(page.locator('.milestone-toast')).toHaveCount(0);
     }
     if (setup.mode === 'immersive' && !setup.manual && setup.reduced === 'no-preference')
