@@ -211,6 +211,97 @@ export function reviewDigest({ base, provenance, audit }) {
   return sha({ base, provenance, audit: { ...audit, human_approval: null } });
 }
 
+export function validateSchematicMap(visual) {
+  const pair = (value) =>
+    Array.isArray(value) && value.length === 2 && value.every(Number.isFinite);
+  const extent = visual.extent;
+  requireThat(
+    visual.illustrative === true &&
+      nonempty(visual.caption) &&
+      nonempty(visual.author) &&
+      nonempty(visual.transcript) &&
+      visual.crs?.kind === 'local-cartesian' &&
+      visual.crs.unit === 'km' &&
+      visual.crs.east === 'positive-x' &&
+      visual.crs.north === 'positive-y' &&
+      visual.crs.geodetic_datum === null &&
+      Array.isArray(extent) &&
+      extent.length === 4 &&
+      extent.every(Number.isFinite) &&
+      extent[2] > extent[0] &&
+      extent[3] > extent[1],
+    'Mapa didático sem contexto ou referência local válida: ' + visual.id,
+  );
+  const rendering = visual.rendering;
+  requireThat(
+    pair(rendering?.origin) &&
+      Number.isFinite(rendering.units_per_km) &&
+      rendering.units_per_km > 0 &&
+      Array.isArray(rendering.view_box) &&
+      rendering.view_box.length === 4 &&
+      rendering.view_box.every(Number.isFinite) &&
+      rendering.view_box[2] > 0 &&
+      rendering.view_box[3] > 0,
+    'Mapa didático sem transformação gráfica válida: ' + visual.id,
+  );
+  requireThat(
+    Array.isArray(visual.features) && visual.features.length > 0,
+    'Mapa sem feições: ' + visual.id,
+  );
+  unique(
+    visual.features.map((f) => f.id),
+    'Feições do mapa',
+  );
+  for (const feature of visual.features) {
+    const points = feature.geometry === 'point' ? [feature.coordinates] : feature.coordinates;
+    requireThat(
+      nonempty(feature.label) &&
+        nonempty(feature.symbol) &&
+        ['point', 'line', 'polygon'].includes(feature.geometry) &&
+        Array.isArray(points) &&
+        points.length >= { point: 1, line: 2, polygon: 3 }[feature.geometry] &&
+        points.every(
+          (p) =>
+            pair(p) &&
+            p[0] >= extent[0] &&
+            p[0] <= extent[2] &&
+            p[1] >= extent[1] &&
+            p[1] <= extent[3],
+        ),
+      'Feição fora do mapa didático: ' + feature.id,
+    );
+  }
+  const bar = visual.scale_bar;
+  requireThat(
+    pair(bar?.from) &&
+      pair(bar.to) &&
+      Number.isFinite(bar.distance_km) &&
+      bar.distance_km > 0 &&
+      Number.isFinite(bar.subdivision_km) &&
+      bar.subdivision_km > 0 &&
+      bar.subdivision_km <= bar.distance_km &&
+      Math.abs(
+        Math.hypot(bar.to[0] - bar.from[0], bar.to[1] - bar.from[1]) / rendering.units_per_km -
+          bar.distance_km,
+      ) < 1e-9,
+    'Escala gráfica incompatível com a grade do mapa: ' + visual.id,
+  );
+  requireThat(
+    Array.isArray(visual.heads) &&
+      visual.heads.length > 0 &&
+      Array.isArray(visual.rows) &&
+      visual.rows.length > 0 &&
+      visual.rows.every((r) => Array.isArray(r) && r.length === visual.heads.length) &&
+      nonempty(visual.svg) &&
+      /role="img"/.test(visual.svg) &&
+      /aria-label="[^"]+"/.test(visual.svg) &&
+      !/<\s*(?:script|foreignObject|image|iframe|object|use|a|animate|animateMotion|animateTransform|set)\b|\bon[a-z]+\s*=|\b(?:href|src)\s*=|url\s*\(|<!\s*(?:ENTITY|DOCTYPE)/i.test(
+        visual.svg,
+      ),
+    'Mapa didático sem alternativa acessível ou com conteúdo ativo/externo: ' + visual.id,
+  );
+}
+
 export function validateBundle(bundle, { approved = false, at = new Date().toISOString() } = {}) {
   const { base: b, provenance: p, audit: a } = bundle;
   requireThat(
@@ -387,7 +478,19 @@ export function validateBundle(bundle, { approved = false, at = new Date().toISO
         families.some((f) => f.id === q.family_id && f.members.includes(q.id)),
         'Questão sem família correspondente: ' + q.id,
       );
-  for (const visual of b.support.visuals)
+  for (const visual of b.support.visuals) {
+    if (visual.kind === 'schematic-map') {
+      validateSchematicMap(visual);
+      const sections = b.content.missions.flatMap((m) => m.sections);
+      requireThat(
+        Array.isArray(visual.resource_ids) &&
+          visual.resource_ids.length > 0 &&
+          visual.resource_ids.every((id) =>
+            sections.some((s) => s.id === id && s.html.includes(visual.svg)),
+          ),
+        'Mapa didático diverge do apoio apresentado na teoria: ' + visual.id,
+      );
+    }
     if (visual.kind === 'image-pair') {
       requireThat(
         visual.images.length === 2 &&
@@ -403,6 +506,7 @@ export function validateBundle(bundle, { approved = false, at = new Date().toISO
         'Par de imagens incompleto: ' + visual.id,
       );
     }
+  }
   const classified = b.metadata.resources.map((r) => r.id);
   unique(classified, 'Classificação');
   requireThat(
@@ -500,6 +604,40 @@ export function validateBundle(bundle, { approved = false, at = new Date().toISO
       premiumCriteriaIds.every((id) => a.premium_criteria.some((c) => c.id === id)),
     'Matriz Premium incompleta',
   );
+  if (a.assisted_review) {
+    const review = a.assisted_review;
+    requireThat(
+      review.kind === 'ai' &&
+        nonempty(review.reviewer) &&
+        review.human_manual_review === false &&
+        nonempty(review.delegation_evidence) &&
+        review.unit_id === b.unit_id &&
+        review.editorial_version === b.editorial_version &&
+        Number.isFinite(dateValue(review.reviewed_at)) &&
+        dateValue(review.reviewed_at) <= current,
+      'Revisão assistida sem autoria/delegação ou versão válida',
+    );
+    requireThat(
+      review.reviewed_payload_sha256 ===
+        sha({ content: b.content, support: b.support, metadata: b.metadata }) &&
+        isDeepStrictEqual(
+          review.resources,
+          all.map(({ kind, value }) => ({ kind, id: value.id, sha256: sha(value) })),
+        ),
+      'Revisão assistida não corresponde ao conteúdo atual',
+    );
+    requireThat(
+      Array.isArray(review.premium_criteria) &&
+        review.premium_criteria.length === 12 &&
+        new Set(review.premium_criteria.map((c) => c.id)).size === 12 &&
+        premiumCriteriaIds.every((id) =>
+          review.premium_criteria.some(
+            (c) => c.id === id && nonempty(c.assessment) && nonempty(c.reason),
+          ),
+        ),
+      'Revisão assistida sem os 12 critérios editoriais',
+    );
+  }
   if (approved || b.status === 'APROVADA_CANONICA') {
     requireThat(b.status === 'APROVADA_CANONICA', 'Base não aprovada: uso operacional bloqueado');
     requireThat(
@@ -679,14 +817,25 @@ export async function validateLot(baseRoot = resolve(root, 'base-conhecimento'),
         ? bundle
         : await readBundle(baseRoot, unit.unit_id, unit.initial_snapshot_version);
     validateBundle(snapshot, { at });
-    if (unit.candidate_version !== unit.initial_snapshot_version) {
-      const revision = bundle.provenance.revision;
+    let revisionBundle = bundle;
+    const lineage = new Set();
+    while (revisionBundle.base.editorial_version !== unit.initial_snapshot_version) {
+      const version = revisionBundle.base.editorial_version;
+      requireThat(!lineage.has(version), 'Ciclo na cadeia de versões: ' + unit.unit_id);
+      lineage.add(version);
+      const revision = revisionBundle.provenance.revision;
+      requireThat(validVersion(revision?.from_version), 'Revisão sem versão de origem válida');
+      requireThat(
+        !lineage.has(revision.from_version),
+        'Ciclo na cadeia de versões: ' + unit.unit_id,
+      );
       const parent =
         revision?.from_version === unit.initial_snapshot_version
           ? snapshot
           : await readBundle(baseRoot, unit.unit_id, revision?.from_version);
       validateBundle(parent, { at });
-      validateRevision(parent, bundle);
+      validateRevision(parent, revisionBundle);
+      revisionBundle = parent;
     }
     bundles.push(snapshot);
   }

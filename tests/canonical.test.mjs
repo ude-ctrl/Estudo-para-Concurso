@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { cp, mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { resolve } from 'node:path';
+import { parseFragment } from 'parse5';
 import {
   root,
   sha,
@@ -15,6 +16,7 @@ import {
   reviewDigest,
   editorialDiff,
   validateRevision,
+  validateSchematicMap,
 } from '../scripts/canonical-content.mjs';
 
 const baseRoot = resolve(root, 'base-conhecimento');
@@ -446,9 +448,9 @@ function redeclareRevision(x, i = 0) {
   }));
 }
 
-test('0.1.1 é a candidata do catálogo e mantém 0.1.0, todos os recursos e procedências', async () => {
+test('0.1.1 continua íntegra quando o catálogo evolui e mantém todos os recursos e procedências', async () => {
   const lot = await validateLot(baseRoot, { at });
-  assert.ok(lot.summaries.every((s) => s.version === '0.1.1' && !s.approved));
+  assert.ok(lot.summaries.every((s) => !s.approved));
   for (const [i, next] of revised.entries()) {
     assert.equal(validateBundle(next, { at }).approved, false);
     const check = validateRevision(originals[i], next);
@@ -707,4 +709,256 @@ test('candidatas corrigidas continuam sem aprovação humana, sem consumo operac
     );
   }
   assert.equal(revised.flatMap((x) => x.audit.authored_questions).length, 36);
+});
+
+const current = await Promise.all(ids.map((id) => readBundle(baseRoot, id, '0.1.2')));
+const currentClone = (i = 0) => structuredClone(current[i]);
+const currentMap = () =>
+  structuredClone(current[0].base.support.visuals.find((v) => v.kind === 'schematic-map'));
+
+test('0.1.2 valida a cadeia completa e preserva as identidades, alternativas e gabaritos de 0.1.1', async () => {
+  const result = await validateLot(baseRoot, { at });
+  assert.ok(result.summaries.every((s) => s.version === '0.1.2' && !s.approved));
+  assert.equal(result.canonicalUnits, 0);
+  assert.equal(result.untouchedUnits, 25);
+  for (const [i, next] of current.entries()) {
+    assert.equal(validateBundle(next, { at }).approved, false);
+    assert.equal(validateRevision(revised[i], next).preserved_resources, [277, 183, 231][i]);
+    assert.equal(
+      validateRevision(originals[i], revised[i]).preserved_resources,
+      [277, 183, 231][i],
+    );
+    assert.deepEqual(next.audit.counts, revised[i].audit.counts);
+    for (const q of next.base.content.questions) {
+      const before = revised[i].base.content.questions.find((p) => p.id === q.id);
+      assert.equal(q.prompt, before.prompt);
+      assert.equal(q.correct, before.correct);
+      assert.equal(q.explanation, before.explanation);
+      assert.deepEqual(
+        q.options.map(({ id, text }) => ({ id, text })),
+        before.options.map(({ id, text }) => ({ id, text })),
+      );
+    }
+    for (const key of ['cards', 'game', 'writing', 'supplements'])
+      assert.deepEqual(next.base.content[key], revised[i].base.content[key]);
+    const prior = new Map(resources(revised[i].base).map(({ value }) => [value.id, value]));
+    const changedTheory = resources(next.base).filter(
+      ({ kind, value }) => kind === 'theory' && value.html !== prior.get(value.id).html,
+    );
+    assert.deepEqual(
+      changedTheory.map(({ value }) => value.id).sort(),
+      i === 0 ? ['v6-theory-t02-14', 'v6-theory-t02-8'] : [],
+    );
+    for (const { value } of changedTheory)
+      assert.ok(value.html.length > prior.get(value.id).html.length);
+  }
+});
+
+test('44 questões perdem os feedbacks genéricos e 137 distratores recebem explicações individuais', () => {
+  let questions = 0,
+    alternatives = 0;
+  current.forEach((next, i) => {
+    const expected = revised[i].base.content.questions.filter((q) =>
+      q.options.some(
+        (o) =>
+          o.id !== q.correct &&
+          /^(Distrator\.|Não atende ao comando\.|Não é a melhor resposta\.)/.test(o.feedback),
+      ),
+    );
+    assert.deepEqual(
+      next.audit.editorial_round.feedback_question_ids,
+      expected.map((q) => q.id),
+    );
+    for (const old of expected) {
+      questions++;
+      const q = next.base.content.questions.find((p) => p.id === old.id);
+      assert.equal(
+        new Set(q.options.filter((o) => o.id !== q.correct).map((o) => o.feedback)).size,
+        q.options.length - 1,
+      );
+      q.options.forEach((o, j) => {
+        if (o.id === q.correct) return assert.equal(o.feedback, old.options[j].feedback);
+        alternatives++;
+        assert.notEqual(o.feedback, old.options[j].feedback);
+        assert.ok(o.feedback.length > 50);
+        assert.doesNotMatch(
+          o.feedback,
+          /^(Distrator\.|Não atende ao comando\.|Não é a melhor resposta\.)/,
+        );
+      });
+    }
+  });
+  assert.equal(questions, 44);
+  assert.equal(alternatives, 137);
+  const q = current[0].base.content.questions.find((q) => q.id === 'v6-fix-021ea0f23f590e47');
+  assert.match(q.options.find((o) => o.text === '2 km').feedback, /4 × 5 = 20 km/);
+  assert.match(q.options.find((o) => o.text === '200 km').feedback, /100.000 cm\/km/);
+  const slope = current[1].base.content.questions.find((q) => q.id === 'v6-fix-49fa6f33e47651ca');
+  assert.match(slope.options.find((o) => o.text === '20° obrigatoriamente').feedback, /11,3°/);
+});
+
+test('r11 passa para Concurso sem reescrever o item ou inflar o estoque Elite', () => {
+  const before = revised[1].base.content.questions.find((q) => q.id === 'v6-q-r11');
+  const q = current[1].base.content.questions.find((q) => q.id === before.id);
+  assert.deepEqual([q.pool, q.difficulty, q.cognitive], ['concurso', 2, 3]);
+  assert.deepEqual(q.options, before.options);
+  assert.equal(q.prompt, before.prompt);
+  assert.equal(q.correct, before.correct);
+  assert.ok(q.roles.includes('concurso') && !q.roles.includes('elite'));
+  const decision = current[1].audit.editorial_round.level_reassessment[0];
+  assert.equal(decision.id, q.id);
+  assert.equal(decision.psychometrically_calibrated, false);
+  assert.deepEqual(
+    ['fixacao', 'concurso', 'elite'].map(
+      (p) => current.flatMap((x) => x.base.content.questions).filter((q) => q.pool === p).length,
+    ),
+    [125, 24, 12],
+  );
+});
+
+test('mapa hipotético tem grade, escala, símbolos e posições coerentes com o SVG e a alternativa textual', () => {
+  const map = currentMap();
+  validateSchematicMap(map);
+  assert.deepEqual(map.extent, [0, 0, 4, 4]);
+  assert.equal((map.extent[2] - map.extent[0]) * (map.extent[3] - map.extent[1]), 16);
+  assert.equal(map.crs.geodetic_datum, null);
+  assert.match(map.caption, /hipotético/);
+  assert.match(map.transcript, /não delimita fusos brasileiros/);
+  const school = map.features.find((f) => f.id === 'escola');
+  const clinic = map.features.find((f) => f.id === 'saude');
+  const river = map.features.find((f) => f.id === 'rio');
+  assert.deepEqual(school.coordinates, [1, 1]);
+  assert.deepEqual(clinic.coordinates, [3, 3]);
+  assert.ok(
+    clinic.coordinates[0] > school.coordinates[0] && clinic.coordinates[1] > school.coordinates[1],
+  );
+  assert.equal(river.coordinates[0][0] - school.coordinates[0], 1);
+  assert.equal(
+    Math.hypot(
+      map.scale_bar.to[0] - map.scale_bar.from[0],
+      map.scale_bar.to[1] - map.scale_bar.from[1],
+    ) / map.rendering.units_per_km,
+    1,
+  );
+  const nodes = [];
+  const visit = (node) => {
+    nodes.push(node);
+    for (const child of node.childNodes || []) visit(child);
+  };
+  visit(parseFragment(map.svg));
+  const attrs = (node) => Object.fromEntries(node.attrs.map((a) => [a.name, a.value]));
+  const rect = attrs(
+    nodes.find((n) => n.attrs?.some((a) => a.name === 'data-feature' && a.value === 'escola')),
+  );
+  assert.equal(Number(rect.x) + Number(rect.width) / 2, 120);
+  assert.equal(Number(rect.y) + Number(rect.height) / 2, 300);
+  const riverPath = attrs(
+    nodes.find((n) => n.attrs?.some((a) => a.name === 'data-feature' && a.value === 'rio')),
+  );
+  assert.equal(riverPath.d, 'M200 380V60');
+  assert.equal(nodes.filter((n) => n.tagName === 'svg').length, 1);
+  assert.equal(nodes.filter((n) => n.attrs?.some((a) => a.name === 'id')).length, 0);
+  assert.deepEqual(map.rows.slice(0, 2), [
+    ['Escola', 1, 1],
+    ['Posto de saúde', 3, 3],
+  ]);
+});
+
+test('mapa obrigatório é autossuficiente e PDF histórico fica complementar sem acesso inventado', () => {
+  const fund = current[0],
+    map = currentMap();
+  const sections = fund.base.content.missions.flatMap((m) => m.sections);
+  const reading = sections.find((s) => s.id === 'v6-theory-t02-14');
+  const time = sections.find((s) => s.id === 'v6-theory-t02-8');
+  assert.ok(reading.html.includes(map.svg));
+  assert.doesNotMatch(reading.html + time.html, /<object\b|<iframe\b|<img\b/);
+  assert.doesNotMatch(reading.html + time.html, /O mapa informa|procure.*escala 1:40.000.000/);
+  assert.match(reading.html, /1:40.000.000, 1 cm corresponde a 400 km/);
+  assert.match(time.html, /UTC−2/);
+  assert.match(time.html, /UTC−5/);
+  assert.match(time.html, /Lei nº 12.876\/2013/);
+  assert.match(time.html, /Observatório Nacional/);
+  assert.ok(
+    fund.base.support.media.every(
+      (m) =>
+        m.required_for_learning === false &&
+        m.active_embed === false &&
+        m.verification === 'access-blocked',
+    ),
+  );
+  assert.ok(time.html.includes(fund.base.support.media[0].url));
+  const finding = fund.audit.findings.find((f) => f.id === 'CAN-MIDIA-IBGE-001');
+  assert.equal(finding.status, 'mitigated');
+  assert.equal(finding.blocks_promotion, false);
+  assert.match(finding.assisted_resolution.summary, /acesso ao PDF continua não concluído/);
+  const broken = currentClone();
+  broken.base.content.missions.flatMap((m) => m.sections).find((s) => s.id === reading.id).html =
+    '<p>Figura perdida.</p>';
+  seal(broken);
+  assert.throws(() => validateBundle(broken, { at }), /Mapa didático diverge/);
+});
+
+test('mapa rejeita escala incoerente, coordenadas fora do recorte e conteúdo ativo ou sem acesso textual', () => {
+  const bar = currentMap();
+  bar.scale_bar.distance_km = 2;
+  assert.throws(() => validateSchematicMap(bar), /Escala gráfica incompatível/);
+  const point = currentMap();
+  point.features[0].coordinates = [20, 1];
+  assert.throws(() => validateSchematicMap(point), /Feição fora/);
+  for (const injection of [
+    '<script>alert(1)</script>',
+    '<image href="https://example.invalid/map.png"/>',
+    '<animate attributeName="x"/>',
+    '<rect onclick="alert(1)"/>',
+  ]) {
+    const active = currentMap();
+    active.svg += injection;
+    assert.throws(() => validateSchematicMap(active), /conteúdo ativo\/externo/);
+  }
+  const noText = currentMap();
+  noText.transcript = '';
+  assert.throws(() => validateSchematicMap(noText), /sem contexto/);
+});
+
+test('parecer por IA identifica delegação, cobre os recursos e não permite conteúdo alterado ou autoria humana fictícia', async () => {
+  for (const [i, next] of current.entries()) {
+    assert.equal(next.audit.assisted_review.kind, 'ai');
+    assert.equal(next.audit.assisted_review.human_manual_review, false);
+    assert.equal(next.audit.assisted_review.resources.length, [277, 183, 231][i]);
+    assert.equal(next.audit.assisted_review.premium_criteria.length, 12);
+    assert.equal(next.audit.human_approval, null);
+    assert.ok(next.audit.authored_questions.every((q) => q.human_reviewer === null));
+    await assert.rejects(loadApprovedUnit(baseRoot, ids[i], '0.1.2', { at }), /não aprovada/);
+  }
+  const changed = currentClone();
+  changed.base.content.cards[0].back += ' Alteração posterior.';
+  seal(changed);
+  assert.throws(() => validateBundle(changed, { at }), /Revisão assistida não corresponde/);
+  const falseHuman = currentClone();
+  falseHuman.audit.assisted_review.kind = 'human';
+  assert.throws(() => validateBundle(falseHuman, { at }), /autoria\/delegação/);
+  const missing = currentClone();
+  missing.audit.assisted_review.premium_criteria.pop();
+  assert.throws(() => validateBundle(missing, { at }), /12 critérios/);
+});
+
+test('cadeia valida também a revisão intermediária e recusa ciclos antes de carregar o próprio pacote', async (t) => {
+  const temp = await mkdtemp(resolve(tmpdir(), 'v6-canonical-lineage-'));
+  t.after(() => rm(temp, { recursive: true, force: true }));
+  await cp(resolve(baseRoot, 'manifest.json'), resolve(temp, 'manifest.json'));
+  await cp(resolve(baseRoot, 'cartografia'), resolve(temp, 'cartografia'), { recursive: true });
+  const parent = structuredClone(revised[0]);
+  parent.provenance.revision.changes.pop();
+  await writeFile(
+    resolve(temp, 'cartografia', ids[0], '0.1.1', 'provenance.json'),
+    JSON.stringify(parent.provenance),
+  );
+  const child = currentClone();
+  child.provenance.revision.parent_bundle_sha256 = sha(parent);
+  const childPath = resolve(temp, 'cartografia', ids[0], '0.1.2', 'provenance.json');
+  await writeFile(childPath, JSON.stringify(child.provenance));
+  await assert.rejects(validateLot(temp, { at }), /não declarada/);
+  child.provenance.revision.from_version = '0.1.2';
+  await writeFile(childPath, JSON.stringify(child.provenance));
+  await assert.rejects(validateLot(temp, { at }), /Ciclo na cadeia/);
 });

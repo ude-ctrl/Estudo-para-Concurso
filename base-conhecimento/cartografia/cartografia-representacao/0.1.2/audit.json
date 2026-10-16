@@ -1,0 +1,1946 @@
+{
+  "schema_version": 1,
+  "unit_id": "cartografia-representacao",
+  "editorial_version": "0.1.2",
+  "status": "EM_AUDITORIA",
+  "reviewed_at": "2026-10-16",
+  "reviewer_kind": "AI-assisted editorial review; not independent human approval",
+  "human_approval": null,
+  "scope": {
+    "all_published_resources_read": true,
+    "legacy_htmls_not_rewritten": true,
+    "other_units_audited": 0,
+    "official_exam_fully_audited": false,
+    "inherited_full_read_from": "0.1.1",
+    "current_round": "Revisão das alterações sobre a leitura integral delegada de 0.1.1: 44 questões legadas, classificação de r11 e suporte do exercício cartográfico. Recursos não modificados conferidos por hash. Autoria por IA, sem nova certificação humana."
+  },
+  "counts": {
+    "missions": 5,
+    "sections": 14,
+    "recalls": 10,
+    "concepts": 10,
+    "questions": 49,
+    "authored_questions": 12,
+    "cards": 31,
+    "game": 61,
+    "writing": 2,
+    "supplements": 0,
+    "parity_records": 172
+  },
+  "confidence": {
+    "structural": "high — initial snapshot preserved and full declared revision comparison",
+    "basic_concepts": "moderate — assisted reading and selected primary sources",
+    "numerical_examples": "high for the calculations described",
+    "difficulty_calibration": "editorial reassessment only; no empirical calibration",
+    "human_premium": "pending"
+  },
+  "premium_criteria": [
+    {
+      "id": "correcao_conceitual",
+      "title": "Correção conceitual",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    },
+    {
+      "id": "cobertura",
+      "title": "Cobertura do escopo e perfil",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    },
+    {
+      "id": "profundidade",
+      "title": "Profundidade para concurso",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    },
+    {
+      "id": "clareza",
+      "title": "Clareza didática",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    },
+    {
+      "id": "exemplos",
+      "title": "Qualidade dos exemplos",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    },
+    {
+      "id": "redundancia",
+      "title": "Redundância editorial",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    },
+    {
+      "id": "terminologia",
+      "title": "Consistência terminológica",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    },
+    {
+      "id": "lacunas",
+      "title": "Identificação de lacunas",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    },
+    {
+      "id": "temporalidade",
+      "title": "Dados temporais",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    },
+    {
+      "id": "nivel",
+      "title": "Adequação ao nível de cobrança",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    },
+    {
+      "id": "fontes",
+      "title": "Confiabilidade das fontes",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    },
+    {
+      "id": "treino",
+      "title": "Qualidade do treino",
+      "decision": "pending-human-review",
+      "evidence": "Leitura assistida, inventário integral, achados por ID e fontes com alcance delimitado neste pacote.",
+      "limit": "Não é uma decisão humana de aprovação."
+    }
+  ],
+  "authored_questions": [
+    {
+      "id": "v6-q-r01",
+      "resource_sha256": "2576cf68bd7ca165d02c2896a97c75c40889cef9766db8ecc51adda8bf459fdb",
+      "pool": "concurso",
+      "correct_option_id": "v6-q-r01-correct",
+      "correct_option_text": "Equivalência, com reconhecimento das deformações de forma.",
+      "current_difficulty": 2,
+      "current_cognitive": 3,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Comparação de participação territorial pede equivalência; conformidade não garante áreas.",
+      "recommendation": "Reavaliar proximidade da família legada de comparação de áreas; não são itens de prova oficial.",
+      "level_concern": false,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-theory-t03a-0",
+        "v6-theory-t03a-1",
+        "v6-theory-t03a-2",
+        "v6-theory-t03a-3",
+        "v6-theory-t17-5",
+        "projecao"
+      ],
+      "verification_basis": "Raciocínio/cálculo do enunciado e teoria preservada; não se atribui a uma fonte externa que não tratou deste item.",
+      "human_decision": "pending",
+      "human_reviewer": null
+    },
+    {
+      "id": "v6-q-r02",
+      "resource_sha256": "c47afc1dda4d6fbdb5a9c2e0b948396e40ed0a1c2282b98136c295940a13bc1a",
+      "pool": "concurso",
+      "correct_option_id": "v6-q-r02-correct",
+      "correct_option_text": "500.000 m, com fuso, hemisfério e datum identificados.",
+      "current_difficulty": 2,
+      "current_cognitive": 3,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Por convenção, E=500.000 m no meridiano central; fuso, hemisfério e datum continuam necessários.",
+      "recommendation": "Manter candidato; premissa de uso convencional e unidade métrica devem ser preservadas.",
+      "level_concern": false,
+      "source_ids": [
+        "usgs-utm"
+      ],
+      "content_evidence": [
+        "v6-theory-t03a-4",
+        "v6-theory-t03a-5",
+        "utm"
+      ],
+      "verification_basis": "Raciocínio do item, teoria preservada e fontes listadas, respeitando o nível de acesso de cada uma.",
+      "human_decision": "pending",
+      "human_reviewer": null
+    },
+    {
+      "id": "v6-q-r03",
+      "resource_sha256": "632ccc13618946d86f92d32152aee9e6176027e8c8ab82924bf3f60c1e95ec7a",
+      "pool": "concurso",
+      "correct_option_id": "v6-q-r03-correct",
+      "correct_option_text": "Calcular uma taxa com denominador populacional pertinente e explicitar período e base.",
+      "current_difficulty": 2,
+      "current_cognitive": 3,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Incidência comparada exige denominador populacional pertinente, período e base declarados.",
+      "recommendation": "Reclassificação assistida aplicada: Aplicação de denominador populacional e período à comparação de incidência, sem conjunto de evidências a decompor. Confirmar esta classificação na revisão humana.",
+      "level_concern": true,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-theory-t03a-6",
+        "v6-theory-t03a-7",
+        "v6-theory-t17-6",
+        "tematico"
+      ],
+      "verification_basis": "Raciocínio/cálculo do enunciado e teoria preservada; não se atribui a uma fonte externa que não tratou deste item.",
+      "human_decision": "pending",
+      "human_reviewer": null,
+      "level_reassessment_version": "0.1.1"
+    },
+    {
+      "id": "v6-q-r04",
+      "resource_sha256": "c43214d1ed1d6d5b6eb704f555e1693acff743129fe17b3ded38821f1300eb4c",
+      "pool": "concurso",
+      "correct_option_id": "v6-q-r04-correct",
+      "correct_option_text": "20%.",
+      "current_difficulty": 2,
+      "current_cognitive": 3,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "40/200×100=20%; percentual não é ângulo em graus.",
+      "recommendation": "Manter candidato procedimental, com distância horizontal expressa.",
+      "level_concern": false,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-theory-t03a-16",
+        "v6-theory-t17-7",
+        "v6-theory-t17-8",
+        "relevo"
+      ],
+      "verification_basis": "Raciocínio/cálculo do enunciado e teoria preservada; não se atribui a uma fonte externa que não tratou deste item.",
+      "human_decision": "pending",
+      "human_reviewer": null
+    },
+    {
+      "id": "v6-q-r05",
+      "resource_sha256": "b98efe7282701e6aae01e29e56ee0749cef10eead52a8b21bf815180bc1c1195",
+      "pool": "concurso",
+      "correct_option_id": "v6-q-r05-correct",
+      "correct_option_text": "Matizes ou padrões distinguíveis, com legenda nominal acessível.",
+      "current_difficulty": 2,
+      "current_cognitive": 3,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Categorias nominais pedem diferenciação sem ordem; matizes/padrões com legenda acessível atendem ao objetivo.",
+      "recommendation": "Reclassificação assistida aplicada: Aplicação de variável visual à natureza nominal do dado, com distratores amplamente elimináveis. Confirmar esta classificação na revisão humana.",
+      "level_concern": true,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-theory-t03a-6",
+        "v6-theory-t03a-7",
+        "v6-theory-t17-6",
+        "semiologia"
+      ],
+      "verification_basis": "Raciocínio/cálculo do enunciado e teoria preservada; não se atribui a uma fonte externa que não tratou deste item.",
+      "human_decision": "pending",
+      "human_reviewer": null,
+      "level_reassessment_version": "0.1.1"
+    },
+    {
+      "id": "v6-q-r06",
+      "resource_sha256": "b007724507bc6c08858f0c196e1fe42162c23fc60e1a8056ad1887b078f54b1b",
+      "pool": "concurso",
+      "correct_option_id": "v6-q-r06-correct",
+      "correct_option_text": "Há concentração relativa nessa faixa; explicar a causa exige outras evidências.",
+      "current_difficulty": 3,
+      "current_cognitive": 4,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "A descrição permite concentração relativa da faixa adulta, mas não determina a causa.",
+      "recommendation": "Manter candidato de limite inferencial; não alegar que uma figura ausente fornece dados adicionais.",
+      "level_concern": false,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-theory-t03a-16",
+        "v6-theory-t17-7",
+        "v6-theory-t17-8",
+        "graficos"
+      ],
+      "verification_basis": "Raciocínio/cálculo do enunciado e teoria preservada; não se atribui a uma fonte externa que não tratou deste item.",
+      "human_decision": "pending",
+      "human_reviewer": null
+    },
+    {
+      "id": "v6-q-r07",
+      "resource_sha256": "e8c1784e4a892b1748285fd0d97d13d67ced9436a5b6e13ba3b34b0d27c77120",
+      "pool": "concurso",
+      "correct_option_id": "v6-q-r07-correct",
+      "correct_option_text": "A: 1.000 hab./km²; B: 200 hab./km²; coroplético de densidade com legenda explícita.",
+      "current_difficulty": 2,
+      "current_cognitive": 3,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "10.000/10=1.000 e 20.000/100=200 hab./km²; o coroplético deve usar densidade.",
+      "recommendation": "Reclassificação assistida aplicada: Divisão direta de população por área e aplicação da normalização a um coroplético; não exige dificuldade Elite. Confirmar esta classificação na revisão humana.",
+      "level_concern": true,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-theory-t03a-6",
+        "v6-theory-t03a-7",
+        "v6-theory-t17-6",
+        "tematico"
+      ],
+      "verification_basis": "Raciocínio/cálculo do enunciado e teoria preservada; não se atribui a uma fonte externa que não tratou deste item.",
+      "human_decision": "pending",
+      "human_reviewer": null,
+      "level_reassessment_version": "0.1.1"
+    },
+    {
+      "id": "v6-q-r08",
+      "resource_sha256": "abc53688070514a3767d22bf64138b983ccd42ff9b3dcef2ea55eec74bf0ca2d",
+      "pool": "concurso",
+      "correct_option_id": "v6-q-r08-correct",
+      "correct_option_text": "São coerentes com finalidades distintas; a reta de rumo constante não é necessariamente o caminho mínimo.",
+      "current_difficulty": 2,
+      "current_cognitive": 2,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Mercator representa rumo constante por reta; Gall-Peters preserva áreas; loxodromia não é mínimo geral.",
+      "recommendation": "Reclassificação assistida aplicada: Compreensão de propriedades explícitas de Mercator e Gall-Peters e da distinção loxodromia/ortodromia. Confirmar esta classificação na revisão humana.",
+      "level_concern": true,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-theory-t03a-4",
+        "v6-theory-t03a-5",
+        "mercator"
+      ],
+      "verification_basis": "Raciocínio/cálculo do enunciado e teoria preservada; não se atribui a uma fonte externa que não tratou deste item.",
+      "human_decision": "pending",
+      "human_reviewer": null,
+      "level_reassessment_version": "0.1.1"
+    },
+    {
+      "id": "v6-q-r09",
+      "resource_sha256": "e5939b3713bdc8dea2eaf2583e4d3921444e1b476870de2f348dd69d182c47df",
+      "pool": "elite",
+      "correct_option_id": "v6-q-r09-correct",
+      "correct_option_text": "Exagero vertical de 5 vezes e declividade média real de 20%.",
+      "current_difficulty": 3,
+      "current_cognitive": 4,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Exagero=50.000/10.000=5; declividade real=40/200×100=20%.",
+      "recommendation": "Esquema sem escala explicitado no enunciado, legenda e nota. Conferir a autonomia do item; tabela e gabarito preservados.",
+      "level_concern": false,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-theory-t03a-16",
+        "v6-theory-t17-7",
+        "v6-theory-t17-8",
+        "relevo"
+      ],
+      "verification_basis": "Raciocínio/cálculo do enunciado e teoria preservada; não se atribui a uma fonte externa que não tratou deste item.",
+      "human_decision": "pending",
+      "human_reviewer": null
+    },
+    {
+      "id": "v6-q-r10",
+      "resource_sha256": "f384da4a342424b509fdb84c6dd94ee77dedfd1ac493e29efb3a9b611ebea7ea",
+      "pool": "concurso",
+      "correct_option_id": "v6-q-r10-correct",
+      "correct_option_text": "A ponta do V indica montante; a água tende a escoar para altitudes menores.",
+      "current_difficulty": 2,
+      "current_cognitive": 3,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "No vale, a ponta do V das curvas aponta para montante; escoamento tende a cotas menores.",
+      "recommendation": "Reclassificação assistida aplicada: Aplicação direta da regra do V a um vale e distinção entre intervalo vertical e distância horizontal. Confirmar esta classificação na revisão humana.",
+      "level_concern": true,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-theory-t03a-16",
+        "v6-theory-t17-7",
+        "v6-theory-t17-8",
+        "relevo"
+      ],
+      "verification_basis": "Raciocínio/cálculo do enunciado e teoria preservada; não se atribui a uma fonte externa que não tratou deste item.",
+      "human_decision": "pending",
+      "human_reviewer": null,
+      "level_reassessment_version": "0.1.1"
+    },
+    {
+      "id": "v6-q-r11",
+      "resource_sha256": "3aacdd37dd4ff9514063bec2a6cf0b953f7d7005990da66d06e2628de665f4e2",
+      "pool": "concurso",
+      "correct_option_id": "v6-q-r11-correct",
+      "correct_option_text": "Obter base e método compatíveis com a precisão e a finalidade, verificando escala, referência e qualidade.",
+      "current_difficulty": 2,
+      "current_cognitive": 3,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Zoom não recompõe uma feição generalizada; base/método devem sustentar finalidade e precisão locais.",
+      "recommendation": "Reclassificação para Concurso/D2/C3 aplicada e revisada pelo assistente. O comando aplica um critério conhecido de adequação entre escala, precisão e finalidade; os distratores são distantes dessa decisão. Manter como Concurso/D2/C3, sem simular calibração psicométrica nem alterar o enunciado.",
+      "level_concern": false,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-theory-t03a-15",
+        "critica"
+      ],
+      "verification_basis": "Raciocínio/cálculo do enunciado e teoria preservada; não se atribui a uma fonte externa que não tratou deste item.",
+      "human_decision": "pending",
+      "human_reviewer": null,
+      "level_reassessment_version": "0.1.2"
+    },
+    {
+      "id": "v6-q-r12",
+      "resource_sha256": "f077179e258e50c1966b6cb7d7fa6d406e697bdace9e2357a8cdf515888b8fc3",
+      "pool": "elite",
+      "correct_option_id": "v6-q-r12-correct",
+      "correct_option_text": "Compatibilizar referências e projeções, ou usar método geodésico apropriado; as falsas origens pertencem a grades de fusos distintos.",
+      "current_difficulty": 4,
+      "current_cognitive": 5,
+      "assisted_key_check": "compatible-with-analysis",
+      "reason": "Fusos UTM possuem origens/meridianos distintos; compatibilizar ou usar método geodésico adequado.",
+      "recommendation": "Manter candidato de integração; D4/C5 são classificações editoriais a confirmar, não calibração empírica.",
+      "level_concern": false,
+      "source_ids": [
+        "usgs-utm"
+      ],
+      "content_evidence": [
+        "v6-theory-t03a-4",
+        "v6-theory-t03a-5",
+        "utm"
+      ],
+      "verification_basis": "Raciocínio do item, teoria preservada e fontes listadas, respeitando o nível de acesso de cada uma.",
+      "human_decision": "pending",
+      "human_reviewer": null
+    }
+  ],
+  "proposed_metadata_changes": [
+    {
+      "id": "v6-fix-40b0df8d5b8f4ef0",
+      "before": {
+        "mission": "graficos-perfis-relevo",
+        "concept": "graficos"
+      },
+      "proposed": {
+        "mission": "leitura-critica-integrada",
+        "concept": "critica"
+      },
+      "reason": "A habilidade central é generalização cartográfica; o complemento atual fala de gráficos/pirâmides.",
+      "before_sha256": "4bbf194ac804d12d41b1da0bb4f2235020b92eacc03e80cfe9785f82965eb62a",
+      "status": "applied-pending-human-review",
+      "applied": true,
+      "assisted_applied_at": "2026-10-16",
+      "human_decision": "pending"
+    }
+  ],
+  "question_families": [
+    {
+      "id": "familia-area-atlas",
+      "members": [
+        "v6-q-r01",
+        "v6-fix-7aeb0c4f82d0daab"
+      ],
+      "reason": "Atlas comparando participação de áreas; aplicação próxima da propriedade equivalente.",
+      "status": "linked-pending-human-review",
+      "applied": true
+    }
+  ],
+  "findings": [
+    {
+      "id": "CAN-EDITORIAL-001",
+      "severity": "promotion-blocker",
+      "status": "open",
+      "blocks_promotion": true,
+      "title": "Parecer humano Premium e aprovação dos itens ainda pendentes",
+      "resource_ids": [
+        "v6-q-r01",
+        "v6-q-r02",
+        "v6-q-r03",
+        "v6-q-r04",
+        "v6-q-r05",
+        "v6-q-r06",
+        "v6-q-r07",
+        "v6-q-r08",
+        "v6-q-r09",
+        "v6-q-r10",
+        "v6-q-r11",
+        "v6-q-r12"
+      ],
+      "decision": "Este parecer assistido e os testes não promovem uma unidade. Os 12 critérios e o conjunto integral precisam de decisão editorial documentada."
+    },
+    {
+      "id": "CAN-FEEDBACK-001",
+      "severity": "editorial-review",
+      "status": "addressed-pending-human-review",
+      "blocks_promotion": true,
+      "title": "Complementos genéricos e atribuições de conceitos exigem revisão por pertinência",
+      "resource_ids": [
+        "v6-fix-40b0df8d5b8f4ef0"
+      ],
+      "decision": "Conferir as propostas de vínculo e os feedbacks por alternativa. Na questão v6-fix-40b0df8d5b8f4ef0, a explicação de generalização recebe complemento sobre contagens e percentuais em gráficos. Os textos foram preservados nesta candidata.",
+      "assisted_resolution": {
+        "at": "2026-10-16",
+        "version": "0.1.2",
+        "kind": "ai",
+        "summary": "Correções de vínculo e feedback da rodada anterior preservadas e revistas. Nesta rodada, 11 questões desta unidade recebem explicação específica de cada alternativa incorreta. A explicação central continua preservada.",
+        "human_decision": "pending"
+      }
+    },
+    {
+      "id": "CAN-FONTE-001",
+      "severity": "editorial-review",
+      "status": "addressed-pending-human-review",
+      "blocks_promotion": true,
+      "title": "Afirmações sobre como a FGV já cobrou não possuem prova/ano/item identificados",
+      "resource_ids": [
+        "v6-theory-t03a-0",
+        "v6-theory-t03a-3",
+        "v6-theory-t17-5",
+        "v6-theory-t03a-6",
+        "v6-theory-t03a-16",
+        "v6-theory-t17-7"
+      ],
+      "decision": "Tratar como orientação autoral até verificar exemplos de provas reais; o edital confirma programa/formato, não frequência histórica de cobrança.",
+      "assisted_resolution": {
+        "at": "2026-10-16",
+        "version": "0.1.1",
+        "summary": "Afirmações não documentadas sobre histórico/frequência de cobrança foram identificadas como orientação e exemplos autorais. O programa do edital permanece citado sem inventar prova/ano/item.",
+        "evidence": "provenance.json#revision",
+        "human_decision": "pending"
+      }
+    },
+    {
+      "id": "CAN-NIVEL-001",
+      "severity": "editorial-review",
+      "status": "addressed-pending-human-review",
+      "blocks_promotion": true,
+      "title": "Nível cognitivo/dificuldade e distratores precisam de decisão",
+      "resource_ids": [
+        "v6-q-r03",
+        "v6-q-r05",
+        "v6-q-r07",
+        "v6-q-r08",
+        "v6-q-r10"
+      ],
+      "decision": "Reclassificar ou reconstruir em nova versão após decisão editorial. Não há calibração psicométrica ou promoção pelo rótulo Elite.",
+      "assisted_resolution": {
+        "at": "2026-10-16",
+        "version": "0.1.2",
+        "kind": "ai",
+        "summary": "Dez reclassificações anteriores preservadas e nova reclassificação de r11 para Concurso/D2/C3 aplicada. Nenhum item foi artificialmente promovido a Elite.",
+        "human_decision": "pending"
+      }
+    },
+    {
+      "id": "CAN-FAMILIA-001",
+      "severity": "editorial-review",
+      "status": "addressed-pending-human-review",
+      "blocks_promotion": true,
+      "title": "Famílias próximas entre novos itens e legado",
+      "resource_ids": [
+        "v6-q-r01",
+        "v6-fix-7aeb0c4f82d0daab"
+      ],
+      "decision": "Os pares não são duplicatas exatas. Decidir identidade de família, rastreabilidade de reformulação e efeito na novidade antes da promoção; não apagar originais.",
+      "assisted_resolution": {
+        "at": "2026-10-16",
+        "version": "0.1.1",
+        "summary": "Cinco famílias declaradas no conjunto, com vínculo bidirecional nos itens e novidade independente desativada no contrato. Nenhuma formulação foi excluída. A aplicação atual não consome estes metadados.",
+        "evidence": "provenance.json#revision",
+        "human_decision": "pending"
+      }
+    },
+    {
+      "id": "CAN-VISUAL-002",
+      "severity": "editorial-review",
+      "status": "addressed-pending-human-review",
+      "blocks_promotion": true,
+      "title": "Perfil esquemático não tem proporção gráfica das escalas declaradas no item",
+      "resource_ids": [
+        "v6-q-r09"
+      ],
+      "decision": "Tabela e cálculo são suficientes e corretos. Identificar SVG como esquema sem escala ou desenhar um perfil compatível em nova versão, sem medir o traçado atual como se fosse carta.",
+      "assisted_resolution": {
+        "at": "2026-10-16",
+        "version": "0.1.1",
+        "summary": "Enunciado, legenda e nota de medição esclarecem que o SVG é esquema sem escala. Tabela, SVG e gabarito permanecem preservados.",
+        "evidence": "provenance.json#revision",
+        "human_decision": "pending"
+      }
+    },
+    {
+      "id": "CAN-MIDIA-001",
+      "severity": "source-review",
+      "status": "addressed-pending-human-review",
+      "blocks_promotion": true,
+      "title": "Créditos/licenças das imagens externas precisam de conferência completa",
+      "resource_ids": [
+        "v6-theory-t03a-3"
+      ],
+      "decision": "URLs e créditos originais foram preservados. Não houve nova verificação integral de autoria/licença Wikimedia nesta rodada nem distribuição local das imagens.",
+      "assisted_resolution": {
+        "at": "2026-10-16",
+        "version": "0.1.1",
+        "summary": "Créditos e licenças dos dois arquivos Wikimedia conferidos diretamente nas páginas dos arquivos e incorporados às legendas e aos metadados.",
+        "evidence": "provenance.json#revision",
+        "human_decision": "pending"
+      }
+    },
+    {
+      "id": "CAN-TEMPORAL-001",
+      "severity": "source-review",
+      "status": "addressed-pending-human-review",
+      "blocks_promotion": true,
+      "title": "Conferência direta de fonte ainda parcial",
+      "resource_ids": [
+        "v6-fix-ef5f6071445f1a5d"
+      ],
+      "decision": "Trecho indexado ou falha de acesso não equivale a conferência integral. Manter verified_at nulo no fato parcialmente verificado e resolver antes da promoção.",
+      "assisted_resolution": {
+        "at": "2026-10-16",
+        "version": "0.1.1",
+        "summary": "Faixa UTM conferida diretamente na fonte primária FGDC. O endpoint USGS antes parcial permanece registrado como histórico, sem fingir abertura direta.",
+        "evidence": "provenance.json#revision",
+        "human_decision": "pending"
+      }
+    },
+    {
+      "id": "CAN-SUPORTE-001",
+      "severity": "preservation",
+      "status": "resolved",
+      "blocks_promotion": false,
+      "title": "Dados pedagógicos da interface incluídos no pacote candidato",
+      "resource_ids": [
+        "v6-q-r07",
+        "v6-q-r09"
+      ],
+      "decision": "Tabelas extraídas de literais AST, perfil SVG preservado, precisão UTM e rubricas de prática registradas. Nada foi removido do piloto."
+    }
+  ],
+  "statements": [
+    "Candidata 0.1.2 derivada da base estruturada 0.1.1, preservada integralmente com 0.1.0. Nenhum HTML foi reextraído ou reinterpretado nesta correção.",
+    "44 questões legadas recebem explicações individualizadas das alternativas incorretas no conjunto. Todas as alternativas, seus IDs e os 161 gabaritos são preservados.",
+    "r11 passa a Concurso/D2/C3, preservando texto e opções. O conjunto contém 125 Fixação, 24 Concurso e 12 Elite, sem calibração psicométrica.",
+    "Revisão editorial realizada pelo Codex por delegação do usuário, com autoria por IA explícita e vínculo aos hashes do conteúdo. Não se exige que o estudante revise arquivos no GitHub.",
+    "A promoção e o consumo operacional permanecem distintos deste parecer; nenhum registro humano foi inventado. O site, o progresso e as outras 25 unidades não foram alterados."
+  ],
+  "technical_checks": "Consultar relatório de validação do lote; leitura editorial não é execução de navegador.",
+  "level_reassessment": [
+    {
+      "id": "v6-q-r03",
+      "before": {
+        "pool": "concurso",
+        "difficulty": 2,
+        "cognitive": 4
+      },
+      "after": {
+        "pool": "concurso",
+        "difficulty": 2,
+        "cognitive": 3
+      },
+      "reason": "Aplicação de denominador populacional e período à comparação de incidência, sem conjunto de evidências a decompor.",
+      "method": "official-phase6-taxonomy; assisted review",
+      "psychometrically_calibrated": false,
+      "human_decision": "pending"
+    },
+    {
+      "id": "v6-q-r05",
+      "before": {
+        "pool": "concurso",
+        "difficulty": 2,
+        "cognitive": 4
+      },
+      "after": {
+        "pool": "concurso",
+        "difficulty": 2,
+        "cognitive": 3
+      },
+      "reason": "Aplicação de variável visual à natureza nominal do dado, com distratores amplamente elimináveis.",
+      "method": "official-phase6-taxonomy; assisted review",
+      "psychometrically_calibrated": false,
+      "human_decision": "pending"
+    },
+    {
+      "id": "v6-q-r07",
+      "before": {
+        "pool": "elite",
+        "difficulty": 3,
+        "cognitive": 4
+      },
+      "after": {
+        "pool": "concurso",
+        "difficulty": 2,
+        "cognitive": 3
+      },
+      "reason": "Divisão direta de população por área e aplicação da normalização a um coroplético; não exige dificuldade Elite.",
+      "method": "official-phase6-taxonomy; assisted review",
+      "psychometrically_calibrated": false,
+      "human_decision": "pending"
+    },
+    {
+      "id": "v6-q-r08",
+      "before": {
+        "pool": "elite",
+        "difficulty": 3,
+        "cognitive": 4
+      },
+      "after": {
+        "pool": "concurso",
+        "difficulty": 2,
+        "cognitive": 2
+      },
+      "reason": "Compreensão de propriedades explícitas de Mercator e Gall-Peters e da distinção loxodromia/ortodromia.",
+      "method": "official-phase6-taxonomy; assisted review",
+      "psychometrically_calibrated": false,
+      "human_decision": "pending"
+    },
+    {
+      "id": "v6-q-r10",
+      "before": {
+        "pool": "elite",
+        "difficulty": 3,
+        "cognitive": 4
+      },
+      "after": {
+        "pool": "concurso",
+        "difficulty": 2,
+        "cognitive": 3
+      },
+      "reason": "Aplicação direta da regra do V a um vale e distinção entre intervalo vertical e distância horizontal.",
+      "method": "official-phase6-taxonomy; assisted review",
+      "psychometrically_calibrated": false,
+      "human_decision": "pending"
+    },
+    {
+      "id": "v6-q-r11",
+      "version": "0.1.2",
+      "before": {
+        "pool": "elite",
+        "difficulty": 3,
+        "cognitive": 5
+      },
+      "after": {
+        "pool": "concurso",
+        "difficulty": 2,
+        "cognitive": 3
+      },
+      "reason": "O comando aplica um critério conhecido de adequação entre escala, precisão e finalidade; os distratores são distantes dessa decisão. Manter como Concurso/D2/C3, sem simular calibração psicométrica nem alterar o enunciado.",
+      "method": "official-phase6-taxonomy; delegated AI review",
+      "psychometrically_calibrated": false,
+      "human_decision": "pending"
+    }
+  ],
+  "pool_counts": {
+    "fixacao": 37,
+    "concurso": 10,
+    "elite": 2,
+    "real": 0
+  },
+  "assisted_fixes": {
+    "metadata_links": 1,
+    "legacy_questions_feedback_revised": 12,
+    "level_reassessments": 6,
+    "option_replacements": 0,
+    "human_approval_granted": false
+  },
+  "editorial_round": {
+    "version": "0.1.2",
+    "from_version": "0.1.1",
+    "feedback_question_ids": [
+      "v6-fix-126d18ee440ea653",
+      "v6-fix-84781ad41b4c9923",
+      "v6-fix-a27bb973f3f26aaf",
+      "v6-fix-10874bf28f51acf9",
+      "v6-fix-68971e299509e8f1",
+      "v6-fix-14325d546b21211c",
+      "v6-fix-8fcd68e822620a2b",
+      "v6-fix-c73e93b19d41b475",
+      "v6-fix-49fa6f33e47651ca",
+      "v6-fix-e7df0ba674fbda9d",
+      "v6-fix-fd8f5dd339a0d512"
+    ],
+    "feedback_options": [
+      {
+        "question_id": "v6-fix-126d18ee440ea653",
+        "option_id": "v6-fix-126d18ee440ea653-o390530eac5",
+        "option_text": "geocodificação"
+      },
+      {
+        "question_id": "v6-fix-126d18ee440ea653",
+        "option_id": "v6-fix-126d18ee440ea653-od0ca8c2ac0",
+        "option_text": "buffer"
+      },
+      {
+        "question_id": "v6-fix-126d18ee440ea653",
+        "option_id": "v6-fix-126d18ee440ea653-o159ea584da",
+        "option_text": "resolução radiométrica"
+      },
+      {
+        "question_id": "v6-fix-84781ad41b4c9923",
+        "option_id": "v6-fix-84781ad41b4c9923-oa0678e17b8",
+        "option_text": "conformal"
+      },
+      {
+        "question_id": "v6-fix-84781ad41b4c9923",
+        "option_id": "v6-fix-84781ad41b4c9923-o3f131a92c9",
+        "option_text": "qualquer, pois áreas não distorcem"
+      },
+      {
+        "question_id": "v6-fix-84781ad41b4c9923",
+        "option_id": "v6-fix-84781ad41b4c9923-o05306e1b43",
+        "option_text": "sem escala"
+      },
+      {
+        "question_id": "v6-fix-a27bb973f3f26aaf",
+        "option_id": "v6-fix-a27bb973f3f26aaf-ob15c36156a",
+        "option_text": "reduzir áreas de altas latitudes"
+      },
+      {
+        "question_id": "v6-fix-a27bb973f3f26aaf",
+        "option_id": "v6-fix-a27bb973f3f26aaf-oebbe4c15a7",
+        "option_text": "preservar áreas globais"
+      },
+      {
+        "question_id": "v6-fix-a27bb973f3f26aaf",
+        "option_id": "v6-fix-a27bb973f3f26aaf-oc37d294cd3",
+        "option_text": "eliminar a curvatura sem distorção"
+      },
+      {
+        "question_id": "v6-fix-10874bf28f51acf9",
+        "option_id": "v6-fix-10874bf28f51acf9-oa39e80f6b0",
+        "option_text": "apenas símbolos de orientação"
+      },
+      {
+        "question_id": "v6-fix-10874bf28f51acf9",
+        "option_id": "v6-fix-10874bf28f51acf9-o772bf57ef6",
+        "option_text": "isolíneas de longitude"
+      },
+      {
+        "question_id": "v6-fix-10874bf28f51acf9",
+        "option_id": "v6-fix-10874bf28f51acf9-o80ea38cb5e",
+        "option_text": "escala gráfica como variável"
+      },
+      {
+        "question_id": "v6-fix-68971e299509e8f1",
+        "option_id": "v6-fix-68971e299509e8f1-ob0fca7ddd2",
+        "option_text": "isóbaras"
+      },
+      {
+        "question_id": "v6-fix-68971e299509e8f1",
+        "option_id": "v6-fix-68971e299509e8f1-oa45b4c1641",
+        "option_text": "meridianos"
+      },
+      {
+        "question_id": "v6-fix-68971e299509e8f1",
+        "option_id": "v6-fix-68971e299509e8f1-o36ec7027cb",
+        "option_text": "buffers"
+      },
+      {
+        "question_id": "v6-fix-14325d546b21211c",
+        "option_id": "v6-fix-14325d546b21211c-ob6b9e87b22",
+        "option_text": "a variação do fuso horário"
+      },
+      {
+        "question_id": "v6-fix-14325d546b21211c",
+        "option_id": "v6-fix-14325d546b21211c-oa3a80616fc",
+        "option_text": "as bandas espectrais de um sensor"
+      },
+      {
+        "question_id": "v6-fix-14325d546b21211c",
+        "option_id": "v6-fix-14325d546b21211c-of9882645b2",
+        "option_text": "apenas a legenda de uma carta"
+      },
+      {
+        "question_id": "v6-fix-8fcd68e822620a2b",
+        "option_id": "v6-fix-8fcd68e822620a2b-o6ae44e2235",
+        "option_text": "apenas a cor"
+      },
+      {
+        "question_id": "v6-fix-8fcd68e822620a2b",
+        "option_id": "v6-fix-8fcd68e822620a2b-o163ae3b0c4",
+        "option_text": "a projeção cartográfica"
+      },
+      {
+        "question_id": "v6-fix-8fcd68e822620a2b",
+        "option_id": "v6-fix-8fcd68e822620a2b-o83dba2ddc6",
+        "option_text": "o datum geodésico"
+      },
+      {
+        "question_id": "v6-fix-c73e93b19d41b475",
+        "option_id": "v6-fix-c73e93b19d41b475-o79e73476f2",
+        "option_text": "relevo mais plano"
+      },
+      {
+        "question_id": "v6-fix-c73e93b19d41b475",
+        "option_id": "v6-fix-c73e93b19d41b475-o25619fa401",
+        "option_text": "menor altitude necessariamente"
+      },
+      {
+        "question_id": "v6-fix-c73e93b19d41b475",
+        "option_id": "v6-fix-c73e93b19d41b475-oc165d9c6c1",
+        "option_text": "ausência de relevo"
+      },
+      {
+        "question_id": "v6-fix-49fa6f33e47651ca",
+        "option_id": "v6-fix-49fa6f33e47651ca-o8bf002fd2d",
+        "option_text": "20° obrigatoriamente"
+      },
+      {
+        "question_id": "v6-fix-49fa6f33e47651ca",
+        "option_id": "v6-fix-49fa6f33e47651ca-ocefc383066",
+        "option_text": "20 km de altitude"
+      },
+      {
+        "question_id": "v6-fix-49fa6f33e47651ca",
+        "option_id": "v6-fix-49fa6f33e47651ca-o9c87cec164",
+        "option_text": "ausência de inclinação"
+      },
+      {
+        "question_id": "v6-fix-e7df0ba674fbda9d",
+        "option_id": "v6-fix-e7df0ba674fbda9d-o9f88d2d7bf",
+        "option_text": "áreas"
+      },
+      {
+        "question_id": "v6-fix-e7df0ba674fbda9d",
+        "option_id": "v6-fix-e7df0ba674fbda9d-od276f8fecc",
+        "option_text": "distâncias em todo o globo"
+      },
+      {
+        "question_id": "v6-fix-e7df0ba674fbda9d",
+        "option_id": "v6-fix-e7df0ba674fbda9d-o5d2d96b881",
+        "option_text": "volumes"
+      },
+      {
+        "question_id": "v6-fix-fd8f5dd339a0d512",
+        "option_id": "v6-fix-fd8f5dd339a0d512-o461e33fffd",
+        "option_text": "Mercator é equivalente e preserva áreas"
+      },
+      {
+        "question_id": "v6-fix-fd8f5dd339a0d512",
+        "option_id": "v6-fix-fd8f5dd339a0d512-o243a6e6833",
+        "option_text": "Gall-Peters é conformal"
+      },
+      {
+        "question_id": "v6-fix-fd8f5dd339a0d512",
+        "option_id": "v6-fix-fd8f5dd339a0d512-o20892d9704",
+        "option_text": "projeções azimutais eliminam distorções globais"
+      },
+      {
+        "question_id": "v6-fix-fd8f5dd339a0d512",
+        "option_id": "v6-fix-fd8f5dd339a0d512-o800e28889c",
+        "option_text": "projeção e datum são a mesma coisa"
+      }
+    ],
+    "level_reassessment": [
+      {
+        "id": "v6-q-r11",
+        "version": "0.1.2",
+        "before": {
+          "pool": "elite",
+          "difficulty": 3,
+          "cognitive": 5
+        },
+        "after": {
+          "pool": "concurso",
+          "difficulty": 2,
+          "cognitive": 3
+        },
+        "reason": "O comando aplica um critério conhecido de adequação entre escala, precisão e finalidade; os distratores são distantes dessa decisão. Manter como Concurso/D2/C3, sem simular calibração psicométrica nem alterar o enunciado.",
+        "method": "official-phase6-taxonomy; delegated AI review",
+        "psychometrically_calibrated": false,
+        "human_decision": "pending"
+      }
+    ],
+    "inherited_full_review": "MissaoAprovacaoGeo/V6_ISSUE13_REVISAO_DELEGADA_CARTOGRAFIA.md",
+    "content_reduced": false,
+    "correct_keys_changed": 0,
+    "canonical_promotion": false
+  },
+  "assisted_review": {
+    "kind": "ai",
+    "reviewer": "Codex",
+    "human_manual_review": false,
+    "reviewed_at": "2026-10-16",
+    "unit_id": "cartografia-representacao",
+    "editorial_version": "0.1.2",
+    "delegation_evidence": "Usuário: “Uma plataforma, auditada e revisada por você”, seguido de “Ok, vamos em frente”. Autoriza a condução da revisão e das correções pelo assistente; não é declaração de leitura humana por item nem autorização de merge/publicação.",
+    "method": "delta-review-on-fully-read-parent; preserved resources checked by hash; independently recomputed quantitative cases; precise source access limits retained",
+    "reviewed_payload_sha256": "44a89e54d850eddd5687c5bad84624abbbc44bcf3734231fbb2b4e2e7cf528a9",
+    "resources": [
+      {
+        "kind": "unit",
+        "id": "cartografia-representacao",
+        "sha256": "df4cfae8c890d7b1dcb00bdfc16b8a002624fcb3fa781085bb84ff7ea919aad7"
+      },
+      {
+        "kind": "missions",
+        "id": "projecoes-propriedades",
+        "sha256": "23f97cd308b0f1868622f9f532d65ef4d0010e864835cde2155d09015bf23865"
+      },
+      {
+        "kind": "missions",
+        "id": "mercator-peters-utm",
+        "sha256": "57a6d23fb6ef6b04488d2c6b3eb086efbe95bf29b42e67e639cb0615da3220c1"
+      },
+      {
+        "kind": "missions",
+        "id": "semiologia-tematica",
+        "sha256": "e15c7f7bac2f070bc2174fdca3617e41194acc8840c29b19438547528fa7a661"
+      },
+      {
+        "kind": "missions",
+        "id": "graficos-perfis-relevo",
+        "sha256": "209bb10b1bc218e51b21524964914b6bfe1954309511b9b49973097e94fb3c44"
+      },
+      {
+        "kind": "missions",
+        "id": "leitura-critica-integrada",
+        "sha256": "2f72a96ba4f0b1ab1c1ebf860aea319077797b207d04b4dd4f6afeafe168bea9"
+      },
+      {
+        "kind": "concepts",
+        "id": "projecao",
+        "sha256": "782d3a04b3130743f36c82ccad983b760405725ded2a38afdd7e2a542d64d95a"
+      },
+      {
+        "kind": "concepts",
+        "id": "mercator",
+        "sha256": "4f49dc1c3ec564d502b4840ebe3043a5bafc074d30ba53e59e943bf117bc3f12"
+      },
+      {
+        "kind": "concepts",
+        "id": "utm",
+        "sha256": "82927716ffe506e836d7be1151b04d41b2bba14fce6666316b6425f5ee3fb57d"
+      },
+      {
+        "kind": "concepts",
+        "id": "semiologia",
+        "sha256": "7f1e069038979be9123512498d9b8a0e6cbc30a44f7998fcebbba4d002a6f46b"
+      },
+      {
+        "kind": "concepts",
+        "id": "tematico",
+        "sha256": "8aa9f546583ccce6c26a5b1704ab2657579308303650d792651425600f6b84cb"
+      },
+      {
+        "kind": "concepts",
+        "id": "graficos",
+        "sha256": "ed4d7a1cea0401000a890c7cb867d170e2218764b50d7f5b4b1d0ba7eeb97531"
+      },
+      {
+        "kind": "concepts",
+        "id": "relevo",
+        "sha256": "7db4ad51643bfb78ece74134c54ac6cbf0054fd50dac6c6a0eb82a0317b621be"
+      },
+      {
+        "kind": "concepts",
+        "id": "critica",
+        "sha256": "bfe19d4f7d922578cc6073872a1c4ca6059d3d322dea6251b1c50d95d1c2acfa"
+      },
+      {
+        "kind": "concepts",
+        "id": "isolinhas",
+        "sha256": "dbd22e219ce6ee1588caadec72010d514035a8a45abf8f336b1f07596dfc7fa6"
+      },
+      {
+        "kind": "concepts",
+        "id": "magnitude",
+        "sha256": "b677cbb44b823548b13ca04505a696cacecc613fa04aca46d4ed9c8bc485d1aa"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-64e045fb4b26e2d6",
+        "sha256": "a545e7000ae4334b1332c6b45af86d0c51b6c900dc0c8afb586787cf228f8de3"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-84728836d8c8ebdf",
+        "sha256": "8ebc8321a901886e1ef9c4a6d55ac2eaec1bdf170fdec298f06e94ba3127a69f"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-1dbee982c32f51d7",
+        "sha256": "10f60fd483e073b68a05f42137cb357e0b577c430663c4a7555b0fc5ca0f3deb"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-3a34291abb2d039f",
+        "sha256": "309c4339eb4372e48d25ecfd380177ee4f3bc16082a75ee696c124067f9f8483"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-e52cc07f11d53b50",
+        "sha256": "8c8dcb6b8194910026e48b6aec94cb5cf27981e169d81ab395d8fb7f4b508f66"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-65762df06b571473",
+        "sha256": "c694818e1c8bd5d9a39cfb0d0b6a3a414117e5b79b90966e12f7060d5a0c0450"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-ed3bdb700e904c0f",
+        "sha256": "8595e5164d15fb44611aaf916c1e2a430ad45325d254e30795351a210f25a0b0"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-c4ba8e3f3d32b35f",
+        "sha256": "3b7f61c0907042d7f640f9d1bef5c8732ebe679a9f58ea9a2c8ac0fc255a09f2"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-762f32f08ac247a6",
+        "sha256": "deaf65e5ad2d20be4448deb738166bcb8c0a29e67ae9aa6fb6573b38bb95f5d2"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-63e1b68a3cbe4a19",
+        "sha256": "d099157060bedcb5e5571ff948617b41694b4e9315cf273721da26c3cb793e9c"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-a69d6838ee2d00f7",
+        "sha256": "ed75f6c346ac285185da4b4b54bb2537e8916a701d34e2fb7ae154b2da019f24"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-256f59fa391b0acb",
+        "sha256": "55721dfb3d64044a1bea49cbd5137612427249a30095e8d9c731d69e8fe22ea6"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-18d2eb7486593c09",
+        "sha256": "1cbb40ffcbffb54a4258e556d8f6f80226ff7aa6d439e32db7f32eac74626c88"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-0f15209cebe78597",
+        "sha256": "a23f08118f989673f7bd0c0f0a0601f63477ea08b33e66a7c55aa6607b117c9e"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-727e4f2527e000e9",
+        "sha256": "eef6baaf9d039f2d63ffc0e4cb176f15fa3da39d3459888cd1bd106d5a396bc2"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-46bda0a9e2fd3507",
+        "sha256": "a7c19c8eeb438658d56b32f46b8a4ee26b47218e17493b2ec594d8db799dd240"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-771f170f95931252",
+        "sha256": "db12b00b0c1a9e3733a1861477a2f3acfa23a32ffb144ec0f90b30e2ba9cb92e"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-8931f654f8138e36",
+        "sha256": "75024496e6ccb9783e13974b2901e0f3eed272d0340940d39e44eca1516465d9"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-40b0df8d5b8f4ef0",
+        "sha256": "9f20220e46fb8fd172770a32a8f85042e7f8a9f8372addb874554fd57679332a"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-87da1e506c318442",
+        "sha256": "2651e2c3ed895d3f4d2fcbc84dfe32a70a732178fbafe7e6339364e293c95437"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-858941d444561aa4",
+        "sha256": "b98725750a71c7d2f2ef8105b31dce8c1c0cc4137f4b6cca1cba16a1e55ffd53"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-b4b31d4da38fbb30",
+        "sha256": "db8defb7db2e19d70fad61c844385238e798287fbe5f28f2f483d0fcdf67ae8f"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-eb3c816d4870d1ad",
+        "sha256": "bd45cf5ef2c5a757588573462dde0b1b8d4db223ae47b28db4f47c98e6ef5856"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-7aeb0c4f82d0daab",
+        "sha256": "2dc326fd5f20da27d16dbecfce20ca28f26329586319815b6676323ac237a7da"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-66fe69ac2bb0401f",
+        "sha256": "0c75e199bd8a5b6bacad24eb22365621016ef80e897e3c56c2e36c80b454c76a"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-ef5f6071445f1a5d",
+        "sha256": "adf8f902f568420e2fbd83a8ebcb9b9e63f2a58772ec68af70840fcb299afc26"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-126d18ee440ea653",
+        "sha256": "86c510e9731e8453160a08fbf31de1248fa15157c7c70a53a31761a54f236de8"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-84781ad41b4c9923",
+        "sha256": "4b91fd470a370a2b998413330b8b4e6f3d7de708a0bece467cbec574d1c8814d"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-a27bb973f3f26aaf",
+        "sha256": "14d21e402739d4d8ced330efdc5c8224d389cd2061db8f2c908f559673dd1262"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-10874bf28f51acf9",
+        "sha256": "38cc7874f2f20b2d851583920d139c1e2df3879b0ffd617cedde429d077f022a"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-68971e299509e8f1",
+        "sha256": "272ea08b5c23c8801ff417347e151632f34e3fa1de97f794bf723e281d2901ef"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-14325d546b21211c",
+        "sha256": "d640d49239cdc8fd23954f1d0d1051c14e71d4f162cbc6331c2eae501bcce99c"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-8fcd68e822620a2b",
+        "sha256": "baf026f8682bb68a75063a4af1b618f8939697e822c11670a42b3bd21d6f758c"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-c73e93b19d41b475",
+        "sha256": "818a2fb260b8d427e530515a3c2df1920b088cbcc49976775b820f790c2764ed"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-49fa6f33e47651ca",
+        "sha256": "b5575cae3ff581339af38ccb46f67c7d56272a58b02ea5d9f941716d00481d0d"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-e7df0ba674fbda9d",
+        "sha256": "25089d84ef1dda4bf7e0c3206c8975d488414dfe87b13bb3517bc9eac25b9434"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-fix-fd8f5dd339a0d512",
+        "sha256": "0e2e195d500427e89727d28cb0294890acb42b75515ac3241568fa94b7d0eec2"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-r01",
+        "sha256": "2576cf68bd7ca165d02c2896a97c75c40889cef9766db8ecc51adda8bf459fdb"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-r02",
+        "sha256": "c47afc1dda4d6fbdb5a9c2e0b948396e40ed0a1c2282b98136c295940a13bc1a"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-r03",
+        "sha256": "632ccc13618946d86f92d32152aee9e6176027e8c8ab82924bf3f60c1e95ec7a"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-r04",
+        "sha256": "c43214d1ed1d6d5b6eb704f555e1693acff743129fe17b3ded38821f1300eb4c"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-r05",
+        "sha256": "b98efe7282701e6aae01e29e56ee0749cef10eead52a8b21bf815180bc1c1195"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-r06",
+        "sha256": "b007724507bc6c08858f0c196e1fe42162c23fc60e1a8056ad1887b078f54b1b"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-r07",
+        "sha256": "e8c1784e4a892b1748285fd0d97d13d67ced9436a5b6e13ba3b34b0d27c77120"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-r08",
+        "sha256": "abc53688070514a3767d22bf64138b983ccd42ff9b3dcef2ea55eec74bf0ca2d"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-r09",
+        "sha256": "e5939b3713bdc8dea2eaf2583e4d3921444e1b476870de2f348dd69d182c47df"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-r10",
+        "sha256": "f384da4a342424b509fdb84c6dd94ee77dedfd1ac493e29efb3a9b611ebea7ea"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-r11",
+        "sha256": "3aacdd37dd4ff9514063bec2a6cf0b953f7d7005990da66d06e2628de665f4e2"
+      },
+      {
+        "kind": "questions",
+        "id": "v6-q-r12",
+        "sha256": "f077179e258e50c1966b6cb7d7fa6d406e697bdace9e2357a8cdf515888b8fc3"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-8981c1b5061b150a",
+        "sha256": "79dae3d6384df54145223fc51adf84cd69ef33d33e9d51cff347a7eac17957d0"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-6f8f4e5cee19de92",
+        "sha256": "7cf8157d5a38414fb62e48c4e703aae346e5ca251011f588bb89681a90fff7c4"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-9ce10a3e535cba79",
+        "sha256": "32da6c51b545b972efdbd704b11cb6910f49e639b06f08216779cf5db37b9d32"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-fd7cfa7c54665cec",
+        "sha256": "b9b019f3144c9c8734eb066de751642acf1efd2b8e18cad5e16bb72effd44bce"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-d36003bad378be00",
+        "sha256": "cc047b5b0d9d561106474fdd7f885bcc825cc23ddfcabe896e9f7dae67f4e58e"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-fbd362b2412abec1",
+        "sha256": "c6a922dd27f8c9113b2048b8de81fb6fafe1e3e0975dafee0608ecee912b0a3c"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-14f8ea48797d6ede",
+        "sha256": "f81420804429bcc9e680984f767908f5113e712612ff5720959ce9b2301b10b3"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-f5d2332d12e32bf0",
+        "sha256": "b90c2b096226e8baa0442253f527cbfcc71a60bf91d5c29dff29ed2742e53c7c"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-b1f84b290435fa35",
+        "sha256": "339f70a4ef77ee8cd70bfddc99edfba05f06eaa03e4e9aab2e390da384f65573"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-de7c4c2c0fc9a8d3",
+        "sha256": "90e0bc051678e722a630c1595db6577a554bda80bb238fc0a1d65cdeec35d94b"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-e58c6a01f5511842",
+        "sha256": "f40f5dbb8b50fff35ef770f2e7a3d9bc60509fa4a701a59c1e588eb90e8e886a"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-0d54e15b5f9bd671",
+        "sha256": "9a77b78aba9b1748d77ebd4e8b864a06ee93b3dd0cbb6fde68d440bba3bc2a49"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-b98873abc3a7a6c1",
+        "sha256": "d8f0874e699287b205cf58387f5030f2e7a6e47570e6865370ee89311fb228f2"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-4672941e8e822d26",
+        "sha256": "dc32099160dc14e70fe0e6fe4c1d005f021d906313f66863a66269a0b8b7050c"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-57bb876602106779",
+        "sha256": "f18eed6bdc75fa755e9e976fd8d4b93a9f4868be5c5866483c2f632b3609fb7e"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-fb5ca4e264b15046",
+        "sha256": "7d1bd79b505d0a78a510eab7e128bab6f1e4595fd1535fd5de6ad8f1ea559121"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-1a5ec67fe82eee5a",
+        "sha256": "5ae9838d3f53b437b77f07cdb3b18dee89070c40df9beab430ef4379a7f34508"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-9ba04da0e3bbda70",
+        "sha256": "8183d32fae078b3d814ae0410cfc7e170736f82f7e90508e0c2c38089fee83b3"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-27c9ba5c44060110",
+        "sha256": "2a6c3cd445cac8120148779b81892de0c156e0c2477daba7c980dd2828019878"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-4b2f8e816ec00bf3",
+        "sha256": "b5fb271b456554f4c40c2925d41dec033ec346f17dfc6104d5aa2c9cb46cd344"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-0ac8c3a179b50af1",
+        "sha256": "4178f80d359e81f1ec1221385d0970077174eef603678a705d7e15e906cd5523"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-39ef2100fe8cfc39",
+        "sha256": "6b36841e0cfb241f4fbf7c88414d450618757ce833ef7bfb032c6c638b58fde2"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-0d5c8c4e033c6aec",
+        "sha256": "177adf2905064695924e0679e2eecba13f003479e7473d6011474d00641ccaa1"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-dd89783a5619d84a",
+        "sha256": "90a790d074d4a356b34b884774de26a12b37b306e3be726420bf78de0a338dce"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-6841bcc2cc1e9d7a",
+        "sha256": "38a1bdb144d4603d42756ddaa53decc03cdf3f983c28b2e18fd5c59ca4a0ab47"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-45e319d150a3fa04",
+        "sha256": "7ac037b19b0c7211c9da15aaa7829b8efd6c4962aea0353a5fde7820dd061498"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-5814ddd54fe220b5",
+        "sha256": "7dea344af4f369ca6bdfb8ab950ea7f4d31cc5970fa44c8691defb30353a5801"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-cea8d15217f8b79f",
+        "sha256": "8762c7dfa481f2840250d8f5176af2a78472a3260ffaa01dbfb637dcf0ae18fd"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-948adb96e7ea958d",
+        "sha256": "762c9196b1248075d9aafa604f3e4ddd890b7cf690fe4ee5ff1f7a9bb193767c"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-63844a3cd9fb1a32",
+        "sha256": "8a2c97c74cd21acc1d931c5fd21c85b6b78d9a5bbf2fec880764b3a0e4388b35"
+      },
+      {
+        "kind": "cards",
+        "id": "v6-fc-e4f528991e3ab620",
+        "sha256": "befb685cc66c8a39d78de3dfc715e130bed84e4489c238ddd25b64a7eba2b051"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-4745ad7bc643278b",
+        "sha256": "9ddc67d84f02b34e5a08b33acbaa1342686d09098403c9a37c2de443f7292374"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-dd1c676ea73a9043",
+        "sha256": "84e08d11193f8b4a0b54bc23b454cedbacb38d0d8fdad0e5b7006727b4e2c2a8"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-f62240a19d7c5bce",
+        "sha256": "20230eb0c877b583bceb37dd71cc34c424dcab0c7453da002909d4aa9fbd9b31"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-c2dfa51fdc203121",
+        "sha256": "5b3bd2e7a1e33ef59e855b34f0f028975289a33929be333b653f730d317b4cd9"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-bcde0680b25ddb5d",
+        "sha256": "818811e9f6f5cf433b4b3cdc238084e7f2d0ffcb4ae8a1eea17b5be8bfb9906c"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-04b3eb9d81fa8c6e",
+        "sha256": "29ab0c6f7fa379d36a1c62411e327173c69342cd31ceb26a45088a6c8bc64e35"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-c5927313e8aa41fd",
+        "sha256": "864f3bdb3c60bc4ad57735d7aea9ae6273312c38948fe41c446d8f56748408c4"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-d62fa591a8faa144",
+        "sha256": "8ab86b6f406b557b24ef0ced37341f532b087af0f30c5eaa6c0871349ae7962f"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-d57afd805341da4c",
+        "sha256": "857ac6dc68266751af01a3b71a605d253a275b78833d31b592dc2eab82650210"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-2b0a3668338a66c3",
+        "sha256": "fe3f45cd7bf71b24bb782649d1084f7ab1fcab299baa2107a659aa8d46db8388"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-954e7163973757bf",
+        "sha256": "d8a18c7afd1974d89208ce5eed48972a90de19a411c48dc6c51810b5f879538e"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-efad6051c4edc169",
+        "sha256": "7ffe16d031d71163183a017b704a75442f89c61ef4424090fe245fc3c9599e35"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-5d641f42f2c8c98e",
+        "sha256": "a370a24c9a2853ea6ecd87715035eab74344d8ea2944538e7313e2c8cb712a97"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-5cfda29151e6c8c3",
+        "sha256": "cb5d8a03a2108b25759db103b4003fedd3cdc5f4e9dc8e986d1b07e8472fd803"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-a99d14c433139300",
+        "sha256": "e6d6ac30f0bc3eb806d9cee0db815319d6bcdc58d7a33e4ad6f917ef57972e83"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-baaefc531d717c43",
+        "sha256": "0dd19bdcf531203e4669beb816b5f6cd906f7731e7a6bd2b8d24fe3ca5a27922"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-f340ed7cb6625f55",
+        "sha256": "2de6e9509a9bcc08edffaab37472c649881969c5f16fbfd10e2ffefb50e04e69"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-d4682b4f18b82e08",
+        "sha256": "80ed4efdc2b6a370f1f1b4268ebaa32333112a310751e34074d7b20c694470c9"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-40eaaa142af0eafd",
+        "sha256": "5923ede925a3a16f64740bbe0ea80e5b00a216d376f174c10db9cb0031ae55e9"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-95ea27e093b758c5",
+        "sha256": "f6880bce1264aac8ae98c42c01f3ab74a66362a41fb830ccf491e692168433f9"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-cf1a423da48e03b7",
+        "sha256": "9d05b7af73cbd801d22255255e7fcff4c53bd1f828d7eeda5f2a2bde9ba6fd6f"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-15d800c0e8a6590a",
+        "sha256": "18e5fd4f538f137804e23c09c60a5a8c006862cd7560eebfca1cc88cee718ad3"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-8e8772f1a164ab3a",
+        "sha256": "726842f88564b8322498641102197e52c9253d0d674031e88428859807c2a613"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-d8d04f2ef74bbef4",
+        "sha256": "81cf8350593bb8d0d9180412d3ccca68486995061cde116f73f3803713f84b3b"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-a5963fcc7aed1c4d",
+        "sha256": "88038f0977eabc60fad9b996065a8d38e3871f2a5d623a706cd742dd61651a56"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-1e2835088618abe3",
+        "sha256": "ec74210d76c90f6998440873111b63a62747495a7ed6c6c1056cb1358a6a869f"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-4d890aabef231765",
+        "sha256": "1bd9d7431c3d75849b876f535428212312a256ceb8b63b871c47e406355d2bdb"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-351332d6e5bd29a1",
+        "sha256": "e707148cc6617b8965dd601d0b7a919220181f4abecd7ff44c3bd35d3157c7fc"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-83e23dd514598e5e",
+        "sha256": "7efda8f3f8efb8481e0ac36491b342def81e38ab797fe9748e5df3585a1a3891"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-2f3a7b897226420a",
+        "sha256": "cb12139b99ae930ee290517876f0dec18b3db28780483e157fbe4fb2e8215f9a"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-10dd3ebc24fa196e",
+        "sha256": "b20975fa6dccdd6a694c5fe8500c613aa87dbbfdd6c6393a1b17ed86f9925143"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-cc06e55b4cf27968",
+        "sha256": "daa7d8d3c62b87de64cc727772a6318ecfc3ac7847e2fd8ff58887fb90688e37"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-52a1f52dfb75cfee",
+        "sha256": "15f613cecdf7d1727f3bd586213076d09c46999ca4ec6072a0f471bce56546fe"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-985e9f9efdcbc388",
+        "sha256": "67ea9187aca62743c2a96b0962aeca00b464d0f949272d2fba39730fcff996ff"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-fe636b2062f5ddf3",
+        "sha256": "ad8d9b734c0d59352515b23e8938c35874a4fcef878626ce4efdd6b987f70d17"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-87358f9ba3ea243f",
+        "sha256": "6e47b51ddf47eb8c568300d812e9d05972e8e6a41a300994040795639c628c30"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-1c50349bcc1de16f",
+        "sha256": "e95184f1be043fafb3c7929d56ac7bc8a27870c3638fe725f2ae36811e2b3cd1"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-60d12d797166e7f4",
+        "sha256": "42092d592343fb4004165e1901d88b45f7feec2b2756986cb4ae6a7169ce3646"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-0c6805b61d3c6fcf",
+        "sha256": "474304f6ee79e48d5ff5b02e3a336aff47db89852c326239c8f58c5a7418659c"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-dc532f1a4e551eb5",
+        "sha256": "79f97a88e2a056d117def6f276a25c5bc1664a1cac05b50870bfb7b98bbe91b3"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-304c8e37c639019b",
+        "sha256": "20add67c7b80fe0e5ab05c2c4c3a051e87c7653f780019bd34db4a8a59c82b37"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-e24020f87a308b39",
+        "sha256": "46c63edbddf1a060e41fa43aa721c174b89c2fe1895cb0f9a6934abb36616785"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-0b7b29ec08bf5520",
+        "sha256": "3fb0627726087c1b03eff527e08bd7e2cbbf939a84718ac90142872673cd8a11"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-c48184f622f604cc",
+        "sha256": "cb728609b5b75edddc1d157de2cf27df1e84f976c0b30dd3a553eb19faca91fa"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-6464f66be484282f",
+        "sha256": "d9b4bf6a03dad03ec173b91d41166c4951918ac4b321a509386c55378a4c047a"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-afe889be288a60e6",
+        "sha256": "2e2679300458cf7eb1bdb40a6701f4079217935f18c7fde73f86e64595d973f0"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-cb311e55778ce837",
+        "sha256": "ff3eb0060fed06a1e874e01b581e2d21cd5a8e3d20ac681a0341df7216741b69"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-c31df44e3eec1790",
+        "sha256": "dffe1a6971ea924457654b3b6d85b3ce7745582d357da73d07ae3586f4fe71b4"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-a1b8aeabfb7f6015",
+        "sha256": "91baf97879b2194b676c8c4dbca1efa659d34319d72743f16ee46def19368cc5"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-b5ef42964fd64690",
+        "sha256": "d09c10d294c4099514b5a50079869f830a13b151e74dc79ad63dcc50da53c0e3"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-a0f553cf92fc2724",
+        "sha256": "702df55a40bfa66e19b565824bc3a2d29c37d3c6792ab9e91bc31f856c5c077b"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-1bcb0f6312c771d1",
+        "sha256": "7a2cf34e79e3b22df8c122dfc8ab942c5fa7d86dd8edb83888a30bb11aa2df5a"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-86ac621684e4a3a2",
+        "sha256": "55259bc49ec7f10ed1c513408f045d471711b1bcd94973cd13ecb4bf06fe9045"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-9ca7c1de4edfaeb4",
+        "sha256": "0bff383bf81160ad9aeb44457a3b1231d28ba8f7bc380ce7c39ed359f3180487"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-da8ec9323ebd20ef",
+        "sha256": "6b2c341471f5befe7dc577750668c10d8cf7a50458e25f1fbbfd829f672eae17"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-97527c1d2984a2a4",
+        "sha256": "632a2980e3e3b382f78fc0ac773459383ceca24a1da1f4e3a48daf88c2ddc5e3"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-829964889562d46b",
+        "sha256": "754bb7859333ece0bd6e9c2447c3bf0086683d43b375964aead8458d7b4c56e3"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-af0eb126ac1444d0",
+        "sha256": "3ea5c20c48ab33262df4088594a51d9429181af21140e75c1c8e4b7fad0d1cdc"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-14b9d4d37beab767",
+        "sha256": "2523c7602d0328983ff5675cae480b20dbf66446902fabed60763133a6156fe6"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-ec9e1df43e1e57c2",
+        "sha256": "e1a93ae141e1b974b80bcca31a3ed3092c272eac755ca1359e3395b55a31b892"
+      },
+      {
+        "kind": "game",
+        "id": "v6-vf-9f212903c19ca3a2",
+        "sha256": "b51c820c70f6ab2849e24f0fe5e0c904c8225200e47cfe71dfa578bf9412e769"
+      },
+      {
+        "kind": "writing",
+        "id": "v6-disc-representacao-finalidade",
+        "sha256": "30dcd2acc1ea0a94734973f9e7eec6d8a1441b590bcb334699279e2d693879e4"
+      },
+      {
+        "kind": "writing",
+        "id": "v6-disc-representacao-relevo",
+        "sha256": "84b58594fb8f7a10c1cda115f7cdbac0d171a1be6082908c200168df1e575154"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t03a-0",
+        "sha256": "e1336c93b1dec21ca0fd34bf780ce0146facccedc5667ca36e88bcd72f0f42e5"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t03a-1",
+        "sha256": "a163f2cfcf24fd9229efda6b91265c899e00fd19145cbf3609d06bcccd352c54"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t03a-2",
+        "sha256": "effeed0a539ba36510f7fb46cacbd17f2c913581c5802141502ab6250a51de90"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t03a-3",
+        "sha256": "c302bd8fe13715895958d9ab559d0dcdc15fbd2a3a1930558745aa73b9676419"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t17-5",
+        "sha256": "67d1a588ed8d6e250a509ff6f4af47b0a098fa0a5b546d7cfd949fad51c492ae"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-4803dafc8397a392",
+        "sha256": "6e9b8d026ce2cd0856919704c48c4e2ce51c0fb4f97e2558600c04bc47316410"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-f131983856a8c8e8",
+        "sha256": "ce649bf5c233b146779f6ee0605f4d82d4e384519f574cb5045a2d6419b5f447"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-01395d7fe80bb6e9",
+        "sha256": "1520b6e6543d9bf38a3184e3a2f3e8673959fb4e90fb0252402e1986f0a76fb9"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-229487df3565e427",
+        "sha256": "c21b2e04d0758a0f37fcdcddbf3bbee717f1632f627d6d18e471c2863dd11664"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t03a-4",
+        "sha256": "fcdd6d9e1e7e3d28e82bb7f0da354200ab9502ad497820bb5f5cdcdcacbe091c"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t03a-5",
+        "sha256": "dff6dbc7295c81a05e1500c07ab06cb33aa2246e3d8d8df883a83b60b1eb4a6b"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-05b38cc99e01ef31",
+        "sha256": "7a4dc21c9ca55c9dd75f50715516ee33f65bce993bed92304a2cd5875b1ecf73"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-873fc6a4f5747380",
+        "sha256": "5409a7a7e8c0dd8cfbbf0a1c3269b7439e4975bd9b83300daefa9def4ec91ef0"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t03a-6",
+        "sha256": "337e8e186528ba5b73d8df1040d93284cef4c849b078c880d319a8c5d1d447ca"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t03a-7",
+        "sha256": "03bac8a07d2ae96eb2cc61f85cecaea36e631c2c9b25b0c2ac1a0cd2b3186e9c"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t17-6",
+        "sha256": "0027288e435fba04d100608945be621e839723d04f8844fae482937f359630c1"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-fbe07c34d0d4313c",
+        "sha256": "9bb8df5469baf946d7149b186fb77ae07274857fd1fc0bc4fdb2679b85250045"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-66a297f0acf99a18",
+        "sha256": "ac1f4263cbc84b4d988ba5f05e7f4c64703640a058b88976da58d588f8d90079"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t03a-16",
+        "sha256": "7be438968b036b4bf65e40d8750a1bc2d26da1c880a70516a49884fccd8ec9ec"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t17-7",
+        "sha256": "5af87e353443b9521647588b6eb46b3d7569390150eb58e6a2e56059a8ebc902"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t17-8",
+        "sha256": "ec75359cce772e5c0e0777743f931607a527cdbc65786840d479dcc78448f661"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-2c0972944d493d1e",
+        "sha256": "54863fbaf523b6ddd56cf876c4a0899042b45729c0e464b3e2c70d0e9431005b"
+      },
+      {
+        "kind": "theory",
+        "id": "v6-theory-t03a-15",
+        "sha256": "fe1e1b95caf950fa1a17434fd5bb98a4d1bdec95d043eca52839d3b47d508166"
+      },
+      {
+        "kind": "recall",
+        "id": "v6-recall-9420882e09b1d47f",
+        "sha256": "1710e6e344cc020a9b35b2bb3bad4d14ddd5dfc6f665376d096037460dd35511"
+      }
+    ],
+    "premium_criteria": [
+      {
+        "id": "correcao_conceitual",
+        "assessment": "satisfactory",
+        "reason": "Conceitos, respostas e contrastes herdados da leitura integral; nenhum gabarito a trocar identificado. Correções atuais tornam explícito o erro de cada distrator selecionado."
+      },
+      {
+        "id": "cobertura",
+        "assessment": "satisfactory-in-scope",
+        "reason": "As 17 missões do conjunto cobrem o recorte de Cartografia do edital. A avaliação não cobre as outras 25 unidades nem todo o programa do concurso."
+      },
+      {
+        "id": "profundidade",
+        "assessment": "satisfactory-with-limitations",
+        "reason": "Fundamentos, aplicação, cálculos e limites de inferência preservados. O estoque de treino avançado é limitado; não constitui prova oficial completa."
+      },
+      {
+        "id": "clareza",
+        "assessment": "improved",
+        "reason": "Explicações dos 44 itens identificados substituem os prefixos genéricos por análise específica de cada alternativa incorreta."
+      },
+      {
+        "id": "exemplos",
+        "assessment": "satisfactory-in-scope",
+        "reason": "Exemplos hipotéticos continuam identificados; nenhum exemplo válido foi resumido ou removido. O mapa autoral declara suas medidas e referências."
+      },
+      {
+        "id": "redundancia",
+        "assessment": "satisfactory-with-limitations",
+        "reason": "Identidades e variantes preservadas; cinco famílias existentes continuam explícitas. Ausência de duplicata exata não implica independência entre todas as atividades."
+      },
+      {
+        "id": "terminologia",
+        "assessment": "satisfactory",
+        "reason": "Preservadas as distinções entre latitude/longitude, escala geográfica/cartográfica, datum/projeção, SIG/GNSS, raster/vetor e as operações digitais."
+      },
+      {
+        "id": "lacunas",
+        "assessment": "identified",
+        "reason": "Permanecem o estoque insuficiente para prova oficial, a prática compartilhada de escala e limitações de acesso aos binários externos. São trabalho do assistente, não tarefa obrigatória do estudante."
+      },
+      {
+        "id": "temporalidade",
+        "assessment": "satisfactory-in-scope",
+        "reason": "Os fatos temporais e suas fontes/datas permanecem delimitados. Coordenadas e medidas do novo mapa são hipotéticas, não observações territoriais atuais."
+      },
+      {
+        "id": "nivel",
+        "assessment": "editorial-reassessment",
+        "reason": "Além das dez reclassificações anteriores, r11 passa de Elite/D3/C5 para Concurso/D2/C3. Não há alegação de dificuldade calibrada."
+      },
+      {
+        "id": "fontes",
+        "assessment": "satisfactory-with-limitations",
+        "reason": "Fatos normativos e institucionais usam as fontes oficiais registradas. A grade e a escala do PDF IBGE não são afirmadas sem conferência; o exercício obrigatório possui suporte autoral autossuficiente."
+      },
+      {
+        "id": "treino",
+        "assessment": "improved",
+        "reason": "Gabaritos e alternativas preservados, feedbacks individualizados e A–E nos 36 itens Concurso/Elite. O parecer por IA não simula uma questão real da banca nem certificação externa."
+      }
+    ],
+    "conclusion": "Revisão por IA concluída no escopo das candidatas, com ressalvas explícitas e sem promoção automática.",
+    "limitations": [
+      "Dificuldade não calibrada empiricamente.",
+      "Referências externas podem exigir acesso de rede; os binários não receberam nova inspeção visual nesta rodada.",
+      "O banco completo de prova e a prática específica de cada unidade permanecem fora desta correção."
+    ]
+  }
+}
