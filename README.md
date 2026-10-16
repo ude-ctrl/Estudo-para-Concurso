@@ -2,6 +2,8 @@
 
 **Atualização editorial — candidatas `0.1.1`:** a [rodada de correções de Cartografia](MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_011.md) aplica os vínculos e feedbacks auditados, reavalia dez classificações e esclarece figuras, autoria e fontes. As edições `0.1.0` permanecem preservadas. As três unidades seguem `EM_AUDITORIA`, com roteiros de questões para revisão humana e sem alteração do conteúdo publicado no site.
 
+[Verificação da rodada `0.1.1`](MissaoAprovacaoGeo/V6_ISSUE13_TESTES_CARTOGRAFIA_011.md): build e 93 testes passaram, com gabaritos, procedência e snapshot inicial preservados.
+
 **Etapa atual — Issue #13:** o usuário autorizou o [encerramento técnico do piloto com ressalva visual](MissaoAprovacaoGeo/V6_FASE14_ENCERRAMENTO_TECNICO.md) e o início da Base Canônica na branch `v6-base-canonica`. O [primeiro lote](MissaoAprovacaoGeo/V6_ISSUE13_PLANO_EXECUCAO.md) contempla somente as três unidades de Cartografia, com revisão editorial e bases candidatas versionadas. Aprovação canônica, merge e publicação não são automáticos. Os registros seguintes descrevem a evolução anterior do piloto.
 
 [Resultado do primeiro lote](MissaoAprovacaoGeo/V6_ISSUE13_RELATORIO_CARTOGRAFIA.md): três [bases candidatas `0.1.0`](base-conhecimento/README.md), conteúdo integral preservado, revisão assistida dos 36 itens e pendências por ID. Todas permanecem `EM_AUDITORIA`, sem consumo pela build do site. As outras 25 unidades estão apenas registradas no catálogo. Verificação: `npm run check:canonical` e `npm run test:canonical`.

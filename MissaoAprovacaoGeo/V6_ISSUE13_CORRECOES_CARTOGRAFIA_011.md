@@ -9,6 +9,8 @@ O usuário autorizou esta rodada no chat com “Está ok”, após a proposta de
 
 Foram preparadas as três edições **`0.1.1`, todas `EM_AUDITORIA`**. O manifesto aponta para essas candidatas e mantém `0.1.0` como snapshot inicial. Nenhuma unidade possui versão canônica ativa ou consumo habilitado pelo site. A [política oficial](https://github.com/ude-ctrl/Estudo-para-Concurso/blob/v6-planejamento/MissaoAprovacaoGeo/V6_POLITICA_BASE_CANONICA_CONTEUDO.md) continua aplicável.
 
+A [verificação técnica da rodada](V6_ISSUE13_TESTES_CARTOGRAFIA_011.md) passou com build e **93 testes**, incluindo preservação das duas edições e recusa de mudanças editoriais sem declaração. Isso não constitui aprovação humana de conteúdo.
+
 O material corrigido foi derivado exclusivamente das bases estruturadas `0.1.0`, sem reextrair ou reinterpretar os HTMLs históricos. O banco ativo, a aplicação, o progresso e as demais 25 unidades do catálogo não foram migrados nesta rodada. Os arquivos `0.1.0` permanecem integralmente preservados.
 
 ## Pacotes para revisão

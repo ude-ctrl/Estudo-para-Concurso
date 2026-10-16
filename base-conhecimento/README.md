@@ -68,6 +68,6 @@ npm test
 
 O primeiro comando valida as três candidatas e sua paridade inicial. Não promove versões. Os testes exercitam preservação, aliases, recursos visuais, dados temporais, revisão vinculada à versão, rejeição de candidatas e leitura sem dependência dos HTMLs/importadores. O comando `npm test` inclui as verificações anteriores do acervo e do motor.
 
-O [relatório desta execução](../MissaoAprovacaoGeo/V6_ISSUE13_RELATORIO_TESTES_CARTOGRAFIA.md) identifica o commit, os 82 testes aprovados, a build e os limites da evidência. Os 19 novos testes também verificam identidade unidade/versão, paridade duplicada e convivência entre versão aprovada e candidata futura.
+O [relatório inicial de `0.1.0`](../MissaoAprovacaoGeo/V6_ISSUE13_RELATORIO_TESTES_CARTOGRAFIA.md) identifica o commit, os 82 testes e os limites daquela execução. A [rodada `0.1.1`](../MissaoAprovacaoGeo/V6_ISSUE13_TESTES_CARTOGRAFIA_011.md) passou com build e 93 testes, dos quais 30 verificam o contrato canônico, incluindo revisão declarada, preservação de gabaritos, famílias e alternativas aposentadas. Os 19 casos iniciais permanecem cobertos.
 
 Não existe sincronização de progresso nesta estrutura. Os arquivos contêm conteúdo e decisões editoriais; não contêm respostas, agenda, XP ou dados pessoais do estudante. Eventuais correções de associação conceito/missão exigirão uma estratégia explícita para históricos existentes quando forem integradas ao produto.

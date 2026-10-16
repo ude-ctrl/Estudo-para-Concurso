@@ -39,3 +39,5 @@ Não fazer merge, publicar, iniciar outros módulos ou encerrar a Issue no GitHu
 ## Entrega do primeiro lote
 
 As três candidatas `0.1.0` e os pareceres assistidos estão disponíveis no [relatório de Cartografia](V6_ISSUE13_RELATORIO_CARTOGRAFIA.md). A [verificação técnica](V6_ISSUE13_RELATORIO_TESTES_CARTOGRAFIA.md) passou com build e 82 testes. Nenhuma unidade foi promovida: a revisão humana e a resolução dos achados editoriais permanecem como próxima etapa.
+
+A rodada posterior autorizada preparou as [candidatas corrigidas `0.1.1`](V6_ISSUE13_CORRECOES_CARTOGRAFIA_011.md), com antes/depois e questões completas para revisão. A [verificação dessa rodada](V6_ISSUE13_TESTES_CARTOGRAFIA_011.md) passou com build e 93 testes. As edições iniciais continuam preservadas; a promoção canônica permanece pendente.
