@@ -1,6 +1,6 @@
 # Missão Geografia
 
-**Integração atual — Cartografia canônica `1.0.0`:** a plataforma nesta branch usa as três bases revisadas e aprovadas por auditoria delegada ao Codex, preservando os textos de `0.1.2`. [Integração, progresso e limites](MissaoAprovacaoGeo/V6_ISSUE13_INTEGRACAO_CANONICA_CARTOGRAFIA.md) · [Relatório de testes](MissaoAprovacaoGeo/V6_ISSUE13_TESTES_INTEGRACAO_CARTOGRAFIA.md). `main` e o site publicado não foram alterados.
+**Integração atual — Cartografia canônica `1.0.0`:** a plataforma usa as três bases revisadas e aprovadas por auditoria delegada ao Codex, preservando os textos de `0.1.2`. [Integração, progresso e limites](MissaoAprovacaoGeo/V6_ISSUE13_INTEGRACAO_CANONICA_CARTOGRAFIA.md) · [Relatório de testes](MissaoAprovacaoGeo/V6_ISSUE13_TESTES_INTEGRACAO_CARTOGRAFIA.md). O usuário autorizou incorporar esta versão à `main` e publicá-la; o fluxo abaixo publica após a validação dessa branch. Os relatos seguintes preservam o estado das rodadas anteriores.
 
 **Correções atuais — Cartografia `0.1.2`:** [44 questões com explicações específicas, mapa didático autossuficiente e revisão por IA](MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_012.md). Enunciados, alternativas, gabaritos e versões anteriores foram preservados. A [verificação](MissaoAprovacaoGeo/V6_ISSUE13_TESTES_CARTOGRAFIA_012.md) passou com build, 101 testes, 25 recálculos e quatro cenários isolados do mapa no navegador. Esta rodada prepara as candidatas para a próxima integração; não altera o site publicado nem exige revisão manual do estudante no GitHub.
 
@@ -96,13 +96,16 @@ Os mesmos fluxos são testados na raiz e em `/Estudo-para-Concurso/`, incluindo 
 
 O build usa assets relativos e navegação por hash, permitindo abrir e recarregar uma missão sem configuração de rotas no servidor.
 
-O workflow **Publicar no GitHub Pages** está preparado para acionamento manual. Esta implementação não publica automaticamente.
+O workflow **Publicar no GitHub Pages** publica automaticamente quando **Validar plataforma** conclui com sucesso na `main`. Ele usa o commit validado e ignora execuções antigas se a `main` já avançou. As branches de trabalho não são publicadas por esse fluxo.
 
-Para publicar depois da revisão:
+Para atualizar depois da revisão:
 
-1. Enviar a implementação revisada ao repositório GitHub.
+1. Enviar a implementação revisada em uma branch e abrir um pull request para `main`.
 2. Em **Settings → Pages**, selecionar **GitHub Actions** como fonte.
-3. Em **Actions**, executar **Publicar no GitHub Pages** na branch escolhida.
+3. Após os testes do pull request passarem, incorporar a alteração à `main`.
+4. Em **Actions**, acompanhar **Validar plataforma** e, em seguida, **Publicar no GitHub Pages**. O fluxo de publicação confere os três HTMLs de entrada e o banco por SHA-256 no endereço público, além do carregamento dos assets JavaScript/CSS.
+
+O acionamento manual continua disponível em **Actions → Publicar no GitHub Pages → Run workflow**, selecionando `main`, para republicar uma versão já revisada. Esse acionamento refaz testes de lógica e build; a validação completa de navegador é executada pelo workflow **Validar plataforma**.
 
 O endereço esperado é `https://ude-ctrl.github.io/Estudo-para-Concurso/`. A disponibilidade do Pages depende das configurações e do plano do repositório.
 
@@ -116,6 +119,6 @@ public/content/          Catálogo e bancos gerados
 public/legacy/           Cópias integrais geradas
 tests/fixtures/          Integridade e contagens da auditoria
 tests/browser/           Validação dos fluxos no Chromium
-.github/workflows/       Verificação e publicação manual
+.github/workflows/       Verificação e publicação após validação da main
 dist/                    Site gerado para hospedagem
 ```

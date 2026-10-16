@@ -2,6 +2,10 @@ name: Publicar no GitHub Pages
 
 on:
   workflow_dispatch:
+  workflow_run:
+    workflows: [Validar plataforma]
+    types: [completed]
+    branches: [main]
 
 concurrency:
   group: github-pages
@@ -9,11 +13,24 @@ concurrency:
 
 jobs:
   build:
+    # Publicar somente uma main validada; execuções antigas não substituem a versão atual.
+    if: >-
+      github.ref == 'refs/heads/main' &&
+      (github.event_name == 'workflow_dispatch' ||
+       (github.event.workflow_run.conclusion == 'success' &&
+        github.event.workflow_run.head_sha == github.sha))
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    outputs:
+      bank_sha: ${{ steps.hashes.outputs.bank }}
+      index_sha: ${{ steps.hashes.outputs.index }}
+      v6_sha: ${{ steps.hashes.outputs.v6 }}
+      library_sha: ${{ steps.hashes.outputs.library }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -21,6 +38,20 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run build
+      - name: Registrar hashes da versão
+        id: hashes
+        run: |
+          node --input-type=module <<'NODE'
+          import { readFileSync, appendFileSync } from 'node:fs';
+          import { createHash } from 'node:crypto';
+          for (const [name, path] of Object.entries({
+            bank: 'v6/cartografia.json', index: 'index.html',
+            v6: 'v6.html', library: 'biblioteca.html',
+          })) {
+            const sha = createHash('sha256').update(readFileSync('dist/' + path)).digest('hex');
+            appendFileSync(process.env.GITHUB_OUTPUT, name + '=' + sha + '\n');
+          }
+          NODE
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
@@ -37,3 +68,71 @@ jobs:
       - name: Publicar site
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Conferir arquivos no endereço público
+        env:
+          SITE_URL: ${{ steps.deployment.outputs.page_url }}
+          BANK_SHA: ${{ needs.build.outputs.bank_sha }}
+          INDEX_SHA: ${{ needs.build.outputs.index_sha }}
+          V6_SHA: ${{ needs.build.outputs.v6_sha }}
+          LIBRARY_SHA: ${{ needs.build.outputs.library_sha }}
+        run: |
+          node --input-type=module <<'NODE'
+          import { createHash } from 'node:crypto';
+          import { setTimeout } from 'node:timers/promises';
+          const base = new URL(process.env.SITE_URL);
+          const expected = {
+            'v6/cartografia.json': process.env.BANK_SHA,
+            'index.html': process.env.INDEX_SHA,
+            'v6.html': process.env.V6_SHA,
+            'biblioteca.html': process.env.LIBRARY_SHA,
+          };
+          for (const sha of Object.values(expected)) {
+            if (!/^[a-f0-9]{64}$/.test(sha || '')) throw new Error('Hash esperado ausente.');
+          }
+          async function download(path) {
+            const url = new URL(path, base);
+            const response = await fetch(url, { signal: AbortSignal.timeout(20000), cache: 'no-store' });
+            if (!response.ok) throw new Error(url + ': HTTP ' + response.status);
+            return { url, body: Buffer.from(await response.arrayBuffer()), type: response.headers.get('content-type') || '' };
+          }
+          for (let attempt = 1; attempt <= 18; attempt++) {
+            try {
+              const files = await Promise.all(Object.entries(expected).map(async ([path, sha]) => {
+                const file = await download(path);
+                if (createHash('sha256').update(file.body).digest('hex') !== sha) {
+                  throw new Error(path + ': o endereço público ainda não entrega o arquivo publicado.');
+                }
+                return { path, ...file };
+              }));
+              const bank = JSON.parse(files.find(f => f.path.endsWith('.json')).body.toString());
+              const units = Object.entries(bank.editorial?.units || {});
+              if (units.length !== 3 || !['cartografia-fundamentos', 'cartografia-representacao', 'geotecnologias'].every(id => bank.editorial.units[id]) ||
+                  !units.every(([, u]) => /^\d+\.\d+\.\d+$/.test(u.version) && u.status === 'APROVADA_CANONICA')) {
+                throw new Error('As três bases canônicas esperadas não estão publicadas.');
+              }
+              const assets = new Set();
+              for (const file of files.filter(f => f.path.endsWith('.html'))) {
+                for (const match of file.body.toString().matchAll(/(?:src|href)="([^"\s]+\.(?:js|css))"/g)) {
+                  const url = new URL(match[1], file.url);
+                  if (url.origin !== base.origin || !url.pathname.startsWith(base.pathname)) throw new Error('Asset fora do caminho do projeto.');
+                  assets.add(url.href);
+                }
+              }
+              if (!assets.size) throw new Error('Nenhum asset da aplicação encontrado.');
+              await Promise.all([...assets].map(async url => {
+                const asset = await download(url);
+                const expectedType = new URL(url).pathname.endsWith('.css') ? /text\/css/i : /javascript/i;
+                if (!asset.body.length || !expectedType.test(asset.type)) throw new Error('Asset inválido: ' + url);
+              }));
+              console.log('Site público conferido:', base.href);
+              console.log('Quatro arquivos conferidos por SHA-256 e ' + assets.size + ' assets acessíveis.');
+              console.log('Unidades canônicas:', units.map(([id, u]) => id + '@' + u.version).join(', '));
+              console.log('Versão do banco:', bank.version, 'SHA-256:', process.env.BANK_SHA);
+              break;
+            } catch (error) {
+              if (attempt === 18) throw error;
+              console.log('Aguardando atualização do Pages (' + attempt + '/18): ' + error.message);
+              await setTimeout(10000);
+            }
+          }
+          NODE
