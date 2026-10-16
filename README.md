@@ -1,5 +1,7 @@
 # Missão Geografia
 
+**Correções atuais — Cartografia `0.1.2`:** [44 questões com explicações específicas, mapa didático autossuficiente e revisão por IA](MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_012.md). Enunciados, alternativas, gabaritos e versões anteriores foram preservados. A [verificação](MissaoAprovacaoGeo/V6_ISSUE13_TESTES_CARTOGRAFIA_012.md) passou com build, 101 testes, 25 recálculos e quatro cenários isolados do mapa no navegador. Esta rodada prepara as candidatas para a próxima integração; não altera o site publicado nem exige revisão manual do estudante no GitHub.
+
 **Revisão editorial delegada ao assistente:** a [conferência integral das três candidatas de Cartografia](MissaoAprovacaoGeo/V6_ISSUE13_REVISAO_DELEGADA_CARTOGRAFIA.md) foi executada pelo Codex, incluindo teoria, 161 questões, 120 flashcards e 256 V/F. Os 25 recálculos adicionais, a build e os 93 testes passaram. A revisão manual de arquivos pelo usuário deixa de ser o encaminhamento de trabalho; o parecer distingue autoria por IA, limitações reais, promoção canônica e publicação. Esta rodada não altera o site.
 
 **Atualização editorial — candidatas `0.1.1`:** a [rodada de correções de Cartografia](MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_011.md) aplica os vínculos e feedbacks auditados, reavalia dez classificações e esclarece figuras, autoria e fontes. As edições `0.1.0` permanecem preservadas. As três unidades seguem `EM_AUDITORIA`, com roteiros de questões para revisão humana e sem alteração do conteúdo publicado no site.

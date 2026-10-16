@@ -4,17 +4,17 @@
 
 Primeiro lote da [Issue #13](https://github.com/ude-ctrl/Estudo-para-Concurso/issues/13), autorizado após o [encerramento técnico com ressalva sensorial](../MissaoAprovacaoGeo/V6_FASE14_ENCERRAMENTO_TECNICO.md). Branch: `v6-base-canonica`.
 
-**As três candidatas atuais são `0.1.1`, todas `EM_AUDITORIA`; as edições iniciais `0.1.0` estão preservadas. Nenhuma é fonte canônica aprovada e nenhuma está conectada à build do site.** Os 36 itens autorais e as cinco questões legadas corrigidas permanecem pendentes de revisão humana. Não houve alteração do conteúdo usado pelo estudante.
+**As três candidatas atuais são `0.1.2`, todas `EM_AUDITORIA`; as edições `0.1.0` e `0.1.1` estão preservadas. Nenhuma está conectada à build do site.** A revisão por IA foi conduzida pelo assistente e está vinculada aos recursos em `audit.json#assisted_review`. Os campos humanos do contrato anterior permanecem sem preenchimento fictício; não foi criada uma tarefa de leitura manual para o estudante. Não houve alteração do conteúdo publicado no site.
 
 ## Ler o primeiro lote
 
 | Unidade | Versão | Parecer assistido e pendências |
 | --- | --- | --- |
-| `cartografia-fundamentos` | `0.1.1` | [Auditoria](cartografia/cartografia-fundamentos/0.1.1/audit.md) · [Questões](cartografia/cartografia-fundamentos/0.1.1/review.md) |
-| `cartografia-representacao` | `0.1.1` | [Auditoria](cartografia/cartografia-representacao/0.1.1/audit.md) · [Questões](cartografia/cartografia-representacao/0.1.1/review.md) |
-| `geotecnologias` | `0.1.1` | [Auditoria](cartografia/geotecnologias/0.1.1/audit.md) · [Questões](cartografia/geotecnologias/0.1.1/review.md) |
+| `cartografia-fundamentos` | `0.1.2` | [Auditoria](cartografia/cartografia-fundamentos/0.1.2/audit.md) · [Questões](cartografia/cartografia-fundamentos/0.1.2/review.md) |
+| `cartografia-representacao` | `0.1.2` | [Auditoria](cartografia/cartografia-representacao/0.1.2/audit.md) · [Questões](cartografia/cartografia-representacao/0.1.2/review.md) |
+| `geotecnologias` | `0.1.2` | [Auditoria](cartografia/geotecnologias/0.1.2/audit.md) · [Questões](cartografia/geotecnologias/0.1.2/review.md) |
 
-O [relatório da rodada `0.1.1`](../MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_011.md) apresenta as correções, fontes, antes/depois, reclassificações e a estratégia de progresso. A primeira edição permanece acessível nos históricos de cada pacote.
+O [relatório atual, `0.1.2`](../MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_012.md), registra 137 explicações aprimoradas em 44 questões, a reclassificação de r11 e o novo suporte cartográfico. O [relatório anterior, `0.1.1`](../MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_011.md), preserva as correções de vínculos, fontes, figuras e a estratégia de progresso.
 
 O [manifesto](manifest.json) registra os 28 IDs definidos na documentação oficial. Somente as três unidades acima têm auditoria iniciada e versão candidata; as outras 25 estão como `RASCUNHO`, sem conteúdo exportado ou auditado nesta etapa. `runtime_enabled` descreve consumo da base canônica, não disponibilidade dos materiais históricos no site.
 
@@ -28,9 +28,11 @@ Cada versão fica em `<módulo>/<unit_id>/<versão>/`, separando:
 - `audit.md`: parecer legível com decisões pendentes e sugestões;
 - `changelog.md`: histórico da versão e classificação de futuras alterações.
 
-As edições corrigidas também incluem `changes.md`, com comparação antes/depois, e `review.md`, com as questões completas para revisão humana. A procedência registra o hash do pacote pai e todas as diferenças editoriais; a validação rejeita diferenças não declaradas, perda de recursos e alteração de gabarito no contrato desta correção.
+As edições corrigidas também incluem `changes.md`, com comparação antes/depois, e `review.md`, com as questões completas para consulta. A procedência registra o hash do pacote pai e todas as diferenças editoriais; a validação rejeita diferenças não declaradas, perda de recursos e alteração de gabarito no contrato desta correção.
 
-O conteúdo preserva as 17 missões, 50 explicações, 39 recalls, 33 conceitos de apoio, 161 questões, 120 cartões, 256 V/F, seis discursivas e seis suplementos do piloto. As alternativas continuam vinculadas por ID. O suporte guarda também as quatro tabelas, o perfil SVG, a precisão de faixa UTM e o roteiro/rubricas de prática anteriormente definidos na interface.
+Em `0.1.2`, `review.md` é leitura de referência com as questões completas, sem atribuir ao estudante obrigação de auditoria. `assisted_review` identifica a autoria por IA, os 12 critérios e os hashes do conteúdo efetivamente revisado. O validador recusa conteúdo posterior divergente ou atribuição humana fictícia e percorre toda a cadeia de versões até o snapshot inicial. O mapa didático guarda suas coordenadas, escala gráfica, SVG e alternativa textual no próprio pacote.
+
+O conteúdo preserva as 17 missões, 50 explicações, 39 recalls, 33 conceitos de apoio, 161 questões, 120 cartões, 256 V/F, seis discursivas e seis suplementos do piloto. As alternativas continuam vinculadas por ID. O suporte guarda também as quatro tabelas anteriores e a nova tabela do mapa, o perfil SVG, a precisão de faixa UTM e o roteiro/rubricas de prática anteriormente definidos na interface.
 
 As classificações `permanente`, `regional`, `banca` e `temporal` podem coexistir no mesmo recurso. São metadados editoriais iniciais, sujeitos à revisão, sem cortar passagens de um texto misto. Um dado normativo em um exemplo não transforma todo o conceito em informação volátil. Parâmetros hipotéticos de exercícios são separados de fatos observados; datas históricas de imagens não são atualizadas para o presente.
 
@@ -71,5 +73,7 @@ npm test
 O primeiro comando valida as três candidatas e sua paridade inicial. Não promove versões. Os testes exercitam preservação, aliases, recursos visuais, dados temporais, revisão vinculada à versão, rejeição de candidatas e leitura sem dependência dos HTMLs/importadores. O comando `npm test` inclui as verificações anteriores do acervo e do motor.
 
 O [relatório inicial de `0.1.0`](../MissaoAprovacaoGeo/V6_ISSUE13_RELATORIO_TESTES_CARTOGRAFIA.md) identifica o commit, os 82 testes e os limites daquela execução. A [rodada `0.1.1`](../MissaoAprovacaoGeo/V6_ISSUE13_TESTES_CARTOGRAFIA_011.md) passou com build e 93 testes, dos quais 30 verificam o contrato canônico, incluindo revisão declarada, preservação de gabaritos, famílias e alternativas aposentadas. Os 19 casos iniciais permanecem cobertos.
+
+A [rodada `0.1.2`](../MissaoAprovacaoGeo/V6_ISSUE13_TESTES_CARTOGRAFIA_012.md) passou com build e 101 testes, incluindo 38 canônicos. Foram conferidos também 25 recálculos e quatro cenários isolados da figura no navegador, executáveis por `npm run test:canonical-media`. Esse comando valida mídia candidata com o CSS real, sem integrar candidatas à plataforma. Requer um Chromium instalado pelo Playwright ou indicado em `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH`.
 
 Não existe sincronização de progresso nesta estrutura. Os arquivos contêm conteúdo e decisões editoriais; não contêm respostas, agenda, XP ou dados pessoais do estudante. Eventuais correções de associação conceito/missão exigirão uma estratégia explícita para históricos existentes quando forem integradas ao produto.

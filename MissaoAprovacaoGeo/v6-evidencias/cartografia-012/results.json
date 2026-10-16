@@ -1,0 +1,98 @@
+{
+  "version": "0.1.2",
+  "purpose": "isolated candidate SVG and theory; not a platform deployment",
+  "scenarios": [
+    {
+      "name": "mobile-light",
+      "width": 390,
+      "theme": "light",
+      "reducedMotion": "no-preference",
+      "passed": true,
+      "measurements": {
+        "pageWidth": 390,
+        "bodyWidth": 390,
+        "svgWidth": 330,
+        "svgHeight": 479.28125,
+        "color": "rgb(35, 60, 52)",
+        "background": "rgb(255, 254, 250)",
+        "animations": 0,
+        "duplicateIds": 0
+      },
+      "textContrast": 11.77390940958282,
+      "keyboardSourceLinkReachable": true,
+      "keyboardScrollableTables": 2,
+      "offlineRequests": 0,
+      "pageErrors": 0,
+      "screenshot": "mobile-light.png"
+    },
+    {
+      "name": "mobile-dark",
+      "width": 390,
+      "theme": "dark",
+      "reducedMotion": "no-preference",
+      "passed": true,
+      "measurements": {
+        "pageWidth": 390,
+        "bodyWidth": 390,
+        "svgWidth": 330,
+        "svgHeight": 479.28125,
+        "color": "rgb(228, 237, 229)",
+        "background": "rgb(24, 39, 34)",
+        "animations": 0,
+        "duplicateIds": 0
+      },
+      "textContrast": 12.974872371721352,
+      "keyboardSourceLinkReachable": true,
+      "keyboardScrollableTables": 2,
+      "offlineRequests": 0,
+      "pageErrors": 0,
+      "screenshot": "mobile-dark.png"
+    },
+    {
+      "name": "small-reduced-motion",
+      "width": 320,
+      "theme": "light",
+      "reducedMotion": "reduce",
+      "passed": true,
+      "measurements": {
+        "pageWidth": 320,
+        "bodyWidth": 320,
+        "svgWidth": 260,
+        "svgHeight": 377.609375,
+        "color": "rgb(35, 60, 52)",
+        "background": "rgb(255, 254, 250)",
+        "animations": 0,
+        "duplicateIds": 0
+      },
+      "textContrast": 11.77390940958282,
+      "keyboardSourceLinkReachable": true,
+      "keyboardScrollableTables": 2,
+      "offlineRequests": 0,
+      "pageErrors": 0,
+      "screenshot": "small-reduced-motion.png"
+    },
+    {
+      "name": "desktop-dark",
+      "width": 1000,
+      "theme": "dark",
+      "reducedMotion": "reduce",
+      "passed": true,
+      "measurements": {
+        "pageWidth": 1000,
+        "bodyWidth": 1000,
+        "svgWidth": 544,
+        "svgHeight": 790.09375,
+        "color": "rgb(228, 237, 229)",
+        "background": "rgb(24, 39, 34)",
+        "animations": 0,
+        "duplicateIds": 0
+      },
+      "textContrast": 12.974872371721352,
+      "keyboardSourceLinkReachable": true,
+      "keyboardScrollableTables": 0,
+      "offlineRequests": 0,
+      "pageErrors": 0,
+      "screenshot": "desktop-dark.png"
+    }
+  ]
+}
