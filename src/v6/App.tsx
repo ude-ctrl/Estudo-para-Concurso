@@ -1,4 +1,4 @@
-import { Component, useCallback, useEffect, useRef, useState } from 'react';
+import { Component, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import {
   BookOpen,
   CheckCircle2,
@@ -359,7 +359,8 @@ function Workspace({ content }: { content: Content }) {
       () => matchMedia('(prefers-color-scheme: dark)').matches,
     ),
     [tick, setTick] = useState(0),
-    main = useRef<HTMLElement>(null);
+    main = useRef<HTMLElement>(null),
+    pendingFocus = useRef<'bank' | 'mission' | 'heading' | null>(null);
   function update(fn: (s: State) => void) {
     try {
       let events: SensoryEvent[] = [];
@@ -472,25 +473,12 @@ function Workspace({ content }: { content: Content }) {
         next.page === 'unit' &&
         next.mode === 'treino' &&
         (focusedFilter === 'bank' || focusedFilter === 'mission');
+      pendingFocus.current = keepFilterFocus ? focusedFilter : 'heading';
       setRoute(next);
       audio.pause();
       setSignal(null);
       setCelebration(null);
       window.scrollTo({ top: 0, behavior: 'instant' });
-      requestAnimationFrame(() => {
-        const filter = keepFilterFocus
-          ? main.current?.querySelector<HTMLElement>(
-              `select[data-training-filter="${focusedFilter}"]`,
-            )
-          : null;
-        if (filter) {
-          filter.focus();
-          return;
-        }
-        const heading = main.current?.querySelector<HTMLElement>('h1');
-        heading?.setAttribute('tabindex', '-1');
-        heading?.focus();
-      });
     };
     const onStorage = (e: StorageEvent) => {
       if (e.key === STATE_KEY) {
@@ -508,6 +496,23 @@ function Workspace({ content }: { content: Content }) {
       window.removeEventListener('storage', onStorage);
     };
   }, [repo, audio]);
+  // The route can remount Training. Focus must wait for that commit, not an earlier frame.
+  useLayoutEffect(() => {
+    const target = pendingFocus.current;
+    if (!target) return;
+    pendingFocus.current = null;
+    const filter =
+      target !== 'heading'
+        ? main.current?.querySelector<HTMLElement>(`select[data-training-filter="${target}"]`)
+        : null;
+    if (filter) {
+      filter.focus();
+      return;
+    }
+    const heading = main.current?.querySelector<HTMLElement>('h1');
+    heading?.setAttribute('tabindex', '-1');
+    heading?.focus();
+  }, [route]);
   useEffect(() => {
     if (route.page === 'unit') {
       const ms = content.missions.filter((m) => m.unit === route.unit),
