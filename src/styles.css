@@ -620,6 +620,76 @@ button:focus:not(:focus-visible) {
   gap: 9px;
   margin-bottom: 11px;
 }
+.group-description {
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+.part-description,
+.group-count {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #596d60;
+}
+.group-choices {
+  margin-top: auto;
+  padding: 12px 0;
+}
+.group-choices summary {
+  min-height: 44px;
+  padding: 12px 0;
+  color: var(--green);
+  cursor: pointer;
+  font-weight: 650;
+  font-size: 13px;
+}
+.group-choices summary:focus-visible {
+  outline: 3px solid #89ac60;
+  outline-offset: 3px;
+}
+.group-materials {
+  display: grid;
+  gap: 14px;
+}
+.group-material {
+  min-width: 0;
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+}
+.group-material h4 {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+.group-material h4 a:hover {
+  text-decoration: underline;
+}
+.group-material .part-description {
+  margin-bottom: 10px;
+}
+.group-material .favorite,
+.group-material .card-tools a,
+.group-material .start-link {
+  min-height: 44px;
+}
+.group-material .favorite {
+  min-width: 44px;
+}
+.group-material .card-counts,
+.group-material .card-tools,
+.group-material .card-progress,
+.group-material .start-link {
+  font-size: 12px;
+}
+.group-material .card-tools {
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  padding-bottom: 0;
+}
+.group-material .card-bottom {
+  margin: 0;
+  padding: 10px 0;
+}
 .topic-label {
   font-size: 9px;
   font-weight: 750;

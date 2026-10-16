@@ -7,6 +7,8 @@ const catalog: Catalog = JSON.parse(
 );
 const t01 = catalog.lessons.find((lesson) => lesson.number === 1)!;
 const urban = catalog.lessons.find((lesson) => lesson.number === 11)!;
+const bncc18 = catalog.lessons.find((lesson) => lesson.id === 'lesson-fa532170310d')!;
+const bncc22 = catalog.lessons.find((lesson) => lesson.id === 'lesson-73811adb3a6b')!;
 
 test.beforeEach(async ({ page }) => {
   // External font/media access is tested separately from application navigation.
@@ -19,9 +21,155 @@ test('biblioteca mostra todo o acervo e suas contagens', async ({ page }) => {
   const errors: string[] = [];
   page.on('pageerror', (error) => errors.push(error.message));
   await page.goto('./biblioteca.html');
-  await expect(page.locator('.lesson-card')).toHaveCount(26);
+  await expect(page.locator('.lesson-card')).toHaveCount(25);
   await expect(page.locator('.stats-grid')).toContainText('1.294');
   await expect(page.locator('.stats-grid')).toContainText('2.600');
+  expect(errors).toEqual([]);
+});
+
+test('BNCC aparece em um tema com dois materiais distintos e escolha acessível por teclado', async ({
+  page,
+}) => {
+  await page.goto('./biblioteca.html');
+  const group = page.locator('.lesson-group');
+  await expect(group).toHaveCount(1);
+  await expect(
+    page.locator('.lesson-grid h3').filter({ hasText: 'BNCC e Ensino de Geografia' }),
+  ).toHaveCount(1);
+  await expect(group.locator('details')).not.toHaveAttribute('open', '');
+  await group.locator('summary').focus();
+  await page.keyboard.press('Enter');
+  await expect(group.locator('details')).toHaveAttribute('open', '');
+  await expect(group.locator('.group-material')).toHaveCount(2);
+  await expect(group.locator('h4 a')).toHaveText([
+    'BNCC: estrutura e progressão curricular',
+    'Ensino de Geografia: aplicação em sala de aula',
+  ]);
+  for (const [index, lesson] of [bncc18, bncc22].entries()) {
+    const part = group.locator('.group-material').nth(index);
+    await expect(part.locator('h4 a')).toHaveAttribute('href', `#/missao/${lesson.id}`);
+    await expect(part.locator('.card-counts')).toContainText(`${lesson.counts.questions} questões`);
+  }
+  await expect(page.locator('.stats-grid')).toContainText('25temas de estudo');
+  await expect(page.locator('.stats-grid')).toContainText('26 materiais');
+});
+
+test('busca por tema e aplicação seleciona o material BNCC correto e preserva URLs antigas', async ({
+  page,
+}) => {
+  await page.goto('./biblioteca.html');
+  await page.getByRole('searchbox').fill('tema 22');
+  await expect(page.locator('.lesson-card')).toHaveCount(1);
+  await expect(page.locator('.group-material')).toHaveCount(1);
+  await page.locator('.group-material h4 a').click();
+  await expect(page).toHaveURL(new RegExp(bncc22.id));
+  await expect(page.frameLocator('iframe').locator('#tab-study')).toBeVisible();
+  await page.getByRole('link', { name: 'Biblioteca', exact: true }).click();
+  await page.getByRole('searchbox').fill('progressao curricular');
+  await expect(page.locator('.group-material')).toHaveCount(1);
+  await expect(page.locator('.group-material h4 a')).toHaveAttribute(
+    'href',
+    `#/missao/${bncc18.id}`,
+  );
+  await page.getByRole('searchbox').fill('BNCC');
+  await expect(page.locator('.lesson-card')).toHaveCount(1);
+  await expect(page.locator('.group-material')).toHaveCount(2);
+});
+
+test('favoritos BNCC contam um tema sem juntar os registros e a exportação mantém as duas chaves', async ({
+  page,
+}) => {
+  const key = 'missao-geografia:preferences:v1';
+  const firstState = JSON.stringify({ a: { b_0_0: 1 }, fc: { 0: 'ok' } });
+  const secondState = JSON.stringify({ a: { b_0_0: 0, b_0_1: 1 }, fc: { 1: 'rev' } });
+  await page.addInitScript(
+    ({ key, first, second, firstState, secondState }) => {
+      if (!localStorage.getItem(key)) {
+        localStorage.setItem(
+          key,
+          JSON.stringify({ favorites: [first.id, second.id], lastVisited: second.id }),
+        );
+        localStorage.setItem(first.storage.current, firstState);
+        localStorage.setItem(second.storage.current, secondState);
+      }
+    },
+    { key, first: bncc18, second: bncc22, firstState, secondState },
+  );
+  await page.goto('./biblioteca.html');
+  const favorites = page.locator('.main-nav').getByRole('button', { name: /Favoritos/ });
+  await expect(favorites).toHaveText('Favoritos1');
+  await favorites.click();
+  await expect(page.locator('.lesson-card')).toHaveCount(1);
+  await expect(page.locator('.group-material')).toHaveCount(2);
+  await expect(page.locator('.group-material').nth(0)).toContainText('2% das questões');
+  await expect(page.locator('.group-material').nth(1)).toContainText('4% das questões');
+  const download = page.waitForEvent('download');
+  await page.getByRole('button', { name: 'Salvar cópia do progresso' }).click();
+  const backup = JSON.parse(await readFile((await (await download).path())!, 'utf8'));
+  expect(backup.legacyStorage[bncc18.storage.current]).toBe(firstState);
+  expect(backup.legacyStorage[bncc22.storage.current]).toBe(secondState);
+  await page
+    .getByRole('button', {
+      name: 'Remover dos favoritos: BNCC: estrutura e progressão curricular',
+      exact: true,
+    })
+    .click();
+  await expect(page.locator('.group-material')).toHaveCount(1);
+  await expect(favorites).toHaveText('Favoritos1');
+  await page.reload();
+  expect(
+    await page.evaluate((key) => JSON.parse(localStorage.getItem(key)!).favorites, key),
+  ).toEqual([bncc22.id]);
+  expect(await page.evaluate((key) => localStorage.getItem(key), bncc18.storage.current)).toBe(
+    firstState,
+  );
+  expect(await page.evaluate((key) => localStorage.getItem(key), bncc22.storage.current)).toBe(
+    secondState,
+  );
+});
+
+test('flashcards e game dos dois materiais BNCC continuam acessíveis', async ({ page }) => {
+  for (const [lesson, title] of [
+    [bncc18, 'BNCC: estrutura e progressão curricular'],
+    [bncc22, 'Ensino de Geografia: aplicação em sala de aula'],
+  ] as const) {
+    for (const [mode, label] of [
+      ['flash', 'Flashcards'],
+      ['game', 'Game'],
+    ] as const) {
+      await page.goto('./biblioteca.html');
+      await page.getByRole('searchbox').fill('BNCC');
+      await page.getByRole('link', { name: `${label} de ${title}`, exact: true }).click();
+      await expect(page).toHaveURL(new RegExp(`${lesson.id}\\?modo=${mode}`));
+      await expect(page.frameLocator('iframe').locator(`#tab-${mode}`)).toBeVisible();
+    }
+  }
+});
+
+test('BNCC reunida preserva percurso, funciona em celular e não gera erros de JavaScript', async ({
+  page,
+}, info) => {
+  const errors: string[] = [];
+  page.on('pageerror', (e) => errors.push(e.message));
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.addInitScript(
+    ({ lesson }) => {
+      localStorage.setItem(lesson.storage.current, JSON.stringify({ a: { b_0_0: 1 } }));
+    },
+    { lesson: bncc18 },
+  );
+  await page.goto('./biblioteca.html');
+  await page.getByRole('searchbox').fill('BNCC');
+  await expect(page.locator('.group-material')).toHaveCount(2);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await page.screenshot({ path: info.outputPath('bncc-reunida-mobile.png'), fullPage: true });
+  await page.getByRole('button', { name: 'Abrir menu' }).click();
+  await page.locator('.main-nav').getByRole('button', { name: 'Meu percurso' }).click();
+  await expect(page.locator('.group-material')).toHaveCount(1);
+  await expect(page.locator('.group-material h4 a')).toHaveAttribute(
+    'href',
+    `#/missao/${bncc18.id}`,
+  );
   expect(errors).toEqual([]);
 });
 
@@ -41,7 +189,7 @@ test('busca ignora acentos e Cartografia histórica não aparece como opção de
   await page.getByRole('searchbox').fill('assunto-inexistente');
   await expect(page.getByRole('heading', { name: 'Nenhum tema encontrado' })).toBeVisible();
   await page.getByRole('button', { name: 'Ver toda a biblioteca' }).click();
-  await expect(page.locator('.lesson-card')).toHaveCount(26);
+  await expect(page.locator('.lesson-card')).toHaveCount(25);
 });
 
 test('favoritos persistem e podem ser removidos', async ({ page }) => {
@@ -146,7 +294,7 @@ test('todas as páginas originais e dados são servidos no caminho publicado', a
 test('celular tem menu funcional e não transborda horizontalmente', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('./biblioteca.html');
-  await expect(page.locator('.lesson-card')).toHaveCount(26);
+  await expect(page.locator('.lesson-card')).toHaveCount(25);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await page.getByRole('button', { name: 'Abrir menu' }).click();
   await page.keyboard.press('Escape');
@@ -181,7 +329,7 @@ test('endereço principal abre V6; outros módulos ficam acessíveis sem duplica
   await expect(page.getByRole('button', { name: 'Ativar modo claro', exact: true })).toBeVisible();
   await page.screenshot({ path: info.outputPath('v6-entrada-canonica.png'), fullPage: true });
   await page.goto('./biblioteca.html');
-  await expect(page.locator('.lesson-card')).toHaveCount(26);
+  await expect(page.locator('.lesson-card')).toHaveCount(25);
   await expect(page.locator('.lesson-grid')).not.toContainText('Cartografia II');
   await page.getByRole('link', { name: 'Continuar Cartografia V6', exact: true }).click();
   await expect(page.locator('.unit-card')).toHaveCount(3);
