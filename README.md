@@ -1,6 +1,8 @@
 # Missão Geografia
 
-**Prévia da branch `v6-piloto-cartografia`:** a raiz abre o piloto V6 de Cartografia e Geotecnologias, com três unidades e os ambientes Estudo, Treino, Revisão e Prova. Os demais materiais continuam em `/biblioteca.html`; as fontes históricas de Cartografia ficam fora do catálogo ativo e preservadas para auditoria/backup. Veja o [guia de execução e revisão](MissaoAprovacaoGeo/V6_FASE14_GUIA_PILOTO.md), a [segunda rodada de correções](MissaoAprovacaoGeo/V6_FASE14_CORRECOES_RODADA2.md) e o [aceite de uso e próximo passo](MissaoAprovacaoGeo/V6_FASE14_ACEITE_USO_E_PROXIMOS_PASSOS.md). O visual e o teste de uso foram aprovados pelo usuário; a reavaliação independente continua pendente. Não houve merge/publicação na `main`.
+**Prévia da branch `v6-piloto-cartografia`:** a raiz abre o piloto V6 de Cartografia e Geotecnologias, com três unidades e os ambientes Estudo, Treino, Revisão e Prova. Os demais materiais continuam em `/biblioteca.html`; as fontes históricas de Cartografia ficam fora do catálogo ativo e preservadas para auditoria/backup. Veja o [guia de execução e revisão](MissaoAprovacaoGeo/V6_FASE14_GUIA_PILOTO.md), a [segunda rodada de correções](MissaoAprovacaoGeo/V6_FASE14_CORRECOES_RODADA2.md) e o [aceite de uso e próximo passo](MissaoAprovacaoGeo/V6_FASE14_ACEITE_USO_E_PROXIMOS_PASSOS.md). O visual e o teste de uso foram aprovados pelo usuário; a reconferência técnica do bloqueador P1 continua pendente. Não houve merge/publicação na `main`.
+
+Atualização do piloto: a reauditoria confirmou B1/B2/C1 e apontou P1/P3. As [correções de treino contextual e favoritos](MissaoAprovacaoGeo/V6_FASE14_CORRECOES_P1_P3.md) estão implementadas para reconferência do revisor; a proposta de gamificação sensorial continua reservada para uma rodada separada.
 
 A descrição abaixo registra a base histórica da biblioteca, anterior ao piloto.
 

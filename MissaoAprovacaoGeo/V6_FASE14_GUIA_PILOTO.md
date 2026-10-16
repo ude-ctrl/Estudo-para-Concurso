@@ -2,7 +2,7 @@
 
 O piloto está isolado na branch `v6-piloto-cartografia`. Não substitui a biblioteca publicada, não migra outros módulos e não publica automaticamente no GitHub Pages.
 
-O usuário já aprovou o visual e o teste de uso. O próximo passo é a reavaliação independente das correções, conforme o [registro de aceite e roteiro pronto para revisão](V6_FASE14_ACEITE_USO_E_PROXIMOS_PASSOS.md). Merge/publicação continuam sem autorização.
+O usuário já aprovou o visual e o teste de uso. A reauditoria confirmou B1/B2/C1 e identificou P1/P3; as [correções e o roteiro de reconferência](V6_FASE14_CORRECOES_P1_P3.md) estão documentados. O [registro de aceite](V6_FASE14_ACEITE_USO_E_PROXIMOS_PASSOS.md) mantém o histórico. Merge/publicação continuam sem autorização.
 
 ## Executar
 
@@ -25,7 +25,7 @@ npm run preview
 
 Abra a raiz ou `/v6.html` no endereço do preview. Caminhos de assets relativos e rotas após `#` funcionam também sob `/Estudo-para-Concurso/`. O site público não recebe esta alteração até uma publicação autorizada.
 
-A [segunda rodada de correções](V6_FASE14_CORRECOES_RODADA2.md) descreve as mudanças exigidas pela auditoria independente e pela rejeição inicial de UX. O aceite visual e de uso já foi recebido; a reavaliação independente permanece pendente.
+A [segunda rodada de correções](V6_FASE14_CORRECOES_RODADA2.md) descreve as mudanças exigidas pela auditoria independente e pela rejeição inicial de UX. O aceite visual e de uso já foi recebido; a reauditoria foi recebida e a reconferência da correção P1 permanece pendente.
 
 ## Revisar o piloto
 

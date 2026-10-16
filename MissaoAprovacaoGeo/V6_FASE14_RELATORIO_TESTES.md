@@ -1,10 +1,36 @@
 # V6 — Fase 14: relatório de testes
 
+## Correções P1/P3 — treino contextual, diagnóstico e favoritos
+
+Execução: **16/10/2026 UTC**. Branch exclusiva: `v6-piloto-cartografia`. Implementação verificada: **`c872886fbe544a265a0e9e038e7e10fdc95ee5f2`**, sobre a base auditada `1285715`.
+
+**Resultado final: build aprovada, 53 testes de integridade/lógica aprovados e 100 cenários de navegador aprovados**, 50 pela raiz e 50 por `/Estudo-para-Concurso/`. Zero falhas, testes ignorados ou resultados instáveis. Duração da bateria completa de navegador: aproximadamente 172 segundos. Evidência estruturada, com casos, projetos, resultados e duração: [resultado-p1-p3.json](v6-evidencias/resultado-p1-p3.json).
+
+Antes da correção funcional, duas novas verificações falharam na build de `1285715`, reproduzindo a retomada indevida de Orientação ao pedir Escalas e o contador de favorito arquivado. Essas falhas registram a versão anterior. As rodadas direcionadas passaram em 28 execuções P1/P3 e quatro de foco/Game; são cobertura sobreposta à bateria completa, não 32 cenários exclusivos adicionais. A bateria completa acima usa o código final, incluindo os refinamentos de foco e Game.
+
+Os 53 testes são cinco do acervo e 48 V6. As duas novas verificações de lógica conferem a compatibilidade de todos os IDs, unidade, missão, banco e tipo da sessão, além da retomada com banco opcional e dos backups anteriores. A build verifica TypeScript estrito. A geração `node scripts/build-v6.mjs --check`, a formatação dos arquivos de código/testes alterados e `git diff --check` passaram.
+
+Cobertura de regressão acrescentada nesta rodada:
+
+- sessão de Orientação em andamento ou concluída → Estudo de Escalas → **Testar este raciocínio**, tanto pela entrada principal quanto por `/v6.html`;
+- **Diagnosticar** com Fixação em andamento/concluída, diagnóstico concluído, Game ou flashcards salvos;
+- preservação da sessão anterior, respostas e XP antes do início explícito da nova fila; missão/banco corretos após iniciar, reload e retomada pelo painel;
+- mudanças de query na mesma unidade, controles sincronizados com a URL, setas do teclado mantendo o foco e histórico de voltar do navegador;
+- backups anteriores com missão inicial artificial e retomada do diagnóstico preparado ainda sem sessão;
+- início explícito do Game da unidade a partir de preparação contextual e retorno ao atalho de questões de Escalas;
+- contador com somente favorito arquivado, ou mistura de ativos, arquivados, desconhecidos e duplicados; armazenamento e backup preservados.
+
+Todos os casos são executados nos dois caminhos. A suíte mantém as verificações anteriores de B1/B2/C1, temas, teclado, movimento reduzido, celebrações e demais fluxos. Os fluxos V6 conferem a ausência de exceções JavaScript via `pageerror`.
+
+O banco pedagógico, o mapa com 685 registros de paridade, o registro congelado de IDs e a proposta documental de gamificação sensorial não sofreram alterações. Os testes confirmaram os 31 HTMLs históricos byte a byte. Os 36 itens autorais continuam `human-review-pending`, e a prova oficial completa permanece bloqueada por estoque aprovado insuficiente.
+
+O parecer independente recebido confirmou B1/B2/C1, mas reteve a liberação por P1. Estes resultados documentam a correção, não uma aprovação independente. A reconferência de P1 permanece pendente; o aceite de uso já comunicado continua válido. Detalhes e decisões: [correções P1/P3](V6_FASE14_CORRECOES_P1_P3.md).
+
 ## Segunda rodada — correções após auditoria independente e rejeição UX
 
 As falhas B1 (ciclo de gabarito), B2 (Difícil como erro), C1 (dia UTC) e a exposição indevida do legado não foram detectadas ou resolvidas pela bateria da primeira entrega descrita abaixo. Esses resultados históricos são mantidos para rastreabilidade e não representam aprovação humana.
 
-As correções e seus limites estão em [V6_FASE14_CORRECOES_RODADA2.md](V6_FASE14_CORRECOES_RODADA2.md). A suíte atual de integridade/lógica passou em **51 testes: 5 do acervo +46 V6**. A bateria global passou em **72 cenários de navegador**, 36 em cada caminho, no commit `e400d86`. O ajuste visual seguinte, commit `bf421cd`, colocou as celebrações no fluxo sem sobrepor ações e recebeu **10 revalidações específicas**, também aprovadas. Não houve alteração posterior do motor pedagógico. Evidência: [resultado-rodada2.json](v6-evidencias/resultado-rodada2.json).
+As correções e seus limites estão em [V6_FASE14_CORRECOES_RODADA2.md](V6_FASE14_CORRECOES_RODADA2.md). A suíte de integridade/lógica dessa rodada passou em **51 testes: 5 do acervo +46 V6**. A bateria global passou em **72 cenários de navegador**, 36 em cada caminho, no commit `e400d86`. O ajuste visual seguinte, commit `bf421cd`, colocou as celebrações no fluxo sem sobrepor ações e recebeu **10 revalidações específicas**, também aprovadas. Entre esses dois commits não houve alteração do motor pedagógico. Evidência: [resultado-rodada2.json](v6-evidencias/resultado-rodada2.json).
 
 Resultado final das duas baterias de navegador: zero falhas, testes ignorados ou resultados instáveis. Durações aproximadas: 122 segundos na bateria global e 25 segundos na revalidação visual. A última build com TypeScript passou. A geração `--check` conferiu os arquivos de conteúdo e paridade sem diferenças.
 
@@ -128,4 +154,4 @@ Os testes de fluxo bloqueiam recursos externos para tornar falhas de imagem/font
 
 Não foram executados: teste longitudinal com estudantes, calibração psicométrica do domínio, correção humana das discursivas, avaliação oral real por banca, auditoria integral com leitores de tela, teste físico iOS/Android ou medição de desempenho em redes móveis reais. Os testes com tempo usam relógio controlado; não equivalem a acompanhar retenção humana durante semanas.
 
-Não há alegação de aprovação pedagógica automática ou conformidade integral WCAG. O aceite humano do piloto continua pendente.
+Não há alegação de aprovação pedagógica automática ou conformidade integral WCAG. Na primeira entrega aqui registrada, o aceite humano ainda estava pendente; o aceite de uso posterior e a reconferência técnica P1 estão distinguidos na atualização no início deste relatório.

@@ -18,28 +18,34 @@ Fica registrado o aceite humano do visual e do teste de uso dessa versão do pil
 
 Esse aceite não é autorização de merge, publicação ou migração de outros módulos. Também não é uma revisão editorial individual dos 36 itens novos: o status `human-review-pending` permanece.
 
+## Reauditoria recebida após o aceite
+
+O usuário trouxe o parecer sobre `a0bc936`/`1285715`: B1, B2 e C1 foram confirmados como corrigidos, mas foi mantido um bloqueador **P1**, de treino contextual/diagnóstico retomando uma sessão de outro destino; houve também **P3**, contador incluindo favoritos arquivados. O revisor informou que não liberava tecnicamente o piloto enquanto P1 persistisse. O aceite de uso permaneceu válido.
+
+As [correções P1/P3 e suas regressões](V6_FASE14_CORRECOES_P1_P3.md) estão implementadas nesta branch. O próximo parecer deve reconferir essas correções, especialmente o item 5 do roteiro. Não se apaga o histórico dos achados nem se apresenta essa implementação como aprovação independente.
+
 ## Situação atual
 
 | Etapa | Situação |
 | --- | --- |
 | Mudança visual e experiência de uso | Aprovadas pelo usuário no chat |
 | Correções B1/B2/C1 e UX | Implementadas e documentadas na segunda rodada |
-| Verificação automatizada | 51 testes de integridade/lógica, 72 cenários globais e 10 revalidações visuais aprovados, conforme evidência já registrada |
+| Verificação automatizada | Última bateria P1/P3: build, 53 testes de integridade/lógica e 100 cenários globais aprovados |
 | Paridade | 685 registros rastreáveis e 31 HTMLs históricos preservados byte a byte |
-| Reavaliação técnica independente | Pendente de novo parecer |
+| Reavaliação técnica independente | Parecer recebido com P1 bloqueador e P3 menor; correções implementadas para reconferência |
 | Revisão editorial dos itens autorais | Pendente; nenhuma promoção automática ao banco oficial |
 | Merge e publicação | Sem autorização; não executados |
 | Expansão para outro módulo | Sem autorização; não iniciada |
 
-Os testes citados são os executados na rodada anterior. Este registro altera somente documentação e não representa uma nova execução da suíte.
+O [relatório de testes](V6_FASE14_RELATORIO_TESTES.md) registra a última bateria P1/P3 e preserva os resultados históricos da segunda rodada: 51 testes de integridade/lógica, 72 cenários globais e 10 revalidações visuais.
 
 ## Próximo passo concreto
 
 A [auditoria independente](V6_FASE14_AUDITORIA_INDEPENDENTE.md), na decisão de governança, pede **“solicitar nova auditoria independente”** após as correções. O mesmo pedido consta no [comentário da Issue #12](https://github.com/ude-ctrl/Estudo-para-Concurso/issues/12#issuecomment-6202083822): **“parar novamente para nova auditoria independente”**.
 
-O próximo passo é essa reavaliação por outro revisor. Os relatórios da implementação documentam as correções; não substituem esse novo parecer. Não é necessário repetir o teste de uso já aceito apenas para registrar esse aceite.
+Essa reavaliação já foi recebida e identificou P1/P3. Agora cabe reconferir a correção do bloqueador P1, mantendo os demais resultados reconhecidos pelo parecer. Os relatórios da implementação não substituem essa reconferência. Não é necessário repetir o teste de uso já aceito apenas para registrar esse aceite.
 
-Roteiro pronto para entregar ao revisor:
+Roteiro da reauditoria recebida, preservado para rastreabilidade; a próxima reconferência está detalhada no [relatório P1/P3](V6_FASE14_CORRECOES_P1_P3.md):
 
 ```text
 Reavalie, somente em leitura, o piloto na branch v6-piloto-cartografia.

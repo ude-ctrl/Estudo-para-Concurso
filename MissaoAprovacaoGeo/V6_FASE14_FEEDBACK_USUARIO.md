@@ -5,7 +5,7 @@ Branch: `v6-piloto-cartografia`
 
 ## Atualização após a segunda rodada
 
-O usuário aprovou a mudança visual e informou **“Testei, tudo ok.”** após testar a versão `67c38a7`. O [registro de aceite e próximos passos](V6_FASE14_ACEITE_USO_E_PROXIMOS_PASSOS.md) distingue esse aceite de uso da reavaliação independente ainda pendente e de autorização de publicação. A rejeição descrita abaixo corresponde à primeira entrega e permanece preservada no histórico.
+O usuário aprovou a mudança visual e informou **“Testei, tudo ok.”** após testar a versão `67c38a7`. O [registro de aceite e próximos passos](V6_FASE14_ACEITE_USO_E_PROXIMOS_PASSOS.md) distingue esse aceite de uso da reconferência técnica P1/P3 ainda pendente e de autorização de publicação. A rejeição descrita abaixo corresponde à primeira entrega e permanece preservada no histórico.
 
 ## Status da avaliação inicial
 

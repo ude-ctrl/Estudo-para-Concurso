@@ -1,6 +1,6 @@
 # V6 — Fase 14: paridade do conteúdo antigo × piloto
 
-Data: 15/10/2026. Branch: `v6-piloto-cartografia`. Visual e teste de uso aprovados; revisão editorial e reavaliação independente pendentes. Ver o [registro de aceite](V6_FASE14_ACEITE_USO_E_PROXIMOS_PASSOS.md).
+Data: 15/10/2026. Branch: `v6-piloto-cartografia`. Visual e teste de uso aprovados; revisão editorial e reconferência técnica P1 pendentes. Ver o [registro de aceite](V6_FASE14_ACEITE_USO_E_PROXIMOS_PASSOS.md).
 
 **Atualização da segunda rodada:** as contagens e os 685 registros de origem permanecem iguais. Sete títulos/transições/comandos recebem redação canônica publicada, sem resumir teoria; os originais integrais e hashes continuam no arquivo. O legado sai da experiência ativa. Ver o [registro completo dessas alterações e riscos](V6_FASE14_CORRECOES_RODADA2.md). As descrições abaixo da primeira entrega não devem ser interpretadas como proibição de reeditar sua embalagem editorial.
 
