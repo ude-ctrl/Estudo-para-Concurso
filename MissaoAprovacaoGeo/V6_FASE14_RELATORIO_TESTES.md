@@ -1,5 +1,9 @@
 # V6 — Fase 14: relatório de testes
 
+## Reconferência P1/P3 comunicada pelo usuário
+
+Em 16/10/2026 UTC, o usuário informou que reexecutou a build, os **53 testes de integridade/lógica e os 100 cenários de navegador**, todos aprovados, além de **oito verificações adicionais** dos fluxos solicitados. O parecer concluiu que **não resta bloqueador técnico no escopo P1/P3**; a revisão editorial dos itens autorais permanece pendente. O [registro integral da reconferência](V6_FASE14_RECONFERENCIA_P1_P3.md) delimita a procedência e o alcance desse resultado. Esta atualização é documental; não representa uma nova execução da suíte pela implementação.
+
 ## Correções P1/P3 — treino contextual, diagnóstico e favoritos
 
 Execução: **16/10/2026 UTC**. Branch exclusiva: `v6-piloto-cartografia`. Implementação verificada: **`c872886fbe544a265a0e9e038e7e10fdc95ee5f2`**, sobre a base auditada `1285715`.
@@ -24,7 +28,7 @@ Todos os casos são executados nos dois caminhos. A suíte mantém as verificaç
 
 O banco pedagógico, o mapa com 685 registros de paridade, o registro congelado de IDs e a proposta documental de gamificação sensorial não sofreram alterações. Os testes confirmaram os 31 HTMLs históricos byte a byte. Os 36 itens autorais continuam `human-review-pending`, e a prova oficial completa permanece bloqueada por estoque aprovado insuficiente.
 
-O parecer independente recebido confirmou B1/B2/C1, mas reteve a liberação por P1. Estes resultados documentam a correção, não uma aprovação independente. A reconferência de P1 permanece pendente; o aceite de uso já comunicado continua válido. Detalhes e decisões: [correções P1/P3](V6_FASE14_CORRECOES_P1_P3.md).
+O parecer independente anterior confirmou B1/B2/C1, mas reteve a liberação por P1. Os resultados desta seção documentam a execução da implementação, quando a reconferência ainda estava pendente; o parecer posterior está registrado no início deste relatório. O aceite de uso já comunicado continua válido. Detalhes e decisões: [correções P1/P3](V6_FASE14_CORRECOES_P1_P3.md).
 
 ## Segunda rodada — correções após auditoria independente e rejeição UX
 

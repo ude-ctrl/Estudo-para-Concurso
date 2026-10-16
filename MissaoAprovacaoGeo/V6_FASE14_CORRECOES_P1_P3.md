@@ -2,7 +2,7 @@
 
 Execução: 16/10/2026 UTC (15/10/2026 em America/Sao_Paulo). Branch exclusiva: `v6-piloto-cartografia`.
 
-**Situação: correções implementadas para reconferência do revisor.** O aceite visual e de uso do usuário permanece válido. Não houve merge, publicação, expansão de módulos ou implementação da proposta de gamificação sensorial.
+**Situação atualizada: reconferência recebida, sem bloqueador técnico remanescente no escopo P1/P3.** O [parecer comunicado pelo usuário](V6_FASE14_RECONFERENCIA_P1_P3.md) registra build, 53 testes de integridade/lógica, 100 cenários de navegador e oito verificações adicionais aprovados. O aceite visual e de uso permanece válido; a revisão editorial dos itens autorais continua pendente. Não houve merge, publicação, expansão de módulos ou implementação da proposta de gamificação sensorial.
 
 ## Parecer recebido e escopo
 
@@ -65,8 +65,8 @@ O banco publicado, os 685 registros de paridade e o registro congelado de IDs n�
 
 Os 36 itens novos continuam `human-review-pending`; o perfil oficial completo permanece bloqueado por estoque aprovado insuficiente. Os riscos já declarados sobre provas antigas e histórico anterior de Difícil continuam documentados. Esta rodada não modifica esses registros históricos nem declara uma aprovação editorial individual dos itens.
 
-## Reconferência solicitada
+## Roteiro da reconferência, preservado no histórico
 
 Reproduzir o P1 com uma sessão anterior de Orientação: pedir Escalas pelo estudo e diagnóstico pelo painel, incluindo a rodada anterior concluída. Confirmar que o destino solicitado prevalece e que as respostas anteriores ficam preservadas. Conferir também o contador P3 com somente Cartografia arquivada favoritada.
 
-O parecer anterior sobre B1/B2/C1 e o aceite de uso permanecem registrados. A implementação para nesta correção para reconferência do bloqueador P1; não presume liberação técnica, autorização de publicação ou de novos módulos.
+O parecer anterior sobre B1/B2/C1 e o aceite de uso permanecem registrados. A entrega desta correção parou para reconferência do bloqueador P1. O [retorno posterior](V6_FASE14_RECONFERENCIA_P1_P3.md) encerrou essa reconferência sem bloqueador técnico no escopo P1/P3; não autoriza publicação ou novos módulos e não substitui revisão editorial.

@@ -1,8 +1,8 @@
 # V6 — Fase 14: Auditoria Premium do piloto
 
-**Atualização de aceite:** após a segunda rodada, o usuário aprovou o visual e informou **“Testei, tudo ok.”**. O [registro de aceite](V6_FASE14_ACEITE_USO_E_PROXIMOS_PASSOS.md) documenta esse resultado. A reconferência das correções P1/P3 e a revisão editorial individual dos itens novos permanecem pendentes; merge/publicação não foram autorizados.
+**Atualização de aceite:** após a segunda rodada, o usuário aprovou o visual e informou **“Testei, tudo ok.”**. O [registro de aceite](V6_FASE14_ACEITE_USO_E_PROXIMOS_PASSOS.md) documenta esse resultado. A reconferência P1/P3 foi recebida sem bloqueador técnico remanescente nesse escopo. A revisão editorial individual dos itens novos permanece pendente; merge/publicação não foram autorizados.
 
-**Atualização após reauditoria:** o parecer trazido pelo usuário confirmou B1/B2/C1 e apontou P1 bloqueador no treino contextual, além de P3 menor no contador de favoritos. As [correções P1/P3](V6_FASE14_CORRECOES_P1_P3.md) foram implementadas para reconferência, sem modificar o banco pedagógico. A liberação técnica do P1 continua dependendo do revisor; o aceite de uso segue válido.
+**Atualização após reauditoria:** o parecer trazido pelo usuário confirmou B1/B2/C1 e apontou P1 bloqueador no treino contextual, além de P3 menor no contador de favoritos. As [correções P1/P3](V6_FASE14_CORRECOES_P1_P3.md) foram implementadas sem modificar o banco pedagógico. O [parecer posterior de reconferência](V6_FASE14_RECONFERENCIA_P1_P3.md) informou que não resta bloqueador técnico no escopo P1/P3, com build, 53 testes de integridade/lógica, 100 cenários de navegador e oito verificações adicionais aprovados. O aceite de uso segue válido; não se amplia esse parecer para aprovação editorial integral.
 
 ## Histórico da autoauditoria da primeira entrega
 
