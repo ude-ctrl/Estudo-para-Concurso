@@ -28,6 +28,7 @@ import {
 } from './storage';
 import type { Preferences } from './storage';
 import { canonicalLegacyRoute } from './legacy-routes';
+import { groupLessons, lessonPart } from './library-groups';
 import type { Catalog, Category, Lesson, Progress, StudyMode } from './types';
 
 const assetUrl = (path: string) => `${import.meta.env.BASE_URL}${path}`;
@@ -91,22 +92,32 @@ function LessonCard({
   progress,
   favorite,
   toggle,
+  part = false,
 }: {
   lesson: Lesson;
   progress: Progress;
   favorite: boolean;
   toggle: () => void;
+  part?: boolean;
 }) {
+  const Heading = part ? 'h4' : 'h3';
+  const detail = part ? lessonPart(lesson) : undefined;
+  const title = detail?.title ?? lesson.title;
   return (
-    <article className={`lesson-card category-${categories.indexOf(lesson.category)}`}>
+    <article
+      className={
+        part ? 'group-material' : `lesson-card category-${categories.indexOf(lesson.category)}`
+      }
+    >
       <div className="card-top">
         <span className="topic-label">TEMA {String(lesson.number).padStart(2, '0')}</span>
-        <Favorite active={favorite} onClick={toggle} title={lesson.title} />
+        <Favorite active={favorite} onClick={toggle} title={title} />
       </div>
-      <div className="card-category">{lesson.category}</div>
-      <h3>
-        <a href={lessonHref(lesson.id)}>{lesson.title}</a>
-      </h3>
+      {!part && <div className="card-category">{lesson.category}</div>}
+      <Heading>
+        <a href={lessonHref(lesson.id)}>{title}</a>
+      </Heading>
+      {detail && <p className="part-description">{detail.description}</p>}
       <div className="card-edition">
         <span>{lesson.edition}</span>
         {lesson.audited && (
@@ -124,10 +135,10 @@ function LessonCard({
         </span>
       </div>
       <div className="card-tools">
-        <a href={lessonHref(lesson.id, 'flash')} aria-label={`Flashcards de ${lesson.title}`}>
+        <a href={lessonHref(lesson.id, 'flash')} aria-label={`Flashcards de ${title}`}>
           <Layers3 size={15} /> {lesson.counts.flashcards} flashcards
         </a>
-        <a href={lessonHref(lesson.id, 'game')} aria-label={`Game de ${lesson.title}`}>
+        <a href={lessonHref(lesson.id, 'game')} aria-label={`Game de ${title}`}>
           <Gamepad2 size={16} /> Game
         </a>
       </div>
@@ -152,6 +163,52 @@ function LessonCard({
           <ArrowRight size={16} />
         </a>
       </div>
+    </article>
+  );
+}
+
+function LessonGroup({
+  lessons,
+  progress,
+  favorites,
+  toggle,
+  expanded,
+}: {
+  lessons: Lesson[];
+  progress: Map<string, Progress>;
+  favorites: string[];
+  toggle: (id: string) => void;
+  expanded: boolean;
+}) {
+  return (
+    <article className="lesson-card lesson-group category-5" aria-labelledby="bncc-group-title">
+      <div className="card-top">
+        <span className="topic-label">TEMA REUNIDO</span>
+        <span className="group-count">
+          {lessons.length} {lessons.length === 1 ? 'material' : 'materiais'}
+        </span>
+      </div>
+      <div className="card-category">Educação</div>
+      <h3 id="bncc-group-title">BNCC e Ensino de Geografia</h3>
+      <p className="group-description">Da estrutura do currículo à prática em sala de aula.</p>
+      <p className="part-description">
+        Cada material mantém suas atividades, favoritos e progresso.
+      </p>
+      <details className="group-choices" open={expanded}>
+        <summary>Escolher material</summary>
+        <div className="group-materials">
+          {lessons.map((lesson) => (
+            <LessonCard
+              key={lesson.id}
+              lesson={lesson}
+              progress={progress.get(lesson.id)!}
+              favorite={favorites.includes(lesson.id)}
+              toggle={() => toggle(lesson.id)}
+              part
+            />
+          ))}
+        </div>
+      </details>
     </article>
   );
 }
@@ -361,7 +418,7 @@ export default function App() {
     return (catalog?.lessons ?? [])
       .filter((lesson) => {
         const searchable = normalize(
-          `${lesson.title} ${lesson.category} tema ${lesson.number} ${String(lesson.number).padStart(2, '0')} ${lesson.edition} ${lesson.audited ? 'auditada' : ''}`,
+          `${lesson.title} ${lesson.category} tema ${lesson.number} ${String(lesson.number).padStart(2, '0')} ${lesson.edition} ${lesson.audited ? 'auditada' : ''} ${lessonPart(lesson)?.title ?? ''} ${lessonPart(lesson)?.description ?? ''}`,
         );
         return (
           words.every((word) => searchable.includes(word)) &&
@@ -418,8 +475,10 @@ export default function App() {
   const lesson = catalog.lessons.find((item) => item.id === route.id),
     resource = catalog.resources.find((item) => item.id === route.id);
   const lastLesson = catalog.lessons.find((item) => item.id === preferences.lastVisited);
-  const favoriteCount = catalog.lessons.filter((item) =>
-    preferences.favorites.includes(item.id),
+  const entries = groupLessons(filtered);
+  const topicCount = groupLessons(catalog.lessons).length;
+  const favoriteCount = groupLessons(
+    catalog.lessons.filter((item) => preferences.favorites.includes(item.id)),
   ).length;
   const started = catalog.lessons.filter((item) => progress.get(item.id)?.started).length;
   const complete = catalog.lessons.filter((item) => progress.get(item.id)?.percent === 100).length;
@@ -475,7 +534,7 @@ export default function App() {
             onClick={() => openView('library')}
           >
             <Library size={19} />
-            Outros materiais<span>{catalog.totals.lessons}</span>
+            Biblioteca<span>{topicCount}</span>
           </button>
           <button
             className={view === 'progress' && !route.id ? 'active' : ''}
@@ -625,10 +684,12 @@ export default function App() {
                     <BookOpen size={21} />
                   </span>
                   <div>
-                    <strong>{catalog.totals.lessons}</strong>
-                    <span>missões de estudo</span>
+                    <strong>{topicCount}</strong>
+                    <span>temas de estudo</span>
                   </div>
-                  <small>{catalog.totals.stages} etapas no acervo</small>
+                  <small>
+                    {catalog.totals.lessons} materiais · {catalog.totals.stages} etapas no acervo
+                  </small>
                 </div>
                 <div className="stat-card">
                   <span className="stat-icon">
@@ -658,7 +719,7 @@ export default function App() {
                   </div>
                   <div>
                     <span>RETOME SEU ÚLTIMO TEMA</span>
-                    <h2>{lastLesson.title}</h2>
+                    <h2>{lessonPart(lastLesson)?.title ?? lastLesson.title}</h2>
                     <p>
                       {progress.get(lastLesson.id)?.answered ?? 0} de{' '}
                       {progress.get(lastLesson.id)?.total ?? 0} questões respondidas
@@ -673,7 +734,7 @@ export default function App() {
               {view === 'progress' && (
                 <div className="journey-summary">
                   <strong>
-                    {started} {started === 1 ? 'missão iniciada' : 'missões iniciadas'}
+                    {started} {started === 1 ? 'material iniciado' : 'materiais iniciados'}
                   </strong>
                   <span>{complete} com todas as questões respondidas</span>
                 </div>
@@ -691,7 +752,7 @@ export default function App() {
                     </p>
                   </div>
                   <span className="results-count">
-                    {filtered.length} {filtered.length === 1 ? 'missão' : 'missões'}
+                    {entries.length} {entries.length === 1 ? 'tema' : 'temas'}
                   </span>
                 </div>
                 <div className="catalog-controls">
@@ -740,15 +801,26 @@ export default function App() {
                 </div>
                 {filtered.length ? (
                   <div className="lesson-grid">
-                    {filtered.map((item) => (
-                      <LessonCard
-                        key={item.id}
-                        lesson={item}
-                        progress={progress.get(item.id)!}
-                        favorite={preferences.favorites.includes(item.id)}
-                        toggle={() => toggleFavorite(item.id)}
-                      />
-                    ))}
+                    {entries.map((entry) =>
+                      entry.grouped ? (
+                        <LessonGroup
+                          key={entry.id}
+                          lessons={entry.lessons}
+                          progress={progress}
+                          favorites={preferences.favorites}
+                          toggle={toggleFavorite}
+                          expanded={entries.length === 1 || view !== 'library'}
+                        />
+                      ) : (
+                        <LessonCard
+                          key={entry.id}
+                          lesson={entry.lessons[0]}
+                          progress={progress.get(entry.id)!}
+                          favorite={preferences.favorites.includes(entry.id)}
+                          toggle={() => toggleFavorite(entry.id)}
+                        />
+                      ),
+                    )}
                   </div>
                 ) : (
                   <div className="empty-state">
