@@ -49,7 +49,10 @@ export function readProgress(lesson: Lesson): Progress {
     /* Corrupt or unavailable storage must not prevent catalog access. */
   }
   const answers = record(state.a),
-    cards = record(state.fc);
+    cards = record(state.fc),
+    game = record(state.g);
+  // Legacy games save completed rounds separately from the study question bank.
+  const played = typeof game.n === 'number' && Number.isSafeInteger(game.n) && game.n > 0;
   const answered = lesson.legacyQuestionKeys.filter(
     (key) =>
       typeof answers[key] === 'number' &&
@@ -75,7 +78,7 @@ export function readProgress(lesson: Lesson): Progress {
     known,
     review,
     stage,
-    started: answered > 0 || stage > 0 || known + review > 0,
+    started: answered > 0 || stage > 0 || known + review > 0 || played,
   };
 }
 

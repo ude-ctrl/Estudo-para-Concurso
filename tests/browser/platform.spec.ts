@@ -281,6 +281,47 @@ test('atalhos abrem flashcards e game sem perder a navegação', async ({ page }
   await expect(page.frameLocator('iframe').locator('#tab-game')).toBeVisible();
 });
 
+test('partida de game aparece no percurso e permanece salva após recarregar', async ({ page }) => {
+  const { banks } = JSON.parse(
+    await readFile(new URL(`../../public/${geopol14.contentUrl}`, import.meta.url), 'utf8'),
+  ) as { banks: { G: { t: string; v: boolean }[] } };
+  await page.goto(`./biblioteca.html#/missao/${geopol14.id}?modo=game`);
+  const frame = page.frameLocator('iframe');
+  await frame.locator('.game-launch').click();
+  // Finish a real round through its controls; five errors end the round with zero points.
+  for (let i = 0; i < 5; i++) {
+    const statement = await frame.locator('#gcard .st').innerText();
+    const item = banks.G.find((item) => item.t === statement)!;
+    expect(item).toBeDefined();
+    await frame.locator(item.v ? '.gF' : '.gV').click();
+    await frame
+      .locator('#gfb')
+      .getByRole('button', { name: i === 4 ? 'Ver resultado' : 'Próxima', exact: true })
+      .click();
+  }
+  await expect(frame.locator('.game-livebar')).toContainText('Rodada concluída');
+  const saved = await page.evaluate((key) => localStorage.getItem(key), geopol14.storage.current);
+  expect(JSON.parse(saved!).g.n).toBe(1);
+  expect(JSON.parse(saved!).a).toEqual({});
+  await page.getByRole('link', { name: 'Biblioteca', exact: true }).click();
+  await page.locator('.main-nav').getByRole('button', { name: 'Meu percurso' }).click();
+  await expect(page.locator('.group-material')).toHaveCount(1);
+  await expect(page.locator('.group-material')).toContainText('0% das questões');
+  await expect(
+    page.locator('.group-material').getByRole('link', { name: 'Continuar', exact: true }),
+  ).toBeVisible();
+  await expect(page.locator('.journey-summary')).toContainText('1 material iniciado');
+  await expect(page.locator('.journey-summary')).toContainText(
+    '0 com todas as questões respondidas',
+  );
+  await page.reload();
+  await page.locator('.main-nav').getByRole('button', { name: 'Meu percurso' }).click();
+  await expect(page.locator('.group-material')).toHaveCount(1);
+  expect(await page.evaluate((key) => localStorage.getItem(key), geopol14.storage.current)).toBe(
+    saved,
+  );
+});
+
 test('progresso legado é lido sem contar respostas inválidas', async ({ page }) => {
   await page.addInitScript(
     ({ key }) =>

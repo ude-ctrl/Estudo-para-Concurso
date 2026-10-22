@@ -13,7 +13,7 @@
     "import:v6": "node scripts/build-v6.mjs",
     "build": "npm run import:content && npm run import:v6 && tsc --noEmit && vite build",
     "preview": "vite preview --host 0.0.0.0",
-    "test": "node tests/content.test.mjs && node --experimental-strip-types tests/v6.test.mjs && node tests/canonical.test.mjs && node --experimental-strip-types tests/canonical-runtime.test.mjs",
+    "test": "node tests/content.test.mjs && node --experimental-strip-types tests/storage.test.mjs && node --experimental-strip-types tests/v6.test.mjs && node tests/canonical.test.mjs && node --experimental-strip-types tests/canonical-runtime.test.mjs",
     "test:canonical": "node tests/canonical.test.mjs",
     "test:canonical-media": "node tests/canonical-media.browser.mjs",
     "check:canonical": "node scripts/canonical-content.mjs",
