@@ -29,6 +29,7 @@ import {
 import type { Preferences } from './storage';
 import { canonicalLegacyRoute } from './legacy-routes';
 import { groupLessons, lessonPart } from './library-groups';
+import type { LibraryGroup } from './library-groups';
 import type { Catalog, Category, Lesson, Progress, StudyMode } from './types';
 
 const assetUrl = (path: string) => `${import.meta.env.BASE_URL}${path}`;
@@ -168,12 +169,14 @@ function LessonCard({
 }
 
 function LessonGroup({
+  group,
   lessons,
   progress,
   favorites,
   toggle,
   expanded,
 }: {
+  group: LibraryGroup;
   lessons: Lesson[];
   progress: Map<string, Progress>;
   favorites: string[];
@@ -181,16 +184,19 @@ function LessonGroup({
   expanded: boolean;
 }) {
   return (
-    <article className="lesson-card lesson-group category-5" aria-labelledby="bncc-group-title">
+    <article
+      className={`lesson-card lesson-group category-${categories.indexOf(group.category)}`}
+      aria-labelledby={`${group.id}-group-title`}
+    >
       <div className="card-top">
         <span className="topic-label">TEMA REUNIDO</span>
         <span className="group-count">
           {lessons.length} {lessons.length === 1 ? 'material' : 'materiais'}
         </span>
       </div>
-      <div className="card-category">Educação</div>
-      <h3 id="bncc-group-title">BNCC e Ensino de Geografia</h3>
-      <p className="group-description">Da estrutura do currículo à prática em sala de aula.</p>
+      <div className="card-category">{group.category}</div>
+      <h3 id={`${group.id}-group-title`}>{group.title}</h3>
+      <p className="group-description">{group.description}</p>
       <p className="part-description">
         Cada material mantém suas atividades, favoritos e progresso.
       </p>
@@ -802,9 +808,10 @@ export default function App() {
                 {filtered.length ? (
                   <div className="lesson-grid">
                     {entries.map((entry) =>
-                      entry.grouped ? (
+                      entry.group ? (
                         <LessonGroup
                           key={entry.id}
+                          group={entry.group}
                           lessons={entry.lessons}
                           progress={progress}
                           favorites={preferences.favorites}
