@@ -1,5 +1,7 @@
 # Missão Geografia
 
+**Meu percurso:** partidas de Game concluídas também identificam um material como iniciado, inclusive quando o estudo se limitou ao Game. Os registros antigos são reconhecidos sem regravação; o percentual continua representando somente as questões de estudo respondidas.
+
 **Organização da biblioteca:** “BNCC e Ensino de Geografia” aparece em uma única entrada, com os materiais “BNCC: estrutura e progressão curricular” e “Ensino de Geografia: aplicação em sala de aula”. “Geopolítica, Globalização e Ordem Mundial” também reúne os temas 14 e 15, com as partes “Fundamentos, globalização e ordem mundial” e “Dinâmicas contemporâneas, tecnologia e recursos estratégicos”. Os 26 materiais continuam disponíveis em 24 temas; conteúdo, endereços antigos, favoritos, chaves de progresso e exportação são preservados. Esta correção de navegação não depende da migração dos demais módulos para V6.
 
 **Integração atual — Cartografia canônica `1.0.0`:** a plataforma usa as três bases revisadas e aprovadas por auditoria delegada ao Codex, preservando os textos de `0.1.2`. [Integração, progresso e limites](MissaoAprovacaoGeo/V6_ISSUE13_INTEGRACAO_CANONICA_CARTOGRAFIA.md) · [Relatório de testes](MissaoAprovacaoGeo/V6_ISSUE13_TESTES_INTEGRACAO_CARTOGRAFIA.md). O usuário autorizou incorporar esta versão à `main` e publicá-la; o fluxo abaixo publica após a validação dessa branch. Os relatos seguintes preservam o estado das rodadas anteriores.
