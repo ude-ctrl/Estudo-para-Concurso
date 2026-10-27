@@ -1,0 +1,33 @@
+{
+  "images": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Mercator-proj.png",
+      "hidden": true,
+      "display": "block",
+      "rect": {
+        "width": 314,
+        "height": 32.828125
+      },
+      "complete": true,
+      "naturalWidth": 0,
+      "visibility": "visible"
+    },
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Gall-peters.png",
+      "hidden": true,
+      "display": "block",
+      "rect": {
+        "width": 314,
+        "height": 32.828125
+      },
+      "complete": true,
+      "naturalWidth": 0,
+      "visibility": "visible"
+    }
+  ],
+  "fallbacks": [
+    "Imagem externa indisponível. Mapa-múndi em projeção Mercator Consulte a descrição e a fonte deste recurso.",
+    "Imagem externa indisponível. Mapa-múndi em projeção Gall-Peters Consulte a descrição e a fonte deste recurso."
+  ],
+  "errors": []
+}

@@ -1,0 +1,28 @@
+
+> missao-aprovacao-geografia@0.1.0 build
+> npm run import:content && npm run import:v6 && tsc --noEmit && vite build
+
+
+> missao-aprovacao-geografia@0.1.0 import:content
+> node scripts/import-content.mjs
+
+Importação íntegra: 31 fontes preservadas; 26 materiais ativos com revisões versionadas; 4 fontes de Cartografia somente no arquivo de auditoria.
+
+> missao-aprovacao-geografia@0.1.0 import:v6
+> node scripts/build-v6.mjs
+
+{"stages":50,"questions":161,"legacyQuestions":125,"authored":36,"cards":120,"legacyCards":151,"game":256,"legacyGame":302,"recalls":39,"canonicalRecalls":39,"writing":6}
+vite v6.4.4 building for production...
+transforming...
+✓ 1602 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/biblioteca.html                     0.74 kB │ gzip:  0.44 kB
+dist/index.html                          0.98 kB │ gzip:  0.54 kB
+dist/v6.html                             0.98 kB │ gzip:  0.54 kB
+dist/assets/portal-DK8TN25i.css         19.50 kB │ gzip:  5.08 kB
+dist/assets/main-VOxYawnG.css           38.00 kB │ gzip:  8.51 kB
+dist/assets/portal-mx16Uwu3.js          26.57 kB │ gzip:  8.73 kB
+dist/assets/main-CWwm2WoY.js           129.45 kB │ gzip: 40.28 kB
+dist/assets/legacy-routes-C9LWSb9Z.js  228.57 kB │ gzip: 71.00 kB
+✓ built in 18.43s

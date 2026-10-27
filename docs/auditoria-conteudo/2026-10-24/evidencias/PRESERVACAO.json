@@ -1,0 +1,154 @@
+{
+  "base": "a40a3c33c7a5b7f20750316fe694331c1a214b61",
+  "head": "a40a3c33c7a5b7f20750316fe694331c1a214b61",
+  "branch": "auditoria-conteudo-integral",
+  "tracked_diff_from_base": [],
+  "sources_checked": 34,
+  "sources_unchanged": 34,
+  "materials": 29,
+  "inventory_totals": {
+    "etapas_ou_missoes": 492,
+    "questoes": 1321,
+    "flashcards": 1414,
+    "game_vf": 2856,
+    "recalls": 435
+  },
+  "sources": [
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Auditoria_Mestra_18_Temas.html",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_02_Cartografia_I_MATRIZ_OFICIAL_V2_6.html",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_03_Cartografia_II_MATRIZ_OFICIAL_V2_6.html",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_03_Cartografia_II_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_04_Climatologia_MATRIZ_OFICIAL_V2_6.html",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_05_Tectonica_e_Relevo_MATRIZ_OFICIAL_V2_6.html",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_06_Solos_e_Erosao_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_07_Hidrologia_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_08_Biomas_e_Dominios_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_09_Ambiente_e_Energia_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_10_Populacao_e_Povos_Tradicionais_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_11_Geografia_Urbana.html",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_12_Geografia_Agraria.html",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_13_Industria_Economia_e_Redes.html",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_14_Geopolitica_Globalizacao_e_Ordem_Mundial.html",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_15_Amazonia_Natureza_Territorio_e_Desenvolvimento.html",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_16_Geografia_do_Brasil_e_do_Para.html",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_17_Amazonia_Natureza_e_Sistemas_Ambientais_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_17_Cartografia_Geotecnologias_e_Representacao_do_Espaco.html",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_18_Amazonia_Formacao_Territorial_e_Redes_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_18_BNCC_e_Ensino_de_Geografia.html",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_19_Amazonia_Conflitos_e_Desenvolvimento_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_20_Para_Territorio_Populacao_e_Regionalizacao_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_21_Para_Economia_Infraestrutura_e_Ambiente_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_22_BNCC_e_Ensino_de_Geografia_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_23_Legislacao_e_Fundamentos_da_Educacao_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_24_Fundamentos_Pedagogicos_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_25_Lingua_Portuguesa_FGV_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_26_Raciocinio_Logico_FGV_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_27_Atualidades_do_Para_e_Sociedade_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+      "unchanged_from_base": true
+    }
+  ]
+}

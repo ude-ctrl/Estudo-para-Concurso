@@ -1,0 +1,34 @@
+[WebServer] (node:1938) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 18 tests using 2 workers
+
+(node:1946) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:1947) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 [github-pages] › tests/browser/editorial.spec.ts:70:1 › desigualdades aparecem completas no enunciado, opções e feedback pelo teclado (6.3s)
+  ✓   1 [root] › tests/browser/editorial.spec.ts:70:1 › desigualdades aparecem completas no enunciado, opções e feedback pelo teclado (6.5s)
+  ✓   3 [github-pages] › tests/browser/editorial.spec.ts:89:1 › Venn explica o erro que produz 40 e a dupla contagem que produz 35 (8.5s)
+  ✓   4 [root] › tests/browser/editorial.spec.ts:89:1 › Venn explica o erro que produz 40 e a dupla contagem que produz 35 (10.3s)
+  ✓   5 [github-pages] › tests/browser/editorial.spec.ts:110:1 › Agricultura Familiar identifica o critério indevidamente usado no caso e explica cada escolha (4.6s)
+  ✓   6 [root] › tests/browser/editorial.spec.ts:110:1 › Agricultura Familiar identifica o critério indevidamente usado no caso e explica cada escolha (5.5s)
+  ✓   7 [github-pages] › tests/browser/editorial.spec.ts:140:3 › revisão de T26 preserva respostas, flashcards, jogos e XP após recarga (16.5s)
+  ✓   8 [root] › tests/browser/editorial.spec.ts:140:3 › revisão de T26 preserva respostas, flashcards, jogos e XP após recarga (19.2s)
+  ✓   9 [github-pages] › tests/browser/editorial.spec.ts:140:3 › revisão de T12 preserva respostas, flashcards, jogos e XP após recarga (8.9s)
+  ✓  10 [root] › tests/browser/editorial.spec.ts:140:3 › revisão de T12 preserva respostas, flashcards, jogos e XP após recarga (6.2s)
+  ✓  11 [github-pages] › tests/browser/editorial.spec.ts:166:1 › V/F explica a base de porcentagens sucessivas e retira somente o erro respondido (5.9s)
+  ✓  12 [root] › tests/browser/editorial.spec.ts:166:1 › V/F explica a base de porcentagens sucessivas e retira somente o erro respondido (5.2s)
+  ✓  13 [github-pages] › tests/browser/editorial.spec.ts:191:1 › ABCD usa a mesma justificativa explicativa sem depender da posição sorteada (6.0s)
+  ✓  14 [root] › tests/browser/editorial.spec.ts:191:1 › ABCD usa a mesma justificativa explicativa sem depender da posição sorteada (6.1s)
+  ✓  15 [github-pages] › tests/browser/editorial.spec.ts:207:1 › jogos de sequências e ordem trazem os dados necessários quando sorteados sozinhos (9.4s)
+  ✓  16 [root] › tests/browser/editorial.spec.ts:207:1 › jogos de sequências e ordem trazem os dados necessários quando sorteados sozinhos (8.6s)
+  ✓  17 [github-pages] › tests/browser/editorial.spec.ts:242:1 › Português apresenta a frase-base e explica o pressuposto no próprio jogo (5.5s)
+  ✓  18 [root] › tests/browser/editorial.spec.ts:242:1 › Português apresenta a frase-base e explica o pressuposto no próprio jogo (5.1s)
+
+  18 passed (1.3m)
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

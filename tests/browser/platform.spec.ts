@@ -349,6 +349,14 @@ test('exportação contém uma cópia identificada do progresso', async ({ page 
   expect(backup.schemaVersion).toBe(1);
   expect(backup.preferences.favorites).toContain(t01.id);
   expect(backup.sources).toHaveLength(30);
+  for (const lesson of catalog.lessons.filter((item) => item.editorialVersions?.length)) {
+    expect(backup.sources.find((source: { id: string }) => source.id === lesson.id)).toMatchObject({
+      sourceHash: lesson.sourceHash,
+      contentVersion: lesson.contentVersion,
+      editorialVersions: lesson.editorialVersions,
+      storage: lesson.storage,
+    });
+  }
 });
 
 test('todas as páginas originais e dados são servidos no caminho publicado', async ({

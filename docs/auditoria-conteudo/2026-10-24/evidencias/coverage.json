@@ -1,0 +1,208 @@
+{
+  "commit": "a40a3c33c7a5b7f20750316fe694331c1a214b61",
+  "materials": [
+    {
+      "id": "lesson-ff1de1c07eb3",
+      "title": "Fundamentos, conceitos e autores",
+      "file": "01-lesson-ff1de1c07eb3.txt",
+      "records": 196,
+      "manualRead": true
+    },
+    {
+      "id": "lesson-92668ec707af",
+      "title": "Climatologia",
+      "file": "04-lesson-92668ec707af.txt",
+      "records": 215,
+      "manualRead": true
+    },
+    {
+      "id": "lesson-9da955b3d0d0",
+      "title": "Tectônica e Relevo",
+      "file": "05-lesson-9da955b3d0d0.txt",
+      "records": 219,
+      "manualRead": true
+    },
+    {
+      "id": "lesson-e2df0f560c07",
+      "title": "Solos e Erosão",
+      "file": "06-lesson-e2df0f560c07.txt",
+      "records": 227,
+      "manualRead": true
+    },
+    {
+      "id": "lesson-6f9db59907c2",
+      "title": "Hidrologia",
+      "file": "07-lesson-6f9db59907c2.txt",
+      "records": 227,
+      "manualRead": true
+    },
+    {
+      "id": "lesson-56d4ecb84c7c",
+      "title": "Biomas e Domínios",
+      "file": "08-lesson-56d4ecb84c7c.txt",
+      "records": 231,
+      "manualRead": true
+    },
+    {
+      "id": "lesson-73b67d870448",
+      "title": "Ambiente e Energia",
+      "file": "09-lesson-73b67d870448.txt",
+      "records": 243,
+      "manualRead": true
+    },
+    {
+      "id": "lesson-9348bc9d516d",
+      "title": "População e Povos Tradicionais",
+      "file": "10-lesson-9348bc9d516d.txt",
+      "records": 223,
+      "manualRead": true
+    },
+    {
+      "id": "lesson-62f55b40b9d2",
+      "title": "Geografia Urbana",
+      "file": "11-lesson-62f55b40b9d2.txt",
+      "records": 223,
+      "manualRead": true
+    },
+    {
+      "id": "lesson-529cc23823f6",
+      "title": "Geografia Agrária",
+      "file": "12-lesson-529cc23823f6.txt",
+      "records": 223,
+      "manualRead": true
+    },
+    {
+      "id": "lesson-a77b5ab66734",
+      "title": "Indústria, Economia e Redes",
+      "file": "13-lesson-a77b5ab66734.txt",
+      "records": 223,
+      "manualRead": true
+    },
+    {
+      "id": "lesson-96894ebe9dba",
+      "title": "Geopolítica, Globalização e Ordem Mundial",
+      "file": "14-lesson-96894ebe9dba.txt",
+      "records": 222,
+      "manualRead": true
+    },
+    {
+      "id": "lesson-445e32dc5a8d",
+      "title": "Geopolítica II",
+      "file": "15-lesson-445e32dc5a8d.txt",
+      "records": 243,
+      "manualRead": true
+    },
+    {
+      "id": "lesson-6de5f5c9ab86",
+      "title": "Brasil e Regionalização",
+      "file": "16-lesson-6de5f5c9ab86.txt",
+      "records": 243,
+      "manualRead": true
+    },
+    {
+      "id": "lesson-17ac614f6079",
+      "title": "Amazônia: Natureza e Sistemas Ambientais",
+      "file": "17-lesson-17ac614f6079.txt",
+      "records": 243,
+      "manualRead": true
+    },
+    {
+      "id": "lesson-6cf2740c2663",
+      "title": "Amazônia: Formação Territorial e Redes",
+      "file": "18-lesson-6cf2740c2663.txt",
+      "records": 243,
+      "manualRead": true
+    },
+    {
+      "id": "lesson-fa532170310d",
+      "title": "BNCC e Ensino de Geografia",
+      "file": "18-lesson-fa532170310d.txt",
+      "records": 224,
+      "manualRead": true
+    },
+    {
+      "id": "lesson-ff44e525ee7e",
+      "title": "Amazônia: Conflitos e Desenvolvimento",
+      "file": "19-lesson-ff44e525ee7e.txt",
+      "records": 243,
+      "manualRead": true
+    },
+    {
+      "id": "lesson-7d8a7f83d637",
+      "title": "Pará: Território, População e Regionalização",
+      "file": "20-lesson-7d8a7f83d637.txt",
+      "records": 243,
+      "manualRead": true
+    },
+    {
+      "id": "lesson-ffcb6167eb3e",
+      "title": "Pará: Economia, Infraestrutura e Ambiente",
+      "file": "21-lesson-ffcb6167eb3e.txt",
+      "records": 243,
+      "manualRead": true
+    },
+    {
+      "id": "lesson-73811adb3a6b",
+      "title": "BNCC e Ensino de Geografia",
+      "file": "22-lesson-73811adb3a6b.txt",
+      "records": 243,
+      "manualRead": true
+    },
+    {
+      "id": "lesson-5c4795a5ce6d",
+      "title": "Legislação e Fundamentos da Educação",
+      "file": "23-lesson-5c4795a5ce6d.txt",
+      "records": 243,
+      "manualRead": true
+    },
+    {
+      "id": "lesson-88e4a3826cb5",
+      "title": "Fundamentos Pedagógicos",
+      "file": "24-lesson-88e4a3826cb5.txt",
+      "records": 243,
+      "manualRead": true
+    },
+    {
+      "id": "lesson-ef2039a82c7f",
+      "title": "Língua Portuguesa FGV",
+      "file": "25-lesson-ef2039a82c7f.txt",
+      "records": 243,
+      "manualRead": true
+    },
+    {
+      "id": "lesson-7ba8b576bbf8",
+      "title": "Raciocínio Lógico FGV",
+      "file": "26-lesson-7ba8b576bbf8.txt",
+      "records": 243,
+      "manualRead": true
+    },
+    {
+      "id": "lesson-84d2660bc7cc",
+      "title": "Atualidades do Pará e Sociedade",
+      "file": "27-lesson-84d2660bc7cc.txt",
+      "records": 243,
+      "manualRead": true
+    }
+  ],
+  "canonical": [
+    {
+      "id": "cartografia-fundamentos",
+      "records": 282,
+      "manualRead": true,
+      "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json"
+    },
+    {
+      "id": "cartografia-representacao",
+      "records": 188,
+      "manualRead": true,
+      "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json"
+    },
+    {
+      "id": "geotecnologias",
+      "records": 235,
+      "manualRead": true,
+      "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json"
+    }
+  ],
+  "findings": []
+}

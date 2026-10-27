@@ -1,0 +1,578 @@
+[
+  {
+    "id": "lesson-ff1de1c07eb3",
+    "title": "SEDUC-PA · Tema 1 · Fundamentos, conceitos e autores · Matriz v2.5",
+    "stages": 11,
+    "orderedFirstOptions": [
+      "Vidal de La Blache",
+      "Ratzel",
+      "Lacoste",
+      "Tuan"
+    ],
+    "rawFirstOptions": [
+      "Vidal de La Blache",
+      "Ratzel",
+      "Lacoste",
+      "Tuan"
+    ],
+    "duplicateIds": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "damaged": [],
+    "errors": []
+  },
+  {
+    "id": "lesson-92668ec707af",
+    "title": "SEDUC-PA · Tema 02 · Climatologia · Matriz Oficial v2.6",
+    "stages": 13,
+    "orderedFirstOptions": [
+      "Sim, porque o clima é o estado atmosférico de um dia.",
+      "Não. Um episódio isolado descreve o tempo; clima exige padrões de longo prazo.",
+      "Sim, desde que a temperatura fique abaixo da média histórica.",
+      "Não, porque clima depende apenas da chuva."
+    ],
+    "rawFirstOptions": [
+      "Sim, porque o clima é o estado atmosférico de um dia.",
+      "Não. Um episódio isolado descreve o tempo; clima exige padrões de longo prazo.",
+      "Sim, desde que a temperatura fique abaixo da média histórica.",
+      "Não, porque clima depende apenas da chuva."
+    ],
+    "duplicateIds": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "damaged": [],
+    "errors": []
+  },
+  {
+    "id": "lesson-9da955b3d0d0",
+    "title": "SEDUC-PA · Tema 03 · Tectônica e Relevo · Matriz Oficial v2.6",
+    "stages": 14,
+    "orderedFirstOptions": [
+      "Sim. Crosta e placa tectônica são sinônimos.",
+      "Não. As placas são porções rígidas da litosfera, formada pela crosta e pela parte superior rígida do manto.",
+      "Sim, porque o manto inteiro é líquido.",
+      "Não, porque as placas pertencem apenas à astenosfera."
+    ],
+    "rawFirstOptions": [
+      "Sim. Crosta e placa tectônica são sinônimos.",
+      "Não. As placas são porções rígidas da litosfera, formada pela crosta e pela parte superior rígida do manto.",
+      "Sim, porque o manto inteiro é líquido.",
+      "Não, porque as placas pertencem apenas à astenosfera."
+    ],
+    "duplicateIds": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "damaged": [],
+    "errors": []
+  },
+  {
+    "id": "lesson-e2df0f560c07",
+    "title": "SEDUC-PA · Tema 06 · Solos e Erosão · Matriz Oficial v2.6 · Auditada",
+    "stages": 16,
+    "orderedFirstOptions": [
+      "erosão laminar",
+      "voçorocamento",
+      "corrida de massa",
+      "intemperismo químico"
+    ],
+    "rawFirstOptions": [
+      "erosão laminar",
+      "voçorocamento",
+      "corrida de massa",
+      "intemperismo químico"
+    ],
+    "duplicateIds": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "damaged": [],
+    "errors": []
+  },
+  {
+    "id": "lesson-6f9db59907c2",
+    "title": "SEDUC-PA · Tema 07 · Hidrologia · Matriz Oficial v2.6 · Auditada",
+    "stages": 16,
+    "orderedFirstOptions": [
+      "maior infiltração e menor escoamento superficial",
+      "menor escoamento e maior recarga",
+      "maior escoamento superficial e resposta mais rápida da drenagem",
+      "nenhuma alteração hidrológica"
+    ],
+    "rawFirstOptions": [
+      "maior infiltração e menor escoamento superficial",
+      "menor escoamento e maior recarga",
+      "maior escoamento superficial e resposta mais rápida da drenagem",
+      "nenhuma alteração hidrológica"
+    ],
+    "duplicateIds": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "damaged": [],
+    "errors": []
+  },
+  {
+    "id": "lesson-56d4ecb84c7c",
+    "title": "SEDUC-PA · Tema 08 · Biomas e Domínios · Matriz Oficial v2.6 · Auditada",
+    "stages": 17,
+    "orderedFirstOptions": [
+      "Os dois termos são sinônimos e usam exatamente os mesmos limites",
+      "Bioma e domínio são recortes diferentes; o domínio integra relevo, clima, hidrografia, solos e vegetação",
+      "Domínio morfoclimático considera apenas animais",
+      "Bioma considera apenas limites político-administrativos"
+    ],
+    "rawFirstOptions": [
+      "Os dois termos são sinônimos e usam exatamente os mesmos limites",
+      "Bioma e domínio são recortes diferentes; o domínio integra relevo, clima, hidrografia, solos e vegetação",
+      "Domínio morfoclimático considera apenas animais",
+      "Bioma considera apenas limites político-administrativos"
+    ],
+    "duplicateIds": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "damaged": [],
+    "errors": []
+  },
+  {
+    "id": "lesson-73b67d870448",
+    "title": "SEDUC-PA · Tema 09 · Ambiente e Energia · Matriz Oficial v2.6 · Auditada",
+    "stages": 20,
+    "orderedFirstOptions": [
+      "A matriz energética considera apenas eletricidade; a elétrica inclui combustíveis",
+      "A matriz energética reúne as fontes usadas em todos os usos de energia; a elétrica trata da geração/oferta de eletricidade",
+      "São sinônimos",
+      "A matriz elétrica inclui apenas petróleo"
+    ],
+    "rawFirstOptions": [
+      "A matriz energética considera apenas eletricidade; a elétrica inclui combustíveis",
+      "A matriz energética reúne as fontes usadas em todos os usos de energia; a elétrica trata da geração/oferta de eletricidade",
+      "São sinônimos",
+      "A matriz elétrica inclui apenas petróleo"
+    ],
+    "duplicateIds": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "damaged": [],
+    "errors": []
+  },
+  {
+    "id": "lesson-9348bc9d516d",
+    "title": "SEDUC-PA · Tema 10 · População e Povos Tradicionais · Matriz v2.6",
+    "stages": 18,
+    "orderedFirstOptions": [
+      "rejuvenescimento populacional",
+      "envelhecimento populacional",
+      "explosão da fecundidade",
+      "saldo migratório necessariamente negativo"
+    ],
+    "rawFirstOptions": [
+      "rejuvenescimento populacional",
+      "envelhecimento populacional",
+      "explosão da fecundidade",
+      "saldo migratório necessariamente negativo"
+    ],
+    "duplicateIds": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "damaged": [],
+    "errors": []
+  },
+  {
+    "id": "lesson-62f55b40b9d2",
+    "title": "SEDUC-PA · Tema 11 · Geografia Urbana · Matriz v2.6",
+    "stages": 18,
+    "orderedFirstOptions": [
+      "crescimento urbano e urbanização são conceitos diferentes",
+      "não houve crescimento urbano",
+      "a urbanização necessariamente caiu",
+      "a cidade deixou de integrar uma rede urbana"
+    ],
+    "rawFirstOptions": [
+      "crescimento urbano e urbanização são conceitos diferentes",
+      "não houve crescimento urbano",
+      "a urbanização necessariamente caiu",
+      "a cidade deixou de integrar uma rede urbana"
+    ],
+    "duplicateIds": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "damaged": [],
+    "errors": []
+  },
+  {
+    "id": "lesson-529cc23823f6",
+    "title": "SEDUC-PA · Tema 12 · Geografia Agrária · Matriz v2.6",
+    "stages": 18,
+    "orderedFirstOptions": [
+      "Sim, porque toda pequena propriedade é familiar",
+      "Não; a definição legal combina área, trabalho, renda e direção familiar",
+      "Sim, desde que produza alimentos",
+      "Não; agricultura familiar existe apenas em assentamentos"
+    ],
+    "rawFirstOptions": [
+      "Sim, porque toda pequena propriedade é familiar",
+      "Não; a definição legal combina área, trabalho, renda e direção familiar",
+      "Sim, desde que produza alimentos",
+      "Não; agricultura familiar existe apenas em assentamentos"
+    ],
+    "duplicateIds": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "damaged": [],
+    "errors": []
+  },
+  {
+    "id": "lesson-a77b5ab66734",
+    "title": "SEDUC-PA · Tema 13 · Indústria, Economia e Redes · Matriz v2.6",
+    "stages": 18,
+    "orderedFirstOptions": [
+      "autarquia econômica",
+      "cadeia global de valor e nova divisão internacional do trabalho",
+      "desindustrialização absoluta",
+      "economia exclusivamente local"
+    ],
+    "rawFirstOptions": [
+      "autarquia econômica",
+      "cadeia global de valor e nova divisão internacional do trabalho",
+      "desindustrialização absoluta",
+      "economia exclusivamente local"
+    ],
+    "duplicateIds": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "damaged": [],
+    "errors": []
+  },
+  {
+    "id": "lesson-96894ebe9dba",
+    "title": "SEDUC-PA · Tema 14 · Geopolítica, Globalização e Ordem Mundial · Matriz v2.6",
+    "stages": 18,
+    "orderedFirstOptions": [
+      "soberania é apenas fronteira cartográfica",
+      "poder territorial pode coexistir com dependências econômicas, tecnológicas e informacionais",
+      "o Estado deixou automaticamente de existir",
+      "a globalização eliminou toda hierarquia entre países"
+    ],
+    "rawFirstOptions": [
+      "soberania é apenas fronteira cartográfica",
+      "poder territorial pode coexistir com dependências econômicas, tecnológicas e informacionais",
+      "o Estado deixou automaticamente de existir",
+      "a globalização eliminou toda hierarquia entre países"
+    ],
+    "duplicateIds": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "damaged": [],
+    "errors": []
+  },
+  {
+    "id": "lesson-445e32dc5a8d",
+    "title": "SEDUC-PA · Tema 15 · Geopolítica II · Matriz Oficial v2.6 · Auditada",
+    "stages": 20,
+    "orderedFirstOptions": [
+      "autarquia econômica",
+      "cadeia global de valor",
+      "isolacionismo produtivo",
+      "território-zona"
+    ],
+    "rawFirstOptions": [
+      "autarquia econômica",
+      "cadeia global de valor",
+      "isolacionismo produtivo",
+      "território-zona"
+    ],
+    "duplicateIds": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "damaged": [],
+    "errors": []
+  },
+  {
+    "id": "lesson-6de5f5c9ab86",
+    "title": "SEDUC-PA · Tema 16 · Brasil e Regionalização · Matriz Oficial v2.6 · Auditada",
+    "stages": 20,
+    "orderedFirstOptions": [
+      "Amazônia, Nordeste e Centro-Sul",
+      "Norte, Nordeste, Centro-Oeste, Sudeste e Sul",
+      "Amazônia Legal, Semiárido e Centro-Sul",
+      "Norte, Leste, Sul e Centro"
+    ],
+    "rawFirstOptions": [
+      "Amazônia, Nordeste e Centro-Sul",
+      "Norte, Nordeste, Centro-Oeste, Sudeste e Sul",
+      "Amazônia Legal, Semiárido e Centro-Sul",
+      "Norte, Leste, Sul e Centro"
+    ],
+    "duplicateIds": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "damaged": [],
+    "errors": []
+  },
+  {
+    "id": "lesson-17ac614f6079",
+    "title": "SEDUC-PA · Tema 17 · Amazônia: Natureza e Sistemas Ambientais · Matriz Oficial v2.6 · Auditada",
+    "stages": 20,
+    "orderedFirstOptions": [
+      "Sim, a floresta praticamente não interfere",
+      "Não; a evapotranspiração da floresta recicla parte importante da umidade e interage com a circulação atmosférica",
+      "Sim, porque rios não devolvem água à atmosfera",
+      "Não, porque a chuva amazônica vem apenas dos Andes"
+    ],
+    "rawFirstOptions": [
+      "Sim, a floresta praticamente não interfere",
+      "Não; a evapotranspiração da floresta recicla parte importante da umidade e interage com a circulação atmosférica",
+      "Sim, porque rios não devolvem água à atmosfera",
+      "Não, porque a chuva amazônica vem apenas dos Andes"
+    ],
+    "duplicateIds": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "damaged": [],
+    "errors": []
+  },
+  {
+    "id": "lesson-6cf2740c2663",
+    "title": "SEDUC-PA · Tema 18 · Amazônia: Formação Territorial e Redes · Matriz Oficial v2.6 · Auditada",
+    "stages": 20,
+    "orderedFirstOptions": [
+      "Apenas barreiras naturais",
+      "Eixos de circulação, povoamento, comércio e articulação entre núcleos",
+      "Função irrelevante após o século XVII",
+      "Somente função turística"
+    ],
+    "rawFirstOptions": [
+      "Apenas barreiras naturais",
+      "Eixos de circulação, povoamento, comércio e articulação entre núcleos",
+      "Função irrelevante após o século XVII",
+      "Somente função turística"
+    ],
+    "duplicateIds": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "damaged": [],
+    "errors": []
+  },
+  {
+    "id": "lesson-fa532170310d",
+    "title": "SEDUC-PA · Tema 18 · BNCC e Ensino de Geografia · Matriz v2.6",
+    "stages": 18,
+    "orderedFirstOptions": [
+      "um conteúdo isolado a ser memorizado",
+      "uma aprendizagem essencial expressa por uma ação que o estudante deve mobilizar",
+      "um método de ensino obrigatório para todas as escolas",
+      "uma lista de capítulos do livro didático"
+    ],
+    "rawFirstOptions": [
+      "um conteúdo isolado a ser memorizado",
+      "uma aprendizagem essencial expressa por uma ação que o estudante deve mobilizar",
+      "um método de ensino obrigatório para todas as escolas",
+      "uma lista de capítulos do livro didático"
+    ],
+    "duplicateIds": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "damaged": [],
+    "errors": []
+  },
+  {
+    "id": "lesson-ff44e525ee7e",
+    "title": "SEDUC-PA · Tema 19 · Amazônia: Conflitos e Desenvolvimento · Matriz Oficial v2.6 · Auditada",
+    "stages": 20,
+    "orderedFirstOptions": [
+      "projeto → propaganda → conclusão",
+      "agentes → recurso/território disputado → escala → benefícios → custos → alternativas",
+      "apenas impactos ambientais",
+      "apenas data do projeto"
+    ],
+    "rawFirstOptions": [
+      "projeto → propaganda → conclusão",
+      "agentes → recurso/território disputado → escala → benefícios → custos → alternativas",
+      "apenas impactos ambientais",
+      "apenas data do projeto"
+    ],
+    "duplicateIds": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "damaged": [],
+    "errors": []
+  },
+  {
+    "id": "lesson-7d8a7f83d637",
+    "title": "SEDUC-PA · Tema 20 · Pará: Território, População e Regionalização · Matriz Oficial v2.6 · Auditada",
+    "stages": 20,
+    "orderedFirstOptions": [
+      "124",
+      "144",
+      "167",
+      "217"
+    ],
+    "rawFirstOptions": [
+      "124",
+      "144",
+      "167",
+      "217"
+    ],
+    "duplicateIds": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "damaged": [],
+    "errors": []
+  },
+  {
+    "id": "lesson-ffcb6167eb3e",
+    "title": "SEDUC-PA · Tema 21 · Pará: Economia, Infraestrutura e Ambiente · Matriz Oficial v2.6 · Auditada",
+    "stages": 20,
+    "orderedFirstOptions": [
+      "forte concentração em commodities minerais e agropecuárias",
+      "predomínio de bens eletrônicos",
+      "predomínio de automóveis",
+      "ausência de mineração"
+    ],
+    "rawFirstOptions": [
+      "forte concentração em commodities minerais e agropecuárias",
+      "predomínio de bens eletrônicos",
+      "predomínio de automóveis",
+      "ausência de mineração"
+    ],
+    "duplicateIds": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "damaged": [],
+    "errors": []
+  },
+  {
+    "id": "lesson-73811adb3a6b",
+    "title": "SEDUC-PA · Tema 22 · BNCC e Ensino de Geografia · Matriz Oficial v2.6 · Auditada",
+    "stages": 20,
+    "orderedFirstOptions": [
+      "3",
+      "5",
+      "7",
+      "10"
+    ],
+    "rawFirstOptions": [
+      "3",
+      "5",
+      "7",
+      "10"
+    ],
+    "duplicateIds": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "damaged": [],
+    "errors": []
+  },
+  {
+    "id": "lesson-5c4795a5ce6d",
+    "title": "SEDUC-PA · Tema 23 · Legislação e Fundamentos da Educação · Matriz Oficial v2.6 · Auditada",
+    "stages": 20,
+    "orderedFirstOptions": [
+      "direito apenas de crianças",
+      "direito de todos e dever do Estado e da família",
+      "dever exclusivo da União",
+      "serviço facultativo"
+    ],
+    "rawFirstOptions": [
+      "direito apenas de crianças",
+      "direito de todos e dever do Estado e da família",
+      "dever exclusivo da União",
+      "serviço facultativo"
+    ],
+    "duplicateIds": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "damaged": [],
+    "errors": []
+  },
+  {
+    "id": "lesson-88e4a3826cb5",
+    "title": "SEDUC-PA · Tema 24 · Fundamentos Pedagógicos · Matriz Oficial v2.6 · Auditada",
+    "stages": 20,
+    "orderedFirstOptions": [
+      "Piaget: estágio sensório-motor",
+      "Vygotsky: zona de desenvolvimento proximal",
+      "Freire: educação bancária",
+      "Wallon: emoção sem cognição"
+    ],
+    "rawFirstOptions": [
+      "Piaget: estágio sensório-motor",
+      "Vygotsky: zona de desenvolvimento proximal",
+      "Freire: educação bancária",
+      "Wallon: emoção sem cognição"
+    ],
+    "duplicateIds": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "damaged": [],
+    "errors": []
+  },
+  {
+    "id": "lesson-ef2039a82c7f",
+    "title": "SEDUC-PA · Tema 25 · Língua Portuguesa FGV · Matriz Oficial v2.6 · Auditada",
+    "stages": 20,
+    "orderedFirstOptions": [
+      "causa",
+      "concessão",
+      "conclusão",
+      "condição"
+    ],
+    "rawFirstOptions": [
+      "causa",
+      "concessão",
+      "conclusão",
+      "condição"
+    ],
+    "duplicateIds": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "damaged": [],
+    "errors": []
+  },
+  {
+    "id": "lesson-7ba8b576bbf8",
+    "title": "SEDUC-PA · Tema 26 · Raciocínio Lógico FGV · Matriz Oficial v2.6 · Auditada",
+    "stages": 20,
+    "orderedFirstOptions": [
+      "R$ 180",
+      "R$ 190",
+      "R$ 210",
+      "R$ 220"
+    ],
+    "rawFirstOptions": [
+      "R$ 180",
+      "R$ 190",
+      "R$ 210",
+      "R$ 220"
+    ],
+    "duplicateIds": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "damaged": [],
+    "logic": {
+      "question": "Se A\nA\nC\nA=C\nnada se conclui"
+    },
+    "game": "Questão 1/1\n❤️❤️❤️❤️❤️\n0 pts\n🔥 x1\nFALSO\nVERDADEIRO\nPERCENTUAIS\n\nAumento de 10% e queda de 10% resultam em 99% do inicial.\n\n← Falso · arraste a carta · Verdadeiro →  |  teclado: F / V\n\n← Falso\nVerdadeiro →\n✓ Correto! +10 pts\n\nA afirmação era VERDADEIRA. Não.\n\nVer resultado",
+    "errors": []
+  },
+  {
+    "id": "lesson-84d2660bc7cc",
+    "title": "SEDUC-PA · Tema 27 · Atualidades do Pará e Sociedade · Matriz Oficial v2.6 · Auditada",
+    "stages": 20,
+    "orderedFirstOptions": [
+      "novembro de 2024",
+      "novembro de 2025",
+      "outubro de 2026",
+      "janeiro de 2026"
+    ],
+    "rawFirstOptions": [
+      "novembro de 2024",
+      "novembro de 2025",
+      "outubro de 2026",
+      "janeiro de 2026"
+    ],
+    "duplicateIds": [],
+    "width": 390,
+    "scrollWidth": 390,
+    "damaged": [],
+    "errors": []
+  }
+]

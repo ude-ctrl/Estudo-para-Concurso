@@ -1,5 +1,7 @@
 # Missão Geografia
 
+**Correções editoriais — lote 1:** a [auditoria dos 29 materiais](docs/auditoria-conteudo/2026-10-24/RELATORIO.md) fundamenta correções de questões de Lógica e Agricultura Familiar e de 122 justificativas dos jogos. As [revisões versionadas](revisoes-conteudo/README.md) são aplicadas às cópias usadas pelo site durante a build; os 31 HTMLs históricos continuam intactos. IDs, gabaritos, ordem das alternativas e chaves de progresso são preservados. [Escopo, testes e limites do lote](docs/correcoes-conteudo/2026-10-26-lote1.md).
+
 **Meu percurso:** partidas de Game concluídas também identificam um material como iniciado, inclusive quando o estudo se limitou ao Game. Os registros antigos são reconhecidos sem regravação; o percentual continua representando somente as questões de estudo respondidas.
 
 **Organização da biblioteca:** “BNCC e Ensino de Geografia” aparece em uma única entrada, com os materiais “BNCC: estrutura e progressão curricular” e “Ensino de Geografia: aplicação em sala de aula”. “Geopolítica, Globalização e Ordem Mundial” também reúne os temas 14 e 15, com as partes “Fundamentos, globalização e ordem mundial” e “Dinâmicas contemporâneas, tecnologia e recursos estratégicos”. Os 26 materiais continuam disponíveis em 24 temas; conteúdo, endereços antigos, favoritos, chaves de progresso e exportação são preservados. Esta correção de navegação não depende da migração dos demais módulos para V6.
@@ -53,7 +55,7 @@ npm run preview
 
 ## Conteúdo preservado
 
-Os 31 arquivos em `MissaoAprovacaoGeo/` continuam sendo os originais. Nenhum texto, questão, alternativa, explicação, imagem ou banco pedagógico foi reescrito.
+Os 31 arquivos em `MissaoAprovacaoGeo/` continuam sendo os originais. As correções aprovadas para implementação ficam em `revisoes-conteudo/`, com valor anterior, valor revisado e motivo. Apenas as cópias geradas para o site e seus bancos JSON recebem essas correções; as bases canônicas de Cartografia seguem seu fluxo próprio.
 
 O acervo contém 30 páginas de estudo e uma auditoria: 542 etapas, 1.327 questões cadastradas, 1.494 flashcards, 3.000 itens de game e 452 comandos de evocação. O diagnóstico é reapresentado no pós-teste e não é contado novamente.
 
@@ -63,10 +65,11 @@ O acervo contém 30 páginas de estudo e uma auditoria: 542 etapas, 1.327 quest�
 - extrai dados literais de `PRE`, `B`, `CH`, `C`, `G`, `X`, incluindo as atribuições adicionais de evocação;
 - preserva o conteúdo estático e os suplementos de revisão, discursiva e prática docente;
 - identifica cada arquivo separadamente por um ID e registra o hash da versão;
-- gera o catálogo, os dados estruturados e cópias byte a byte dos HTMLs;
+- gera catálogo, dados estruturados e páginas para o site, aplicando somente as revisões declaradas;
+- mantém as páginas sem revisão byte a byte iguais e identifica separadamente o hash histórico e a versão publicada;
 - mantém todas as variantes dos temas 03, 17 e 18.
 
-Os testes comparam os hashes e as contagens com o commit auditado `f245ca9f663d437bbda0fd3b6c774f76497363d9`. Uma mudança editorial futura exige uma nova versão e atualização explícita das referências de integridade.
+Os testes comparam os hashes históricos e as contagens com o commit auditado `f245ca9f663d437bbda0fd3b6c774f76497363d9`. Também verificam que as páginas e os bancos gerados diferem do original exclusivamente nos campos revisados. Uma mudança editorial exige registro explícito; os hashes históricos não são atualizados para ocultar diferenças.
 
 ## Progresso
 
@@ -80,7 +83,7 @@ O armazenamento pertence ao navegador e à origem do site. Dados de arquivos abe
 
 ## Migração gradual
 
-O leitor integrado abre os HTMLs preservados em um iframe de mesma origem. A aplicação organiza o acesso e acompanha o progresso; o motor pedagógico interno ainda é o existente. Esse limite mantém todo o material disponível enquanto a extração estruturada é validada.
+O leitor integrado abre as páginas geradas em um iframe de mesma origem. A aplicação organiza o acesso e acompanha o progresso; o motor pedagógico interno ainda é o existente, com correções pontuais declaradas. A revisão do conteúdo antigo não depende da migração para a V6.
 
 As limitações previamente auditadas nas páginas continuam presentes: reinício de missão com comando inválido, rascunhos não persistidos, callback de game que pode acessar uma rodada encerrada e estado legado sem validação estrutural. As duas versões de Cartografia II ainda compartilham a chave `seducpa_t3_carto2_v26`; sua separação precisa de uma migração versionada do motor e do progresso.
 
@@ -118,9 +121,10 @@ O endereço esperado é `https://ude-ctrl.github.io/Estudo-para-Concurso/`. A di
 ```text
 MissaoAprovacaoGeo/       HTMLs originais preservados
 scripts/                 Importador de conteúdo
+revisoes-conteudo/        Correções editoriais declaradas, com antes/depois
 src/                     Biblioteca, leitor e progresso
 public/content/          Catálogo e bancos gerados
-public/legacy/           Cópias integrais geradas
+public/legacy/           Páginas geradas com as revisões declaradas
 tests/fixtures/          Integridade e contagens da auditoria
 tests/browser/           Validação dos fluxos no Chromium
 .github/workflows/       Verificação e publicação após validação da main

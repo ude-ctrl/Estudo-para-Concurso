@@ -1,0 +1,174 @@
+
+> missao-aprovacao-geografia@0.1.0 test
+> node tests/content.test.mjs && node --experimental-strip-types tests/storage.test.mjs && node --experimental-strip-types tests/v6.test.mjs && node tests/canonical.test.mjs && node --experimental-strip-types tests/canonical-runtime.test.mjs
+
+Importação íntegra: 31 fontes preservadas; 26 materiais ativos com revisões versionadas; 4 fontes de Cartografia somente no arquivo de auditoria.
+✔ os 31 HTMLs históricos permanecem byte a byte iguais; somente cópias com revisão mudam (117.943603ms)
+✔ contagens de cada página coincidem com a auditoria independente (0.626754ms)
+✔ evocação, suplementos, fontes e estruturas completas sobrevivem à extração (42.12361ms)
+✔ fontes de Cartografia ficam apenas no arquivo de auditoria, com IDs e chaves preservados (0.293981ms)
+✔ importador recusa executar expressões de código dentro dos dados (1.435374ms)
+✔ conteúdo publicado difere do histórico exclusivamente nos campos editoriais revisados (1705.047638ms)
+✔ revisão interrompe a importação diante de fonte divergente, caminho proibido ou duplicata (73.546792ms)
+✔ texto editorial com delimitador HTML permanece dado literal, sem fechar o script (39.247626ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1993.033068
+✔ partidas salvas dos 26 materiais iniciam o percurso sem aumentar questões ou flashcards conhecidos (2.190572ms)
+✔ abrir game ou possuir contador inválido não inicia o percurso (0.470985ms)
+✔ partidas na chave antiga são lidas sem migrar ou sobrescrever o armazenamento (3.286024ms)
+✔ o game não altera a contagem das questões de estudo respondidas (3.280995ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 24.512969
+✔ contrato: exatamente as três unidades e as 17 missões oficiais do piloto (4.43153ms)
+✔ as três fontes conservam bytes, 50 etapas, 125 questões, 150 cards, 300 V/F e 39 recalls (411.549168ms)
+✔ todo registro tem destino canônico, ID de origem e hash verificável; contexto também é preservado (51.436156ms)
+✔ 125 gabaritos, alternativas, feedbacks e papéis históricos preservados sem conversão silenciosa (4.37789ms)
+✔ fusão semântica reduz C/G e conserva todas as formulações e justificativas (9.341262ms)
+✔ suplementos e 6 procedências discursivas preservados; fonte secundária estritamente limitada (1.590095ms)
+✔ IDs únicos, referências válidas e nenhum enunciado/alternativa duplicado exato (4.109552ms)
+✔ 36 itens novos, 12 por unidade, A–E, letras balanceadas e revisão humana pendente (2.000772ms)
+✔ conferência independente dos cálculos autorais e dos dados das figuras (1.764283ms)
+✔ HTML publicado não executa mecanismos legados nem produz IDs duplicados (33.45716ms)
+✔ agenda: intervalos iniciais e avaliações atrasadas seguem a política declarada (0.968153ms)
+✔ retentativa precoce não empurra o vencimento para um futuro artificial (0.173824ms)
+✔ fila vencida finita tem precedência sobre cartões novos (20.71015ms)
+✔ XP: abrir/ler/virar não premia e repetir acerto imediato não multiplica pontos (7.05702ms)
+✔ revisão vencida concede uma recompensa; repetir Fácil não faz farming (0.593168ms)
+✔ erro imediato não resolve; depois de intervalo, acerto objetivo resolve (2.023954ms)
+✔ falsa sensação de domínio reabre dificuldade e antecipa cartões relacionados (0.371575ms)
+✔ domínio fica sem número até haver estudo, diversidade, cobertura e retenção (2.794147ms)
+✔ prova: sem IDs repetidos, alternativas estáveis, letras equilibradas, novidade e diversidade (9.069398ms)
+✔ estoque insuficiente bloqueia perfil oficial e prova maior que banco (1.040289ms)
+✔ migração preserva bruto, é idempotente, não cria XP/domínio e não altera fontes (4.127412ms)
+✔ índices T03 ambíguos e T17 v25 não são interpretados como evidência (1.486159ms)
+✔ cópias corrompidas e esquema estranho são rejeitados; estado válido volta integral (5.055035ms)
+✔ registro congelado mantém identidades separadas das revisões editoriais (7.039616ms)
+✔ guias introdutórios encaminham questões ao conceito cobrado e todos os novos conceitos têm cartão (0.862801ms)
+✔ motor genérico monta as 60 posições do blueprint sem migrar disciplinas do piloto (2.24799ms)
+✔ erro só atinge domínio após intervalo, outro item e revisões consistentes (0.659669ms)
+✔ primeira revalidação de cartão legado usa intervalo inicial e não presume revisão vencida (0.264053ms)
+✔ cada Errei retorna uma vez na sessão; fila não cresce indefinidamente (2.281792ms)
+✔ redundância numérica histórica está sinalizada, sem alterar o gabarito válido (0.522619ms)
+✔ restauração rejeita históricos internos defeituosos e chaves que alterariam protótipos (0.329315ms)
+✔ persistência preserva bruto corrompido e mantém rascunhos em falha de quota (1.65613ms)
+✔ transações leem revisão recente e caderno global preserva outros módulos (1.088684ms)
+✔ restauração preserva cópia anterior e rejeita arquivo defeituoso antes de substituir (0.765081ms)
+✔ marcos: navegação e leitura sem recuperação não geram celebração nem XP (1.018412ms)
+✔ marcos: unidade requer todas as explicações e recuperação por missão, sem fabricar domínio (2.679807ms)
+✔ marcos: Chefão requer rodada completa da unidade, pelo menos 80% e não repete conquista (3.140872ms)
+✔ marcos: revisões só ficam em dia quando os vencidos reais terminam; importados não bastam (1.864552ms)
+✔ marcos: sete dias exigem prática significativa e não acrescentam pontos (0.596493ms)
+✔ marcos: erro convertido exige recuperação já validada pelo motor (2.926134ms)
+✔ marcos: backups anteriores permanecem válidos e marcos inválidos são rejeitados (0.675035ms)
+✔ B1: provas equilibradas não têm ciclo periódico nem três letras iguais em sequência (110.360929ms)
+✔ B2: Difícil é recuperação com esforço, intervalo curto, sem criar ou reabrir erro (1.242018ms)
+✔ C1: dias civis em UTC−3 e calendário com mudança de offset não perdem a sequência (6.232465ms)
+✔ UX: a camada canônica troca só a embalagem editorial e mantém originais integrais (5.684048ms)
+✔ restaurar backup anterior não mantém marcos ou sessão ausentes da cópia (0.51903ms)
+✔ P1: compatibilidade exige todos os IDs no destino, tipo e banco solicitado (0.430187ms)
+✔ P1: retomada conserva banco opcional e aceita backups anteriores sem inventar banco (4.171301ms)
+✔ sensorial: preferências opcionais mantêm backups antigos; valores e resumos inválidos são rejeitados (7.366244ms)
+✔ sensorial: percurso distingue leitura, recuperação e pendências sem fabricar domínio ou bloquear consulta (3.309616ms)
+✔ sensorial: resumo contabiliza somente XP real da rodada e não incorpora atividade paralela (3.025072ms)
+✔ sensorial: revisões devidas entram no balanço; virar, repetir cedo e preferências não rendem XP (2.245406ms)
+✔ sensorial: eventos comuns não são conquistas; repetição imediata e recarga não repetem efeitos (1.890106ms)
+✔ sensorial: expedição exige todas as missões com recuperação e os três Chefões, sem XP novo (13.00451ms)
+✔ sensorial: nível é somente XP e melhor sequência preserva intervalos civis e retomadas (1.293075ms)
+✔ sensorial: prova, discursiva e defesa em andamento mantêm o modo silencioso (3.213023ms)
+✔ sensorial: áudio é lazy, opcional, curto, limitado e interrompido ao sair ou mudar preferências (9.324628ms)
+✔ sensorial: liberação de áudio pendente não toca depois de cancelamento e falhas não quebram o estudo (1.031621ms)
+ℹ tests 58
+ℹ suites 0
+ℹ pass 58
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 812.212516
+✔ catálogo mantém os 28 IDs oficiais e somente as três candidatas deste lote (61.495332ms)
+✔ três unidades canônicas validam e preservam o inventário das candidatas iniciais (865.632866ms)
+✔ reconstrução recupera exatamente o banco original, incluindo variantes e contexto (115.518654ms)
+✔ aliases entre unidades acompanham o destino final e mantêm a missão de origem (23.40977ms)
+✔ dados visuais, precisão UTM e prática preservam o suporte antes escondido na interface (0.993497ms)
+✔ candidatas e conteúdo apenas aprovado com ressalvas são recusados para uso operacional (72.283188ms)
+✔ trocar somente o status não contorna os achados impeditivos (24.99204ms)
+✔ aprovação futura exige todos os critérios, recursos e itens revisados (461.713736ms)
+✔ alteração editorial após o parecer invalida o digest mesmo com hashes locais recalculados (59.99452ms)
+✔ fonte parcial, dado vencido e data de verificação futura impedem promoção (205.871961ms)
+✔ mutação de texto ou perda de variante é detectada sem depender das contagens (16.096922ms)
+✔ gabarito inexistente e falta do visual são recusados mesmo em snapshot recalculado (51.412303ms)
+✔ originais, inventário e matriz Premium não podem ser substituídos por registros incompletos (49.971632ms)
+✔ reconstrução não ignora recursos extras nem referências divergentes (27.45198ms)
+✔ as 12 propostas de vínculo e as cinco famílias permanecem explícitas e não aplicadas (1.239714ms)
+✔ leitura funciona com somente o pacote de base, sem HTMLs, importadores ou banco ativo (730.782225ms)
+✔ IDs e versões de caminho inválidos são recusados antes de acessar arquivos (0.228766ms)
+✔ pacote de outra unidade ou versão é recusado mesmo sob um caminho registrado (40.000578ms)
+✔ nova candidata não substitui a versão aprovada nem exige reabrir o HTML legado (649.320544ms)
+✔ 0.1.1 continua íntegra quando o catálogo evolui e mantém todos os recursos e procedências (685.205619ms)
+✔ revisão recusa diferença não declarada, valor anterior falso e pacote pai alterado (80.5581ms)
+✔ mesmo uma revisão declarada não permite perder recursos, mudar gabarito ou alterar procedência (202.484515ms)
+✔ as 12 associações são corrigidas na candidata sem apagar as propostas e valores iniciais (2.712353ms)
+✔ distrator GMS tem identidade nova, valores distintos e não remapeia respostas antigas (52.774621ms)
+✔ cinco questões legadas recebem feedbacks específicos mantendo enunciados e respostas corretas (1.580066ms)
+✔ dez níveis são reavaliados e cinco itens saem de Elite sem inflar dificuldade ou alterar questões (57.792071ms)
+✔ cinco famílias vinculam dez questões sem contá-las como novidade independente (103.59547ms)
+✔ perfil mantém números e SVG e explicita esquema sem escala; par Landsat acompanha g10 (105.504555ms)
+✔ fontes parciais têm conferência direta delimitada e o endpoint USGS não recebe verificação inventada (1.422017ms)
+✔ candidatas corrigidas continuam sem aprovação humana, sem consumo operacional e sem falsas provas FGV (42.024366ms)
+✔ 0.1.2 continua íntegra após a promoção e preserva as identidades, alternativas e gabaritos de 0.1.1 (1437.075231ms)
+✔ 44 questões perdem os feedbacks genéricos e 137 distratores recebem explicações individuais (1.763568ms)
+✔ r11 passa para Concurso sem reescrever o item ou inflar o estoque Elite (0.435835ms)
+✔ mapa hipotético tem grade, escala, símbolos e posições coerentes com o SVG e a alternativa textual (68.932482ms)
+✔ mapa obrigatório é autossuficiente e PDF histórico fica complementar sem acesso inventado (108.97013ms)
+✔ mapa rejeita escala incoerente, coordenadas fora do recorte e conteúdo ativo ou sem acesso textual (4.776675ms)
+✔ parecer por IA identifica delegação, cobre os recursos e não permite conteúdo alterado ou autoria humana fictícia (383.35091ms)
+✔ cadeia valida também a revisão intermediária e recusa ciclos antes de carregar o próprio pacote (858.605722ms)
+✔ 1.0.0 aprova por revisão delegada explícita, preservando integralmente os textos de 0.1.2 (791.861462ms)
+✔ revisão delegada recusa decisão por item ausente, autoria humana fictícia e alteração posterior (449.509805ms)
+✔ consumo delegado exige escopo autorizado no catálogo e habilitação explícita (491.093586ms)
+✔ cadeia da canônica continua validada quando existe outra candidata em auditoria (593.857783ms)
+ℹ tests 42
+ℹ suites 0
+ℹ pass 42
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 10012.079042
+✔ banco operacional contém exatamente a base revisada das três unidades e seus suportes (42.774136ms)
+✔ build canônica funciona apenas com os pacotes, sem HTMLs ou importadores legados (2869.899057ms)
+✔ tentativa atual registra versão editorial e alternativa, sem apagar sua identidade de origem (5.020618ms)
+✔ migração conserva agenda, XP, rascunhos, tentativas e cópia exata; não transfere erro a outro conceito (19.441019ms)
+✔ erro misto conserva cópia integral e mantém somente ocorrências compatíveis no caderno ativo (3.571178ms)
+✔ restaurar backup antigo executa a mesma migração, sem novo XP ou perda do histórico (4.533006ms)
+✔ gravação posterior de aba antiga é reconciliada mesmo com o marcador atual presente (3.457019ms)
+✔ migração sem armazenamento mantém dados em memória e permite exportação válida (4.804321ms)
+✔ trocar formulações da mesma família não gera XP imediato nem diversidade independente (5.463839ms)
+✔ evidências antigas de familiares próximos são preservadas e não inflam domínio atual (6.580112ms)
+✔ estimativa aplica a classificação canônica sem reescrever o registro histórico de Elite (1.795152ms)
+✔ família conhecida pelo legado reduz novidade e é ordenada depois das não vistas (44.664498ms)
+✔ prova recusa estoque artificialmente inflado por duas questões da mesma família (22.855359ms)
+✔ recompensa antiga por um membro impede primeiro-acerto duplicado por outro (0.909986ms)
+✔ outro membro da mesma família não satisfaz os dois contextos para erro convertido (3.403026ms)
+✔ prova registra respostas e versões e mantém gabaritos após retomar a sessão (4.665928ms)
+✔ backup recusa versões e histórico editorial malformados sem rejeitar esquema 6 antigo (4.605013ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3144.735743

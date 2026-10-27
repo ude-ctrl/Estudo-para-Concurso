@@ -102,7 +102,13 @@ export function exportProgress(catalog: Catalog, preferences: Preferences): bool
       schemaVersion: 1,
       exportedAt: new Date().toISOString(),
       preferences,
-      sources: sources.map(({ id, sourceHash, storage }) => ({ id, sourceHash, storage })),
+      sources: sources.map((source) => ({
+        id: source.id,
+        sourceHash: source.sourceHash,
+        storage: source.storage,
+        ...('contentVersion' in source ? { contentVersion: source.contentVersion } : {}),
+        ...('editorialVersions' in source ? { editorialVersions: source.editorialVersions } : {}),
+      })),
       legacyStorage,
     };
     const url = URL.createObjectURL(
