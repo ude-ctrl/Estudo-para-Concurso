@@ -1,0 +1,4937 @@
+[
+  {
+    "id": "cartografia-fundamentos",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "UNIDADE",
+    "reviewed": true
+  },
+  {
+    "id": "linguagem-cartografica",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "MISSÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t17-1",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t02-0",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t02-14",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-af03d6ab5d10acbb",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-e67b6f58bf838826",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "orientacao-azimute",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "MISSÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t02-1",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-d7dd8b0b7bba095a",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "coordenadas-gms",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "MISSÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t02-2",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t02-3",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t02-4",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t02-5",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t02-6",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t17-3",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-46da7abd5bab95e9",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-9235b093d76af5dd",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-d0a982e17ba48a68",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-e675d143352085da",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-85768274b53644c7",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "fusos-utc-data",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "MISSÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t02-7",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t02-8",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t02-9",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t17-4",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-07cc8e378fa10cc7",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-77116d32fb7c5779",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-84b97a34606f1664",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-e92eaf6a212cf90f",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "escalas-e-medidas",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "MISSÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t02-10",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t02-11",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t02-12",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t02-13",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t17-2",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-7e54980a1e26ae4a",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-169c1c0662de8397",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-3b941dcda9531574",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-4bb776b2b33a8823",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-b6a208062ed0d279",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "linguagem",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "CONCEITO",
+    "reviewed": true
+  },
+  {
+    "id": "orientacao",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "CONCEITO",
+    "reviewed": true
+  },
+  {
+    "id": "latitude",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "CONCEITO",
+    "reviewed": true
+  },
+  {
+    "id": "longitude",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "CONCEITO",
+    "reviewed": true
+  },
+  {
+    "id": "gms",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "CONCEITO",
+    "reviewed": true
+  },
+  {
+    "id": "fusos",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "CONCEITO",
+    "reviewed": true
+  },
+  {
+    "id": "lid",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "CONCEITO",
+    "reviewed": true
+  },
+  {
+    "id": "escala",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "CONCEITO",
+    "reviewed": true
+  },
+  {
+    "id": "area",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "CONCEITO",
+    "reviewed": true
+  },
+  {
+    "id": "redimensionamento",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "CONCEITO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-4c42e2e9b5d093a7",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-bccdc769d88ccd06",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-ec0e644dde0c49c4",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-eb86fa6c989933cc",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-6bbe67e30a50e258",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-3fb13240602b868b",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-ad3f0074a7e0a8e6",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-f707a05ee2ab642f",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-f1b45304a19a61b8",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-09e47a60c30d70e9",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-190cac3f6985590e",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-3735d553a70c574c",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-ae06798f90e822d3",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-b5a227a4695fa7d0",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-921f6c66f1a18d4a",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-f4785d7c2e276670",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-ce0a056c611ab242",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-62f0416f41438e13",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-9d667a70d08d4a5b",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-5c56c52cdc2d10e5",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-6de40dba724f0055",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-e9cc352d93ffeea6",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-d3b66da76f246248",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-5f0730f3bd5ef3ce",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-ba07a3382fd4f8f0",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-f0b05f778294703e",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-e42ba9b8b341f66f",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-3cf3fe896b79ebba",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-98f180b92edc32a7",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-dd7f8316f5a2a345",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-81d39388e7e83625",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-fc3cb4f05cf4dcd9",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-59a03e4071862572",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-8a27b1529f0b322d",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-56b356298605e196",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-d57efa12d8d469c7",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-4240d9a66446c554",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-fdd24e6701e2ed7d",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-d6c7dfafd8e85899",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-e0928f0d1e78eddd",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-021ea0f23f590e47",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-d7f5c9687a4e3050",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-1a998af4f14615ef",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-190545c170ff650b",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-d29a15811dfcee29",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-b410c9c2bff563a0",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-3685fc1570f91cc0",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-ace8da47b352aa60",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-f01",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-f02",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-f03",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-f04",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-f05",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-f06",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-f07",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-f08",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-f09",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-f10",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-f11",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-f12",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-1a62052bb05ac4e9",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-83c4caf2bb43e393",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-93d24996236a296d",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-24998739fdcea7c8",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-f2ea566b42bb82b2",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-9c8435dadcdf9fd2",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-97afd75672c9cf85",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-09ef19bc422f54ce",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-9c1c33f4ea85faea",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-b90e27597b929e52",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-fc2acbb0cb361ebc",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-f19c47fa085cc450",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-d97b58db4868235c",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-a0ac98aef7f99a79",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-0574b87e229dcbd2",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-9b75b9d33965368d",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-8a133fb6f2bbf056",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-3679b93a5a7ca88e",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-0018a62741df9a30",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-172214be3be2381f",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-2464ec2384417449",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-bd562b162914911a",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-13b3e0ce9cfccd47",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-4b1da1cfa4792536",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-e50dc72fba3d0ba9",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-a259e3963c78ffbb",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-bb3de28c722ddd84",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-7dd4b0996f1edfb1",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-0ff888d3040aa56a",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-38036d7ccea7f3c5",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-672c8d7b38a95cee",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-869542ed56b02537",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-aec1b6c1d97479a5",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-27495ee8ee0b8b3e",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-db4c28df088665d2",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-11c601921484603c",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-d46759a121ca492f",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-e727adbfbe5dd906",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-1b677b52ca36da53",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-907dfafb43439623",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-53743f4123989c38",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-224939a37ec33bc5",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-89c7dbb7a471d625",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-b259e7d848416d58",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-f2cde3495ec4f84b",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-1616f54881f793a7",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-acbd3a75ffc5c3d9",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-f8d30a1fc48e134b",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-96a22658d4b3f1b1",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-4b93fdd80d2bef75",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-c00471e3638581d0",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-427cd9a5f2809c3b",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-34a5c55313f9da5d",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-area-escala",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-61f7eb669037ad2d",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-e9ad9640bb472099",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-b358d6916b0eceab",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-ca1868b05073d9f6",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-0a48342767e0fdfc",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-d68ebd86eaa74c6f",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-9d18f342d4675c7c",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-77462c61c7b078d8",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-e31ccb7c589c4cb6",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-1fe984fa79edd665",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-ead99dee65abcca3",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-8be4ecb276cd2124",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-9e8ea66804b67e14",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-d7c0edb3c626f8ba",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-b23a11a71b1f9d74",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-2baa38807e30ce77",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-71359a3a64a4bcbe",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-72505a931bdb57b5",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-3c31a9517e800bfd",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-5ea0c7b68f1419c6",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-a3b093cf4b780c62",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-4b57cfa2f64a92a6",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-20c7d843185b3d98",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-49ae753b0baff6d4",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-e2c5a4ec652d9c61",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-07e48acf1e540e4a",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-11b5cf319176cb3c",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-cf9ee0f9ba9eeac2",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-190d6b819cf5ba09",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-974de3d2b0c9928d",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-02585271db608288",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-98bb5251b68d7a2e",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-c35c616dff501299",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-ed85f8a4e29b84b6",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-5f14c1fe1dd5d149",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-4de26d6a6d22ba10",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-e81a0569ab4282ff",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-1dac5800f0e84825",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-dbf4f96d27078992",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-2552ea56a33202b6",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-c5bdfa3e13ffe52a",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-de657cb00fe09094",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-c2f9884dc8e635c7",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-75354bb9f5a5067b",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-3d4fa74eb7af396f",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-426e98506e008ad9",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-c10f9075ac617d64",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-f4142bf8e8279bbb",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-747c2b0df9e1325b",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-7594daf0aee1067c",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-1d51e42f2335afbb",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-d155830b8235395e",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-5bd81ef3254a984e",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-d995b22cec4ea4f7",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-56a9fc1bed220792",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-8f51c0c6e35754fe",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-5a158a7b32948444",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-8ff9992864df48be",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-1df14d1ba75a5c42",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-23fc947954fe2160",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-f3201e8453e68dfa",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-16071916f379c255",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-bc27d4e1268592b8",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-e31bf2a236577e82",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-e1880b5ab6c48310",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-a3fc3aca361479f6",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-86f3950ba81892f9",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-c2959cbe7b8f0ad5",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-e5d977ecb0f5cb12",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-747f95dfb9c10f0a",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-aaeb3d6910421d5c",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-f09097e75fc85cdb",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-cffac931fe6eb521",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-b34c8094ca6d1398",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-7f2d8cd01b2f9898",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-ea3913d89e7a301c",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-b27867a15a7c84bd",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-e45e9f4fed9cba11",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-30efc4bccaf92d0d",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-bfaee66f550dd928",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-cc3b15eff7107daf",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-d2de99ab3b0ed9b6",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-3874bfb615e7c8bc",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-5fc030be256a400a",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-05337d0178b5aa11",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-496b03bb0cb32497",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-154fbb33c234d5da",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-f0d2e2ed8f6fe653",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-e1554b941a2fde1e",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-46c8696d588f96bf",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-87c181efd27ddcc7",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-a14b3ac816e2e3d1",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-d24e1f9e376de0fb",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-591cda7c4d9c4b66",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-e1a4b18deedb7578",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-8186eedb3cd81bc6",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-e2512532cc797277",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-ec6dc4885fbd5041",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-21917d1867c75d57",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-2ad33e2a415f1868",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-1b3ad2f4e511e2f7",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-1ddb1ca731a24933",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-13656fb15db22e3f",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-d8f764dd07c5c1f6",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-5844ec835cb912a1",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-2f38dac33da845d7",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-disc-d2563ade4e72b5ed",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "DISCURSIVA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-disc-0827343e57d9d542",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "DISCURSIVA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-supp-ecacec940765a30c",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "SUPLEMENTO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-supp-c04fa1bca8d102a3",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "SUPLEMENTO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-supp-a451913b9e2f73a6",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "SUPLEMENTO",
+    "reviewed": true
+  },
+  {
+    "id": "coordenadas",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "SUPORTE",
+    "reviewed": true
+  },
+  {
+    "id": "mapa-leitura-horizonte",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "SUPORTE",
+    "reviewed": true
+  },
+  {
+    "id": "v6-practice:escala",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "SUPORTE",
+    "reviewed": true
+  },
+  {
+    "id": "media-0",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "SUPORTE",
+    "reviewed": true
+  },
+  {
+    "id": "media-1",
+    "unit": "cartografia-fundamentos",
+    "source": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+    "kind": "SUPORTE",
+    "reviewed": true
+  },
+  {
+    "id": "cartografia-representacao",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "UNIDADE",
+    "reviewed": true
+  },
+  {
+    "id": "projecoes-propriedades",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "MISSÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t03a-0",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t03a-1",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t03a-2",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t03a-3",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t17-5",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-4803dafc8397a392",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-f131983856a8c8e8",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-01395d7fe80bb6e9",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-229487df3565e427",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "mercator-peters-utm",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "MISSÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t03a-4",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t03a-5",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-05b38cc99e01ef31",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-873fc6a4f5747380",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "semiologia-tematica",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "MISSÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t03a-6",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t03a-7",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t17-6",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-fbe07c34d0d4313c",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-66a297f0acf99a18",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "graficos-perfis-relevo",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "MISSÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t03a-16",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t17-7",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t17-8",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-2c0972944d493d1e",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "leitura-critica-integrada",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "MISSÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t03a-15",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-9420882e09b1d47f",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "projecao",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "CONCEITO",
+    "reviewed": true
+  },
+  {
+    "id": "mercator",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "CONCEITO",
+    "reviewed": true
+  },
+  {
+    "id": "utm",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "CONCEITO",
+    "reviewed": true
+  },
+  {
+    "id": "semiologia",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "CONCEITO",
+    "reviewed": true
+  },
+  {
+    "id": "tematico",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "CONCEITO",
+    "reviewed": true
+  },
+  {
+    "id": "graficos",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "CONCEITO",
+    "reviewed": true
+  },
+  {
+    "id": "relevo",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "CONCEITO",
+    "reviewed": true
+  },
+  {
+    "id": "critica",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "CONCEITO",
+    "reviewed": true
+  },
+  {
+    "id": "isolinhas",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "CONCEITO",
+    "reviewed": true
+  },
+  {
+    "id": "magnitude",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "CONCEITO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-64e045fb4b26e2d6",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-84728836d8c8ebdf",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-1dbee982c32f51d7",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-3a34291abb2d039f",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-e52cc07f11d53b50",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-65762df06b571473",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-ed3bdb700e904c0f",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-c4ba8e3f3d32b35f",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-762f32f08ac247a6",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-63e1b68a3cbe4a19",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-a69d6838ee2d00f7",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-256f59fa391b0acb",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-18d2eb7486593c09",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-0f15209cebe78597",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-727e4f2527e000e9",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-46bda0a9e2fd3507",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-771f170f95931252",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-8931f654f8138e36",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-40b0df8d5b8f4ef0",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-87da1e506c318442",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-858941d444561aa4",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-b4b31d4da38fbb30",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-eb3c816d4870d1ad",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-7aeb0c4f82d0daab",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-66fe69ac2bb0401f",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-ef5f6071445f1a5d",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-126d18ee440ea653",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-84781ad41b4c9923",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-a27bb973f3f26aaf",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-10874bf28f51acf9",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-68971e299509e8f1",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-14325d546b21211c",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-8fcd68e822620a2b",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-c73e93b19d41b475",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-49fa6f33e47651ca",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-e7df0ba674fbda9d",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-fd8f5dd339a0d512",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-r01",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-r02",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-r03",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-r04",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-r05",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-r06",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-r07",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-r08",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-r09",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-r10",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-r11",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-r12",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-8981c1b5061b150a",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-6f8f4e5cee19de92",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-9ce10a3e535cba79",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-fd7cfa7c54665cec",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-d36003bad378be00",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-fbd362b2412abec1",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-14f8ea48797d6ede",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-f5d2332d12e32bf0",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-b1f84b290435fa35",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-de7c4c2c0fc9a8d3",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-e58c6a01f5511842",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-0d54e15b5f9bd671",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-b98873abc3a7a6c1",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-4672941e8e822d26",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-57bb876602106779",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-fb5ca4e264b15046",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-1a5ec67fe82eee5a",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-9ba04da0e3bbda70",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-27c9ba5c44060110",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-4b2f8e816ec00bf3",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-0ac8c3a179b50af1",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-39ef2100fe8cfc39",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-0d5c8c4e033c6aec",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-dd89783a5619d84a",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-6841bcc2cc1e9d7a",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-45e319d150a3fa04",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-5814ddd54fe220b5",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-cea8d15217f8b79f",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-948adb96e7ea958d",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-63844a3cd9fb1a32",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-e4f528991e3ab620",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-4745ad7bc643278b",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-dd1c676ea73a9043",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-f62240a19d7c5bce",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-c2dfa51fdc203121",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-bcde0680b25ddb5d",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-04b3eb9d81fa8c6e",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-c5927313e8aa41fd",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-d62fa591a8faa144",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-d57afd805341da4c",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-2b0a3668338a66c3",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-954e7163973757bf",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-efad6051c4edc169",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-5d641f42f2c8c98e",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-5cfda29151e6c8c3",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-a99d14c433139300",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-baaefc531d717c43",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-f340ed7cb6625f55",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-d4682b4f18b82e08",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-40eaaa142af0eafd",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-95ea27e093b758c5",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-cf1a423da48e03b7",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-15d800c0e8a6590a",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-8e8772f1a164ab3a",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-d8d04f2ef74bbef4",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-a5963fcc7aed1c4d",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-1e2835088618abe3",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-4d890aabef231765",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-351332d6e5bd29a1",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-83e23dd514598e5e",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-2f3a7b897226420a",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-10dd3ebc24fa196e",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-cc06e55b4cf27968",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-52a1f52dfb75cfee",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-985e9f9efdcbc388",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-fe636b2062f5ddf3",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-87358f9ba3ea243f",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-1c50349bcc1de16f",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-60d12d797166e7f4",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-0c6805b61d3c6fcf",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-dc532f1a4e551eb5",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-304c8e37c639019b",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-e24020f87a308b39",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-0b7b29ec08bf5520",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-c48184f622f604cc",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-6464f66be484282f",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-afe889be288a60e6",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-cb311e55778ce837",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-c31df44e3eec1790",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-a1b8aeabfb7f6015",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-b5ef42964fd64690",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-a0f553cf92fc2724",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-1bcb0f6312c771d1",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-86ac621684e4a3a2",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-9ca7c1de4edfaeb4",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-da8ec9323ebd20ef",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-97527c1d2984a2a4",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-829964889562d46b",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-af0eb126ac1444d0",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-14b9d4d37beab767",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-ec9e1df43e1e57c2",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-9f212903c19ca3a2",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-disc-representacao-finalidade",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "DISCURSIVA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-disc-representacao-relevo",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "DISCURSIVA",
+    "reviewed": true
+  },
+  {
+    "id": "densidade",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "SUPORTE",
+    "reviewed": true
+  },
+  {
+    "id": "perfil",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "SUPORTE",
+    "reviewed": true
+  },
+  {
+    "id": "v6-note-utm-range",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "SUPORTE",
+    "reviewed": true
+  },
+  {
+    "id": "media-0",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "SUPORTE",
+    "reviewed": true
+  },
+  {
+    "id": "media-1",
+    "unit": "cartografia-representacao",
+    "source": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+    "kind": "SUPORTE",
+    "reviewed": true
+  },
+  {
+    "id": "geotecnologias",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "UNIDADE",
+    "reviewed": true
+  },
+  {
+    "id": "sensores-espectro",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "MISSÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t03a-8",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t17-0",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t17-9",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t17-11",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-9dfb7bafb6d994be",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-ae8383daeef519b8",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-5283b179b986b481",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "resolucoes-indices-classificacao",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "MISSÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t03a-9",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t03a-10",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t17-10",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t17-12",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-7f8de4afd0788726",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-b1ca38c91e844166",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "gnss-referenciais",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "MISSÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t03a-13",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t17-13",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-096c4c4d76193620",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-5958e5324810b4d6",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "sig-modelos-operacoes",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "MISSÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t03a-11",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t03a-12",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t17-14",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-ba69cb823a2267c4",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-d537f209f3f785c8",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "geoprocessamento-dados-digitais",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "MISSÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t17-15",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "amazonia-monitoramento",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "MISSÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t03a-14",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t17-16",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-04d3910594d8d966",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-3992bc5fc2e91332",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "cartografia-escolar",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "MISSÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-theory-t17-17",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "TEORIA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-recall-e069785ddb4209db",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "RECALL",
+    "reviewed": true
+  },
+  {
+    "id": "sensores",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "CONCEITO",
+    "reviewed": true
+  },
+  {
+    "id": "espectro",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "CONCEITO",
+    "reviewed": true
+  },
+  {
+    "id": "resolucoes",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "CONCEITO",
+    "reviewed": true
+  },
+  {
+    "id": "ndvi",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "CONCEITO",
+    "reviewed": true
+  },
+  {
+    "id": "classificacao",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "CONCEITO",
+    "reviewed": true
+  },
+  {
+    "id": "gnss",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "CONCEITO",
+    "reviewed": true
+  },
+  {
+    "id": "datum",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "CONCEITO",
+    "reviewed": true
+  },
+  {
+    "id": "sig",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "CONCEITO",
+    "reviewed": true
+  },
+  {
+    "id": "topologia",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "CONCEITO",
+    "reviewed": true
+  },
+  {
+    "id": "digital",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "CONCEITO",
+    "reviewed": true
+  },
+  {
+    "id": "monitoramento",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "CONCEITO",
+    "reviewed": true
+  },
+  {
+    "id": "ensino",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "CONCEITO",
+    "reviewed": true
+  },
+  {
+    "id": "operacoes-digitais",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "CONCEITO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-fb5599f3e9ad7f41",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-b5782254d12f27da",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-833bebfe438093ed",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-86ce5d2c36ae03ef",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-045511001dd9ef85",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-588346b88674e99e",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-aab58af97c3cfca4",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-76cd267f432fd0a1",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-988d6242c5380fa0",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-c2635f4a7e1dba37",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-0fa0dea95642b75c",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-9128c61e1ed75145",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-4fcee41852d78f7c",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-dcb23160320df481",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-3df001d3a09f53ef",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-c9007e14ce62d664",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-df0accd0b0af1130",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-ee65e05d0b8bce18",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-6c331742e5afd67d",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-0d1e0738f61b9aa7",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-bf862746b8832753",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-55c07d3e920f8178",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-ee3f6ddb1bce6d97",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-9861e84d10d843b5",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-d7c20c077dc81694",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-f6d3380c31b4466d",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-cbff9213c997624c",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-6ee5178c530e3757",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-a5b78f5ee8bc6325",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-d5f971faee0fc87f",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-67c40485ec0361b6",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-586335be47954c67",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-4dc57181021f476d",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-ec38ba5c24fee2e8",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-35d096cea007d390",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-bbbba4531de29989",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-d109a030a0d88278",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-832cbc5273858fd2",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-3c28ce6a0f885125",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fix-2e242804dd71e8fe",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-g01",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-g02",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-g03",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-g04",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-g05",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-g06",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-g07",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-g08",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-g09",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-g10",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-g11",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-q-g12",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "QUESTÃO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-f61450254f596dd8",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-cfd94872edc578b0",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-0c8ef8dc17f69ab8",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-88c95b23e3e4f579",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-b3d0b868173bda0b",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-d50bef6b75429bb7",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-8501285539fa945f",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-1b4469e7d5dd6713",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-2558bc128afd3b48",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-1236457ab54ad1f7",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-161c47f38584431b",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-1508a6c113d41383",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-b78fe8bef595432d",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-3ccc126bd656a327",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-3af0a247b0b82e6b",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-3f13c2eef9617804",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-694ff7c886df3b30",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-1f5f0811a51e506f",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-32befd8f9a5cba65",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-90564584ca2c808c",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-5dceec350dd36af7",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-ad1ddde85b453b9d",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-84bc34ec59268f93",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-8c99c0f6659db961",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-39760f12009303f8",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-51619c5c059cec78",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-2152a66315b206f2",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-fa257ab1e2a2c99e",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-181b9b54085b16c2",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-f95a71f50efa3058",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-1f5006bf3b099a25",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-4c7085a0b6480d42",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-ca72bc63e3b9339d",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-196f0307a9a8fe83",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-fc-0105a009c32792e0",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "FLASHCARD",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-b7164b254d4224f4",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-ce3504b03727c767",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-55a668e5f6afee75",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-41db3127676139ac",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-fcb6ae959f76eed3",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-e39cdfc0ed638d0e",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-71ceb094558cf202",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-8e3a633373d255f3",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-ddc8600cab00b902",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-86ce30180b7e720d",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-233cf62175a817f0",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-222dba70ca28b868",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-1afe88e48c98a211",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-94397d3125c16d8c",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-1a7f165a2208c90c",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-6a91cf792712b37a",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-224089ad86f4c02e",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-faef8667c14ffe05",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-ddf70a2fed96cf9a",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-a0436e5bb812a82a",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-37bef2fc75df7613",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-30e19e907212a0c9",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-21577678a75d5933",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-2178cb15391e2865",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-408ab5399f549cbf",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-f8718cdade2523d6",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-370db00a1021dde8",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-6dd58003de108ec4",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-a9f7cea30918ca51",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-7a8769a5506854b1",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-1945cef120384a29",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-b97b6519b0bee2dc",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-fabcd012c8b758d9",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-f5f4fcf9c6cbafd7",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-5b786afe89983e96",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-83d8820755fe7407",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-150d5dbfdfb939ea",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-679cf061a365e4a4",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-4de03cf40624db64",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-27335e3c8d314195",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-7e698859eaed3851",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-f8819fc2fffc770d",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-f63a579826cf65c5",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-d7179d5ca4482370",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-aee825d1f0380da9",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-9e61bcd66b0806a1",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-cd7d5aa6b613f43d",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-e49b354864d3df0f",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-4c5ea38df0c040fb",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-272efbe11468099b",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-ae9fb66c0dbeae15",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-5ad9fc02585fec31",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-45fe284ea3eb9b76",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-e7660a1406823816",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-3a04a51a6f44e507",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-150ca833894fc1d4",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-c329b4876201a9ed",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-538c673038caf7b1",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-538b3328da7b4d63",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-dc1f993593e42efe",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-4c43df363afb5ce4",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-5740c5c46bbe7281",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-0795c3e594f4d88a",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-5a72d6755f54efd4",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-ca2796d51a1bc478",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-36dbc4a9fe8dcadb",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-42a141225591257f",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-16fe5d4a85123178",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-3d6bdfcb1764feaf",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-c4b9c9ca4ad3a7ae",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-893fad65149bf42a",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-f43351711713daec",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-840f4ece8bc5672a",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-e6a67be09e50e263",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-3da93e2a061aa2ea",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-0976cdb6447a2802",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-683b019eec78f7ea",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-b98e17fe7473abb6",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-851686b9326765e5",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-e2487b550fc3be10",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-92af7043926191dd",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-d11377b3343d9e6e",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-efa412b9333343c1",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-7ab2af0a23583aca",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-4378667fad4000ff",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-e69272db455e09e8",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-ac7336128ccc6be8",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-12669d16f388a9d9",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-vf-9ce6934e75dd7f4b",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "GAME",
+    "reviewed": true
+  },
+  {
+    "id": "v6-disc-ecd0480b1d96b9fe",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "DISCURSIVA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-disc-cebde5648b83ef01",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "DISCURSIVA",
+    "reviewed": true
+  },
+  {
+    "id": "v6-supp-021b99dc7c9e1c80",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "SUPLEMENTO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-supp-4acb6f0b2e79ee29",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "SUPLEMENTO",
+    "reviewed": true
+  },
+  {
+    "id": "v6-supp-8d71ce08ed5883e8",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "SUPLEMENTO",
+    "reviewed": true
+  },
+  {
+    "id": "espectral",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "SUPORTE",
+    "reviewed": true
+  },
+  {
+    "id": "landsat-rio",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "SUPORTE",
+    "reviewed": true
+  },
+  {
+    "id": "media-0",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "SUPORTE",
+    "reviewed": true
+  },
+  {
+    "id": "media-1",
+    "unit": "geotecnologias",
+    "source": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+    "kind": "SUPORTE",
+    "reviewed": true
+  }
+]

@@ -1,0 +1,222 @@
+[
+  {
+    "unit": "cartografia-fundamentos",
+    "width": 390,
+    "errors": [],
+    "studyOverflow": false,
+    "questionOverflow": false,
+    "studyImages": [],
+    "network": [
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Literata:ital,wght@0,400;0,600;0,700;1,400&display=swap",
+        "error": "net::ERR_FAILED"
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Literata:ital,wght@0,400;0,600;0,700;1,400&display=swap",
+        "error": "net::ERR_FAILED"
+      }
+    ],
+    "focus": "feedback incorrect",
+    "fallbacks": 0
+  },
+  {
+    "unit": "cartografia-representacao",
+    "width": 390,
+    "errors": [],
+    "studyOverflow": false,
+    "questionOverflow": false,
+    "studyImages": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Mercator-proj.png",
+        "complete": true,
+        "naturalWidth": 0,
+        "alt": "Mapa-múndi em projeção Mercator"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Gall-peters.png",
+        "complete": true,
+        "naturalWidth": 0,
+        "alt": "Mapa-múndi em projeção Gall-Peters"
+      }
+    ],
+    "network": [
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Literata:ital,wght@0,400;0,600;0,700;1,400&display=swap",
+        "error": "net::ERR_FAILED"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Mercator-proj.png",
+        "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Gall-peters.png",
+        "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Literata:ital,wght@0,400;0,600;0,700;1,400&display=swap",
+        "error": "net::ERR_FAILED"
+      }
+    ],
+    "focus": "feedback correct",
+    "fallbacks": 0
+  },
+  {
+    "unit": "geotecnologias",
+    "width": 390,
+    "errors": [],
+    "studyOverflow": false,
+    "questionOverflow": false,
+    "studyImages": [
+      {
+        "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/88000/88103/rio_oli_1984263.jpg",
+        "complete": true,
+        "naturalWidth": 0,
+        "alt": "Imagem Landsat de Barra da Tijuca em 1984"
+      },
+      {
+        "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/88000/88103/rio_oli_2015268.jpg",
+        "complete": true,
+        "naturalWidth": 0,
+        "alt": "Imagem Landsat de Barra da Tijuca em 2015"
+      }
+    ],
+    "network": [
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Literata:ital,wght@0,400;0,600;0,700;1,400&display=swap",
+        "error": "net::ERR_FAILED"
+      },
+      {
+        "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/88000/88103/rio_oli_1984263.jpg",
+        "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+      },
+      {
+        "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/88000/88103/rio_oli_2015268.jpg",
+        "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Literata:ital,wght@0,400;0,600;0,700;1,400&display=swap",
+        "error": "net::ERR_FAILED"
+      },
+      {
+        "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/88000/88103/rio_oli_1984263.jpg",
+        "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+      },
+      {
+        "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/88000/88103/rio_oli_2015268.jpg",
+        "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+      }
+    ],
+    "focus": "feedback incorrect",
+    "fallbacks": 2
+  },
+  {
+    "unit": "cartografia-fundamentos",
+    "width": 1440,
+    "errors": [],
+    "studyOverflow": false,
+    "questionOverflow": false,
+    "studyImages": [],
+    "network": [
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Literata:ital,wght@0,400;0,600;0,700;1,400&display=swap",
+        "error": "net::ERR_FAILED"
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Literata:ital,wght@0,400;0,600;0,700;1,400&display=swap",
+        "error": "net::ERR_FAILED"
+      }
+    ],
+    "focus": "feedback incorrect",
+    "fallbacks": 0
+  },
+  {
+    "unit": "cartografia-representacao",
+    "width": 1440,
+    "errors": [],
+    "studyOverflow": false,
+    "questionOverflow": false,
+    "studyImages": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Mercator-proj.png",
+        "complete": true,
+        "naturalWidth": 0,
+        "alt": "Mapa-múndi em projeção Mercator"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Gall-peters.png",
+        "complete": true,
+        "naturalWidth": 0,
+        "alt": "Mapa-múndi em projeção Gall-Peters"
+      }
+    ],
+    "network": [
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Literata:ital,wght@0,400;0,600;0,700;1,400&display=swap",
+        "error": "net::ERR_FAILED"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Mercator-proj.png",
+        "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Gall-peters.png",
+        "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Literata:ital,wght@0,400;0,600;0,700;1,400&display=swap",
+        "error": "net::ERR_FAILED"
+      }
+    ],
+    "focus": "feedback correct",
+    "fallbacks": 0
+  },
+  {
+    "unit": "geotecnologias",
+    "width": 1440,
+    "errors": [],
+    "studyOverflow": false,
+    "questionOverflow": false,
+    "studyImages": [
+      {
+        "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/88000/88103/rio_oli_1984263.jpg",
+        "complete": true,
+        "naturalWidth": 0,
+        "alt": "Imagem Landsat de Barra da Tijuca em 1984"
+      },
+      {
+        "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/88000/88103/rio_oli_2015268.jpg",
+        "complete": true,
+        "naturalWidth": 0,
+        "alt": "Imagem Landsat de Barra da Tijuca em 2015"
+      }
+    ],
+    "network": [
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Literata:ital,wght@0,400;0,600;0,700;1,400&display=swap",
+        "error": "net::ERR_FAILED"
+      },
+      {
+        "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/88000/88103/rio_oli_1984263.jpg",
+        "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+      },
+      {
+        "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/88000/88103/rio_oli_2015268.jpg",
+        "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Literata:ital,wght@0,400;0,600;0,700;1,400&display=swap",
+        "error": "net::ERR_FAILED"
+      },
+      {
+        "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/88000/88103/rio_oli_1984263.jpg",
+        "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+      },
+      {
+        "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/88000/88103/rio_oli_2015268.jpg",
+        "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+      }
+    ],
+    "focus": "feedback incorrect",
+    "fallbacks": 2
+  }
+]

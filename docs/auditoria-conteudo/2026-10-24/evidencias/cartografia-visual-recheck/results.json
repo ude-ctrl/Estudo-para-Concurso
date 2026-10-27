@@ -1,0 +1,346 @@
+[
+  {
+    "unit": "cartografia-fundamentos",
+    "section": "v6-theory-t02-14",
+    "question": {
+      "width": 390,
+      "scrollWidth": 390,
+      "feedback": "Uma pista para ajustar o raciocínio\n\nVamos ajustar o raciocínio\n\nB fica ao sul de A e C fica a oeste de A. −5° é mais ao sul que −1°; −52° é mais a oeste que −48°.\n\nSua escolha: B fica a leste de A e C fica ao sul de A.\nB só muda latitude e C só muda longitude: os eixos foram trocados.\n\nParalelos reúnem pontos de mesma latitude; o sinal sul é negativo em coordenadas assinadas.\n\nExemplo: 8°S está ao norte de 25°S: −8 é maior que −25.\n\nComparar alternativas e aprofundar\n\nPróximo passo: Desenhe o Equador e compare a posição, não só o módulo. Rever a explicação.",
+      "focus": "feedback incorrect",
+      "images": [],
+      "fallbacks": 0,
+      "tables": 1
+    },
+    "width": 390,
+    "theme": "dark",
+    "study": {
+      "title": "Linguagem e leitura de mapas",
+      "opened": true,
+      "width": 390,
+      "scrollWidth": 390,
+      "images": [],
+      "svg": [
+        {
+          "width": 286,
+          "height": 415.375
+        }
+      ],
+      "tables": 1,
+      "duplicateIds": 0,
+      "fallbackText": false,
+      "focus": "SUMMARY",
+      "animations": 0
+    },
+    "network": [
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Literata:ital,wght@0,400;0,600;0,700;1,400&display=swap",
+        "error": "net::ERR_FAILED"
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Literata:ital,wght@0,400;0,600;0,700;1,400&display=swap",
+        "error": "net::ERR_FAILED"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "unit": "cartografia-representacao",
+    "section": "v6-theory-t03a-3",
+    "question": {
+      "width": 390,
+      "scrollWidth": 390,
+      "feedback": "FGV Elite superada nesta tentativa\n\nResposta correta\n\nExagero vertical de 5 vezes e declividade média real de 20%. 50.000/10.000=5; a declividade deriva de 40/200 e não da inclinação aparente exagerada.\n\nCurvas próximas concentram o mesmo desnível em menor distância horizontal; declividade percentual = desnível/distância horizontal × 100.\n\nExemplo: Subir 40 m em 200 m horizontais dá 20%, não 20°. No vale, o V das curvas aponta geralmente para montante.\n\nComparar alternativas e aprofundar\n\nPróximo passo: Confira equidistância e escalas horizontal/vertical; distinga distância horizontal da inclinada. Rever a explicação.",
+      "focus": "feedback correct",
+      "images": [],
+      "fallbacks": 0,
+      "tables": 1
+    },
+    "width": 390,
+    "theme": "dark",
+    "study": {
+      "title": "Projeções e propriedades",
+      "opened": true,
+      "width": 390,
+      "scrollWidth": 390,
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Mercator-proj.png",
+          "complete": true,
+          "naturalWidth": 0,
+          "alt": "Mapa-múndi em projeção Mercator"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Gall-peters.png",
+          "complete": true,
+          "naturalWidth": 0,
+          "alt": "Mapa-múndi em projeção Gall-Peters"
+        }
+      ],
+      "svg": [],
+      "tables": 0,
+      "duplicateIds": 0,
+      "fallbackText": true,
+      "focus": "SUMMARY",
+      "animations": 0
+    },
+    "network": [
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Literata:ital,wght@0,400;0,600;0,700;1,400&display=swap",
+        "error": "net::ERR_FAILED"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Mercator-proj.png",
+        "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Gall-peters.png",
+        "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Literata:ital,wght@0,400;0,600;0,700;1,400&display=swap",
+        "error": "net::ERR_FAILED"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "unit": "geotecnologias",
+    "section": "v6-theory-t03a-8",
+    "question": {
+      "width": 390,
+      "scrollWidth": 390,
+      "feedback": "Uma pista para ajustar o raciocínio\n\nVamos ajustar o raciocínio\n\nInterpretar diferenças observáveis após conferir comparabilidade; atribuir causas requer evidências complementares às duas imagens. Data, estação, sensor e processamento condicionam a comparação; a imagem, sozinha, não identifica a causa social da mudança.\n\nSua escolha: Tratar as duas composições como equivalentes em resposta espectral se usarem os mesmos nomes de cores, sem conferir bandas e aquisição.\nAs cores de exibição não garantem as mesmas bandas, respostas espectrais, condições atmosféricas ou sazonais.\n\nSensores ativos emitem energia e medem o retorno; passivos registram energia externa refletida ou emissão natural.\n\nExemplo: Radar de micro-ondas pode operar à noite e atravessar muitas nuvens; óptico refletido depende de iluminação e sofre com nuvens.\n\nComparar alternativas e aprofundar\n\nPróximo passo: Identifique faixa espectral, fonte de energia e condição atmosférica. Rever a explicação.",
+      "focus": "feedback incorrect",
+      "images": [],
+      "fallbacks": 2,
+      "tables": 0
+    },
+    "width": 390,
+    "theme": "dark",
+    "study": {
+      "title": "Sensores e espectro",
+      "opened": true,
+      "width": 390,
+      "scrollWidth": 390,
+      "images": [
+        {
+          "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/88000/88103/rio_oli_1984263.jpg",
+          "complete": true,
+          "naturalWidth": 0,
+          "alt": "Imagem Landsat de Barra da Tijuca em 1984"
+        },
+        {
+          "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/88000/88103/rio_oli_2015268.jpg",
+          "complete": true,
+          "naturalWidth": 0,
+          "alt": "Imagem Landsat de Barra da Tijuca em 2015"
+        }
+      ],
+      "svg": [],
+      "tables": 0,
+      "duplicateIds": 0,
+      "fallbackText": true,
+      "focus": "SUMMARY",
+      "animations": 0
+    },
+    "network": [
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Literata:ital,wght@0,400;0,600;0,700;1,400&display=swap",
+        "error": "net::ERR_FAILED"
+      },
+      {
+        "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/88000/88103/rio_oli_1984263.jpg",
+        "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+      },
+      {
+        "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/88000/88103/rio_oli_2015268.jpg",
+        "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Literata:ital,wght@0,400;0,600;0,700;1,400&display=swap",
+        "error": "net::ERR_FAILED"
+      },
+      {
+        "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/88000/88103/rio_oli_1984263.jpg",
+        "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+      },
+      {
+        "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/88000/88103/rio_oli_2015268.jpg",
+        "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "unit": "cartografia-fundamentos",
+    "section": "v6-theory-t02-14",
+    "question": {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "feedback": "Uma pista para ajustar o raciocínio\n\nVamos ajustar o raciocínio\n\nB fica ao sul de A e C fica a oeste de A. −5° é mais ao sul que −1°; −52° é mais a oeste que −48°.\n\nSua escolha: B fica a leste de A e C fica ao sul de A.\nB só muda latitude e C só muda longitude: os eixos foram trocados.\n\nParalelos reúnem pontos de mesma latitude; o sinal sul é negativo em coordenadas assinadas.\n\nExemplo: 8°S está ao norte de 25°S: −8 é maior que −25.\n\nComparar alternativas e aprofundar\n\nPróximo passo: Desenhe o Equador e compare a posição, não só o módulo. Rever a explicação.",
+      "focus": "feedback incorrect",
+      "images": [],
+      "fallbacks": 0,
+      "tables": 1
+    },
+    "width": 1440,
+    "theme": "light",
+    "study": {
+      "title": "Linguagem e leitura de mapas",
+      "opened": true,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "images": [],
+      "svg": [
+        {
+          "width": 544,
+          "height": 790.09375
+        }
+      ],
+      "tables": 1,
+      "duplicateIds": 0,
+      "fallbackText": false,
+      "focus": "SUMMARY",
+      "animations": 0
+    },
+    "network": [
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Literata:ital,wght@0,400;0,600;0,700;1,400&display=swap",
+        "error": "net::ERR_FAILED"
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Literata:ital,wght@0,400;0,600;0,700;1,400&display=swap",
+        "error": "net::ERR_FAILED"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "unit": "cartografia-representacao",
+    "section": "v6-theory-t03a-3",
+    "question": {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "feedback": "FGV Elite superada nesta tentativa\n\nResposta correta\n\nExagero vertical de 5 vezes e declividade média real de 20%. 50.000/10.000=5; a declividade deriva de 40/200 e não da inclinação aparente exagerada.\n\nCurvas próximas concentram o mesmo desnível em menor distância horizontal; declividade percentual = desnível/distância horizontal × 100.\n\nExemplo: Subir 40 m em 200 m horizontais dá 20%, não 20°. No vale, o V das curvas aponta geralmente para montante.\n\nComparar alternativas e aprofundar\n\nPróximo passo: Confira equidistância e escalas horizontal/vertical; distinga distância horizontal da inclinada. Rever a explicação.",
+      "focus": "feedback correct",
+      "images": [],
+      "fallbacks": 0,
+      "tables": 1
+    },
+    "width": 1440,
+    "theme": "light",
+    "study": {
+      "title": "Projeções e propriedades",
+      "opened": true,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Mercator-proj.png",
+          "complete": true,
+          "naturalWidth": 0,
+          "alt": "Mapa-múndi em projeção Mercator"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Gall-peters.png",
+          "complete": true,
+          "naturalWidth": 0,
+          "alt": "Mapa-múndi em projeção Gall-Peters"
+        }
+      ],
+      "svg": [],
+      "tables": 0,
+      "duplicateIds": 0,
+      "fallbackText": true,
+      "focus": "SUMMARY",
+      "animations": 0
+    },
+    "network": [
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Literata:ital,wght@0,400;0,600;0,700;1,400&display=swap",
+        "error": "net::ERR_FAILED"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Mercator-proj.png",
+        "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Gall-peters.png",
+        "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Literata:ital,wght@0,400;0,600;0,700;1,400&display=swap",
+        "error": "net::ERR_FAILED"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "unit": "geotecnologias",
+    "section": "v6-theory-t03a-8",
+    "question": {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "feedback": "Uma pista para ajustar o raciocínio\n\nVamos ajustar o raciocínio\n\nInterpretar diferenças observáveis após conferir comparabilidade; atribuir causas requer evidências complementares às duas imagens. Data, estação, sensor e processamento condicionam a comparação; a imagem, sozinha, não identifica a causa social da mudança.\n\nSua escolha: Tratar as duas composições como equivalentes em resposta espectral se usarem os mesmos nomes de cores, sem conferir bandas e aquisição.\nAs cores de exibição não garantem as mesmas bandas, respostas espectrais, condições atmosféricas ou sazonais.\n\nSensores ativos emitem energia e medem o retorno; passivos registram energia externa refletida ou emissão natural.\n\nExemplo: Radar de micro-ondas pode operar à noite e atravessar muitas nuvens; óptico refletido depende de iluminação e sofre com nuvens.\n\nComparar alternativas e aprofundar\n\nPróximo passo: Identifique faixa espectral, fonte de energia e condição atmosférica. Rever a explicação.",
+      "focus": "feedback incorrect",
+      "images": [],
+      "fallbacks": 2,
+      "tables": 0
+    },
+    "width": 1440,
+    "theme": "light",
+    "study": {
+      "title": "Sensores e espectro",
+      "opened": true,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "images": [
+        {
+          "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/88000/88103/rio_oli_1984263.jpg",
+          "complete": true,
+          "naturalWidth": 0,
+          "alt": "Imagem Landsat de Barra da Tijuca em 1984"
+        },
+        {
+          "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/88000/88103/rio_oli_2015268.jpg",
+          "complete": true,
+          "naturalWidth": 0,
+          "alt": "Imagem Landsat de Barra da Tijuca em 2015"
+        }
+      ],
+      "svg": [],
+      "tables": 0,
+      "duplicateIds": 0,
+      "fallbackText": true,
+      "focus": "SUMMARY",
+      "animations": 0
+    },
+    "network": [
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Literata:ital,wght@0,400;0,600;0,700;1,400&display=swap",
+        "error": "net::ERR_FAILED"
+      },
+      {
+        "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/88000/88103/rio_oli_1984263.jpg",
+        "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+      },
+      {
+        "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/88000/88103/rio_oli_2015268.jpg",
+        "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+      },
+      {
+        "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Literata:ital,wght@0,400;0,600;0,700;1,400&display=swap",
+        "error": "net::ERR_FAILED"
+      },
+      {
+        "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/88000/88103/rio_oli_1984263.jpg",
+        "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+      },
+      {
+        "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/88000/88103/rio_oli_2015268.jpg",
+        "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+      }
+    ],
+    "errors": []
+  }
+]

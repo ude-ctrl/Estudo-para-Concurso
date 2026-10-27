@@ -1,0 +1,4289 @@
+{
+  "materials": [
+    {
+      "id": "lesson-ff1de1c07eb3",
+      "title": "Fundamentos, conceitos e autores",
+      "counts": {
+        "stages": 11,
+        "stageQuestions": 24,
+        "diagnostic": 3,
+        "boss": 5,
+        "questions": 32,
+        "flashcards": 44,
+        "game": 100,
+        "recall": 4
+      },
+      "answers": {
+        "A": 9,
+        "B": 18,
+        "C": 5,
+        "D": 0,
+        "E": 0
+      },
+      "stageAllA": false,
+      "noOptionFeedback": 3,
+      "generalExplanation": 29
+    },
+    {
+      "id": "lesson-92668ec707af",
+      "title": "Climatologia",
+      "counts": {
+        "stages": 13,
+        "stageQuestions": 26,
+        "diagnostic": 3,
+        "boss": 5,
+        "questions": 34,
+        "flashcards": 50,
+        "game": 100,
+        "recall": 13
+      },
+      "answers": {
+        "A": 10,
+        "B": 23,
+        "C": 1,
+        "D": 0,
+        "E": 0
+      },
+      "stageAllA": false,
+      "noOptionFeedback": 34,
+      "generalExplanation": 34
+    },
+    {
+      "id": "lesson-9da955b3d0d0",
+      "title": "Tectônica e Relevo",
+      "counts": {
+        "stages": 14,
+        "stageQuestions": 28,
+        "diagnostic": 3,
+        "boss": 5,
+        "questions": 36,
+        "flashcards": 50,
+        "game": 100,
+        "recall": 14
+      },
+      "answers": {
+        "A": 6,
+        "B": 24,
+        "C": 6,
+        "D": 0,
+        "E": 0
+      },
+      "stageAllA": false,
+      "noOptionFeedback": 36,
+      "generalExplanation": 36
+    },
+    {
+      "id": "lesson-e2df0f560c07",
+      "title": "Solos e Erosão",
+      "counts": {
+        "stages": 16,
+        "stageQuestions": 32,
+        "diagnostic": 3,
+        "boss": 5,
+        "questions": 40,
+        "flashcards": 50,
+        "game": 100,
+        "recall": 16
+      },
+      "answers": {
+        "A": 15,
+        "B": 23,
+        "C": 2,
+        "D": 0,
+        "E": 0
+      },
+      "stageAllA": false,
+      "noOptionFeedback": 40,
+      "generalExplanation": 40
+    },
+    {
+      "id": "lesson-6f9db59907c2",
+      "title": "Hidrologia",
+      "counts": {
+        "stages": 16,
+        "stageQuestions": 32,
+        "diagnostic": 3,
+        "boss": 5,
+        "questions": 40,
+        "flashcards": 50,
+        "game": 100,
+        "recall": 16
+      },
+      "answers": {
+        "A": 20,
+        "B": 19,
+        "C": 1,
+        "D": 0,
+        "E": 0
+      },
+      "stageAllA": false,
+      "noOptionFeedback": 40,
+      "generalExplanation": 40
+    },
+    {
+      "id": "lesson-56d4ecb84c7c",
+      "title": "Biomas e Domínios",
+      "counts": {
+        "stages": 17,
+        "stageQuestions": 34,
+        "diagnostic": 3,
+        "boss": 5,
+        "questions": 42,
+        "flashcards": 50,
+        "game": 100,
+        "recall": 17
+      },
+      "answers": {
+        "A": 19,
+        "B": 19,
+        "C": 2,
+        "D": 2,
+        "E": 0
+      },
+      "stageAllA": false,
+      "noOptionFeedback": 42,
+      "generalExplanation": 42
+    },
+    {
+      "id": "lesson-73b67d870448",
+      "title": "Ambiente e Energia",
+      "counts": {
+        "stages": 20,
+        "stageQuestions": 40,
+        "diagnostic": 3,
+        "boss": 5,
+        "questions": 48,
+        "flashcards": 50,
+        "game": 100,
+        "recall": 20
+      },
+      "answers": {
+        "A": 8,
+        "B": 32,
+        "C": 6,
+        "D": 2,
+        "E": 0
+      },
+      "stageAllA": false,
+      "noOptionFeedback": 48,
+      "generalExplanation": 48
+    },
+    {
+      "id": "lesson-9348bc9d516d",
+      "title": "População e Povos Tradicionais",
+      "counts": {
+        "stages": 18,
+        "stageQuestions": 36,
+        "diagnostic": 3,
+        "boss": 5,
+        "questions": 44,
+        "flashcards": 50,
+        "game": 100,
+        "recall": 6
+      },
+      "answers": {
+        "A": 9,
+        "B": 30,
+        "C": 5,
+        "D": 0,
+        "E": 0
+      },
+      "stageAllA": false,
+      "noOptionFeedback": 44,
+      "generalExplanation": 44
+    },
+    {
+      "id": "lesson-62f55b40b9d2",
+      "title": "Geografia Urbana",
+      "counts": {
+        "stages": 18,
+        "stageQuestions": 36,
+        "diagnostic": 3,
+        "boss": 5,
+        "questions": 44,
+        "flashcards": 50,
+        "game": 100,
+        "recall": 6
+      },
+      "answers": {
+        "A": 30,
+        "B": 11,
+        "C": 1,
+        "D": 2,
+        "E": 0
+      },
+      "stageAllA": false,
+      "noOptionFeedback": 44,
+      "generalExplanation": 44
+    },
+    {
+      "id": "lesson-529cc23823f6",
+      "title": "Geografia Agrária",
+      "counts": {
+        "stages": 18,
+        "stageQuestions": 36,
+        "diagnostic": 3,
+        "boss": 5,
+        "questions": 44,
+        "flashcards": 50,
+        "game": 100,
+        "recall": 6
+      },
+      "answers": {
+        "A": 14,
+        "B": 25,
+        "C": 4,
+        "D": 1,
+        "E": 0
+      },
+      "stageAllA": false,
+      "noOptionFeedback": 44,
+      "generalExplanation": 44
+    },
+    {
+      "id": "lesson-a77b5ab66734",
+      "title": "Indústria, Economia e Redes",
+      "counts": {
+        "stages": 18,
+        "stageQuestions": 36,
+        "diagnostic": 3,
+        "boss": 5,
+        "questions": 44,
+        "flashcards": 50,
+        "game": 100,
+        "recall": 6
+      },
+      "answers": {
+        "A": 14,
+        "B": 29,
+        "C": 1,
+        "D": 0,
+        "E": 0
+      },
+      "stageAllA": false,
+      "noOptionFeedback": 44,
+      "generalExplanation": 44
+    },
+    {
+      "id": "lesson-96894ebe9dba",
+      "title": "Geopolítica, Globalização e Ordem Mundial",
+      "counts": {
+        "stages": 18,
+        "stageQuestions": 36,
+        "diagnostic": 3,
+        "boss": 5,
+        "questions": 44,
+        "flashcards": 50,
+        "game": 100,
+        "recall": 5
+      },
+      "answers": {
+        "A": 7,
+        "B": 34,
+        "C": 3,
+        "D": 0,
+        "E": 0
+      },
+      "stageAllA": false,
+      "noOptionFeedback": 44,
+      "generalExplanation": 44
+    },
+    {
+      "id": "lesson-445e32dc5a8d",
+      "title": "Geopolítica II",
+      "counts": {
+        "stages": 20,
+        "stageQuestions": 40,
+        "diagnostic": 3,
+        "boss": 5,
+        "questions": 48,
+        "flashcards": 50,
+        "game": 100,
+        "recall": 20
+      },
+      "answers": {
+        "A": 4,
+        "B": 42,
+        "C": 2,
+        "D": 0,
+        "E": 0
+      },
+      "stageAllA": false,
+      "noOptionFeedback": 0,
+      "generalExplanation": 48
+    },
+    {
+      "id": "lesson-6de5f5c9ab86",
+      "title": "Brasil e Regionalização",
+      "counts": {
+        "stages": 20,
+        "stageQuestions": 40,
+        "diagnostic": 3,
+        "boss": 5,
+        "questions": 48,
+        "flashcards": 50,
+        "game": 100,
+        "recall": 20
+      },
+      "answers": {
+        "A": 14,
+        "B": 33,
+        "C": 1,
+        "D": 0,
+        "E": 0
+      },
+      "stageAllA": false,
+      "noOptionFeedback": 0,
+      "generalExplanation": 48
+    },
+    {
+      "id": "lesson-17ac614f6079",
+      "title": "Amazônia: Natureza e Sistemas Ambientais",
+      "counts": {
+        "stages": 20,
+        "stageQuestions": 40,
+        "diagnostic": 3,
+        "boss": 5,
+        "questions": 48,
+        "flashcards": 50,
+        "game": 100,
+        "recall": 20
+      },
+      "answers": {
+        "A": 14,
+        "B": 34,
+        "C": 0,
+        "D": 0,
+        "E": 0
+      },
+      "stageAllA": false,
+      "noOptionFeedback": 0,
+      "generalExplanation": 48
+    },
+    {
+      "id": "lesson-6cf2740c2663",
+      "title": "Amazônia: Formação Territorial e Redes",
+      "counts": {
+        "stages": 20,
+        "stageQuestions": 40,
+        "diagnostic": 3,
+        "boss": 5,
+        "questions": 48,
+        "flashcards": 50,
+        "game": 100,
+        "recall": 20
+      },
+      "answers": {
+        "A": 16,
+        "B": 29,
+        "C": 2,
+        "D": 1,
+        "E": 0
+      },
+      "stageAllA": false,
+      "noOptionFeedback": 0,
+      "generalExplanation": 48
+    },
+    {
+      "id": "lesson-fa532170310d",
+      "title": "BNCC e Ensino de Geografia",
+      "counts": {
+        "stages": 18,
+        "stageQuestions": 36,
+        "diagnostic": 3,
+        "boss": 5,
+        "questions": 44,
+        "flashcards": 50,
+        "game": 100,
+        "recall": 7
+      },
+      "answers": {
+        "A": 11,
+        "B": 29,
+        "C": 3,
+        "D": 1,
+        "E": 0
+      },
+      "stageAllA": false,
+      "noOptionFeedback": 0,
+      "generalExplanation": 44
+    },
+    {
+      "id": "lesson-ff44e525ee7e",
+      "title": "Amazônia: Conflitos e Desenvolvimento",
+      "counts": {
+        "stages": 20,
+        "stageQuestions": 40,
+        "diagnostic": 3,
+        "boss": 5,
+        "questions": 48,
+        "flashcards": 50,
+        "game": 100,
+        "recall": 20
+      },
+      "answers": {
+        "A": 17,
+        "B": 29,
+        "C": 2,
+        "D": 0,
+        "E": 0
+      },
+      "stageAllA": false,
+      "noOptionFeedback": 0,
+      "generalExplanation": 48
+    },
+    {
+      "id": "lesson-7d8a7f83d637",
+      "title": "Pará: Território, População e Regionalização",
+      "counts": {
+        "stages": 20,
+        "stageQuestions": 40,
+        "diagnostic": 3,
+        "boss": 5,
+        "questions": 48,
+        "flashcards": 50,
+        "game": 100,
+        "recall": 20
+      },
+      "answers": {
+        "A": 14,
+        "B": 30,
+        "C": 4,
+        "D": 0,
+        "E": 0
+      },
+      "stageAllA": false,
+      "noOptionFeedback": 0,
+      "generalExplanation": 48
+    },
+    {
+      "id": "lesson-ffcb6167eb3e",
+      "title": "Pará: Economia, Infraestrutura e Ambiente",
+      "counts": {
+        "stages": 20,
+        "stageQuestions": 40,
+        "diagnostic": 3,
+        "boss": 5,
+        "questions": 48,
+        "flashcards": 50,
+        "game": 100,
+        "recall": 20
+      },
+      "answers": {
+        "A": 38,
+        "B": 10,
+        "C": 0,
+        "D": 0,
+        "E": 0
+      },
+      "stageAllA": false,
+      "noOptionFeedback": 0,
+      "generalExplanation": 48
+    },
+    {
+      "id": "lesson-73811adb3a6b",
+      "title": "BNCC e Ensino de Geografia",
+      "counts": {
+        "stages": 20,
+        "stageQuestions": 40,
+        "diagnostic": 3,
+        "boss": 5,
+        "questions": 48,
+        "flashcards": 50,
+        "game": 100,
+        "recall": 20
+      },
+      "answers": {
+        "A": 35,
+        "B": 11,
+        "C": 1,
+        "D": 1,
+        "E": 0
+      },
+      "stageAllA": false,
+      "noOptionFeedback": 0,
+      "generalExplanation": 48
+    },
+    {
+      "id": "lesson-5c4795a5ce6d",
+      "title": "Legislação e Fundamentos da Educação",
+      "counts": {
+        "stages": 20,
+        "stageQuestions": 40,
+        "diagnostic": 3,
+        "boss": 5,
+        "questions": 48,
+        "flashcards": 50,
+        "game": 100,
+        "recall": 20
+      },
+      "answers": {
+        "A": 40,
+        "B": 7,
+        "C": 0,
+        "D": 1,
+        "E": 0
+      },
+      "stageAllA": false,
+      "noOptionFeedback": 0,
+      "generalExplanation": 48
+    },
+    {
+      "id": "lesson-88e4a3826cb5",
+      "title": "Fundamentos Pedagógicos",
+      "counts": {
+        "stages": 20,
+        "stageQuestions": 40,
+        "diagnostic": 3,
+        "boss": 5,
+        "questions": 48,
+        "flashcards": 50,
+        "game": 100,
+        "recall": 20
+      },
+      "answers": {
+        "A": 44,
+        "B": 3,
+        "C": 1,
+        "D": 0,
+        "E": 0
+      },
+      "stageAllA": true,
+      "noOptionFeedback": 0,
+      "generalExplanation": 48
+    },
+    {
+      "id": "lesson-ef2039a82c7f",
+      "title": "Língua Portuguesa FGV",
+      "counts": {
+        "stages": 20,
+        "stageQuestions": 40,
+        "diagnostic": 3,
+        "boss": 5,
+        "questions": 48,
+        "flashcards": 50,
+        "game": 100,
+        "recall": 20
+      },
+      "answers": {
+        "A": 44,
+        "B": 4,
+        "C": 0,
+        "D": 0,
+        "E": 0
+      },
+      "stageAllA": true,
+      "noOptionFeedback": 0,
+      "generalExplanation": 48
+    },
+    {
+      "id": "lesson-7ba8b576bbf8",
+      "title": "Raciocínio Lógico FGV",
+      "counts": {
+        "stages": 20,
+        "stageQuestions": 40,
+        "diagnostic": 3,
+        "boss": 5,
+        "questions": 48,
+        "flashcards": 50,
+        "game": 100,
+        "recall": 20
+      },
+      "answers": {
+        "A": 43,
+        "B": 5,
+        "C": 0,
+        "D": 0,
+        "E": 0
+      },
+      "stageAllA": true,
+      "noOptionFeedback": 0,
+      "generalExplanation": 48
+    },
+    {
+      "id": "lesson-84d2660bc7cc",
+      "title": "Atualidades do Pará e Sociedade",
+      "counts": {
+        "stages": 20,
+        "stageQuestions": 40,
+        "diagnostic": 3,
+        "boss": 5,
+        "questions": 48,
+        "flashcards": 50,
+        "game": 100,
+        "recall": 20
+      },
+      "answers": {
+        "A": 42,
+        "B": 6,
+        "C": 0,
+        "D": 0,
+        "E": 0
+      },
+      "stageAllA": true,
+      "noOptionFeedback": 0,
+      "generalExplanation": 48
+    }
+  ],
+  "invalidKeys": [],
+  "duplicateOptions": [],
+  "damagedText": [
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "b_18_0",
+      "field": "prompt",
+      "raw": "Se A<B e B<C, então:",
+      "rendered": "Se A"
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "b_18_0",
+      "field": "option0",
+      "raw": "A<C",
+      "rendered": "A"
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "b_18_0",
+      "field": "option1",
+      "raw": "C<A",
+      "rendered": "C"
+    }
+  ],
+  "suspectGameFeedback": [
+    {
+      "material": "lesson-445e32dc5a8d",
+      "id": "G_6",
+      "statement": "Cadeias globais de valor distribuem etapas produtivas entre vários países.",
+      "truth": true,
+      "feedback": "É o contrário."
+    },
+    {
+      "material": "lesson-445e32dc5a8d",
+      "id": "G_36",
+      "statement": "Não existe moeda única do BRICS em circulação.",
+      "truth": true,
+      "feedback": "Falso."
+    },
+    {
+      "material": "lesson-445e32dc5a8d",
+      "id": "G_40",
+      "statement": "Área de livre comércio reduz barreiras internas sem exigir tarifa externa comum.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-445e32dc5a8d",
+      "id": "G_42",
+      "statement": "União aduaneira acrescenta tarifa externa comum.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-445e32dc5a8d",
+      "id": "G_44",
+      "statement": "O Mercosul busca união aduaneira, mas possui exceções e imperfeições.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-445e32dc5a8d",
+      "id": "G_46",
+      "statement": "A União Europeia inclui países que não adotam o euro.",
+      "truth": true,
+      "feedback": "Falso."
+    },
+    {
+      "material": "lesson-445e32dc5a8d",
+      "id": "G_48",
+      "statement": "O RCEP é um acordo comercial regional da Ásia-Pacífico.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-445e32dc5a8d",
+      "id": "G_54",
+      "statement": "A transição energética cria novas dependências geopolíticas.",
+      "truth": true,
+      "feedback": "É o contrário."
+    },
+    {
+      "material": "lesson-445e32dc5a8d",
+      "id": "G_70",
+      "statement": "O Tratado da Antártida favorece fins pacíficos e ciência.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-445e32dc5a8d",
+      "id": "G_74",
+      "statement": "O Artigo IV impede que atividades durante o tratado criem novos direitos de soberania.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-445e32dc5a8d",
+      "id": "G_78",
+      "statement": "Afeganistão 2001 e Iraque 2003 tiveram justificativas distintas.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-445e32dc5a8d",
+      "id": "G_84",
+      "statement": "Fluxos digitais dependem de infraestrutura material.",
+      "truth": true,
+      "feedback": "Falso."
+    },
+    {
+      "material": "lesson-445e32dc5a8d",
+      "id": "G_86",
+      "statement": "Fronteiras podem ser abertas para certos fluxos e restritivas para outros.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-445e32dc5a8d",
+      "id": "G_90",
+      "statement": "Soberania tecnológica não exige produzir tudo domesticamente.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-445e32dc5a8d",
+      "id": "G_92",
+      "statement": "Multipolaridade admite vários centros relevantes de poder.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-445e32dc5a8d",
+      "id": "G_94",
+      "statement": "A rivalidade geoeconômica reconfigura redes globais sem necessariamente eliminá-las.",
+      "truth": true,
+      "feedback": "Falso."
+    },
+    {
+      "material": "lesson-445e32dc5a8d",
+      "id": "G_96",
+      "statement": "Decoupling sugere separação mais profunda que de-risking.",
+      "truth": true,
+      "feedback": "É o contrário."
+    },
+    {
+      "material": "lesson-6de5f5c9ab86",
+      "id": "G_96",
+      "statement": "Bacia Amazônica, Bioma Amazônia e Amazônia Legal são recortes distintos.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-17ac614f6079",
+      "id": "G_4",
+      "statement": "Baixa amplitude térmica anual não impede episódios de calor extremo.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-17ac614f6079",
+      "id": "G_30",
+      "statement": "Tributários amazônicos podem atingir picos de cheia em momentos diferentes.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-17ac614f6079",
+      "id": "G_54",
+      "statement": "A Amazônia inclui planícies, planaltos, escudos e áreas sedimentares.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-17ac614f6079",
+      "id": "G_66",
+      "statement": "Parte importante da expansão agrícola pode ocorrer sobre usos agropecuários já consolidados.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-17ac614f6079",
+      "id": "G_76",
+      "statement": "Foco de calor e área queimada são indicadores distintos.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-17ac614f6079",
+      "id": "G_84",
+      "statement": "Limiares de transição amazônica são tema de pesquisa e possuem incertezas.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-17ac614f6079",
+      "id": "G_96",
+      "statement": "Conservação efetiva depende também de gestão, fiscalização e conectividade.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-17ac614f6079",
+      "id": "G_98",
+      "statement": "Florestas secundárias podem recuperar funções ao longo do tempo.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-6cf2740c2663",
+      "id": "G_6",
+      "statement": "A Amazônia possuía territorialidades indígenas antes da colonização.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-6cf2740c2663",
+      "id": "G_56",
+      "statement": "Distância curta pode coexistir com baixa acessibilidade.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-6cf2740c2663",
+      "id": "G_81",
+      "statement": "Cidades só aparecem após toda expansão rural.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-6cf2740c2663",
+      "id": "G_92",
+      "statement": "Mais conexões não significam igualdade territorial.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-ff44e525ee7e",
+      "id": "G_6",
+      "statement": "Mineração industrial e garimpo diferem em escala, técnica e regime jurídico.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-ff44e525ee7e",
+      "id": "G_8",
+      "statement": "Garimpo contemporâneo pode empregar máquinas pesadas e redes complexas.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-ff44e525ee7e",
+      "id": "G_48",
+      "statement": "Expansão agrícola pode ocorrer sobre áreas já convertidas e também gerar pressões indiretas.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-ff44e525ee7e",
+      "id": "G_51",
+      "statement": "A pecuária não possui relação com expansão territorial.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-ff44e525ee7e",
+      "id": "G_54",
+      "statement": "Posse e propriedade são conceitos jurídicos distintos.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-ff44e525ee7e",
+      "id": "G_56",
+      "statement": "Cadastro ambiental não substitui automaticamente título dominial.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-ff44e525ee7e",
+      "id": "G_61",
+      "statement": "Terra indígena deve ser analisada apenas pelo preço do hectare.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-ff44e525ee7e",
+      "id": "G_72",
+      "statement": "Bioeconomia sustentável exige critérios ambientais e sociais.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-ff44e525ee7e",
+      "id": "G_90",
+      "statement": "Mercado regulado e voluntário de carbono têm bases institucionais diferentes.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "G_25",
+      "statement": "Araguaia nunca aparece como RI.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "G_27",
+      "statement": "Baixo Amazonas não aparece na regionalização estadual.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "G_29",
+      "statement": "Carajás é uma Região Hidrográfica Nacional.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "G_31",
+      "statement": "Guajará é uma Unidade da Federação.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "G_33",
+      "statement": "Guamá é uma Região Geográfica nacional.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "G_35",
+      "statement": "Lago de Tucuruí é uma UF.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "G_37",
+      "statement": "Marajó não aparece entre as RIs.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "G_39",
+      "statement": "Rio Caeté é uma RH nacional.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "G_41",
+      "statement": "Rio Capim é uma capital estadual.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "G_43",
+      "statement": "Tapajós é município paraense.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "G_45",
+      "statement": "Tocantins nomeia apenas o estado vizinho.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "G_47",
+      "statement": "Xingu não aparece em regionalizações paraenses.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "G_70",
+      "statement": "Taxa de urbanização e densidade medem fenômenos distintos.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "G_79",
+      "statement": "Costa Atlântica-Nordeste é uma RI.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "G_81",
+      "statement": "Portel-Marajó é uma RH nacional.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "G_83",
+      "statement": "Calha Norte é uma RI oficial.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "G_95",
+      "statement": "As RIs não possuem relação com planejamento estadual.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "G_96",
+      "statement": "Desigualdade regional também aparece em serviços e infraestrutura.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-ffcb6167eb3e",
+      "id": "G_17",
+      "statement": "A EFC transporta exclusivamente minério.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-ffcb6167eb3e",
+      "id": "G_34",
+      "statement": "A agropecuária paraense combina diferentes sistemas produtivos.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-ffcb6167eb3e",
+      "id": "G_37",
+      "statement": "Soja não possui qualquer participação econômica no Pará.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-ffcb6167eb3e",
+      "id": "G_39",
+      "statement": "O Pará não exporta produtos pecuários.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-ffcb6167eb3e",
+      "id": "G_50",
+      "statement": "Potência instalada não é igual à geração efetiva em qualquer momento.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-ffcb6167eb3e",
+      "id": "G_78",
+      "statement": "A expansão da navegação de grande porte no Tocantins ainda envolve obras e estudos.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-ffcb6167eb3e",
+      "id": "G_86",
+      "statement": "Uma cidade pode ser central por serviços mesmo exportando pouco.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-73811adb3a6b",
+      "id": "G_38",
+      "statement": "Lugar pode revelar processos mais amplos.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-73811adb3a6b",
+      "id": "G_42",
+      "statement": "Paisagem pode reunir elementos naturais e sociais.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-73811adb3a6b",
+      "id": "G_45",
+      "statement": "É apenas decorar símbolos.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-73811adb3a6b",
+      "id": "G_68",
+      "statement": "Escala geográfica e cartográfica são diferentes.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-73811adb3a6b",
+      "id": "G_70",
+      "statement": "Norte no topo é convenção frequente, não lei natural.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-73811adb3a6b",
+      "id": "G_72",
+      "statement": "Paisagem inclui marcas sociais, naturais e técnicas.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-73811adb3a6b",
+      "id": "G_89",
+      "statement": "Cotidiano significa abandonar ciência.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-73811adb3a6b",
+      "id": "G_94",
+      "statement": "Uma situação pode articular várias unidades.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "G_26",
+      "statement": "SNE articula cooperação federativa.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "G_45",
+      "statement": "A LDB exige só prova final.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "G_49",
+      "statement": "LDB proíbe recuperação.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "G_53",
+      "statement": "Aluno não pode questionar avaliação.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "G_60",
+      "statement": "BNCC e PPP são distintos.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "G_95",
+      "statement": "PPP é plano individual.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "G_97",
+      "statement": "Currículo dispensa BNCC/DCNs.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "G_99",
+      "statement": "Apostila antiga basta sempre.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-88e4a3826cb5",
+      "id": "G_20",
+      "statement": "Scaffolding é conceito posterior compatível com apoio temporário.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-88e4a3826cb5",
+      "id": "G_33",
+      "statement": "Todo erro prova incapacidade fixa.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-88e4a3826cb5",
+      "id": "G_36",
+      "statement": "Interdisciplinaridade articula saberes preservando especificidades.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-88e4a3826cb5",
+      "id": "G_39",
+      "statement": "PPP é assunto exclusivo do diretor.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-88e4a3826cb5",
+      "id": "G_42",
+      "statement": "Autoridade pedagógica não é sinônimo de autoritarismo.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-88e4a3826cb5",
+      "id": "G_46",
+      "statement": "A atenção é limitada e seletiva.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-88e4a3826cb5",
+      "id": "G_63",
+      "statement": "Autorregulação significa deixar aluno sem orientação.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-88e4a3826cb5",
+      "id": "G_66",
+      "statement": "Inclusão exige acesso, permanência, participação e aprendizagem.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-88e4a3826cb5",
+      "id": "G_85",
+      "statement": "Toda adaptação deve diminuir complexidade.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "G_14",
+      "statement": "Coesão e coerência são distintas.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "G_18",
+      "statement": "Sinônimos podem variar em registro e conotação.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "G_41",
+      "statement": "A grafia isolada define sempre a classe.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "G_45",
+      "statement": "Passiva sempre elimina o agente.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "G_47",
+      "statement": "Negação exige ênclise.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "G_78",
+      "statement": "Adequação de registro depende da situação.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "G_83",
+      "statement": "Mantém sempre formas literais.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "G_86",
+      "statement": "Vocativo não integra sujeito nem predicado.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "G_92",
+      "statement": "Não há crase em 'começou a estudar'.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "G_96",
+      "statement": "'Nem todos' não significa necessariamente 'ninguém'.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "G_98",
+      "statement": "Precisão e adequação valem mais que raridade.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "G_12",
+      "statement": "Aumento de 10% e queda de 10% resultam em 99% do inicial.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "G_37",
+      "statement": "Toda pergunta é proposição lógica.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "G_87",
+      "statement": "Aumento de 10 unidades significa sempre 10%.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "G_93",
+      "statement": "Argumento válido exige premissas factualmente verdadeiras em todo caso.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "G_95",
+      "statement": "Toda sequência exige fórmula quadrática.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "G_99",
+      "statement": "Basta satisfazer a primeira pista.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "G_3",
+      "statement": "Previsão deve ser tratada como fato consumado.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "G_20",
+      "statement": "Investimento urbano não garante distribuição igual.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "G_28",
+      "statement": "DETER e PRODES têm finalidades diferentes.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "G_34",
+      "statement": "VBP não equivale a renda disponível das famílias.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "G_40",
+      "statement": "Rendimento domiciliar per capita não é salário médio.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "G_52",
+      "statement": "Doses recebidas não equivalem automaticamente a cobertura.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "G_59",
+      "statement": "Todo indicador de violência é intercambiável.",
+      "truth": false,
+      "feedback": "Sim."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "G_72",
+      "statement": "Entrega não prova impacto final.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "G_76",
+      "statement": "Educação digital envolve acesso, formação e uso crítico.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "G_82",
+      "statement": "IA com dados pessoais continua sujeita à LGPD.",
+      "truth": true,
+      "feedback": "Não."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "G_96",
+      "statement": "Viralidade não comprova veracidade.",
+      "truth": true,
+      "feedback": "Não."
+    }
+  ],
+  "shortCards": [
+    {
+      "material": "lesson-e2df0f560c07",
+      "id": "C_16",
+      "front": "Quantas ordens há no 1º nível do SiBCS atual?",
+      "back": "13 ordens."
+    },
+    {
+      "material": "lesson-e2df0f560c07",
+      "id": "C_38",
+      "front": "Força motriz dos movimentos de massa?",
+      "back": "Gravidade."
+    },
+    {
+      "material": "lesson-6f9db59907c2",
+      "id": "C_25",
+      "front": "Principal retirada consuntiva no Brasil?",
+      "back": "Irrigação."
+    },
+    {
+      "material": "lesson-56d4ecb84c7c",
+      "id": "C_18",
+      "front": "Único bioma exclusivamente brasileiro?",
+      "back": "Caatinga."
+    },
+    {
+      "material": "lesson-56d4ecb84c7c",
+      "id": "C_36",
+      "front": "Savana no sistema do IBGE associa-se amplamente a quê?",
+      "back": "Cerrado."
+    },
+    {
+      "material": "lesson-56d4ecb84c7c",
+      "id": "C_45",
+      "front": "Bioma predominante no Pará?",
+      "back": "Amazônia."
+    },
+    {
+      "material": "lesson-73b67d870448",
+      "id": "C_32",
+      "front": "Quantos ODS existem?",
+      "back": "17."
+    },
+    {
+      "material": "lesson-62f55b40b9d2",
+      "id": "C_10",
+      "front": "Belém na REGIC 2018?",
+      "back": "Metrópole."
+    },
+    {
+      "material": "lesson-529cc23823f6",
+      "id": "C_32",
+      "front": "Pará: maior rebanho em 2025?",
+      "back": "Bovinos."
+    },
+    {
+      "material": "lesson-445e32dc5a8d",
+      "id": "C_7",
+      "front": "Quando surgiu a Belt and Road Initiative?",
+      "back": "2013."
+    },
+    {
+      "material": "lesson-445e32dc5a8d",
+      "id": "C_17",
+      "front": "Quantos membros o portal oficial brasileiro lista em 2026?",
+      "back": "Onze."
+    },
+    {
+      "material": "lesson-445e32dc5a8d",
+      "id": "C_18",
+      "front": "Existe moeda única do BRICS em circulação?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-445e32dc5a8d",
+      "id": "C_36",
+      "front": "O Protocolo de Madri expira em 2048?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-6de5f5c9ab86",
+      "id": "C_2",
+      "front": "Quando foi elaborada a divisão macrorregional atual?",
+      "back": "1970."
+    },
+    {
+      "material": "lesson-6de5f5c9ab86",
+      "id": "C_15",
+      "front": "Quantos municípios no recorte atual?",
+      "back": "773."
+    },
+    {
+      "material": "lesson-6de5f5c9ab86",
+      "id": "C_26",
+      "front": "Modal de forte peso no Brasil?",
+      "back": "Rodoviário."
+    },
+    {
+      "material": "lesson-6de5f5c9ab86",
+      "id": "C_29",
+      "front": "Região de forte expansão eólica?",
+      "back": "Nordeste."
+    },
+    {
+      "material": "lesson-6de5f5c9ab86",
+      "id": "C_33",
+      "front": "População do Brasil em 2022?",
+      "back": "203.062.512."
+    },
+    {
+      "material": "lesson-6de5f5c9ab86",
+      "id": "C_34",
+      "front": "Região mais populosa em 2022?",
+      "back": "Sudeste."
+    },
+    {
+      "material": "lesson-6de5f5c9ab86",
+      "id": "C_35",
+      "front": "Segunda região mais populosa?",
+      "back": "Nordeste."
+    },
+    {
+      "material": "lesson-6de5f5c9ab86",
+      "id": "C_38",
+      "front": "População estimada em 2025?",
+      "back": "213.421.037."
+    },
+    {
+      "material": "lesson-6de5f5c9ab86",
+      "id": "C_48",
+      "front": "Bacia, bioma e Amazônia Legal são sinônimos?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-17ac614f6079",
+      "id": "C_2",
+      "front": "Baixa amplitude anual elimina extremos?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-17ac614f6079",
+      "id": "C_11",
+      "front": "Quanto do Brasil ocupa a RH Amazônica?",
+      "back": "Cerca de 45%."
+    },
+    {
+      "material": "lesson-17ac614f6079",
+      "id": "C_12",
+      "front": "Quanto da disponibilidade superficial nacional está na RH Amazônica?",
+      "back": "Cerca de 81%."
+    },
+    {
+      "material": "lesson-17ac614f6079",
+      "id": "C_15",
+      "front": "Todos os tributários têm pico simultâneo?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-17ac614f6079",
+      "id": "C_27",
+      "front": "A Amazônia é planície homogênea?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-17ac614f6079",
+      "id": "C_33",
+      "front": "Toda expansão agrícola ocorre sobre floresta recém-desmatada?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-17ac614f6079",
+      "id": "C_37",
+      "front": "Floresta úmida é adaptada a fogo recorrente?",
+      "back": "Em geral, não."
+    },
+    {
+      "material": "lesson-17ac614f6079",
+      "id": "C_38",
+      "front": "Foco de calor = área queimada?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-17ac614f6079",
+      "id": "C_42",
+      "front": "É número exato e universal conhecido?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-17ac614f6079",
+      "id": "C_48",
+      "front": "Área protegida legal garante efetividade sozinha?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-17ac614f6079",
+      "id": "C_49",
+      "front": "Floresta secundária = floresta antiga instantaneamente?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-6cf2740c2663",
+      "id": "C_3",
+      "front": "A Amazônia era vazia antes da colonização?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-6cf2740c2663",
+      "id": "C_4",
+      "front": "Ano de fundação?",
+      "back": "1616."
+    },
+    {
+      "material": "lesson-6cf2740c2663",
+      "id": "C_15",
+      "front": "Ano?",
+      "back": "1953."
+    },
+    {
+      "material": "lesson-6cf2740c2663",
+      "id": "C_17",
+      "front": "Ano?",
+      "back": "1966."
+    },
+    {
+      "material": "lesson-6cf2740c2663",
+      "id": "C_19",
+      "front": "Ano?",
+      "back": "1970."
+    },
+    {
+      "material": "lesson-6cf2740c2663",
+      "id": "C_24",
+      "front": "Conclusão do trecho?",
+      "back": "1976."
+    },
+    {
+      "material": "lesson-6cf2740c2663",
+      "id": "C_28",
+      "front": "É igual a distância?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-6cf2740c2663",
+      "id": "C_31",
+      "front": "Quem produz?",
+      "back": "IBGE."
+    },
+    {
+      "material": "lesson-6cf2740c2663",
+      "id": "C_32",
+      "front": "Belém?",
+      "back": "Metrópole."
+    },
+    {
+      "material": "lesson-6cf2740c2663",
+      "id": "C_33",
+      "front": "Manaus?",
+      "back": "Metrópole."
+    },
+    {
+      "material": "lesson-6cf2740c2663",
+      "id": "C_40",
+      "front": "Cidade pode anteceder fronteira?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-6cf2740c2663",
+      "id": "C_46",
+      "front": "Elimina desigualdade?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-fa532170310d",
+      "id": "C_6",
+      "front": "Quantas competências específicas de Geografia no EF?",
+      "back": "Sete."
+    },
+    {
+      "material": "lesson-fa532170310d",
+      "id": "C_20",
+      "front": "Quantas unidades temáticas?",
+      "back": "Cinco."
+    },
+    {
+      "material": "lesson-fa532170310d",
+      "id": "C_34",
+      "front": "EF06GE01: 06?",
+      "back": "6º ano."
+    },
+    {
+      "material": "lesson-ff44e525ee7e",
+      "id": "C_3",
+      "front": "Mineração industrial e garimpo são iguais?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-ff44e525ee7e",
+      "id": "C_4",
+      "front": "Garimpo é sempre artesanal?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-ff44e525ee7e",
+      "id": "C_19",
+      "front": "Em qual rio?",
+      "back": "Tocantins."
+    },
+    {
+      "material": "lesson-ff44e525ee7e",
+      "id": "C_21",
+      "front": "Em qual rio?",
+      "back": "Xingu."
+    },
+    {
+      "material": "lesson-ff44e525ee7e",
+      "id": "C_24",
+      "front": "Toda expansão causa desmatamento direto?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-ff44e525ee7e",
+      "id": "C_25",
+      "front": "Pode pressionar a fronteira?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-ff44e525ee7e",
+      "id": "C_27",
+      "front": "É igual a propriedade?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-ff44e525ee7e",
+      "id": "C_28",
+      "front": "É título de propriedade?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-ff44e525ee7e",
+      "id": "C_30",
+      "front": "Vai além de valor de mercado?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-ff44e525ee7e",
+      "id": "C_36",
+      "front": "Produto biológico = sustentável automaticamente?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-ff44e525ee7e",
+      "id": "C_45",
+      "front": "Regulado = voluntário?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_0",
+      "front": "Quantos municípios?",
+      "back": "144."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_1",
+      "front": "Capital?",
+      "back": "Belém."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_2",
+      "front": "Código IBGE da UF?",
+      "back": "15."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_4",
+      "front": "Valor no Censo 2022?",
+      "back": "6,52 hab./km²."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_5",
+      "front": "Fundação?",
+      "back": "1616."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_9",
+      "front": "Período?",
+      "back": "1835–1840."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_11",
+      "front": "Quantas?",
+      "back": "12."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_12",
+      "front": "Araguaia é RI?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_13",
+      "front": "Baixo Amazonas é RI?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_14",
+      "front": "Carajás é RI?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_15",
+      "front": "Guajará é RI?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_16",
+      "front": "Guamá é RI?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_17",
+      "front": "Lago de Tucuruí é RI?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_18",
+      "front": "Marajó é RI?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_19",
+      "front": "Rio Caeté é RI?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_20",
+      "front": "Rio Capim é RI?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_21",
+      "front": "Tapajós é RI?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_22",
+      "front": "Tocantins é RI?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_23",
+      "front": "Xingu é RI?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_24",
+      "front": "Belém pertence a qual RI?",
+      "back": "Guajará."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_25",
+      "front": "Marabá pertence a qual RI?",
+      "back": "Carajás."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_27",
+      "front": "Altamira pertence a qual RI?",
+      "back": "Xingu."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_31",
+      "front": "População 2022?",
+      "back": "8.120.131."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_32",
+      "front": "População 2026?",
+      "back": "8.756.324."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_33",
+      "front": "Percentual urbano 2022?",
+      "back": "75,07%."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_34",
+      "front": "Percentual rural 2022?",
+      "back": "24,93%."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_35",
+      "front": "É igual a densidade?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_36",
+      "front": "Quantas alcançam o Pará?",
+      "back": "3."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_38",
+      "front": "Quantas estaduais?",
+      "back": "7."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_39",
+      "front": "Costa Atlântica-Nordeste?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_40",
+      "front": "Portel-Marajó?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_41",
+      "front": "Calha Norte?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_44",
+      "front": "Círio inscrito quando?",
+      "back": "2013."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_47",
+      "front": "PPA usa RIs?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-7d8a7f83d637",
+      "id": "C_48",
+      "front": "É apenas renda?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-ffcb6167eb3e",
+      "id": "C_2",
+      "front": "Crescimento do Pará em 2025?",
+      "back": "4,51%."
+    },
+    {
+      "material": "lesson-ffcb6167eb3e",
+      "id": "C_4",
+      "front": "Atividade dominante?",
+      "back": "Mineração."
+    },
+    {
+      "material": "lesson-ffcb6167eb3e",
+      "id": "C_6",
+      "front": "Extensão ferroviária de referência?",
+      "back": "892 km."
+    },
+    {
+      "material": "lesson-ffcb6167eb3e",
+      "id": "C_8",
+      "front": "Transporta passageiros?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-ffcb6167eb3e",
+      "id": "C_11",
+      "front": "Participação exportadora 2025?",
+      "back": "Cerca de 48%."
+    },
+    {
+      "material": "lesson-ffcb6167eb3e",
+      "id": "C_17",
+      "front": "É homogênea?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-ffcb6167eb3e",
+      "id": "C_18",
+      "front": "Participa das exportações?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-ffcb6167eb3e",
+      "id": "C_19",
+      "front": "Participa das exportações?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-ffcb6167eb3e",
+      "id": "C_21",
+      "front": "Rio?",
+      "back": "Tocantins."
+    },
+    {
+      "material": "lesson-ffcb6167eb3e",
+      "id": "C_22",
+      "front": "Potência?",
+      "back": "8.370 MW."
+    },
+    {
+      "material": "lesson-ffcb6167eb3e",
+      "id": "C_23",
+      "front": "Rio?",
+      "back": "Xingu."
+    },
+    {
+      "material": "lesson-ffcb6167eb3e",
+      "id": "C_24",
+      "front": "Potência?",
+      "back": "11.233 MW."
+    },
+    {
+      "material": "lesson-ffcb6167eb3e",
+      "id": "C_25",
+      "front": "Potência = geração efetiva?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-ffcb6167eb3e",
+      "id": "C_32",
+      "front": "Movimentação 1º sem 2025?",
+      "back": "9,5 milhões t."
+    },
+    {
+      "material": "lesson-ffcb6167eb3e",
+      "id": "C_39",
+      "front": "Hidrovia plenamente concluída?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-ffcb6167eb3e",
+      "id": "C_43",
+      "front": "Depende só de exportação?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-73811adb3a6b",
+      "id": "C_0",
+      "front": "Quantas unidades temáticas?",
+      "back": "5."
+    },
+    {
+      "material": "lesson-73811adb3a6b",
+      "id": "C_6",
+      "front": "Quantos?",
+      "back": "7."
+    },
+    {
+      "material": "lesson-73811adb3a6b",
+      "id": "C_19",
+      "front": "Lugar é limite?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-73811adb3a6b",
+      "id": "C_20",
+      "front": "Objeto didático?",
+      "back": "Paisagem."
+    },
+    {
+      "material": "lesson-73811adb3a6b",
+      "id": "C_21",
+      "front": "É só natural?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-73811adb3a6b",
+      "id": "C_22",
+      "front": "Ler e produzir?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-73811adb3a6b",
+      "id": "C_23",
+      "front": "Visão vertical?",
+      "back": "Importante."
+    },
+    {
+      "material": "lesson-73811adb3a6b",
+      "id": "C_24",
+      "front": "Orientação?",
+      "back": "Importante."
+    },
+    {
+      "material": "lesson-73811adb3a6b",
+      "id": "C_25",
+      "front": "Proporção?",
+      "back": "Importante."
+    },
+    {
+      "material": "lesson-73811adb3a6b",
+      "id": "C_31",
+      "front": "Gerais: quantas?",
+      "back": "10."
+    },
+    {
+      "material": "lesson-73811adb3a6b",
+      "id": "C_34",
+      "front": "Escala geográfica = cartográfica?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-73811adb3a6b",
+      "id": "C_35",
+      "front": "Norte sempre em cima?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-73811adb3a6b",
+      "id": "C_36",
+      "front": "Paisagem = natureza bonita?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-73811adb3a6b",
+      "id": "C_44",
+      "front": "Pode ser ponto de partida?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-73811adb3a6b",
+      "id": "C_47",
+      "front": "Unidades isoladas?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "C_0",
+      "front": "Direito de quem?",
+      "back": "De todos."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "C_3",
+      "front": "Finalidade 2?",
+      "back": "Cidadania."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "C_5",
+      "front": "Acesso e permanência?",
+      "back": "Princípio."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "C_6",
+      "front": "Pluralismo?",
+      "back": "Princípio."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "C_7",
+      "front": "Gestão democrática?",
+      "back": "Princípio."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "C_9",
+      "front": "Faixa?",
+      "back": "4 a 17."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "C_11",
+      "front": "Regime?",
+      "back": "Colaboração."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "C_12",
+      "front": "Lei?",
+      "back": "LC 220/2025."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "C_13",
+      "front": "Extingue sistemas locais?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "C_14",
+      "front": "União?",
+      "back": "18%."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "C_15",
+      "front": "Estados/municípios?",
+      "back": "25%."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "C_16",
+      "front": "Número?",
+      "back": "9.394/1996."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "C_18",
+      "front": "Docente no PPP?",
+      "back": "Participa."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "C_19",
+      "front": "Zelar por quê?",
+      "back": "Aprendizagem."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "C_22",
+      "front": "Contínua/cumulativa?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "C_23",
+      "front": "Qualitativo?",
+      "back": "Prevalece."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "C_24",
+      "front": "Prevista?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "C_25",
+      "front": "Respeito?",
+      "back": "Direito."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "C_26",
+      "front": "Contestar avaliação?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "C_30",
+      "front": "É PPP?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "C_31",
+      "front": "Lei vigente?",
+      "back": "15.388/2026."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "C_32",
+      "front": "Duração?",
+      "back": "10 anos."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "C_33",
+      "front": "Estados/DF?",
+      "back": "Até 12 meses."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "C_34",
+      "front": "Municípios?",
+      "back": "Até 15 meses."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "C_35",
+      "front": "LBI?",
+      "back": "13.146/2015."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "C_36",
+      "front": "Decreto atual?",
+      "back": "12.686/2025."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "C_37",
+      "front": "7.611?",
+      "back": "Revogado."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "C_41",
+      "front": "Lei?",
+      "back": "9.795/1999."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "C_47",
+      "front": "Institucional?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "C_48",
+      "front": "Contextualiza?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-5c4795a5ce6d",
+      "id": "C_49",
+      "front": "Usar texto vigente?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-88e4a3826cb5",
+      "id": "C_6",
+      "front": "Idades dos estágios?",
+      "back": "Aproximadas."
+    },
+    {
+      "material": "lesson-88e4a3826cb5",
+      "id": "C_7",
+      "front": "Mediação?",
+      "back": "Central."
+    },
+    {
+      "material": "lesson-88e4a3826cb5",
+      "id": "C_9",
+      "front": "Linguagem?",
+      "back": "Mediadora."
+    },
+    {
+      "material": "lesson-88e4a3826cb5",
+      "id": "C_10",
+      "front": "Scaffolding foi termo dele?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-88e4a3826cb5",
+      "id": "C_12",
+      "front": "Diálogo?",
+      "back": "Central."
+    },
+    {
+      "material": "lesson-88e4a3826cb5",
+      "id": "C_16",
+      "front": "Erro pode ser evidência?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-88e4a3826cb5",
+      "id": "C_18",
+      "front": "Elimina disciplinas?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-88e4a3826cb5",
+      "id": "C_19",
+      "front": "Trabalho coletivo?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-88e4a3826cb5",
+      "id": "C_21",
+      "front": "Autoridade = autoritarismo?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-88e4a3826cb5",
+      "id": "C_23",
+      "front": "É ilimitada?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-88e4a3826cb5",
+      "id": "C_24",
+      "front": "Memória de trabalho?",
+      "back": "Limitada."
+    },
+    {
+      "material": "lesson-88e4a3826cb5",
+      "id": "C_31",
+      "front": "Pode ser apoiada?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-88e4a3826cb5",
+      "id": "C_33",
+      "front": "Só matrícula?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-88e4a3826cb5",
+      "id": "C_35",
+      "front": "Versão atual usada?",
+      "back": "CAST 3.0/2024."
+    },
+    {
+      "material": "lesson-88e4a3826cb5",
+      "id": "C_38",
+      "front": "Deficiência/TEA?",
+      "back": "Complementar."
+    },
+    {
+      "material": "lesson-88e4a3826cb5",
+      "id": "C_39",
+      "front": "AH/SD?",
+      "back": "Suplementar."
+    },
+    {
+      "material": "lesson-88e4a3826cb5",
+      "id": "C_40",
+      "front": "PPP?",
+      "back": "Deve constar."
+    },
+    {
+      "material": "lesson-88e4a3826cb5",
+      "id": "C_42",
+      "front": "Preserva objetivo?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-88e4a3826cb5",
+      "id": "C_43",
+      "front": "Lei 2026?",
+      "back": "15.436/2026."
+    },
+    {
+      "material": "lesson-88e4a3826cb5",
+      "id": "C_44",
+      "front": "Dupla excepcionalidade?",
+      "back": "Pode ocorrer."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "C_7",
+      "front": "Igual à coesão?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "C_9",
+      "front": "Sinônimos sempre equivalentes?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "C_10",
+      "front": "Antônimos?",
+      "back": "Oposição."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "C_11",
+      "front": "Ratificar?",
+      "back": "Confirmar."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "C_12",
+      "front": "Retificar?",
+      "back": "Corrigir."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "C_18",
+      "front": "Passatempo?",
+      "back": "Composição."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "C_19",
+      "front": "Meio cansada?",
+      "back": "Advérbio."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "C_20",
+      "front": "Contexto importa?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "C_22",
+      "front": "Passiva muda foco?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "C_23",
+      "front": "Negação atrai próclise?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "C_25",
+      "front": "Portanto?",
+      "back": "Conclusão."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "C_26",
+      "front": "Embora?",
+      "back": "Concessão."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "C_28",
+      "front": "Para que?",
+      "back": "Finalidade."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "C_29",
+      "front": "Talvez?",
+      "back": "Possibilidade."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "C_30",
+      "front": "Certamente?",
+      "back": "Alta certeza."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "C_34",
+      "front": "Argumentação?",
+      "back": "Defende tese."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "C_35",
+      "front": "Injunção?",
+      "back": "Orienta ações."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "C_36",
+      "front": "Referencial?",
+      "back": "Informação."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "C_37",
+      "front": "Conativa?",
+      "back": "Destinatário."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "C_38",
+      "front": "Metalinguística?",
+      "back": "Código."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "C_39",
+      "front": "Formal sempre superior?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "C_41",
+      "front": "Indireto exige ajustes?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "C_43",
+      "front": "Vocativo integra sujeito?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "C_45",
+      "front": "Vírgula sujeito-verbo?",
+      "back": "Em regra, não."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "C_46",
+      "front": "Antes de verbo?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "C_47",
+      "front": "À escola?",
+      "back": "a + a."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "C_48",
+      "front": "Nem todos = ninguém?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-ef2039a82c7f",
+      "id": "C_49",
+      "front": "Palavra rara é melhor?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "C_2",
+      "front": "18:12?",
+      "back": "3:2."
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "C_3",
+      "front": "a/b=c/d implica?",
+      "back": "ad=bc."
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "C_4",
+      "front": "20% de 250?",
+      "back": "50."
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "C_6",
+      "front": "10% e -10% anulam?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "C_8",
+      "front": "Simples?",
+      "back": "Soma/n."
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "C_9",
+      "front": "Ponderada?",
+      "back": "Σxw/Σw."
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "C_12",
+      "front": "72 km/h?",
+      "back": "20 m/s."
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "C_13",
+      "front": "1 km²?",
+      "back": "1.000.000 m²."
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "C_18",
+      "front": "Declarativa V/F?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "C_22",
+      "front": "P→Q falso quando?",
+      "back": "V→F."
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "C_24",
+      "front": "Negação P∧Q?",
+      "back": "¬P∨¬Q."
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "C_25",
+      "front": "Negação P∨Q?",
+      "back": "¬P∧¬Q."
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "C_26",
+      "front": "P→Q?",
+      "back": "¬P∨Q."
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "C_27",
+      "front": "Contrapositiva?",
+      "back": "¬Q→¬P."
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "C_28",
+      "front": "P em P→Q?",
+      "back": "Suficiente."
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "C_30",
+      "front": "Negar 'todos'?",
+      "back": "Algum não."
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "C_31",
+      "front": "Negar 'algum'?",
+      "back": "Nenhum."
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "C_34",
+      "front": "Afirmar consequente?",
+      "back": "P→Q,Q,logo P."
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "C_35",
+      "front": "2,5,8,11?",
+      "back": "14."
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "C_36",
+      "front": "1,2,4,8?",
+      "back": "16 depois 32."
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "C_38",
+      "front": "Somente A?",
+      "back": "A−interseção."
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "C_39",
+      "front": "A<B e B<C?",
+      "back": "A<C."
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "C_43",
+      "front": "Valor absoluto ≠ percentual?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "C_46",
+      "front": "Depende de premissas→conclusão?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "C_47",
+      "front": "Testar diferenças/razões?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "C_48",
+      "front": "Usar grade?",
+      "back": "Ajuda."
+    },
+    {
+      "material": "lesson-7ba8b576bbf8",
+      "id": "C_49",
+      "front": "Resposta deve satisfazer tudo?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_1",
+      "front": "Fato ≠ previsão?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_2",
+      "front": "Dado sem período?",
+      "back": "Risco de erro."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_3",
+      "front": "Contexto territorial?",
+      "back": "Importa."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_4",
+      "front": "Cidade?",
+      "back": "Belém."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_6",
+      "front": "Decisões?",
+      "back": "56."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_7",
+      "front": "Pacote Belém?",
+      "back": "24 decisões."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_10",
+      "front": "Investimento = igualdade?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_11",
+      "front": "Amazônia 2025–26?",
+      "back": "2.874,38 km²."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_12",
+      "front": "Pará?",
+      "back": "987,27 km²."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_13",
+      "front": "Variação Pará?",
+      "back": "−25,5%."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_14",
+      "front": "Igual PRODES?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_15",
+      "front": "VBP?",
+      "back": "R$ 13,5 bi."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_16",
+      "front": "Ocupação?",
+      "back": "~271 mil."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_17",
+      "front": "VBP = renda?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_18",
+      "front": "Pará 2025?",
+      "back": "R$ 1.420."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_19",
+      "front": "Brasil 2025?",
+      "back": "R$ 2.316."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_20",
+      "front": "Per capita = salário?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_21",
+      "front": "Publicação × dado?",
+      "back": "Podem diferir."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_22",
+      "front": "Água 2022?",
+      "back": "4.147.153."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_23",
+      "front": "Esgoto 2022?",
+      "back": "691.398."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_24",
+      "front": "Resíduos 2022?",
+      "back": "7.585.174."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_25",
+      "front": "Doses 2026?",
+      "back": "4,8 milhões."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_26",
+      "front": "Doses = cobertura?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_27",
+      "front": "CVLI jan-jul?",
+      "back": "1.002."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_28",
+      "front": "Variação?",
+      "back": "−4,84%."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_29",
+      "front": "Fontes divergem?",
+      "back": "Sim."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_30",
+      "front": "Data 2026?",
+      "back": "11 de outubro."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_31",
+      "front": "Público?",
+      "back": "~2,3 milhões."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_32",
+      "front": "Iphan?",
+      "back": "2004."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_33",
+      "front": "Unesco?",
+      "back": "2013."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_34",
+      "front": "Programa quilombolas?",
+      "back": "Intersetorial."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_36",
+      "front": "Entrega = impacto?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_37",
+      "front": "Cnedic?",
+      "back": "2026."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_38",
+      "front": "Conectividade basta?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_39",
+      "front": "Acesso/correção?",
+      "back": "Direitos."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_41",
+      "front": "LGPD deixa de valer?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_43",
+      "front": "1º turno?",
+      "back": "4 de outubro."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_46",
+      "front": "Fato ou Boato?",
+      "back": "TSE."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_48",
+      "front": "Viral = verdadeiro?",
+      "back": "Não."
+    },
+    {
+      "material": "lesson-84d2660bc7cc",
+      "id": "C_49",
+      "front": "Snapshot?",
+      "back": "13/10/2026."
+    }
+  ],
+  "duplicates": [
+    {
+      "kind": "question",
+      "items": [
+        {
+          "material": "lesson-ff1de1c07eb3",
+          "id": "b_1_1",
+          "text": "Qual associação está correta?"
+        },
+        {
+          "material": "lesson-9da955b3d0d0",
+          "id": "b_4_0",
+          "text": "Qual associação está correta?"
+        },
+        {
+          "material": "lesson-9da955b3d0d0",
+          "id": "b_11_0",
+          "text": "Qual associação está correta?"
+        },
+        {
+          "material": "lesson-e2df0f560c07",
+          "id": "b_5_0",
+          "text": "Qual associação está correta?"
+        },
+        {
+          "material": "lesson-56d4ecb84c7c",
+          "id": "b_4_0",
+          "text": "Qual associação está correta?"
+        },
+        {
+          "material": "lesson-73b67d870448",
+          "id": "b_5_1",
+          "text": "Qual associação está correta?"
+        },
+        {
+          "material": "lesson-73b67d870448",
+          "id": "c_3",
+          "text": "Qual associação está correta?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-ff1de1c07eb3",
+          "id": "C_10",
+          "text": "Fixos e fluxos?"
+        },
+        {
+          "material": "lesson-a77b5ab66734",
+          "id": "C_33",
+          "text": "Fixos e fluxos?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-ff1de1c07eb3",
+          "id": "C_21",
+          "text": "Compressão espaço-tempo?"
+        },
+        {
+          "material": "lesson-445e32dc5a8d",
+          "id": "C_1",
+          "text": "Compressão espaço-tempo?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-ff1de1c07eb3",
+          "id": "C_26",
+          "text": "Interculturalidade crítica?"
+        },
+        {
+          "material": "lesson-9348bc9d516d",
+          "id": "C_31",
+          "text": "Interculturalidade crítica?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-e2df0f560c07",
+          "id": "C_42",
+          "text": "Exposição?"
+        },
+        {
+          "material": "lesson-ef2039a82c7f",
+          "id": "C_33",
+          "text": "Exposição?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-6f9db59907c2",
+          "id": "C_7",
+          "text": "Montante x jusante?"
+        },
+        {
+          "material": "lesson-96894ebe9dba",
+          "id": "C_39",
+          "text": "Montante x jusante?"
+        }
+      ]
+    },
+    {
+      "kind": "question",
+      "items": [
+        {
+          "material": "lesson-56d4ecb84c7c",
+          "id": "b_13_0",
+          "text": "Biodiversidade inclui:"
+        },
+        {
+          "material": "lesson-17ac614f6079",
+          "id": "b_11_1",
+          "text": "Biodiversidade inclui:"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-56d4ecb84c7c",
+          "id": "C_41",
+          "text": "Dois grupos do SNUC?"
+        },
+        {
+          "material": "lesson-73b67d870448",
+          "id": "C_7",
+          "text": "Dois grupos do SNUC?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-56d4ecb84c7c",
+          "id": "C_43",
+          "text": "RESEX pertence a qual grupo?"
+        },
+        {
+          "material": "lesson-73b67d870448",
+          "id": "C_8",
+          "text": "RESEX pertence a qual grupo?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-56d4ecb84c7c",
+          "id": "C_44",
+          "text": "Parque Nacional pertence a qual grupo?"
+        },
+        {
+          "material": "lesson-73b67d870448",
+          "id": "C_9",
+          "text": "Parque Nacional pertence a qual grupo?"
+        }
+      ]
+    },
+    {
+      "kind": "game",
+      "items": [
+        {
+          "material": "lesson-56d4ecb84c7c",
+          "id": "G_82",
+          "text": "Biodiversidade inclui diversidade genética, de espécies e de ecossistemas."
+        },
+        {
+          "material": "lesson-17ac614f6079",
+          "id": "G_56",
+          "text": "Biodiversidade inclui diversidade genética, de espécies e de ecossistemas."
+        }
+      ]
+    },
+    {
+      "kind": "question",
+      "items": [
+        {
+          "material": "lesson-73b67d870448",
+          "id": "b_3_1",
+          "text": "Qual frase está correta?"
+        },
+        {
+          "material": "lesson-73b67d870448",
+          "id": "b_15_0",
+          "text": "Qual frase está correta?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-9348bc9d516d",
+          "id": "C_23",
+          "text": "Movimento pendular?"
+        },
+        {
+          "material": "lesson-62f55b40b9d2",
+          "id": "C_33",
+          "text": "Movimento pendular?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-9348bc9d516d",
+          "id": "C_24",
+          "text": "Migração de retorno?"
+        },
+        {
+          "material": "lesson-6de5f5c9ab86",
+          "id": "C_40",
+          "text": "Migração de retorno?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-9348bc9d516d",
+          "id": "C_28",
+          "text": "Urbanização demográfica?"
+        },
+        {
+          "material": "lesson-62f55b40b9d2",
+          "id": "C_0",
+          "text": "Urbanização demográfica?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-9348bc9d516d",
+          "id": "C_29",
+          "text": "Crescimento urbano?"
+        },
+        {
+          "material": "lesson-62f55b40b9d2",
+          "id": "C_1",
+          "text": "Crescimento urbano?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-9348bc9d516d",
+          "id": "C_42",
+          "text": "Território tradicional?"
+        },
+        {
+          "material": "lesson-529cc23823f6",
+          "id": "C_42",
+          "text": "Território tradicional?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-62f55b40b9d2",
+          "id": "C_5",
+          "text": "Rede urbana?"
+        },
+        {
+          "material": "lesson-6de5f5c9ab86",
+          "id": "C_30",
+          "text": "Rede urbana?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-62f55b40b9d2",
+          "id": "C_15",
+          "text": "Metropolização?"
+        },
+        {
+          "material": "lesson-6de5f5c9ab86",
+          "id": "C_32",
+          "text": "Metropolização?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-62f55b40b9d2",
+          "id": "C_16",
+          "text": "Conurbação?"
+        },
+        {
+          "material": "lesson-6de5f5c9ab86",
+          "id": "C_31",
+          "text": "Conurbação?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-529cc23823f6",
+          "id": "C_29",
+          "text": "Fronteira agrícola?"
+        },
+        {
+          "material": "lesson-6de5f5c9ab86",
+          "id": "C_25",
+          "text": "Fronteira agrícola?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-529cc23823f6",
+          "id": "C_39",
+          "text": "Soberania alimentar?"
+        },
+        {
+          "material": "lesson-96894ebe9dba",
+          "id": "C_41",
+          "text": "Soberania alimentar?"
+        },
+        {
+          "material": "lesson-445e32dc5a8d",
+          "id": "C_34",
+          "text": "Soberania alimentar?"
+        }
+      ]
+    },
+    {
+      "kind": "question",
+      "items": [
+        {
+          "material": "lesson-a77b5ab66734",
+          "id": "b_12_1",
+          "text": "Intermodalidade significa:"
+        },
+        {
+          "material": "lesson-ffcb6167eb3e",
+          "id": "b_12_1",
+          "text": "Intermodalidade significa:"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-a77b5ab66734",
+          "id": "C_20",
+          "text": "DIT contemporânea?"
+        },
+        {
+          "material": "lesson-96894ebe9dba",
+          "id": "C_28",
+          "text": "DIT contemporânea?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-a77b5ab66734",
+          "id": "C_21",
+          "text": "Cadeia global de valor?"
+        },
+        {
+          "material": "lesson-445e32dc5a8d",
+          "id": "C_3",
+          "text": "Cadeia global de valor?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-a77b5ab66734",
+          "id": "C_25",
+          "text": "Desconcentração industrial?"
+        },
+        {
+          "material": "lesson-6de5f5c9ab86",
+          "id": "C_23",
+          "text": "Desconcentração industrial?"
+        }
+      ]
+    },
+    {
+      "kind": "question",
+      "items": [
+        {
+          "material": "lesson-96894ebe9dba",
+          "id": "b_10_0",
+          "text": "A globalização contemporânea:"
+        },
+        {
+          "material": "lesson-445e32dc5a8d",
+          "id": "b_1_0",
+          "text": "A globalização contemporânea:"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-96894ebe9dba",
+          "id": "C_22",
+          "text": "Área de livre comércio?"
+        },
+        {
+          "material": "lesson-445e32dc5a8d",
+          "id": "C_20",
+          "text": "Área de livre comércio?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-96894ebe9dba",
+          "id": "C_23",
+          "text": "União aduaneira?"
+        },
+        {
+          "material": "lesson-445e32dc5a8d",
+          "id": "C_21",
+          "text": "União aduaneira?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-96894ebe9dba",
+          "id": "C_37",
+          "text": "Chokepoint?"
+        },
+        {
+          "material": "lesson-445e32dc5a8d",
+          "id": "C_25",
+          "text": "Chokepoint?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-96894ebe9dba",
+          "id": "C_40",
+          "text": "Segurança alimentar?"
+        },
+        {
+          "material": "lesson-445e32dc5a8d",
+          "id": "C_33",
+          "text": "Segurança alimentar?"
+        }
+      ]
+    },
+    {
+      "kind": "game",
+      "items": [
+        {
+          "material": "lesson-96894ebe9dba",
+          "id": "G_43",
+          "text": "Toda área de livre comércio exige moeda única."
+        },
+        {
+          "material": "lesson-445e32dc5a8d",
+          "id": "G_41",
+          "text": "Toda área de livre comércio exige moeda única."
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-6de5f5c9ab86",
+          "id": "C_6",
+          "text": "O que representam?"
+        },
+        {
+          "material": "lesson-6de5f5c9ab86",
+          "id": "C_7",
+          "text": "O que representam?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-17ac614f6079",
+          "id": "C_5",
+          "text": "Definição?"
+        },
+        {
+          "material": "lesson-17ac614f6079",
+          "id": "C_21",
+          "text": "Definição?"
+        },
+        {
+          "material": "lesson-17ac614f6079",
+          "id": "C_22",
+          "text": "Definição?"
+        },
+        {
+          "material": "lesson-17ac614f6079",
+          "id": "C_23",
+          "text": "Definição?"
+        },
+        {
+          "material": "lesson-17ac614f6079",
+          "id": "C_26",
+          "text": "Definição?"
+        },
+        {
+          "material": "lesson-17ac614f6079",
+          "id": "C_29",
+          "text": "Definição?"
+        },
+        {
+          "material": "lesson-17ac614f6079",
+          "id": "C_31",
+          "text": "Definição?"
+        },
+        {
+          "material": "lesson-17ac614f6079",
+          "id": "C_41",
+          "text": "Definição?"
+        },
+        {
+          "material": "lesson-6cf2740c2663",
+          "id": "C_14",
+          "text": "Definição?"
+        },
+        {
+          "material": "lesson-6cf2740c2663",
+          "id": "C_27",
+          "text": "Definição?"
+        },
+        {
+          "material": "lesson-6cf2740c2663",
+          "id": "C_29",
+          "text": "Definição?"
+        },
+        {
+          "material": "lesson-6cf2740c2663",
+          "id": "C_30",
+          "text": "Definição?"
+        },
+        {
+          "material": "lesson-6cf2740c2663",
+          "id": "C_47",
+          "text": "Definição?"
+        },
+        {
+          "material": "lesson-ff44e525ee7e",
+          "id": "C_8",
+          "text": "Definição?"
+        },
+        {
+          "material": "lesson-ff44e525ee7e",
+          "id": "C_12",
+          "text": "Definição?"
+        },
+        {
+          "material": "lesson-ff44e525ee7e",
+          "id": "C_13",
+          "text": "Definição?"
+        },
+        {
+          "material": "lesson-ff44e525ee7e",
+          "id": "C_18",
+          "text": "Definição?"
+        },
+        {
+          "material": "lesson-ff44e525ee7e",
+          "id": "C_23",
+          "text": "Definição?"
+        },
+        {
+          "material": "lesson-ff44e525ee7e",
+          "id": "C_26",
+          "text": "Definição?"
+        },
+        {
+          "material": "lesson-ff44e525ee7e",
+          "id": "C_40",
+          "text": "Definição?"
+        },
+        {
+          "material": "lesson-ff44e525ee7e",
+          "id": "C_41",
+          "text": "Definição?"
+        },
+        {
+          "material": "lesson-ff44e525ee7e",
+          "id": "C_42",
+          "text": "Definição?"
+        },
+        {
+          "material": "lesson-7d8a7f83d637",
+          "id": "C_10",
+          "text": "Definição?"
+        },
+        {
+          "material": "lesson-ffcb6167eb3e",
+          "id": "C_1",
+          "text": "Definição?"
+        },
+        {
+          "material": "lesson-ffcb6167eb3e",
+          "id": "C_31",
+          "text": "Definição?"
+        },
+        {
+          "material": "lesson-ffcb6167eb3e",
+          "id": "C_44",
+          "text": "Definição?"
+        },
+        {
+          "material": "lesson-ef2039a82c7f",
+          "id": "C_15",
+          "text": "Definição?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-17ac614f6079",
+          "id": "C_18",
+          "text": "Característica?"
+        },
+        {
+          "material": "lesson-17ac614f6079",
+          "id": "C_19",
+          "text": "Característica?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-17ac614f6079",
+          "id": "C_43",
+          "text": "Função?"
+        },
+        {
+          "material": "lesson-17ac614f6079",
+          "id": "C_45",
+          "text": "Função?"
+        },
+        {
+          "material": "lesson-17ac614f6079",
+          "id": "C_47",
+          "text": "Função?"
+        },
+        {
+          "material": "lesson-7d8a7f83d637",
+          "id": "C_30",
+          "text": "Função?"
+        },
+        {
+          "material": "lesson-ffcb6167eb3e",
+          "id": "C_15",
+          "text": "Função?"
+        },
+        {
+          "material": "lesson-ffcb6167eb3e",
+          "id": "C_26",
+          "text": "Função?"
+        },
+        {
+          "material": "lesson-ffcb6167eb3e",
+          "id": "C_27",
+          "text": "Função?"
+        },
+        {
+          "material": "lesson-ffcb6167eb3e",
+          "id": "C_29",
+          "text": "Função?"
+        },
+        {
+          "material": "lesson-ffcb6167eb3e",
+          "id": "C_34",
+          "text": "Função?"
+        },
+        {
+          "material": "lesson-ffcb6167eb3e",
+          "id": "C_45",
+          "text": "Função?"
+        },
+        {
+          "material": "lesson-73811adb3a6b",
+          "id": "C_43",
+          "text": "Função?"
+        },
+        {
+          "material": "lesson-88e4a3826cb5",
+          "id": "C_49",
+          "text": "Função?"
+        }
+      ]
+    },
+    {
+      "kind": "question",
+      "items": [
+        {
+          "material": "lesson-6cf2740c2663",
+          "id": "b_2_0",
+          "text": "Belém foi fundada em:"
+        },
+        {
+          "material": "lesson-7d8a7f83d637",
+          "id": "b_2_0",
+          "text": "Belém foi fundada em:"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-6cf2740c2663",
+          "id": "C_15",
+          "text": "Ano?"
+        },
+        {
+          "material": "lesson-6cf2740c2663",
+          "id": "C_17",
+          "text": "Ano?"
+        },
+        {
+          "material": "lesson-6cf2740c2663",
+          "id": "C_19",
+          "text": "Ano?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-6cf2740c2663",
+          "id": "C_43",
+          "text": "Leitura neste tema?"
+        },
+        {
+          "material": "lesson-6cf2740c2663",
+          "id": "C_44",
+          "text": "Leitura neste tema?"
+        }
+      ]
+    },
+    {
+      "kind": "game",
+      "items": [
+        {
+          "material": "lesson-6cf2740c2663",
+          "id": "G_8",
+          "text": "Belém foi fundada em 1616."
+        },
+        {
+          "material": "lesson-7d8a7f83d637",
+          "id": "G_10",
+          "text": "Belém foi fundada em 1616."
+        }
+      ]
+    },
+    {
+      "kind": "game",
+      "items": [
+        {
+          "material": "lesson-6cf2740c2663",
+          "id": "G_42",
+          "text": "BR-230 é a Transamazônica."
+        },
+        {
+          "material": "lesson-ffcb6167eb3e",
+          "id": "G_56",
+          "text": "BR-230 é a Transamazônica."
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-fa532170310d",
+          "id": "C_13",
+          "text": "Localização?"
+        },
+        {
+          "material": "lesson-73811adb3a6b",
+          "id": "C_12",
+          "text": "Localização?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-fa532170310d",
+          "id": "C_14",
+          "text": "Distribuição?"
+        },
+        {
+          "material": "lesson-73811adb3a6b",
+          "id": "C_10",
+          "text": "Distribuição?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-fa532170310d",
+          "id": "C_15",
+          "text": "Extensão?"
+        },
+        {
+          "material": "lesson-73811adb3a6b",
+          "id": "C_11",
+          "text": "Extensão?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-fa532170310d",
+          "id": "C_16",
+          "text": "Conexão?"
+        },
+        {
+          "material": "lesson-73811adb3a6b",
+          "id": "C_8",
+          "text": "Conexão?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-fa532170310d",
+          "id": "C_17",
+          "text": "Diferenciação?"
+        },
+        {
+          "material": "lesson-73811adb3a6b",
+          "id": "C_9",
+          "text": "Diferenciação?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-fa532170310d",
+          "id": "C_18",
+          "text": "Analogia?"
+        },
+        {
+          "material": "lesson-73811adb3a6b",
+          "id": "C_7",
+          "text": "Analogia?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-fa532170310d",
+          "id": "C_19",
+          "text": "Ordem?"
+        },
+        {
+          "material": "lesson-73811adb3a6b",
+          "id": "C_13",
+          "text": "Ordem?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-fa532170310d",
+          "id": "C_20",
+          "text": "Quantas unidades temáticas?"
+        },
+        {
+          "material": "lesson-73811adb3a6b",
+          "id": "C_0",
+          "text": "Quantas unidades temáticas?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-fa532170310d",
+          "id": "C_40",
+          "text": "Diagnóstica?"
+        },
+        {
+          "material": "lesson-73811adb3a6b",
+          "id": "C_40",
+          "text": "Diagnóstica?"
+        },
+        {
+          "material": "lesson-88e4a3826cb5",
+          "id": "C_46",
+          "text": "Diagnóstica?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-fa532170310d",
+          "id": "C_41",
+          "text": "Formativa?"
+        },
+        {
+          "material": "lesson-73811adb3a6b",
+          "id": "C_41",
+          "text": "Formativa?"
+        },
+        {
+          "material": "lesson-88e4a3826cb5",
+          "id": "C_47",
+          "text": "Formativa?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-fa532170310d",
+          "id": "C_42",
+          "text": "Somativa?"
+        },
+        {
+          "material": "lesson-73811adb3a6b",
+          "id": "C_42",
+          "text": "Somativa?"
+        },
+        {
+          "material": "lesson-88e4a3826cb5",
+          "id": "C_48",
+          "text": "Somativa?"
+        }
+      ]
+    },
+    {
+      "kind": "question",
+      "items": [
+        {
+          "material": "lesson-ff44e525ee7e",
+          "id": "b_7_0",
+          "text": "Belo Monte está no rio:"
+        },
+        {
+          "material": "lesson-ffcb6167eb3e",
+          "id": "b_10_0",
+          "text": "Belo Monte está no rio:"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-ff44e525ee7e",
+          "id": "C_19",
+          "text": "Em qual rio?"
+        },
+        {
+          "material": "lesson-ff44e525ee7e",
+          "id": "C_21",
+          "text": "Em qual rio?"
+        }
+      ]
+    },
+    {
+      "kind": "game",
+      "items": [
+        {
+          "material": "lesson-ff44e525ee7e",
+          "id": "G_42",
+          "text": "Belo Monte localiza-se no rio Xingu."
+        },
+        {
+          "material": "lesson-ffcb6167eb3e",
+          "id": "G_46",
+          "text": "Belo Monte localiza-se no rio Xingu."
+        }
+      ]
+    },
+    {
+      "kind": "question",
+      "items": [
+        {
+          "material": "lesson-7d8a7f83d637",
+          "id": "c_2",
+          "text": "Assinale a associação correta:"
+        },
+        {
+          "material": "lesson-88e4a3826cb5",
+          "id": "c_1",
+          "text": "Assinale a associação correta:"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-ffcb6167eb3e",
+          "id": "C_13",
+          "text": "Destaque?"
+        },
+        {
+          "material": "lesson-ffcb6167eb3e",
+          "id": "C_14",
+          "text": "Destaque?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-ffcb6167eb3e",
+          "id": "C_18",
+          "text": "Participa das exportações?"
+        },
+        {
+          "material": "lesson-ffcb6167eb3e",
+          "id": "C_19",
+          "text": "Participa das exportações?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-ffcb6167eb3e",
+          "id": "C_21",
+          "text": "Rio?"
+        },
+        {
+          "material": "lesson-ffcb6167eb3e",
+          "id": "C_23",
+          "text": "Rio?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-ffcb6167eb3e",
+          "id": "C_22",
+          "text": "Potência?"
+        },
+        {
+          "material": "lesson-ffcb6167eb3e",
+          "id": "C_24",
+          "text": "Potência?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-ffcb6167eb3e",
+          "id": "C_35",
+          "text": "O que é?"
+        },
+        {
+          "material": "lesson-ffcb6167eb3e",
+          "id": "C_38",
+          "text": "O que é?"
+        },
+        {
+          "material": "lesson-73811adb3a6b",
+          "id": "C_29",
+          "text": "O que é?"
+        },
+        {
+          "material": "lesson-73811adb3a6b",
+          "id": "C_30",
+          "text": "O que é?"
+        },
+        {
+          "material": "lesson-ef2039a82c7f",
+          "id": "C_40",
+          "text": "O que é?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-73811adb3a6b",
+          "id": "C_16",
+          "text": "Ênfase?"
+        },
+        {
+          "material": "lesson-73811adb3a6b",
+          "id": "C_18",
+          "text": "Ênfase?"
+        }
+      ]
+    },
+    {
+      "kind": "card",
+      "items": [
+        {
+          "material": "lesson-5c4795a5ce6d",
+          "id": "C_12",
+          "text": "Lei?"
+        },
+        {
+          "material": "lesson-5c4795a5ce6d",
+          "id": "C_41",
+          "text": "Lei?"
+        }
+      ]
+    }
+  ]
+}
