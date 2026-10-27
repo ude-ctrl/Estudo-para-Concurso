@@ -1,0 +1,889 @@
+{
+  "schemaVersion": 1,
+  "version": "2026-10-24-games.1",
+  "lessons": [
+    {
+      "lessonId": "lesson-445e32dc5a8d",
+      "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_15_Amazonia_Natureza_Territorio_e_Desenvolvimento.html",
+      "sourceHash": "43282bc1771e68705d3d3b92fd9a595c2f9d4f797847613440d0cd30a31242da",
+      "edits": [
+        {
+          "path": ["G", 6, "x"],
+          "before": "É o contrário.",
+          "after": "As cadeias globais distribuem atividades como projeto, fabricação, montagem e distribuição entre países, mantendo as etapas conectadas por fluxos de bens, serviços e informação.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 36, "t"],
+          "before": "Não existe moeda única do BRICS em circulação.",
+          "after": "Na atualização de 2026 apresentada neste material, não há moeda única do BRICS em circulação.",
+          "reason": "Delimitação ao recorte temporal já documentado na teoria; não acrescenta comprovação externa da situação presente nem altera o gabarito."
+        },
+        {
+          "path": ["G", 36, "x"],
+          "before": "Falso.",
+          "after": "O uso de moedas nacionais em operações entre os países e propostas de mecanismos de pagamento não equivalem à emissão de uma moeda comum. A afirmação se refere ao retrato de 2026 do material, cuja referência institucional é o portal brasileiro do BRICS.",
+          "reason": "Delimitação ao recorte temporal já documentado na teoria; não acrescenta comprovação externa da situação presente nem altera o gabarito."
+        },
+        {
+          "path": ["G", 40, "x"],
+          "before": "Não.",
+          "after": "Na área de livre comércio, os participantes reduzem barreiras entre si e podem manter políticas tarifárias próprias para terceiros. Uma tarifa externa comum caracteriza outro grau de integração.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 42, "x"],
+          "before": "Não.",
+          "after": "A união aduaneira combina a liberalização interna com uma tarifa externa comum como princípio; exceções e mecanismos de implementação devem ser distinguidos do modelo ideal.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 44, "x"],
+          "before": "Não.",
+          "after": "O Tratado de Assunção estabelece como objetivo um mercado comum. O Mercosul apresenta instrumentos de união aduaneira com exceções; objetivo do tratado e estágio efetivo da integração não são a mesma coisa.",
+          "reason": "Feedback próprio do item, com critério conceitual explícito e sem instruções de edição dirigidas ao estudante."
+        },
+        {
+          "path": ["G", 46, "x"],
+          "before": "Falso.",
+          "after": "A União Europeia e a zona do euro não têm composição idêntica: a participação na UE não implica adoção automática do euro.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 48, "x"],
+          "before": "Não.",
+          "after": "O RCEP reúne países da Ásia-Pacífico em um acordo comercial regional. Sua finalidade comercial não o torna moeda única ou união política.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 54, "x"],
+          "before": "É o contrário.",
+          "after": "A transição energética pode reduzir certas dependências de combustíveis fósseis e ampliar a importância de minerais críticos, tecnologias, redes elétricas e capacidades industriais.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 70, "x"],
+          "before": "Não.",
+          "after": "O Tratado da Antártida estabelece uso pacífico e cooperação científica; a ciência ocupa papel central no regime internacional do continente.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 74, "x"],
+          "before": "Não.",
+          "after": "O Artigo IV preserva as posições sobre reivindicações territoriais e impede que atividades durante a vigência do tratado fundamentem novos direitos de soberania. Não resolve definitivamente todas as reivindicações.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 78, "x"],
+          "before": "Não.",
+          "after": "No Afeganistão, em 2001, a intervenção foi justificada pelo combate à Al-Qaeda e ao regime talibã após o 11 de Setembro. No Iraque, em 2003, foram invocadas, entre outras alegações, armas de destruição em massa; os contextos e justificativas não são equivalentes.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 84, "x"],
+          "before": "Falso.",
+          "after": "A circulação digital depende de cabos, antenas, satélites, centros de dados e eletricidade. A natureza informacional do conteúdo não elimina sua infraestrutura material.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 86, "x"],
+          "before": "Não.",
+          "after": "Uma fronteira pode facilitar mercadorias e capitais e, simultaneamente, restringir pessoas ou certos produtos. A seletividade depende de regras, atores e tipos de fluxo.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 90, "x"],
+          "before": "Não.",
+          "after": "Soberania tecnológica pode envolver capacidade de decidir, desenvolver competências e assegurar acesso confiável em setores críticos. Não exige produzir internamente todos os bens e componentes.",
+          "reason": "A resposta isolada permitia leitura ambígua e não explicava o julgamento; explicitação do mecanismo, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 92, "x"],
+          "before": "Não.",
+          "after": "Multipolaridade designa a existência de vários centros relevantes de poder, cujos pesos podem diferir nas dimensões econômica, militar, tecnológica e diplomática.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 94, "x"],
+          "before": "Falso.",
+          "after": "Rivalidades e políticas de segurança podem deslocar fornecedores, rotas e investimentos. Essa reorganização não significa, por si só, o desaparecimento das conexões globais.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 96, "x"],
+          "before": "É o contrário.",
+          "after": "Decoupling envolve separação mais profunda entre cadeias, mercados ou tecnologias. De-risking busca reduzir vulnerabilidades e dependências críticas sem pressupor rompimento amplo.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        }
+      ]
+    },
+    {
+      "lessonId": "lesson-6de5f5c9ab86",
+      "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_16_Geografia_do_Brasil_e_do_Para.html",
+      "sourceHash": "836396d38f992486c2d791fa21ae01f1e041a18b9cde683f8fce1a886d18b90c",
+      "edits": [
+        {
+          "path": ["G", 96, "x"],
+          "before": "Não.",
+          "after": "Bacia Amazônica é um recorte hidrográfico; Bioma Amazônia é um recorte ambiental; Amazônia Legal é um recorte político-administrativo de planejamento. Seus limites não coincidem integralmente.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        }
+      ]
+    },
+    {
+      "lessonId": "lesson-17ac614f6079",
+      "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_17_Amazonia_Natureza_e_Sistemas_Ambientais_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "sourceHash": "04d0793fe5a240a79afcd9d55b051ddf6e927407df257b3f4972e75df7f32dea",
+      "edits": [
+        {
+          "path": ["G", 4, "x"],
+          "before": "Não.",
+          "after": "A amplitude térmica anual compara médias mensais e não resume todos os valores diários. Uma pequena diferença entre médias mensais pode coexistir com episódios de calor extremo.",
+          "reason": "A resposta isolada permitia leitura ambígua e não explicava o julgamento; explicitação do mecanismo, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 30, "x"],
+          "before": "Não.",
+          "after": "Chuvas, localização das cabeceiras, extensão das bacias e tempo de propagação das águas variam entre tributários. Por isso, os picos de cheia não precisam ser simultâneos.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 54, "x"],
+          "before": "Não.",
+          "after": "A Amazônia apresenta diversidade geológica e geomorfológica. Não é uma planície homogênea: há planaltos, áreas de escudo e terrenos sedimentares, além de planícies fluviais.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 66, "x"],
+          "before": "Não.",
+          "after": "Uma área agrícola pode crescer ocupando pastagens ou outras áreas já convertidas. Isso não exclui desmatamento direto em outros locais nem possíveis deslocamentos indiretos de usos.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 76, "x"],
+          "before": "Não.",
+          "after": "Foco de calor é uma detecção térmica do sensor; área queimada é uma medida da extensão atingida pelo fogo. Um foco não corresponde a uma área fixa e as séries não são intercambiáveis.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 84, "x"],
+          "before": "Não.",
+          "after": "Os limiares dependem de processos, escalas, cenários e métodos. A pesquisa identifica riscos e incertezas; não autoriza tratar um percentual único como certeza universal.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 96, "x"],
+          "before": "Não.",
+          "after": "A proteção legal precisa ser acompanhada de gestão, fiscalização, condições territoriais e conectividade. Criar uma área protegida não garante, isoladamente, sua efetividade.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 98, "x"],
+          "before": "Não.",
+          "after": "A regeneração pode recuperar gradualmente biomassa, habitats e outras funções. A trajetória depende do histórico, do manejo e do contexto; não equivale a uma floresta antiga instantaneamente.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        }
+      ]
+    },
+    {
+      "lessonId": "lesson-6cf2740c2663",
+      "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_18_Amazonia_Formacao_Territorial_e_Redes_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "sourceHash": "c345bdc25bafe3be2f00b03f41070488ad0b0423777a7627d953f0d695982053",
+      "edits": [
+        {
+          "path": ["G", 6, "x"],
+          "before": "Não.",
+          "after": "Povos indígenas já ocupavam, manejavam e organizavam espaços amazônicos antes da colonização europeia. O território não era vazio de sociedades e relações de poder.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 56, "x"],
+          "before": "Não.",
+          "after": "Acessibilidade depende de caminhos disponíveis, tempo, custo e barreiras. Dois lugares próximos podem estar mal conectados, por exemplo quando falta uma travessia segura.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 81, "x"],
+          "before": "Sim.",
+          "after": "Cidades e núcleos urbanos podem anteceder, apoiar ou acompanhar a expansão da fronteira econômica. Não há uma sequência universal na qual toda ocupação rural precisa terminar antes do surgimento urbano.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 92, "x"],
+          "before": "Não.",
+          "after": "Conexões podem integrar espaços de modo desigual. Os benefícios e os custos dependem de quem controla redes, serviços e decisões e de quais grupos têm acesso a eles.",
+          "reason": "A resposta isolada permitia leitura ambígua e não explicava o julgamento; explicitação do mecanismo, mantendo o gabarito."
+        }
+      ]
+    },
+    {
+      "lessonId": "lesson-ff44e525ee7e",
+      "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_19_Amazonia_Conflitos_e_Desenvolvimento_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "sourceHash": "1bb33249d89c920ceafe8edf424cba869085f35bbc67fdbf8528e9d2b3f4237f",
+      "edits": [
+        {
+          "path": ["G", 6, "x"],
+          "before": "Não.",
+          "after": "Mineração industrial e garimpo não são categorias idênticas. Técnicas, organização, escala e regimes jurídicos podem diferir; a dimensão artesanal, sozinha, não define todo garimpo.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 8, "x"],
+          "before": "Não.",
+          "after": "Garimpos contemporâneos podem utilizar escavadeiras, dragas, financiamento e redes de comercialização. Garimpo não é sinônimo obrigatório de trabalho manual ou isolado.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 48, "x"],
+          "before": "Não.",
+          "after": "A expansão agrícola pode usar áreas já convertidas e também deslocar atividades ou valorizar terras em outros locais. Distinguir conversão direta de pressões indiretas exige análise territorial.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 51, "x"],
+          "before": "Sim.",
+          "after": "A pecuária pode participar da ocupação e valorização de terras e pressionar a fronteira. A relação precisa ser analisada historicamente e não significa que toda produção pecuária implique desmatamento novo.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 54, "x"],
+          "before": "Não.",
+          "after": "Posse se refere ao exercício de poderes de fato sobre um bem, enquanto propriedade é um direito com regime jurídico próprio. Possuir uma área não prova automaticamente sua titularidade.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 56, "x"],
+          "before": "Não.",
+          "after": "O CAR é um cadastro ambiental. Sua inscrição não constitui, por si só, título de propriedade nem regulariza automaticamente a situação fundiária.",
+          "reason": "A resposta isolada permitia leitura ambígua e não explicava o julgamento; explicitação do mecanismo, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 61, "x"],
+          "before": "Sim.",
+          "after": "Terras indígenas envolvem direitos originários, reprodução física e cultural e relações territoriais. Seu significado jurídico e social não pode ser reduzido ao preço do hectare.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 72, "x"],
+          "before": "Não.",
+          "after": "Usar recursos biológicos não garante sustentabilidade. É necessário examinar conservação, condições de trabalho, distribuição de benefícios, direitos territoriais e impactos da produção.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 90, "x"],
+          "before": "Não.",
+          "after": "Mercados regulados e voluntários têm regras, obrigações e instituições diferentes. A existência de créditos ou transações não torna seus regimes equivalentes.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        }
+      ]
+    },
+    {
+      "lessonId": "lesson-7d8a7f83d637",
+      "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_20_Para_Territorio_Populacao_e_Regionalizacao_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "sourceHash": "00479a96f61746dd559302a9eb5ff9eb13f51b261ac4bf8b948f88a51069005f",
+      "edits": [
+        {
+          "path": ["G", 25, "x"],
+          "before": "Sim.",
+          "after": "Araguaia consta entre as doze Regiões de Integração do Pará no recorte de planejamento estadual apresentado no Radar FAPESPA 2024. Uma Região de Integração não se confunde com uma Unidade da Federação ou uma Região Hidrográfica Nacional.",
+          "reason": "Feedback próprio do item, com critério conceitual explícito e sem instruções de edição dirigidas ao estudante."
+        },
+        {
+          "path": ["G", 27, "x"],
+          "before": "Sim.",
+          "after": "Baixo Amazonas é uma Região de Integração do Pará. O nome deve ser associado explicitamente à regionalização estadual de planejamento.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 29, "x"],
+          "before": "Sim.",
+          "after": "Carajás é uma Região de Integração paraense no recorte estudado; não integra a lista das doze Regiões Hidrográficas Nacionais.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 31, "x"],
+          "before": "Sim.",
+          "after": "Guajará é uma Região de Integração do Pará, não uma Unidade da Federação. Região de planejamento e ente federativo pertencem a categorias distintas.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 33, "t"],
+          "before": "Guamá é uma Região Geográfica nacional.",
+          "after": "Guamá é uma das cinco Grandes Regiões do IBGE.",
+          "reason": "Contexto explicitado no próprio item sorteado, mantendo o significado pretendido e o gabarito; justificativa autossuficiente."
+        },
+        {
+          "path": ["G", 33, "x"],
+          "before": "Sim.",
+          "after": "Guamá é uma Região de Integração do Pará, utilizada no planejamento estadual. As cinco Grandes Regiões do IBGE são Norte, Nordeste, Centro-Oeste, Sudeste e Sul: os dois recortes têm escalas e finalidades diferentes.",
+          "reason": "Contexto explicitado no próprio item sorteado, mantendo o significado pretendido e o gabarito; justificativa autossuficiente."
+        },
+        {
+          "path": ["G", 35, "x"],
+          "before": "Sim.",
+          "after": "Lago de Tucuruí é uma Região de Integração do Pará. Não é uma Unidade da Federação; o estado correspondente é o Pará.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 37, "x"],
+          "before": "Sim.",
+          "after": "Marajó consta entre as Regiões de Integração do Pará. É necessário distinguir esse recorte de planejamento de outros usos geográficos do nome Marajó.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 39, "x"],
+          "before": "Sim.",
+          "after": "Rio Caeté é uma Região de Integração do Pará no recorte estudado, não uma das doze Regiões Hidrográficas Nacionais.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 41, "x"],
+          "before": "Sim.",
+          "after": "Rio Capim designa uma Região de Integração do Pará e um rio; não é capital estadual. A capital do Pará é Belém.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 43, "x"],
+          "before": "Sim.",
+          "after": "No recorte estudado, Tapajós designa uma Região de Integração do Pará, além de um rio e de outros recortes. Não corresponde ao nome de um município paraense na divisão municipal utilizada.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 45, "x"],
+          "before": "Sim.",
+          "after": "Tocantins também denomina um rio e uma Região de Integração do Pará. Não identifica exclusivamente a Unidade da Federação vizinha.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 47, "x"],
+          "before": "Sim.",
+          "after": "Xingu consta entre as Regiões de Integração do Pará. Um mesmo nome pode aparecer em recortes diferentes, que precisam ter seus critérios identificados.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 70, "x"],
+          "before": "Não.",
+          "after": "Grau de urbanização mede a proporção de residentes em áreas classificadas como urbanas. Densidade demográfica relaciona população e área territorial; os indicadores respondem a perguntas distintas.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 79, "x"],
+          "before": "Sim.",
+          "after": "Na divisão estadual apresentada nesta unidade, Costa Atlântica-Nordeste é uma das sete Macrorregiões Hidrográficas do Pará. Esse recorte de gestão da água é diferente das doze Regiões de Integração usadas no planejamento estadual.",
+          "reason": "Feedback próprio do item, com critério conceitual explícito e sem instruções de edição dirigidas ao estudante."
+        },
+        {
+          "path": ["G", 81, "x"],
+          "before": "Sim.",
+          "after": "Na classificação apresentada, Portel-Marajó é uma Macrorregião Hidrográfica estadual do Pará. Não corresponde a uma das doze Regiões Hidrográficas Nacionais.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 83, "x"],
+          "before": "Sim.",
+          "after": "Calha Norte é apresentada nesta unidade entre as sete Macrorregiões Hidrográficas estaduais. Ela não integra a lista das doze Regiões de Integração do Pará; são regionalizações com critérios e finalidades diferentes.",
+          "reason": "Feedback próprio do item, com critério conceitual explícito e sem instruções de edição dirigidas ao estudante."
+        },
+        {
+          "path": ["G", 95, "x"],
+          "before": "Sim.",
+          "after": "As Regiões de Integração organizam o planejamento e a leitura territorial de políticas estaduais. Sua finalidade é distinta da de um recorte definido apenas pela drenagem.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 96, "x"],
+          "before": "Não.",
+          "after": "Desigualdades territoriais aparecem no acesso a transporte, saneamento, educação, saúde e outras infraestruturas, além das diferenças de renda.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        }
+      ]
+    },
+    {
+      "lessonId": "lesson-ffcb6167eb3e",
+      "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_21_Para_Economia_Infraestrutura_e_Ambiente_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "sourceHash": "0ff48fe9d66c1c9f4155f579c52f05767e315a093d14fbc4051619374907f119",
+      "edits": [
+        {
+          "path": ["G", 17, "x"],
+          "before": "Sim.",
+          "after": "A Estrada de Ferro Carajás também oferece transporte de passageiros. O predomínio do minério nas cargas não significa exclusividade de uso da ferrovia.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 34, "x"],
+          "before": "Não.",
+          "after": "A agropecuária paraense reúne produtos, técnicas, escalas, agentes e destinos diferentes. Uma média estadual não descreve igualmente todos os sistemas produtivos.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 37, "x"],
+          "before": "Sim.",
+          "after": "A soja participa da produção e das exportações do Pará. Para comparar seu peso, identificar ano, valor ou volume e a base estatística utilizada.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 39, "x"],
+          "before": "Sim.",
+          "after": "O Pará exporta produtos da pecuária, incluindo carne bovina. Os valores e a participação devem ser associados a fonte, período e categoria comercial.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 50, "x"],
+          "before": "Não.",
+          "after": "Potência instalada é capacidade expressa em MW; geração de energia depende da operação ao longo do tempo e é expressa, por exemplo, em MWh. Vazões e restrições operacionais afetam a produção efetiva.",
+          "reason": "A resposta isolada permitia leitura ambígua e não explicava o julgamento; explicitação do mecanismo, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 78, "t"],
+          "before": "A expansão da navegação de grande porte no Tocantins ainda envolve obras e estudos.",
+          "after": "No retrato de 13/10/2026 apresentado neste material, a ampliação da navegação de grande porte no Tocantins, incluindo o gargalo do Pedral do Lourenço, ainda envolve obras e estudos.",
+          "reason": "Delimitação ao recorte temporal já documentado na teoria; não acrescenta comprovação externa da situação presente nem altera o gabarito."
+        },
+        {
+          "path": ["G", 78, "x"],
+          "before": "Não.",
+          "after": "A teoria identifica trechos críticos e um projeto de expansão para melhorar a ligação de Marabá ao sistema portuário de Barcarena. Potencial logístico e projeto de expansão não significam corredor plenamente operacional em toda a extensão planejada. A afirmação está delimitada ao retrato de 13/10/2026.",
+          "reason": "Delimitação ao recorte temporal já documentado na teoria; não acrescenta comprovação externa da situação presente nem altera o gabarito."
+        },
+        {
+          "path": ["G", 86, "x"],
+          "before": "Não.",
+          "after": "Serviços especializados, gestão, comércio e conexões com outros centros podem gerar centralidade urbana mesmo quando o valor das exportações locais é pequeno.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        }
+      ]
+    },
+    {
+      "lessonId": "lesson-73811adb3a6b",
+      "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_22_BNCC_e_Ensino_de_Geografia_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "sourceHash": "daac13b65a9ff637944e753fff0d08b4a44bc561035fa5b5a154fae5ba80a8de",
+      "edits": [
+        {
+          "path": ["G", 38, "x"],
+          "before": "Não.",
+          "after": "O estudo do lugar pode revelar redes, políticas e processos de outras escalas. Partir do cotidiano não exige limitar a explicação ao espaço imediatamente vivido.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 42, "x"],
+          "before": "Não.",
+          "after": "A paisagem reúne marcas de processos naturais e sociais, perceptíveis e historicamente produzidas. Não equivale apenas à natureza sem transformação humana.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 45, "t"],
+          "before": "É apenas decorar símbolos.",
+          "after": "A alfabetização cartográfica consiste apenas em decorar símbolos dos mapas.",
+          "reason": "Contexto explicitado no próprio item sorteado, mantendo o significado pretendido e o gabarito; justificativa autossuficiente."
+        },
+        {
+          "path": ["G", 45, "x"],
+          "before": "Sim.",
+          "after": "A alfabetização cartográfica envolve ler e produzir representações, compreender orientação, proporção e escala e desenvolver raciocínio espacial. Reconhecer símbolos é parte do aprendizado, mas não esgota a interpretação e a produção de mapas.",
+          "reason": "Contexto explicitado no próprio item sorteado, mantendo o significado pretendido e o gabarito; justificativa autossuficiente."
+        },
+        {
+          "path": ["G", 68, "x"],
+          "before": "Não.",
+          "after": "Escala cartográfica é uma razão entre representação e terreno. Escala geográfica diz respeito ao recorte e à abrangência da análise; elas se relacionam, mas não são sinônimas.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 70, "x"],
+          "before": "Não.",
+          "after": "Mapas podem adotar diferentes orientações. É preciso verificar a seta, a grade e as convenções indicadas, em vez de presumir que o topo sempre aponta para norte.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 72, "x"],
+          "before": "Não.",
+          "after": "A paisagem pode conter vegetação, rios, construções, vias e outras marcas de processos naturais e sociais. Sua análise vai além da apreciação de uma natureza considerada bonita.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 89, "x"],
+          "before": "Sim.",
+          "after": "O cotidiano pode ser ponto de partida para formular problemas e mobilizar conceitos científicos. Ele não substitui a explicação nem exige abandonar o conhecimento sistematizado.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 94, "x"],
+          "before": "Não.",
+          "after": "Uma investigação geográfica pode relacionar diferentes unidades temáticas da BNCC. A articulação precisa ser justificada pelos objetivos, habilidades e evidências de aprendizagem.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        }
+      ]
+    },
+    {
+      "lessonId": "lesson-5c4795a5ce6d",
+      "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_23_Legislacao_e_Fundamentos_da_Educacao_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "sourceHash": "fd40157267e4c97eca22a5630c7747a85fba34fd0c002155b3dae773e4521ce4",
+      "edits": [
+        {
+          "path": ["G", 26, "x"],
+          "before": "Não.",
+          "after": "O Sistema Nacional de Educação articula a cooperação entre os entes federativos e seus sistemas de ensino. Articulação federativa não significa extinguir os sistemas locais ou transferir todas as decisões a um único ente.",
+          "reason": "Feedback próprio do item, com critério conceitual explícito e sem instruções de edição dirigidas ao estudante."
+        },
+        {
+          "path": ["G", 45, "x"],
+          "before": "Sim.",
+          "after": "A LDB, no art. 24, V, a, prevê avaliação contínua e cumulativa, com prevalência dos aspectos qualitativos e dos resultados ao longo do período. Não exige que a avaliação se reduza a uma prova final.",
+          "reason": "Feedback próprio do item, com critério conceitual explícito e sem instruções de edição dirigidas ao estudante."
+        },
+        {
+          "path": ["G", 49, "x"],
+          "before": "Sim.",
+          "after": "A LDB, no art. 24, V, e, prevê estudos de recuperação, preferencialmente paralelos ao período letivo, para casos de baixo rendimento. Recuperação é uma obrigação pedagógica, não uma prática proibida.",
+          "reason": "Feedback próprio do item, com critério conceitual explícito e sem instruções de edição dirigidas ao estudante."
+        },
+        {
+          "path": ["G", 53, "x"],
+          "before": "Sim.",
+          "after": "O ECA, no art. 53, III, assegura ao estudante o direito de contestar critérios avaliativos e recorrer às instâncias escolares superiores. Esse direito não garante alteração automática da nota.",
+          "reason": "Feedback próprio do item, com critério conceitual explícito e sem instruções de edição dirigidas ao estudante."
+        },
+        {
+          "path": ["G", 60, "x"],
+          "before": "Não.",
+          "after": "A BNCC define aprendizagens essenciais, enquanto o projeto político-pedagógico organiza escolhas e objetivos da instituição. A escola articula ambos sem tratá-los como documentos idênticos.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 95, "x"],
+          "before": "Sim.",
+          "after": "O PPP é um projeto institucional construído coletivamente. Não se confunde com o plano individual de aula ou de trabalho de um único professor.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 97, "x"],
+          "before": "Sim.",
+          "after": "O currículo contextualiza e organiza aprendizagens em diálogo com a BNCC e as diretrizes aplicáveis. Contextualização não significa dispensar essas referências normativas.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 99, "x"],
+          "before": "Sim.",
+          "after": "Leis, normas, dados e editais podem mudar. Uma apostila antiga exige conferência de atualização e de aderência ao concurso; sua idade ou seu título não garantem validade atual.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        }
+      ]
+    },
+    {
+      "lessonId": "lesson-88e4a3826cb5",
+      "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_24_Fundamentos_Pedagogicos_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "sourceHash": "510c9d38be94eed06c1cb68787c0377349a11884ff7a03ccb670c452b34be1b0",
+      "edits": [
+        {
+          "path": ["G", 20, "x"],
+          "before": "Não.",
+          "after": "Scaffolding designa apoio ajustado e temporário que pode ser retirado conforme cresce a autonomia. O termo foi formulado depois de Vygotsky; não deve ser atribuído diretamente a ele.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 33, "x"],
+          "before": "Sim.",
+          "after": "Um erro pode revelar a estratégia ou a hipótese do estudante. É preciso examinar o raciocínio, o contexto e outras evidências antes de inferir capacidade; um erro não demonstra incapacidade fixa.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 36, "x"],
+          "before": "Não.",
+          "after": "A interdisciplinaridade articula contribuições de diferentes campos para compreender problemas. Isso não exige apagar seus conceitos e métodos específicos.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 39, "x"],
+          "before": "Sim.",
+          "after": "O PPP requer participação coletiva da comunidade escolar. A direção tem responsabilidades, mas não detém exclusividade sobre sua elaboração e discussão.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 42, "x"],
+          "before": "Não.",
+          "after": "Autoridade pedagógica pode apoiar-se em conhecimento, responsabilidade e regras justificadas. Autoritarismo envolve imposição arbitrária e não é requisito para ensinar ou organizar a turma.",
+          "reason": "A resposta isolada permitia leitura ambígua e não explicava o julgamento; explicitação do mecanismo, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 46, "x"],
+          "before": "Não.",
+          "after": "A atenção seleciona informações e dispõe de capacidade limitada. Organizar a tarefa e reduzir distrações ajuda a aprendizagem; mais estímulos não garantem maior atenção.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 63, "x"],
+          "before": "Sim.",
+          "after": "Autorregulação envolve planejar, monitorar e avaliar a própria aprendizagem. Pode ser ensinada com orientação e apoios progressivos, que não equivalem a deixar o estudante sozinho.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 66, "x"],
+          "before": "Não.",
+          "after": "Inclusão exige enfrentar barreiras de acesso, participação e aprendizagem. A matrícula é necessária, mas não basta para assegurar essas condições durante o percurso escolar.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 85, "x"],
+          "before": "Sim.",
+          "after": "Uma adaptação pode alterar meios de acesso, tempo ou forma de resposta preservando o objetivo de aprendizagem. Reduzir a complexidade não é uma exigência universal de toda adaptação.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        }
+      ]
+    },
+    {
+      "lessonId": "lesson-ef2039a82c7f",
+      "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_25_Lingua_Portuguesa_FGV_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "sourceHash": "6d306db5b6627ad676b47553fd74a6b4b0ebcbc00036f7e7c3c19abc5e8ddaf6",
+      "edits": [
+        {
+          "path": ["G", 7, "t"],
+          "before": "Pressupõe que nunca estudou.",
+          "after": "A frase “João voltou a estudar” pressupõe que ele nunca estudou antes.",
+          "reason": "Contexto explicitado no próprio item sorteado, mantendo o significado pretendido e o gabarito; justificativa autossuficiente."
+        },
+        {
+          "path": ["G", 7, "x"],
+          "before": "Já estudava antes.",
+          "after": "“Voltou a estudar” pressupõe que João já estudava anteriormente e retomou essa atividade. Portanto, a ideia de que nunca estudou contradiz o pressuposto da frase.",
+          "reason": "Contexto explicitado no próprio item sorteado, mantendo o significado pretendido e o gabarito; justificativa autossuficiente."
+        },
+        {
+          "path": ["G", 14, "x"],
+          "before": "Não.",
+          "after": "Coesão trata de mecanismos de ligação textual; coerência envolve a construção de sentido e compatibilidade no contexto. São dimensões relacionadas, mas distintas.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 18, "x"],
+          "before": "Não.",
+          "after": "Palavras próximas em sentido podem diferir em formalidade, avaliação e contextos de uso. Uma substituição por sinônimo precisa preservar o efeito de sentido no trecho.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 41, "x"],
+          "before": "Sim.",
+          "after": "A classe gramatical depende do funcionamento da palavra no enunciado. A mesma forma pode exercer funções distintas; por exemplo, jantar pode ser verbo ou substantivo conforme o contexto.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 45, "x"],
+          "before": "Sim.",
+          "after": "A voz passiva pode expressar o agente, como em A aula foi preparada pela professora. Sua omissão é possível em certas construções, mas não obrigatória em toda passiva.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 47, "x"],
+          "before": "Sim.",
+          "after": "Na norma-padrão, palavra negativa que incide sobre o verbo favorece a próclise, como em Não me disseram. Negação não exige ênclise.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 78, "x"],
+          "before": "Não.",
+          "after": "A adequação do registro depende de finalidade, interlocutores, gênero e situação comunicativa. Um registro mais formal não é sempre o mais adequado.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 83, "t"],
+          "before": "Mantém sempre formas literais.",
+          "after": "A passagem do discurso direto para o indireto mantém sempre, literalmente, todas as formas do enunciado original.",
+          "reason": "Contexto explicitado no próprio item sorteado, mantendo o significado pretendido e o gabarito; justificativa autossuficiente."
+        },
+        {
+          "path": ["G", 83, "x"],
+          "before": "Sim.",
+          "after": "Pronomes, tempos verbais e referências de lugar ou tempo podem exigir ajustes conforme quem relata, quando e onde. Esses ajustes preservam o sentido em outra situação de enunciação; não há obrigação de reproduzir literalmente todas as formas.",
+          "reason": "Contexto explicitado no próprio item sorteado, mantendo o significado pretendido e o gabarito; justificativa autossuficiente."
+        },
+        {
+          "path": ["G", 86, "x"],
+          "before": "Não.",
+          "after": "O vocativo chama ou interpela o interlocutor e não integra sintaticamente o sujeito ou o predicado. Não deve ser confundido com o sujeito apenas por nomear uma pessoa.",
+          "reason": "A resposta isolada permitia leitura ambígua e não explicava o julgamento; explicitação do mecanismo, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 92, "x"],
+          "before": "Não.",
+          "after": "Em começou a estudar, a palavra a antecede um verbo no infinitivo e não há artigo feminino com o qual a preposição se contraia; por isso não se usa o acento grave.",
+          "reason": "A resposta isolada permitia leitura ambígua e não explicava o julgamento; explicitação do mecanismo, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 96, "x"],
+          "before": "Não.",
+          "after": "Nem todos afirma que há pelo menos uma exceção ao conjunto universal. Não determina que nenhum indivíduo apresente a propriedade; ninguém é uma afirmação mais forte.",
+          "reason": "A resposta isolada permitia leitura ambígua e não explicava o julgamento; explicitação do mecanismo, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 98, "x"],
+          "before": "Não.",
+          "after": "Uma palavra deve expressar com precisão o sentido desejado e ser adequada ao contexto. Raridade ou erudição aparente, sozinhas, não melhoram o texto.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        }
+      ]
+    },
+    {
+      "lessonId": "lesson-7ba8b576bbf8",
+      "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_26_Raciocinio_Logico_FGV_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "sourceHash": "8ff32f317661b530ee392d3a05a2439c546eea154844804340267dcc67c62d2c",
+      "edits": [
+        {
+          "path": ["G", 12, "x"],
+          "before": "Não.",
+          "after": "Os percentuais incidem sobre bases diferentes: 100 × 1,10 × 0,90 = 99. O resultado equivale a 99% do valor inicial, isto é, redução líquida de 1%.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 37, "x"],
+          "before": "Sim.",
+          "after": "Na lógica proposicional introdutória, proposições são enunciados declarativos aos quais se pode atribuir verdadeiro ou falso. Uma pergunta não recebe diretamente esse valor de verdade.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 70, "t"],
+          "before": "A sequência soma 3 a cada termo.",
+          "after": "Na sequência 2, 5, 8, 11, a diferença entre cada termo apresentado e o anterior é 3.",
+          "reason": "Contexto explicitado no próprio item sorteado, mantendo o significado pretendido e o gabarito; justificativa autossuficiente."
+        },
+        {
+          "path": ["G", 70, "x"],
+          "before": "14.",
+          "after": "As diferenças são 5−2=3, 8−5=3 e 11−8=3. Os termos apresentados seguem incrementos de 3.",
+          "reason": "Contexto explicitado no próprio item sorteado, mantendo o significado pretendido e o gabarito; justificativa autossuficiente."
+        },
+        {
+          "path": ["G", 71, "t"],
+          "before": "O próximo termo obrigatório é 13.",
+          "after": "Seguindo a regra de somar 3 ao termo anterior, a sequência 2, 5, 8, 11 terá 13 como próximo termo.",
+          "reason": "Contexto explicitado no próprio item sorteado, mantendo o significado pretendido e o gabarito; justificativa autossuficiente."
+        },
+        {
+          "path": ["G", 71, "x"],
+          "before": "14.",
+          "after": "Pela regra explicitada, 11+3=14. Uma lista finita, sem uma regra ou condição adicional, não determina obrigatoriamente um único próximo termo.",
+          "reason": "Contexto explicitado no próprio item sorteado, mantendo o significado pretendido e o gabarito; justificativa autossuficiente."
+        },
+        {
+          "path": ["G", 73, "t"],
+          "before": "A sequência cresce por soma constante de 2.",
+          "after": "Na sequência 1, 2, 4, 8, os termos apresentados crescem por soma constante de 2.",
+          "reason": "Contexto explicitado no próprio item sorteado, mantendo o significado pretendido e o gabarito; justificativa autossuficiente."
+        },
+        {
+          "path": ["G", 73, "x"],
+          "before": "16 depois 32.",
+          "after": "As diferenças são 1, 2 e 4, portanto não há soma constante de 2. Os termos apresentados seguem duplicação; continuando essa regra, vêm 16 e 32.",
+          "reason": "Contexto explicitado no próprio item sorteado, mantendo o significado pretendido e o gabarito; justificativa autossuficiente."
+        },
+        {
+          "path": ["G", 78, "t"],
+          "before": "Relação de ordem transitiva permite A<C.",
+          "after": "Se A<B e B<C, a transitividade da relação de ordem implica A<C.",
+          "reason": "Contexto explicitado no próprio item sorteado, mantendo o significado pretendido e o gabarito; justificativa autossuficiente."
+        },
+        {
+          "path": ["G", 78, "x"],
+          "before": "A<C.",
+          "after": "A cadeia A<B<C coloca A antes de B e B antes de C. Pela transitividade, A<C; a conclusão depende das duas premissas explicitadas.",
+          "reason": "Contexto explicitado no próprio item sorteado, mantendo o significado pretendido e o gabarito; justificativa autossuficiente."
+        },
+        {
+          "path": ["G", 87, "x"],
+          "before": "Sim.",
+          "after": "Uma variação de 10 unidades representa 10% apenas se a base for 100. A variação percentual depende da base: variação dividida pelo valor inicial, multiplicada por 100.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 93, "x"],
+          "before": "Sim.",
+          "after": "Validade diz respeito à impossibilidade de premissas verdadeiras levarem a conclusão falsa pela forma do argumento. Um argumento pode ser válido e conter premissas factualmente falsas; validade não equivale a solidez.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 95, "x"],
+          "before": "Sim.",
+          "after": "Sequências podem seguir regras aritméticas, geométricas ou outras. É necessário testar uma regra coerente com os dados e com o comando; uma fórmula quadrática não é exigência universal.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 99, "x"],
+          "before": "Sim.",
+          "after": "A solução precisa ser compatível com todas as condições do problema. Satisfazer uma única pista não garante que as demais sejam respeitadas.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        }
+      ]
+    },
+    {
+      "lessonId": "lesson-84d2660bc7cc",
+      "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_27_Atualidades_do_Para_e_Sociedade_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "sourceHash": "6651bd535519689e8c3b6381cc96967fcba9bf67ab17e256ad4607510036278e",
+      "edits": [
+        {
+          "path": ["G", 3, "x"],
+          "before": "Sim.",
+          "after": "Previsão descreve um resultado esperado sob hipóteses e incertezas. Fato consumado exige evidência de que o acontecimento ocorreu; expectativa não é confirmação.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 20, "x"],
+          "before": "Não.",
+          "after": "Investimentos podem beneficiar grupos e áreas de forma desigual. Avaliar distribuição exige observar quem recebe os serviços, em quais lugares e com quais condições de acesso.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 28, "x"],
+          "before": "Não.",
+          "after": "DETER produz alertas operacionais para orientar a fiscalização; PRODES mede o desmatamento em períodos anuais no recorte definido. Seus produtos, métodos e períodos de observação não devem ser tratados como idênticos.",
+          "reason": "Feedback próprio do item, com critério conceitual explícito e sem instruções de edição dirigidas ao estudante."
+        },
+        {
+          "path": ["G", 34, "x"],
+          "before": "Não.",
+          "after": "VBP é uma medida do valor da produção no universo e período definidos. Não corresponde diretamente à renda disponível das famílias, que depende de outras receitas, custos e distribuições.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 40, "x"],
+          "before": "Não.",
+          "after": "Rendimento domiciliar per capita divide os rendimentos do domicílio pelo número de moradores considerado pela pesquisa. Não é a média salarial dos trabalhadores.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 52, "x"],
+          "before": "Não.",
+          "after": "Doses recebidas são insumos disponíveis; cobertura depende de aplicações, esquema vacinal, população-alvo, período e qualidade do registro. A entrega não demonstra, sozinha, quantas pessoas estão protegidas.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 59, "x"],
+          "before": "Sim.",
+          "after": "Indicadores de violência podem usar definições, fontes e períodos diferentes. Comparações exigem verificar universo e método; CVLI, homicídios e registros de ocorrências não são automaticamente intercambiáveis.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 72, "x"],
+          "before": "Não.",
+          "after": "Uma entrega é um produto ou etapa de implementação. Demonstrar impacto requer examinar resultados, período, indicadores e explicações alternativas, não apenas registrar a execução.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 76, "x"],
+          "before": "Não.",
+          "after": "Educação digital envolve condições de acesso, formação, mediação e uso crítico. Dispor de equipamentos ou conexão, isoladamente, não demonstra aprendizagem ou inclusão.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 82, "x"],
+          "before": "Não.",
+          "after": "O tratamento de dados pessoais por sistemas de IA continua sujeito às regras aplicáveis da LGPD. A tecnologia não elimina a necessidade de finalidade, fundamento jurídico e respeito aos direitos dos titulares.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        },
+        {
+          "path": ["G", 96, "x"],
+          "before": "Não.",
+          "after": "O número de compartilhamentos mede circulação, não comprova exatidão. Verificar autoria, evidências, data e contexto é necessário para avaliar a veracidade.",
+          "reason": "A justificativa contradizia o julgamento V/F; substituída por explicação própria da afirmação, mantendo o gabarito."
+        }
+      ]
+    }
+  ]
+}

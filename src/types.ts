@@ -19,6 +19,8 @@ export interface Lesson {
   audited: boolean;
   sourcePath: string;
   sourceHash: string;
+  contentVersion?: string;
+  editorialVersions?: string[];
   legacyUrl: string;
   contentUrl: string;
   storage: { current: string; previous: string | null };

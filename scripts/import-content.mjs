@@ -1,9 +1,10 @@
-import { readFile, writeFile, readdir, mkdir, rm, copyFile } from 'node:fs/promises';
+import { readFile, writeFile, readdir, mkdir, rm } from 'node:fs/promises';
 import { dirname, resolve, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 import { parse as parseScript } from '@babel/parser';
 import { parse as parseHtml } from 'parse5';
+import { loadEditorialRevisions, applyEditorialRevisions } from './editorial-revisions.mjs';
 
 export const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const hash = (value) => createHash('sha256').update(value).digest('hex');
@@ -169,6 +170,10 @@ export async function importContent() {
     outputDir = join(root, 'public/content'),
     legacyDir = join(root, 'public/legacy');
   const names = (await readdir(sourceDir)).filter((file) => file.endsWith('.html')).sort();
+  const revisions = await loadEditorialRevisions(root);
+  for (const revision of revisions)
+    if (!names.some((name) => revision.sourcePath === `MissaoAprovacaoGeo/${name}`))
+      throw new Error(`Fonte de revisão desconhecida: ${revision.sourcePath}`);
   const manifest = {
     schemaVersion: 1,
     lessons: [],
@@ -186,13 +191,17 @@ export async function importContent() {
   };
   const imports = [];
   const archive = [];
+  const published = new Map();
   for (const name of names) {
     const sourcePath = `MissaoAprovacaoGeo/${name}`,
       bytes = await readFile(join(sourceDir, name)),
       source = bytes.toString('utf8');
+    const revision = applyEditorialRevisions(source, sourcePath, revisions, literal);
+    published.set(name, revision.source);
     const sourceHash = hash(bytes),
+      contentVersion = hash(revision.source),
       id = `lesson-${hash(sourcePath).slice(0, 12)}`,
-      extracted = extract(source, sourcePath);
+      extracted = extract(revision.source, sourcePath);
     const legacyUrl = `legacy/${name}`;
     if (!extracted.banks.B) {
       manifest.resources.push({
@@ -200,6 +209,8 @@ export async function importContent() {
         title: extracted.title,
         sourcePath,
         sourceHash,
+        contentVersion,
+        editorialVersions: revision.versions,
         legacyUrl,
       });
     } else {
@@ -236,6 +247,8 @@ export async function importContent() {
         audited: name.includes('AUDITADA') || extracted.title.includes('Auditada'),
         sourcePath,
         sourceHash,
+        contentVersion,
+        editorialVersions: revision.versions,
         legacyUrl,
         contentUrl: `content/${id}.json`,
         storage: {
@@ -247,6 +260,8 @@ export async function importContent() {
         legacyQuestionOptions,
       };
       if (lesson.category === 'Cartografia') {
+        if (revision.versions.length)
+          throw new Error(`${sourcePath}: fonte canônica arquivada não admite revisão legada.`);
         archive.push(lesson);
         const { id, sourceHash, storage } = lesson;
         manifest.legacyBackupSources.push({ id, sourceHash, storage });
@@ -258,7 +273,10 @@ export async function importContent() {
         value: {
           schemaVersion: 1,
           lessonId: id,
-          contentVersion: sourceHash,
+          contentVersion,
+          sourceHash,
+          editorialVersions: revision.versions,
+          editorialChanges: revision.edits,
           sourcePath,
           ...extracted,
         },
@@ -284,7 +302,7 @@ export async function importContent() {
   await rm(legacyDir, { recursive: true, force: true });
   await mkdir(outputDir, { recursive: true });
   await mkdir(legacyDir, { recursive: true });
-  for (const name of names) await copyFile(join(sourceDir, name), join(legacyDir, name));
+  for (const name of names) await writeFile(join(legacyDir, name), published.get(name));
   for (const entry of imports)
     await writeFile(join(outputDir, entry.file), JSON.stringify(entry.value));
   await writeFile(join(outputDir, 'catalog.json'), JSON.stringify(manifest));
@@ -293,7 +311,7 @@ export async function importContent() {
     JSON.stringify({ schemaVersion: 1, lessons: archive, historicalTotals }),
   );
   console.log(
-    `Importação íntegra: ${names.length} HTMLs preservados; ${manifest.lessons.length} materiais de outros módulos; ${archive.length} fontes de Cartografia somente no arquivo de auditoria.`,
+    `Importação íntegra: ${names.length} fontes preservadas; ${manifest.lessons.length} materiais ativos com revisões versionadas; ${archive.length} fontes de Cartografia somente no arquivo de auditoria.`,
   );
   return manifest;
 }

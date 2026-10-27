@@ -1,0 +1,17 @@
+Importação íntegra: 31 fontes preservadas; 26 materiais ativos com revisões versionadas; 4 fontes de Cartografia somente no arquivo de auditoria.
+✔ os 31 HTMLs históricos permanecem byte a byte iguais; somente cópias com revisão mudam (105.309599ms)
+✔ contagens de cada página coincidem com a auditoria independente (0.759467ms)
+✔ evocação, suplementos, fontes e estruturas completas sobrevivem à extração (69.888461ms)
+✔ fontes de Cartografia ficam apenas no arquivo de auditoria, com IDs e chaves preservados (0.565886ms)
+✔ importador recusa executar expressões de código dentro dos dados (1.480124ms)
+✔ conteúdo publicado difere do histórico exclusivamente nos campos editoriais revisados (1564.933743ms)
+✔ revisão interrompe a importação diante de fonte divergente, caminho proibido ou duplicata (80.931707ms)
+✔ texto editorial com delimitador HTML permanece dado literal, sem fechar o script (36.854414ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1881.007855

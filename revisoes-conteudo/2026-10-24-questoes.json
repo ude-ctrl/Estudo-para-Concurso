@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "version": "2026-10-24-questoes.1",
+  "lessons": [
+    {
+      "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_12_Geografia_Agraria.html",
+      "sourceHash": "2c9d1013b3b4d9c7510232089252390dc14eb84535ef3cdb7513f8d0e296cf1a",
+      "lessonId": "lesson-529cc23823f6",
+      "edits": [
+        {
+          "path": ["B", 7, "qs", 0, "p"],
+          "before": "Qual característica, isoladamente, NÃO basta para classificar um estabelecimento como agricultura familiar?",
+          "after": "Um candidato classificou um estabelecimento como agricultura familiar apenas porque ele ocupa dois módulos fiscais, sem informações sobre trabalho, renda e gestão. Qual característica foi indevidamente tomada como suficiente nesse raciocínio?",
+          "reason": "Eliminar múltiplas respostas defensáveis no comando anterior; preservar opções e gabarito."
+        },
+        {
+          "path": ["B", 7, "qs", 0, "e"],
+          "before": "Área é apenas um dos critérios; a classificação exige combinação de requisitos.",
+          "after": "O candidato usou apenas a área. Ela é um dos critérios e não comprova, sozinha, o enquadramento como agricultura familiar: também é necessário verificar os requisitos legais de trabalho, renda e direção do estabelecimento. No caso apresentado, essas informações não foram fornecidas.",
+          "reason": "Explicar a insuficiência do dado isolado no caso apresentado."
+        },
+        {
+          "path": ["B", 7, "qs", 0, "x"],
+          "before": [
+            "Correta. Pequeno tamanho isolado não determina agricultura familiar.",
+            "É um dos critérios relevantes, mas deve vir combinado aos demais.",
+            "Também é requisito legal, combinado a outros.",
+            "Esta é justamente a forma adequada de classificação."
+          ],
+          "after": [
+            "Correta. O único dado usado foi a área de dois módulos fiscais. O erro foi tratar esse dado como suficiente, sem verificar os demais critérios legais.",
+            "A predominância da mão de obra familiar não foi informada no caso. Ela integra os critérios legais, mas não foi o dado usado pelo candidato para chegar à conclusão.",
+            "A direção pela família também não foi informada. É um critério que deve ser verificado, não a informação isolada usada nesse raciocínio.",
+            "O candidato não verificou os critérios combinados: baseou-se apenas na área. Conferir os requisitos legais em conjunto é o procedimento que evitaria a conclusão indevida."
+          ],
+          "reason": "Adequar cada justificativa ao caso, sem declarar que trabalho ou gestão familiar bastam isoladamente."
+        }
+      ],
+      "runtimeFixes": ["agriculture-family-feedback"]
+    },
+    {
+      "sourcePath": "MissaoAprovacaoGeo/SEDUC_PA_Tema_26_Raciocinio_Logico_FGV_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+      "sourceHash": "8ff32f317661b530ee392d3a05a2439c546eea154844804340267dcc67c62d2c",
+      "lessonId": "lesson-7ba8b576bbf8",
+      "edits": [
+        {
+          "path": ["X", "b_17_0"],
+          "before": ["Correto.", "Sem subtrair dupla contagem.", "Não.", "Não."],
+          "after": [
+            "Correta. A soma 20 + 15 conta os cinco elementos da interseção duas vezes. Subtraindo uma dessas contagens: 20 + 15 − 5 = 30.",
+            "40 resulta de 20 + 15 + 5, somando novamente a interseção. A correção da dupla contagem exige subtrair 5, não acrescentar 5.",
+            "25 resulta de 20 + 15 − 5 − 5, retirando a interseção duas vezes. Os elementos comuns devem aparecer uma vez na união; por isso, basta uma subtração.",
+            "35 é apenas 20 + 15. Nessa soma, os cinco elementos comuns foram contados duas vezes; desconte uma contagem de 5 para obter 30."
+          ],
+          "reason": "Associar cada distrator ao cálculo que efetivamente produz seu valor; preservar união correta de 30."
+        }
+      ],
+      "runtimeFixes": ["escape-question-text"]
+    }
+  ]
+}
