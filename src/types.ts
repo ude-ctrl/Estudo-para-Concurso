@@ -71,6 +71,13 @@ export interface Progress {
 }
 
 export interface StudyModule {
+  legacyLessonIds?: string[];
+  href?: string;
+  description?: string;
+  keywords?: string;
+  sectionIds?: string[];
+  cardIds?: string[];
+  itemIds?: string[];
   schemaVersion: 1;
   id: string;
   title: string;

@@ -79,7 +79,7 @@ function resignFixture(x) {
   x.audit.human_approval.reviewed_digest = reviewDigest(x);
 }
 
-test('catálogo mantém os 28 IDs oficiais e habilita somente Cartografia no consumidor atual', async () => {
+test('catálogo mantém os 28 IDs oficiais e habilita Fundamentos e Cartografia no consumidor atual', async () => {
   const registry = JSON.parse(await readFile(resolve(baseRoot, 'manifest.json'), 'utf8'));
   const doc = await readFile(
     resolve(root, 'MissaoAprovacaoGeo/V6_CORRECOES_E_LACUNAS_FASE13.md'),
@@ -105,7 +105,9 @@ test('catálogo mantém os 28 IDs oficiais e habilita somente Cartografia no con
     registry.units.every((u) =>
       ids.includes(u.unit_id)
         ? u.canonical_version === '1.0.1' && u.runtime_enabled === true
-        : u.canonical_version === null && u.runtime_enabled === false,
+        : u.unit_id === 'fundamentos-geografia'
+          ? u.canonical_version === '1.0.0' && u.runtime_enabled === true
+          : u.canonical_version === null && u.runtime_enabled === false,
     ),
   );
 });
@@ -749,7 +751,13 @@ const currentMap = () =>
 
 test('0.1.2 continua íntegra após a promoção e preserva as identidades, alternativas e gabaritos de 0.1.1', async () => {
   const result = await validateLot(baseRoot, { at: releaseAt });
-  assert.ok(result.summaries.every((s) => (s.unit === 'fundamentos-geografia' ? s.version === '1.0.0' : s.version === '1.0.1') && s.approved));
+  assert.ok(
+    result.summaries.every(
+      (s) =>
+        (s.unit === 'fundamentos-geografia' ? s.version === '1.0.0' : s.version === '1.0.1') &&
+        s.approved,
+    ),
+  );
   assert.equal(result.canonicalUnits, 4);
   assert.equal(result.untouchedUnits, 24);
   for (const [i, next] of current.entries()) {
@@ -1028,7 +1036,7 @@ test('referência vencida bloqueia edição ativa, mas não invalida aprovação
     () => validateBundle(canonical[0], { approved: true, at: releaseAt }),
     /Dado temporal vencido/,
   );
-  assert.equal((await validateLot(baseRoot, { at: releaseAt })).canonicalUnits, 3);
+  assert.equal((await validateLot(baseRoot, { at: releaseAt })).canonicalUnits, 4);
   await assert.rejects(
     validateLot(baseRoot, { at: '2026-11-18T00:00:00Z' }),
     /Dado temporal vencido: perfil-seduc-pa-2026/,

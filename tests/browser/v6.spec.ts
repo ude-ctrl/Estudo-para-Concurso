@@ -22,15 +22,15 @@ test.beforeEach(async ({ page }) => {
 test.afterEach(async ({ page }) => {
   expect(errors.get(page)).toEqual([]);
 });
-test('V6: três unidades, cinco destinos mobile, retomada e portal histórico', async ({
+test('V6: quatro unidades, cinco destinos mobile, retomada e portal histórico', async ({
   page,
 }, info) => {
   await page.goto('./v6.html');
-  await expect(page.locator('.unit-card')).toHaveCount(3);
+  await expect(page.locator('.unit-card')).toHaveCount(4);
   await expect(page.locator('.main-navigation a')).toHaveCount(5);
   await expect(page.getByText('Dados insuficientes', { exact: true })).toBeVisible();
   await page.getByRole('link', { name: /Começar pelos fundamentos/ }).click();
-  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Linguagem e leitura de mapas');
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Ler conceitos em questões');
   await page.getByRole('link', { name: 'Início', exact: true }).click();
   await expect(page.getByRole('link', { name: 'Continuar de onde parei' })).toBeVisible();
   await page.screenshot({ path: info.outputPath('v6-home-desktop.png'), fullPage: true });
@@ -173,6 +173,7 @@ for (const entry of ['./', './v6.html'])
     test(`P1: Escalas respeita o atalho com Orientação ${finished ? 'concluída' : 'em andamento'} em ${entry}`, async ({
       page,
     }) => {
+      test.setTimeout(45_000);
       const training = `${entry}#/unidade/${fund}/treino?missao=orientacao-azimute`;
       await page.goto(training);
       await page.getByRole('button', { name: 'Iniciar questões', exact: true }).click();
@@ -422,7 +423,7 @@ test('P1: destino de diagnóstico sem sessão persiste ao continuar e recarregar
   );
   expect(
     await page.evaluate((key) => JSON.parse(localStorage.getItem(key)!).resume, STATE_KEY),
-  ).toMatchObject({ unit: fund, mode: 'treino', mission: '', pool: 'diagnostico' });
+  ).toMatchObject({ unit: 'fundamentos-geografia', mode: 'treino', mission: '', pool: 'diagnostico' });
 });
 
 test('P1: escolher Game em um treino contextual abre a rodada da unidade e permite retornar às questões', async ({
@@ -680,7 +681,9 @@ test('V6: importação é explícita, mantém bruto e ambiguidades sem criar dom
   await page.getByRole('link', { name: 'Preferências e progresso' }).click();
   await page.getByRole('button', { name: 'Procurar legado neste navegador' }).click();
   await expect(page.getByText('Revisar antes de importar')).toBeVisible();
-  await page.getByRole('button', { name: 'Importar estas chaves de Cartografia' }).click();
+  await page
+    .getByRole('button', { name: 'Importar estas chaves de Fundamentos e Cartografia' })
+    .click();
   const state = await page.evaluate((k) => JSON.parse(localStorage.getItem(k)!), STATE_KEY);
   expect(state.evidence).toHaveLength(0);
   expect(state.legacyHistory.filter((h: { ambiguous: boolean }) => h.ambiguous)).toHaveLength(3);

@@ -1,3 +1,4 @@
+import { moduleView, moduleTitles, type ModuleId } from './modules';
 import { Check, Compass, Flag, RotateCcw, Sparkles, Target, Volume2 } from 'lucide-react';
 import { useV6 } from './context';
 import { mastery, streak } from './engine';
@@ -72,12 +73,19 @@ export function JourneyMap({ unit, current }: { unit?: UnitId; current?: string 
   return (
     <section
       className={'journey-map' + (unit ? ' journey-compact' : '')}
-      aria-label="Expedição Cartográfica"
+      aria-label={
+        unit && unit !== 'fundamentos-geografia'
+          ? 'Expedição Cartográfica'
+          : 'Percurso de Geografia'
+      }
     >
       <div className="journey-heading">
         <div>
           <span className="eyebrow">
-            <Compass size={16} aria-hidden="true" /> Expedição Cartográfica
+            <Compass size={16} aria-hidden="true" />{' '}
+            {unit && unit !== 'fundamentos-geografia'
+              ? 'Expedição Cartográfica'
+              : 'Percurso de Geografia'}
           </span>
           <h2>{unit ? 'Sua missão no percurso' : 'Um caminho, muitos raciocínios.'}</h2>
         </div>
@@ -185,19 +193,26 @@ export function ProgressionPanel() {
           Melhor sequência <b>{bestStreak(state)} dia(s)</b>
         </span>
       </div>
-      {expeditionComplete(content, state) && <ExpeditionSummary />}
+      {(['cartografia', 'fundamentos'] as ModuleId[]).map(
+        (module) =>
+          expeditionComplete(content, state, [], module) && (
+            <ExpeditionSummary key={module} module={module} />
+          ),
+      )}
     </section>
   );
 }
 
-export function ExpeditionSummary() {
-  const { content, state } = useV6();
+export function ExpeditionSummary({ module = 'cartografia' }: { module?: ModuleId }) {
+  const { content: allContent, state } = useV6();
+  const content = moduleView(allContent, module);
   const completed = content.missions.filter(
     (mission) => missionJourney(content, state, mission, Date.now()).complete,
   ).length;
   const bosses = content.units.filter((unit) => state.milestones?.['boss:' + unit.id]).length;
   const converted = Object.values(state.errors).filter(
-    (error) => error.status === 'dominado-apos-erro',
+    (error) =>
+      error.status === 'dominado-apos-erro' && content.units.some((u) => u.id === error.unit),
   ).length;
   const reviews = content.cards.map((card) => state.reviews[card.id]).filter(Boolean);
   const next = reviews
@@ -206,7 +221,9 @@ export function ExpeditionSummary() {
     .sort((a, b) => a - b)[0];
   return (
     <details className="expedition-summary">
-      <summary>Expedição concluída · ver percurso e próximas revisões</summary>
+      <summary>
+        Expedição concluída · {moduleTitles[module]} · ver percurso e próximas revisões
+      </summary>
       <p>
         {completed}/{content.missions.length} missões com leitura e recuperação · {bosses}/
         {content.units.length} Chefões superados · {converted} erro(s) convertido(s) em domínio.
@@ -229,7 +246,9 @@ export function ExpeditionSummary() {
           ? ` Próximo vencimento: ${new Date(next).toLocaleDateString('pt-BR')}.`
           : ' Sua agenda continuará acompanhando as próximas recuperações.'}
       </p>
-      <a href={`#/unidade/${state.resume?.unit || content.units[0].id}/revisao`}>
+      <a
+        href={`#/unidade/${content.units.find((u) => u.id === state.resume?.unit)?.id || content.units[0].id}/revisao`}
+      >
         Consultar revisões →
       </a>
     </details>

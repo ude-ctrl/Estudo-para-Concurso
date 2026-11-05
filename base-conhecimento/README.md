@@ -1,5 +1,8 @@
 # Base de Conhecimento V6
 
+**Integração em revisão:** Fundamentos `1.0.0` e as três unidades de Cartografia `1.0.1` estão habilitadas nesta branch. A aprovação editorial foi delegada à IA; não há homologação humana nova. Os pacotes canônicos permanecem intactos.
+
+
 **Estado desta branch:** as três unidades de Cartografia têm edição **`1.0.1`, `APROVADA_CANONICA`**, com consumo habilitado. A [revisão temporal de 04/11/2026](../MissaoAprovacaoGeo/V6_REVISAO_TEMPORAL_2026_11_04.md) preserva integralmente conteúdo e suporte de `1.0.0` e mantém o parecer pedagógico anterior identificado como herdado. Novas verificações são exclusivamente das referências documentadas. Edições anteriores permanecem intactas. Não houve merge/publicação desta rodada nem homologação humana nova.
 
 A versão ativa continua exigindo referências dentro do prazo. Aprovações arquivadas são validadas na data do próprio parecer, sem reabrir HTMLs, renovar datas retroativamente ou dispensar hashes e cadeia de versões.

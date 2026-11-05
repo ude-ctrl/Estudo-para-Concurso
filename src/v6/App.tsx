@@ -42,7 +42,12 @@ function parseRoute(): Route {
   }
   const p = url.pathname.split('/'),
     unit = (
-      ['cartografia-fundamentos', 'cartografia-representacao', 'geotecnologias'].includes(p[2])
+      [
+        'fundamentos-geografia',
+        'cartografia-fundamentos',
+        'cartografia-representacao',
+        'geotecnologias',
+      ].includes(p[2])
         ? p[2]
         : firstUnit
     ) as UnitId,
@@ -115,7 +120,7 @@ function Settings({
       } else if (obj.schemaVersion === 1 && typeof obj.legacyStorage?.[STATE_KEY] === 'string') {
         setRestore(obj.legacyStorage[STATE_KEY]);
         setReports([
-          'Cópia da biblioteca identificada. Restaurar recupera o progresso de Cartografia; os demais temas permanecem separados.',
+          'Cópia da biblioteca identificada. Restaurar recupera o progresso da V6; os demais temas permanecem separados.',
         ]);
       } else if (obj.schemaVersion === 1 && obj.legacyStorage) {
         const allowed = new Set(
@@ -124,10 +129,11 @@ function Settings({
         const found = Object.entries(obj.legacyStorage)
           .filter(([key, value]) => allowed.has(key) && typeof value === 'string')
           .map(([key, raw]) => ({ key, raw: raw as string }));
-        if (!found.length) throw Error('A cópia não contém chaves de Cartografia reconhecidas.');
+        if (!found.length)
+          throw Error('A cópia não contém chaves de Fundamentos e Cartografia reconhecidas.');
         setPreview(found);
         setReports([
-          'Cópia histórica reconhecida. Apenas as chaves de Cartografia serão importadas.',
+          'Cópia histórica reconhecida. Apenas as chaves de Fundamentos e Cartografia serão importadas.',
         ]);
       } else
         throw Error('Formato não reconhecido. Use exportação V6 ou a cópia do portal histórico.');
@@ -264,7 +270,7 @@ function Settings({
                 notify('Importação concluída. Consulte o relatório abaixo.');
               }}
             >
-              Importar estas chaves de Cartografia
+              Importar estas chaves de Fundamentos e Cartografia
             </button>
           </>
         )}
@@ -309,17 +315,18 @@ function Settings({
       <section className="panel">
         <h2>Rastreabilidade e fontes</h2>
         <p>
-          Foram preservadas as três fontes principais e incorporados três itens exclusivos da versão
-          secundária de Cartografia II. Cada recurso migrado registra <code>legacy_source</code>,{' '}
-          <code>legacy_id</code> e hash do conteúdo original.
+          Fundamentos preserva a procedência do Tema 01. Cartografia preserva as três fontes
+          principais e três itens exclusivos da versão secundária de Cartografia II. Cada recurso
+          migrado registra <code>legacy_source</code>, <code>legacy_id</code> e hash do conteúdo
+          original.
         </p>
         <p>
-          <a href="./v6/cartografia.json" target="_blank" rel="noreferrer">
+          <a href="./v6/plataforma.json" target="_blank" rel="noreferrer">
             Registro integral de conteúdo, variantes e procedência (JSON)
           </a>{' '}
           ·{' '}
           <a
-            href="https://github.com/ude-ctrl/Estudo-para-Concurso/blob/v6-base-canonica/MissaoAprovacaoGeo/V6_ISSUE13_PARIDADE_INTEGRACAO.json"
+            href="https://github.com/ude-ctrl/Estudo-para-Concurso/blob/v6-integracao-fundamentos/MissaoAprovacaoGeo/V6_FUNDAMENTOS_INTEGRACAO_PARIDADE.json"
             target="_blank"
             rel="noreferrer"
           >
@@ -591,7 +598,7 @@ function Workspace({ content }: { content: Content }) {
           </span>
           <span>
             Missão Aprovação <b>Geo</b>
-            <small>Cartografia e Geotecnologias</small>
+            <small>Fundamentos e Cartografia</small>
           </span>
         </a>
         <div className="header-tools">
@@ -633,7 +640,7 @@ function Workspace({ content }: { content: Content }) {
         </nav>
         <main id="conteudo" ref={main} tabIndex={-1}>
           <div className="breadcrumb">
-            <a href="#/">Cartografia</a>
+            <a href="#/">Início V6</a>
             <span>/</span>
             <span>
               {route.page === 'home'
@@ -734,7 +741,7 @@ export function App() {
     [retry, setRetry] = useState(0);
   useEffect(() => {
     const controller = new AbortController();
-    fetch('./v6/cartografia.json', { signal: controller.signal })
+    fetch('./v6/plataforma.json', { signal: controller.signal })
       .then((r) => {
         if (!r.ok) throw Error('Falha ' + r.status);
         return r.json();
@@ -742,7 +749,7 @@ export function App() {
       .then((data) => {
         if (
           data.version !== '6.1.0-canonica.1' ||
-          data.units?.length !== 3 ||
+          data.units?.length !== 4 ||
           !Array.isArray(data.questions) ||
           !data.editorial?.release ||
           !data.support?.visuals
@@ -763,7 +770,7 @@ export function App() {
     </Boundary>
   ) : (
     <main className="load-state">
-      <h1>Cartografia e Geotecnologias</h1>
+      <h1>Missão Aprovação Geo V6</h1>
       <p role="status">{error || 'Preparando seu percurso de estudo…'}</p>
       {error && (
         <button

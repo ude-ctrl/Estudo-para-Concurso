@@ -19,7 +19,7 @@
       "initial_snapshot_version": "0.1.0",
       "canonical_version": "1.0.0",
       "audit_started": true,
-      "runtime_enabled": false
+      "runtime_enabled": true
     },
     {
       "unit_id": "cartografia-fundamentos",

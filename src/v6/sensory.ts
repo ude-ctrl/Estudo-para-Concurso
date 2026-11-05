@@ -1,3 +1,4 @@
+import { moduleView, type ModuleId } from './modules.ts';
 import { DAY, totalXP } from './engine.ts';
 import type { Milestone } from './recognition.ts';
 import type { Content, Experience, Mission, Sound, State } from './types.ts';
@@ -44,7 +45,13 @@ export function missionComplete(mission: Mission, state: State) {
   );
 }
 
-export function expeditionComplete(content: Content, state: State, newMilestones: string[] = []) {
+export function expeditionComplete(
+  content: Content,
+  state: State,
+  newMilestones: string[] = [],
+  module: ModuleId = 'cartografia',
+) {
+  content = moduleView(content, module);
   return (
     content.units.length > 0 &&
     content.missions.length > 0 &&

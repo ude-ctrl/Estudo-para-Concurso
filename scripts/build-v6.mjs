@@ -14,18 +14,38 @@ const unitIds = ['cartografia-fundamentos', 'cartografia-representacao', 'geotec
 const runtimeVersion = '6.1.0-canonica.1';
 
 // Cartography is assembled only from approved, versioned bases. There is no legacy fallback.
-export async function buildV6({ baseRoot = resolve(root, 'base-conhecimento'), at } = {}) {
+export async function buildV6(options = {}) {
+  return assemble(unitIds, 'cartografia', options);
+}
+
+export async function buildPlatform(options = {}) {
+  return assemble(['fundamentos-geografia', ...unitIds], 'plataforma', options);
+}
+
+async function assemble(
+  allowed,
+  scope,
+  { baseRoot = resolve(root, 'base-conhecimento'), at } = {},
+) {
   await validateLot(baseRoot, { at });
   const registry = JSON.parse(await readFile(resolve(baseRoot, 'manifest.json'), 'utf8'));
-  const entries = registry.units.filter((u) => u.runtime_enabled);
-  if (entries.length !== unitIds.length || entries.some((u, i) => u.unit_id !== unitIds[i]))
-    throw Error('Consumo fora das três unidades autorizadas de Cartografia');
+  const enabled = registry.units.filter((u) => u.runtime_enabled);
+  if (enabled.some((u) => !['fundamentos-geografia', ...unitIds].includes(u.unit_id)))
+    throw Error('Consumo fora das unidades autorizadas');
+  const entries = enabled.filter((u) => allowed.includes(u.unit_id));
+  if (entries.length !== allowed.length || entries.some((u, i) => u.unit_id !== allowed[i]))
+    throw Error('Unidades autorizadas ausentes: ' + scope);
   const bundles = [];
   const retiredOptions = [];
   for (const entry of entries) {
     await loadApprovedUnit(baseRoot, entry.unit_id, entry.canonical_version, { at });
     const bundle = await readBundle(baseRoot, entry.unit_id, entry.canonical_version);
-    if (!bundle.base.metadata.consumer_requirements.active)
+    const contract = bundle.base.metadata.consumer_requirements;
+    if (
+      !(entry.unit_id === 'fundamentos-geografia'
+        ? contract.contract === 'canonical-fundamentos-v1'
+        : contract.active)
+    )
       throw Error('Contrato do consumidor não habilitado: ' + entry.unit_id);
     bundles.push(bundle);
     let parent = bundle;
@@ -80,7 +100,8 @@ export async function buildV6({ baseRoot = resolve(root, 'base-conhecimento'), a
     ),
     editorial: {
       release:
-        'cartografia@' +
+        scope +
+        '@' +
         bundles.map((b) => b.base.editorial_version).join('+') +
         ':' +
         sha(versions).slice(0, 16),
@@ -105,14 +126,14 @@ export async function buildV6({ baseRoot = resolve(root, 'base-conhecimento'), a
     source: 'approved-canonical-bases',
     source_versions: versions,
     sources: content.sources,
-    secondary: bundles[0].provenance.secondary,
+    secondary: bundles.find((b) => b.provenance.secondary)?.provenance.secondary,
     counts: {
       stages: content.missions.reduce((n, m) => n + m.sections.length, 0),
       questions: content.questions.length,
-      legacyQuestions: archive.filter((a) => a.kind === 'question').length,
+      legacyQuestions: archive.filter((a) => ['question', 'questions'].includes(a.kind) && Array.isArray(a.original?.o)).length,
       authored: bundles.reduce((n, b) => n + b.provenance.authored_question_ids.length, 0),
       cards: content.cards.length,
-      legacyCards: archive.filter((a) => a.kind === 'card').length,
+      legacyCards: archive.filter((a) => ['card', 'cards'].includes(a.kind)).length,
       game: content.game.length,
       legacyGame: archive.filter((a) => a.kind === 'game').length,
       recalls: archive.filter((a) => a.kind === 'recall').length,
@@ -147,12 +168,67 @@ export async function buildV6({ baseRoot = resolve(root, 'base-conhecimento'), a
   return { content, parity, library };
 }
 
+export function moduleIndex(content, id, title, category, number, unitIds, description, keywords) {
+  const selected = (items) => items.filter((item) => unitIds.includes(item.unit));
+  const missions = selected(content.missions);
+  return {
+    schemaVersion: 1,
+    id,
+    title,
+    category,
+    number,
+    description,
+    keywords,
+    href: `v6.html#/unidade/${unitIds[0]}/estudo`,
+    units: content.units.filter((u) => unitIds.includes(u.id)),
+    counts: {
+      stages: missions.reduce((n, m) => n + m.sections.length, 0),
+      questions: selected(content.questions).length,
+      flashcards: selected(content.cards).length,
+      game: selected(content.game).length,
+    },
+    legacyLessonIds: id === 'module-fundamentos' ? ['lesson-ff1de1c07eb3'] : [],
+    questionIds: selected(content.questions).map((q) => q.id),
+    sectionIds: missions.flatMap((m) => m.sections.map((s) => s.id)),
+    cardIds: selected(content.cards).map((c) => c.id),
+    itemIds: ['questions', 'cards', 'game', 'writing'].flatMap((key) =>
+      selected(content[key]).map((item) => item.id),
+    ),
+  };
+}
+
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const { content, parity, library } = await buildV6();
+  const platform = await buildPlatform();
+  const modules = [
+    moduleIndex(
+      platform.content,
+      'module-fundamentos',
+      'Fundamentos, Conceitos e Autores',
+      'Fundamentos',
+      1,
+      ['fundamentos-geografia'],
+      'Conceitos, correntes e autores para interpretar o espaço e ensinar Geografia.',
+      'tema 01 espaço lugar paisagem região território redes autores escolas conceitos',
+    ),
+    moduleIndex(
+      platform.content,
+      'module-cartografia',
+      library.title,
+      'Cartografia',
+      2,
+      unitIds,
+      'Orientação, representação do espaço e geotecnologias em um único percurso.',
+      'mapas coordenadas escalas projeções sensoriamento remoto SIG fusos tema 02 tema 03 tema 17',
+    ),
+  ];
   await mkdir(resolve(root, 'public/v6'), { recursive: true });
   for (const [path, value] of [
     ['public/v6/cartografia.json', content],
     ['public/v6/library.json', library],
+    ['public/v6/plataforma.json', platform.content],
+    ['public/v6/modules.json', { schemaVersion: 1, modules }],
+    ['MissaoAprovacaoGeo/V6_FUNDAMENTOS_INTEGRACAO_PARIDADE.json', platform.parity],
     ['MissaoAprovacaoGeo/V6_ISSUE13_PARIDADE_INTEGRACAO.json', parity],
   ]) {
     const serialized = JSON.stringify(value, null, 2) + '\n';

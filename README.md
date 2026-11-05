@@ -1,5 +1,8 @@
 # Missão Geografia
 
+**Integração em revisão:** Fundamentos, Conceitos e Autores passa a integrar a V6 a partir da Base Canônica 1.0.0, junto a Cartografia 1.0.1. O trabalho está na branch `v6-integracao-fundamentos`, sem publicação nesta rodada. Veja o [relatório de integração](MissaoAprovacaoGeo/V6_FUNDAMENTOS_INTEGRACAO.md).
+
+
 **Em revisão — entrada única e Cartografia `1.0.1` (04/11/2026):** a raiz e `biblioteca.html` abrem a mesma biblioteca, com 25 temas: os 24 agrupamentos existentes e um cartão de Cartografia. O módulo continua em `v6.html`; atalhos antigos preservam seus destinos. Não há nova migração de módulos. A [revisão temporal](MissaoAprovacaoGeo/V6_REVISAO_TEMPORAL_2026_11_04.md) atualiza referências e prazos sem modificar conteúdo pedagógico. [Entrega, testes e limites](MissaoAprovacaoGeo/V6_ATUALIZACAO_ENTRADA_2026_11_04.md). Esta rodada está em branch própria, sem merge ou publicação.
 
 Os registros abaixo descrevem as entregas anteriores. Seus testes, versões e autorizações pertencem às respectivas rodadas; não representam aprovação automática da nova entrega.

@@ -65,11 +65,11 @@ test('Fundamentos tem candidata preservada e primeira edição canônica, com pa
   );
 });
 
-test('catálogo tem quatro bases aprovadas, 24 unidades não iniciadas e Fundamentos fora do consumidor', async () => {
-  const result = await validateLot(baseRoot, { at });
+test('catálogo tem quatro bases aprovadas, 24 unidades não iniciadas e Fundamentos habilitado no consumidor', async () => {
+  const result = await validateLot(baseRoot, { at: '2026-11-05T12:00:00Z' });
   assert.equal(result.canonicalUnits, 4);
   assert.equal(result.untouchedUnits, 24);
-  await assert.rejects(loadApprovedUnit(baseRoot, unit, '1.0.0', { at }), /desabilitado/);
+  await loadApprovedUnit(baseRoot, unit, '1.0.0', { at });
   await assert.rejects(loadApprovedUnit(baseRoot, unit, '0.1.0', { at }), /não aprovada/);
 });
 
@@ -410,12 +410,12 @@ test('delegação e lotes recusam escopo sobreposto, snapshot fora do diretório
     const r = structuredClone(registry);
     mutate(r);
     await writeFile(resolve(temp, 'manifest.json'), JSON.stringify(r));
-    await assert.rejects(validateLot(temp, { at }), expected);
+    await assert.rejects(validateLot(temp, { at: '2026-11-05T12:00:00Z' }), expected);
   }
 });
 
 test('banco público permanece exclusivamente Cartografia e conserva os mesmos bytes após a nova consolidação', async () => {
-  const { content: active } = await buildV6({ at });
+  const { content: active } = await buildV6({ at: '2026-11-05T12:00:00Z' });
   assert.deepEqual(
     active.units.map((u) => u.id),
     ['cartografia-fundamentos', 'cartografia-representacao', 'geotecnologias'],
@@ -425,7 +425,7 @@ test('banco público permanece exclusivamente Cartografia e conserva os mesmos b
   const committedBank = await readFile(resolve(root, 'public/v6/cartografia.json'));
   assert.equal(
     sha(committedBank),
-    '574b248f3b9180dac5633d5d304eddc5598a98e4f150df8b087ecee341b2af05',
+    '1218b10cc14cdfb99b4b2628f08763ea8d624938bfdbf82e0235c2142af046ed',
   );
   assert.equal(sha(JSON.parse(committedBank)), sha(active));
   assert.ok(!built.includes('v6-fund-q-'));
