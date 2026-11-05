@@ -74,7 +74,7 @@ export function Home() {
   return (
     <>
       <div className="welcome">
-        <span className="eyebrow">Hoje · Seu percurso V6</span>
+        <span className="eyebrow">Hoje · Seu percurso de estudo</span>
         <h1>
           Leia o mundo.
           <br />
@@ -259,7 +259,7 @@ export function Home() {
       </div>
       <p className="pilot-note">
         Este ambiente reúne Cartografia revisada. Os demais módulos continuam disponíveis em{' '}
-        <a href="./biblioteca.html">outros materiais</a>.
+        <a href="./index.html">biblioteca de temas</a>.
       </p>
     </>
   );

@@ -56,7 +56,7 @@ test('Canônica: aplicativo usa as três edições aprovadas e apresenta fontes 
   expect(
     Object.values(bank.editorial.units).every(
       (u: any) =>
-        u.version === '1.0.0' &&
+        u.version === '1.0.1' &&
         u.status === 'APROVADA_CANONICA' &&
         u.reviewer_kind === 'delegated-ai',
     ),
@@ -187,7 +187,7 @@ test('Canônica: seleção aposentada de GMS permanece histórica e exige escolh
   );
   expect(saved.before.drafts[key]).toBe(retired.retired_option_id);
   expect(saved.current.evidence[0].choice).toBe(q.correct);
-  expect(saved.current.evidence[0].editorialVersion).toBe('1.0.0');
+  expect(saved.current.evidence[0].editorialVersion).toBe('1.0.1');
   expect(Object.values(saved.current.awards).reduce((n: number, a: any) => n + a.xp, 0)).toBe(4);
 });
 

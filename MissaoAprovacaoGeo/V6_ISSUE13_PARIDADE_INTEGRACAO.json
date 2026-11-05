@@ -3,28 +3,28 @@
   "source": "approved-canonical-bases",
   "source_versions": {
     "cartografia-fundamentos": {
-      "version": "1.0.0",
+      "version": "1.0.1",
       "status": "APROVADA_CANONICA",
       "reviewer_kind": "delegated-ai",
       "reviewer": "Codex",
-      "reviewed_at": "2026-10-16",
-      "digest": "9515c097cf7a36442843451c8ffbf1ee2377830785923a5f12d392ba6a2c6d39"
+      "reviewed_at": "2026-11-04",
+      "digest": "a4a328f34c358dd8b89daee927d715e6b29868afc30d1c2cd54b49d0e352b6b6"
     },
     "cartografia-representacao": {
-      "version": "1.0.0",
+      "version": "1.0.1",
       "status": "APROVADA_CANONICA",
       "reviewer_kind": "delegated-ai",
       "reviewer": "Codex",
-      "reviewed_at": "2026-10-16",
-      "digest": "9b9afac258e2798bc48705c5da1708f62ea6c99e590ddfb39e9f49c1a50a6e61"
+      "reviewed_at": "2026-11-04",
+      "digest": "c4a4f547b83b72ebf300ef7ffcb2e5f19b1b1ce2266792b6fa99ed5068f25dd2"
     },
     "geotecnologias": {
-      "version": "1.0.0",
+      "version": "1.0.1",
       "status": "APROVADA_CANONICA",
       "reviewer_kind": "delegated-ai",
       "reviewer": "Codex",
-      "reviewed_at": "2026-10-16",
-      "digest": "ffc3e10420656740b224f790b32aea4eab22376493fd7e256ea58d70d7faa630"
+      "reviewed_at": "2026-11-04",
+      "digest": "5c36d3538f6d0dbdd6f9026f9c8d06e4ebb5097303fc433842632195ae4bc79f"
     }
   },
   "sources": [
@@ -96,7 +96,7 @@
   "units": [
     {
       "id": "cartografia-fundamentos",
-      "editorial_version": "1.0.0",
+      "editorial_version": "1.0.1",
       "missions": 5,
       "questions": 60,
       "cards": 54,
@@ -104,7 +104,7 @@
     },
     {
       "id": "cartografia-representacao",
-      "editorial_version": "1.0.0",
+      "editorial_version": "1.0.1",
       "missions": 5,
       "questions": 49,
       "cards": 31,
@@ -112,7 +112,7 @@
     },
     {
       "id": "geotecnologias",
-      "editorial_version": "1.0.0",
+      "editorial_version": "1.0.1",
       "missions": 7,
       "questions": 52,
       "cards": 35,

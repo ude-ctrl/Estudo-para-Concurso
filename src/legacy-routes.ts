@@ -13,3 +13,11 @@ export function canonicalLegacyRoute(hash: string): string | null {
   const mode = new URLSearchParams(query).get('modo');
   return `/unidade/${unit}/${mode === 'flash' ? 'revisao' : mode === 'game' ? 'treino' : 'estudo'}`;
 }
+
+// Root and biblioteca.html share the library; retain saved V6 deep links.
+export function moduleRoute(hash: string): string | null {
+  const legacy = canonicalLegacyRoute(hash);
+  if (legacy) return legacy;
+  const path = hash.replace(/^#/, '');
+  return /^\/(?:unidade(?:\/|$)|caderno(?:\?|$)|configuracoes(?:\?|$))/.test(path) ? path : null;
+}

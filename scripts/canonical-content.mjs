@@ -872,7 +872,21 @@ export async function validateLot(baseRoot = resolve(root, 'base-conhecimento'),
         revision.from_version === unit.initial_snapshot_version
           ? snapshot
           : await readBundle(baseRoot, unit.unit_id, revision.from_version);
-      validateBundle(parent, { at });
+      // Archived approvals are attestations at their review date, not active releases.
+      // Still validate the complete bundle and its hash-linked revision; only the
+      // temporal reference changes. Active bundles below always use today's date.
+      let parentAt = at;
+      if (parent.base.status === 'APROVADA_CANONICA') {
+        const approval = parent.audit.editorial_approval || parent.audit.human_approval;
+        parentAt = approval?.reviewed_at;
+        requireThat(
+          Number.isFinite(dateValue(parentAt)) &&
+            dateValue(parentAt) <= dateValue(at ?? new Date().toISOString()),
+          'Data de aprovação histórica inválida/futura: ' + unit.unit_id,
+        );
+        validateRegisteredApproval(registry, parent);
+      }
+      validateBundle(parent, { at: parentAt });
       validateRevision(parent, revisionBundle);
       revisionBundle = parent;
     }

@@ -1,4 +1,5 @@
 import type { Catalog, Lesson, Progress } from './types';
+import { STATE_KEY, ERROR_KEY } from './v6/engine.ts';
 
 export const PREFERENCES_KEY = 'missao-geografia:preferences:v1';
 export interface Preferences {
@@ -93,6 +94,8 @@ export function exportProgress(catalog: Catalog, preferences: Preferences): bool
       ),
     );
     keys.add('seducpa_auditoria_v1');
+    keys.add(STATE_KEY);
+    keys.add(ERROR_KEY);
     const legacyStorage: Record<string, string> = {};
     for (const key of keys) {
       const value = localStorage.getItem(key);

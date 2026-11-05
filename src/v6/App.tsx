@@ -112,6 +112,11 @@ function Settings({
         setReports([
           'Cópia V6 identificada. Restaurar substitui o estado V6 desta origem e preserva uma cópia anterior.',
         ]);
+      } else if (obj.schemaVersion === 1 && typeof obj.legacyStorage?.[STATE_KEY] === 'string') {
+        setRestore(obj.legacyStorage[STATE_KEY]);
+        setReports([
+          'Cópia da biblioteca identificada. Restaurar recupera o progresso de Cartografia; os demais temas permanecem separados.',
+        ]);
       } else if (obj.schemaVersion === 1 && obj.legacyStorage) {
         const allowed = new Set(
           content.sources.flatMap((s) => [s.key, s.previous]).filter(Boolean),
@@ -586,7 +591,7 @@ function Workspace({ content }: { content: Content }) {
           </span>
           <span>
             Missão Aprovação <b>Geo</b>
-            <small>Cartografia · V6 piloto</small>
+            <small>Cartografia e Geotecnologias</small>
           </span>
         </a>
         <div className="header-tools">
@@ -693,7 +698,7 @@ function Workspace({ content }: { content: Content }) {
           <Celebration milestone={quiet ? null : celebration} onDismiss={dismissCelebration} />
           <footer className="site-footer">
             <span>Aprender com profundidade. Avançar com evidência.</span>
-            <a href="./biblioteca.html">Outros materiais</a>
+            <a href="./index.html">Todos os temas</a>
             <a href="#/configuracoes">Dados e fontes</a>
           </footer>
         </main>
@@ -716,7 +721,7 @@ class Boundary extends Component<{ children: React.ReactNode }, { failed: boolea
           ser exportada pelas ferramentas do navegador.
         </p>
         <button onClick={() => location.reload()}>Recarregar</button>
-        <a href="./biblioteca.html">Outros materiais</a>
+        <a href="./index.html">Todos os temas</a>
       </main>
     ) : (
       this.props.children

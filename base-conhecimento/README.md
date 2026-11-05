@@ -1,6 +1,8 @@
 # Base de Conhecimento V6
 
-**Estado atual:** as três unidades de Cartografia têm edição **`1.0.0`, `APROVADA_CANONICA`**, com consumo habilitado nesta branch. A plataforma usa essas bases aprovadas em lugar da extração editorial dos HTMLs. A [integração](../MissaoAprovacaoGeo/V6_ISSUE13_INTEGRACAO_CANONICA_CARTOGRAFIA.md) e o [contrato de revisão delegada](../MissaoAprovacaoGeo/V6_ISSUE13_CONTRATO_REVISAO_DELEGADA.md) identificam o parecer por IA, a autorização, a preservação do progresso e os limites. Não houve publicação no site nem merge.
+**Estado desta branch:** as três unidades de Cartografia têm edição **`1.0.1`, `APROVADA_CANONICA`**, com consumo habilitado. A [revisão temporal de 04/11/2026](../MissaoAprovacaoGeo/V6_REVISAO_TEMPORAL_2026_11_04.md) preserva integralmente conteúdo e suporte de `1.0.0` e mantém o parecer pedagógico anterior identificado como herdado. Novas verificações são exclusivamente das referências documentadas. Edições anteriores permanecem intactas. Não houve merge/publicação desta rodada nem homologação humana nova.
+
+A versão ativa continua exigindo referências dentro do prazo. Aprovações arquivadas são validadas na data do próprio parecer, sem reabrir HTMLs, renovar datas retroativamente ou dispensar hashes e cadeia de versões.
 
 Primeiro lote da [Issue #13](https://github.com/ude-ctrl/Estudo-para-Concurso/issues/13), autorizado após o [encerramento técnico com ressalva sensorial](../MissaoAprovacaoGeo/V6_FASE14_ENCERRAMENTO_TECNICO.md). Branch: `v6-base-canonica`.
 
@@ -10,9 +12,9 @@ As candidatas `0.1.0`, `0.1.1` e `0.1.2` permanecem preservadas com seus parecer
 
 | Unidade | Versão | Parecer assistido e pendências |
 | --- | --- | --- |
-| `cartografia-fundamentos` | `1.0.0` | [Auditoria](cartografia/cartografia-fundamentos/1.0.0/audit.md) · [Questões](cartografia/cartografia-fundamentos/1.0.0/review.md) |
-| `cartografia-representacao` | `1.0.0` | [Auditoria](cartografia/cartografia-representacao/1.0.0/audit.md) · [Questões](cartografia/cartografia-representacao/1.0.0/review.md) |
-| `geotecnologias` | `1.0.0` | [Auditoria](cartografia/geotecnologias/1.0.0/audit.md) · [Questões](cartografia/geotecnologias/1.0.0/review.md) |
+| `cartografia-fundamentos` | `1.0.1` | [Auditoria](cartografia/cartografia-fundamentos/1.0.1/audit.md) · [Questões](cartografia/cartografia-fundamentos/1.0.1/review.md) |
+| `cartografia-representacao` | `1.0.1` | [Auditoria](cartografia/cartografia-representacao/1.0.1/audit.md) · [Questões](cartografia/cartografia-representacao/1.0.1/review.md) |
+| `geotecnologias` | `1.0.1` | [Auditoria](cartografia/geotecnologias/1.0.1/audit.md) · [Questões](cartografia/geotecnologias/1.0.1/review.md) |
 
 O [relatório de `0.1.2`](../MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_012.md) registra 137 explicações aprimoradas em 44 questões, a reclassificação de r11 e o novo suporte cartográfico. O [relatório de `0.1.1`](../MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_011.md) preserva as correções de vínculos, fontes, figuras e a estratégia de progresso. A [primeira integração operacional](../MissaoAprovacaoGeo/V6_ISSUE13_INTEGRACAO_CANONICA_CARTOGRAFIA.md) usa esses textos revisados.
 

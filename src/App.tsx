@@ -27,10 +27,11 @@ import {
   writePreferences,
 } from './storage';
 import type { Preferences } from './storage';
-import { canonicalLegacyRoute } from './legacy-routes';
+import { moduleRoute } from './legacy-routes';
+import { moduleProgress } from './module-progress';
 import { groupLessons, lessonPart } from './library-groups';
 import type { LibraryGroup } from './library-groups';
-import type { Catalog, Category, Lesson, Progress, StudyMode } from './types';
+import type { Catalog, Category, Lesson, Progress, StudyMode, StudyModule } from './types';
 
 const assetUrl = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 const format = (n: number) => n.toLocaleString('pt-BR');
@@ -161,6 +162,60 @@ function LessonCard({
         </div>
         <a className="start-link" href={lessonHref(lesson.id)}>
           {progress.started ? 'Continuar' : 'Estudar'}
+          <ArrowRight size={16} />
+        </a>
+      </div>
+    </article>
+  );
+}
+
+function ModuleCard({
+  module,
+  started,
+  favorite,
+  toggle,
+}: {
+  module: StudyModule;
+  started: boolean;
+  favorite: boolean;
+  toggle: () => void;
+}) {
+  const href = assetUrl('v6.html');
+  return (
+    <article className="lesson-card category-1 module-card" aria-label={module.title}>
+      <div className="card-top">
+        <span className="topic-label">MÓDULO · {module.units.length} UNIDADES</span>
+        <Favorite active={favorite} onClick={toggle} title={module.title} />
+      </div>
+      <div className="card-category">{module.category}</div>
+      <h3>
+        <a href={href}>{module.title}</a>
+      </h3>
+      <p className="part-description">
+        Fundamentos, representação do espaço e geotecnologias em um único percurso.
+      </p>
+      <div className="card-counts">
+        <span>
+          <BookOpen size={14} /> {module.counts.stages} etapas
+        </span>
+        <span>
+          <Target size={14} /> {module.counts.questions} questões
+        </span>
+      </div>
+      <div className="card-tools">
+        <span>
+          <Layers3 size={15} /> {module.counts.flashcards} flashcards
+        </span>
+        <span>
+          <Gamepad2 size={16} /> Game V/F
+        </span>
+      </div>
+      <div className="card-bottom">
+        <div className="card-progress">
+          <span>Estudo · Treino · Revisão · Prova</span>
+        </div>
+        <a className="start-link" href={href}>
+          {started ? 'Continuar' : 'Estudar'}
           <ArrowRight size={16} />
         </a>
       </div>
@@ -339,6 +394,7 @@ function Reader({
 
 export default function App() {
   const [catalog, setCatalog] = useState<Catalog | null>(null),
+    [cartography, setCartography] = useState<StudyModule | null>(null),
     [error, setError] = useState(false);
   const [route, setRoute] = useState(getRoute),
     [view, setView] = useState<View>('library');
@@ -359,14 +415,22 @@ export default function App() {
   );
   useEffect(() => {
     const controller = new AbortController();
-    fetch(assetUrl('content/catalog.json'), { signal: controller.signal })
-      .then((response) => {
+    const read = (path: string) =>
+      fetch(assetUrl(path), { signal: controller.signal }).then((response) => {
         if (!response.ok) throw new Error('Catálogo indisponível');
         return response.json();
-      })
-      .then((value: Catalog) => {
+      });
+    Promise.all([read('content/catalog.json'), read('v6/library.json')])
+      .then(([value, module]: [Catalog, StudyModule]) => {
         if (value.schemaVersion !== 1 || !Array.isArray(value.lessons))
           throw new Error('Catálogo inválido');
+        if (
+          module.schemaVersion !== 1 ||
+          module.id !== 'module-cartografia' ||
+          !Array.isArray(module.questionIds)
+        )
+          throw new Error('Módulo inválido');
+        setCartography(module);
         setCatalog(value);
       })
       .catch((error) => {
@@ -445,8 +509,8 @@ export default function App() {
       );
   }, [catalog, query, category, sort, view, preferences.favorites, progress]);
   useEffect(() => {
-    const canonical = canonicalLegacyRoute(location.hash);
-    if (canonical) location.replace(assetUrl('index.html') + '#' + canonical);
+    const canonical = moduleRoute(location.hash);
+    if (canonical) location.replace(assetUrl('v6.html') + location.search + '#' + canonical);
   }, [route]);
   const toggleFavorite = (id: string) =>
     setPreferences((previous) => ({
@@ -471,7 +535,7 @@ export default function App() {
         </button>
       </main>
     );
-  if (!catalog)
+  if (!catalog || !cartography)
     return (
       <main className="loading-screen" role="status">
         <Compass size={36} />
@@ -482,10 +546,50 @@ export default function App() {
     resource = catalog.resources.find((item) => item.id === route.id);
   const lastLesson = catalog.lessons.find((item) => item.id === preferences.lastVisited);
   const entries = groupLessons(filtered);
-  const topicCount = groupLessons(catalog.lessons).length;
-  const favoriteCount = groupLessons(
-    catalog.lessons.filter((item) => preferences.favorites.includes(item.id)),
-  ).length;
+  const cartographyProgress = moduleProgress(cartography);
+  const showCartography =
+    normalize(query)
+      .trim()
+      .split(/\s+/)
+      .filter(Boolean)
+      .every((word) =>
+        normalize(
+          `${cartography.title} ${cartography.units.map((u) => u.title).join(' ')} mapas coordenadas escalas projeções sensoriamento remoto SIG fusos tema 02 tema 03 tema 17`,
+        ).includes(word),
+      ) &&
+    (category === 'Todas as áreas' || category === cartography.category) &&
+    (view !== 'favorites' || preferences.favorites.includes(cartography.id)) &&
+    (view !== 'progress' || cartographyProgress.started);
+  const displayEntries = [
+    ...entries.map((entry) => ({
+      id: entry.id,
+      entry,
+      number: entry.lessons[0].number,
+      title: entry.group?.title ?? entry.lessons[0].title,
+      percent: Math.max(...entry.lessons.map((l) => progress.get(l.id)?.percent ?? 0)),
+    })),
+    ...(showCartography
+      ? [
+          {
+            id: cartography.id,
+            entry: null,
+            number: cartography.number,
+            title: cartography.title,
+            percent: cartographyProgress.percent,
+          },
+        ]
+      : []),
+  ].sort((a, b) =>
+    sort === 'name'
+      ? a.title.localeCompare(b.title, 'pt-BR')
+      : sort === 'progress'
+        ? b.percent - a.percent || a.number - b.number
+        : a.number - b.number,
+  );
+  const topicCount = groupLessons(catalog.lessons).length + 1;
+  const favoriteCount =
+    groupLessons(catalog.lessons.filter((item) => preferences.favorites.includes(item.id))).length +
+    Number(preferences.favorites.includes(cartography.id));
   const started = catalog.lessons.filter((item) => progress.get(item.id)?.started).length;
   const complete = catalog.lessons.filter((item) => progress.get(item.id)?.percent === 100).length;
   const heading =
@@ -558,10 +662,10 @@ export default function App() {
             {favoriteCount > 0 && <span>{favoriteCount}</span>}
           </button>
         </nav>
-        <a className="resource-link" href={assetUrl('index.html')}>
+        <a className="resource-link" href={assetUrl('v6.html')}>
           <Compass size={19} />
           <span>
-            Cartografia V6<small>Continuar meu percurso</small>
+            Cartografia<small>Estudo, treino e revisão</small>
           </span>
           <ArrowRight size={14} />
         </a>
@@ -639,17 +743,6 @@ export default function App() {
               </div>
             </header>
             <main className="library-content">
-              <section className="resume-card" aria-label="Percurso canônico de Cartografia">
-                <Compass size={26} aria-hidden="true" />
-                <div>
-                  <span>CARTOGRAFIA V6</span>
-                  <h2>Um módulo. Três unidades. Um percurso.</h2>
-                  <p>Cartografia agora tem seu próprio ambiente de aprendizagem.</p>
-                </div>
-                <a href={assetUrl('index.html')}>
-                  Continuar Cartografia V6 <ArrowRight size={17} />
-                </a>
-              </section>
               <section className="welcome">
                 <div>
                   <div className="eyebrow">
@@ -694,7 +787,8 @@ export default function App() {
                     <span>temas de estudo</span>
                   </div>
                   <small>
-                    {catalog.totals.lessons} materiais · {catalog.totals.stages} etapas no acervo
+                    {catalog.totals.lessons} materiais + {cartography.units.length} unidades de
+                    Cartografia
                   </small>
                 </div>
                 <div className="stat-card">
@@ -702,7 +796,9 @@ export default function App() {
                     <Layers3 size={21} />
                   </span>
                   <div>
-                    <strong>{format(catalog.totals.flashcards)}</strong>
+                    <strong>
+                      {format(catalog.totals.flashcards + cartography.counts.flashcards)}
+                    </strong>
                     <span>flashcards</span>
                   </div>
                   <small>Recupere o que aprendeu</small>
@@ -712,7 +808,7 @@ export default function App() {
                     <Gamepad2 size={22} />
                   </span>
                   <div>
-                    <strong>{format(catalog.totals.game)}</strong>
+                    <strong>{format(catalog.totals.game + cartography.counts.game)}</strong>
                     <span>itens de game</span>
                   </div>
                   <small>Treine reconhecimento e agilidade</small>
@@ -741,6 +837,7 @@ export default function App() {
                 <div className="journey-summary">
                   <strong>
                     {started} {started === 1 ? 'material iniciado' : 'materiais iniciados'}
+                    {cartographyProgress.started && ' + Cartografia em andamento'}
                   </strong>
                   <span>{complete} com todas as questões respondidas</span>
                 </div>
@@ -758,7 +855,7 @@ export default function App() {
                     </p>
                   </div>
                   <span className="results-count">
-                    {entries.length} {entries.length === 1 ? 'tema' : 'temas'}
+                    {displayEntries.length} {displayEntries.length === 1 ? 'tema' : 'temas'}
                   </span>
                 </div>
                 <div className="catalog-controls">
@@ -785,7 +882,11 @@ export default function App() {
                     >
                       <option>Todas as áreas</option>
                       {categories
-                        .filter((value) => catalog.lessons.some((item) => item.category === value))
+                        .filter(
+                          (value) =>
+                            value === cartography.category ||
+                            catalog.lessons.some((item) => item.category === value),
+                        )
                         .map((value) => (
                           <option key={value}>{value}</option>
                         ))}
@@ -805,10 +906,18 @@ export default function App() {
                     <ChevronDown size={15} />
                   </label>
                 </div>
-                {filtered.length ? (
+                {displayEntries.length ? (
                   <div className="lesson-grid">
-                    {entries.map((entry) =>
-                      entry.group ? (
+                    {displayEntries.map(({ id, entry }) =>
+                      !entry ? (
+                        <ModuleCard
+                          key={id}
+                          module={cartography}
+                          started={cartographyProgress.started}
+                          favorite={preferences.favorites.includes(id)}
+                          toggle={() => toggleFavorite(id)}
+                        />
+                      ) : entry.group ? (
                         <LessonGroup
                           key={entry.id}
                           group={entry.group}

@@ -69,3 +69,14 @@ export interface Progress {
   stage: number;
   started: boolean;
 }
+
+export interface StudyModule {
+  schemaVersion: 1;
+  id: string;
+  title: string;
+  category: Category;
+  number: number;
+  units: { id: string; title: string }[];
+  counts: { stages: number; questions: number; flashcards: number; game: number };
+  questionIds: string[];
+}

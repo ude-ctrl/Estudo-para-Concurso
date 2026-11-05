@@ -193,7 +193,7 @@ test('Sensorial: percurso tem estados explícitos, consulta livre e navegação 
   attempt(state, content, { item: q.id, correct: true, kind: q.pool, at: Date.now() });
   state.resume = { unit: first.unit, mode: 'estudo', mission: first.id };
   await seed(page, state);
-  await page.goto('./');
+  await page.goto('./v6.html');
   const map = page.locator('.journey-map');
   await expect(map.locator('.journey-stop')).toHaveCount(17);
   await expect(map.locator('.journey-stop.complete')).toHaveCount(1);
@@ -587,7 +587,7 @@ test('Sensorial: mobile, dark e ampliação preservam controles e percurso sem o
   page,
 }, info) => {
   await page.emulateMedia({ colorScheme: 'dark', reducedMotion: 'reduce' });
-  await page.goto('./');
+  await page.goto('./v6.html');
   await expect(page.locator('.journey-map')).toBeVisible();
   for (const width of [360, 390, 430]) {
     await page.setViewportSize({ width, height: 844 });
