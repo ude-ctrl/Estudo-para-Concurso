@@ -139,7 +139,7 @@ test('V6: um acerto comum ensina sem celebração por alternativa', async ({ pag
 });
 
 test('V6: estudo orienta treino da mesma missão sem rótulos Cartografia I/II', async ({ page }) => {
-  await page.goto('./');
+  await page.goto('./v6.html');
   await page.getByRole('link', { name: 'Diagnosticar', exact: true }).click();
   await expect(page.getByRole('combobox', { name: 'Banco', exact: true })).toHaveValue(
     'diagnostico',
@@ -293,7 +293,7 @@ for (const previous of [
       },
       { key: STATE_KEY, state },
     );
-    await page.goto('./');
+    await page.goto('./v6.html');
     await page.getByRole('link', { name: 'Diagnosticar', exact: true }).click();
     await expect(page.getByRole('combobox', { name: 'Banco', exact: true })).toHaveValue(
       'diagnostico',
@@ -393,7 +393,7 @@ test('P1: Continuar retoma sessão antiga sem impor a missão de retomada artifi
     },
     { key: STATE_KEY, state },
   );
-  await page.goto('./');
+  await page.goto('./v6.html');
   await page.getByRole('link', { name: 'Continuar de onde parei', exact: true }).click();
   await expect(page.locator('.exercise')).toContainText('Orientação e azimute');
   await expect(page.locator('.exercise-meta')).toContainText('Concurso');
@@ -405,7 +405,7 @@ test('P1: Continuar retoma sessão antiga sem impor a missão de retomada artifi
 test('P1: destino de diagnóstico sem sessão persiste ao continuar e recarregar', async ({
   page,
 }) => {
-  await page.goto('./');
+  await page.goto('./v6.html');
   await page.getByRole('link', { name: 'Diagnosticar', exact: true }).click();
   await expect(page.getByRole('combobox', { name: 'Banco', exact: true })).toHaveValue(
     'diagnostico',
@@ -584,16 +584,24 @@ test('V6: V/F sempre justifica, timer é opcional e encerrar não causa callback
 test('V6: prova salva seleção e relógio, não corrige antes e corrige omissões no fim', async ({
   page,
 }) => {
-  await page.clock.install();
+  await page.clock.install({ time: new Date('2026-11-04T12:00:00Z') });
+  await page.clock.pauseAt(new Date('2026-11-04T12:01:00Z'));
   await page.goto(path(fund, 'prova'));
   await page.getByRole('combobox', { name: 'Questões', exact: true }).selectOption('5');
   await page.getByRole('button', { name: 'Iniciar prova do piloto' }).click();
   await page.getByRole('radio').first().check();
   await expect(page.locator('.feedback')).toHaveCount(0);
   await page.getByRole('button', { name: 'Próxima', exact: true }).click();
+  const deadline = await page.evaluate(
+    (key) => JSON.parse(localStorage.getItem(key)!).exam.deadline,
+    STATE_KEY,
+  );
   await page.clock.fastForward(60_000);
   await page.reload();
-  await expect(page.getByRole('timer')).toContainText('19:');
+  await expect(page.getByRole('timer')).toHaveText('19:00');
+  expect(
+    await page.evaluate((key) => JSON.parse(localStorage.getItem(key)!).exam.deadline, STATE_KEY),
+  ).toBe(deadline);
   await page.getByRole('button', { name: 'Anterior', exact: true }).click();
   await expect(page.getByRole('radio').first()).toBeChecked();
   await page.getByText('Encerrar e liberar correção', { exact: true }).click();

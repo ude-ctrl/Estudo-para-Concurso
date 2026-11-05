@@ -79,7 +79,11 @@ export async function buildV6({ baseRoot = resolve(root, 'base-conhecimento'), a
       ]),
     ),
     editorial: {
-      release: 'cartografia@1.0.0:' + sha(versions).slice(0, 16),
+      release:
+        'cartografia@' +
+        bundles.map((b) => b.base.editorial_version).join('+') +
+        ':' +
+        sha(versions).slice(0, 16),
       units: versions,
       legacy_version: '6.0.0-piloto.1',
       question_families: bundles.flatMap((b) => b.base.metadata.question_families),
@@ -125,14 +129,30 @@ export async function buildV6({ baseRoot = resolve(root, 'base-conhecimento'), a
     })),
     records: bundles.flatMap((b) => b.provenance.parity_records),
   };
-  return { content, parity };
+  const library = {
+    schemaVersion: 1,
+    id: 'module-cartografia',
+    title: 'Cartografia e Geotecnologias',
+    category: 'Cartografia',
+    number: 2,
+    units: content.units.map((u) => ({ id: u.id, title: u.title })),
+    counts: {
+      stages: parity.counts.stages,
+      questions: content.questions.length,
+      flashcards: content.cards.length,
+      game: content.game.length,
+    },
+    questionIds: content.questions.map((q) => q.id),
+  };
+  return { content, parity, library };
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  const { content, parity } = await buildV6();
+  const { content, parity, library } = await buildV6();
   await mkdir(resolve(root, 'public/v6'), { recursive: true });
   for (const [path, value] of [
     ['public/v6/cartografia.json', content],
+    ['public/v6/library.json', library],
     ['MissaoAprovacaoGeo/V6_ISSUE13_PARIDADE_INTEGRACAO.json', parity],
   ]) {
     const serialized = JSON.stringify(value, null, 2) + '\n';

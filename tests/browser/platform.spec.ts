@@ -24,12 +24,12 @@ test('biblioteca mostra todo o acervo e suas contagens', async ({ page }) => {
   const errors: string[] = [];
   page.on('pageerror', (error) => errors.push(error.message));
   await page.goto('./biblioteca.html');
-  await expect(page.locator('.lesson-card')).toHaveCount(24);
+  await expect(page.locator('.lesson-card')).toHaveCount(25);
   await expect(page.locator('.lesson-group')).toHaveCount(2);
   const ids = await page.locator('[id]').evaluateAll((elements) => elements.map((el) => el.id));
   expect(new Set(ids).size).toBe(ids.length);
-  await expect(page.locator('.stats-grid')).toContainText('1.294');
-  await expect(page.locator('.stats-grid')).toContainText('2.600');
+  await expect(page.locator('.stats-grid')).toContainText('1.414');
+  await expect(page.locator('.stats-grid')).toContainText('2.856');
   expect(errors).toEqual([]);
 });
 
@@ -81,7 +81,7 @@ for (const {
         `${lesson.counts.questions} questões`,
       );
     }
-    await expect(page.locator('.stats-grid')).toContainText('24temas de estudo');
+    await expect(page.locator('.stats-grid')).toContainText('25temas de estudo');
     await expect(page.locator('.stats-grid')).toContainText('26 materiais');
   });
 
@@ -220,13 +220,17 @@ test('busca ignora acentos e Cartografia histórica não aparece como opção de
   await page.getByRole('button', { name: 'Limpar busca' }).click();
   await expect(
     page.getByLabel('Filtrar por área').locator('option', { hasText: 'Cartografia' }),
-  ).toHaveCount(0);
+  ).toHaveCount(1);
+  await page.getByLabel('Filtrar por área').selectOption('Cartografia');
+  await expect(page.locator('.module-card')).toHaveCount(1);
+  await expect(page.locator('.lesson-card')).toHaveCount(1);
+  await page.getByLabel('Filtrar por área').selectOption('Todas as áreas');
   await page.getByRole('searchbox').fill('Cartografia II');
   await expect(page.locator('.lesson-card')).toHaveCount(0);
   await page.getByRole('searchbox').fill('assunto-inexistente');
   await expect(page.getByRole('heading', { name: 'Nenhum tema encontrado' })).toBeVisible();
   await page.getByRole('button', { name: 'Ver toda a biblioteca' }).click();
-  await expect(page.locator('.lesson-card')).toHaveCount(24);
+  await expect(page.locator('.lesson-card')).toHaveCount(25);
 });
 
 test('favoritos persistem e podem ser removidos', async ({ page }) => {
@@ -380,7 +384,7 @@ test('todas as páginas originais e dados são servidos no caminho publicado', a
 test('celular tem menu funcional e não transborda horizontalmente', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('./biblioteca.html');
-  await expect(page.locator('.lesson-card')).toHaveCount(24);
+  await expect(page.locator('.lesson-card')).toHaveCount(25);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await page.getByRole('button', { name: 'Abrir menu' }).click();
   await page.keyboard.press('Escape');
@@ -396,29 +400,25 @@ test('celular tem menu funcional e não transborda horizontalmente', async ({ pa
   await expect(page.getByRole('button', { name: 'Abrir menu' })).toBeVisible();
 });
 
-test('endereço principal abre V6; outros módulos ficam acessíveis sem duplicar Cartografia', async ({
-  page,
-}, info) => {
+test('entrada única reúne temas e Cartografia sem duplicação', async ({ page }, info) => {
   await page.goto('./');
+  await expect(page.locator('.lesson-card')).toHaveCount(25);
+  await expect(page.locator('.module-card')).toHaveCount(1);
+  await expect(page.locator('.lesson-grid')).not.toContainText('Cartografia II');
+  await expect(page.getByText('Um módulo. Três unidades. Um percurso.')).toHaveCount(0);
+  await page.screenshot({ path: info.outputPath('biblioteca-unificada.png'), fullPage: true });
+  await page.getByRole('combobox', { name: 'Filtrar por área' }).selectOption('Cartografia');
+  await expect(page.locator('.lesson-card')).toHaveCount(1);
+  await page.locator('.module-card .start-link').click();
   await expect(page.locator('.unit-card')).toHaveCount(3);
-  await expect(page.locator('.lesson-card')).toHaveCount(0);
-  await expect(page.locator('.main-navigation a')).toHaveText([
-    'Início',
-    'Estudo',
-    'Treino',
-    'Revisão',
-    'Prova',
-  ]);
-  await expect(page.getByText('Seu próximo passo', { exact: true })).toBeVisible();
+  await expect(page.getByText('Cartografia · V6 piloto')).toHaveCount(0);
   await page.getByRole('button', { name: 'Ativar modo escuro', exact: true }).click();
   await page.reload();
   await expect(page.getByRole('button', { name: 'Ativar modo claro', exact: true })).toBeVisible();
-  await page.screenshot({ path: info.outputPath('v6-entrada-canonica.png'), fullPage: true });
+  await page.getByRole('link', { name: 'Todos os temas', exact: true }).click();
+  await expect(page.locator('.lesson-card')).toHaveCount(25);
   await page.goto('./biblioteca.html');
-  await expect(page.locator('.lesson-card')).toHaveCount(24);
-  await expect(page.locator('.lesson-grid')).not.toContainText('Cartografia II');
-  await page.getByRole('link', { name: 'Continuar Cartografia V6', exact: true }).click();
-  await expect(page.locator('.unit-card')).toHaveCount(3);
+  await expect(page.locator('.lesson-card')).toHaveCount(25);
 });
 
 test('Cartografia não auditada não é pesquisável, favoritada ou recomendada; URL antiga leva à V6', async ({
@@ -441,7 +441,7 @@ test('Cartografia não auditada não é pesquisável, favoritada ou recomendada;
     { id: original },
   );
   await page.goto('./biblioteca.html');
-  await expect(page.locator('.resume-card')).not.toContainText('Cartografia II');
+  await expect(page.locator('.library-content')).not.toContainText('Cartografia II');
   await expect(page.locator('.main-nav').getByRole('button', { name: /Favoritos/ })).toHaveText(
     'Favoritos',
   );

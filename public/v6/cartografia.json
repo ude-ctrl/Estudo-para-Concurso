@@ -32312,31 +32312,31 @@
     ]
   },
   "editorial": {
-    "release": "cartografia@1.0.0:cf5feb615eab58ed",
+    "release": "cartografia@1.0.1+1.0.1+1.0.1:15e61d6a07270866",
     "units": {
       "cartografia-fundamentos": {
-        "version": "1.0.0",
+        "version": "1.0.1",
         "status": "APROVADA_CANONICA",
         "reviewer_kind": "delegated-ai",
         "reviewer": "Codex",
-        "reviewed_at": "2026-10-16",
-        "digest": "9515c097cf7a36442843451c8ffbf1ee2377830785923a5f12d392ba6a2c6d39"
+        "reviewed_at": "2026-11-04",
+        "digest": "a4a328f34c358dd8b89daee927d715e6b29868afc30d1c2cd54b49d0e352b6b6"
       },
       "cartografia-representacao": {
-        "version": "1.0.0",
+        "version": "1.0.1",
         "status": "APROVADA_CANONICA",
         "reviewer_kind": "delegated-ai",
         "reviewer": "Codex",
-        "reviewed_at": "2026-10-16",
-        "digest": "9b9afac258e2798bc48705c5da1708f62ea6c99e590ddfb39e9f49c1a50a6e61"
+        "reviewed_at": "2026-11-04",
+        "digest": "c4a4f547b83b72ebf300ef7ffcb2e5f19b1b1ce2266792b6fa99ed5068f25dd2"
       },
       "geotecnologias": {
-        "version": "1.0.0",
+        "version": "1.0.1",
         "status": "APROVADA_CANONICA",
         "reviewer_kind": "delegated-ai",
         "reviewer": "Codex",
-        "reviewed_at": "2026-10-16",
-        "digest": "ffc3e10420656740b224f790b32aea4eab22376493fd7e256ea58d70d7faa630"
+        "reviewed_at": "2026-11-04",
+        "digest": "5c36d3538f6d0dbdd6f9026f9c8d06e4ebb5097303fc433842632195ae4bc79f"
       }
     },
     "legacy_version": "6.0.0-piloto.1",
@@ -32429,8 +32429,8 @@
             "title": "Observatório Nacional — tabela dos fusos dos estados",
             "url": "https://www.gov.br/observatorio/pt-br/assuntos/areas-de-atuacao/tempo-e-frequencia/brasil",
             "reference_year": 2026,
-            "checked_at": "2026-10-16",
-            "verified_at": "2026-10-16",
+            "checked_at": "2026-11-04",
+            "verified_at": "2026-11-04",
             "verification": "direct",
             "locator": "Tabela publicada em 06/10/2026; linha PARÁ: UTC−3 e diferença zero para Brasília. Acre: UTC−5; ilhas oceânicas listadas: UTC−2.",
             "scope": "Tabela diretamente consultada para os deslocamentos civis usados no material, em conjunto com a lei citada. A linha simplificada Amazonas −4 não substitui a delimitação da parte ocidental em UTC−5 na Lei 12.876/2013.",
@@ -32441,19 +32441,24 @@
             "title": "Lei nº 12.876, de 30 de outubro de 2013",
             "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12876.htm",
             "reference_date": "2013-10-30",
-            "checked_at": "2026-10-16",
+            "checked_at": "2026-11-04",
             "verified_at": "2026-10-16",
             "verification": "direct",
             "locator": "Artigo 1º: restabelecimento de fusos de Acre e parte do Amazonas.",
-            "scope": "Base normativa citada pelo material. Não substitui verificação de alterações posteriores ou a tabela estadual completa."
+            "scope": "Base normativa citada pelo material. Não substitui verificação de alterações posteriores ou a tabela estadual completa.",
+            "last_access_attempt": {
+              "at": "2026-11-04",
+              "result": "access-denied",
+              "note": "Verificação anterior preservada; nova leitura direta realizada na Câmara dos Deputados."
+            }
           },
           {
             "id": "fgv-edital",
             "title": "FGV/SEPLAD/SEDUC-PA — C-223, edital consolidado",
             "url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-consolidado-01.10-minuta.pdf",
             "reference_date": "2026-10-02",
-            "checked_at": "2026-10-16",
-            "verified_at": "2026-10-16",
+            "checked_at": "2026-11-04",
+            "verified_at": "2026-11-04",
             "verification": "direct",
             "locator": "Página impressa 102 (índice PDF 101), programa de Geografia; página do certame indica retificação em 02/10/2026.",
             "scope": "Presença dos tópicos de Cartografia e formato do perfil. Não comprova frequência histórica de cobrança ou dificuldade dos itens autorais."
@@ -32463,11 +32468,22 @@
             "title": "FGV — página de acompanhamento do concurso SEDUC-PA 2026",
             "url": "https://conhecimento.fgv.br/concursos/seducpa26",
             "reference_year": 2026,
-            "checked_at": "2026-10-16",
-            "verified_at": "2026-10-16",
+            "checked_at": "2026-11-04",
+            "verified_at": "2026-11-04",
             "verification": "direct",
             "locator": "Arquivos do concurso e link para edital retificado em 02/10/2026.",
             "scope": "Identificação da versão consultada. Retificações posteriores exigem revisão."
+          },
+          {
+            "id": "camara-lei-fusos",
+            "title": "Câmara dos Deputados — Lei 12.876/2013",
+            "url": "https://www2.camara.leg.br/legin/fed/lei/2013/lei-12876-30-outubro-2013-777336-publicacaooriginal-141612-pl.html",
+            "reference_date": "2013-10-30",
+            "locator": "Art. 1º: Pará UTC−3; Acre e parte ocidental do Amazonas UTC−5.",
+            "scope": "Base normativa dos deslocamentos civis. Fonte adicional após bloqueio do endpoint Planalto.",
+            "checked_at": "2026-11-04",
+            "verified_at": "2026-11-04",
+            "verification": "direct"
           }
         ],
         "temporal_claims": [
@@ -32498,16 +32514,18 @@
             "source_ids": [
               "on-fusos",
               "on-estados",
-              "lei-fusos"
+              "lei-fusos",
+              "camara-lei-fusos"
             ],
             "reference_year": 2013,
-            "checked_at": "2026-10-16",
-            "verified_at": "2026-10-16",
+            "checked_at": "2026-11-04",
+            "verified_at": "2026-11-04",
             "verification": "verified",
             "review_trigger": "Alteração legal, atualização da tabela do Observatório Nacional ou conferência pré-prova.",
-            "review_due_at": "2026-10-30",
+            "review_due_at": "2027-05-04",
             "note": "Tabela estadual diretamente consultada, especialmente Pará UTC−3, com os quatro deslocamentos nacionais e a Lei 12.876/2013. A divisão interna do Amazonas é sustentada pela lei, não pela linha resumida da tabela.",
-            "reference_date": "2026-10-06"
+            "reference_date": "2026-10-06",
+            "review_evidence": "MissaoAprovacaoGeo/V6_REVISAO_TEMPORAL_2026_11_04.md"
           },
           {
             "id": "perfil-seduc-pa-2026",
@@ -32520,12 +32538,13 @@
               "fgv-pagina"
             ],
             "reference_date": "2026-10-02",
-            "checked_at": "2026-10-16",
-            "verified_at": "2026-10-16",
+            "checked_at": "2026-11-04",
+            "verified_at": "2026-11-04",
             "verification": "verified",
             "review_trigger": "Nova retificação do certame e conferência antes da prova. O núcleo permanente não depende do perfil.",
-            "review_due_at": "2026-10-30",
-            "note": "A presença no programa é distinta de profundidade validada e não comprova padrões históricos de cobrança."
+            "review_due_at": "2026-11-18",
+            "note": "A presença no programa é distinta de profundidade validada e não comprova padrões históricos de cobrança.",
+            "review_evidence": "MissaoAprovacaoGeo/V6_REVISAO_TEMPORAL_2026_11_04.md"
           }
         ]
       },
@@ -32547,8 +32566,8 @@
             "title": "Observatório Nacional — tabela dos fusos dos estados",
             "url": "https://www.gov.br/observatorio/pt-br/assuntos/areas-de-atuacao/tempo-e-frequencia/brasil",
             "reference_year": 2026,
-            "checked_at": "2026-10-16",
-            "verified_at": "2026-10-16",
+            "checked_at": "2026-11-04",
+            "verified_at": "2026-11-04",
             "verification": "direct",
             "locator": "Tabela publicada em 06/10/2026; linha PARÁ: UTC−3 e diferença zero para Brasília. Acre: UTC−5; ilhas oceânicas listadas: UTC−2.",
             "scope": "Tabela diretamente consultada para os deslocamentos civis usados no material, em conjunto com a lei citada. A linha simplificada Amazonas −4 não substitui a delimitação da parte ocidental em UTC−5 na Lei 12.876/2013.",
@@ -32559,19 +32578,24 @@
             "title": "Lei nº 12.876, de 30 de outubro de 2013",
             "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12876.htm",
             "reference_date": "2013-10-30",
-            "checked_at": "2026-10-16",
+            "checked_at": "2026-11-04",
             "verified_at": "2026-10-16",
             "verification": "direct",
             "locator": "Artigo 1º: restabelecimento de fusos de Acre e parte do Amazonas.",
-            "scope": "Base normativa citada pelo material. Não substitui verificação de alterações posteriores ou a tabela estadual completa."
+            "scope": "Base normativa citada pelo material. Não substitui verificação de alterações posteriores ou a tabela estadual completa.",
+            "last_access_attempt": {
+              "at": "2026-11-04",
+              "result": "access-denied",
+              "note": "Verificação anterior preservada; nova leitura direta realizada na Câmara dos Deputados."
+            }
           },
           {
             "id": "inpe-deter",
             "title": "INPE — DETER",
             "url": "https://www.gov.br/inpe/pt-br/area-conhecimento/unidade-amazonia/projetos-e-pesquisas/deter/deter",
             "reference_date": "2021-12-30",
-            "checked_at": "2026-10-16",
-            "verified_at": "2026-10-16",
+            "checked_at": "2026-11-04",
+            "verified_at": "2026-11-04",
             "verification": "direct",
             "locator": "Finalidade de alerta, oportunidade de detecção, nuvens e distinção da taxa anual PRODES.",
             "scope": "Princípios e limitações. Números de sensores/limiares dessa página datada não foram incorporados como configuração atual."
@@ -32592,8 +32616,8 @@
             "title": "FGV/SEPLAD/SEDUC-PA — C-223, edital consolidado",
             "url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-consolidado-01.10-minuta.pdf",
             "reference_date": "2026-10-02",
-            "checked_at": "2026-10-16",
-            "verified_at": "2026-10-16",
+            "checked_at": "2026-11-04",
+            "verified_at": "2026-11-04",
             "verification": "direct",
             "locator": "Página impressa 102 (índice PDF 101), programa de Geografia; página do certame indica retificação em 02/10/2026.",
             "scope": "Presença dos tópicos de Cartografia e formato do perfil. Não comprova frequência histórica de cobrança ou dificuldade dos itens autorais."
@@ -32603,8 +32627,8 @@
             "title": "FGV — página de acompanhamento do concurso SEDUC-PA 2026",
             "url": "https://conhecimento.fgv.br/concursos/seducpa26",
             "reference_year": 2026,
-            "checked_at": "2026-10-16",
-            "verified_at": "2026-10-16",
+            "checked_at": "2026-11-04",
+            "verified_at": "2026-11-04",
             "verification": "direct",
             "locator": "Arquivos do concurso e link para edital retificado em 02/10/2026.",
             "scope": "Identificação da versão consultada. Retificações posteriores exigem revisão."
@@ -32664,6 +32688,17 @@
             "verification": "direct",
             "locator": "Summary, Licensing e Original upload log: derivação por Louis Waweru de Gall-peters.jpg, com atribuição a Mdf/NASA; declaração PD-self.",
             "scope": "Crédito e declaração de domínio público do arquivo específico; respeitar a procedência da imagem derivada."
+          },
+          {
+            "id": "camara-lei-fusos",
+            "title": "Câmara dos Deputados — Lei 12.876/2013",
+            "url": "https://www2.camara.leg.br/legin/fed/lei/2013/lei-12876-30-outubro-2013-777336-publicacaooriginal-141612-pl.html",
+            "reference_date": "2013-10-30",
+            "locator": "Art. 1º: Pará UTC−3; Acre e parte ocidental do Amazonas UTC−5.",
+            "scope": "Base normativa dos deslocamentos civis. Fonte adicional após bloqueio do endpoint Planalto.",
+            "checked_at": "2026-11-04",
+            "verified_at": "2026-11-04",
+            "verification": "direct"
           }
         ],
         "temporal_claims": [
@@ -32676,16 +32711,18 @@
             "source_ids": [
               "on-fusos",
               "on-estados",
-              "lei-fusos"
+              "lei-fusos",
+              "camara-lei-fusos"
             ],
             "reference_year": 2013,
-            "checked_at": "2026-10-16",
-            "verified_at": "2026-10-16",
+            "checked_at": "2026-11-04",
+            "verified_at": "2026-11-04",
             "verification": "verified",
             "review_trigger": "Alteração legal, atualização da tabela do Observatório Nacional ou conferência pré-prova.",
-            "review_due_at": "2026-10-30",
+            "review_due_at": "2027-05-04",
             "note": "Tabela estadual diretamente consultada, especialmente Pará UTC−3, com os quatro deslocamentos nacionais e a Lei 12.876/2013. A divisão interna do Amazonas é sustentada pela lei, não pela linha resumida da tabela.",
-            "reference_date": "2026-10-06"
+            "reference_date": "2026-10-06",
+            "review_evidence": "MissaoAprovacaoGeo/V6_REVISAO_TEMPORAL_2026_11_04.md"
           },
           {
             "id": "prodes-deter-funcoes",
@@ -32698,12 +32735,13 @@
               "inpe-2026"
             ],
             "reference_date": "2026-08-07",
-            "checked_at": "2026-10-16",
-            "verified_at": "2026-10-16",
+            "checked_at": "2026-11-04",
+            "verified_at": "2026-11-04",
             "verification": "verified",
             "review_trigger": "Alteração de produto/metodologia INPE e revisão pré-prova; não inserir taxas anuais sem período/fonte.",
-            "review_due_at": "2026-11-15",
-            "note": "Verificação limitada à diferença funcional e ao recorte Amazônia Legal; não incorpora números novos da notícia."
+            "review_due_at": "2027-02-04",
+            "note": "Verificação limitada à diferença funcional e ao recorte Amazônia Legal; não incorpora números novos da notícia. Reconfirmação das funções na página DETER/INPE datada de 2021; configuração de sensores e taxas atuais fora do escopo.",
+            "review_evidence": "MissaoAprovacaoGeo/V6_REVISAO_TEMPORAL_2026_11_04.md"
           },
           {
             "id": "perfil-seduc-pa-2026",
@@ -32716,12 +32754,13 @@
               "fgv-pagina"
             ],
             "reference_date": "2026-10-02",
-            "checked_at": "2026-10-16",
-            "verified_at": "2026-10-16",
+            "checked_at": "2026-11-04",
+            "verified_at": "2026-11-04",
             "verification": "verified",
             "review_trigger": "Nova retificação do certame e conferência antes da prova. O núcleo permanente não depende do perfil.",
-            "review_due_at": "2026-10-30",
-            "note": "A presença no programa é distinta de profundidade validada e não comprova padrões históricos de cobrança."
+            "review_due_at": "2026-11-18",
+            "note": "A presença no programa é distinta de profundidade validada e não comprova padrões históricos de cobrança.",
+            "review_evidence": "MissaoAprovacaoGeo/V6_REVISAO_TEMPORAL_2026_11_04.md"
           }
         ]
       },
@@ -32732,8 +32771,8 @@
             "title": "IBGE — Resolução da Presidência nº 01/2015",
             "url": "https://geoftp.ibge.gov.br/metodos_e_outros_documentos_de_referencia/normas/rpr_01_2015_sirgas2000.pdf",
             "reference_date": "2015-02-24",
-            "checked_at": "2026-10-16",
-            "verified_at": "2026-10-16",
+            "checked_at": "2026-11-04",
+            "verified_at": "2026-11-04",
             "verification": "direct",
             "locator": "Art. 1º: término da transição em 25/02/2015; §§ 2º e 5º e anexo sobre transformação.",
             "scope": "Data de adoção exclusiva e necessidade de transformação de referenciais. Não certifica precisão de um levantamento."
@@ -32743,8 +32782,8 @@
             "title": "INPE — DETER",
             "url": "https://www.gov.br/inpe/pt-br/area-conhecimento/unidade-amazonia/projetos-e-pesquisas/deter/deter",
             "reference_date": "2021-12-30",
-            "checked_at": "2026-10-16",
-            "verified_at": "2026-10-16",
+            "checked_at": "2026-11-04",
+            "verified_at": "2026-11-04",
             "verification": "direct",
             "locator": "Finalidade de alerta, oportunidade de detecção, nuvens e distinção da taxa anual PRODES.",
             "scope": "Princípios e limitações. Números de sensores/limiares dessa página datada não foram incorporados como configuração atual."
@@ -32765,11 +32804,16 @@
             "title": "Decreto nº 6.666/2008, redação com alterações de 2025",
             "url": "https://planalto.gov.br/ccivil_03/_ato2007-2010/2008/decreto/d6666.htm",
             "reference_year": 2025,
-            "checked_at": "2026-10-16",
+            "checked_at": "2026-11-04",
             "verified_at": "2026-10-16",
             "verification": "direct",
             "locator": "Art. 2º, II e III: metadados e INDE; alterações pelo Decreto nº 12.402/2025.",
-            "scope": "Definição e finalidade. Não foi criada exposição jurídica nova na teoria."
+            "scope": "Definição e finalidade. Não foi criada exposição jurídica nova na teoria.",
+            "last_access_attempt": {
+              "at": "2026-11-04",
+              "result": "access-denied",
+              "note": "Verificação anterior preservada; nova leitura direta realizada na Câmara dos Deputados."
+            }
           },
           {
             "id": "nasa-rio",
@@ -32799,8 +32843,8 @@
             "title": "FGV/SEPLAD/SEDUC-PA — C-223, edital consolidado",
             "url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-consolidado-01.10-minuta.pdf",
             "reference_date": "2026-10-02",
-            "checked_at": "2026-10-16",
-            "verified_at": "2026-10-16",
+            "checked_at": "2026-11-04",
+            "verified_at": "2026-11-04",
             "verification": "direct",
             "locator": "Página impressa 102 (índice PDF 101), programa de Geografia; página do certame indica retificação em 02/10/2026.",
             "scope": "Presença dos tópicos de Cartografia e formato do perfil. Não comprova frequência histórica de cobrança ou dificuldade dos itens autorais."
@@ -32810,8 +32854,8 @@
             "title": "FGV — página de acompanhamento do concurso SEDUC-PA 2026",
             "url": "https://conhecimento.fgv.br/concursos/seducpa26",
             "reference_year": 2026,
-            "checked_at": "2026-10-16",
-            "verified_at": "2026-10-16",
+            "checked_at": "2026-11-04",
+            "verified_at": "2026-11-04",
             "verification": "direct",
             "locator": "Arquivos do concurso e link para edital retificado em 02/10/2026.",
             "scope": "Identificação da versão consultada. Retificações posteriores exigem revisão."
@@ -32837,6 +32881,28 @@
             "verification": "direct",
             "locator": "NASA Images and Media Usage Guidelines; uso educacional/informativo e reconhecimento da fonte, ressalvas para material de terceiros.",
             "scope": "Política consultada para as duas cenas Landsat creditadas a Jesse Allen com dados USGS no artigo. Não atribui à NASA a autoria ou aprovação das questões."
+          },
+          {
+            "id": "camara-inde",
+            "title": "Câmara dos Deputados — Decreto 6.666/2008 atualizado",
+            "url": "https://www2.camara.leg.br/legin/fed/decret/2008/decreto-6666-27-novembro-2008-584507-normaatualizada-pe.pdf",
+            "reference_year": 2025,
+            "locator": "Arts. 1º–2º, redação do Decreto 12.402/2025; definição e finalidade de metadados e INDE.",
+            "scope": "Definição geral preservada. Fonte adicional após bloqueio do endpoint Planalto.",
+            "checked_at": "2026-11-04",
+            "verified_at": "2026-11-04",
+            "verification": "direct"
+          },
+          {
+            "id": "fnde-bncc",
+            "title": "FNDE — BNCC, Anexo III-A do PNLD 2019",
+            "url": "https://www.fnde.gov.br/phocadownload/programas/Livro_Didatico_PNLD/Editais/2019/ANEXO%20III-A%20BNCC.pdf",
+            "reference_year": 2017,
+            "locator": "Quadro 1, página impressa 312, índice PDF 313: sete princípios do raciocínio geográfico.",
+            "scope": "Conferência apenas do quadro; cópia com paginação distinta da edição completa de 2018. Não é auditoria integral BNCC/DCEPA.",
+            "checked_at": "2026-11-04",
+            "verified_at": "2026-11-04",
+            "verification": "direct"
           }
         ],
         "temporal_claims": [
@@ -32857,12 +32923,13 @@
               "ibge-sirgas"
             ],
             "reference_date": "2015-02-25",
-            "checked_at": "2026-10-16",
-            "verified_at": "2026-10-16",
+            "checked_at": "2026-11-04",
+            "verified_at": "2026-11-04",
             "verification": "verified",
             "review_trigger": "Mudança normativa ou orientação técnica IBGE; conferir antes do congelamento pré-prova.",
-            "review_due_at": "2026-11-15",
-            "note": "A resolução é datada de 24/02/2015 e define término da transição em 25/02/2015."
+            "review_due_at": "2027-05-04",
+            "note": "A resolução é datada de 24/02/2015 e define término da transição em 25/02/2015.",
+            "review_evidence": "MissaoAprovacaoGeo/V6_REVISAO_TEMPORAL_2026_11_04.md"
           },
           {
             "id": "prodes-deter-funcoes",
@@ -32894,12 +32961,13 @@
               "inpe-2026"
             ],
             "reference_date": "2026-08-07",
-            "checked_at": "2026-10-16",
-            "verified_at": "2026-10-16",
+            "checked_at": "2026-11-04",
+            "verified_at": "2026-11-04",
             "verification": "verified",
             "review_trigger": "Alteração de produto/metodologia INPE e revisão pré-prova; não inserir taxas anuais sem período/fonte.",
-            "review_due_at": "2026-11-15",
-            "note": "Verificação limitada à diferença funcional e ao recorte Amazônia Legal; não incorpora números novos da notícia."
+            "review_due_at": "2027-02-04",
+            "note": "Verificação limitada à diferença funcional e ao recorte Amazônia Legal; não incorpora números novos da notícia. Reconfirmação das funções na página DETER/INPE datada de 2021; configuração de sensores e taxas atuais fora do escopo.",
+            "review_evidence": "MissaoAprovacaoGeo/V6_REVISAO_TEMPORAL_2026_11_04.md"
           },
           {
             "id": "inde-metadados",
@@ -32910,15 +32978,17 @@
             ],
             "kind": "normative",
             "source_ids": [
-              "inde-norma"
+              "inde-norma",
+              "camara-inde"
             ],
             "reference_year": 2025,
-            "checked_at": "2026-10-16",
-            "verified_at": "2026-10-16",
+            "checked_at": "2026-11-04",
+            "verified_at": "2026-11-04",
             "verification": "verified",
             "review_trigger": "Mudança no decreto ou nas especificações da INDE; revisar antes do congelamento pré-prova.",
-            "review_due_at": "2026-11-15",
-            "note": "Definição geral preservada; não foram transportados dispositivos revogados nem escrita nova de legislação."
+            "review_due_at": "2027-05-04",
+            "note": "Definição geral preservada; não foram transportados dispositivos revogados nem escrita nova de legislação.",
+            "review_evidence": "MissaoAprovacaoGeo/V6_REVISAO_TEMPORAL_2026_11_04.md"
           },
           {
             "id": "nasa-rio-historico",
@@ -32951,15 +33021,17 @@
             ],
             "kind": "curricular-reference",
             "source_ids": [
-              "mec-bncc"
+              "mec-bncc",
+              "fnde-bncc"
             ],
             "reference_year": 2018,
-            "checked_at": "2026-10-16",
-            "verified_at": "2026-10-16",
+            "checked_at": "2026-11-04",
+            "verified_at": "2026-11-04",
             "verification": "verified",
             "review_trigger": "Conferir PDF oficial e escopo curricular antes da promoção; não extrapolar para auditoria BNCC/DCEPA completa.",
-            "review_due_at": "2026-10-30",
-            "note": "Os sete princípios foram conferidos no Quadro 1, página impressa 360 da edição completa de 2018. O recorte é o Ensino Fundamental, homologado em 2017; não é uma auditoria curricular completa."
+            "review_due_at": "2027-05-04",
+            "note": "Os sete princípios foram conferidos no Quadro 1, página impressa 360 da edição completa de 2018. O recorte é o Ensino Fundamental, homologado em 2017; não é uma auditoria curricular completa. Reconfirmação em 04/11 no Quadro 1 da cópia FNDE, página impressa 312 (índice 313); paginação distinta, mesmos sete princípios.",
+            "review_evidence": "MissaoAprovacaoGeo/V6_REVISAO_TEMPORAL_2026_11_04.md"
           },
           {
             "id": "perfil-seduc-pa-2026",
@@ -32972,12 +33044,13 @@
               "fgv-pagina"
             ],
             "reference_date": "2026-10-02",
-            "checked_at": "2026-10-16",
-            "verified_at": "2026-10-16",
+            "checked_at": "2026-11-04",
+            "verified_at": "2026-11-04",
             "verification": "verified",
             "review_trigger": "Nova retificação do certame e conferência antes da prova. O núcleo permanente não depende do perfil.",
-            "review_due_at": "2026-10-30",
-            "note": "A presença no programa é distinta de profundidade validada e não comprova padrões históricos de cobrança."
+            "review_due_at": "2026-11-18",
+            "note": "A presença no programa é distinta de profundidade validada e não comprova padrões históricos de cobrança.",
+            "review_evidence": "MissaoAprovacaoGeo/V6_REVISAO_TEMPORAL_2026_11_04.md"
           }
         ]
       }

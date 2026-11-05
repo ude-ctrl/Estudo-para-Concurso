@@ -766,7 +766,8 @@ button:focus:not(:focus-visible) {
   margin-bottom: 10px;
 }
 .card-counts > span,
-.card-tools > a {
+.card-tools > a,
+.card-tools > span {
   display: flex;
   align-items: center;
   gap: 5px;

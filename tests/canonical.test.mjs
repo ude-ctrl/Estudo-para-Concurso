@@ -21,6 +21,7 @@ import {
 
 const baseRoot = resolve(root, 'base-conhecimento');
 const at = '2026-10-16T18:00:00-03:00';
+const releaseAt = '2026-11-04T12:00:00Z';
 const ids = ['cartografia-fundamentos', 'cartografia-representacao', 'geotecnologias'];
 const originals = await Promise.all(ids.map((id) => readBundle(baseRoot, id, '0.1.0')));
 const baseline = JSON.parse(
@@ -103,7 +104,7 @@ test('catálogo mantém os 28 IDs oficiais e somente as três candidatas deste l
   assert.ok(
     registry.units.every((u) =>
       ids.includes(u.unit_id)
-        ? u.canonical_version === '1.0.0' && u.runtime_enabled === true
+        ? u.canonical_version === '1.0.1' && u.runtime_enabled === true
         : u.canonical_version === null && u.runtime_enabled === false,
     ),
   );
@@ -475,7 +476,7 @@ function redeclareRevision(x, i = 0) {
 }
 
 test('0.1.1 continua íntegra quando o catálogo evolui e mantém todos os recursos e procedências', async () => {
-  const lot = await validateLot(baseRoot, { at });
+  const lot = await validateLot(baseRoot, { at: releaseAt });
   assert.ok(lot.summaries.every((s) => s.approved));
   for (const [i, next] of revised.entries()) {
     assert.equal(validateBundle(next, { at }).approved, false);
@@ -743,8 +744,8 @@ const currentMap = () =>
   structuredClone(current[0].base.support.visuals.find((v) => v.kind === 'schematic-map'));
 
 test('0.1.2 continua íntegra após a promoção e preserva as identidades, alternativas e gabaritos de 0.1.1', async () => {
-  const result = await validateLot(baseRoot, { at });
-  assert.ok(result.summaries.every((s) => s.version === '1.0.0' && s.approved));
+  const result = await validateLot(baseRoot, { at: releaseAt });
+  assert.ok(result.summaries.every((s) => s.version === '1.0.1' && s.approved));
   assert.equal(result.canonicalUnits, 3);
   assert.equal(result.untouchedUnits, 25);
   for (const [i, next] of current.entries()) {
@@ -1001,13 +1002,58 @@ test('cadeia valida também a revisão intermediária e recusa ciclos antes de c
 });
 
 const canonical = await Promise.all(ids.map((id) => readBundle(baseRoot, id, '1.0.0')));
+test('1.0.1 renova somente metadados: conteúdo, suporte e procedência preservados', async () => {
+  for (const [i, id] of ids.entries()) {
+    const next = await readBundle(baseRoot, id, '1.0.1');
+    assert.deepEqual(next.base.content, canonical[i].base.content);
+    assert.deepEqual(next.base.support, canonical[i].base.support);
+    assert.deepEqual(next.provenance.archive, canonical[i].provenance.archive);
+    assert.deepEqual(next.provenance.parity_records, canonical[i].provenance.parity_records);
+    assert.ok(next.provenance.revision.changes.every((c) => c.path.startsWith('/metadata/')));
+    assert.equal(validateRevision(canonical[i], next).preserved_resources, [277, 183, 231][i]);
+    assert.equal(
+      (await loadApprovedUnit(baseRoot, id, '1.0.1', { at: releaseAt })).editorial_version,
+      '1.0.1',
+    );
+  }
+});
+
+test('referência vencida bloqueia edição ativa, mas não invalida aprovação histórica íntegra', async () => {
+  assert.throws(
+    () => validateBundle(canonical[0], { approved: true, at: releaseAt }),
+    /Dado temporal vencido/,
+  );
+  assert.equal((await validateLot(baseRoot, { at: releaseAt })).canonicalUnits, 3);
+  await assert.rejects(
+    validateLot(baseRoot, { at: '2026-11-18T00:00:00Z' }),
+    /Dado temporal vencido: perfil-seduc-pa-2026/,
+  );
+});
+
+test('aprovação histórica futura, inválida ou adulterada continua recusada', async (t) => {
+  const temp = await mkdtemp(resolve(tmpdir(), 'v6-historical-date-'));
+  t.after(() => rm(temp, { recursive: true, force: true }));
+  await cp(baseRoot, temp, { recursive: true });
+  const path = resolve(temp, 'cartografia', ids[0], '1.0.0', 'audit.json');
+  for (const reviewed_at of ['2027-01-01', 'invalid']) {
+    const changed = structuredClone(canonical[0].audit);
+    changed.editorial_approval.reviewed_at = reviewed_at;
+    await writeFile(path, JSON.stringify(changed));
+    await assert.rejects(
+      validateLot(temp, { at: releaseAt }),
+      /aprovação histórica inválida\/futura/,
+    );
+  }
+  const changed = structuredClone(canonical[0].audit);
+  changed.statements.push('Adulteração do parecer arquivado');
+  await writeFile(path, JSON.stringify(changed));
+  await assert.rejects(validateLot(temp, { at: releaseAt }), /Aprovação não corresponde/);
+});
+
 test('1.0.0 aprova por revisão delegada explícita, preservando integralmente os textos de 0.1.2', async () => {
   for (const [i, next] of canonical.entries()) {
     assert.equal(validateBundle(next, { approved: true, at }).approved, true);
-    assert.equal(
-      (await loadApprovedUnit(baseRoot, ids[i], '1.0.0', { at })).editorial_version,
-      '1.0.0',
-    );
+    await assert.rejects(loadApprovedUnit(baseRoot, ids[i], '1.0.0', { at }), /não aprovada/);
     assert.equal(next.audit.human_approval, null);
     assert.equal(next.audit.editorial_approval.kind, 'delegated-ai');
     assert.ok(
@@ -1049,6 +1095,7 @@ test('consumo delegado exige escopo autorizado no catálogo e habilitação expl
   t.after(() => rm(temp, { recursive: true, force: true }));
   await cp(baseRoot, temp, { recursive: true });
   const registry = JSON.parse(await readFile(resolve(temp, 'manifest.json'), 'utf8'));
+  registry.units.find((u) => u.unit_id === ids[0]).canonical_version = '1.0.0';
   registry.editorial_governance.unit_ids = ids.slice(1);
   await writeFile(resolve(temp, 'manifest.json'), JSON.stringify(registry));
   await assert.rejects(loadApprovedUnit(temp, ids[0], '1.0.0', { at }), /fora do contrato\/escopo/);
@@ -1063,6 +1110,8 @@ test('cadeia da canônica continua validada quando existe outra candidata em aud
   t.after(() => rm(temp, { recursive: true, force: true }));
   await cp(baseRoot, temp, { recursive: true });
   const registry = JSON.parse(await readFile(resolve(temp, 'manifest.json'), 'utf8'));
+  for (const entry of registry.units.filter((u) => ids.includes(u.unit_id)))
+    entry.candidate_version = entry.canonical_version = '1.0.0';
   Object.assign(
     registry.units.find((u) => u.unit_id === ids[0]),
     { candidate_version: '0.1.2', status: 'EM_AUDITORIA' },
