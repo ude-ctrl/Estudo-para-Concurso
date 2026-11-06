@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, Fragment } from 'react';
+import { moduleOf, moduleTitles, type ModuleId } from './modules';
 import { ArrowRight, BookOpen, Check, RotateCcw } from 'lucide-react';
 import { useV6 } from './context';
 import { CompassArt, Html, ModeLink, Provenance, EditorialSources, studyLink } from './components';
@@ -45,7 +46,9 @@ export function Home() {
     resume = state.resume;
   const due = content.cards.filter((c) => state.reviews[c.id]?.due <= Date.now()).length;
   const dueUnit = content.cards.find((c) => state.reviews[c.id]?.due <= Date.now())?.unit;
-  const first = content.units[0].id,
+  const first = resume?.unit ||
+    [...content.questions, ...content.cards, ...content.game].find((item) => item.id === state.session?.ids[0])?.unit ||
+    content.units[0].id,
     eligible = state.evidence.filter(
       (e) => e.eligible && ['fixacao', 'concurso', 'elite', 'exam', 'boss'].includes(e.kind),
     );
@@ -54,7 +57,7 @@ export function Home() {
   const nextMission =
     content.missions.find((m) => m.id === resume?.mission) ||
     content.missions.find((m) => m.unit === resume?.unit) ||
-    content.missions[0];
+    content.missions.find((m) => m.unit === first) || content.missions[0];
   const canResumeTraining =
     resume?.mode === 'treino' &&
     trainingSessionMatches(content, state.session, { unit: resume.unit });
@@ -78,12 +81,9 @@ export function Home() {
         <h1>
           Leia o mundo.
           <br />
-          <em>Domine a linguagem dos mapas.</em>
+          <em>Construa seu raciocínio geográfico.</em>
         </h1>
-        <p>
-          Um percurso de Cartografia e Geotecnologias, com profundidade para estudar e clareza para
-          continuar.
-        </p>
+        <p>Fundamentos e Cartografia, com teoria, prática e revisão para avançar com constância.</p>
         <CompassArt />
         <div className="next-step-context">
           <span className="eyebrow">
@@ -167,41 +167,52 @@ export function Home() {
           <small>Com cobertura e confiança</small>
         </div>
       </div>
-      <div className="section-title">
-        <div>
-          <span className="eyebrow">Módulo 02</span>
-          <h2>Cartografia e Geotecnologias</h2>
-        </div>
-        <span className="micro">3 unidades · 17 missões</span>
-      </div>
-      <div className="unit-grid">
-        {content.units.map((u, i) => {
-          const ms = content.missions.filter((m) => m.unit === u.id),
-            ss = ms.flatMap((m) => m.sections),
-            n = ss.filter((x) => state.read[x.id]).length;
-          return (
-            <article className="unit-card" key={u.id}>
-              <div className="unit-number">
-                0{i + 1}
-                <BookOpen size={23} />
-              </div>
-              <h3>
-                <a href={`#/unidade/${u.id}/estudo`}>{u.title}</a>
-              </h3>
-              <p>{u.description}</p>
-              <div className="unit-progress">
-                <progress value={n} max={ss.length} aria-label={'Leitura em ' + u.title} />
-                <small>
-                  {n} de {ss.length} explicações · {ms.length} missões
-                </small>
-              </div>
-              <ModeLink className="button subtle" unit={u.id} mode="estudo">
-                Entrar na unidade <ArrowRight size={16} />
-              </ModeLink>
-            </article>
-          );
-        })}
-      </div>
+      {(['fundamentos', 'cartografia'] as ModuleId[]).map((module) => (
+        <Fragment key={module}>
+          <div className="section-title">
+            <div>
+              <span className="eyebrow">
+                {module === 'fundamentos' ? 'Módulo 01' : 'Módulo 02'}
+              </span>
+              <h2>{moduleTitles[module]}</h2>
+            </div>
+            <span className="micro">
+              {content.units.filter((u) => moduleOf(u.id) === module).length} unidade(s) ·{' '}
+              {content.missions.filter((m) => moduleOf(m.unit) === module).length} missões
+            </span>
+          </div>
+          <div className="unit-grid">
+            {content.units
+              .filter((u) => moduleOf(u.id) === module)
+              .map((u, i) => {
+                const ms = content.missions.filter((m) => m.unit === u.id),
+                  ss = ms.flatMap((m) => m.sections),
+                  n = ss.filter((x) => state.read[x.id]).length;
+                return (
+                  <article className="unit-card" key={u.id}>
+                    <div className="unit-number">
+                      0{i + 1}
+                      <BookOpen size={23} />
+                    </div>
+                    <h3>
+                      <a href={`#/unidade/${u.id}/estudo`}>{u.title}</a>
+                    </h3>
+                    <p>{u.description}</p>
+                    <div className="unit-progress">
+                      <progress value={n} max={ss.length} aria-label={'Leitura em ' + u.title} />
+                      <small>
+                        {n} de {ss.length} explicações · {ms.length} missões
+                      </small>
+                    </div>
+                    <ModeLink className="button subtle" unit={u.id} mode="estudo">
+                      Entrar na unidade <ArrowRight size={16} />
+                    </ModeLink>
+                  </article>
+                );
+              })}
+          </div>
+        </Fragment>
+      ))}
       <div className="next-actions">
         <article>
           <RotateCcw size={22} />
@@ -258,8 +269,8 @@ export function Home() {
         )}
       </div>
       <p className="pilot-note">
-        Este ambiente reúne Cartografia revisada. Os demais módulos continuam disponíveis em{' '}
-        <a href="./index.html">biblioteca de temas</a>.
+        Este ambiente reúne Fundamentos e Cartografia revisados. Os demais módulos continuam
+        disponíveis em <a href="./index.html">biblioteca de temas</a>.
       </p>
     </>
   );
@@ -356,6 +367,12 @@ export function Study() {
   const { content, state, route, update, go } = useV6(),
     ms = content.missions.filter((m) => m.unit === route.unit),
     m = ms.find((m) => m.id === route.mission) || ms[0];
+  let legacyAvailable = false;
+  if (route.unit === 'fundamentos-geografia') {
+    try {
+      legacyAvailable = ['t1i_v21', 't1i_v2'].some((key) => !state.migrations[key] && !!localStorage.getItem(key));
+    } catch { /* Recovery remains available through backup import in settings. */ }
+  }
   const index = ms.indexOf(m),
     sections = [...m.sections].sort((a, b) => Number(!a.primary) - Number(!b.primary));
   return (
@@ -366,6 +383,7 @@ export function Study() {
         </span>
         <h1>{m.title}</h1>
         <p>{m.goal}</p>
+        {legacyAvailable && <p className="micro">Encontramos seu progresso da versão anterior. <a href="#/configuracoes">Importar histórico de Fundamentos</a>.</p>}
       </div>
       <details className="outline">
         <summary>Escolher missão nesta unidade</summary>
@@ -468,8 +486,10 @@ export function Study() {
                 (s) =>
                   s.kind !== 'discBox' &&
                   (s.mission === m.id ||
-                    m.id === 'leitura-critica-integrada' ||
-                    m.id === 'cartografia-escolar'),
+                    (content.missions.some(
+                      (other) => other.id === s.mission && other.unit === m.unit,
+                    ) &&
+                      (m.id === 'leitura-critica-integrada' || m.id === 'cartografia-escolar'))),
               )
               .map((s) => (
                 <div key={s.id}>

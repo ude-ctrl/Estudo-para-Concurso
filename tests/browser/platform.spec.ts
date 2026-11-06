@@ -5,7 +5,7 @@ import type { Catalog } from '../../src/types';
 const catalog: Catalog = JSON.parse(
   await readFile(new URL('../../public/content/catalog.json', import.meta.url), 'utf8'),
 );
-const t01 = catalog.lessons.find((lesson) => lesson.number === 1)!;
+const legacyLesson = catalog.lessons.find((lesson) => lesson.number === 4)!;
 const urban = catalog.lessons.find((lesson) => lesson.number === 11)!;
 const bncc18 = catalog.lessons.find((lesson) => lesson.id === 'lesson-fa532170310d')!;
 const bncc22 = catalog.lessons.find((lesson) => lesson.id === 'lesson-73811adb3a6b')!;
@@ -28,7 +28,7 @@ test('biblioteca mostra todo o acervo e suas contagens', async ({ page }) => {
   await expect(page.locator('.lesson-group')).toHaveCount(2);
   const ids = await page.locator('[id]').evaluateAll((elements) => elements.map((el) => el.id));
   expect(new Set(ids).size).toBe(ids.length);
-  await expect(page.locator('.stats-grid')).toContainText('1.414');
+  await expect(page.locator('.stats-grid')).toContainText('1.415');
   await expect(page.locator('.stats-grid')).toContainText('2.856');
   expect(errors).toEqual([]);
 });
@@ -82,7 +82,7 @@ for (const {
       );
     }
     await expect(page.locator('.stats-grid')).toContainText('25temas de estudo');
-    await expect(page.locator('.stats-grid')).toContainText('26 materiais');
+    await expect(page.locator('.stats-grid')).toContainText('25 materiais');
   });
 
   test(`busca por tema e aplicação seleciona o material ${topic} correto e preserva URLs antigas`, async ({
@@ -236,7 +236,7 @@ test('busca ignora acentos e Cartografia histórica não aparece como opção de
 test('favoritos persistem e podem ser removidos', async ({ page }) => {
   await page.goto('./biblioteca.html');
   await page
-    .getByRole('button', { name: `Adicionar aos favoritos: ${t01.title}`, exact: true })
+    .getByRole('button', { name: `Adicionar aos favoritos: ${legacyLesson.title}`, exact: true })
     .click();
   await page.reload();
   await page
@@ -245,31 +245,36 @@ test('favoritos persistem e podem ser removidos', async ({ page }) => {
     .click();
   await expect(page.locator('.lesson-card')).toHaveCount(1);
   await page
-    .getByRole('button', { name: `Remover dos favoritos: ${t01.title}`, exact: true })
+    .getByRole('button', { name: `Remover dos favoritos: ${legacyLesson.title}`, exact: true })
     .click();
   await expect(page.getByRole('heading', { name: 'Guarde seus próximos temas' })).toBeVisible();
 });
 
 test('uma resposta na página existente atualiza o catálogo e permite retomar', async ({ page }) => {
   await page.goto('./biblioteca.html');
-  await page.locator('.lesson-card h3').getByRole('link', { name: t01.title, exact: true }).click();
+  await page
+    .locator('.lesson-card h3')
+    .getByRole('link', { name: legacyLesson.title, exact: true })
+    .click();
   const frame = page.frameLocator('iframe');
   await expect(frame.locator('#w_b_0_0 .o')).toHaveCount(4);
   await frame.locator('#w_b_0_0 .o').nth(1).click();
   await page.getByRole('link', { name: 'Biblioteca', exact: true }).click();
   const card = page
     .locator('.lesson-card')
-    .filter({ has: page.locator('h3', { hasText: t01.title }) });
-  await expect(card).toContainText('3% das questões');
-  await expect(page.locator('.resume-card').filter({ hasText: t01.title })).toContainText(
-    '1 de 29 questões respondidas',
+    .filter({ has: page.locator('h3', { hasText: legacyLesson.title }) });
+  await expect(card).toContainText(
+    `${Math.round(100 / (legacyLesson.counts.stageQuestions + legacyLesson.counts.boss))}% das questões`,
+  );
+  await expect(page.locator('.resume-card').filter({ hasText: legacyLesson.title })).toContainText(
+    `1 de ${legacyLesson.counts.stageQuestions + legacyLesson.counts.boss} questões respondidas`,
   );
   await page.locator('.main-nav').getByRole('button', { name: 'Meu percurso' }).click();
   await expect(page.locator('.lesson-card')).toHaveCount(1);
 });
 
 test('atalhos abrem flashcards e game sem perder a navegação', async ({ page }) => {
-  await page.goto(`./biblioteca.html#/missao/${t01.id}?modo=flash`);
+  await page.goto(`./biblioteca.html#/missao/${legacyLesson.id}?modo=flash`);
   const frame = page.frameLocator('iframe');
   await expect(frame.locator('#tab-flash')).toBeVisible();
   await page.locator('.skip-link').focus();
@@ -344,14 +349,14 @@ test('progresso legado é lido sem contar respostas inválidas', async ({ page }
 test('exportação contém uma cópia identificada do progresso', async ({ page }) => {
   await page.goto('./biblioteca.html');
   await page
-    .getByRole('button', { name: `Adicionar aos favoritos: ${t01.title}`, exact: true })
+    .getByRole('button', { name: `Adicionar aos favoritos: ${legacyLesson.title}`, exact: true })
     .click();
   const downloaded = page.waitForEvent('download');
   await page.getByRole('button', { name: 'Salvar cópia do progresso' }).click();
   const download = await downloaded;
   const backup = JSON.parse(await readFile((await download.path())!, 'utf8'));
   expect(backup.schemaVersion).toBe(1);
-  expect(backup.preferences.favorites).toContain(t01.id);
+  expect(backup.preferences.favorites).toContain(legacyLesson.id);
   expect(backup.sources).toHaveLength(30);
   for (const lesson of catalog.lessons.filter((item) => item.editorialVersions?.length)) {
     expect(backup.sources.find((source: { id: string }) => source.id === lesson.id)).toMatchObject({
@@ -373,8 +378,8 @@ test('todas as páginas originais e dados são servidos no caminho publicado', a
     const response = await request.get(new URL(item.legacyUrl, baseURL!).href);
     expect(response.status()).toBe(200);
   }
-  const response = await request.get(new URL(t01.contentUrl, baseURL!).href);
-  expect((await response.json()).banks.C).toHaveLength(44);
+  const response = await request.get(new URL(legacyLesson.contentUrl, baseURL!).href);
+  expect((await response.json()).banks.C).toHaveLength(legacyLesson.counts.flashcards);
   await page.goto(`./biblioteca.html#/recurso/${catalog.resources[0].id}`);
   await expect(
     page.frameLocator('iframe').getByRole('heading', { name: 'Auditoria-Mestra dos 18 Temas' }),
@@ -400,17 +405,20 @@ test('celular tem menu funcional e não transborda horizontalmente', async ({ pa
   await expect(page.getByRole('button', { name: 'Abrir menu' })).toBeVisible();
 });
 
-test('entrada única reúne temas e Cartografia sem duplicação', async ({ page }, info) => {
+test('entrada única reúne temas e módulos V6 sem duplicação', async ({ page }, info) => {
   await page.goto('./');
   await expect(page.locator('.lesson-card')).toHaveCount(25);
-  await expect(page.locator('.module-card')).toHaveCount(1);
+  await expect(page.locator('.module-card')).toHaveCount(2);
   await expect(page.locator('.lesson-grid')).not.toContainText('Cartografia II');
   await expect(page.getByText('Um módulo. Três unidades. Um percurso.')).toHaveCount(0);
   await page.screenshot({ path: info.outputPath('biblioteca-unificada.png'), fullPage: true });
   await page.getByRole('combobox', { name: 'Filtrar por área' }).selectOption('Cartografia');
   await expect(page.locator('.lesson-card')).toHaveCount(1);
-  await page.locator('.module-card .start-link').click();
-  await expect(page.locator('.unit-card')).toHaveCount(3);
+  await page
+    .getByRole('article', { name: 'Cartografia e Geotecnologias', exact: true })
+    .locator('.start-link')
+    .click();
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Linguagem e leitura de mapas');
   await expect(page.getByText('Cartografia · V6 piloto')).toHaveCount(0);
   await page.getByRole('button', { name: 'Ativar modo escuro', exact: true }).click();
   await page.reload();
@@ -468,7 +476,7 @@ test('Cartografia não auditada não é pesquisável, favoritada ou recomendada;
   expect(await page.evaluate(() => localStorage.getItem('seducpa_t3_carto2_v26'))).toContain(
     'b_0_0',
   );
-  await page.goto(`./#/missao/${t01.id}`);
+  await page.goto(`./#/missao/${legacyLesson.id}`);
   await expect(page.frameLocator('iframe').locator('#tab-study')).toBeVisible();
 });
 
@@ -476,7 +484,13 @@ test('P3: contador considera favoritos ativos únicos e mantém os arquivados na
   page,
 }) => {
   const key = 'missao-geografia:preferences:v1';
-  const favorites = ['lesson-76fbd0d2b7a4', 'lesson-76fbd0d2b7a4', t01.id, t01.id, 'unknown-id'];
+  const favorites = [
+    'lesson-76fbd0d2b7a4',
+    'lesson-76fbd0d2b7a4',
+    legacyLesson.id,
+    legacyLesson.id,
+    'unknown-id',
+  ];
   await page.addInitScript(
     ({ key, favorites }) => {
       if (!localStorage.getItem(key))
@@ -494,7 +508,7 @@ test('P3: contador considera favoritos ativos únicos e mantém os arquivados na
   const backup = JSON.parse(await readFile((await (await downloaded).path())!, 'utf8'));
   expect(backup.preferences.favorites).toEqual(favorites);
   await page
-    .getByRole('button', { name: `Remover dos favoritos: ${t01.title}`, exact: true })
+    .getByRole('button', { name: `Remover dos favoritos: ${legacyLesson.title}`, exact: true })
     .click();
   await expect(button).toHaveText('Favoritos');
   await expect(page.locator('.lesson-card')).toHaveCount(0);
@@ -502,5 +516,5 @@ test('P3: contador considera favoritos ativos únicos e mantém os arquivados na
   await expect(button).toHaveText('Favoritos');
   expect(
     await page.evaluate((key) => JSON.parse(localStorage.getItem(key)!).favorites, key),
-  ).toEqual(favorites.filter((id) => id !== t01.id));
+  ).toEqual(favorites.filter((id) => id !== legacyLesson.id));
 });

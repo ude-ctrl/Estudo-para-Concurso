@@ -63,7 +63,7 @@ test('Canônica: aplicativo usa as três edições aprovadas e apresenta fontes 
   ).toBe(true);
   await page.goto('./v6.html#/configuracoes');
   await page.getByText('Fontes e atualização do conteúdo', { exact: true }).click();
-  await expect(page.locator('.editorial-sources h3')).toHaveCount(3);
+  await expect(page.locator('.editorial-sources h3')).toHaveCount(4);
   await expect(page.locator('.editorial-sources')).toContainText('Codex (IA)');
   await expect(page.locator('.editorial-sources a').first()).toHaveAttribute('href', /^https:\/\//);
   await expect(page.getByText(/itens novos estão pendentes de revisão humana/)).toHaveCount(0);
@@ -183,7 +183,7 @@ test('Canônica: seleção aposentada de GMS permanece histórica e exige escolh
       current: JSON.parse(localStorage.getItem(key)!),
       before: JSON.parse(localStorage.getItem(key + '.before-canonical-' + release)!),
     }),
-    { key: STATE_KEY, release: content.editorial!.release },
+    { key: STATE_KEY, release: JSON.parse(await readFile(new URL('../../public/v6/plataforma.json', import.meta.url), 'utf8')).editorial.release },
   );
   expect(saved.before.drafts[key]).toBe(retired.retired_option_id);
   expect(saved.current.evidence[0].choice).toBe(q.correct);

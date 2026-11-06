@@ -1,0 +1,3012 @@
+{
+  "schema_version": 1,
+  "kind": "legacy-literals",
+  "unit_ids": ["fundamentos-geografia"],
+  "preserve_answer_keys": true,
+  "source_commit": "3aa0509193a11d7d6f09ba916d125cc76afe5b79",
+  "source_path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+  "source_sha256": "06bc7c51d80146f6b2f82a0c247d0d7babe56462dc33543ff025353ead69e683",
+  "extracted_sha256": "bc780e3388be625a85cdba0272389294a109f5126353f21993e6a2e348772b27",
+  "extracted": {
+    "title": "SEDUC-PA · Tema 1 · Fundamentos, conceitos e autores · Matriz v2.5",
+    "banks": {
+      "K": "t1i_v21",
+      "OLDK": "t1i_v2",
+      "PRE": [
+        {
+          "p": "A noção de espaço vital, que associa território e crescimento do Estado, é de:",
+          "o": ["Vidal de La Blache", "Ratzel", "Lacoste", "Tuan"],
+          "c": 1
+        },
+        {
+          "p": "Em Milton Santos, o espaço geográfico é formado por:",
+          "o": [
+            "Apenas objetos naturais",
+            "Sistemas de objetos e de ações, indissociáveis",
+            "Fronteiras políticas",
+            "Regiões homogêneas"
+          ],
+          "c": 1
+        },
+        {
+          "p": "Território-zona e território-rede são distinções de:",
+          "o": ["Haesbaert", "Castells", "Sauer", "Hartshorne"],
+          "c": 0
+        }
+      ],
+      "B": [
+        {
+          "t": "Como a prova cobra isso",
+          "hook": "Pergunta para pensar: por que quase toda questão de conceitos tem uma palavra que entrega o autor?",
+          "h": "<p>A FGV costuma trabalhar conceitos e autores de <b>quatro formas</b>: (1) <b>associar</b> autor e ideia; (2) <b>reconhecer o conceito</b> em um texto, exemplo ou situação; (3) <b>completar ou interpretar</b> uma formulação teórica; e (4) <b>aplicar o conceito</b> a uma situação didática ou socioespacial.</p><p>O segredo é treinar o <b>reflexo palavra-chave → autor</b>. Veja a tabela e depois teste.</p><div class=\"w\"><table><tr><th>Palavra-chave</th><th>Autor</th></tr><tr><td>espaço vital, Estado organismo</td><td>Ratzel</td></tr><tr><td>gêneros de vida, possibilismo</td><td>Vidal de La Blache</td></tr><tr><td>serve para fazer a guerra</td><td>Lacoste</td></tr><tr><td>compressão espaço-tempo</td><td>Harvey</td></tr><tr><td>sistema de objetos e de ações, rugosidades</td><td>Milton Santos</td></tr><tr><td>espaço percebido, concebido e vivido</td><td>Lefebvre</td></tr><tr><td>território-zona, território-rede</td><td>Haesbaert</td></tr><tr><td>topofilia, lugar</td><td>Tuan</td></tr><tr><td>espaço vivido</td><td>Frémont</td></tr><tr><td>colonialidade do poder</td><td>Quijano</td></tr></table></div>",
+          "qs": [
+            {
+              "p": "“Gêneros de vida” é uma expressão-chave de:",
+              "o": ["Ratzel", "Vidal de La Blache", "Harvey", "Lefebvre"],
+              "c": 1,
+              "e": "Vidal. Gêneros de vida: o conjunto de técnicas e hábitos que um grupo desenvolve num meio. É a base do possibilismo."
+            }
+          ]
+        },
+        {
+          "t": "Geografia como campo do conhecimento",
+          "hook": "Antes de decorar escolas: como a Geografia se tornou uma ciência moderna?",
+          "h": "<p>A Geografia não começa em um único autor. <b>Alexander von Humboldt</b> (1769–1859) consolidou uma investigação comparativa da natureza, buscando conexões e causalidades entre fenômenos; sua grande síntese aparece em <i>Cosmos</i>. <b>Carl Ritter</b> (1779–1859) fortaleceu o estudo comparativo das regiões e das relações entre sociedade e natureza em <i>Erdkunde</i>.</p><p>No fim do século XIX e início do XX, a disciplina se institucionaliza nas universidades. <b>Alfred Hettner</b> formulou uma perspectiva <b>corológica</b>: a Geografia deveria compreender a diferenciação da superfície terrestre por áreas e pela combinação particular de fenômenos. <b>Richard Hartshorne</b>, dialogando com essa tradição, sistematizou a ideia de <b>diferenciação de áreas</b> (<i>The Nature of Geography</i>, 1939).</p><div class=\"nu\"><b>Precisão que evita decorar caricaturas.</b> Em prova, é útil reconhecer associações didáticas como “Ratzel → determinismo” e “Vidal → possibilismo”. Na história do pensamento geográfico, porém, as obras são mais complexas. Use a palavra-chave para marcar a alternativa e a explicação histórica para não cair em enunciados absolutos.</div><div class=\"box prova\"><span class=\"l\">Radar de prova</span>Se aparecer <b>unidade da natureza + comparação</b>, pense Humboldt. <b>Corologia/diferenciação de áreas</b> aponta para Hettner/Hartshorne. Depois vêm as escolas nacionais, a revolução quantitativa, as geografias crítica, humanista, cultural e as perspectivas decoloniais.</div>",
+          "qs": [
+            {
+              "p": "A expressão ‘diferenciação de áreas’, na sistematização clássica do século XX, é associada principalmente a:",
+              "o": ["Richard Hartshorne", "Yi-Fu Tuan", "David Harvey", "Rogério Haesbaert"],
+              "c": 0,
+              "e": "Hartshorne sistematizou a Geografia como estudo da diferenciação de áreas, em diálogo com a tradição corológica de Hettner."
+            },
+            {
+              "p": "Qual associação está correta?",
+              "o": [
+                "Humboldt — topofilia",
+                "Ritter — lugares centrais",
+                "Hettner — tradição corológica",
+                "Hartshorne — colonialidade do poder"
+              ],
+              "c": 2,
+              "e": "Hettner é referência da tradição corológica. Humboldt relaciona-se à unidade e conexão da natureza; Ritter ao estudo regional comparativo; Hartshorne à diferenciação de áreas."
+            }
+          ]
+        },
+        {
+          "t": "O duelo das escolas",
+          "hook": "A Geografia nasceu discutindo uma pergunta: o que explica a organização do espaço, a natureza ou a sociedade?",
+          "h": "<p><b>Ratzel</b> (<i>Antropogeografia</i>, 1882; <i>Geografia Política</i>, 1897) investigou relações entre sociedade, Estado, território e meio. Em sínteses didáticas, é associado ao <b>determinismo ambiental</b> e ao <b>espaço vital</b> (<i>Lebensraum</i>), no contexto do expansionismo e da geopolítica alemã. Em prova, essa associação é muito produtiva; historicamente, evite reduzir toda a sua obra a uma fórmula única.</p><p><b>Vidal de La Blache</b>, cuja obra <i>Princípios de Geografia Humana</i> foi publicada postumamente em 1922, enfatizou as <b>possibilidades</b> oferecidas pelo meio e a ação histórica, cultural e técnica dos grupos, expressa nos <b>gêneros de vida</b>. A tradição vidaliana valorizou fortemente a região. Nos manuais, isso aparece como <b>possibilismo</b>.</p><p>Décadas depois, <b>Lacoste</b> (1976) virou o jogo: a Geografia <b>serve, em primeiro lugar, para fazer a guerra</b>. Existe uma geografia dos Estados-maiores (saber estratégico a serviço do poder) e uma dos professores (descritiva, que esconde sua utilidade política). É a <b>Geografia crítica</b>, junto com Harvey e Milton Santos.</p><div class=\"box dia\"><span class=\"l\">Exemplo do dia a dia</span>“Brasileiro é alegre por causa do clima”, “gente do calor é preguiçosa”. Frases assim são determinismo de senso comum: explicam diferenças sociais pelo clima e escondem história, política e economia. Na Amazônia, indígenas, ribeirinhos, seringueiros e pecuaristas vivem no mesmo meio com gêneros de vida diferentes: isso é possibilismo.</div><p>Outras tradições importantes: <b>Hartshorne</b> (diferenciação de áreas), <b>Sauer</b> (paisagem cultural), a <b>quantitativa</b> (modelos, padrões e Christaller) e a <b>humanista</b> (Tuan, Frémont, Relph: experiência, percepção e lugar).</p><div class=\"w\"><table><tr><th>Corrente</th><th>Pergunta que orienta</th><th>Autores/ideias-chave</th></tr><tr><td>Tradicional</td><td>Como meio, sociedade e território se relacionam?</td><td>Ratzel; Vidal</td></tr><tr><td>Regional/corológica</td><td>Como compreender a diferenciação das áreas?</td><td>Hettner; Hartshorne</td></tr><tr><td>Quantitativa</td><td>Que padrões e regularidades espaciais podem ser modelados?</td><td>Christaller; localização e hierarquias</td></tr><tr><td>Crítica</td><td>Quem produz, usa e controla o espaço?</td><td>Lacoste; Santos; Harvey</td></tr><tr><td>Humanista/cultural</td><td>Como o espaço é vivido, percebido e significado?</td><td>Tuan; Frémont; Sauer</td></tr><tr><td>Decolonial</td><td>Quais poderes definem territórios e saberes legítimos?</td><td>Quijano; Porto-Gonçalves; Walsh</td></tr></table></div><div class=\"box prova\"><span class=\"l\">Como a banca cobra</span>É comum apresentar pequenas descrições e pedir a associação entre <b>autor e conceito</b>. Se aparecer <b>espaço vital</b>, pense Ratzel; <b>possibilidades/gêneros de vida</b>, Vidal; e <b>Geografia como saber estratégico</b>, Lacoste. A pegadinha é trocar os autores mantendo definições plausíveis.</div>",
+          "qs": [
+            {
+              "p": "A frase “o clima quente explica a pobreza de um país” é típica de qual corrente?",
+              "o": ["Possibilismo", "Determinismo", "Geografia crítica", "Geografia humanista"],
+              "c": 1,
+              "e": "Determinismo: explica o social pelo natural. O possibilismo diria que a sociedade escolhe entre possibilidades do meio."
+            },
+            {
+              "p": "Qual afirmação é de Lacoste?",
+              "o": [
+                "O Estado é um organismo que precisa de espaço vital.",
+                "O meio oferece possibilidades à ação humana.",
+                "A Geografia serve, em primeiro lugar, para fazer a guerra.",
+                "O espaço é vivido e sentido por quem mora nele."
+              ],
+              "c": 2,
+              "e": "Lacoste (1976). As outras são Ratzel, Vidal e Frémont (espaço vivido)."
+            }
+          ]
+        },
+        {
+          "t": "Espaço: objetos, ações, fixos e fluxos",
+          "hook": "Por que um casarão antigo que virou shopping ainda é “o mesmo objeto”, mas outro espaço?",
+          "h": "<p>Em <i>A Natureza do Espaço</i> (1996), <b>Milton Santos</b> define o espaço como um <b>conjunto indissociável, solidário e contraditório de sistemas de objetos e sistemas de ações</b>. Os objetos (naturais e técnicos) só têm sentido quando as ações lhes dão função. Por isso o mesmo objeto muda de papel no tempo. As formas herdadas do passado que permanecem são as <b>rugosidades</b>.</p><p>Dentro desse espaço circulam os <b>fixos e fluxos</b> (Santos; Contel: sistemas de movimento do território). <b>Fixos</b> são instalações fixadas nos lugares: portos, ferrovias, fábricas, hospitais. <b>Fluxos</b> são o que circula: mercadorias, pessoas, capital, informação, dados. Os fixos permitem os fluxos, e os fluxos recriam o significado dos fixos.</p><div class=\"box dia\"><span class=\"l\">Exemplo do dia a dia</span>A Estrada de Ferro Carajás liga a mina de Carajás (PA) ao porto de São Luís (MA), em cerca de 890 km. Os trens de minério passam de 3 km de comprimento. Ferrovia, mina e porto são <b>fixos</b>; minério, capital e trabalhadores são <b>fluxos</b>. O 4G do seu celular também é fluxo: dados por ondas.</div><div class=\"box prova\"><span class=\"l\">Como a banca cobra</span>A banca pode apresentar uma situação cotidiana — celular, internet, transporte, porto — e pedir para distinguir <b>fixo</b> de <b>fluxo</b>. Informação, mensagens e dados são <b>fluxos imateriais</b>; ferrovia, antena, porto e terminal são objetos/fixos que dão suporte à circulação.</div>",
+          "qs": [
+            {
+              "p": "Um casarão do século XIX que hoje abriga um centro cultural é, em Milton Santos, um exemplo de:",
+              "o": ["Fluxo imaterial", "Rugosidade", "Território-zona", "Região funcional"],
+              "c": 1,
+              "e": "Rugosidade: forma herdada do passado que permanece no espaço presente, com nova função."
+            },
+            {
+              "p": "No exemplo de Carajás, o minério que viaja de trem até o porto é:",
+              "o": ["Um fixo", "Um fluxo", "Uma rugosidade", "Um não-lugar"],
+              "c": 1,
+              "e": "Fluxo (material). Ferrovia, mina e porto são fixos."
+            }
+          ],
+          "r": "Sem olhar para o texto: explique em até 3 frases a diferença entre sistema de objetos, sistema de ações e rugosidade.",
+          "ra": "Objetos são a materialidade natural/técnica; ações são práticas e relações que dão função aos objetos; rugosidades são formas herdadas de tempos anteriores que permanecem no presente, muitas vezes com novas funções."
+        },
+        {
+          "t": "Paisagem e lugar",
+          "hook": "Uma foto antiga e uma atual da sua rua. O que isso ensina sobre tempo?",
+          "h": "<p>Para Santos, a <b>paisagem</b> é o conjunto de formas que a vista alcança; o espaço é a paisagem <b>mais a vida que a anima</b>. A paisagem é um <b>palimpsesto</b>: formas novas escritas sobre as antigas, em camadas de tempo. <b>Sauer</b> (1925) a vê como resultado da cultura sobre a natureza (paisagem cultural). Na escola (Castro Panizza), estuda-se a paisagem <b>observando, descrevendo e relacionando</b>: <b>Onde? Como? Por quê?</b>, partindo do espaço de vivência do estudante.</p><p><b>Lugar</b> é o espaço com significado e afeto (Tuan: <b>topofilia</b>; Frémont: <b>espaço vivido</b>). <b>Augé</b> (1992) chama de <b>não-lugares</b> os espaços de passagem, padronizados e sem identidade: aeroportos, rodoviárias, hotéis de rede.</p><div class=\"box dia\"><span class=\"l\">Exemplo do dia a dia</span>A calçada da casa da sua avó é lugar: tem cheiro, memória, nome. O saguão de um aeroporto, igual em qualquer cidade do mundo, é não-lugar.</div><div class=\"box prova\"><span class=\"l\">Como a banca cobra</span>Compare fotografias, mapas ou descrições de um mesmo lugar em tempos diferentes. O foco costuma ser <b>temporalidade, permanências e transformações da paisagem</b>. Em questões didáticas, observe também o uso do <b>espaço de vivência</b> e perguntas como “Onde? Como? Por quê?”.</div>",
+          "qs": [
+            {
+              "p": "Um professor pede que os alunos comparem fotos de uma mesma rua em 1980 e hoje. O conceito principal é:",
+              "o": [
+                "Região funcional",
+                "Paisagem como camadas de tempo",
+                "Território-zona",
+                "Escala cartográfica"
+              ],
+              "c": 1,
+              "e": "A paisagem guarda formas de tempos diferentes (rugosidades). Leitura de transformações = temporalidade."
+            },
+            {
+              "p": "Um saguão de aeroporto, padronizado e de passagem, é um exemplo de:",
+              "o": ["Lugar (Tuan)", "Não-lugar (Augé)", "Território-rede", "Região homogênea"],
+              "c": 1,
+              "e": "Não-lugar (Augé, 1992): espaço de passagem, sem identidade própria."
+            }
+          ]
+        },
+        {
+          "t": "Região e território",
+          "hook": "Terra indígena, condomínio fechado e Zona Franca de Manaus têm algo em comum. O quê?",
+          "h": "<p><b>Região</b> não possui um único significado ao longo da história da Geografia. Na tradição regional, aparece como uma <b>síntese particular</b> de elementos naturais e humanos; na Geografia quantitativa, ganhou força a regionalização por critérios mensuráveis, como regiões <b>homogêneas</b> (semelhança interna) e <b>funcionais</b> (fluxos em torno de um polo); em abordagens críticas, a região é entendida como <b>construção histórica e social</b>, articulada à divisão territorial do trabalho, às redes e às relações de poder. No Brasil, diferencie as 5 macrorregiões do IBGE da divisão geoeconômica de <b>Pedro Geiger</b>: Amazônia, Nordeste e Centro-Sul.</p><div class=\"box prova\"><span class=\"l\">Pegadinha típica</span>Atribuir a divisão geoeconômica Amazônia–Nordeste–Centro-Sul a <b>Milton Santos</b>. Guarde a autoria correta: <b>Pedro Geiger</b>. A banca costuma explorar trocas de autoria entre geógrafos conhecidos.</div><p><b>Território</b> não é só o Estado. <b>Raffestin</b> (1980): espaço em que se projetam trabalho, energia, informação e <b>poder</b>. <b>Haesbaert</b> (2004) distingue quatro perspectivas: <b>política, cultural, econômica e natural</b>; e dois tipos: <b>território-zona</b> (contínuo, com fronteiras, como o Estado-nação) e <b>território-rede</b> (descontínuo, pontos ligados por fluxos). <b>Multiterritorialidade</b>: viver vários territórios ao mesmo tempo. Santos fala em <b>território usado</b>: o chão mais a identidade e as ações.</p><div class=\"box dia\"><span class=\"l\">Exemplo do dia a dia</span>Terra indígena, quilombo, condomínio, “área” de uma facção, Zona Franca: todos são territórios, porque há <b>controle, poder e limite</b>. Quem trabalha numa cidade, mora em outra e vive em rede experimenta multiterritorialidade.</div><div class=\"box prova\"><span class=\"l\">Como a banca cobra</span>Quando o enunciado enfatiza <b>controle, fronteira, dono, acesso ou poder</b>, a resposta tende a ser território. Quando enfatiza <b>pontos conectados por linhas e fluxos</b>, pense em redes e, havendo apropriação/controle territorial descontínuo, em <b>território-rede</b>.</div>",
+          "qs": [
+            {
+              "p": "Quem propôs a divisão geoeconômica do Brasil em Amazônia, Nordeste e Centro-Sul, em 1967?",
+              "o": ["Milton Santos", "Pedro Geiger", "Roberto Lobato Corrêa", "IBGE, em 1970"],
+              "c": 1,
+              "e": "Pedro Geiger. Pegadinha típica: trocar a autoria por Milton Santos, um nome muito conhecido da Geografia brasileira."
+            },
+            {
+              "p": "Um trecho descreve uma estrada onde alguém controla quem entra e sai, funcionando como fronteira. O conceito geográfico é:",
+              "o": ["Paisagem", "Lugar", "Território", "Região homogênea"],
+              "c": 2,
+              "e": "Território: controle, poder e limite. Palavras como dono, controle, fronteira e poder apontam para território."
+            },
+            {
+              "p": "Para Haesbaert, os territórios modernos, feitos de pontos e linhas, correspondem principalmente a:",
+              "o": [
+                "Zonas contínuas",
+                "Redes de transporte e comunicação",
+                "Paisagens naturais",
+                "Regiões homogêneas"
+              ],
+              "c": 1,
+              "e": "Território-rede: pontos (nós) ligados por linhas (fluxos), como as redes de transporte e comunicação."
+            }
+          ]
+        },
+        {
+          "t": "Redes: nós, conexões, fluxos e poder",
+          "hook": "Uma rede apenas conecta lugares — ou também seleciona quem pode circular, comandar e acessar?",
+          "h": "<p><b>Rede geográfica</b> é uma estrutura espacial formada por <b>nós</b> (lugares/pontos), <b>conexões</b> (vias, enlaces) e <b>fluxos</b> (pessoas, mercadorias, capital, energia, informação). Ela nunca é apenas desenho: tem técnica, custo, hierarquia e <b>seletividade</b>.</p><p>Em <b>Milton Santos</b>, as redes técnicas integram o território de modo desigual: alguns lugares concentram densidade técnica e comando, enquanto outros entram de forma subordinada. Em <b>Roberto Lobato Corrêa</b>, a <b>rede urbana</b> é o conjunto de centros urbanos funcionalmente articulados, com diferentes posições e papéis. <b>Manuel Castells</b> usa a noção de <b>espaço de fluxos</b> para pensar uma sociedade organizada por redes de informação, finanças e comando.</p><p><b>Rede ≠ território-rede.</b> A rede é a estrutura de conexões. O <b>território-rede</b>, em Haesbaert, é uma forma de territorialização descontínua, produzida por controle e apropriação através de pontos conectados. Uma rede pode sustentar um território, mas os conceitos não são sinônimos.</p><div class=\"box dia\"><span class=\"l\">Amazônia para pensar</span>Rios, rodovias, portos, aeroportos, fibra óptica e redes urbanas conectam lugares de maneira desigual. Pergunte sempre: <b>quais são os nós?</b> <b>o que flui?</b> <b>quem controla?</b> <b>quem fica à margem?</b></div><div class=\"box prova\"><span class=\"l\">Pegadinha</span>Uma questão pode descrever pontos ligados por linhas e perguntar por <b>rede</b>; ou enfatizar controle, apropriação e poder sobre esses pontos e exigir <b>território-rede</b>. O verbo do enunciado entrega a diferença.</div>",
+          "qs": [
+            {
+              "p": "Em uma rede geográfica, terminais portuários funcionam como nós e as mercadorias que circulam entre eles são:",
+              "o": ["Rugosidades", "Fluxos", "Regiões homogêneas", "Escalas cartográficas"],
+              "c": 1,
+              "e": "Nó é o ponto da rede; fluxo é o que circula entre os nós. Redes combinam materialidade, conexão e movimento."
+            },
+            {
+              "p": "Para Roberto Lobato Corrêa, uma rede urbana pode ser entendida, de modo sintético, como:",
+              "o": [
+                "Um conjunto de centros urbanos funcionalmente articulados",
+                "Uma divisão climática do território",
+                "Uma sequência de paisagens naturais",
+                "Apenas a malha rodoviária de uma região"
+              ],
+              "c": 0,
+              "e": "Rede urbana não é só infraestrutura: envolve cidades articuladas por fluxos e funções, em posições hierárquicas ou complementares."
+            },
+            {
+              "p": "Qual alternativa diferencia corretamente rede de território-rede?",
+              "o": [
+                "São sinônimos perfeitos",
+                "Rede é conexão; território-rede envolve territorialização, controle e apropriação através de pontos conectados",
+                "Território-rede não possui fluxos",
+                "Rede só existe na internet"
+              ],
+              "c": 1,
+              "e": "A rede descreve a estrutura de nós, conexões e fluxos. Território-rede acrescenta a dimensão territorial de poder, controle e apropriação."
+            }
+          ],
+          "r": "Sem olhar: diferencie rede e território-rede e dê um exemplo de cada.",
+          "ra": "Rede é a estrutura de nós, conexões e fluxos; território-rede é uma territorialização descontínua organizada por pontos conectados sob relações de poder/controle. Ex.: rede rodoviária; rede de bases, rotas e pontos controlados por uma empresa ou grupo."
+        },
+        {
+          "t": "Produção do espaço, escalas e natureza",
+          "hook": "Pedir comida pelo aplicativo e receber em 30 minutos: o que mudou na relação entre espaço e tempo?",
+          "h": "<p><b>Lefebvre</b> (1974): o espaço é produzido socialmente em três planos: <b>percebido</b> (as práticas), <b>concebido</b> (planos e mapas de técnicos e planejadores) e <b>vivido</b> (a experiência dos usuários). <b>Harvey</b> (1989) chama de <b>compressão espaço-tempo</b> a aceleração dos ritmos e o encurtamento das distâncias, graças a transportes e comunicações, ligada à <b>acumulação flexível</b> do capital. <b>Massey</b> acrescenta que a compressão é desigual: há uma “geometria de poder”.</p><p><b>Escala geográfica</b> é o <b>nível de análise</b> (local, regional, nacional, global), e não a razão do mapa. Para Iná Elias de Castro, mudar de escala muda o que se enxerga; para Callai, ensina-se do lugar ao global e de volta.</p><p><b>Natureza e sociedade</b>: Santos descreve três meios: <b>natural</b>, <b>técnico</b> e <b>técnico-científico-informacional</b> (a partir dos anos 1970).</p><div class=\"box dia\"><span class=\"l\">Exemplo do dia a dia</span>Uma enchente: na escala da rua é bueiro entupido; do município, drenagem; da bacia, desmatamento a montante; da global, mudança do clima. Todas verdadeiras, em escalas diferentes.</div><div class=\"box prova\"><span class=\"l\">Como a banca cobra</span>Harvey costuma aparecer associado à <b>compressão espaço-tempo</b>, enquanto <b>espaço vital</b> é um distrator ligado a Ratzel. Em escala geográfica, a banca pode apresentar o mesmo fenômeno em recortes local, regional e global e perguntar o que muda na explicação.</div>",
+          "qs": [
+            {
+              "p": "O conceito de compressão espaço-tempo está associado a:",
+              "o": ["Ratzel", "Harvey", "Vidal", "Hartshorne"],
+              "c": 1,
+              "e": "Harvey, A Condição Pós-Moderna (1989). Ratzel é o distrator clássico (espaço vital)."
+            },
+            {
+              "p": "Ao analisar uma enchente na rua, no município, na bacia e no clima global, trabalha-se com:",
+              "o": ["Escala cartográfica", "Escala geográfica", "Projeção", "Região homogênea"],
+              "c": 1,
+              "e": "Escala geográfica: nível de análise do fenômeno. A cartográfica é a razão 1:N do mapa."
+            },
+            {
+              "p": "A tríade percebido, concebido e vivido pertence a:",
+              "o": ["Lefebvre", "Santos", "Corrêa", "Augé"],
+              "c": 0,
+              "e": "Lefebvre, A Produção do Espaço (1974)."
+            }
+          ],
+          "r": "Explique, sem consultar: o que muda quando um mesmo fenômeno é analisado na escala local, regional e global?",
+          "ra": "Muda o recorte, as relações visíveis e a explicação possível. Escala geográfica é nível de análise; não é a razão numérica do mapa."
+        },
+        {
+          "t": "Perspectivas decoloniais e interculturais",
+          "hook": "Por que o meridiano zero passa por Londres?",
+          "h": "<p>A Geografia acadêmica nasceu na Europa e muitas vezes olhou o mundo de lá: é o <b>eurocentrismo</b>. <b>Quijano</b> cunhou a <b>colonialidade do poder</b>: mesmo após o fim das colônias, persiste uma hierarquia que classifica povos e saberes (europeu = moderno; os demais = atrasados). <b>Said</b> (<i>Orientalismo</i>, 1978) mostrou como o “Oriente” foi inventado pelo olhar ocidental. <b>Escobar</b> (1995): o “desenvolvimento” criou o “subdesenvolvimento”. <b>Boaventura de Sousa Santos</b>: epistemologias do Sul. No Brasil, <b>Porto-Gonçalves</b> valoriza as territorialidades de povos tradicionais.</p><p>A <b>interculturalidade crítica</b> (Candau, Walsh) reconhece saberes diferentes em relação de igualdade, sem folclorizar. No currículo, apoia-se nas Leis <b>10.639/2003</b> e <b>11.645/2008</b> (história e cultura afro-brasileira e indígena).</p><div class=\"box dia\"><span class=\"l\">Curiosidade</span>Greenwich virou meridiano zero na Conferência de Washington (1884), por 22 votos a 1, com abstenção da França e do Brasil. A escolha refletiu o peso da navegação britânica: a maior parte das cartas náuticas já usava Greenwich. Na França, o meridiano de Paris só deixou de ser usado em 1911. Em 1943, o uruguaio Torres García desenhou a “América invertida”, com o Sul no topo.</div>",
+          "qs": [
+            {
+              "p": "A ideia de que, mesmo após o fim das colônias, persiste uma hierarquia que classifica povos e saberes é de:",
+              "o": ["Quijano", "Ratzel", "Tuan", "Christaller"],
+              "c": 0,
+              "e": "Colonialidade do poder (Quijano)."
+            },
+            {
+              "p": "Na interculturalidade crítica, o professor deve:",
+              "o": [
+                "Mostrar os saberes tradicionais como curiosidade folclórica",
+                "Reconhecer saberes diferentes em relação de igualdade",
+                "Substituir o conhecimento científico pelo tradicional",
+                "Ensinar só o conteúdo oficial"
+              ],
+              "c": 1,
+              "e": "Candau e Walsh: diálogo entre saberes em igualdade, sem folclorizar nem hierarquizar."
+            }
+          ]
+        },
+        {
+          "t": "Ler a realidade socioespacial",
+          "hook": "Uma família quer viajar para ver neve. Quantos conteúdos de Geografia nascem dessa frase?",
+          "h": "<p>O edital pede “leitura e interpretação da realidade socioespacial”. Na prática, é ler texto, mapa, charge, foto e notícia com um roteiro fixo: <b>Onde?</b> (localização e escala) · <b>O quê?</b> (fenômeno) · <b>Como?</b> (distribuição e conexões) · <b>Por quê?</b> (causas naturais e sociais) · <b>Quem ganha e quem perde?</b> (poder e desigualdade) · <b>E em outra escala?</b></p><p>A BNCC resume o raciocínio geográfico em sete princípios: <b>analogia, conexão, diferenciação, distribuição, extensão, localização e ordem</b>.</p><div class=\"box prova\"><span class=\"l\">Como a banca cobra</span>Uma situação simples do cotidiano pode servir de ponto de partida para vários conteúdos. “Viajar para ver neve”, por exemplo, permite articular <b>fuso horário, zonas climáticas, localização e relevo</b>. Procure sempre a conexão entre situação-problema e raciocínio geográfico.</div>",
+          "qs": [
+            {
+              "p": "Quais conteúdos surgem naturalmente de um estudo sobre “viajar para ver neve”?",
+              "o": [
+                "Fuso horário, zonas climáticas, localização e relevo",
+                "Só história das viagens",
+                "Apenas moeda e câmbio",
+                "Somente geopolítica"
+              ],
+              "c": 0,
+              "e": "A situação abre cartografia (fuso, localização), clima (zonas) e relevo (altitude)."
+            }
+          ]
+        },
+        {
+          "t": "Autores extras: Santos, Harvey, Corrêa e Smith",
+          "hook": "Quem decide em que escala um problema é discutido?",
+          "h": "<p>Quatro nomes que reaparecem em questões sobre espaço, cidade e escala. <b>Milton Santos</b>, em <i>Espaço e Método</i> (1985), propõe quatro categorias para ler o espaço: <b>forma, função, estrutura e processo</b>. Na Divisão Territorial do Trabalho, surgem <b>espaços luminosos</b> (alta densidade técnica, modernizados) e <b>espaços opacos</b> (menor densidade técnico-científico-informacional e inserção subordinada nas redes hegemônicas).</p><p><b>Harvey</b> chama de <b>ajuste espacial</b> (<i>spatial fix</i>) a estratégia do capital de superar crises investindo no ambiente construído ou se expandindo geograficamente. Já a <b>acumulação por espoliação</b> é a privatização de recursos e a expropriação de terras no capitalismo contemporâneo.</p><p><b>Roberto Lobato Corrêa</b> aponta os agentes que produzem o espaço urbano: <b>proprietários fundiários, promotores imobiliários, Estado e grupos sociais excluídos</b>, em conflito. <b>Neil Smith</b> trata a escala como construção social e política (<b>política das escalas</b>); o <b>salto de escala</b> (<i>jumping scales</i>) é articular ações do local ao global.</p><div class=\"box prova\"><span class=\"l\">Cuidado com a troca</span>Lacoste denuncia a “geografia dos professores” (escolar, descritiva) por ocultar a “geografia dos estados-maiores” (militar, estratégica). Inverter os dois lados é a pegadinha.</div>",
+          "qs": [
+            {
+              "p": "Em Espaço e Método (1985), Milton Santos propõe quais quatro conceitos operacionais?",
+              "o": [
+                "Forma, função, estrutura e processo",
+                "Percebido, concebido e vivido",
+                "Zona, rede, fixo e fluxo",
+                "Região, lugar, paisagem e território"
+              ],
+              "c": 0,
+              "e": "Forma, função, estrutura e processo: pares que permitem compreender o espaço em movimento."
+            },
+            {
+              "p": "Quando o capital supera uma crise investindo no ambiente construído ou se expandindo geograficamente, Harvey fala em:",
+              "o": [
+                "Compressão espaço-tempo",
+                "Ajuste espacial (spatial fix)",
+                "Multiterritorialidade",
+                "Salto de escala"
+              ],
+              "c": 1,
+              "e": "Spatial fix: estratégia do capital para superar crises. Compressão espaço-tempo é outro conceito de Harvey."
+            },
+            {
+              "p": "Proprietários fundiários, promotores imobiliários, Estado e grupos sociais excluídos são, para Corrêa:",
+              "o": [
+                "Agentes produtores do espaço urbano",
+                "Tipos de região funcional",
+                "Escalas cartográficas",
+                "Meios técnicos de Santos"
+              ],
+              "c": 0,
+              "e": "Lobato Corrêa: agentes que produzem a cidade em conflito."
+            }
+          ],
+          "r": "Em 60 segundos, associe: Santos, Harvey, Corrêa e Neil Smith a uma ideia central de cada um.",
+          "ra": "Santos: sistemas de objetos e ações / forma-função-estrutura-processo; Harvey: compressão espaço-tempo / spatial fix; Corrêa: agentes do espaço urbano e redes; Neil Smith: produção/política das escalas e salto de escala."
+        }
+      ],
+      "CH": [
+        {
+          "p": "(Associação autor–conceito) Associe: I. Ratzel; II. Vidal; III. Lacoste. ( ) Contesta o determinismo e vê o ser humano como agente. ( ) Fala de espaço vital e legitima o imperialismo. ( ) A Geografia serve para fazer a guerra. Sequência:",
+          "o": ["II, I, III", "I, II, III", "III, II, I", "II, III, I", "I, III, II"],
+          "c": 0,
+          "e": "Vidal (contesta), Ratzel (espaço vital), Lacoste (guerra): II, I, III."
+        },
+        {
+          "p": "(Autor e conceito) O conceito de Harvey para as transformações técnicas do fim do século XX é:",
+          "o": [
+            "Desenvolvimento sustentável",
+            "Espaço vital",
+            "Compressão do espaço e do tempo",
+            "Possibilismo",
+            "Topofilia"
+          ],
+          "c": 2,
+          "e": "Compressão espaço-tempo. “Espaço vital” é o distrator de Ratzel."
+        },
+        {
+          "p": "(Aplicação do conceito) Em uma narrativa, uma passagem é controlada por homens armados que funcionam como fronteira. O conceito é:",
+          "o": ["Paisagem", "Lugar", "Território", "Região funcional", "Rede"],
+          "c": 2,
+          "e": "Território (controle e poder)."
+        },
+        {
+          "p": "(Rede e território) Nas sociedades modernas, os territórios feitos de pontos e linhas representam:",
+          "o": [
+            "Zonas rurais",
+            "Redes de transporte e comunicação",
+            "Biomas",
+            "Regiões homogêneas",
+            "Paisagens"
+          ],
+          "c": 1,
+          "e": "Território-rede (Haesbaert)."
+        },
+        {
+          "p": "(Escala geográfica) Uma citação diz que o regional e o local são recortes da realidade global feitos pela Geografia para ensinar. Isso mostra:",
+          "o": [
+            "Que Geografia é memorização",
+            "Diferentes níveis de análise (escalas) que se cruzam",
+            "Divisão política dos Estados",
+            "Determinismo"
+          ],
+          "c": 1,
+          "e": "Escala geográfica: diferentes recortes de análise que se cruzam."
+        }
+      ],
+      "C": [
+        [
+          "Escolas",
+          "Ratzel: ideia central?",
+          "Determinismo. Estado como organismo que precisa de espaço vital (Lebensraum)."
+        ],
+        [
+          "Escolas",
+          "Vidal de La Blache?",
+          "Possibilismo: o meio oferece possibilidades; gêneros de vida; região."
+        ],
+        ["Escolas", "Hartshorne?", "Ciência da diferenciação de áreas (1939)."],
+        [
+          "Escolas",
+          "Christaller?",
+          "Lugares centrais: serviços raros formam hierarquia de centros."
+        ],
+        [
+          "Escolas",
+          "Tese de Lacoste (1976)?",
+          "A Geografia serve, em primeiro lugar, para fazer a guerra."
+        ],
+        [
+          "Escolas",
+          "Tuan: espaço x lugar?",
+          "Espaço é aberto; vira lugar quando recebe valor e afeto (topofilia)."
+        ],
+        ["Escolas", "Frémont?", "Região como espaço vivido."],
+        ["Escolas", "Sauer?", "Paisagem cultural: a cultura molda a paisagem natural."],
+        [
+          "Espaço",
+          "Espaço em Milton Santos?",
+          "Conjunto indissociável de sistemas de objetos e sistemas de ações."
+        ],
+        ["Espaço", "Rugosidades?", "Formas herdadas do passado que permanecem, com novas funções."],
+        [
+          "Espaço",
+          "Fixos e fluxos?",
+          "Fixos: instalações (porto, ferrovia). Fluxos: o que circula (mercadorias, pessoas, capital, dados)."
+        ],
+        [
+          "Espaço",
+          "Paisagem como palimpsesto?",
+          "Camadas de tempo: formas novas escritas sobre as antigas."
+        ],
+        [
+          "Espaço",
+          "Lugar x não-lugar?",
+          "Lugar: identidade e vínculo. Não-lugar (Augé): espaço de passagem, padronizado."
+        ],
+        [
+          "Espaço",
+          "Leitura de paisagem na escola?",
+          "Onde? Como? Por quê? Localização e relações entre os elementos."
+        ],
+        [
+          "Região",
+          "Região homogênea x funcional?",
+          "Homogênea: semelhança interna. Funcional: fluxos em torno de um polo."
+        ],
+        [
+          "Região",
+          "Quem propôs a divisão geoeconômica de 1967?",
+          "Pedro Geiger (não Milton Santos)."
+        ],
+        [
+          "Território",
+          "Quatro perspectivas de território (Haesbaert)?",
+          "Política, cultural, econômica e natural."
+        ],
+        [
+          "Território",
+          "Território-zona x território-rede?",
+          "Zona: contínuo, fronteiras. Rede: pontos ligados por fluxos."
+        ],
+        [
+          "Território",
+          "Território em Raffestin?",
+          "Espaço onde se projetam trabalho, energia, informação e poder."
+        ],
+        [
+          "Território",
+          "Multiterritorialidade?",
+          "Viver vários territórios ao mesmo tempo (Haesbaert)."
+        ],
+        ["Produção", "Tríade de Lefebvre?", "Percebido, concebido e vivido."],
+        [
+          "Produção",
+          "Compressão espaço-tempo?",
+          "Harvey: aceleração dos ritmos e encurtamento das distâncias. Massey: geometria de poder."
+        ],
+        [
+          "Produção",
+          "Escala geográfica x cartográfica?",
+          "Geográfica: nível de análise. Cartográfica: razão 1:N."
+        ],
+        [
+          "Produção",
+          "Três meios de Milton Santos?",
+          "Natural, técnico e técnico-científico-informacional."
+        ],
+        [
+          "Decolonial",
+          "Colonialidade do poder?",
+          "Quijano: hierarquia que persiste após o fim das colônias."
+        ],
+        [
+          "Decolonial",
+          "Orientalismo e Terceiro Mundo?",
+          "Said: o Oriente inventado pelo Ocidente. Escobar: o desenvolvimento criou o subdesenvolvimento."
+        ],
+        [
+          "Decolonial",
+          "Interculturalidade crítica?",
+          "Candau e Walsh: saberes em igualdade, sem folclorizar. Leis 10.639/2003 e 11.645/2008."
+        ],
+        [
+          "Decolonial",
+          "Greenwich em 1884?",
+          "Conferência de Washington: 22 votos a 1; França e Brasil se abstiveram."
+        ],
+        [
+          "Leitura",
+          "Roteiro de leitura da realidade?",
+          "Onde? O quê? Como? Por quê? Quem ganha e perde? Em outra escala?"
+        ],
+        [
+          "Leitura",
+          "7 princípios do raciocínio geográfico (BNCC)?",
+          "Analogia, conexão, diferenciação, distribuição, extensão, localização, ordem."
+        ],
+        [
+          "Extras",
+          "Quatro categorias de Santos em Espaço e Método (1985)?",
+          "Forma, função, estrutura e processo."
+        ],
+        [
+          "Extras",
+          "Espaços luminosos x opacos (Santos)?",
+          "Luminosos: maior densidade técnica e informacional. Opacos: menor densidade e inserção mais subordinada nas redes hegemônicas."
+        ],
+        [
+          "Extras",
+          "Spatial fix (Harvey)?",
+          "Ajuste espacial: o capital supera crises investindo no ambiente construído ou se expandindo geograficamente."
+        ],
+        [
+          "Extras",
+          "Acumulação por espoliação (Harvey)?",
+          "Privatização de recursos e expropriação de terras no capitalismo contemporâneo."
+        ],
+        [
+          "Extras",
+          "Agentes do espaço urbano (Corrêa)?",
+          "Proprietários fundiários, promotores imobiliários, Estado e grupos sociais excluídos."
+        ],
+        [
+          "Extras",
+          "Política das escalas e salto de escala (Smith)?",
+          "Escala é construção social e política; salto de escala é articular ações do local ao global."
+        ],
+        [
+          "Fundamentos",
+          "Humboldt: associação central?",
+          "Comparação e conexão entre fenômenos naturais; busca de unidade na natureza."
+        ],
+        [
+          "Fundamentos",
+          "Ritter: contribuição central?",
+          "Estudo regional comparativo e relações entre sociedade e natureza."
+        ],
+        [
+          "Fundamentos",
+          "Hettner: qual tradição?",
+          "Corologia: compreender áreas pela combinação particular de fenômenos."
+        ],
+        [
+          "Correntes",
+          "Geografia crítica: pergunta central?",
+          "Quem produz, usa e controla o espaço e com quais desigualdades?"
+        ],
+        [
+          "Região",
+          "Como a noção de região muda entre correntes?",
+          "Síntese particular; recorte homogêneo/funcional; construção histórica e social."
+        ],
+        ["Redes", "Três elementos básicos de uma rede?", "Nós, conexões e fluxos."],
+        [
+          "Redes",
+          "Castells: conceito-chave?",
+          "Espaço de fluxos: redes de informação, finanças, comando e interação."
+        ],
+        [
+          "Redes",
+          "Rede x território-rede?",
+          "Rede conecta nós e fluxos; território-rede acrescenta apropriação, controle e poder."
+        ]
+      ],
+      "X": {
+        "pre_0": [
+          "Vidal é o possibilista: o meio oferece possibilidades e o grupo escolhe por seus gêneros de vida. Ele rebateu o determinismo de Ratzel, então não é dele a ideia de espaço vital.",
+          "Ratzel (Antropogeografia, 1882; Geografia Política, 1897) via o Estado como organismo que precisa de espaço vital (Lebensraum) e de recursos para crescer. É o determinismo ambiental, usado pela geopolítica alemã.",
+          "Lacoste (1976) é da Geografia crítica: a Geografia serve, em primeiro lugar, para fazer a guerra. Ele critica o uso político do saber, e não formula o espaço vital.",
+          "Tuan é da Geografia humanista: topofilia e a diferença entre espaço e lugar. Nada a ver com território e Estado."
+        ],
+        "pre_1": [
+          "Santos inclui objetos naturais e técnicos, e junto deles as ações. Dizer ‘apenas objetos’ ignora o sistema de ações, que dá função aos objetos.",
+          "A Natureza do Espaço (1996): conjunto indissociável, solidário e contraditório de sistemas de objetos e de ações. Quando a questão separa objetos de ações, desconfie.",
+          "Fronteiras políticas são um recorte do território (Estado). O espaço geográfico em Santos é mais amplo: abrange objetos e ações.",
+          "Região homogênea é um tipo de recorte (semelhança interna), e não a definição de espaço."
+        ],
+        "pre_2": [
+          "Haesbaert (O Mito da Desterritorialização, 2004) distingue território-zona (contínuo, com fronteiras) e território-rede (descontínuo, pontos ligados por fluxos), além da multiterritorialidade.",
+          "Castells é o do espaço de fluxos e da sociedade em rede. Está ligado a redes, mas a dupla zona/rede é de Haesbaert.",
+          "Sauer (1925) é da paisagem cultural: a cultura molda a paisagem natural.",
+          "Hartshorne (1939) define a Geografia como ciência da diferenciação de áreas (corologia)."
+        ],
+        "b_0_0": [
+          "Ratzel é o determinismo e o espaço vital. Ele não usa a expressão ‘gêneros de vida’.",
+          "Vidal: gêneros de vida são o conjunto de técnicas, hábitos e organização social que um grupo desenvolve num meio. É a base do possibilismo e da Geografia regional (Princípios de Geografia Humana, 1922).",
+          "Harvey é a compressão espaço-tempo e a acumulação flexível (1989).",
+          "Lefebvre é a tríade espaço percebido, concebido e vivido (1974)."
+        ],
+        "b_2_0": [
+          "O possibilismo diria o oposto: o meio oferece possibilidades e a sociedade escolhe. Ele não explica a pobreza pelo clima.",
+          "Determinismo ambiental (Ratzel e seguidores como Semple e Huntington): explica o social pelo natural. Também aparece no senso comum (‘país quente é pobre’).",
+          "A Geografia crítica explicaria a pobreza por história, poder e desigualdade, e não pelo clima.",
+          "A humanista foca experiência, percepção e lugar (Tuan, Frémont). Não é a corrente que explica a pobreza pelo clima."
+        ],
+        "b_2_1": [
+          "Essa é de Ratzel (espaço vital).",
+          "Essa é de Vidal (possibilismo).",
+          "Lacoste (1976): a geografia dos Estados-maiores (saber estratégico, usado por quem manda) contra a dos professores (descritiva, que oculta sua utilidade política). Marca a Geografia crítica.",
+          "Essa é de Frémont (espaço vivido), da Geografia humanista."
+        ],
+        "b_3_0": [
+          "Fluxo imaterial é informação ou dados circulando (4G, mensagens). Um prédio é fixo, e não fluxo.",
+          "Rugosidade (Santos): forma herdada do passado que permanece, geralmente com nova função, como um casarão que virou centro cultural.",
+          "Território-zona (Haesbaert) é um território contínuo com fronteiras, como o Estado-nação. Não descreve um prédio antigo.",
+          "Região funcional é uma área unida por fluxos em torno de um polo (a área de influência de uma cidade)."
+        ],
+        "b_3_1": [
+          "Fixos são ferrovia, mina e porto: instalações fixadas no lugar. O minério não é fixo, ele se desloca.",
+          "Fluxo material (Santos; Contel): o que circula. Fixos permitem fluxos, e fluxos recriam o significado dos fixos.",
+          "Rugosidade é forma antiga que permanece no espaço. Minério em trânsito não se encaixa.",
+          "Não-lugar (Augé) é espaço de passagem padronizado, como aeroporto. Não se aplica a minério."
+        ],
+        "b_4_0": [
+          "Região funcional trata de fluxos em torno de um polo, e não de comparar tempos de uma rua.",
+          "A paisagem é palimpsesto: formas novas sobre antigas (rugosidades). Comparar fotos de épocas diferentes trabalha temporalidade.",
+          "Território-zona é espaço de controle contínuo com fronteira. Comparar fotos de uma rua não é isso.",
+          "Escala cartográfica é a razão 1:N do mapa. O exercício não mede nem reduz nada."
+        ],
+        "b_4_1": [
+          "Lugar tem identidade, memória e afeto (topofilia, Tuan). Um saguão padronizado de aeroporto não tem.",
+          "Augé (Não-lugares, 1992): espaços de passagem, padronizados e sem identidade própria, como aeroporto, rodoviária e hotel de rede.",
+          "Território-rede (Haesbaert) é um território feito de pontos ligados por fluxos. O conceito pedido é outro.",
+          "Região homogênea agrupa áreas por semelhança interna (clima, produção)."
+        ],
+        "b_5_0": [
+          "Pegadinha típica: atribuir a divisão geoeconômica a Milton Santos. Ele é referência em espaço e globalização, mas essa divisão não é de sua autoria.",
+          "Pedro Geiger propôs em 1967 a divisão geoeconômica (complexos Amazônia, Nordeste e Centro-Sul).",
+          "Corrêa trabalhou região e organização espacial (1986) e rede urbana. Não propôs essa divisão.",
+          "O IBGE adotou em 1970 as 5 macrorregiões, que são outra divisão, e não a geoeconômica de 1967."
+        ],
+        "b_5_1": [
+          "Paisagem é o conjunto de formas visíveis. O controle e o poder não são o foco.",
+          "Lugar é espaço de afeto e identidade. O trecho fala de controle, e não de vínculo afetivo.",
+          "Controle, dono, fronteira e poder são marcas de território. Em Raffestin, território envolve a projeção de relações de poder sobre o espaço.",
+          "Região homogênea agrupa por semelhança, sem dimensão de poder e controle."
+        ],
+        "b_5_2": [
+          "Zonas são o território tradicional (contínuo). Pontos e linhas são o território moderno, em rede.",
+          "Territórios-rede são descontínuos e articulados por pontos, conexões e fluxos; redes de transporte e comunicação são exemplos úteis para reconhecer essa lógica.",
+          "Paisagem natural é observada, e não construída por pontos e linhas de poder.",
+          "Regiões homogêneas são recortes por semelhança, outra lógica."
+        ],
+        "b_7_0": [
+          "Ratzel é o distrator clássico (‘espaço vital’). Pertence a outra época e a outra ideia.",
+          "Harvey (A Condição Pós-Moderna, 1989): aceleração dos ritmos e encurtamento das distâncias, ligada à acumulação flexível. Massey acrescenta a geometria de poder.",
+          "Vidal é possibilismo e gêneros de vida.",
+          "Hartshorne é a diferenciação de áreas (corologia)."
+        ],
+        "b_7_1": [
+          "Escala cartográfica é a razão do mapa (1:N). A enchente analisada em níveis diferentes não depende dela.",
+          "Escala geográfica = nível de análise (rua, município, bacia, clima global). Mudar de escala muda o que se enxerga (Castro; Callai).",
+          "Projeção é o método de planificar a Terra no mapa. Não trata de níveis de análise.",
+          "Região homogênea agrupa áreas por semelhança. Não é o que está em jogo."
+        ],
+        "b_7_2": [
+          "Lefebvre (A Produção do Espaço, 1974): espaço percebido (prática), concebido (planejadores) e vivido (usuários).",
+          "Santos é sistema de objetos e de ações, rugosidades e território usado.",
+          "Corrêa trata dos agentes produtores do espaço urbano e dos conceitos-chave. Não propõe essa tríade.",
+          "Augé é o autor dos não-lugares."
+        ],
+        "b_8_0": [
+          "Colonialidade do poder (Quijano): a hierarquia que classifica povos e saberes persiste após o fim das colônias (europeu = moderno; demais = atrasados).",
+          "Ratzel é determinismo e espaço vital, de fins do século XIX.",
+          "Tuan é topofilia e lugar (humanista).",
+          "Christaller é a teoria dos lugares centrais (quantitativa)."
+        ],
+        "b_8_1": [
+          "Folclorizar é o que Candau e Walsh criticam: tratar saberes de povos tradicionais como curiosidade, sem diálogo.",
+          "Interculturalidade crítica: diálogo entre saberes em relação de igualdade, sem folclorizar nem hierarquizar. Apoia-se nas Leis 10.639/2003 e 11.645/2008.",
+          "Substituir um saber pelo outro repete a hierarquia que essa perspectiva critica. O caminho é o diálogo.",
+          "Só o conteúdo oficial ignora a diversidade de saberes e territórios que o currículo deve reconhecer."
+        ],
+        "b_9_0": [
+          "‘Ver neve’ abre fuso horário (viagem), zonas climáticas, localização dos países e formas de relevo (altitude).",
+          "História das viagens é outro campo. A questão pede conteúdos de Geografia que surgem do tema.",
+          "Moeda e câmbio é economia, só tangencia o tema.",
+          "Geopolítica não é o que o tema ‘neve’ abre naturalmente."
+        ],
+        "c_0": [
+          "Em ordem das lacunas: contesta o determinismo e vê o ser humano como agente = Vidal (II); espaço vital e imperialismo = Ratzel (I); a Geografia serve para fazer a guerra = Lacoste (III).",
+          "Troca Ratzel e Vidal nas duas primeiras lacunas. Quem contesta o determinismo é Vidal (II); espaço vital é de Ratzel (I).",
+          "Erra as três: põe Lacoste como contestador do determinismo e Ratzel como autor da frase de guerra. Lacoste (III) é ‘fazer a guerra’; Ratzel (I) é espaço vital.",
+          "Acerta Vidal na primeira, mas inverte Ratzel e Lacoste: espaço vital e imperialismo são de Ratzel; ‘serve para fazer a guerra’ é de Lacoste.",
+          "Começa errando: Ratzel é o determinista, e não quem o contesta. A ordem certa é Vidal, Ratzel, Lacoste."
+        ],
+        "c_1": [
+          "Desenvolvimento sustentável é um conceito ambiental e econômico (Relatório Brundtland, 1987), e não de Harvey.",
+          "Espaço vital é de Ratzel, o distrator clássico usado pela FGV.",
+          "Harvey, A Condição Pós-Moderna (1989): compressão espaço-tempo, ligada à acumulação flexível.",
+          "Possibilismo é de Vidal.",
+          "Topofilia é de Tuan: afeto pelo lugar."
+        ],
+        "c_2": [
+          "Paisagem é o que a vista alcança, em camadas de tempo.",
+          "Lugar é espaço de afeto e identidade.",
+          "Controle de acesso e fronteira = território (poder e limite). Raffestin e Haesbaert.",
+          "Região funcional é unida por fluxos em torno de um polo. Não há aí controle armado.",
+          "Rede é a estrutura de nós e conexões. O trecho enfatiza o controle sobre uma passagem."
+        ],
+        "c_3": [
+          "Zonas rurais não se definem por pontos e linhas.",
+          "Território-rede (Haesbaert): pontos (nós) ligados por linhas (fluxos), como transporte e comunicação.",
+          "Biomas são conjuntos ecológicos, outra categoria.",
+          "Regiões homogêneas agrupam áreas por semelhança.",
+          "Paisagem é o conjunto de formas visíveis. Não são pontos e linhas de poder."
+        ],
+        "c_4": [
+          "Callai critica a Geografia descritiva e de memorização; a citação defende recortes para compreender a realidade.",
+          "Escala geográfica: o regional e o local são recortes de análise que se cruzam com o global (Callai; Castro).",
+          "Divisão política é um recorte administrativo, e não o argumento da citação.",
+          "Determinismo é outra ideia (o meio condiciona a sociedade)."
+        ],
+        "b_1_0": [
+          "Hartshorne, em The Nature of Geography (1939), sistematiza a ideia de diferenciação de áreas, em diálogo com a corologia de Hettner.",
+          "Tuan pertence à Geografia humanista: lugar, experiência e topofilia.",
+          "Harvey é central na Geografia crítica e no debate sobre compressão espaço-tempo, acumulação flexível e produção capitalista do espaço.",
+          "Haesbaert é referência em território, desterritorialização, reterritorialização e multiterritorialidade."
+        ],
+        "b_1_1": [
+          "Humboldt é associado à unidade da natureza, comparação e conexão causal entre fenômenos; topofilia é de Tuan.",
+          "Ritter contribuiu para a comparação regional; lugares centrais é conceito de Christaller.",
+          "Hettner é referência da tradição corológica: compreender a diferenciação espacial por áreas e combinações de fenômenos.",
+          "Hartshorne trabalha diferenciação de áreas; colonialidade do poder é de Quijano."
+        ],
+        "b_6_0": [
+          "Rugosidades são formas herdadas de outros tempos, não o movimento entre nós de uma rede.",
+          "Fluxos são aquilo que circula entre os nós: mercadorias, pessoas, capital, energia ou informação.",
+          "Região homogênea é um recorte por semelhança interna; não descreve circulação entre terminais.",
+          "Escala cartográfica é uma razão matemática entre mapa e realidade."
+        ],
+        "b_6_1": [
+          "Corrêa analisa a rede urbana como centros funcionalmente articulados por fluxos e funções; não se reduz à infraestrutura física.",
+          "Uma divisão climática é regionalização por critérios naturais, não rede urbana.",
+          "Paisagens naturais não definem uma rede urbana.",
+          "Rodovias podem integrar uma rede urbana, mas a rede urbana é mais ampla que a malha viária."
+        ],
+        "b_6_2": [
+          "Rede e território-rede se relacionam, mas não são conceitos idênticos.",
+          "Correto: rede destaca nós, conexões e fluxos; território-rede destaca apropriação e controle territorial por meio de pontos conectados.",
+          "Território-rede depende justamente de fluxos e conexões descontínuas.",
+          "Redes podem ser fluviais, urbanas, rodoviárias, elétricas, financeiras, digitais e muitas outras."
+        ]
+      },
+      "G": [
+        {
+          "a": "Milton Santos",
+          "t": "Para Milton Santos, o espaço geográfico é formado por um conjunto indissociável, solidário e também contraditório de sistemas de objetos e sistemas de ações.",
+          "v": true,
+          "x": "Definição literal. Sistemas de objetos (materialidade) e sistemas de ações (intencionalidades e relações sociais) atuam em conjunto."
+        },
+        {
+          "a": "Milton Santos",
+          "t": "No período técnico-científico-informacional, o espaço é estruturado por redes que distribuem a fluidez territorial de forma perfeitamente igualitária.",
+          "v": false,
+          "x": "Falso. As redes distribuem a fluidez de forma DESIGUAL, beneficiando majoritariamente o capital hegemônico e criando exclusão."
+        },
+        {
+          "a": "Milton Santos",
+          "t": "A paisagem constitui trabalho humano materializado (trabalho morto), sendo uma herança de tempos desiguais.",
+          "v": true,
+          "x": "Correto. O espaço é a paisagem animada (trabalho vivo), enquanto a paisagem é o acúmulo das ações pretéritas."
+        },
+        {
+          "a": "Milton Santos",
+          "t": "Rugosidades constituem elementos do espaço geográfico nos quais a forma é uma herança do passado que se confronta com o tempo atual.",
+          "v": true,
+          "x": "Rugosidade é o tempo espacializado – heranças morfológicas que recebem novas funções."
+        },
+        {
+          "a": "Milton Santos",
+          "t": "A categoria Espaço restringe-se apenas às infraestruturas construídas pelas sociedades, descartando as dinâmicas sociais.",
+          "v": false,
+          "x": "Falso. O espaço é a síntese inseparável de objetos (infraestruturas) E ações (dinâmicas sociais)."
+        },
+        {
+          "a": "Milton Santos",
+          "t": "Sistemas de objetos referem-se à base material, como rodovias e infraestruturas que dão suporte aos fluxos.",
+          "v": true,
+          "x": "Os sistemas de objetos são os fixos, que oferecem condições e impõem limites às ações."
+        },
+        {
+          "a": "Milton Santos",
+          "t": "A relação entre fixos e fluxos é dialética: novos fluxos exigem a reestruturação e a criação de novos fixos geográficos.",
+          "v": true,
+          "x": "Correto. Um fluxo precisa de um fixo para existir; novos fluxos tornam fixos antigos obsoletos."
+        },
+        {
+          "a": "Milton Santos",
+          "t": "A Divisão Territorial do Trabalho cria áreas de alta luminosidade (modernizadas) cercadas por espaços opacos (excluídos).",
+          "v": true,
+          "x": "Santos cunhou 'espaços luminosos' (alta densidade técnica) vs 'espaços opacos' (ignorados pelo capital)."
+        },
+        {
+          "a": "David Harvey",
+          "t": "A 'compressão espaço-tempo' altera profundamente nossa percepção, encurtando distâncias devido à revolução nos transportes e telecomunicações.",
+          "v": true,
+          "x": "Acelera o ciclo do capital, dando a sensação de que o espaço encolheu e o tempo acelerou."
+        },
+        {
+          "a": "David Harvey",
+          "t": "A globalização produz a superação das distâncias aniquilando o espaço por meio do tempo na pós-modernidade.",
+          "v": true,
+          "x": "Ideia associada a Harvey (A Condição Pós-Moderna, 1989): a aniquilação do espaço pelo tempo."
+        },
+        {
+          "a": "David Harvey",
+          "t": "O conceito Spatial Fix (ajuste espacial) descreve a preservação ambiental permanente nos centros urbanos.",
+          "v": false,
+          "x": "Falso. Spatial Fix é a estratégia do capital para superar crises investindo no ambiente construído ou expandindo-se geograficamente."
+        },
+        {
+          "a": "David Harvey",
+          "t": "No capitalismo flexível, o espaço urbano é fragmentado e transforma-se num refúgio temporário para a absorção de capitais excedentes.",
+          "v": true,
+          "x": "O ambiente construído e o mercado imobiliário podem absorver capitais excedentes e participar de estratégias de valorização."
+        },
+        {
+          "a": "David Harvey",
+          "t": "O 'Direito à Cidade' reduz-se à garantia de saneamento básico nas periferias, mantendo a segregação de classes inalterada.",
+          "v": false,
+          "x": "Falso. É o direito político das classes trabalhadoras de modificar e apropriar-se do espaço como um bem comum."
+        },
+        {
+          "a": "Ratzel",
+          "t": "Friedrich Ratzel defendeu o possibilismo geográfico, focando no gênero de vida das sociedades.",
+          "v": false,
+          "x": "Falso. Em leituras didáticas, Ratzel é associado ao determinismo ambiental e ao 'Espaço Vital' (Lebensraum); Vidal de La Blache, ao possibilismo."
+        },
+        {
+          "a": "Ratzel",
+          "t": "Para Ratzel, as fronteiras são órgãos periféricos e dinâmicos do Estado, indicando o seu crescimento ou fraqueza.",
+          "v": true,
+          "x": "Ratzel via o Estado de forma organicista. As fronteiras são a 'epiderme' do Estado."
+        },
+        {
+          "a": "Ratzel",
+          "t": "Na perspectiva organicista de Ratzel, o fortalecimento do Estado condiciona-se à sua capacidade de conquistar e expandir o 'espaço vital'.",
+          "v": true,
+          "x": "A expansão contínua em busca de recursos é o cerne do Lebensraum."
+        },
+        {
+          "a": "Ratzel e Vidal",
+          "t": "Ratzel e Vidal produziram suas obras no contexto dos Estados nacionais e do imperialismo europeu; por isso, suas geografias também devem ser lidas historicamente em relação ao poder.",
+          "v": true,
+          "x": "A leitura histórica evita tratar teorias geográficas como neutras: elas foram produzidas em contextos nacionais, coloniais e imperiais concretos, ainda que com posições e métodos distintos."
+        },
+        {
+          "a": "Vidal de La Blache",
+          "t": "A 'região vidaliana' é definida pela síntese harmoniosa entre o quadro natural físico e as técnicas de um povo, configurando um 'gênero de vida'.",
+          "v": true,
+          "x": "A região forma-se com a história através da adaptação de uma sociedade aos recursos locais."
+        },
+        {
+          "a": "Escolas",
+          "t": "A Geografia Regional Tradicional entrou em crise porque a Revolução Industrial e a mundialização dissolveram os gêneros de vida locais autossuficientes.",
+          "v": true,
+          "x": "O método vidaliano tornou-se insuficiente para explicar metrópoles complexas e multinacionais."
+        },
+        {
+          "a": "Rogério Haesbaert",
+          "t": "A desterritorialização significa o fim definitivo dos territórios na era globalizada.",
+          "v": false,
+          "x": "Falso. Haesbaert afirma que não há desterritorialização absoluta; ela é sempre acompanhada de uma reterritorialização."
+        },
+        {
+          "a": "Rogério Haesbaert",
+          "t": "Multiterritorialidade é a capacidade de indivíduos ou grupos experienciarem e articularem múltiplos territórios simultaneamente.",
+          "v": true,
+          "x": "Pode ocorrer de forma material (deslocamentos constantes) ou imaterial (redes digitais)."
+        },
+        {
+          "a": "Rogério Haesbaert",
+          "t": "Em Haesbaert, desterritorialização não deve ser pensada como simples desaparecimento do território: processos de reterritorialização e novas territorialidades costumam acompanhá-la.",
+          "v": true,
+          "x": "Ponto central em Haesbaert: criticar a ideia de uma desterritorialização absoluta e observar reterritorializações e multiterritorialidade."
+        },
+        {
+          "a": "Rogério Haesbaert",
+          "t": "A formação de redes ilegais como o narcotráfico ilustra a desterritorialização absoluta, pois atuam sem qualquer controle local.",
+          "v": false,
+          "x": "Falso. Redes ilegais são 'territórios-rede' que dependem intensamente do controle de bases materiais na escala local (favelas, rotas)."
+        },
+        {
+          "a": "Rogério Haesbaert",
+          "t": "Condomínios fechados e a militarização de fronteiras provam que a globalização gerou processos de hiperterritorialização focados na contenção.",
+          "v": true,
+          "x": "A globalização combina maior fluidez para certos agentes com novas barreiras, contenções e controles para outros."
+        },
+        {
+          "a": "Armand Frémont",
+          "t": "Armand Frémont sistematizou a ideia de 'espaço vivido', enfatizando as representações e as teias afetivas dos indivíduos com o seu entorno.",
+          "v": true,
+          "x": "Introduziu a dimensão subjetiva, existencial e psicológica do espaço em 1976."
+        },
+        {
+          "a": "Armand Frémont",
+          "t": "O 'espaço vivido' é um polígono matematicamente demarcado pelo Estado para o censo demográfico.",
+          "v": false,
+          "x": "Falso. É a área onde o indivíduo projeta memórias, costumes e laços de sociabilidade."
+        },
+        {
+          "a": "Armand Frémont",
+          "t": "Na percepção das classes trabalhadoras, o 'espaço vivido' pode revelar-se tensionado por tempos de deslocamento exaustivos e fragmentação.",
+          "v": true,
+          "x": "A experiência do espaço pode variar conforme posição social, mobilidade, tempo de deslocamento e acesso aos lugares; não é vivida de modo uniforme."
+        },
+        {
+          "a": "Yves Lacoste",
+          "t": "Lacoste denunciou a 'geografia dos estados-maiores' por ser puramente escolar e inofensiva.",
+          "v": false,
+          "x": "Falso. Ele denunciou a 'geografia dos professores' (escolar) por ocultar a 'geografia dos estados-maiores', que é militar e bélica."
+        },
+        {
+          "a": "Yves Lacoste",
+          "t": "A geografia escolar, ao ser puramente descritiva, ocultava que o saber geográfico é um instrumento de controle territorial e estratégia do Estado.",
+          "v": true,
+          "x": "Esta é a crítica central de Lacoste em 1976."
+        },
+        {
+          "a": "Yves Lacoste",
+          "t": "A Geografia Crítica denuncia que a pretensa neutralidade científica esconde a função estratégica que a geografia tem para os grandes grupos de poder.",
+          "v": true,
+          "x": "Desmascara a geografia tradicional e mostra que o espaço é poder."
+        },
+        {
+          "a": "R. Lobato Corrêa",
+          "t": "Os agentes produtores do espaço urbano incluem: proprietários fundiários, promotores imobiliários, Estado e grupos sociais excluídos.",
+          "v": true,
+          "x": "Estes agentes operam em conflito para produzir e consumir a cidade."
+        },
+        {
+          "a": "R. Lobato Corrêa",
+          "t": "Agentes biológicos e geomorfológicos são considerados os principais agentes produtores do espaço urbano na perspectiva de Lobato Corrêa.",
+          "v": false,
+          "x": "Falso. A produção do espaço é social e política; a natureza não é um 'agente urbano' nesta acepção marxista."
+        },
+        {
+          "a": "Geografia Crítica",
+          "t": "A concepção de espaço como 'produto histórico, resultado e condição da ação humana' filia-se à Geografia Crítica.",
+          "v": true,
+          "x": "O espaço é compreendido como instância da sociedade e produto das relações sociais de produção."
+        },
+        {
+          "a": "R. Lobato Corrêa",
+          "t": "A rede urbana funciona como um sistema isolado que impede a circulação de mercadorias e protege cidades menores.",
+          "v": false,
+          "x": "Falso. A rede urbana subordina o campo e as cidades menores aos centros de gestão (metrópoles) através de fluxos."
+        },
+        {
+          "a": "R. Lobato Corrêa",
+          "t": "As redes geográficas possuem dupla função: são canais de escoamento logístico e mecanismos de controle político que impõem hierarquias.",
+          "v": true,
+          "x": "Subordinam áreas imensas do território nacional a centros de comando distantes."
+        },
+        {
+          "a": "Região",
+          "t": "Na geografia contemporânea e crítica, a região é um recorte natural intocável, indiferente às redes urbanas.",
+          "v": false,
+          "x": "Falso. A região é um recorte espacial construído SOCIALMENTE, articulado por redes econômicas."
+        },
+        {
+          "a": "Escalas",
+          "t": "A escala geográfica refere-se à abrangência e nível de análise (local, global), enquanto a escala cartográfica é uma proporção matemática.",
+          "v": true,
+          "x": "A cartográfica reduz o mapa; a geográfica define o recorte conceitual do fenômeno."
+        },
+        {
+          "a": "Decolonialidade",
+          "t": "A abordagem decolonial na Geografia entende o espaço não apenas como mercadoria, mas como dimensão ancestral e simbólica de povos originários.",
+          "v": true,
+          "x": "Procura superar o eurocentrismo valorizando as territorialidades tradicionais."
+        },
+        {
+          "a": "Decolonialidade",
+          "t": "A decolonialidade recusa a imposição de um modelo único eurocêntrico e reconhece as lógicas comunitárias de relação com a natureza.",
+          "v": true,
+          "x": "As territorialidades originárias (indígenas, quilombolas) resistem à mercantilização da terra."
+        },
+        {
+          "a": "Decolonialidade",
+          "t": "Estudar o espaço sob a ótica decolonial restringe-se apenas à extração de mais-valia nas cidades industriais.",
+          "v": false,
+          "x": "Falso. Implica reconhecer epistemologias indígenas, disputas por demarcação e a memória ancestral do território."
+        },
+        {
+          "a": "Decolonialidade",
+          "t": "As perspectivas críticas latino-americanas contestam a visão europeia da natureza estritamente como recurso natural ou mercadoria.",
+          "v": true,
+          "x": "Defendem ontologias que integram humanos e não humanos de forma interdependente."
+        },
+        {
+          "a": "Decolonialidade",
+          "t": "Na lógica comunitária tradicional, o território é indivisível e a terra não pertence ao homem, mas o homem pertence à terra.",
+          "v": true,
+          "x": "Resistem à visão capitalista que fragmenta o espaço em lotes alienáveis."
+        },
+        {
+          "a": "Natureza/Sociedade",
+          "t": "O conceito de 'Segunda Natureza' pressupõe que a natureza intocada continua a determinar o desenvolvimento do capitalismo.",
+          "v": false,
+          "x": "Falso. O capitalismo 'produz a natureza' (Segunda Natureza), internalizando-a como mercadoria (ambiente construído)."
+        },
+        {
+          "a": "Yi-Fu Tuan",
+          "t": "O conceito de lugar difere do de espaço por estar intrinsecamente ligado à afetividade e aos significados atribuídos pelos sujeitos (topofilia).",
+          "v": true,
+          "x": "O lugar é dotado de valor através da experiência vivenciada."
+        },
+        {
+          "a": "Lugar x Globalização",
+          "t": "O Lugar é anulado por completo pelas redes globais, extinguindo qualquer tipo de resistência e identidade local.",
+          "v": false,
+          "x": "Falso. O lugar sofre pressões homogeneizantes, mas torna-se também espaço potencial de resistência e ressignificação."
+        },
+        {
+          "a": "Neil Smith",
+          "t": "A 'política das escalas' indica que a definição da escala de ação (local, global) é fruto de disputas políticas e lutas de classes.",
+          "v": true,
+          "x": "A escala não é física e fixa, mas uma construção social e estratégica."
+        },
+        {
+          "a": "Escalas",
+          "t": "A transcalaridade demonstra que o capital atua localmente, enquanto as resistências locais buscam apoio em redes globais para enfrentar ameaças.",
+          "v": true,
+          "x": "Um conflito em Mariana articula-se com tribunais internacionais (salto de escalas)."
+        },
+        {
+          "a": "Neil Smith",
+          "t": "Para Neil Smith, as escalas (local, nacional, global) são entidades geológicas produzidas puramente pela evolução do planeta.",
+          "v": false,
+          "x": "Falso. As escalas são ativamente 'produzidas' pelas relações capitalistas ao longo da história."
+        },
+        {
+          "a": "Neil Smith",
+          "t": "As greves sindicais transnacionais exemplificam o 'salto de escala' (jumping scales), articulando ações do local ao global contra corporações.",
+          "v": true,
+          "x": "Estratégia política para enfrentar agentes que também atuam em múltiplas escalas."
+        },
+        {
+          "a": "Paisagem Urbana",
+          "t": "A paisagem urbana que justapõe favelas a condomínios luxuosos materializa e reproduz a extrema desigualdade de renda e a luta de classes.",
+          "v": true,
+          "x": "A paisagem pode materializar desigualdades socioespaciais e revelar diferentes condições de acesso à cidade."
+        },
+        {
+          "a": "Milton Santos",
+          "t": "O meio técnico-científico-informacional (pós-1970) caracteriza-se por objetos densos em informação e ações racionalizadas pelo mercado global.",
+          "v": true,
+          "x": "A informação torna-se a força motriz, integrando biotecnologia, satélites e mercado."
+        },
+        {
+          "a": "Milton Santos",
+          "t": "Na obra 'Por uma Geografia Nova' (1978), Santos defende que a geografia deve adoptar modelos matemáticos como única via de análise.",
+          "v": false,
+          "x": "Falso. Ele propõe a ruptura com a geografia tradicional, adotando o materialismo histórico-dialético."
+        },
+        {
+          "a": "Milton Santos",
+          "t": "Em 'Espaço e Método' (1985), Santos propõe quatro conceitos operacionais: forma, função, estrutura e processo.",
+          "v": true,
+          "x": "Estes quatro pares dialéticos permitem compreender o espaço em movimento."
+        },
+        {
+          "a": "Milton Santos",
+          "t": "A paisagem é a materialização das ações pretéritas acumuladas ao longo do tempo, sendo sempre uma herança de tempos desiguais.",
+          "v": true,
+          "x": "Conceito de Milton Santos sobre a paisagem como herança de tempos desiguais."
+        },
+        {
+          "a": "David Harvey",
+          "t": "A cidade pós-moderna, sob a acumulação flexível, é marcada pela homogeneização absoluta e fim das desigualdades.",
+          "v": false,
+          "x": "Falso. A cidade torna-se mais fragmentada, desigual e segregada."
+        },
+        {
+          "a": "David Harvey",
+          "t": "A 'acumulação por espoliação' descreve a privatização de recursos e expropriação de terras no capitalismo contemporâneo.",
+          "v": true,
+          "x": "Atualização do conceito de acumulação primitiva de Marx; o capital apropria-se sem produzir mais-valia."
+        },
+        {
+          "a": "David Harvey",
+          "t": "Em 'Espaços de Esperança', o autor argumenta que as lutas sociais não devem articular o local com o global.",
+          "v": false,
+          "x": "Falso. Harvey defende a articulação dialética entre as resistências locais e as lutas globais."
+        },
+        {
+          "a": "Ratzel",
+          "t": "A Antropogeografia de Ratzel estudou as relações de dependência entre os grupos humanos e o meio natural, fundando a geografia humana.",
+          "v": true,
+          "x": "Ratzel procurou entender como o ambiente físico influenciava a organização social (com viés determinista)."
+        },
+        {
+          "a": "Ratzel",
+          "t": "O conceito 'Raumsinn' (sentido de espaço) designa a capacidade de um povo perceber e defender o seu território para garantir expansão.",
+          "v": true,
+          "x": "Quanto maior o Raumsinn, maior a vitalidade do Estado."
+        },
+        {
+          "a": "Vidal de La Blache",
+          "t": "O 'gênero de vida' refere-se ao modo de produção capitalista exclusivo das metrópoles industriais.",
+          "v": false,
+          "x": "Falso. Refere-se às técnicas, tradições e organização que o homem usa para adaptar o meio natural."
+        },
+        {
+          "a": "Vidal de La Blache",
+          "t": "A região vidaliana é um espaço de síntese, onde a combinação específica de fatores naturais e costumes humanos resulta numa paisagem singular.",
+          "v": true,
+          "x": "O campo é onde se observa como cada região produziu a sua paisagem histórica."
+        },
+        {
+          "a": "Vidal de La Blache",
+          "t": "O possibilismo determina que o meio natural obriga o homem a agir de uma única maneira.",
+          "v": false,
+          "x": "Falso. O meio oferece possibilidades, e o homem escolhe como utilizá-las através da sua técnica."
+        },
+        {
+          "a": "Rogério Haesbaert",
+          "t": "O território deve ser compreendido nas dimensões política, cultural, econômica e natural, de forma articulada.",
+          "v": true,
+          "x": "Haesbaert critica visões unidimensionais; o território envolve controle, identidade e recursos."
+        },
+        {
+          "a": "Rogério Haesbaert",
+          "t": "A desterritorialização indica que a globalização eliminou todos os conflitos territoriais.",
+          "v": false,
+          "x": "Falso. O processo é dialético; perder um território significa construir novas territorialidades em outro local ou contexto."
+        },
+        {
+          "a": "Rogério Haesbaert",
+          "t": "Territórios-rede organizam-se através de fluxos móveis e descontínuos, como as redes de migração transnacional.",
+          "v": true,
+          "x": "Diferem dos territórios-zona (contínuos, típicos do Estado-Nação)."
+        },
+        {
+          "a": "Armand Frémont",
+          "t": "O 'espaço vivido' é o espaço das práticas cotidianas, memórias e afetos, não se reduzindo a critérios administrativos.",
+          "v": true,
+          "x": "O indivíduo e a sua percepção ganham protagonismo na geografia."
+        },
+        {
+          "a": "Topofilia e Topofobia",
+          "t": "Topofilia é o apego e sentimento positivo por um lugar; topofobia é o medo, aversão ou sentimento negativo.",
+          "v": true,
+          "x": "Conceitos centrais de Yi-Fu Tuan para explicar a experiência subjetiva."
+        },
+        {
+          "a": "Geografia da Percepção",
+          "t": "Esta corrente da geografia, contrária à quantitativa, analisa representações mentais e o comportamento humano em relação ao meio.",
+          "v": true,
+          "x": "Valoriza a subjetividade e rejeita a pretensa neutralidade da matemática pura."
+        },
+        {
+          "a": "Yves Lacoste",
+          "t": "Lacoste renovou a Geopolítica ao aproximá-la do determinismo ambiental exacerbado de Ratzel.",
+          "v": false,
+          "x": "Falso. Ele afastou a geopolítica do determinismo, focando na análise crítica do poder, conflitos e representações."
+        },
+        {
+          "a": "Yves Lacoste",
+          "t": "A 'geografia dos professores' é descritiva e despolitizada, enquanto a 'geografia dos estados-maiores' é estratégica e de controle territorial.",
+          "v": true,
+          "x": "Denúncia fundamental de Lacoste para provar o uso do espaço como arma."
+        },
+        {
+          "a": "Geopolítica",
+          "t": "Na análise de conflitos, como a água no Médio Oriente, a geopolítica crítica considera representações, poder, economia e estratégias de atores.",
+          "v": true,
+          "x": "A análise não se reduz ao mero fator natural hídrico, mas envolve a complexidade do poder."
+        },
+        {
+          "a": "R. Lobato Corrêa",
+          "t": "O Estado atua na produção da cidade regulando o solo, mas a sua ação é frequentemente capturada pelo capital imobiliário.",
+          "v": true,
+          "x": "O Estado é um agente contraditório no capitalismo, gerando desigualdades socioespaciais."
+        },
+        {
+          "a": "R. Lobato Corrêa",
+          "t": "A rede urbana é a expressão espacial da divisão territorial do trabalho, refletindo a subordinação de cidades menores às metrópoles.",
+          "v": true,
+          "x": "As metrópoles concentram o comando, enquanto a periferia subordina-se aos fluxos."
+        },
+        {
+          "a": "R. Lobato Corrêa",
+          "t": "A região contemporânea é uma entidade natural imutável.",
+          "v": false,
+          "x": "Falso. A região é um recorte construído socialmente, definido pela divisão do trabalho e pelas redes políticas e econômicas."
+        },
+        {
+          "a": "Espaço Urbano",
+          "t": "A especulação imobiliária mantém terrenos vazios com infraestruturas à espera de lucro, enquanto empurra os pobres para as periferias de risco.",
+          "v": true,
+          "x": "Uma das principais contradições do espaço capitalista apontadas por Lobato Corrêa."
+        },
+        {
+          "a": "Território",
+          "t": "Na Geografia contemporânea, o território é exclusivamente a porção do espaço com as fronteiras políticas de um Estado-Nação.",
+          "v": false,
+          "x": "Falso. Existem múltiplas territorialidades: indígenas, quilombolas, urbanas, corporativas."
+        },
+        {
+          "a": "Lugar",
+          "t": "O lugar é o espaço dotado de significado, construído através da experiência diária e das práticas sociais.",
+          "v": true,
+          "x": "O Lugar é subjetivo e existencial."
+        },
+        {
+          "a": "Paisagem",
+          "t": "A paisagem contemporânea é a porção visível do espaço, portadora de heranças e testemunho das relações sociais ao longo da história.",
+          "v": true,
+          "x": "Síntese dialética entre natureza e sociedade visualmente manifestada."
+        },
+        {
+          "a": "Região",
+          "t": "Na Geografia Crítica, a região não tem qualquer ligação com as relações de produção capitalistas.",
+          "v": false,
+          "x": "Falso. A região é produzida historicamente exatamente pelas relações de poder e contradições do capital."
+        },
+        {
+          "a": "Redes",
+          "t": "As redes são compostas por fixos (infraestruturas) e fluxos (pessoas, informação) que criam conexões e hierarquias no território.",
+          "v": true,
+          "x": "Elas refletem e reproduzem desigualdades de poder."
+        },
+        {
+          "a": "Escalas",
+          "t": "A escala cartográfica é uma proporção matemática; a escala geográfica é conceitual, analisando a abrangência de um fenômeno.",
+          "v": true,
+          "x": "Distinção vital para o raciocínio espacial."
+        },
+        {
+          "a": "Espaço",
+          "t": "O espaço não é um palco inerte, mas uma força ativa que influencia e é influenciada pelas dinâmicas políticas e econômicas.",
+          "v": true,
+          "x": "Espaço é instância da totalidade social (produto e condição)."
+        },
+        {
+          "a": "Território",
+          "t": "O território é um espaço neutro de onde todas as relações de autoridade e disputas de poder foram eliminadas.",
+          "v": false,
+          "x": "Falso. O território é, por excelência, o espaço de exercício de poder e controle."
+        },
+        {
+          "a": "Identidade",
+          "t": "O lugar é um espaço carregado de memórias, essencial para a construção da identidade individual e coletiva.",
+          "v": true,
+          "x": "As pessoas identificam-se com os lugares onde têm raízes."
+        },
+        {
+          "a": "Paisagem Cultural",
+          "t": "A paisagem cultural é a interação entre humanos e o meio, portadora de símbolos e valores.",
+          "v": true,
+          "x": "A paisagem é um 'texto' a ser lido pela geografia cultural."
+        },
+        {
+          "a": "Região Vidaliana",
+          "t": "Na Geografia Regional, a região é considerada um espaço global sem qualquer especificidade ou identidade.",
+          "v": false,
+          "x": "Falso. É exatamente o espaço de pertencimento com laços sociais compartilhados."
+        },
+        {
+          "a": "Globalização",
+          "t": "A conexão global é desigual; alguns territórios tornam-se 'espaços luminosos' enquanto outros permanecem marginalizados.",
+          "v": true,
+          "x": "A integração global é seletiva e pode reforçar desigualdades entre lugares, ao mesmo tempo que cria novas conexões."
+        },
+        {
+          "a": "Neil Smith",
+          "t": "Os atores sociais podem 'saltar' de escala para fortalecer as suas exigências políticas diante de agentes de poder.",
+          "v": true,
+          "x": "A escala é instrumento de resistência (jumping scales)."
+        },
+        {
+          "a": "Espaço/Tempo",
+          "t": "O espaço geográfico é a síntese histórica resultante da articulação entre o tempo passado (formas) e o tempo presente (ações).",
+          "v": true,
+          "x": "Concepção de Milton Santos sobre a dialética espacial."
+        },
+        {
+          "a": "Desigualdade",
+          "t": "O território capitalista é homogêneo e anula as disparidades de renda na população urbana.",
+          "v": false,
+          "x": "Falso. O território reflete e reproduz as contradições do capital."
+        },
+        {
+          "a": "Lugar Globalizado",
+          "t": "Perante a globalização homogeneizante, o lugar resiste e ressignifica-se através de práticas e solidariedades cotidianas.",
+          "v": true,
+          "x": "O global é filtrado pelas vivências locais."
+        },
+        {
+          "a": "Paisagem de Poder",
+          "t": "A paisagem materializa visualmente as desigualdades, opondo favelas a condomínios murados.",
+          "v": true,
+          "x": "A paisagem pode tornar visíveis desigualdades e contrastes produzidos socialmente."
+        },
+        {
+          "a": "Região Política",
+          "t": "A região crítica é um espaço construído socialmente pela divisão do trabalho, e não uma mera entidade natural imutável.",
+          "v": true,
+          "x": "A região é política e econômica."
+        },
+        {
+          "a": "Redes e Poder",
+          "t": "As redes são estruturas naturais nas quais a intervenção humana não exerce qualquer influência.",
+          "v": false,
+          "x": "Falso. As redes têm donos e servem para impor dominação e escoamento do grande capital."
+        },
+        {
+          "a": "Escalas Multidimensionais",
+          "t": "A globalização articula múltiplas escalas (local ao global), criando fluxos que afetam o território de forma desigual.",
+          "v": true,
+          "x": "Um evento local tem repercussões transescalares."
+        },
+        {
+          "a": "Espaço Social",
+          "t": "O espaço é um dado da natureza que não pode ser considerado um produto histórico da ação humana.",
+          "v": false,
+          "x": "Falso. O espaço é uma produção SOCIAL total."
+        },
+        {
+          "a": "Território Cultural",
+          "t": "O território também possui dimensão simbólica, servindo de base de identidade e pertencimento para grupos étnicos e tradicionais.",
+          "v": true,
+          "x": "Territórios de povos indígenas e comunidades quilombolas podem reunir dimensões materiais, políticas, culturais, simbólicas e identitárias."
+        },
+        {
+          "a": "Lugar Vivido",
+          "t": "O lugar na geografia humanista resume-se às zonas puramente econômicas de uma metrópole.",
+          "v": false,
+          "x": "Falso. O lugar é experiência diária, subjetiva e afetiva."
+        },
+        {
+          "a": "Rugosidade Temporal",
+          "t": "A paisagem é portadora de rugosidades porque acumula intervenções de diversos tempos históricos.",
+          "v": true,
+          "x": "Formas velhas abrigam funções novas."
+        },
+        {
+          "a": "Espaço e Disputa",
+          "t": "O controle do espaço e das fronteiras manifesta lutas de poder entre Estados, empresas e grupos de resistência.",
+          "v": true,
+          "x": "O espaço é o campo principal da disputa geopolítica e de sobrevivência."
+        }
+      ]
+    },
+    "supplements": {
+      "matrixBox": "<details class=\"master\"><summary>🧭 Matriz-mestra · revisão de 2 minutos</summary><div class=\"w\"><table><tr><th>Autor</th><th>Ideia-chave</th><th>Obra/âncora</th><th>Pegadinha</th></tr><tr><td>Humboldt</td><td>unidade/conexões da natureza</td><td><i>Cosmos</i></td><td>não é topofilia</td></tr><tr><td>Hettner / Hartshorne</td><td>corologia / diferenciação de áreas</td><td><i>The Nature of Geography</i> (1939)</td><td>não confundir com região vivida</td></tr><tr><td>Ratzel</td><td>Estado, território, espaço vital</td><td><i>Antropogeografia</i>; <i>Geografia Política</i></td><td>associação didática ao determinismo não esgota a obra</td></tr><tr><td>Vidal</td><td>possibilidades, gêneros de vida, região</td><td><i>Princípios de Geografia Humana</i></td><td>não é espaço vital</td></tr><tr><td>Lacoste</td><td>Geografia e estratégia/poder</td><td><i>A Geografia — isso serve...</i></td><td>estados-maiores ≠ professores</td></tr><tr><td>Milton Santos</td><td>objetos + ações; rugosidades; fixos/fluxos</td><td><i>A Natureza do Espaço</i></td><td>paisagem ≠ espaço</td></tr><tr><td>Lefebvre</td><td>percebido, concebido, vivido</td><td><i>A Produção do Espaço</i></td><td>tríade não é de Santos</td></tr><tr><td>Harvey</td><td>compressão espaço-tempo; spatial fix</td><td><i>A Condição Pós-Moderna</i></td><td>não confundir com espaço vital</td></tr><tr><td>Tuan / Frémont</td><td>lugar/topofilia; espaço vivido</td><td>Geografia humanista</td><td>afeto/experiência ≠ território</td></tr><tr><td>Raffestin</td><td>território e poder</td><td><i>Por uma Geografia do Poder</i></td><td>território não é só Estado</td></tr><tr><td>Haesbaert</td><td>zona, rede, multiterritorialidade</td><td><i>O Mito da Desterritorialização</i></td><td>desterritorialização não é fim dos territórios</td></tr><tr><td>Corrêa</td><td>agentes urbanos; rede urbana</td><td>organização espacial</td><td>rede urbana não é só rodovia</td></tr><tr><td>Quijano</td><td>colonialidade do poder</td><td>perspectiva decolonial</td><td>colonialidade persiste após colonialismo formal</td></tr><tr><td>Neil Smith</td><td>produção/política das escalas</td><td><i>jumping scales</i></td><td>escala é também construção social</td></tr></table></div></details>",
+      "discBox": "<details class=\"challenge\"><summary>✍️ Discursiva FGV · treino 1 (15–30 linhas)</summary><div class=\"disc\"><p><b>Comando:</b> Diferencie espaço geográfico, território e lugar e explique como essas categorias permitem interpretar um conflito socioespacial na Amazônia.</p><textarea id=\"d1\" oninput=\"discCount('d1','dc1')\" placeholder=\"Escreva sem consultar. Estruture: definição → relação entre conceitos → aplicação amazônica → síntese.\"></textarea><div class=\"dc\" id=\"dc1\">Estimativa: 0 linhas · 0 palavras</div><div class=\"rub\"><span>□ conceitos definidos</span><span>□ relações explicadas</span><span>□ exemplo aplicado</span><span>□ conclusão responde ao comando</span></div><details class=\"master\"><summary>Ver espinha dorsal de resposta</summary><p>Uma resposta forte: (1) define espaço como produção social/material articulando objetos e ações; (2) define território pela apropriação, controle e poder; (3) define lugar pela experiência, identidade e significados; (4) aplica as três lentes a um conflito — por exemplo, infraestrutura/mineração, territorialidades de povos tradicionais e sentidos de pertencimento — mostrando que as categorias se complementam sem serem sinônimas.</p></details></div></details><details class=\"challenge\"><summary>✍️ Discursiva FGV · treino 2 (15–30 linhas)</summary><div class=\"disc\"><p><b>Comando:</b> Explique como redes, fixos e fluxos ajudam a compreender a integração desigual do território amazônico e indique uma consequência socioespacial dessa seletividade.</p><textarea id=\"d2\" oninput=\"discCount('d2','dc2')\" placeholder=\"Defina os conceitos, articule-os e aplique ao território amazônico.\"></textarea><div class=\"dc\" id=\"dc2\">Estimativa: 0 linhas · 0 palavras</div><div class=\"rub\"><span>□ redes: nós/conexões</span><span>□ fixos e fluxos</span><span>□ integração desigual</span><span>□ consequência socioespacial</span></div><details class=\"master\"><summary>Ver espinha dorsal de resposta</summary><p>Explique que redes combinam nós, conexões e fluxos; fixos são infraestruturas e fluxos são movimentos materiais/imateriais. Mostre que a densidade desses elementos é seletiva: corredores logísticos e centros de comando podem conectar intensamente certos pontos sem universalizar acessos e benefícios, produzindo centralidades, periferização e diferentes graus de fluidez territorial.</p></details></div></details>",
+      "teacherBox": "<details class=\"challenge\"><summary>🎓 Professor em ação · prova prática</summary><p><b>Microdesafio:</b> você tem 3 minutos para ensinar a uma turma do Ensino Médio a diferença entre <i>rede</i> e <i>território-rede</i>.</p><p class=\"mu\">Roteiro recomendado: ① exemplo concreto; ② definição curta; ③ contraste visual; ④ pergunta de checagem. Evite começar pela definição abstrata.</p><div class=\"box dia\"><span class=\"l\">Exemplo de abertura</span>“Pense numa rede de aeroportos: cidades são nós e os voos são conexões/fluxos. Agora imagine uma empresa que controla determinados hubs, rotas e acessos: além da rede, aparece uma territorialização em rede, porque existe poder e controle.”</div></details>"
+    },
+    "staticContent": {
+      "tab-study": "\n    <header class=\"hero\">\n      <span class=\"eyebrow\">Fundamentos da Ciência Geográfica</span>\n      <h1>Conceitos e autores da Geografia</h1>\n      <div class=\"meta ui\"><span>SEDUC-PA 2026</span><span>FGV</span><span>55–70 min</span><span>11 etapas</span></div>\n      <p class=\"objective\"><b>Objetivo da missão:</b> reconhecer autores, diferenciar as principais categorias geográficas e aplicar os conceitos a situações socioespaciais sem depender de alternativas.</p>\n      <details class=\"map ui\" id=\"missionMap\"><summary><span>🗺️</span><span id=\"mapLabel\">Ver mapa da missão</span></summary><div class=\"mapgrid\" id=\"mapGrid\"></div></details>\n      <details class=\"exam compact ui\"><summary>ⓘ Por que este tema importa para a SEDUC-PA?</summary><div class=\"inside\"><span class=\"pill\">ALINHADO AO EDITAL SEDUC-PA 2026</span><p><b>Este tema corresponde ao núcleo “Fundamentos da Ciência Geográfica”.</b> O edital inclui Geografia como campo do conhecimento; espaço, território, paisagem, lugar, região e <b>redes</b>; pensamento clássico e contemporâneo; produção do espaço; natureza e sociedade; escalas; perspectivas críticas, decoloniais e interculturais; e leitura da realidade socioespacial.</p><p class=\"mu\">A prova de Professor Classe I tem 30 questões específicas; a objetiva usa 5 alternativas. Há ainda 2 discursivas de conteúdo específico, com 15–30 linhas cada. Por isso a missão mistura treino rápido, Chefão A–E e produção escrita.</p></div></details>\n      <p class=\"mu\">Regra da missão: <b>errar aqui é informação.</b> Tente responder antes de consultar; depois use o feedback para entender por que cada alternativa encaixa ou não.</p>\n    </header>\n\n    <section id=\"pre\"><div class=\"q\"><span class=\"tg\">Teste-surpresa · diagnóstico de 3 perguntas</span><div id=\"preq\"></div></div><p class=\"mu\" id=\"premsg\"></p></section>\n    <div id=\"blocks\"></div>\n    <section id=\"fim\" style=\"display:none\"></section>\n    <p class=\"mu\" id=\"fontes\"><b>Conferência das fontes · v2.6.</b> O alinhamento temático e o formato da seleção foram conferidos no Edital SEDUC-PA 2026. Os quadros “Como a banca cobra” e “Pegadinha típica” usam paráfrases didáticas de formas recorrentes de cobrança, sem exibir prova, ano ou número de questão. O banco Arcade de 100 itens é material autoral de treino e foi revisado para reduzir afirmações absolutas e ambiguidades; não deve ser tratado como transcrição literal das obras originais. <a href=\"https://conhecimento.fgv.br/concursos/seducpa26\" target=\"_blank\" rel=\"noopener\">Página oficial do concurso</a>.</p>\n    <div class=\"settings ui\"><details><summary>Opções da página</summary><button id=\"rs\" class=\"danger\" onclick=\"two(this,rsAll)\">↺ Zerar todo o progresso desta missão</button></details></div>\n  ",
+      "fontes": "<b>Conferência das fontes · v2.6.</b> O alinhamento temático e o formato da seleção foram conferidos no Edital SEDUC-PA 2026. Os quadros “Como a banca cobra” e “Pegadinha típica” usam paráfrases didáticas de formas recorrentes de cobrança, sem exibir prova, ano ou número de questão. O banco Arcade de 100 itens é material autoral de treino e foi revisado para reduzir afirmações absolutas e ambiguidades; não deve ser tratado como transcrição literal das obras originais. <a href=\"https://conhecimento.fgv.br/concursos/seducpa26\" target=\"_blank\" rel=\"noopener\">Página oficial do concurso</a>."
+    }
+  },
+  "corrected_literals_sha256": "780fac092615b91c14231d6165fb316df165fc6de5f4a0338a83cd70679c61c6",
+  "bindings": [
+    {
+      "legacy_id": "B[0]",
+      "canonical_id": "v6-fund-theory-0",
+      "pointer": "/banks/B/0",
+      "sha256": "a795c5fbea5ba01ba0c92db862a4daabb5c6da5f803c5548ed23566d5eede7d0"
+    },
+    {
+      "legacy_id": "B[1]",
+      "canonical_id": "v6-fund-theory-1",
+      "pointer": "/banks/B/1",
+      "sha256": "76274f1adfc8f455b24ea24df00776561ba824e25bc45d46e6ef30ebdefe53a0"
+    },
+    {
+      "legacy_id": "B[2]",
+      "canonical_id": "v6-fund-theory-2",
+      "pointer": "/banks/B/2",
+      "sha256": "7ccd422bbe23c946b34daaf46f21d44ea0d28b67497ba744efa9796a4b6d6b47"
+    },
+    {
+      "legacy_id": "B[3]",
+      "canonical_id": "v6-fund-theory-3",
+      "pointer": "/banks/B/3",
+      "sha256": "c11505f20d471a730f1baf04a88c0db34b6703513017d935b6e335a7a508ec87"
+    },
+    {
+      "legacy_id": "B[3].recall",
+      "canonical_id": "v6-fund-recall-3",
+      "pointer": "/banks/B/3",
+      "fields": ["r", "ra"],
+      "sha256": "3c230ac9c229b348ea70bb541317461d999bc3a687181fa88762457d05df2c34"
+    },
+    {
+      "legacy_id": "B[4]",
+      "canonical_id": "v6-fund-theory-4",
+      "pointer": "/banks/B/4",
+      "sha256": "73b012bad622d7dbf6e8eedde4a3df817c3a381f3acbddf88f65425c5b917020"
+    },
+    {
+      "legacy_id": "B[5]",
+      "canonical_id": "v6-fund-theory-5",
+      "pointer": "/banks/B/5",
+      "sha256": "1501ec96c63047f24c7667c3159effe5a373da2d2d2dd0c8e93406b4842b653c"
+    },
+    {
+      "legacy_id": "B[6]",
+      "canonical_id": "v6-fund-theory-6",
+      "pointer": "/banks/B/6",
+      "sha256": "32b656576dfa5f0eff8b81c06940e252f3dc35eb2dfafe7f72c21d4ba95b9053"
+    },
+    {
+      "legacy_id": "B[6].recall",
+      "canonical_id": "v6-fund-recall-6",
+      "pointer": "/banks/B/6",
+      "fields": ["r", "ra"],
+      "sha256": "c4f81b5d4be8e32601498520435a2c7b147223915040176099b1deb39e63164a"
+    },
+    {
+      "legacy_id": "B[7]",
+      "canonical_id": "v6-fund-theory-7",
+      "pointer": "/banks/B/7",
+      "sha256": "def17d8b0b6a49bcad6900f01fde03e274394db4f60077e3e2304794b79ecaf9"
+    },
+    {
+      "legacy_id": "B[7].recall",
+      "canonical_id": "v6-fund-recall-7",
+      "pointer": "/banks/B/7",
+      "fields": ["r", "ra"],
+      "sha256": "b43a58bd25188b5e61d833f3a04a1cf3375f27df1d8636541efc154cae231050"
+    },
+    {
+      "legacy_id": "B[8]",
+      "canonical_id": "v6-fund-theory-8",
+      "pointer": "/banks/B/8",
+      "sha256": "66398ee53b5158dd78aefb1c6761ed426257095ea31bc353ada217b12cf60df8"
+    },
+    {
+      "legacy_id": "B[9]",
+      "canonical_id": "v6-fund-theory-9",
+      "pointer": "/banks/B/9",
+      "sha256": "e1d30396c9255030c9a4dd5bb3c008e7280a0be371fbecb403d970684102c95b"
+    },
+    {
+      "legacy_id": "B[10]",
+      "canonical_id": "v6-fund-theory-10",
+      "pointer": "/banks/B/10",
+      "sha256": "8081c0e6728da06c1702ace9d8f529ebc5b1a448e4695de04be15a673d38fbdf"
+    },
+    {
+      "legacy_id": "B[10].recall",
+      "canonical_id": "v6-fund-recall-10",
+      "pointer": "/banks/B/10",
+      "fields": ["r", "ra"],
+      "sha256": "dc910810dce0132cdb04fec72b972483d89926244ec4ac6ce92f1f321882f4fe"
+    },
+    {
+      "legacy_id": "pre_0",
+      "canonical_id": "v6-fund-q-pre-0",
+      "pointer": "/banks/PRE/0",
+      "sha256": "59c21a090ed5149813f0374a0d64fcdd353bcab0249531a0e9675b342c453365"
+    },
+    {
+      "legacy_id": "X.pre_0",
+      "canonical_id": "v6-fund-q-pre-0",
+      "pointer": "/banks/X/pre_0",
+      "sha256": "69032dd380ff29130276d4bb05411c60570d66231f69a95229adc6fc2bbd722c"
+    },
+    {
+      "legacy_id": "pre_1",
+      "canonical_id": "v6-fund-q-pre-1",
+      "pointer": "/banks/PRE/1",
+      "sha256": "3965340702af72acc258aaf99e9ddc638d21708d8b1acf61b12df3d121f1362e"
+    },
+    {
+      "legacy_id": "X.pre_1",
+      "canonical_id": "v6-fund-q-pre-1",
+      "pointer": "/banks/X/pre_1",
+      "sha256": "8ba9bb2b4579679d3d93984ca3a8dbdb7909be1e9cdb493de7f5ae3205e2641c"
+    },
+    {
+      "legacy_id": "pre_2",
+      "canonical_id": "v6-fund-q-pre-2",
+      "pointer": "/banks/PRE/2",
+      "sha256": "0abc7516063795fa62cea793ef88f2c30e7ca638553b2c3e682e7664e346e6c8"
+    },
+    {
+      "legacy_id": "X.pre_2",
+      "canonical_id": "v6-fund-q-pre-2",
+      "pointer": "/banks/X/pre_2",
+      "sha256": "ad8f725aba43e8a200f66f3a6476d94b02c9d635a1914c0c8fb6fda4cc04ce85"
+    },
+    {
+      "legacy_id": "b_0_0",
+      "canonical_id": "v6-fund-q-b-0-0",
+      "pointer": "/banks/B/0/qs/0",
+      "sha256": "7ed249c3ae239e444ca5533bc70097da7a9a9c5d8260355410713d1494c36491"
+    },
+    {
+      "legacy_id": "X.b_0_0",
+      "canonical_id": "v6-fund-q-b-0-0",
+      "pointer": "/banks/X/b_0_0",
+      "sha256": "62e90f6f9daff4626d3b73e710373ef70f5302ba04fcc658f0df1dcd08904bca"
+    },
+    {
+      "legacy_id": "b_1_0",
+      "canonical_id": "v6-fund-q-b-1-0",
+      "pointer": "/banks/B/1/qs/0",
+      "sha256": "1ce71527cd82e116003e4ddf7d54a6af9e0f2861148cd3f58ae5051211b60639"
+    },
+    {
+      "legacy_id": "X.b_1_0",
+      "canonical_id": "v6-fund-q-b-1-0",
+      "pointer": "/banks/X/b_1_0",
+      "sha256": "3d3fbf18db8f828b9654e8753d9d0f489da145d493731cc28850b0700cbb05db"
+    },
+    {
+      "legacy_id": "b_1_1",
+      "canonical_id": "v6-fund-q-b-1-1",
+      "pointer": "/banks/B/1/qs/1",
+      "sha256": "b76d052185aafe4c860d9d5cc3764dff6b6088c4b5d2356be613fc8a5fc28a97"
+    },
+    {
+      "legacy_id": "X.b_1_1",
+      "canonical_id": "v6-fund-q-b-1-1",
+      "pointer": "/banks/X/b_1_1",
+      "sha256": "d628072643e957126c80fb54cc260ed1ffe0394ab15e7912e28d804d749e50dc"
+    },
+    {
+      "legacy_id": "b_2_0",
+      "canonical_id": "v6-fund-q-b-2-0",
+      "pointer": "/banks/B/2/qs/0",
+      "sha256": "93613b959bbeb15ee802a3f08e8b6b2817e6c09d4bc3613e817fd34d13c0f58d"
+    },
+    {
+      "legacy_id": "X.b_2_0",
+      "canonical_id": "v6-fund-q-b-2-0",
+      "pointer": "/banks/X/b_2_0",
+      "sha256": "528789301c494adbc1418cebdea5041e498c74dc9f1e2b25a64124f0346b0b4b"
+    },
+    {
+      "legacy_id": "b_2_1",
+      "canonical_id": "v6-fund-q-b-2-1",
+      "pointer": "/banks/B/2/qs/1",
+      "sha256": "b07e1ca30312c4d3248245f08420970e50b096badc920798436ddb047cb420c0"
+    },
+    {
+      "legacy_id": "X.b_2_1",
+      "canonical_id": "v6-fund-q-b-2-1",
+      "pointer": "/banks/X/b_2_1",
+      "sha256": "67c6f7681c7bca17dd821172012b41cde968561dad40dcb74c9b0573f81800c4"
+    },
+    {
+      "legacy_id": "b_3_0",
+      "canonical_id": "v6-fund-q-b-3-0",
+      "pointer": "/banks/B/3/qs/0",
+      "sha256": "760b9a9c8c43314eb561a9d6c44da95a0a915238de76e92671a98855c2a09aa1"
+    },
+    {
+      "legacy_id": "X.b_3_0",
+      "canonical_id": "v6-fund-q-b-3-0",
+      "pointer": "/banks/X/b_3_0",
+      "sha256": "4fbbc109829a7fe8c1d3a571f6ac6686bcb7a45dc08314218c5fff8f5e7c7eef"
+    },
+    {
+      "legacy_id": "b_3_1",
+      "canonical_id": "v6-fund-q-b-3-1",
+      "pointer": "/banks/B/3/qs/1",
+      "sha256": "7473e54cd53f351ac7bdf5581d5928340a64b134ceb93f26ffd0c1f487c8cf5e"
+    },
+    {
+      "legacy_id": "X.b_3_1",
+      "canonical_id": "v6-fund-q-b-3-1",
+      "pointer": "/banks/X/b_3_1",
+      "sha256": "b74b0aa4c99896fcd1eaef552b3a0d2f22db1c9cfdfc34947d5f8e1181d1379b"
+    },
+    {
+      "legacy_id": "b_4_0",
+      "canonical_id": "v6-fund-q-b-4-0",
+      "pointer": "/banks/B/4/qs/0",
+      "sha256": "fc4de15de248812257e366d7313ffe899edbe39257e51f4b3849c7857d587446"
+    },
+    {
+      "legacy_id": "X.b_4_0",
+      "canonical_id": "v6-fund-q-b-4-0",
+      "pointer": "/banks/X/b_4_0",
+      "sha256": "ac968d5242d400fd4673b6d47df020a8565fec4713dde11463fbec07d55ee8e7"
+    },
+    {
+      "legacy_id": "b_4_1",
+      "canonical_id": "v6-fund-q-b-4-1",
+      "pointer": "/banks/B/4/qs/1",
+      "sha256": "8cdb8f20139e1fbce96e631045bcd142e8b686103a4d1615708b7a03e5f5ea69"
+    },
+    {
+      "legacy_id": "X.b_4_1",
+      "canonical_id": "v6-fund-q-b-4-1",
+      "pointer": "/banks/X/b_4_1",
+      "sha256": "a8f17b94bb79024dd248df0c8d28e2704ab4ec0aeb47471110490be5d62e78ae"
+    },
+    {
+      "legacy_id": "b_5_0",
+      "canonical_id": "v6-fund-q-b-5-0",
+      "pointer": "/banks/B/5/qs/0",
+      "sha256": "002771da73c10fc425736d52988ced4b6266ba42834e17a71adf50a7c0ccbf24"
+    },
+    {
+      "legacy_id": "X.b_5_0",
+      "canonical_id": "v6-fund-q-b-5-0",
+      "pointer": "/banks/X/b_5_0",
+      "sha256": "34862bc44152aa5ad11e6d81e5af53204a84f47d17bf0892f8044a5cfcb4cee9"
+    },
+    {
+      "legacy_id": "b_5_1",
+      "canonical_id": "v6-fund-q-b-5-1",
+      "pointer": "/banks/B/5/qs/1",
+      "sha256": "5594830cce1e6050c7b7b39e21a9791227d2b61011281f64e52a17e63a5e4cdf"
+    },
+    {
+      "legacy_id": "X.b_5_1",
+      "canonical_id": "v6-fund-q-b-5-1",
+      "pointer": "/banks/X/b_5_1",
+      "sha256": "101de85b754d7378ff651ff6700f855110f6ef7140ec28447b00f540e6d1a448"
+    },
+    {
+      "legacy_id": "b_5_2",
+      "canonical_id": "v6-fund-q-b-5-2",
+      "pointer": "/banks/B/5/qs/2",
+      "sha256": "c1a3e855578762073a7c8abe86c50bca661bdbc17168b2da55ed6b8787404435"
+    },
+    {
+      "legacy_id": "X.b_5_2",
+      "canonical_id": "v6-fund-q-b-5-2",
+      "pointer": "/banks/X/b_5_2",
+      "sha256": "9afa92e3267dc10bba965a002d1d09500410166dfcaea48302a3f7b24740d964"
+    },
+    {
+      "legacy_id": "b_6_0",
+      "canonical_id": "v6-fund-q-b-6-0",
+      "pointer": "/banks/B/6/qs/0",
+      "sha256": "1645187434bef35ca77fc409c1d70803a93bdc000b38f2ccfa22bf023122798c"
+    },
+    {
+      "legacy_id": "X.b_6_0",
+      "canonical_id": "v6-fund-q-b-6-0",
+      "pointer": "/banks/X/b_6_0",
+      "sha256": "6f5d1ccc8e0942acc03d0baa92cebc0e40eb6e68e9a9f3de1d2a2708dd1abc2a"
+    },
+    {
+      "legacy_id": "b_6_1",
+      "canonical_id": "v6-fund-q-b-6-1",
+      "pointer": "/banks/B/6/qs/1",
+      "sha256": "6afd2e84b659413c4bf222baa1da5294cad337bb9baf74ff6487148fd9c4ea3c"
+    },
+    {
+      "legacy_id": "X.b_6_1",
+      "canonical_id": "v6-fund-q-b-6-1",
+      "pointer": "/banks/X/b_6_1",
+      "sha256": "14510f738e3e9d544fa0d2a29620549b2f3323ccec639a6a11599ca90a3024cd"
+    },
+    {
+      "legacy_id": "b_6_2",
+      "canonical_id": "v6-fund-q-b-6-2",
+      "pointer": "/banks/B/6/qs/2",
+      "sha256": "9e88d1ef255662499fe759610ed3a5ce6385372e7aeeffef963e52e32dea081e"
+    },
+    {
+      "legacy_id": "X.b_6_2",
+      "canonical_id": "v6-fund-q-b-6-2",
+      "pointer": "/banks/X/b_6_2",
+      "sha256": "98cd0d19ddc3c65d2cb12c3b74f838e18df10b88f069518333260a41ebe5b91f"
+    },
+    {
+      "legacy_id": "b_7_0",
+      "canonical_id": "v6-fund-q-b-7-0",
+      "pointer": "/banks/B/7/qs/0",
+      "sha256": "e18ceeac68a683f7543b5db590725b4ee75a4f0f16c919bec7d1b6b6b99cebf3"
+    },
+    {
+      "legacy_id": "X.b_7_0",
+      "canonical_id": "v6-fund-q-b-7-0",
+      "pointer": "/banks/X/b_7_0",
+      "sha256": "1e1a928591ac9558078359453977b8903973986bd904f77f070b24d480884950"
+    },
+    {
+      "legacy_id": "b_7_1",
+      "canonical_id": "v6-fund-q-b-7-1",
+      "pointer": "/banks/B/7/qs/1",
+      "sha256": "3e8124350b943d4c8d3d60bb9c3588e8621505584b620e3188a6a9a3acbed862"
+    },
+    {
+      "legacy_id": "X.b_7_1",
+      "canonical_id": "v6-fund-q-b-7-1",
+      "pointer": "/banks/X/b_7_1",
+      "sha256": "f4f3a5483d7476be37738f0bd36bf40fc1ae27f64a4e8d49ffbc9b2557ef64cf"
+    },
+    {
+      "legacy_id": "b_7_2",
+      "canonical_id": "v6-fund-q-b-7-2",
+      "pointer": "/banks/B/7/qs/2",
+      "sha256": "7fe8f5343e8ae30e65797f8181499b4e90ce8b9a8064e57055dfeb150797bd10"
+    },
+    {
+      "legacy_id": "X.b_7_2",
+      "canonical_id": "v6-fund-q-b-7-2",
+      "pointer": "/banks/X/b_7_2",
+      "sha256": "e49cb9fa67aa1be66a968175208bd95e567ce2fec8a672740c22ae71b7a5566d"
+    },
+    {
+      "legacy_id": "b_8_0",
+      "canonical_id": "v6-fund-q-b-8-0",
+      "pointer": "/banks/B/8/qs/0",
+      "sha256": "dd87e7e0210269ec7b09534b7b7466901d968642f4075a69851d456da2baf21c"
+    },
+    {
+      "legacy_id": "X.b_8_0",
+      "canonical_id": "v6-fund-q-b-8-0",
+      "pointer": "/banks/X/b_8_0",
+      "sha256": "6b7072800883f755f87c3cafee165e8744d62b2881f54410ce806e9964160217"
+    },
+    {
+      "legacy_id": "b_8_1",
+      "canonical_id": "v6-fund-q-b-8-1",
+      "pointer": "/banks/B/8/qs/1",
+      "sha256": "2605ac74e0733df0e4da7a60a1bcdb1ecf9f1bae7c1eb4db8aa8be1e071646f1"
+    },
+    {
+      "legacy_id": "X.b_8_1",
+      "canonical_id": "v6-fund-q-b-8-1",
+      "pointer": "/banks/X/b_8_1",
+      "sha256": "048cf4fa6e32852b92d88c43e67e5f024e92aa6fbc724a9278cce743cb07782f"
+    },
+    {
+      "legacy_id": "b_9_0",
+      "canonical_id": "v6-fund-q-b-9-0",
+      "pointer": "/banks/B/9/qs/0",
+      "sha256": "601dd893a2b8d1868e353da41b69d30a8a2e59c06c89dd9190bc0820a74d288a"
+    },
+    {
+      "legacy_id": "X.b_9_0",
+      "canonical_id": "v6-fund-q-b-9-0",
+      "pointer": "/banks/X/b_9_0",
+      "sha256": "d8b33d0512162cd4aa6f241d4594750376885c730fb8be2f6f81ad601617ca60"
+    },
+    {
+      "legacy_id": "b_10_0",
+      "canonical_id": "v6-fund-q-b-10-0",
+      "pointer": "/banks/B/10/qs/0",
+      "sha256": "a0623e25c7a726e76b519cb0a190cdc23a9f27d4ab84167ea2244790d26cd713"
+    },
+    {
+      "legacy_id": "b_10_1",
+      "canonical_id": "v6-fund-q-b-10-1",
+      "pointer": "/banks/B/10/qs/1",
+      "sha256": "09c9f9f5469b092b3426cefb8d58f8b0cb29023f72d2651a8c31c8ecfc32f233"
+    },
+    {
+      "legacy_id": "b_10_2",
+      "canonical_id": "v6-fund-q-b-10-2",
+      "pointer": "/banks/B/10/qs/2",
+      "sha256": "f773f26a988f75ae26f79673344f426d957d1825ec349baa7349d547dfc54f6a"
+    },
+    {
+      "legacy_id": "c_0",
+      "canonical_id": "v6-fund-q-c-0",
+      "pointer": "/banks/CH/0",
+      "sha256": "1bdf837996826f92532088710852bc260b32ed33b2f4924a1cca2cbb86f4d85a"
+    },
+    {
+      "legacy_id": "X.c_0",
+      "canonical_id": "v6-fund-q-c-0",
+      "pointer": "/banks/X/c_0",
+      "sha256": "feb7607d124cddac8e07a47aad060d37f2289d0f1e61ab7f6e78fd86582aeaf3"
+    },
+    {
+      "legacy_id": "c_1",
+      "canonical_id": "v6-fund-q-c-1",
+      "pointer": "/banks/CH/1",
+      "sha256": "2834a7d2cbb352d9cea7689ce1605f5c696517a941c9677160aa1b2e62b17d33"
+    },
+    {
+      "legacy_id": "X.c_1",
+      "canonical_id": "v6-fund-q-c-1",
+      "pointer": "/banks/X/c_1",
+      "sha256": "64bb7a712ffa0bb402b0a0a4111f49353e96dfc195815f29d20e7809dcaf8cf8"
+    },
+    {
+      "legacy_id": "c_2",
+      "canonical_id": "v6-fund-q-c-2",
+      "pointer": "/banks/CH/2",
+      "sha256": "4b6e3736da7dffb2b2430ac12a251ca717b6ae8fc432f2111e7d24482e791c94"
+    },
+    {
+      "legacy_id": "X.c_2",
+      "canonical_id": "v6-fund-q-c-2",
+      "pointer": "/banks/X/c_2",
+      "sha256": "152dd87781d31690141731175d1f483100030092d60243d533e7bd0c2cfef978"
+    },
+    {
+      "legacy_id": "c_3",
+      "canonical_id": "v6-fund-q-c-3",
+      "pointer": "/banks/CH/3",
+      "sha256": "0a92c138bd7e129a3767b9d2606cecb78ca0246bf8e32dad154159a6289dbc8e"
+    },
+    {
+      "legacy_id": "X.c_3",
+      "canonical_id": "v6-fund-q-c-3",
+      "pointer": "/banks/X/c_3",
+      "sha256": "cdb409c2c61bf8ddbe604c033d0863767f8f3bf8b985648eb5eb3b3f076e47eb"
+    },
+    {
+      "legacy_id": "c_4",
+      "canonical_id": "v6-fund-q-c-4",
+      "pointer": "/banks/CH/4",
+      "sha256": "8d99a389027bef62453f249baeb63a7dd4ea3b8f81df358310f99be94435ea9c"
+    },
+    {
+      "legacy_id": "X.c_4",
+      "canonical_id": "v6-fund-q-c-4",
+      "pointer": "/banks/X/c_4",
+      "sha256": "3f81ad478c90d7c41385bbf8633b9f43eaa900731f0cb4019b63333d1858efdb"
+    },
+    {
+      "legacy_id": "C[0]",
+      "canonical_id": "v6-fund-card-0",
+      "pointer": "/banks/C/0",
+      "sha256": "b523af98cca72b02bd39f75ed5e1e9275a98f2005a74072c6d0794a186cc4357"
+    },
+    {
+      "legacy_id": "C[1]",
+      "canonical_id": "v6-fund-card-1",
+      "pointer": "/banks/C/1",
+      "sha256": "99ef05201f954cf47f511c6b24d875e6ef3209678a1f4a330e8fb7fd4c789bad"
+    },
+    {
+      "legacy_id": "C[2]",
+      "canonical_id": "v6-fund-card-2",
+      "pointer": "/banks/C/2",
+      "sha256": "1d22b85f173e2dc4deb90fbede74f93505bcb2afe4ec0b4e3a283b1415ba11c8"
+    },
+    {
+      "legacy_id": "C[3]",
+      "canonical_id": "v6-fund-card-3",
+      "pointer": "/banks/C/3",
+      "sha256": "e49fe7185d2221eab345f2fbcbf7537db131d08305f566d3872f0aaa8aacc6a3"
+    },
+    {
+      "legacy_id": "C[4]",
+      "canonical_id": "v6-fund-card-4",
+      "pointer": "/banks/C/4",
+      "sha256": "657731fa2db46cbd9adf21fe511cd59e571dda864bb4ae3c687eeea12b40c885"
+    },
+    {
+      "legacy_id": "C[5]",
+      "canonical_id": "v6-fund-card-5",
+      "pointer": "/banks/C/5",
+      "sha256": "8014541a4796480d702355c21574b03a9fd534c4fb28a63e44d394fce56f40e9"
+    },
+    {
+      "legacy_id": "C[6]",
+      "canonical_id": "v6-fund-card-6",
+      "pointer": "/banks/C/6",
+      "sha256": "bea61c9fb79282b12f93f96715b456f7a5f2a189a36a3bd54d460961e230387e"
+    },
+    {
+      "legacy_id": "C[7]",
+      "canonical_id": "v6-fund-card-7",
+      "pointer": "/banks/C/7",
+      "sha256": "80c4eabfd4d0a1a9f4eb5848a933fb4a02eb003ce5c6b52401b82c2491199272"
+    },
+    {
+      "legacy_id": "C[8]",
+      "canonical_id": "v6-fund-card-8",
+      "pointer": "/banks/C/8",
+      "sha256": "dcfac5317f4322b954e5a12007d45e20f8607848d4b5e67eaf97d56eca94d048"
+    },
+    {
+      "legacy_id": "C[9]",
+      "canonical_id": "v6-fund-card-9",
+      "pointer": "/banks/C/9",
+      "sha256": "5211c6d2a1eb864e20eeb65f4d8567534eced25c94ba41a3f28d70908d0383a5"
+    },
+    {
+      "legacy_id": "C[10]",
+      "canonical_id": "v6-fund-card-10",
+      "pointer": "/banks/C/10",
+      "sha256": "3b8ec91552984227f5f54e4c2372ddc41bc623688649eb294a7a2ae087ab21c7"
+    },
+    {
+      "legacy_id": "C[11]",
+      "canonical_id": "v6-fund-card-11",
+      "pointer": "/banks/C/11",
+      "sha256": "f5893ca71a367558a47cd1768df68f18fed7f5eacbfa6be336a9739c54b05b70"
+    },
+    {
+      "legacy_id": "C[12]",
+      "canonical_id": "v6-fund-card-12",
+      "pointer": "/banks/C/12",
+      "sha256": "26589426c290b9d267b0fec11b10d7447a6955f4744b58b29c160638847aae08"
+    },
+    {
+      "legacy_id": "C[13]",
+      "canonical_id": "v6-fund-card-13",
+      "pointer": "/banks/C/13",
+      "sha256": "10cc8ec46263cf0950000ff483d2f11cb8511732c264ba2748bdf5737ba43633"
+    },
+    {
+      "legacy_id": "C[14]",
+      "canonical_id": "v6-fund-card-14",
+      "pointer": "/banks/C/14",
+      "sha256": "cd04893bd7b98e316c3cccbd18ac78f95a379e7d2d1a428f0fa573d6a62301ea"
+    },
+    {
+      "legacy_id": "C[15]",
+      "canonical_id": "v6-fund-card-15",
+      "pointer": "/banks/C/15",
+      "sha256": "4305d3c8d48c61d00b8f18a9615a0d0e7d9004e60411da6bca837b9f44c6ff6a"
+    },
+    {
+      "legacy_id": "C[16]",
+      "canonical_id": "v6-fund-card-16",
+      "pointer": "/banks/C/16",
+      "sha256": "2f1b80d0560b1838a6e95c69d89047fc0d5561f281ca1d8857cd994679cc73fe"
+    },
+    {
+      "legacy_id": "C[17]",
+      "canonical_id": "v6-fund-card-17",
+      "pointer": "/banks/C/17",
+      "sha256": "c6037a713c16a83fd045bfe0164fa9966d0e736d90becd9f56d71a4f931e4791"
+    },
+    {
+      "legacy_id": "C[18]",
+      "canonical_id": "v6-fund-card-18",
+      "pointer": "/banks/C/18",
+      "sha256": "a73ee6c899e1b0cde7e7763060c3d3430bf440799bb6b4ab5776e150779dfb54"
+    },
+    {
+      "legacy_id": "C[19]",
+      "canonical_id": "v6-fund-card-19",
+      "pointer": "/banks/C/19",
+      "sha256": "bcf3bed10b97cddedf58edad955131dfc1b3e280992739e54ec3f3b34a1296e9"
+    },
+    {
+      "legacy_id": "C[20]",
+      "canonical_id": "v6-fund-card-20",
+      "pointer": "/banks/C/20",
+      "sha256": "354947e7d57686cd85f7b86c3282c951e074ff5c86060b0a7dfa6296140f324c"
+    },
+    {
+      "legacy_id": "C[21]",
+      "canonical_id": "v6-fund-card-21",
+      "pointer": "/banks/C/21",
+      "sha256": "ac1d3e9be206ca832d0f6d5bbc09ed7816e6808281e3c6b5e313c5fca54cabaa"
+    },
+    {
+      "legacy_id": "C[22]",
+      "canonical_id": "v6-fund-card-22",
+      "pointer": "/banks/C/22",
+      "sha256": "ecd6d082aa1933513bef5a08d36e2a4b6747f158618bbb0b6a346065e3c1b8ca"
+    },
+    {
+      "legacy_id": "C[23]",
+      "canonical_id": "v6-fund-card-23",
+      "pointer": "/banks/C/23",
+      "sha256": "1d4b99971c61f4716768df17ac8a895d721fe82a7db9a8cdababd976d1a72179"
+    },
+    {
+      "legacy_id": "C[24]",
+      "canonical_id": "v6-fund-card-24",
+      "pointer": "/banks/C/24",
+      "sha256": "e8f4663adf65be3e1e6c3005f6eba00f6a408191fb1ba2279ce65e896a108800"
+    },
+    {
+      "legacy_id": "C[25]",
+      "canonical_id": "v6-fund-card-25",
+      "pointer": "/banks/C/25",
+      "sha256": "18b5e165f5c80a9afcf4cfff9280864dfb04abc502c76113f170b1845f8395d2"
+    },
+    {
+      "legacy_id": "C[26]",
+      "canonical_id": "v6-fund-card-26",
+      "pointer": "/banks/C/26",
+      "sha256": "70436f0c69cf8363a8a05fb6f505cdff89034a22dde81d8abf4299cf5ad15d4f"
+    },
+    {
+      "legacy_id": "C[27]",
+      "canonical_id": "v6-fund-card-27",
+      "pointer": "/banks/C/27",
+      "sha256": "d6f3f671bab3e891dd57efb9703629360a84720a21ee20f84aaef3be3bc45c6d"
+    },
+    {
+      "legacy_id": "C[28]",
+      "canonical_id": "v6-fund-card-28",
+      "pointer": "/banks/C/28",
+      "sha256": "d615fa08b4e7a613c7a3459f5cdc240829d9d5400f7ddb1397e1b8aaa6e4f74a"
+    },
+    {
+      "legacy_id": "C[29]",
+      "canonical_id": "v6-fund-card-29",
+      "pointer": "/banks/C/29",
+      "sha256": "ca46c0e4b81d8fdd1edbe2e4c7283d16cf56155c52e93b322b81c8d982ef6df5"
+    },
+    {
+      "legacy_id": "C[30]",
+      "canonical_id": "v6-fund-card-30",
+      "pointer": "/banks/C/30",
+      "sha256": "7bf244f927d42dab3539c7b15c59db72e3d2bbc8a6595a5071db747dd4b80248"
+    },
+    {
+      "legacy_id": "C[31]",
+      "canonical_id": "v6-fund-card-31",
+      "pointer": "/banks/C/31",
+      "sha256": "88a0b283586d1c7987f9e745293bbee584de795161b16109bd250d1ef25f850b"
+    },
+    {
+      "legacy_id": "C[32]",
+      "canonical_id": "v6-fund-card-32",
+      "pointer": "/banks/C/32",
+      "sha256": "4ed46ccf3e37b9f79e6f549fd8bfda2e1e052440af4ae647a7f58777031f7d75"
+    },
+    {
+      "legacy_id": "C[33]",
+      "canonical_id": "v6-fund-card-33",
+      "pointer": "/banks/C/33",
+      "sha256": "17ffa402cc26b50bc8843f4904a7ccb895b2fbf95f047fcd50ae191e022d5ee9"
+    },
+    {
+      "legacy_id": "C[34]",
+      "canonical_id": "v6-fund-card-34",
+      "pointer": "/banks/C/34",
+      "sha256": "694abddeead44cc310720a0797b47add97b9ac641948db01207bcb51fb5633e9"
+    },
+    {
+      "legacy_id": "C[35]",
+      "canonical_id": "v6-fund-card-35",
+      "pointer": "/banks/C/35",
+      "sha256": "5eb1e9af4eeac8aaaabb6daf9d97f604d960bfd611ad5dc4c688a7d2f80a19a6"
+    },
+    {
+      "legacy_id": "C[36]",
+      "canonical_id": "v6-fund-card-36",
+      "pointer": "/banks/C/36",
+      "sha256": "dfff12d0357e716a5fce268fa04033fa54d3e404f03d33ae2b0af554e9c64bde"
+    },
+    {
+      "legacy_id": "C[37]",
+      "canonical_id": "v6-fund-card-37",
+      "pointer": "/banks/C/37",
+      "sha256": "602cfdb38dcaa4efb6c32fdd8de44e136809ed04b0367850c867ae6d3c7f315d"
+    },
+    {
+      "legacy_id": "C[38]",
+      "canonical_id": "v6-fund-card-38",
+      "pointer": "/banks/C/38",
+      "sha256": "32acdcddb701906ecdc53cb732c6bff607ab4919ca190bc4ae4be63f046b267e"
+    },
+    {
+      "legacy_id": "C[39]",
+      "canonical_id": "v6-fund-card-39",
+      "pointer": "/banks/C/39",
+      "sha256": "39b2c28e126e40db7a53b2ea7a1651375c063afb76fb4166a4b2256b3c21d77f"
+    },
+    {
+      "legacy_id": "C[40]",
+      "canonical_id": "v6-fund-card-40",
+      "pointer": "/banks/C/40",
+      "sha256": "1c1b6f9cb508678999dfa580d8f0846638a9a95e4561663a511b8c137767e97d"
+    },
+    {
+      "legacy_id": "C[41]",
+      "canonical_id": "v6-fund-card-41",
+      "pointer": "/banks/C/41",
+      "sha256": "d048bf424f6b8ba2c978d5072f8cfe78cb0493662791ebcfa67e5bf3f3387c69"
+    },
+    {
+      "legacy_id": "C[42]",
+      "canonical_id": "v6-fund-card-42",
+      "pointer": "/banks/C/42",
+      "sha256": "eb100f2efa27b3ff1a42efe5cd8943e068d0af390ab32788cd7eff6448b23b90"
+    },
+    {
+      "legacy_id": "C[43]",
+      "canonical_id": "v6-fund-card-43",
+      "pointer": "/banks/C/43",
+      "sha256": "ce26674b5cbfdad51f0fc84aabbace698760982a130fe96e9f6d2de45eb6387f"
+    },
+    {
+      "legacy_id": "G[0]",
+      "canonical_id": "v6-fund-game-0",
+      "pointer": "/banks/G/0",
+      "sha256": "d92bb92ff9b802035ab94a1108696946a1960c51a8ca0f04fac120eb707b9e8d"
+    },
+    {
+      "legacy_id": "G[1]",
+      "canonical_id": "v6-fund-game-1",
+      "pointer": "/banks/G/1",
+      "sha256": "6366577f53c37a8933f01f80c7a9e1faf1441d449d91db5db232da15946ad706"
+    },
+    {
+      "legacy_id": "G[2]",
+      "canonical_id": "v6-fund-game-2",
+      "pointer": "/banks/G/2",
+      "sha256": "9623ecdfbdae142c31b2ac9f5b7917f89e4ccd65675a6bf40851ded5038633b7"
+    },
+    {
+      "legacy_id": "G[3]",
+      "canonical_id": "v6-fund-game-3",
+      "pointer": "/banks/G/3",
+      "sha256": "6f350a5da9530bc562687440dd763f9cdd346868a34dac508ede6b4a89cd24d3"
+    },
+    {
+      "legacy_id": "G[4]",
+      "canonical_id": "v6-fund-game-4",
+      "pointer": "/banks/G/4",
+      "sha256": "14e6b1d1ca261a5e603832ecbc10b126d54bb2a9fa38cd6d2d9683f3c1c76fca"
+    },
+    {
+      "legacy_id": "G[5]",
+      "canonical_id": "v6-fund-game-5",
+      "pointer": "/banks/G/5",
+      "sha256": "b3767d1088bc058daf387ece88df414c116af43f3216e492ba26c71df78ff912"
+    },
+    {
+      "legacy_id": "G[6]",
+      "canonical_id": "v6-fund-game-6",
+      "pointer": "/banks/G/6",
+      "sha256": "976a900f4bb7e4aee49d2b664a7dad5a47d8cab12240683aa40a595da55a28b2"
+    },
+    {
+      "legacy_id": "G[7]",
+      "canonical_id": "v6-fund-game-7",
+      "pointer": "/banks/G/7",
+      "sha256": "e9a133cdb8abbf3ad72900542920600b7079e570474a97db66f2984767b09385"
+    },
+    {
+      "legacy_id": "G[8]",
+      "canonical_id": "v6-fund-game-8",
+      "pointer": "/banks/G/8",
+      "sha256": "202a17a5d045de5ee34ab5b89393c4178508fe49851d2dc87fae40d7218e23ef"
+    },
+    {
+      "legacy_id": "G[9]",
+      "canonical_id": "v6-fund-game-9",
+      "pointer": "/banks/G/9",
+      "sha256": "8325d229ae44699da9fb540f7649dcd58a871437035b79682fd0c499160738d6"
+    },
+    {
+      "legacy_id": "G[10]",
+      "canonical_id": "v6-fund-game-10",
+      "pointer": "/banks/G/10",
+      "sha256": "fd6a4f2be63c542cc7ec51173025fb59d74e84a3e636c934287709e71b0bc9a8"
+    },
+    {
+      "legacy_id": "G[11]",
+      "canonical_id": "v6-fund-game-11",
+      "pointer": "/banks/G/11",
+      "sha256": "cb579d98872a56a9e9e38bef14317105ff5f0bc94d480761672d281ebd4602ef"
+    },
+    {
+      "legacy_id": "G[12]",
+      "canonical_id": "v6-fund-game-12",
+      "pointer": "/banks/G/12",
+      "sha256": "8c896241c7b7524baa30451ae665b5e4a0e9eebf69175ffd0f197dc8cd58ee40"
+    },
+    {
+      "legacy_id": "G[13]",
+      "canonical_id": "v6-fund-game-13",
+      "pointer": "/banks/G/13",
+      "sha256": "dc23d136ba55d1cd3d899217b68e6dbec1d4b9d6a518c900459e208affdf8056"
+    },
+    {
+      "legacy_id": "G[14]",
+      "canonical_id": "v6-fund-game-14",
+      "pointer": "/banks/G/14",
+      "sha256": "614f01c4f5b7130877d67418107941ef208a324985bc4274a0433230d6b32d8e"
+    },
+    {
+      "legacy_id": "G[15]",
+      "canonical_id": "v6-fund-game-15",
+      "pointer": "/banks/G/15",
+      "sha256": "3f710178010a957ed3c3f338d302c4d4d4befc76dcdd1987ac48c2ac2c1605fe"
+    },
+    {
+      "legacy_id": "G[16]",
+      "canonical_id": "v6-fund-game-16",
+      "pointer": "/banks/G/16",
+      "sha256": "9f7f858eaa4c97321c341d302b3b6a2b0cd44c5f931f5eda04f57f08c8c5526b"
+    },
+    {
+      "legacy_id": "G[17]",
+      "canonical_id": "v6-fund-game-17",
+      "pointer": "/banks/G/17",
+      "sha256": "67f2fb4196b256bb922839154cbd997911734bcbaed7293c86882dce19213a56"
+    },
+    {
+      "legacy_id": "G[18]",
+      "canonical_id": "v6-fund-game-18",
+      "pointer": "/banks/G/18",
+      "sha256": "279da46872870eab4393d7c0ba80f883ac7de4645dd1649d27c7cd064949eaa3"
+    },
+    {
+      "legacy_id": "G[19]",
+      "canonical_id": "v6-fund-game-19",
+      "pointer": "/banks/G/19",
+      "sha256": "f2dc8efaafc864cfbdd352d638d21cc0f45d70275ad8a03433f10d261eabf739"
+    },
+    {
+      "legacy_id": "G[20]",
+      "canonical_id": "v6-fund-game-20",
+      "pointer": "/banks/G/20",
+      "sha256": "b6ecba9ff0ad07bbb289b383ab55e43992091ab6ac24519c0cac77d749ae419c"
+    },
+    {
+      "legacy_id": "G[21]",
+      "canonical_id": "v6-fund-game-21",
+      "pointer": "/banks/G/21",
+      "sha256": "8ac151c35c9d457577e9d9726e44711f5f1ccc969d33117e11d90b21a149e046"
+    },
+    {
+      "legacy_id": "G[22]",
+      "canonical_id": "v6-fund-game-22",
+      "pointer": "/banks/G/22",
+      "sha256": "5762e4bd00b2ac9af3fa0062488bb44b6154af13c6aea0049b083041e3e17dbe"
+    },
+    {
+      "legacy_id": "G[23]",
+      "canonical_id": "v6-fund-game-23",
+      "pointer": "/banks/G/23",
+      "sha256": "9a1677bf8df43ef97a2ec310513b97eca54f972403b07abaaedbd43d36fcd702"
+    },
+    {
+      "legacy_id": "G[24]",
+      "canonical_id": "v6-fund-game-24",
+      "pointer": "/banks/G/24",
+      "sha256": "54be9ee31395f6b3ac1aae328663340615132c02e86400bc82bb0cec34f8a12d"
+    },
+    {
+      "legacy_id": "G[25]",
+      "canonical_id": "v6-fund-game-25",
+      "pointer": "/banks/G/25",
+      "sha256": "5769f21cb5a765366dbc0319fd7aecef860c6bc8eec18b76a163c539276d2d06"
+    },
+    {
+      "legacy_id": "G[26]",
+      "canonical_id": "v6-fund-game-26",
+      "pointer": "/banks/G/26",
+      "sha256": "b19a66b1a0421aaa6f8edbc44515ccee33b569cc3368218feeb4b4beb9174471"
+    },
+    {
+      "legacy_id": "G[27]",
+      "canonical_id": "v6-fund-game-27",
+      "pointer": "/banks/G/27",
+      "sha256": "be896fc6906beeacb110eb15e2a6df7f092ad821916171464a722055d615f63d"
+    },
+    {
+      "legacy_id": "G[28]",
+      "canonical_id": "v6-fund-game-28",
+      "pointer": "/banks/G/28",
+      "sha256": "feeddabfb67343a5594e2f46a0314684722acc913e4e1df01f46890660ed811a"
+    },
+    {
+      "legacy_id": "G[29]",
+      "canonical_id": "v6-fund-game-29",
+      "pointer": "/banks/G/29",
+      "sha256": "c6cc0c7e4cc0f846d358bd9f80a2c6b7f6e76fe41672a332738e55de178f1b18"
+    },
+    {
+      "legacy_id": "G[30]",
+      "canonical_id": "v6-fund-game-30",
+      "pointer": "/banks/G/30",
+      "sha256": "24ad9e4828080c4b01b4bf210531bf71b81b28fb2c785d380893d30dfa5d1540"
+    },
+    {
+      "legacy_id": "G[31]",
+      "canonical_id": "v6-fund-game-31",
+      "pointer": "/banks/G/31",
+      "sha256": "d6edd5c7c676561c347a19b3c8234aadb29c2b5a2e2cbca5c6be46ae878b6f59"
+    },
+    {
+      "legacy_id": "G[32]",
+      "canonical_id": "v6-fund-game-32",
+      "pointer": "/banks/G/32",
+      "sha256": "638af706dac888702d74aca025e614568082db9a7ac36930f7a7c0cbc1867525"
+    },
+    {
+      "legacy_id": "G[33]",
+      "canonical_id": "v6-fund-game-33",
+      "pointer": "/banks/G/33",
+      "sha256": "2b830033683ff1a674cfe9e9fece0e7ff496b42c23c4f6571b11fc869d560566"
+    },
+    {
+      "legacy_id": "G[34]",
+      "canonical_id": "v6-fund-game-34",
+      "pointer": "/banks/G/34",
+      "sha256": "5e166e9126c79f6874599fe83723b4d9aab231f1624bef8076b1d617d53348c2"
+    },
+    {
+      "legacy_id": "G[35]",
+      "canonical_id": "v6-fund-game-35",
+      "pointer": "/banks/G/35",
+      "sha256": "ce9120198977d7827b1b3637a57ce7f87869973cc5b6e623bb27acf345976a07"
+    },
+    {
+      "legacy_id": "G[36]",
+      "canonical_id": "v6-fund-game-36",
+      "pointer": "/banks/G/36",
+      "sha256": "bff6b46a279cb2dba3e3596f19563ba88b14a125684600e82cf222385c91e109"
+    },
+    {
+      "legacy_id": "G[37]",
+      "canonical_id": "v6-fund-game-37",
+      "pointer": "/banks/G/37",
+      "sha256": "003c34653144d85bb62e3ce772d8da56842ee6cd0dcd9b42d6d9750cc87c4e64"
+    },
+    {
+      "legacy_id": "G[38]",
+      "canonical_id": "v6-fund-game-38",
+      "pointer": "/banks/G/38",
+      "sha256": "6e267a36bc0f557df4220f89ab87f1fa21a992f8db2e71487a4107387eba446d"
+    },
+    {
+      "legacy_id": "G[39]",
+      "canonical_id": "v6-fund-game-39",
+      "pointer": "/banks/G/39",
+      "sha256": "20867dc98ad1782b131a6eac1962e7d3eaa7db4d8e265c34fbaa95cc2a541d55"
+    },
+    {
+      "legacy_id": "G[40]",
+      "canonical_id": "v6-fund-game-40",
+      "pointer": "/banks/G/40",
+      "sha256": "80912f8be5a6195a20ad6c95193ef12841e0f210c5b05fb01630de99ae0f94f2"
+    },
+    {
+      "legacy_id": "G[41]",
+      "canonical_id": "v6-fund-game-41",
+      "pointer": "/banks/G/41",
+      "sha256": "130c28160d1956816f6d0f58dcf04e674b066329681902fe411011ded1c26742"
+    },
+    {
+      "legacy_id": "G[42]",
+      "canonical_id": "v6-fund-game-42",
+      "pointer": "/banks/G/42",
+      "sha256": "cbd37825a538c54638f15014ee7085eada387eb0bcc6fae64082073bdd6f5195"
+    },
+    {
+      "legacy_id": "G[43]",
+      "canonical_id": "v6-fund-game-43",
+      "pointer": "/banks/G/43",
+      "sha256": "99c83964fad057818abd54a69a5887fa7cdc54d78bfe681c44fb168fc962f69e"
+    },
+    {
+      "legacy_id": "G[44]",
+      "canonical_id": "v6-fund-game-44",
+      "pointer": "/banks/G/44",
+      "sha256": "2393e67d6edd81f56dc9393b2ec7babda8785209cafa3dc7f70fe7fe91851797"
+    },
+    {
+      "legacy_id": "G[45]",
+      "canonical_id": "v6-fund-game-45",
+      "pointer": "/banks/G/45",
+      "sha256": "60377742be35969142237e20bfdf37d7fefc2e9e87c48f7899f7a01891d3711c"
+    },
+    {
+      "legacy_id": "G[46]",
+      "canonical_id": "v6-fund-game-46",
+      "pointer": "/banks/G/46",
+      "sha256": "1b86bbcf632f6cc308b95ba4006eb0f3d1762f40abcb8fcab9ffc9ee61179fad"
+    },
+    {
+      "legacy_id": "G[47]",
+      "canonical_id": "v6-fund-game-47",
+      "pointer": "/banks/G/47",
+      "sha256": "54020e87e2b0b0d8c77245246642dfed155cf501caad9de4670b440a5eff5a74"
+    },
+    {
+      "legacy_id": "G[48]",
+      "canonical_id": "v6-fund-game-48",
+      "pointer": "/banks/G/48",
+      "sha256": "8e1e899971d2f5592d23dbd44b0e672024f0e7309ef0f607e7bb94644a7482ea"
+    },
+    {
+      "legacy_id": "G[49]",
+      "canonical_id": "v6-fund-game-49",
+      "pointer": "/banks/G/49",
+      "sha256": "cacca681b17082a379213ef9db7c1d011bdd7cb860214e0d488aa24f2311d4e7"
+    },
+    {
+      "legacy_id": "G[50]",
+      "canonical_id": "v6-fund-game-50",
+      "pointer": "/banks/G/50",
+      "sha256": "152134d43176fc3d5085b5a93fb9fe039edba0ae7012932e32da3d4411ba2626"
+    },
+    {
+      "legacy_id": "G[51]",
+      "canonical_id": "v6-fund-game-51",
+      "pointer": "/banks/G/51",
+      "sha256": "08648efa69b4ab09e8318bc7b013cab4b360264c04639c1a858ca5fcaa153959"
+    },
+    {
+      "legacy_id": "G[52]",
+      "canonical_id": "v6-fund-game-52",
+      "pointer": "/banks/G/52",
+      "sha256": "df9ecb3c56a38a8502e89e54e166827e1e99e81d0a09957bc8ff430fa426c0e8"
+    },
+    {
+      "legacy_id": "G[53]",
+      "canonical_id": "v6-fund-game-53",
+      "pointer": "/banks/G/53",
+      "sha256": "8147dae423a1a426a3a22b0cda1693a1e19c200aa5b5a338e77e76af120a9a57"
+    },
+    {
+      "legacy_id": "G[54]",
+      "canonical_id": "v6-fund-game-54",
+      "pointer": "/banks/G/54",
+      "sha256": "dba363176e7c7d3652bff7e147980b08e599cd771016fc671c914a6f66fc06c8"
+    },
+    {
+      "legacy_id": "G[55]",
+      "canonical_id": "v6-fund-game-55",
+      "pointer": "/banks/G/55",
+      "sha256": "2779f11f157b8c0623f83a0a75f21c1cbd6f157f29cfa499954eec2b486d59d4"
+    },
+    {
+      "legacy_id": "G[56]",
+      "canonical_id": "v6-fund-game-56",
+      "pointer": "/banks/G/56",
+      "sha256": "da47f1e7253cb4e641b678db3279a002a568fee969502637382727820c8b78a3"
+    },
+    {
+      "legacy_id": "G[57]",
+      "canonical_id": "v6-fund-game-57",
+      "pointer": "/banks/G/57",
+      "sha256": "8e5cd91adea312a5c16a7a53ba5a4260c85335645da1fbe95d84f79ec4fd4137"
+    },
+    {
+      "legacy_id": "G[58]",
+      "canonical_id": "v6-fund-game-58",
+      "pointer": "/banks/G/58",
+      "sha256": "51ac19abfc13c4fa6068f15fb3b179c18001755a67e3a35ffc9b3cbb997a10d3"
+    },
+    {
+      "legacy_id": "G[59]",
+      "canonical_id": "v6-fund-game-59",
+      "pointer": "/banks/G/59",
+      "sha256": "b7a34b2098c0b4d5360b165f9b18e93a8a2ef3e03a7891c2a0faa326e6ff8484"
+    },
+    {
+      "legacy_id": "G[60]",
+      "canonical_id": "v6-fund-game-60",
+      "pointer": "/banks/G/60",
+      "sha256": "1b1ce71223f16ce42c6930765d56ef7f0e3f4c202c67984d3e7056ff9cdef42a"
+    },
+    {
+      "legacy_id": "G[61]",
+      "canonical_id": "v6-fund-game-61",
+      "pointer": "/banks/G/61",
+      "sha256": "aec9b60d77abc6f1ef180db32470942df0455339991dc53fa68d6c2b076a6113"
+    },
+    {
+      "legacy_id": "G[62]",
+      "canonical_id": "v6-fund-game-62",
+      "pointer": "/banks/G/62",
+      "sha256": "63ee0cbf980a1246d17bb72218be9f18dfe622d05e3771de26734521d5c106f9"
+    },
+    {
+      "legacy_id": "G[63]",
+      "canonical_id": "v6-fund-game-63",
+      "pointer": "/banks/G/63",
+      "sha256": "c97a9f880e9182e14f966cbd90159ac51af96ae8459222b692adff889b8b5daa"
+    },
+    {
+      "legacy_id": "G[64]",
+      "canonical_id": "v6-fund-game-64",
+      "pointer": "/banks/G/64",
+      "sha256": "629dab49de0748342b17acbed575a23cc038deca9335ddb5b1a4f0fe4168b9d6"
+    },
+    {
+      "legacy_id": "G[65]",
+      "canonical_id": "v6-fund-game-65",
+      "pointer": "/banks/G/65",
+      "sha256": "0487fcdebfb41c2a09ae86c05b2a791edac181783853fb4546af23f114c31343"
+    },
+    {
+      "legacy_id": "G[66]",
+      "canonical_id": "v6-fund-game-66",
+      "pointer": "/banks/G/66",
+      "sha256": "e2393c9c00a5e1934e4f826b6ff99649aa635b0f2fdbe7232ffcd1d5c705e12e"
+    },
+    {
+      "legacy_id": "G[67]",
+      "canonical_id": "v6-fund-game-67",
+      "pointer": "/banks/G/67",
+      "sha256": "c2d80c1ce979cb366b8018bf04a78982a3667124ceda567a0a6b06c88b5e561f"
+    },
+    {
+      "legacy_id": "G[68]",
+      "canonical_id": "v6-fund-game-68",
+      "pointer": "/banks/G/68",
+      "sha256": "ffad1b9a5eeb5ad16a2ac5d7e9ef134eb548a9e286bcde4f2e21aa0ecee53c45"
+    },
+    {
+      "legacy_id": "G[69]",
+      "canonical_id": "v6-fund-game-69",
+      "pointer": "/banks/G/69",
+      "sha256": "84924cfc706073606a9f92ac4b570483e9509dab411dec0f87ec7493e998143f"
+    },
+    {
+      "legacy_id": "G[70]",
+      "canonical_id": "v6-fund-game-70",
+      "pointer": "/banks/G/70",
+      "sha256": "4f98f7c7517c30d0eb529ef89959c21f85a57c6c9ae19cd43e685af495167ad1"
+    },
+    {
+      "legacy_id": "G[71]",
+      "canonical_id": "v6-fund-game-71",
+      "pointer": "/banks/G/71",
+      "sha256": "ec63db116c9b9bd4d6723b35ec6c4d505f6f57d0ae00054a4edb33af3b5c9190"
+    },
+    {
+      "legacy_id": "G[72]",
+      "canonical_id": "v6-fund-game-72",
+      "pointer": "/banks/G/72",
+      "sha256": "ac440aa079a3f9011425883a52e48294fedc999716471f8a35b47c819167aff8"
+    },
+    {
+      "legacy_id": "G[73]",
+      "canonical_id": "v6-fund-game-73",
+      "pointer": "/banks/G/73",
+      "sha256": "9d7c626397a8a84257311b987093c32cd9dd2ffc836570a404a88dcfb12055f9"
+    },
+    {
+      "legacy_id": "G[74]",
+      "canonical_id": "v6-fund-game-74",
+      "pointer": "/banks/G/74",
+      "sha256": "d9d678b3439eb03cdf8a57517a43bf0da0b5514b4dcab33af408e7039611e5d2"
+    },
+    {
+      "legacy_id": "G[75]",
+      "canonical_id": "v6-fund-game-75",
+      "pointer": "/banks/G/75",
+      "sha256": "e0bd270a2bce70399553142cd2ef34f1bb40f304db392d193412175c4dc03599"
+    },
+    {
+      "legacy_id": "G[76]",
+      "canonical_id": "v6-fund-game-76",
+      "pointer": "/banks/G/76",
+      "sha256": "725f1844ae38ea57ec624fa18ca2a9c1376a050df0f5f303f5985bdd64125e56"
+    },
+    {
+      "legacy_id": "G[77]",
+      "canonical_id": "v6-fund-game-77",
+      "pointer": "/banks/G/77",
+      "sha256": "f5b01d5d6b407a3212520e133f1cab122d0331ac49ba9515bca2f966b07fe425"
+    },
+    {
+      "legacy_id": "G[78]",
+      "canonical_id": "v6-fund-game-78",
+      "pointer": "/banks/G/78",
+      "sha256": "e045e27cc8147737baa9e4585dba16a2483fee87129898cb7ac224c503b854c4"
+    },
+    {
+      "legacy_id": "G[79]",
+      "canonical_id": "v6-fund-game-79",
+      "pointer": "/banks/G/79",
+      "sha256": "74a615c5d9fbf8a81649e3b8e535760e5e1a7542ac5eb4f90617822ccc72584e"
+    },
+    {
+      "legacy_id": "G[80]",
+      "canonical_id": "v6-fund-game-80",
+      "pointer": "/banks/G/80",
+      "sha256": "ca3e573ab385a43dc88ba311bc11231cfc813c8cd4895461276daba0b54e2651"
+    },
+    {
+      "legacy_id": "G[81]",
+      "canonical_id": "v6-fund-game-81",
+      "pointer": "/banks/G/81",
+      "sha256": "da0963e2950eef030527006fcd2c3c4e1c5f754933c4881e17dc5dbf43eebd7a"
+    },
+    {
+      "legacy_id": "G[82]",
+      "canonical_id": "v6-fund-game-82",
+      "pointer": "/banks/G/82",
+      "sha256": "c6cd9ae933ad7de1a839fe0483ce104cb7296fbd40226f372bc4ec41cb6bb246"
+    },
+    {
+      "legacy_id": "G[83]",
+      "canonical_id": "v6-fund-game-83",
+      "pointer": "/banks/G/83",
+      "sha256": "c2ad9d6b01310744e734ada06d1794296414e68d5382e3a335b1a7b33b577e5f"
+    },
+    {
+      "legacy_id": "G[84]",
+      "canonical_id": "v6-fund-game-84",
+      "pointer": "/banks/G/84",
+      "sha256": "eb33200eb252fd4bf3cfcf38d0dd59398a4f2080a847f34c9afc39a319d26e3b"
+    },
+    {
+      "legacy_id": "G[85]",
+      "canonical_id": "v6-fund-game-85",
+      "pointer": "/banks/G/85",
+      "sha256": "a02add53d710cae02480e31bc30c49b7c71ed5f725c9acea09429c3882221b6b"
+    },
+    {
+      "legacy_id": "G[86]",
+      "canonical_id": "v6-fund-game-86",
+      "pointer": "/banks/G/86",
+      "sha256": "2c68016568662df0b4992b704e590bc9cddf120213c5aac25f2660ef5f2fcb60"
+    },
+    {
+      "legacy_id": "G[87]",
+      "canonical_id": "v6-fund-game-87",
+      "pointer": "/banks/G/87",
+      "sha256": "686e45ee0857ada13270951d4e97d79a789ac626a80681d4a2b60b55332cda93"
+    },
+    {
+      "legacy_id": "G[88]",
+      "canonical_id": "v6-fund-game-88",
+      "pointer": "/banks/G/88",
+      "sha256": "8d2dea818606acfe6bb51b7cc047be5feb3a07fffb01e1bfe17679b04d801e1f"
+    },
+    {
+      "legacy_id": "G[89]",
+      "canonical_id": "v6-fund-game-89",
+      "pointer": "/banks/G/89",
+      "sha256": "34b71260e7d2ab32ad7d1d9376e46d5fd66bfaba7f7e959887fbabd9bb950e14"
+    },
+    {
+      "legacy_id": "G[90]",
+      "canonical_id": "v6-fund-game-90",
+      "pointer": "/banks/G/90",
+      "sha256": "b4b65f233536579ea6f97b54cc0fecfb4f9a2558276eb6b72cc1e15fd8167a1f"
+    },
+    {
+      "legacy_id": "G[91]",
+      "canonical_id": "v6-fund-game-91",
+      "pointer": "/banks/G/91",
+      "sha256": "7235d4806ba0074871d463cfa4fd06502804d5bb80d191d5611c1d0ec08221f6"
+    },
+    {
+      "legacy_id": "G[92]",
+      "canonical_id": "v6-fund-game-92",
+      "pointer": "/banks/G/92",
+      "sha256": "c27978658db10ff7bf6f080f439707a500f098c055c7c0bb7ca47fd01b9af6af"
+    },
+    {
+      "legacy_id": "G[93]",
+      "canonical_id": "v6-fund-game-93",
+      "pointer": "/banks/G/93",
+      "sha256": "633c118f59265010afda0305f313638e1738492b71dac6c992c2af9a6a39d376"
+    },
+    {
+      "legacy_id": "G[94]",
+      "canonical_id": "v6-fund-game-94",
+      "pointer": "/banks/G/94",
+      "sha256": "874b21e6c34c678aaeabb38186b8d6bbbd5cdc708e852319960dc940a8123b9b"
+    },
+    {
+      "legacy_id": "G[95]",
+      "canonical_id": "v6-fund-game-95",
+      "pointer": "/banks/G/95",
+      "sha256": "5efe230657edea644a20d9e1ace93266422d5c41409d15a0e988893a571a0cbb"
+    },
+    {
+      "legacy_id": "G[96]",
+      "canonical_id": "v6-fund-game-96",
+      "pointer": "/banks/G/96",
+      "sha256": "8f68e5d59e3650ee52f6d22bbda3d2c7b005aa2e1c079b6e8fb18284c9a5a6a8"
+    },
+    {
+      "legacy_id": "G[97]",
+      "canonical_id": "v6-fund-game-97",
+      "pointer": "/banks/G/97",
+      "sha256": "2be610742cea155c3106b712cb14be2d01dcd9a867c7bc15b691ed25698bedda"
+    },
+    {
+      "legacy_id": "G[98]",
+      "canonical_id": "v6-fund-game-98",
+      "pointer": "/banks/G/98",
+      "sha256": "ccced398bc3fcffacfe46ddb86d5ae292f5018bf7ee84818790deb45afa5b9f0"
+    },
+    {
+      "legacy_id": "G[99]",
+      "canonical_id": "v6-fund-game-99",
+      "pointer": "/banks/G/99",
+      "sha256": "0b34a3489c35e6ca3a65178bdaff87b46de7a934f280ef21a152de453e3bed50"
+    },
+    {
+      "legacy_id": "discBox",
+      "canonical_id": "v6-fund-writing-0",
+      "pointer": "/supplements/discBox",
+      "sha256": "a5aaf5e7abf7916d4072b6747291224e45668f706b8c9327f7b35152e5839927"
+    },
+    {
+      "legacy_id": "matrixBox",
+      "canonical_id": "v6-fund-supp-matrixBox",
+      "pointer": "/supplements/matrixBox",
+      "sha256": "039e7723c98cdca273449aceb4b52dd400bb62adda5e58d6d09ecb0786eace89"
+    },
+    {
+      "legacy_id": "teacherBox",
+      "canonical_id": "v6-fund-supp-teacherBox",
+      "pointer": "/supplements/teacherBox",
+      "sha256": "71c927ce592421c3b9a2ae5927685ff486e3364b16e02a01d448a68754f0fab5"
+    },
+    {
+      "legacy_id": "title",
+      "canonical_id": "fundamentos-geografia",
+      "pointer": "/title",
+      "sha256": "3178a4fb5aca3c55601d7e6587a009be750cfe2431954f69206896f2734ced88"
+    },
+    {
+      "legacy_id": "K",
+      "canonical_id": "fundamentos-geografia",
+      "pointer": "/banks/K",
+      "sha256": "4fbae9e4be01a7bfb0a16011082042b94bf4c5232397d853b30bddb9ddf9392c"
+    },
+    {
+      "legacy_id": "OLDK",
+      "canonical_id": "fundamentos-geografia",
+      "pointer": "/banks/OLDK",
+      "sha256": "271b1499ce8870a340f689b592747e3b0d27353c55ea0d22f8e3da90f666a18a"
+    },
+    {
+      "legacy_id": "staticContent.tab-study",
+      "canonical_id": "v6-fund-context-tab-study",
+      "pointer": "/staticContent/tab-study",
+      "sha256": "4fb2d42707731561b3a9d4c1a85e6699d82092b18678df5f1ae6c77c756bfb17"
+    },
+    {
+      "legacy_id": "staticContent.fontes",
+      "canonical_id": "v6-fund-context-fontes",
+      "pointer": "/staticContent/fontes",
+      "sha256": "42ae81d51cf7c0bb029dc1894736c19bc6d66ad33f0d0aa734f35d4a6f8f3cac"
+    }
+  ],
+  "initial_payload_sha256": "39ef702e17e31d4731460edf5e37fa6dac7f6db1c89c40064c42ab7d68cead6c",
+  "initial_resource_ids": [
+    "fundamentos-geografia",
+    "fundamentos-leitura-de-questoes",
+    "fundamentos-campo-conhecimento",
+    "fundamentos-correntes",
+    "fundamentos-espaco",
+    "fundamentos-paisagem-lugar",
+    "fundamentos-regiao-territorio",
+    "fundamentos-redes",
+    "fundamentos-producao-escalas",
+    "fundamentos-decolonialidade",
+    "fundamentos-leitura-realidade",
+    "fundamentos-autores-complementares",
+    "fund-leitura",
+    "fund-campo",
+    "fund-classicos",
+    "fund-correntes",
+    "fund-quantitativa",
+    "fund-objetos-acoes",
+    "fund-rugosidades",
+    "fund-fixos-fluxos",
+    "fund-paisagem",
+    "fund-lugar",
+    "fund-regiao",
+    "fund-territorio",
+    "fund-territorio-rede",
+    "fund-redes",
+    "fund-producao",
+    "fund-escalas",
+    "fund-natureza",
+    "fund-decolonial",
+    "fund-intercultural",
+    "fund-evidencias",
+    "fund-forma-funcao",
+    "fund-ajuste",
+    "fund-agentes",
+    "fund-politica-escalas",
+    "fund-saber-poder",
+    "fund-compressao",
+    "fund-direito-cidade",
+    "v6-fund-q-pre-0",
+    "v6-fund-q-pre-1",
+    "v6-fund-q-pre-2",
+    "v6-fund-q-b-0-0",
+    "v6-fund-q-b-1-0",
+    "v6-fund-q-b-1-1",
+    "v6-fund-q-b-2-0",
+    "v6-fund-q-b-2-1",
+    "v6-fund-q-b-3-0",
+    "v6-fund-q-b-3-1",
+    "v6-fund-q-b-4-0",
+    "v6-fund-q-b-4-1",
+    "v6-fund-q-b-5-0",
+    "v6-fund-q-b-5-1",
+    "v6-fund-q-b-5-2",
+    "v6-fund-q-b-6-0",
+    "v6-fund-q-b-6-1",
+    "v6-fund-q-b-6-2",
+    "v6-fund-q-b-7-0",
+    "v6-fund-q-b-7-1",
+    "v6-fund-q-b-7-2",
+    "v6-fund-q-b-8-0",
+    "v6-fund-q-b-8-1",
+    "v6-fund-q-b-9-0",
+    "v6-fund-q-b-10-0",
+    "v6-fund-q-b-10-1",
+    "v6-fund-q-b-10-2",
+    "v6-fund-q-c-0",
+    "v6-fund-q-c-1",
+    "v6-fund-q-c-2",
+    "v6-fund-q-c-3",
+    "v6-fund-q-c-4",
+    "v6-fund-q-concurso01",
+    "v6-fund-q-concurso02",
+    "v6-fund-q-concurso03",
+    "v6-fund-q-concurso04",
+    "v6-fund-q-concurso05",
+    "v6-fund-q-concurso06",
+    "v6-fund-q-concurso07",
+    "v6-fund-q-concurso08",
+    "v6-fund-q-concurso09",
+    "v6-fund-q-concurso10",
+    "v6-fund-q-concurso11",
+    "v6-fund-q-concurso12",
+    "v6-fund-q-elite01",
+    "v6-fund-q-elite02",
+    "v6-fund-q-elite03",
+    "v6-fund-q-elite04",
+    "v6-fund-card-0",
+    "v6-fund-card-1",
+    "v6-fund-card-2",
+    "v6-fund-card-3",
+    "v6-fund-card-4",
+    "v6-fund-card-5",
+    "v6-fund-card-6",
+    "v6-fund-card-7",
+    "v6-fund-card-8",
+    "v6-fund-card-9",
+    "v6-fund-card-10",
+    "v6-fund-card-11",
+    "v6-fund-card-12",
+    "v6-fund-card-13",
+    "v6-fund-card-14",
+    "v6-fund-card-15",
+    "v6-fund-card-16",
+    "v6-fund-card-17",
+    "v6-fund-card-18",
+    "v6-fund-card-19",
+    "v6-fund-card-20",
+    "v6-fund-card-21",
+    "v6-fund-card-22",
+    "v6-fund-card-23",
+    "v6-fund-card-24",
+    "v6-fund-card-25",
+    "v6-fund-card-26",
+    "v6-fund-card-27",
+    "v6-fund-card-28",
+    "v6-fund-card-29",
+    "v6-fund-card-30",
+    "v6-fund-card-31",
+    "v6-fund-card-32",
+    "v6-fund-card-33",
+    "v6-fund-card-34",
+    "v6-fund-card-35",
+    "v6-fund-card-36",
+    "v6-fund-card-37",
+    "v6-fund-card-38",
+    "v6-fund-card-39",
+    "v6-fund-card-40",
+    "v6-fund-card-41",
+    "v6-fund-card-42",
+    "v6-fund-card-43",
+    "v6-fund-card-escobar",
+    "v6-fund-game-0",
+    "v6-fund-game-1",
+    "v6-fund-game-2",
+    "v6-fund-game-3",
+    "v6-fund-game-4",
+    "v6-fund-game-5",
+    "v6-fund-game-6",
+    "v6-fund-game-7",
+    "v6-fund-game-8",
+    "v6-fund-game-9",
+    "v6-fund-game-10",
+    "v6-fund-game-11",
+    "v6-fund-game-12",
+    "v6-fund-game-13",
+    "v6-fund-game-14",
+    "v6-fund-game-15",
+    "v6-fund-game-16",
+    "v6-fund-game-17",
+    "v6-fund-game-18",
+    "v6-fund-game-19",
+    "v6-fund-game-20",
+    "v6-fund-game-21",
+    "v6-fund-game-22",
+    "v6-fund-game-23",
+    "v6-fund-game-24",
+    "v6-fund-game-25",
+    "v6-fund-game-26",
+    "v6-fund-game-27",
+    "v6-fund-game-28",
+    "v6-fund-game-29",
+    "v6-fund-game-30",
+    "v6-fund-game-31",
+    "v6-fund-game-32",
+    "v6-fund-game-33",
+    "v6-fund-game-34",
+    "v6-fund-game-35",
+    "v6-fund-game-36",
+    "v6-fund-game-37",
+    "v6-fund-game-38",
+    "v6-fund-game-39",
+    "v6-fund-game-40",
+    "v6-fund-game-41",
+    "v6-fund-game-42",
+    "v6-fund-game-43",
+    "v6-fund-game-44",
+    "v6-fund-game-45",
+    "v6-fund-game-46",
+    "v6-fund-game-47",
+    "v6-fund-game-48",
+    "v6-fund-game-49",
+    "v6-fund-game-50",
+    "v6-fund-game-51",
+    "v6-fund-game-52",
+    "v6-fund-game-53",
+    "v6-fund-game-54",
+    "v6-fund-game-55",
+    "v6-fund-game-56",
+    "v6-fund-game-57",
+    "v6-fund-game-58",
+    "v6-fund-game-59",
+    "v6-fund-game-60",
+    "v6-fund-game-61",
+    "v6-fund-game-62",
+    "v6-fund-game-63",
+    "v6-fund-game-64",
+    "v6-fund-game-65",
+    "v6-fund-game-66",
+    "v6-fund-game-67",
+    "v6-fund-game-68",
+    "v6-fund-game-69",
+    "v6-fund-game-70",
+    "v6-fund-game-71",
+    "v6-fund-game-72",
+    "v6-fund-game-73",
+    "v6-fund-game-74",
+    "v6-fund-game-75",
+    "v6-fund-game-76",
+    "v6-fund-game-77",
+    "v6-fund-game-78",
+    "v6-fund-game-79",
+    "v6-fund-game-80",
+    "v6-fund-game-81",
+    "v6-fund-game-82",
+    "v6-fund-game-83",
+    "v6-fund-game-84",
+    "v6-fund-game-85",
+    "v6-fund-game-86",
+    "v6-fund-game-87",
+    "v6-fund-game-88",
+    "v6-fund-game-89",
+    "v6-fund-game-90",
+    "v6-fund-game-91",
+    "v6-fund-game-92",
+    "v6-fund-game-93",
+    "v6-fund-game-94",
+    "v6-fund-game-95",
+    "v6-fund-game-96",
+    "v6-fund-game-97",
+    "v6-fund-game-98",
+    "v6-fund-game-99",
+    "v6-fund-writing-0",
+    "v6-fund-writing-1",
+    "v6-fund-supp-matrixBox",
+    "v6-fund-supp-teacherBox",
+    "v6-fund-theory-0",
+    "v6-fund-depth-0",
+    "v6-fund-recall-0",
+    "v6-fund-theory-1",
+    "v6-fund-depth-1",
+    "v6-fund-recall-1",
+    "v6-fund-theory-2",
+    "v6-fund-depth-2",
+    "v6-fund-recall-2",
+    "v6-fund-theory-3",
+    "v6-fund-depth-3",
+    "v6-fund-recall-3",
+    "v6-fund-theory-4",
+    "v6-fund-depth-4",
+    "v6-fund-recall-4",
+    "v6-fund-theory-5",
+    "v6-fund-depth-5",
+    "v6-fund-recall-5",
+    "v6-fund-theory-6",
+    "v6-fund-depth-6",
+    "v6-fund-recall-6",
+    "v6-fund-theory-7",
+    "v6-fund-depth-7",
+    "v6-fund-recall-7",
+    "v6-fund-theory-8",
+    "v6-fund-depth-8",
+    "v6-fund-recall-8",
+    "v6-fund-theory-9",
+    "v6-fund-depth-9",
+    "v6-fund-recall-9",
+    "v6-fund-theory-10",
+    "v6-fund-depth-10",
+    "v6-fund-recall-10"
+  ],
+  "initial_archive_sha256": "6bd7717239ab111903679a13db97abefb08b121debbfe075038a01bea117f1c0",
+  "initial_changes_sha256": "546f9aede0d2cea2c8376519f6cb18c83746a4d2c430e48d020d5d2297bb8d33"
+}

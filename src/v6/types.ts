@@ -1,4 +1,8 @@
-export type UnitId = 'cartografia-fundamentos' | 'cartografia-representacao' | 'geotecnologias';
+export type UnitId =
+  | 'fundamentos-geografia'
+  | 'cartografia-fundamentos'
+  | 'cartografia-representacao'
+  | 'geotecnologias';
 export type Mode = 'estudo' | 'treino' | 'revisao' | 'prova';
 export type TrainingPool =
   'fixacao' | 'concurso' | 'elite' | 'diagnostico' | 'pos-teste' | 'chefao';
@@ -119,7 +123,7 @@ export interface Content {
   support?: {
     visuals: VisualResource[];
     editorial_notes: { id: string; target: string; text: string; source_ids?: string[] }[];
-    teaching_practice: TeachingPractice[];
+    teaching_practice: (TeachingPractice | MicroPractice)[];
     media: { url: string; credit?: string; license?: string; source_id?: string }[];
   };
   editorial?: EditorialRelease;
@@ -162,6 +166,15 @@ export interface VisualResource {
     sensor: string;
     credit: string;
   }[];
+}
+export interface MicroPractice {
+  id: string;
+  unit_id: UnitId;
+  mission: string;
+  recommended_minutes: number;
+  official_duration: false;
+  instructions: string;
+  rubric: string[];
 }
 export interface TeachingPractice {
   id: string;
@@ -320,6 +333,7 @@ export interface State {
   };
   practicalHistory: {
     id: string;
+    practiceId?: string;
     at: number;
     topic: string;
     fields: Record<string, string>;

@@ -195,7 +195,7 @@ test('Sensorial: percurso tem estados explícitos, consulta livre e navegação 
   await seed(page, state);
   await page.goto('./v6.html');
   const map = page.locator('.journey-map');
-  await expect(map.locator('.journey-stop')).toHaveCount(17);
+  await expect(map.locator('.journey-stop')).toHaveCount(28);
   await expect(map.locator('.journey-stop.complete')).toHaveCount(1);
   await expect(map.locator('.journey-stop.reading')).toHaveCount(1);
   await expect(map.locator('[aria-current="step"]')).toHaveAttribute(
@@ -203,7 +203,7 @@ test('Sensorial: percurso tem estados explícitos, consulta livre e navegação 
     /linguagem-cartografica/,
   );
   await expect(map.locator('[aria-disabled="true"]')).toHaveCount(0);
-  await map.locator('.journey-unit').nth(2).locator('summary').first().click();
+  await map.locator('.journey-unit').nth(3).locator('summary').first().click();
   const last = map.getByRole('link', { name: /Cartografia escolar — Disponível/ });
   await last.focus();
   await page.keyboard.press('Enter');

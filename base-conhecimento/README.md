@@ -1,5 +1,8 @@
 # Base de Conhecimento V6
 
+**Integração em revisão:** Fundamentos `1.0.0` e as três unidades de Cartografia `1.0.1` estão habilitadas nesta branch. A aprovação editorial foi delegada à IA; não há homologação humana nova. Os pacotes canônicos permanecem intactos.
+
+
 **Estado desta branch:** as três unidades de Cartografia têm edição **`1.0.1`, `APROVADA_CANONICA`**, com consumo habilitado. A [revisão temporal de 04/11/2026](../MissaoAprovacaoGeo/V6_REVISAO_TEMPORAL_2026_11_04.md) preserva integralmente conteúdo e suporte de `1.0.0` e mantém o parecer pedagógico anterior identificado como herdado. Novas verificações são exclusivamente das referências documentadas. Edições anteriores permanecem intactas. Não houve merge/publicação desta rodada nem homologação humana nova.
 
 A versão ativa continua exigindo referências dentro do prazo. Aprovações arquivadas são validadas na data do próprio parecer, sem reabrir HTMLs, renovar datas retroativamente ou dispensar hashes e cadeia de versões.
@@ -18,7 +21,7 @@ As candidatas `0.1.0`, `0.1.1` e `0.1.2` permanecem preservadas com seus parecer
 
 O [relatório de `0.1.2`](../MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_012.md) registra 137 explicações aprimoradas em 44 questões, a reclassificação de r11 e o novo suporte cartográfico. O [relatório de `0.1.1`](../MissaoAprovacaoGeo/V6_ISSUE13_CORRECOES_CARTOGRAFIA_011.md) preserva as correções de vínculos, fontes, figuras e a estratégia de progresso. A [primeira integração operacional](../MissaoAprovacaoGeo/V6_ISSUE13_INTEGRACAO_CANONICA_CARTOGRAFIA.md) usa esses textos revisados.
 
-O [manifesto](manifest.json) registra os 28 IDs definidos na documentação oficial. Somente as três unidades acima têm auditoria iniciada e versão candidata; as outras 25 estão como `RASCUNHO`, sem conteúdo exportado ou auditado nesta etapa. `runtime_enabled` descreve consumo da base canônica, não disponibilidade dos materiais históricos no site.
+O [manifesto](manifest.json) registra os 28 IDs definidos na documentação oficial. As quatro unidades acima têm auditoria e versão canônica; as outras 24 estão como `RASCUNHO`, sem conteúdo exportado ou auditado nesta etapa. `runtime_enabled` descreve consumo da base canônica, não disponibilidade dos materiais históricos no site.
 
 ## Contrato do pacote
 
@@ -35,6 +38,8 @@ As edições corrigidas também incluem `changes.md`, com comparação antes/dep
 Em `0.1.2`, `review.md` é leitura de referência com as questões completas, sem atribuir ao estudante obrigação de auditoria. `assisted_review` identifica a autoria por IA, os 12 critérios e os hashes do conteúdo efetivamente revisado. O validador recusa conteúdo posterior divergente ou atribuição humana fictícia e percorre toda a cadeia de versões até o snapshot inicial. O mapa didático guarda suas coordenadas, escala gráfica, SVG e alternativa textual no próprio pacote.
 
 O conteúdo preserva as 17 missões, 50 explicações, 39 recalls, 33 conceitos de apoio, 161 questões, 120 cartões, 256 V/F, seis discursivas e seis suplementos do piloto. As alternativas continuam vinculadas por ID. O suporte guarda também as quatro tabelas anteriores e a nova tabela do mapa, o perfil SVG, a precisão de faixa UTM e o roteiro/rubricas de prática anteriormente definidos na interface.
+
+Fundamentos acrescenta uma base independente: 11 missões, 22 blocos teóricos, 27 conceitos, 48 questões (32 Fixação, 12 Concurso, quatro Elite), 45 cartões, 100 V/F, 11 recalls e duas discursivas. Os 228 vínculos de procedência e 139 alterações literais explícitas preservam a fonte sem usá-la novamente como base editorial. Nenhum gabarito antigo foi trocado. [Diferenças completas](fundamentos/fundamentos-geografia/1.0.0/changes.md) · [Paridade estruturada](../MissaoAprovacaoGeo/V6_ISSUE13_FUNDAMENTOS_PARIDADE.json).
 
 As classificações `permanente`, `regional`, `banca` e `temporal` podem coexistir no mesmo recurso. São metadados editoriais iniciais, sujeitos à revisão, sem cortar passagens de um texto misto. Um dado normativo em um exemplo não transforma todo o conceito em informação volátil. Parâmetros hipotéticos de exercícios são separados de fatos observados; datas históricas de imagens não são atualizadas para o presente.
 
@@ -74,7 +79,7 @@ npm run test:canonical
 npm test
 ```
 
-O primeiro comando valida as três edições aprovadas, a cadeia de candidatas e sua paridade inicial. Não promove versões. Os testes exercitam preservação, aliases, recursos visuais, dados temporais, revisão vinculada à versão, rejeição de candidatas e leitura sem dependência dos HTMLs/importadores. O comando `npm test` inclui as verificações anteriores do acervo e do motor e os testes do consumidor canônico.
+O primeiro comando valida as quatro edições aprovadas, suas cadeias de candidatas e a paridade inicial dos lotes registrados. Não promove versões. Os testes exercitam preservação, aliases, recursos visuais, dados temporais, revisão vinculada à versão, rejeição de candidatas e leitura sem dependência dos HTMLs/importadores. O comando `npm test` inclui as verificações anteriores do acervo e do motor, os testes do consumidor canônico e os 23 cenários específicos de Fundamentos. O [relatório de Fundamentos](../MissaoAprovacaoGeo/V6_ISSUE13_FUNDAMENTOS_TESTES.md) distingue validação de conteúdo e integração ainda não realizada.
 
 O [relatório inicial de `0.1.0`](../MissaoAprovacaoGeo/V6_ISSUE13_RELATORIO_TESTES_CARTOGRAFIA.md) identifica o commit, os 82 testes e os limites daquela execução. A [rodada `0.1.1`](../MissaoAprovacaoGeo/V6_ISSUE13_TESTES_CARTOGRAFIA_011.md) passou com build e 93 testes, dos quais 30 verificam o contrato canônico, incluindo revisão declarada, preservação de gabaritos, famílias e alternativas aposentadas. Os 19 casos iniciais permanecem cobertos.
 

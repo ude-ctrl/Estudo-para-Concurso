@@ -1,3 +1,4 @@
+import { moduleTitles, type ModuleId } from './modules.ts';
 import { localDay, streak } from './engine.ts';
 import type { Content, State } from './types.ts';
 import { expeditionComplete, missionComplete } from './sensory.ts';
@@ -19,8 +20,10 @@ export function describeMilestone(id: string, content: Content): Milestone {
       `${mission?.title || 'Missão'}: leitura completa e recuperação registradas. Conclusão do percurso não significa domínio.`,
     ],
     module: [
-      'Expedição Cartográfica concluída',
-      'As três unidades tiveram leitura, recuperação e Chefão superado. Seu percurso está completo; a estimativa de domínio e as revisões continuam independentes.',
+      key === 'fundamentos'
+        ? 'Percurso de Fundamentos concluído'
+        : 'Expedição Cartográfica concluída',
+      `${moduleTitles[key as ModuleId] || 'Módulo'}: todas as unidades tiveram leitura, recuperação e Chefão superado. Seu percurso está completo; a estimativa de domínio e as revisões continuam independentes.`,
     ],
     unit: [
       'Percurso da unidade concluído',
@@ -114,8 +117,12 @@ export function recognize(content: Content, before: State, after: State, at: num
   for (const mission of content.missions)
     if (!missionComplete(mission, before) && missionComplete(mission, after))
       ids.push('mission:' + mission.id);
-  if (!expeditionComplete(content, before) && expeditionComplete(content, after, ids))
-    ids.push('module:cartografia');
+  for (const module of ['cartografia', 'fundamentos'] as ModuleId[])
+    if (
+      !expeditionComplete(content, before, [], module) &&
+      expeditionComplete(content, after, ids, module)
+    )
+      ids.push('module:' + module);
   const earned = [...new Set(ids)].filter((id) => after.milestones?.[id] === undefined);
   if (earned.length) {
     after.milestones ??= {};

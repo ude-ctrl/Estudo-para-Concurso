@@ -180,20 +180,20 @@ function ModuleCard({
   favorite: boolean;
   toggle: () => void;
 }) {
-  const href = assetUrl('v6.html');
+  const href = assetUrl(module.href || 'v6.html');
   return (
     <article className="lesson-card category-1 module-card" aria-label={module.title}>
       <div className="card-top">
-        <span className="topic-label">MÓDULO · {module.units.length} UNIDADES</span>
+        <span className="topic-label">
+          MÓDULO · {module.units.length} {module.units.length === 1 ? 'UNIDADE' : 'UNIDADES'}
+        </span>
         <Favorite active={favorite} onClick={toggle} title={module.title} />
       </div>
       <div className="card-category">{module.category}</div>
       <h3>
         <a href={href}>{module.title}</a>
       </h3>
-      <p className="part-description">
-        Fundamentos, representação do espaço e geotecnologias em um único percurso.
-      </p>
+      <p className="part-description">{module.description}</p>
       <div className="card-counts">
         <span>
           <BookOpen size={14} /> {module.counts.stages} etapas
@@ -394,7 +394,7 @@ function Reader({
 
 export default function App() {
   const [catalog, setCatalog] = useState<Catalog | null>(null),
-    [cartography, setCartography] = useState<StudyModule | null>(null),
+    [modules, setModules] = useState<StudyModule[]>([]),
     [error, setError] = useState(false);
   const [route, setRoute] = useState(getRoute),
     [view, setView] = useState<View>('library');
@@ -420,18 +420,29 @@ export default function App() {
         if (!response.ok) throw new Error('Catálogo indisponível');
         return response.json();
       });
-    Promise.all([read('content/catalog.json'), read('v6/library.json')])
-      .then(([value, module]: [Catalog, StudyModule]) => {
+    Promise.all([read('content/catalog.json'), read('v6/modules.json')])
+      .then(([value, index]: [Catalog, { schemaVersion: number; modules: StudyModule[] }]) => {
         if (value.schemaVersion !== 1 || !Array.isArray(value.lessons))
           throw new Error('Catálogo inválido');
         if (
-          module.schemaVersion !== 1 ||
-          module.id !== 'module-cartografia' ||
-          !Array.isArray(module.questionIds)
+          index.schemaVersion !== 1 ||
+          index.modules.length !== 2 ||
+          index.modules.some((module) => !Array.isArray(module.questionIds))
         )
-          throw new Error('Módulo inválido');
-        setCartography(module);
-        setCatalog(value);
+          throw new Error('Módulos inválidos');
+        // The historical source stays in backup/export; only the canonical module is active.
+        const archived = value.lessons.filter((lesson) => lesson.id === 'lesson-ff1de1c07eb3');
+        const lessons = value.lessons.filter((lesson) => lesson.id !== 'lesson-ff1de1c07eb3');
+        const totals = { ...value.totals, lessons: lessons.length };
+        for (const key of ['stages', 'questions', 'flashcards', 'game', 'recall'] as const)
+          totals[key] -= archived.reduce((n, lesson) => n + lesson.counts[key], 0);
+        setModules(index.modules);
+        setCatalog({
+          ...value,
+          lessons,
+          totals,
+          legacyBackupSources: [...(value.legacyBackupSources || []), ...archived],
+        });
       })
       .catch((error) => {
         if (error.name !== 'AbortError') setError(true);
@@ -535,7 +546,7 @@ export default function App() {
         </button>
       </main>
     );
-  if (!catalog || !cartography)
+  if (!catalog || !modules.length)
     return (
       <main className="loading-screen" role="status">
         <Compass size={36} />
@@ -546,20 +557,31 @@ export default function App() {
     resource = catalog.resources.find((item) => item.id === route.id);
   const lastLesson = catalog.lessons.find((item) => item.id === preferences.lastVisited);
   const entries = groupLessons(filtered);
-  const cartographyProgress = moduleProgress(cartography);
-  const showCartography =
-    normalize(query)
-      .trim()
-      .split(/\s+/)
-      .filter(Boolean)
-      .every((word) =>
-        normalize(
-          `${cartography.title} ${cartography.units.map((u) => u.title).join(' ')} mapas coordenadas escalas projeções sensoriamento remoto SIG fusos tema 02 tema 03 tema 17`,
-        ).includes(word),
-      ) &&
-    (category === 'Todas as áreas' || category === cartography.category) &&
-    (view !== 'favorites' || preferences.favorites.includes(cartography.id)) &&
-    (view !== 'progress' || cartographyProgress.started);
+  const moduleProgresses = new Map(modules.map((module) => [module.id, moduleProgress(module)]));
+  const isModuleFavorite = (module: StudyModule) =>
+    [module.id, ...(module.legacyLessonIds || [])].some((id) => preferences.favorites.includes(id));
+  const toggleModuleFavorite = (module: StudyModule) => setPreferences((previous) => {
+    const aliases = new Set([module.id, ...(module.legacyLessonIds || [])]);
+    const active = previous.favorites.some((id) => aliases.has(id));
+    return { ...previous, favorites: active
+      ? previous.favorites.filter((id) => !aliases.has(id))
+      : [...previous.favorites, module.id] };
+  });
+  const filteredModules = modules.filter(
+    (module) =>
+      normalize(query)
+        .trim()
+        .split(/\s+/)
+        .filter(Boolean)
+        .every((word) =>
+          normalize(
+            `${module.title} ${module.units.map((u) => u.title).join(' ')} ${module.keywords || ''}`,
+          ).includes(word),
+        ) &&
+      (category === 'Todas as áreas' || category === module.category) &&
+      (view !== 'favorites' || isModuleFavorite(module)) &&
+      (view !== 'progress' || moduleProgresses.get(module.id)?.started),
+  );
   const displayEntries = [
     ...entries.map((entry) => ({
       id: entry.id,
@@ -568,17 +590,13 @@ export default function App() {
       title: entry.group?.title ?? entry.lessons[0].title,
       percent: Math.max(...entry.lessons.map((l) => progress.get(l.id)?.percent ?? 0)),
     })),
-    ...(showCartography
-      ? [
-          {
-            id: cartography.id,
-            entry: null,
-            number: cartography.number,
-            title: cartography.title,
-            percent: cartographyProgress.percent,
-          },
-        ]
-      : []),
+    ...filteredModules.map((module) => ({
+      id: module.id,
+      entry: null,
+      number: module.number,
+      title: module.title,
+      percent: moduleProgresses.get(module.id)?.percent || 0,
+    })),
   ].sort((a, b) =>
     sort === 'name'
       ? a.title.localeCompare(b.title, 'pt-BR')
@@ -586,10 +604,10 @@ export default function App() {
         ? b.percent - a.percent || a.number - b.number
         : a.number - b.number,
   );
-  const topicCount = groupLessons(catalog.lessons).length + 1;
+  const topicCount = groupLessons(catalog.lessons).length + modules.length;
   const favoriteCount =
     groupLessons(catalog.lessons.filter((item) => preferences.favorites.includes(item.id))).length +
-    Number(preferences.favorites.includes(cartography.id));
+    modules.filter(isModuleFavorite).length;
   const started = catalog.lessons.filter((item) => progress.get(item.id)?.started).length;
   const complete = catalog.lessons.filter((item) => progress.get(item.id)?.percent === 100).length;
   const heading =
@@ -665,7 +683,7 @@ export default function App() {
         <a className="resource-link" href={assetUrl('v6.html')}>
           <Compass size={19} />
           <span>
-            Cartografia<small>Estudo, treino e revisão</small>
+            Ambiente V6<small>Fundamentos e Cartografia</small>
           </span>
           <ArrowRight size={14} />
         </a>
@@ -787,8 +805,8 @@ export default function App() {
                     <span>temas de estudo</span>
                   </div>
                   <small>
-                    {catalog.totals.lessons} materiais + {cartography.units.length} unidades de
-                    Cartografia
+                    {catalog.totals.lessons} materiais +{' '}
+                    {modules.reduce((n, m) => n + m.units.length, 0)} unidades V6
                   </small>
                 </div>
                 <div className="stat-card">
@@ -797,7 +815,10 @@ export default function App() {
                   </span>
                   <div>
                     <strong>
-                      {format(catalog.totals.flashcards + cartography.counts.flashcards)}
+                      {format(
+                        catalog.totals.flashcards +
+                          modules.reduce((n, m) => n + m.counts.flashcards, 0),
+                      )}
                     </strong>
                     <span>flashcards</span>
                   </div>
@@ -808,7 +829,9 @@ export default function App() {
                     <Gamepad2 size={22} />
                   </span>
                   <div>
-                    <strong>{format(catalog.totals.game + cartography.counts.game)}</strong>
+                    <strong>
+                      {format(catalog.totals.game + modules.reduce((n, m) => n + m.counts.game, 0))}
+                    </strong>
                     <span>itens de game</span>
                   </div>
                   <small>Treine reconhecimento e agilidade</small>
@@ -837,7 +860,10 @@ export default function App() {
                 <div className="journey-summary">
                   <strong>
                     {started} {started === 1 ? 'material iniciado' : 'materiais iniciados'}
-                    {cartographyProgress.started && ' + Cartografia em andamento'}
+                    {modules
+                      .filter((m) => moduleProgresses.get(m.id)?.started)
+                      .map((m) => ` + ${m.category} em andamento`)
+                      .join('')}
                   </strong>
                   <span>{complete} com todas as questões respondidas</span>
                 </div>
@@ -884,7 +910,7 @@ export default function App() {
                       {categories
                         .filter(
                           (value) =>
-                            value === cartography.category ||
+                            modules.some((m) => m.category === value) ||
                             catalog.lessons.some((item) => item.category === value),
                         )
                         .map((value) => (
@@ -912,10 +938,10 @@ export default function App() {
                       !entry ? (
                         <ModuleCard
                           key={id}
-                          module={cartography}
-                          started={cartographyProgress.started}
-                          favorite={preferences.favorites.includes(id)}
-                          toggle={() => toggleFavorite(id)}
+                          module={modules.find((m) => m.id === id)!}
+                          started={!!moduleProgresses.get(id)?.started}
+                          favorite={isModuleFavorite(modules.find((m) => m.id === id)!)}
+                          toggle={() => toggleModuleFavorite(modules.find((m) => m.id === id)!)}
                         />
                       ) : entry.group ? (
                         <LessonGroup

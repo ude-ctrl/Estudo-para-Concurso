@@ -456,7 +456,9 @@ export function assembleBlueprint(
 export function examPool(content: Content, unit?: string, official = false) {
   return content.questions.filter(
     (q) =>
-      (!unit || q.unit === unit) &&
+      (!unit ||
+        q.unit === unit ||
+        (unit === 'module-cartografia' && q.unit !== 'fundamentos-geografia')) &&
       q.pool !== 'fixacao' &&
       q.options.length === 5 &&
       (!official || q.status === 'approved'),
@@ -560,7 +562,11 @@ export function makeExam(
     started: at,
     deadline: at + minutes * 60_000,
     current: 0,
-    profile: unit || 'modulo-cartografia',
+    profile:
+      unit ||
+      (content.units.some((u) => u.id === 'fundamentos-geografia')
+        ? 'modulos-v6'
+        : 'modulo-cartografia'),
     novelty: selected.filter((q) => !questionExposure(content, s, q.id)).length,
     editorialVersions: Object.fromEntries(
       content.units.map((u) => [u.id, editorialVersion(content, u.id)]),
@@ -698,9 +704,12 @@ export function parseState(raw: string): State {
       typeof e.item !== 'string' ||
       typeof e.concept !== 'string' ||
       typeof e.mission !== 'string' ||
-      !['cartografia-fundamentos', 'cartografia-representacao', 'geotecnologias'].includes(
-        String(e.unit),
-      ) ||
+      ![
+        'fundamentos-geografia',
+        'cartografia-fundamentos',
+        'cartografia-representacao',
+        'geotecnologias',
+      ].includes(String(e.unit)) ||
       !['fixacao', 'concurso', 'elite', 'game', 'recall', 'flashcard', 'exam', 'boss'].includes(
         String(e.kind),
       ) ||
@@ -816,9 +825,12 @@ export function parseState(raw: string): State {
     (!isObject(o.resume) ||
       typeof o.resume.mission !== 'string' ||
       (o.resume.pool !== undefined && parseTrainingPool(o.resume.pool) === undefined) ||
-      !['cartografia-fundamentos', 'cartografia-representacao', 'geotecnologias'].includes(
-        String(o.resume.unit),
-      ) ||
+      ![
+        'fundamentos-geografia',
+        'cartografia-fundamentos',
+        'cartografia-representacao',
+        'geotecnologias',
+      ].includes(String(o.resume.unit)) ||
       !['estudo', 'treino', 'revisao', 'prova'].includes(String(o.resume.mode)))
   )
     throw Error('Retomada inválida.');
@@ -898,8 +910,12 @@ export function importLegacy(s: State, content: Content, key: string, raw: strin
     const search = legacy_id.replace(/^post_/, 'pre_');
     const record = content.archive.find(
       (a) =>
-        a.kind === kind &&
-        a.refs.some((r) => r.legacy_source === source!.path && r.legacy_id === search),
+        (a.kind === kind || a.kind === kind + 's') &&
+        a.refs.some(
+          (r) =>
+            r.legacy_source === source!.path &&
+            r.legacy_id.replace(/^(C|G)\[(\d+)\]$/, '$1_$2') === search,
+        ),
     );
     if (!record) {
       notes.push('ID não mapeado: ' + legacy_id);

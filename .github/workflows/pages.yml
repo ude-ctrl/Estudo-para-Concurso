@@ -24,6 +24,8 @@ jobs:
       contents: read
     outputs:
       bank_sha: ${{ steps.hashes.outputs.bank }}
+      platform_sha: ${{ steps.hashes.outputs.platform }}
+      modules_sha: ${{ steps.hashes.outputs.modules }}
       index_sha: ${{ steps.hashes.outputs.index }}
       v6_sha: ${{ steps.hashes.outputs.v6 }}
       library_sha: ${{ steps.hashes.outputs.library }}
@@ -45,7 +47,7 @@ jobs:
           import { readFileSync, appendFileSync } from 'node:fs';
           import { createHash } from 'node:crypto';
           for (const [name, path] of Object.entries({
-            bank: 'v6/cartografia.json', index: 'index.html',
+            bank: 'v6/cartografia.json', platform: 'v6/plataforma.json', modules: 'v6/modules.json', index: 'index.html',
             v6: 'v6.html', library: 'biblioteca.html',
           })) {
             const sha = createHash('sha256').update(readFileSync('dist/' + path)).digest('hex');
@@ -72,6 +74,8 @@ jobs:
         env:
           SITE_URL: ${{ steps.deployment.outputs.page_url }}
           BANK_SHA: ${{ needs.build.outputs.bank_sha }}
+          PLATFORM_SHA: ${{ needs.build.outputs.platform_sha }}
+          MODULES_SHA: ${{ needs.build.outputs.modules_sha }}
           INDEX_SHA: ${{ needs.build.outputs.index_sha }}
           V6_SHA: ${{ needs.build.outputs.v6_sha }}
           LIBRARY_SHA: ${{ needs.build.outputs.library_sha }}
@@ -82,6 +86,8 @@ jobs:
           const base = new URL(process.env.SITE_URL);
           const expected = {
             'v6/cartografia.json': process.env.BANK_SHA,
+            'v6/plataforma.json': process.env.PLATFORM_SHA,
+            'v6/modules.json': process.env.MODULES_SHA,
             'index.html': process.env.INDEX_SHA,
             'v6.html': process.env.V6_SHA,
             'biblioteca.html': process.env.LIBRARY_SHA,
@@ -104,11 +110,11 @@ jobs:
                 }
                 return { path, ...file };
               }));
-              const bank = JSON.parse(files.find(f => f.path.endsWith('.json')).body.toString());
+              const bank = JSON.parse(files.find(f => f.path === 'v6/plataforma.json').body.toString());
               const units = Object.entries(bank.editorial?.units || {});
-              if (units.length !== 3 || !['cartografia-fundamentos', 'cartografia-representacao', 'geotecnologias'].every(id => bank.editorial.units[id]) ||
+              if (units.length !== 4 || !['fundamentos-geografia', 'cartografia-fundamentos', 'cartografia-representacao', 'geotecnologias'].every(id => bank.editorial.units[id]) ||
                   !units.every(([, u]) => /^\d+\.\d+\.\d+$/.test(u.version) && u.status === 'APROVADA_CANONICA')) {
-                throw new Error('As três bases canônicas esperadas não estão publicadas.');
+                throw new Error('As quatro bases canônicas esperadas não estão publicadas.');
               }
               const assets = new Set();
               for (const file of files.filter(f => f.path.endsWith('.html'))) {
@@ -125,9 +131,9 @@ jobs:
                 if (!asset.body.length || !expectedType.test(asset.type)) throw new Error('Asset inválido: ' + url);
               }));
               console.log('Site público conferido:', base.href);
-              console.log('Quatro arquivos conferidos por SHA-256 e ' + assets.size + ' assets acessíveis.');
+              console.log('Seis arquivos conferidos por SHA-256 e ' + assets.size + ' assets acessíveis.');
               console.log('Unidades canônicas:', units.map(([id, u]) => id + '@' + u.version).join(', '));
-              console.log('Versão do banco:', bank.version, 'SHA-256:', process.env.BANK_SHA);
+              console.log('Versão do banco:', bank.version, 'SHA-256:', process.env.PLATFORM_SHA);
               break;
             } catch (error) {
               if (attempt === 18) throw error;

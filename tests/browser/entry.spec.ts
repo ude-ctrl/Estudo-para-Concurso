@@ -81,7 +81,7 @@ test('entrada mobile mantém teclado, redução de movimento e largura sem trans
   );
   await page.screenshot({ path: info.outputPath('entrada-mobile.png'), fullPage: true });
   await page.keyboard.press('Enter');
-  await expect(page.locator('.unit-card')).toHaveCount(3);
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Linguagem e leitura de mapas');
 });
 
 test('cópia da biblioteca inclui progresso V6 e permite sua restauração sem perder legado', async ({

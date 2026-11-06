@@ -3,7 +3,7 @@ import { useV6 } from './context';
 import { Feedback, Provenance } from './components';
 import { QuestionForm } from './Training';
 import { blueprintAvailability, examPool, finishExam, makeExam } from './engine';
-import type { State, UnitId, Writing } from './types';
+import type { State, UnitId, Writing, TeachingPractice } from './types';
 import { questionExposure } from './content-progress';
 function useNow(active: boolean) {
   const [now, setNow] = useState(Date.now());
@@ -20,8 +20,10 @@ function timeLeft(ms: number) {
   return `${Math.floor(n / 60)}:${String(n % 60).padStart(2, '0')}`;
 }
 export function Objective() {
-  const { content, state, update, notify } = useV6(),
-    [unit, setUnit] = useState(''),
+  const { content, state, update, notify, route } = useV6(),
+    [unit, setUnit] = useState(
+      route.unit === 'fundamentos-geografia' ? route.unit : 'module-cartografia',
+    ),
     [count, setCount] = useState(10),
     [minutes, setMinutes] = useState(20),
     exam = state.exam,
@@ -51,7 +53,8 @@ export function Objective() {
               setCount(10);
             }}
           >
-            <option value="">Módulo completo de Cartografia</option>
+            <option value="module-cartografia">Módulo completo de Cartografia</option>
+            <option value="">Todos os módulos V6 disponíveis</option>
             {content.units.map((u) => (
               <option value={u.id} key={u.id}>
                 {u.title}
@@ -98,14 +101,14 @@ export function Objective() {
           Iniciar prova do piloto
         </button>
         <p className="micro">
-          Questões autorais revisadas. Esta prova cobre Cartografia; o simulado completo exige todas
-          as áreas.
+          Questões autorais revisadas do recorte selecionado. O simulado completo exige todas as
+          áreas.
         </p>
         <details>
           <summary>Perfil oficial SEDUC-PA e estoque necessário</summary>
           <p>
-            Blueprint: 60 objetivas, duas discursivas de 15–30 linhas e duração total de 5 horas.
-            Este piloto não migra os outros módulos.
+            Blueprint: 60 objetivas, duas discursivas de 15–30 linhas e duração total de 5 horas. O
+            estoque ainda não cobre todas as áreas do concurso.
           </p>
           <table>
             <thead>
@@ -615,7 +618,9 @@ export function Practical() {
   const { content, state, update, notify } = useV6(),
     p = state.practical,
     now = useNow(!!p.deadline && ['plano', 'defesa'].includes(p.phase));
-  const practice = content.support?.teaching_practice[0];
+  const practice = content.support?.teaching_practice.find(
+    (p): p is TeachingPractice => 'plan_fields' in p,
+  );
   if (!practice) return <p>Atividade de aula indisponível nesta edição.</p>;
   const planFields = practice.plan_fields,
     practiceRubric = practice.rubric;
@@ -880,18 +885,141 @@ export function Practical() {
       </details>
       <details className="panel">
         <summary>Histórico da prática</summary>
-        {state.practicalHistory.map((h) => (
-          <div key={h.id}>
-            <h3>
-              {h.topic} · {new Date(h.at).toLocaleString('pt-BR')}
-            </h3>
-            {planFields.map(([id, label]) => (
-              <p key={id}>
-                <b>{label}:</b> {h.fields[id]}
-              </p>
-            ))}
-            <p>Rubrica de treino: {h.rubric.join(', ')}</p>
-          </div>
+        {state.practicalHistory
+          .filter((h) => !h.practiceId || h.practiceId === practice.id)
+          .map((h) => (
+            <div key={h.id}>
+              <h3>
+                {h.topic} · {new Date(h.at).toLocaleString('pt-BR')}
+              </h3>
+              {planFields.map(([id, label]) => (
+                <p key={id}>
+                  <b>{label}:</b> {h.fields[id]}
+                </p>
+              ))}
+              <p>Rubrica de treino: {h.rubric.join(', ')}</p>
+            </div>
+          ))}
+      </details>
+    </>
+  );
+}
+function FundamentosPractice() {
+  const { content, state, update, notify } = useV6();
+  const practice = content.support?.teaching_practice.find(
+    (p) => 'unit_id' in p && p.unit_id === 'fundamentos-geografia',
+  );
+  if (!practice || !('recommended_minutes' in practice))
+    return <p>Prática indisponível nesta edição.</p>;
+  const key = practice.id;
+  const text = state.drafts[key + ':text'] || '';
+  const scores = practice.rubric.map((_, i) => Number(state.drafts[key + ':rubric:' + i] ?? -1));
+  const mission = content.missions.find((m) => m.id === practice.mission)!;
+  const history = state.practicalHistory.filter((h) => h.practiceId === key);
+  return (
+    <>
+      <section className="panel">
+        <span className="eyebrow">Professor em ação · Fundamentos</span>
+        <h2>Microaula: rede e território-rede</h2>
+        <p>{practice.instructions}</p>
+        <p className="micro">
+          Sugestão: {practice.recommended_minutes} minutos. Duração e rubrica didáticas; não são
+          critérios oficiais da banca.
+        </p>
+        <label className="field-label">
+          Roteiro da microaula
+          <textarea
+            value={text}
+            onChange={(e) =>
+              update((s) => {
+                s.drafts[key + ':text'] = e.target.value;
+              })
+            }
+          />
+        </label>
+        <p>Explique em voz alta e use os critérios abaixo para rever seu roteiro.</p>
+        {practice.rubric.map((label, i) => (
+          <label className="field-label" key={label}>
+            {label}
+            <select
+              value={scores[i]}
+              onChange={(e) =>
+                update((s) => {
+                  s.drafts[key + ':rubric:' + i] = e.target.value;
+                })
+              }
+            >
+              <option value={-1}>Escolha após refletir</option>
+              <option value={0}>Precisa reconstruir</option>
+              <option value={1}>Parcial</option>
+              <option value={2}>Consistente</option>
+            </select>
+            {scores[i] >= 0 && (
+              <small>
+                {scores[i] === 2
+                  ? 'Mantenha esse ponto e teste se a turma consegue explicá-lo.'
+                  : 'Retome este critério, ajuste o exemplo e explique novamente.'}
+              </small>
+            )}
+          </label>
+        ))}
+        <button
+          className="primary"
+          disabled={
+            text.trim().length < 20 ||
+            scores.some((v) => v < 0) ||
+            history.some((h) => h.fields.roteiro === text && h.rubric.join() === scores.join())
+          }
+          onClick={() => {
+            update((s) => {
+              s.practicalHistory.push({
+                id: crypto.randomUUID(),
+                practiceId: key,
+                at: Date.now(),
+                topic: 'Rede e território-rede',
+                fields: { roteiro: text },
+                rubric: scores,
+              });
+              if (scores.some((v) => v === 0))
+                formativeError(
+                  s,
+                  mission.id,
+                  mission.conceptIds[0],
+                  mission.unit,
+                  key,
+                  'Microaula: retome o critério da rubrica e reconstrua a explicação.',
+                  Date.now(),
+                );
+            });
+            notify('Microaula e autoavaliação registradas.');
+          }}
+        >
+          Registrar microaula e feedback
+        </button>
+        <p className="micro">
+          A autoavaliação registra prática e orienta a revisão; não comprova domínio nem gera XP por
+          repetição.
+        </p>
+      </section>
+      <details className="panel">
+        <summary>Roteiro e exemplo preservados</summary>
+        {content.supplements
+          .filter((s) => s.mission === practice.mission && s.kind === 'teaching-practice')
+          .map((s) => (
+            <div key={s.id}>
+              <LegacyTeacher html={s.html} />
+              <Provenance refs={s.refs} />
+            </div>
+          ))}
+      </details>
+      <details className="panel">
+        <summary>Histórico da microaula</summary>
+        {history.map((h) => (
+          <article key={h.id}>
+            <h3>{new Date(h.at).toLocaleString('pt-BR')}</h3>
+            <p className="preserve-lines">{h.fields.roteiro}</p>
+            <p>Rubrica: {h.rubric.join(', ')}</p>
+          </article>
         ))}
       </details>
     </>
@@ -900,6 +1028,7 @@ export function Practical() {
 // Sanitized at build time; rendering uses the same component as preserved theory.
 import { Html as LegacyTeacher } from './components';
 export function Exam() {
+  const { route } = useV6();
   const [tab, setTab] = useState('objetiva');
   return (
     <>
@@ -921,7 +1050,15 @@ export function Exam() {
           </button>
         ))}
       </div>
-      {tab === 'objetiva' ? <Objective /> : tab === 'discursiva' ? <Discursive /> : <Practical />}
+      {tab === 'objetiva' ? (
+        <Objective key={route.unit} />
+      ) : tab === 'discursiva' ? (
+        <Discursive key={route.unit} />
+      ) : route.unit === 'fundamentos-geografia' ? (
+        <FundamentosPractice />
+      ) : (
+        <Practical />
+      )}
     </>
   );
 }

@@ -1,0 +1,815 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-16T22:09:30.614Z",
+  "branch": "v6-base-fundamentos-geografia",
+  "verified_implementation_commit": "da66234f2db3701dec096dc7c000aed5d9aa916a",
+  "preserved_parent_commit": "3aa0509193a11d7d6f09ba916d125cc76afe5b79",
+  "scope": ["fundamentos-geografia"],
+  "editorial_version": "1.0.0",
+  "reviewer_kind": "delegated-ai",
+  "human_manual_review": false,
+  "approval_digest": "0b6acb643e5e567fe3e586d5398df07834f28ad269d0805b64f508eeacbe322c",
+  "counts": {
+    "missions": 11,
+    "sections": 22,
+    "recalls": 11,
+    "concepts": 27,
+    "questions": 48,
+    "authored_questions": 48,
+    "cards": 45,
+    "game": 100,
+    "writing": 2,
+    "supplements": 2,
+    "parity_records": 228
+  },
+  "source_literal_changes": 139,
+  "resources": 269,
+  "parity_records": 228,
+  "canonical_units": 4,
+  "untouched_units": 24,
+  "runtime_enabled": false,
+  "legacy_migration_implemented": false,
+  "commands": [
+    {
+      "command": "npm run build",
+      "result": "passed",
+      "output": "\n> missao-aprovacao-geografia@0.1.0 build\n> npm run import:content && npm run import:v6 && tsc --noEmit && vite build\n\n\n> missao-aprovacao-geografia@0.1.0 import:content\n> node scripts/import-content.mjs\n\nImportação íntegra: 31 HTMLs preservados; 26 materiais de outros módulos; 4 fontes de Cartografia somente no arquivo de auditoria.\n\n> missao-aprovacao-geografia@0.1.0 import:v6\n> node scripts/build-v6.mjs\n\n{\"stages\":50,\"questions\":161,\"legacyQuestions\":125,\"authored\":36,\"cards\":120,\"legacyCards\":151,\"game\":256,\"legacyGame\":302,\"recalls\":39,\"canonicalRecalls\":39,\"writing\":6}\nvite v6.4.4 building for production...\ntransforming...\n✓ 1601 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/biblioteca.html                     0.74 kB │ gzip:  0.43 kB\ndist/index.html                          0.98 kB │ gzip:  0.54 kB\ndist/v6.html                             0.98 kB │ gzip:  0.54 kB\ndist/assets/portal-ozacjLQX.css         18.42 kB │ gzip:  4.87 kB\ndist/assets/main-VOxYawnG.css           38.00 kB │ gzip:  8.51 kB\ndist/assets/portal-BKylBOax.js          23.54 kB │ gzip:  7.62 kB\ndist/assets/main-CWwm2WoY.js           129.45 kB │ gzip: 40.28 kB\ndist/assets/legacy-routes-C9LWSb9Z.js  228.57 kB │ gzip: 71.00 kB\n✓ built in 3.90s\n"
+    },
+    {
+      "command": "npm test",
+      "result": "passed",
+      "output": "\n> missao-aprovacao-geografia@0.1.0 test\n> node tests/content.test.mjs && node --experimental-strip-types tests/v6.test.mjs && node tests/canonical.test.mjs && node tests/fundamentos-canonical.test.mjs && node --experimental-strip-types tests/canonical-runtime.test.mjs\n\nImportação íntegra: 31 HTMLs preservados; 26 materiais de outros módulos; 4 fontes de Cartografia somente no arquivo de auditoria.\n✔ os 31 HTMLs originais e as cópias publicadas permanecem byte a byte iguais ao acervo auditado (100.206719ms)\n✔ contagens de cada página coincidem com a auditoria independente (0.421186ms)\n✔ evocação, suplementos, fontes e estruturas completas sobrevivem à extração (64.547689ms)\n✔ fontes de Cartografia ficam apenas no arquivo de auditoria, com IDs e chaves preservados (0.250826ms)\n✔ importador recusa executar expressões de código dentro dos dados (3.989334ms)\nℹ tests 5\nℹ suites 0\nℹ pass 5\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 177.231055\n✔ contrato: exatamente as três unidades e as 17 missões oficiais do piloto (2.17711ms)\n✔ as três fontes conservam bytes, 50 etapas, 125 questões, 150 cards, 300 V/F e 39 recalls (339.185632ms)\n✔ todo registro tem destino canônico, ID de origem e hash verificável; contexto também é preservado (17.603148ms)\n✔ 125 gabaritos, alternativas, feedbacks e papéis históricos preservados sem conversão silenciosa (2.027834ms)\n✔ fusão semântica reduz C/G e conserva todas as formulações e justificativas (5.099861ms)\n✔ suplementos e 6 procedências discursivas preservados; fonte secundária estritamente limitada (0.443272ms)\n✔ IDs únicos, referências válidas e nenhum enunciado/alternativa duplicado exato (1.639714ms)\n✔ 36 itens novos, 12 por unidade, A–E, letras balanceadas e revisão humana pendente (0.525419ms)\n✔ conferência independente dos cálculos autorais e dos dados das figuras (0.913313ms)\n✔ HTML publicado não executa mecanismos legados nem produz IDs duplicados (16.591483ms)\n✔ agenda: intervalos iniciais e avaliações atrasadas seguem a política declarada (0.446306ms)\n✔ retentativa precoce não empurra o vencimento para um futuro artificial (0.219556ms)\n✔ fila vencida finita tem precedência sobre cartões novos (10.295539ms)\n✔ XP: abrir/ler/virar não premia e repetir acerto imediato não multiplica pontos (2.685911ms)\n✔ revisão vencida concede uma recompensa; repetir Fácil não faz farming (0.501328ms)\n✔ erro imediato não resolve; depois de intervalo, acerto objetivo resolve (0.742264ms)\n✔ falsa sensação de domínio reabre dificuldade e antecipa cartões relacionados (0.229863ms)\n✔ domínio fica sem número até haver estudo, diversidade, cobertura e retenção (1.20437ms)\n✔ prova: sem IDs repetidos, alternativas estáveis, letras equilibradas, novidade e diversidade (4.089483ms)\n✔ estoque insuficiente bloqueia perfil oficial e prova maior que banco (1.008563ms)\n✔ migração preserva bruto, é idempotente, não cria XP/domínio e não altera fontes (1.089797ms)\n✔ índices T03 ambíguos e T17 v25 não são interpretados como evidência (0.520766ms)\n✔ cópias corrompidas e esquema estranho são rejeitados; estado válido volta integral (1.280753ms)\n✔ registro congelado mantém identidades separadas das revisões editoriais (2.052118ms)\n✔ guias introdutórios encaminham questões ao conceito cobrado e todos os novos conceitos têm cartão (0.435311ms)\n✔ motor genérico monta as 60 posições do blueprint sem migrar disciplinas do piloto (0.475206ms)\n✔ erro só atinge domínio após intervalo, outro item e revisões consistentes (0.537183ms)\n✔ primeira revalidação de cartão legado usa intervalo inicial e não presume revisão vencida (0.615408ms)\n✔ cada Errei retorna uma vez na sessão; fila não cresce indefinidamente (1.026995ms)\n✔ redundância numérica histórica está sinalizada, sem alterar o gabarito válido (0.155563ms)\n✔ restauração rejeita históricos internos defeituosos e chaves que alterariam protótipos (0.285596ms)\n✔ persistência preserva bruto corrompido e mantém rascunhos em falha de quota (0.865869ms)\n✔ transações leem revisão recente e caderno global preserva outros módulos (0.630215ms)\n✔ restauração preserva cópia anterior e rejeita arquivo defeituoso antes de substituir (0.663259ms)\n✔ marcos: navegação e leitura sem recuperação não geram celebração nem XP (0.613514ms)\n✔ marcos: unidade requer todas as explicações e recuperação por missão, sem fabricar domínio (1.117517ms)\n✔ marcos: Chefão requer rodada completa da unidade, pelo menos 80% e não repete conquista (1.659398ms)\n✔ marcos: revisões só ficam em dia quando os vencidos reais terminam; importados não bastam (0.89385ms)\n✔ marcos: sete dias exigem prática significativa e não acrescentam pontos (0.309009ms)\n✔ marcos: erro convertido exige recuperação já validada pelo motor (0.956867ms)\n✔ marcos: backups anteriores permanecem válidos e marcos inválidos são rejeitados (0.56927ms)\n✔ B1: provas equilibradas não têm ciclo periódico nem três letras iguais em sequência (55.624308ms)\n✔ B2: Difícil é recuperação com esforço, intervalo curto, sem criar ou reabrir erro (0.425921ms)\n✔ C1: dias civis em UTC−3 e calendário com mudança de offset não perdem a sequência (1.681817ms)\n✔ UX: a camada canônica troca só a embalagem editorial e mantém originais integrais (1.265631ms)\n✔ restaurar backup anterior não mantém marcos ou sessão ausentes da cópia (0.414337ms)\n✔ P1: compatibilidade exige todos os IDs no destino, tipo e banco solicitado (0.355511ms)\n✔ P1: retomada conserva banco opcional e aceita backups anteriores sem inventar banco (0.73793ms)\n✔ sensorial: preferências opcionais mantêm backups antigos; valores e resumos inválidos são rejeitados (1.004808ms)\n✔ sensorial: percurso distingue leitura, recuperação e pendências sem fabricar domínio ou bloquear consulta (0.648978ms)\n✔ sensorial: resumo contabiliza somente XP real da rodada e não incorpora atividade paralela (0.913067ms)\n✔ sensorial: revisões devidas entram no balanço; virar, repetir cedo e preferências não rendem XP (0.556089ms)\n✔ sensorial: eventos comuns não são conquistas; repetição imediata e recarga não repetem efeitos (0.933904ms)\n✔ sensorial: expedição exige todas as missões com recuperação e os três Chefões, sem XP novo (2.398121ms)\n✔ sensorial: nível é somente XP e melhor sequência preserva intervalos civis e retomadas (0.40124ms)\n✔ sensorial: prova, discursiva e defesa em andamento mantêm o modo silencioso (0.297549ms)\n✔ sensorial: áudio é lazy, opcional, curto, limitado e interrompido ao sair ou mudar preferências (1.373234ms)\n✔ sensorial: liberação de áudio pendente não toca depois de cancelamento e falhas não quebram o estudo (0.290665ms)\nℹ tests 58\nℹ suites 0\nℹ pass 58\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 504.796128\n✔ catálogo mantém os 28 IDs oficiais e habilita somente Cartografia no consumidor atual (73.549287ms)\n✔ três unidades canônicas validam e preservam o inventário das candidatas iniciais (620.525182ms)\n✔ reconstrução recupera exatamente o banco original, incluindo variantes e contexto (17.716695ms)\n✔ aliases entre unidades acompanham o destino final e mantêm a missão de origem (6.152878ms)\n✔ dados visuais, precisão UTM e prática preservam o suporte antes escondido na interface (0.43206ms)\n✔ candidatas e conteúdo apenas aprovado com ressalvas são recusados para uso operacional (20.510069ms)\n✔ trocar somente o status não contorna os achados impeditivos (9.773888ms)\n✔ aprovação futura exige todos os critérios, recursos e itens revisados (142.805659ms)\n✔ alteração editorial após o parecer invalida o digest mesmo com hashes locais recalculados (29.778214ms)\n✔ fonte parcial, dado vencido e data de verificação futura impedem promoção (110.432876ms)\n✔ mutação de texto ou perda de variante é detectada sem depender das contagens (9.265157ms)\n✔ gabarito inexistente e falta do visual são recusados mesmo em snapshot recalculado (25.508032ms)\n✔ originais, inventário e matriz Premium não podem ser substituídos por registros incompletos (22.884911ms)\n✔ reconstrução não ignora recursos extras nem referências divergentes (16.73178ms)\n✔ as 12 propostas de vínculo e as cinco famílias permanecem explícitas e não aplicadas (1.150729ms)\n✔ leitura funciona com somente o pacote de base, sem HTMLs, importadores ou banco ativo (621.7558ms)\n✔ IDs e versões de caminho inválidos são recusados antes de acessar arquivos (0.175046ms)\n✔ pacote de outra unidade ou versão é recusado mesmo sob um caminho registrado (42.696297ms)\n✔ nova candidata não substitui a versão aprovada nem exige reabrir o HTML legado (466.0294ms)\n✔ 0.1.1 continua íntegra quando o catálogo evolui e mantém todos os recursos e procedências (498.540554ms)\n✔ revisão recusa diferença não declarada, valor anterior falso e pacote pai alterado (44.556419ms)\n✔ mesmo uma revisão declarada não permite perder recursos, mudar gabarito ou alterar procedência (72.049506ms)\n✔ as 12 associações são corrigidas na candidata sem apagar as propostas e valores iniciais (3.195994ms)\n✔ distrator GMS tem identidade nova, valores distintos e não remapeia respostas antigas (25.192503ms)\n✔ cinco questões legadas recebem feedbacks específicos mantendo enunciados e respostas corretas (0.807158ms)\n✔ dez níveis são reavaliados e cinco itens saem de Elite sem inflar dificuldade ou alterar questões (26.953856ms)\n✔ cinco famílias vinculam dez questões sem contá-las como novidade independente (32.435163ms)\n✔ perfil mantém números e SVG e explicita esquema sem escala; par Landsat acompanha g10 (26.309554ms)\n✔ fontes parciais têm conferência direta delimitada e o endpoint USGS não recebe verificação inventada (0.216237ms)\n✔ candidatas corrigidas continuam sem aprovação humana, sem consumo operacional e sem falsas provas FGV (13.566331ms)\n✔ 0.1.2 continua íntegra após a promoção e preserva as identidades, alternativas e gabaritos de 0.1.1 (516.877872ms)\n✔ 44 questões perdem os feedbacks genéricos e 137 distratores recebem explicações individuais (1.164134ms)\n✔ r11 passa para Concurso sem reescrever o item ou inflar o estoque Elite (0.290253ms)\n✔ mapa hipotético tem grade, escala, símbolos e posições coerentes com o SVG e a alternativa textual (7.992361ms)\n✔ mapa obrigatório é autossuficiente e PDF histórico fica complementar sem acesso inventado (13.811912ms)\n✔ mapa rejeita escala incoerente, coordenadas fora do recorte e conteúdo ativo ou sem acesso textual (0.589051ms)\n✔ parecer por IA identifica delegação, cobre os recursos e não permite conteúdo alterado ou autoria humana fictícia (185.949473ms)\n✔ cadeia valida também a revisão intermediária e recusa ciclos antes de carregar o próprio pacote (196.913918ms)\n✔ 1.0.0 aprova por revisão delegada explícita, preservando integralmente os textos de 0.1.2 (148.617802ms)\n✔ revisão delegada recusa decisão por item ausente, autoria humana fictícia e alteração posterior (74.496074ms)\n✔ consumo delegado exige escopo autorizado no catálogo e habilitação explícita (87.826114ms)\n✔ cadeia da canônica continua validada quando existe outra candidata em auditoria (163.139954ms)\nℹ tests 42\nℹ suites 0\nℹ pass 42\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 4393.400497\n✔ Fundamentos tem candidata preservada e primeira edição canônica, com parecer por IA e 12 critérios (59.249127ms)\n✔ catálogo tem quatro bases aprovadas, 24 unidades não iniciadas e Fundamentos fora do consumidor (453.372051ms)\n✔ fonte histórica confere byte a byte e os 228 vínculos reproduzem o snapshot inicial (18.252313ms)\n✔ 32 questões antigas mantêm identidades, todos os textos de alternativa anteriores e gabaritos (0.671909ms)\n✔ faltas de feedback e quinta alternativa do antigo c_4 foram corrigidas sem inflar o Chefão (0.18403ms)\n✔ 48 questões e seis itens do Chefão têm gabarito único; novos itens Concurso e Elite são A–E autorais (2.066319ms)\n✔ cinco famílias explicitam pares próximos e o diagnóstico reutilizado não duplica o estoque (0.191999ms)\n✔ 11 missões preservam a teoria corrigida, recebem aprofundamento e mantêm os quatro recalls históricos (0.240757ms)\n✔ 44 identidades de cartão e o conhecimento de Said/Escobar são conservados em 45 cartões explicativos (0.466742ms)\n✔ 100 V/F mantêm as polaridades anteriores, justificativas e limites de uso como evidência de domínio (0.916246ms)\n✔ discursivas, três tabelas históricas e prática docente continuam recuperáveis e sem falsa rubrica oficial (26.630395ms)\n✔ tabela nova é hipotética, acessível como dados e matematicamente coerente com o item Elite (0.246237ms)\n✔ não há duplicatas textuais normalizadas de questões, cartões, V/F ou IDs de recurso (0.530392ms)\n✔ fontes distinguem consulta direta, resumo, excerto indexado e referência bibliográfica (0.2091ms)\n✔ vencimento, ausência de verificação ou data futura impedem consumir a edição aprovada (92.195099ms)\n✔ contrato de progresso documenta as duas chaves e não afirma implementar migração nem retenção (0.1417ms)\n✔ snapshot recusa perda de original, fonte divergente, alteração de payload e troca de roster (23.746364ms)\n✔ ponteiros inválidos e originais sem correspondência não passam pelo mapa de paridade (83.255372ms)\n✔ antes/depois falso, apagamento e caminho perigoso são rejeitados mesmo com hash da lista recalculado (60.108299ms)\n✔ teoria compilada precisa refletir também o hook auditado, mesmo recalculando o hash externo (30.079598ms)\n✔ edição aprovada recusa alteração posterior e ausência de decisão por item (34.518671ms)\n✔ delegação e lotes recusam escopo sobreposto, snapshot fora do diretório e consolidação desconhecida (2442.956896ms)\n✔ banco público permanece exclusivamente Cartografia e conserva os mesmos bytes após a nova consolidação (1018.482626ms)\nℹ tests 23\nℹ suites 0\nℹ pass 23\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 4355.565918\n✔ banco operacional contém exatamente a base revisada das três unidades e seus suportes (2.640447ms)\n✔ build canônica funciona apenas com os pacotes, sem HTMLs ou importadores legados (918.757278ms)\n✔ tentativa atual registra versão editorial e alternativa, sem apagar sua identidade de origem (1.237777ms)\n✔ migração conserva agenda, XP, rascunhos, tentativas e cópia exata; não transfere erro a outro conceito (3.250663ms)\n✔ erro misto conserva cópia integral e mantém somente ocorrências compatíveis no caderno ativo (0.552084ms)\n✔ restaurar backup antigo executa a mesma migração, sem novo XP ou perda do histórico (0.812126ms)\n✔ gravação posterior de aba antiga é reconciliada mesmo com o marcador atual presente (0.669771ms)\n✔ migração sem armazenamento mantém dados em memória e permite exportação válida (0.979029ms)\n✔ trocar formulações da mesma família não gera XP imediato nem diversidade independente (1.361273ms)\n✔ evidências antigas de familiares próximos são preservadas e não inflam domínio atual (0.785736ms)\n✔ estimativa aplica a classificação canônica sem reescrever o registro histórico de Elite (0.523129ms)\n✔ família conhecida pelo legado reduz novidade e é ordenada depois das não vistas (7.896325ms)\n✔ prova recusa estoque artificialmente inflado por duas questões da mesma família (6.003801ms)\n✔ recompensa antiga por um membro impede primeiro-acerto duplicado por outro (0.243993ms)\n✔ outro membro da mesma família não satisfaz os dois contextos para erro convertido (0.644325ms)\n✔ prova registra respostas e versões e mantém gabaritos após retomar a sessão (1.041129ms)\n✔ backup recusa versões e histórico editorial malformados sem rejeitar esquema 6 antigo (1.03053ms)\nℹ tests 17\nℹ suites 0\nℹ pass 17\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 954.366179\n"
+    },
+    {
+      "command": "npm run check:canonical",
+      "result": "passed",
+      "output": "\n> missao-aprovacao-geografia@0.1.0 check:canonical\n> node scripts/canonical-content.mjs\n\n{\n  \"summaries\": [\n    {\n      \"unit\": \"cartografia-fundamentos\",\n      \"version\": \"1.0.0\",\n      \"status\": \"APROVADA_CANONICA\",\n      \"resources\": 277,\n      \"parity\": 272,\n      \"approved\": true\n    },\n    {\n      \"unit\": \"cartografia-representacao\",\n      \"version\": \"1.0.0\",\n      \"status\": \"APROVADA_CANONICA\",\n      \"resources\": 183,\n      \"parity\": 172,\n      \"approved\": true\n    },\n    {\n      \"unit\": \"geotecnologias\",\n      \"version\": \"1.0.0\",\n      \"status\": \"APROVADA_CANONICA\",\n      \"resources\": 231,\n      \"parity\": 241,\n      \"approved\": true\n    },\n    {\n      \"unit\": \"fundamentos-geografia\",\n      \"version\": \"1.0.0\",\n      \"status\": \"APROVADA_CANONICA\",\n      \"resources\": 269,\n      \"parity\": 228,\n      \"approved\": true\n    }\n  ],\n  \"untouchedUnits\": 24,\n  \"canonicalUnits\": 4\n}\n"
+    },
+    {
+      "command": "node scripts/build-v6.mjs --check",
+      "result": "passed"
+    },
+    {
+      "command": "Prettier --check (24 implementation files)",
+      "result": "passed"
+    },
+    {
+      "command": "git diff --cached --check (before implementation commit)",
+      "result": "passed"
+    }
+  ],
+  "node_tests": {
+    "total": 145,
+    "passed": 145,
+    "failed": 0,
+    "skipped": 0,
+    "groups": [5, 58, 42, 23, 17]
+  },
+  "browser": {
+    "local_reexecuted": false,
+    "new_fundamentos_interface_tested": false,
+    "reason": "No runtime/UI/bank/workflow changes; full suite runs on pull request. Prior browser results are not counted as new."
+  },
+  "math_verification": {
+    "hypothetical": true,
+    "neighborhood_A": {
+      "before": 40,
+      "after": 20,
+      "delta": -20,
+      "relative_change": -0.5
+    },
+    "neighborhood_B": {
+      "before": 20,
+      "after": 35,
+      "delta": 15,
+      "relative_change": 0.75
+    },
+    "causal_or_physical_distance_inference": false
+  },
+  "preservation": {
+    "source_commit": "3aa0509193a11d7d6f09ba916d125cc76afe5b79",
+    "htmls": 31,
+    "cartografia_files": 79,
+    "frontend_workflows_builder": 28,
+    "public_copies": 31,
+    "other_manifest_units_unchanged": 27,
+    "previous_delegation_unchanged": true,
+    "checked": [
+      {
+        "path": "MissaoAprovacaoGeo/SEDUC_PA_Auditoria_Mestra_18_Temas.html",
+        "sha256": "2c71c77cd01f6dff7990ecddf30e969174d3f35466b5ba2bd7a6af47de46a21c"
+      },
+      {
+        "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_01_Conceitos_e_Autores.html",
+        "sha256": "06bc7c51d80146f6b2f82a0c247d0d7babe56462dc33543ff025353ead69e683"
+      },
+      {
+        "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_02_Cartografia_I_MATRIZ_OFICIAL_V2_6.html",
+        "sha256": "cc976ddf7ca014693868786b4a6d306ba9d9d04a6fd13283856fb77662610906"
+      },
+      {
+        "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_03_Cartografia_II_MATRIZ_OFICIAL_V2_6.html",
+        "sha256": "7d2fbc117ac7a2763e1e19848ac390b139d4c2b7e0082c2fc68b2ead05846b4a"
+      },
+      {
+        "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_03_Cartografia_II_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+        "sha256": "3295adad462b654cfdc8d27b280e2bb7e85593de228d5f45456de46aa0dde8aa"
+      },
+      {
+        "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_04_Climatologia_MATRIZ_OFICIAL_V2_6.html",
+        "sha256": "d0dd9fb621034a60e547989da86f25ad318f853e22e0a68d7c6df684c3a29e20"
+      },
+      {
+        "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_05_Tectonica_e_Relevo_MATRIZ_OFICIAL_V2_6.html",
+        "sha256": "6f52e76e3fb4a3a71499a6d705902dc079d468353d305fd4f29fdaef1fbbd650"
+      },
+      {
+        "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_06_Solos_e_Erosao_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+        "sha256": "7812eec2099ddee07c575c43ac584967e78bc500d765d8d0932810878123c2b0"
+      },
+      {
+        "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_07_Hidrologia_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+        "sha256": "cea1a39b7d5ea36ebec1a0c2d490fae5e3e367e4dd9bcdef58fecd0e12440cf9"
+      },
+      {
+        "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_08_Biomas_e_Dominios_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+        "sha256": "01f65753bf92fe04eacbb90d01ee7d3b9eeb1a44ffaf33a91b47ba313ec32694"
+      },
+      {
+        "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_09_Ambiente_e_Energia_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+        "sha256": "b571cf4aea63e51b5d689cbb08e2568b0f645d38b423a1364eb5f0f392fc72b6"
+      },
+      {
+        "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_10_Populacao_e_Povos_Tradicionais_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+        "sha256": "e64517d09c2d56897dc785fdebb28ec4a87a5652cfc1dc43641fafc26b5cefb2"
+      },
+      {
+        "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_11_Geografia_Urbana.html",
+        "sha256": "27a3420574a27a4b249e6afb61e1dc2f8028be64fc4b50b68184cb863fbda1f5"
+      },
+      {
+        "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_12_Geografia_Agraria.html",
+        "sha256": "2c9d1013b3b4d9c7510232089252390dc14eb84535ef3cdb7513f8d0e296cf1a"
+      },
+      {
+        "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_13_Industria_Economia_e_Redes.html",
+        "sha256": "9a1757edaaa9b001b419c4dcef0d16177d460d3a030ee4d5f286be1d809cf940"
+      },
+      {
+        "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_14_Geopolitica_Globalizacao_e_Ordem_Mundial.html",
+        "sha256": "65734ab986ff46bcf2d4e4a5892b02a5ee13c1d670c3f772d11a32c51d96d73d"
+      },
+      {
+        "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_15_Amazonia_Natureza_Territorio_e_Desenvolvimento.html",
+        "sha256": "43282bc1771e68705d3d3b92fd9a595c2f9d4f797847613440d0cd30a31242da"
+      },
+      {
+        "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_16_Geografia_do_Brasil_e_do_Para.html",
+        "sha256": "836396d38f992486c2d791fa21ae01f1e041a18b9cde683f8fce1a886d18b90c"
+      },
+      {
+        "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_17_Amazonia_Natureza_e_Sistemas_Ambientais_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+        "sha256": "04d0793fe5a240a79afcd9d55b051ddf6e927407df257b3f4972e75df7f32dea"
+      },
+      {
+        "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_17_Cartografia_Geotecnologias_e_Representacao_do_Espaco.html",
+        "sha256": "a04ee219ef78757498e611179c6657cf578ca680da3520a3e8c9710a383d094f"
+      },
+      {
+        "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_18_Amazonia_Formacao_Territorial_e_Redes_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+        "sha256": "c345bdc25bafe3be2f00b03f41070488ad0b0423777a7627d953f0d695982053"
+      },
+      {
+        "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_18_BNCC_e_Ensino_de_Geografia.html",
+        "sha256": "49f13486d6b8c46939e67ff38e312d917219c6bf20e40d7049ad3da4d72e55e9"
+      },
+      {
+        "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_19_Amazonia_Conflitos_e_Desenvolvimento_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+        "sha256": "1bb33249d89c920ceafe8edf424cba869085f35bbc67fdbf8528e9d2b3f4237f"
+      },
+      {
+        "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_20_Para_Territorio_Populacao_e_Regionalizacao_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+        "sha256": "00479a96f61746dd559302a9eb5ff9eb13f51b261ac4bf8b948f88a51069005f"
+      },
+      {
+        "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_21_Para_Economia_Infraestrutura_e_Ambiente_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+        "sha256": "0ff48fe9d66c1c9f4155f579c52f05767e315a093d14fbc4051619374907f119"
+      },
+      {
+        "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_22_BNCC_e_Ensino_de_Geografia_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+        "sha256": "daac13b65a9ff637944e753fff0d08b4a44bc561035fa5b5a154fae5ba80a8de"
+      },
+      {
+        "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_23_Legislacao_e_Fundamentos_da_Educacao_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+        "sha256": "fd40157267e4c97eca22a5630c7747a85fba34fd0c002155b3dae773e4521ce4"
+      },
+      {
+        "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_24_Fundamentos_Pedagogicos_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+        "sha256": "510c9d38be94eed06c1cb68787c0377349a11884ff7a03ccb670c452b34be1b0"
+      },
+      {
+        "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_25_Lingua_Portuguesa_FGV_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+        "sha256": "6d306db5b6627ad676b47553fd74a6b4b0ebcbc00036f7e7c3c19abc5e8ddaf6"
+      },
+      {
+        "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_26_Raciocinio_Logico_FGV_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+        "sha256": "8ff32f317661b530ee392d3a05a2439c546eea154844804340267dcc67c62d2c"
+      },
+      {
+        "path": "MissaoAprovacaoGeo/SEDUC_PA_Tema_27_Atualidades_do_Para_e_Sociedade_MATRIZ_OFICIAL_V2_6_AUDITADA.html",
+        "sha256": "6651bd535519689e8c3b6381cc96967fcba9bf67ab17e256ad4607510036278e"
+      },
+      {
+        "path": "base-conhecimento/cartografia/baseline-piloto.json",
+        "sha256": "838cf5dad0c14ad9440af246e5903acf58ee7a19c4ba62b06e19bd629c5073a5"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.0/audit.json",
+        "sha256": "f46f65f49c722cfc45a2fb1323fac17605b0c187303448dd1e1d4c32f5f29d30"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.0/audit.md",
+        "sha256": "0791ec85159a59c69afc218f1ddb6689e009ac055fff02204a0b0797c7c9a46f"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.0/changelog.md",
+        "sha256": "e89aac470e3ac3a761ab7c6f06e82c49c6e78e6b96c98913fad4313877fc929b"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.0/content.json",
+        "sha256": "346805707898a1ed9cefd6cdb147828956fd36d36af614f96f4ee85eab218afb"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.0/provenance.json",
+        "sha256": "8866c919e3d993ebfc4e71897b7ad907618d7d089c2aae0d9c91bdbf004cbac1"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.1/audit.json",
+        "sha256": "a78f322d7865eddedc1395f76b75343e623ee91b0080911002c32f05fcdbae55"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.1/audit.md",
+        "sha256": "073b0bc1b6d8ccede5a851589eeb174e642c157b53c1b103e52a81ab57d5fba6"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.1/changelog.md",
+        "sha256": "09943465ec8c03db431cf573f472afa63fe0ec49a77545d6c5ee2a57fd092009"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.1/changes.md",
+        "sha256": "06e7869c6d868dea72885f4ef77939217e9e168b43dbe1379154d45e9b687edc"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.1/content.json",
+        "sha256": "56698940f106902ee2e682c9e4bf280758e56e6a2d7829b3ed873ed2566fc5a8"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.1/provenance.json",
+        "sha256": "fabf36a7337fefe3d59db000936cccd25d4e6a45e652c5d36ed8f8e29682922e"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.1/review.md",
+        "sha256": "e8fe0c080bf58fe889f170a3f371b72d96b741ae8db1c555441d98f6ca5d50d0"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.2/audit.json",
+        "sha256": "a5762eb100348e9fcee9a2c0c6d2925602712ee7808025f41693d63aa992fe8b"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.2/audit.md",
+        "sha256": "f8fd5f4e797299d963877802a4b13716318324c0383de2bf01326485442c21bb"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.2/changelog.md",
+        "sha256": "3872664631157f0a9931520dc30263f0c953590a493eb087d2ec1aad0dc59f44"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.2/changes.md",
+        "sha256": "8e5d0734464f90b3e914f9e97bb76ff7a898a219eae6ad4b9129b6438c397246"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.2/content.json",
+        "sha256": "9ccd46a4b4c51804df2d5f6496b6517476f57df71d626d7be6462ce8b0b69705"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.2/provenance.json",
+        "sha256": "f0bfe83301b881607fa901c2c8c4e3f83aa18c29eb84b5e711c4403186cccf88"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-fundamentos/0.1.2/review.md",
+        "sha256": "8676aabaca0c72d6c8b606a224045399aed170e91b797b446bcf9e18b3835eeb"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/audit.json",
+        "sha256": "c6dc22dbacdea40777581e6d2358ca77bb9fb70c78a9ede31be06b50db7e3634"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/audit.md",
+        "sha256": "e6062e1f1b001dbd83cb8c7d28044dc89df808e2819ad59ac538010dae3b192d"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/changelog.md",
+        "sha256": "16d18ebce62f1e5a2af32b9435e50643a78db1875ae7d1e38ca137fda7e29bba"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/changes.md",
+        "sha256": "ecbe4f055bfa4de0b925f6a28b937cbd5376788a7996133609e9902c434ac7f4"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/content.json",
+        "sha256": "3107aeaf8bec872fb243f852107457784f515cc865f9ddd4c2147e561449d70a"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/provenance.json",
+        "sha256": "e24b349337c3a32709a95dbe3c1f41bf6698fde5a128a2e1527ab1b700208c12"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-fundamentos/1.0.0/review.md",
+        "sha256": "c073b0d7b5db07c4e972518ddc2abb077d0b8eddd916a94462763ebeb536e142"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.0/audit.json",
+        "sha256": "eba49d357822bc14f813734e784112d2e1a4b2563342542bc3a7b302d75474cd"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.0/audit.md",
+        "sha256": "a8e3f3b4b64b1f62765ed1405211cc6a0fd767161fdeb43b4217dee0cca2ebfc"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.0/changelog.md",
+        "sha256": "72b9ce4eaabc333f61a576790403ed182b2363d482d5a3f7572e983bac5a2a69"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.0/content.json",
+        "sha256": "82e605d90d0e64718bbedb1b37beba0580a4a4af07f746328dc5ae0e566ed866"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.0/provenance.json",
+        "sha256": "b85402ec1da739c9631416a7bbb93320b0be31804d4e5279be790ddb0222ea16"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.1/audit.json",
+        "sha256": "fb1f2c1edcc9c893ec34211d8ea4e41387260cfc52257aafc761f0264327e269"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.1/audit.md",
+        "sha256": "2487c4286767198c935c63ec2c977d32f69530aaa4c8bbb7ea7f28aacaae6638"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.1/changelog.md",
+        "sha256": "aebf85252d4688244335dcc15cefe4a736fb98484a680cbe60080460b6ee5aaf"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.1/changes.md",
+        "sha256": "37426188159f294419b2192515bc4f8cee2d02d42f34357184a2b4b8d8584b33"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.1/content.json",
+        "sha256": "6aa80e8245c8382b251c7aa559490ca44a2997777a1eb8516b0ed278912e79f3"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.1/provenance.json",
+        "sha256": "c2a934b1669d8b631654bceebd1aae9e7adb4252cd156ecd85b67d5be7c8b259"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.1/review.md",
+        "sha256": "7e026b4acfd52fac94255fbb04d15ee614d0a65cd1c24c81f22fa0f2290a4491"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.2/audit.json",
+        "sha256": "9bc7db17d283c77fc22a8c9e69176d338243a2d98e173ffac336b213ab771d6f"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.2/audit.md",
+        "sha256": "ac1072804c5608c0031fe760d7f876954a6dea07e3cfb72532ec8c9738938a48"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.2/changelog.md",
+        "sha256": "cc83bff2128c0321b4a571585ee49d5efdb138b686a6af0604d05c03124313e6"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.2/changes.md",
+        "sha256": "ad832aeb7e9819cd1bd0e00fdae0cd60294bae305bf9b0cccbeb0895d7814c7e"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.2/content.json",
+        "sha256": "7bccd7519362c7a4c690dfd41b8bceecd5a2cf06c23764e1f7c9fcedab29de19"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.2/provenance.json",
+        "sha256": "136951d4549c033bb782045d45252d4bee21c1f2c8aab1654e9cc977d6404960"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-representacao/0.1.2/review.md",
+        "sha256": "298073414e2eae4a9985d0662db2a1a09df6648623a15876b179c2e83c97d9e7"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/audit.json",
+        "sha256": "aadf92e14d8bd3c3d18896de78c7e05d3c67082b9888b4a2b99c4efd33eee0e3"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/audit.md",
+        "sha256": "6f93579804206be3998ffe3131270be7d3b96a3d7abb05f4bc6d9a317ab5f806"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/changelog.md",
+        "sha256": "16d18ebce62f1e5a2af32b9435e50643a78db1875ae7d1e38ca137fda7e29bba"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/changes.md",
+        "sha256": "ae001918194f34f82839f7e9da5931bec4da225bdab06d5349bc1fae0f702b3f"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/content.json",
+        "sha256": "99a719319c4b8ace339b5141630ee8a0d5a216d51be752f5c6977e46c281b185"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/provenance.json",
+        "sha256": "c633c843a4a30630984960a9bb0fe0f8de35e590b6cf0ea08d49406d5f59e5c5"
+      },
+      {
+        "path": "base-conhecimento/cartografia/cartografia-representacao/1.0.0/review.md",
+        "sha256": "98738d3d9cbe53414067ca6bc296001a1f38f788aea2fa52be6d2a57a5b98df3"
+      },
+      {
+        "path": "base-conhecimento/cartografia/geotecnologias/0.1.0/audit.json",
+        "sha256": "4e10bd5e7ea5717d8558f1d03369190f542ec1e3832e358e3a5e982dbe709710"
+      },
+      {
+        "path": "base-conhecimento/cartografia/geotecnologias/0.1.0/audit.md",
+        "sha256": "5fba377e620388a0d5e836321a06d9e8dde38ecdea5f8c1ecf7e295e8a51cb59"
+      },
+      {
+        "path": "base-conhecimento/cartografia/geotecnologias/0.1.0/changelog.md",
+        "sha256": "e9f78ca27cf3a81f417c97b181eaa7cd23f5569a9e918350f9080f1b858f4733"
+      },
+      {
+        "path": "base-conhecimento/cartografia/geotecnologias/0.1.0/content.json",
+        "sha256": "a1f49ce29fbcfccd9e035ed65c3f4aa48bc9bda79abe8e5fc49d9012047b2e71"
+      },
+      {
+        "path": "base-conhecimento/cartografia/geotecnologias/0.1.0/provenance.json",
+        "sha256": "d72506ead9097d85929a4cee90170520e35d60f86acb139c605ba6655ec75c85"
+      },
+      {
+        "path": "base-conhecimento/cartografia/geotecnologias/0.1.1/audit.json",
+        "sha256": "5b2f37961779a724ea0954a8899b295cacb7aeb67e46959e3df24204ec04e51a"
+      },
+      {
+        "path": "base-conhecimento/cartografia/geotecnologias/0.1.1/audit.md",
+        "sha256": "bf3fa48cd72d19ea4486565845f0c32a66a64b54a0c40f9f06cf8d3299e2241d"
+      },
+      {
+        "path": "base-conhecimento/cartografia/geotecnologias/0.1.1/changelog.md",
+        "sha256": "7f53b623493f46f154599cf4f39f47f041979fee75c23c4da4b12b9a9c122420"
+      },
+      {
+        "path": "base-conhecimento/cartografia/geotecnologias/0.1.1/changes.md",
+        "sha256": "39c5eb1bf8ecea4710340bb05acfae6d47e254e69496fc52a43ad4251d878ab2"
+      },
+      {
+        "path": "base-conhecimento/cartografia/geotecnologias/0.1.1/content.json",
+        "sha256": "46f1cb3b80bb1b6cf33879dd48db1746e2a5b0b75c103f35380fc9fb12d7a302"
+      },
+      {
+        "path": "base-conhecimento/cartografia/geotecnologias/0.1.1/provenance.json",
+        "sha256": "70f7be7a7be16fb24bb0a38641c28c6750120c1126c8f2d4977cb3885b5fcb61"
+      },
+      {
+        "path": "base-conhecimento/cartografia/geotecnologias/0.1.1/review.md",
+        "sha256": "b6b97091c7c5e0f7774ba7dd608199df0927921dd455d6ad21444f6bfd7c5470"
+      },
+      {
+        "path": "base-conhecimento/cartografia/geotecnologias/0.1.2/audit.json",
+        "sha256": "2bc2345d10588626a893458b6b621a24fd8abd3ce912015b3de2391e121fb8ef"
+      },
+      {
+        "path": "base-conhecimento/cartografia/geotecnologias/0.1.2/audit.md",
+        "sha256": "d2e0bdb7dda84a8412bd775423dbf5d29320d28c61c1db7d0fbf3584e07981fd"
+      },
+      {
+        "path": "base-conhecimento/cartografia/geotecnologias/0.1.2/changelog.md",
+        "sha256": "188faaf2da35dfd63814aa24025d0b18bd8873a7d30ef315fbeaf8d8efa90ff7"
+      },
+      {
+        "path": "base-conhecimento/cartografia/geotecnologias/0.1.2/changes.md",
+        "sha256": "0d65fdf4db4b304f8650885033ffbff3e5e74e2f3e01500e05b2ee04bebfd2c3"
+      },
+      {
+        "path": "base-conhecimento/cartografia/geotecnologias/0.1.2/content.json",
+        "sha256": "7bb2352b7f1d756d2739597d004c07d5d61b1da56236dc22c94e4690d9c95798"
+      },
+      {
+        "path": "base-conhecimento/cartografia/geotecnologias/0.1.2/provenance.json",
+        "sha256": "f5edde8a69dbb4d315990bcdf2b70748bace091e8c238e638f3d4d7f0ea19bc5"
+      },
+      {
+        "path": "base-conhecimento/cartografia/geotecnologias/0.1.2/review.md",
+        "sha256": "525fd1da634595c9bd8b9ff215cda1803c79b0f20c4b6ee9534e7292509494b0"
+      },
+      {
+        "path": "base-conhecimento/cartografia/geotecnologias/1.0.0/audit.json",
+        "sha256": "d4f0361921ce5d1b17f5c3d4c3c303601d4407cf009188f393a34dc1912993e4"
+      },
+      {
+        "path": "base-conhecimento/cartografia/geotecnologias/1.0.0/audit.md",
+        "sha256": "daaee6997dab1035084827c208f14a029574d69e2381d12a6021a8500f30cb57"
+      },
+      {
+        "path": "base-conhecimento/cartografia/geotecnologias/1.0.0/changelog.md",
+        "sha256": "16d18ebce62f1e5a2af32b9435e50643a78db1875ae7d1e38ca137fda7e29bba"
+      },
+      {
+        "path": "base-conhecimento/cartografia/geotecnologias/1.0.0/changes.md",
+        "sha256": "a62d43562e1029fd5cb8a934fb46b97c5d2ec3dcd8fec6a722743305410fb6c3"
+      },
+      {
+        "path": "base-conhecimento/cartografia/geotecnologias/1.0.0/content.json",
+        "sha256": "a4d1b399e62a41529919d0fbfefd470a09fae2af40852a266297fe6d792b284d"
+      },
+      {
+        "path": "base-conhecimento/cartografia/geotecnologias/1.0.0/provenance.json",
+        "sha256": "1702fdef7e8a85c9a318e26872cea28fad4749fa2de1346ce10816389a236ea4"
+      },
+      {
+        "path": "base-conhecimento/cartografia/geotecnologias/1.0.0/review.md",
+        "sha256": "cf5be4b330078e36cc6ad3233c17a3898909f934929fb28daaaf877b4b1a8633"
+      },
+      {
+        "path": ".github/workflows/pages.yml",
+        "sha256": "4c7bd20913b081316f7db249c33c268973050987b5df32b98a43d873127e5aeb"
+      },
+      {
+        "path": ".github/workflows/validate.yml",
+        "sha256": "878cc1cdc11d4ed579d5c5e9899b32a18261b2d8dd391aa945f34721b927a133"
+      },
+      {
+        "path": "scripts/build-v6.mjs",
+        "sha256": "23171c0ea0016cbb1e31d005bf6e2eab73d85972c79094598d10eebf00abe1fa"
+      },
+      {
+        "path": "src/App.tsx",
+        "sha256": "015589443d304b67db77cffa09f9bcc3b8db9ff31cd2a4ffa35d811dc9d461cd"
+      },
+      {
+        "path": "src/legacy-routes.ts",
+        "sha256": "2a2ca77b6e2f64f51c8138ac54ad8c782fcebc57d59239aea679f09a1e101b47"
+      },
+      {
+        "path": "src/main.tsx",
+        "sha256": "240903a71d5933c9b6910e054295ec4551c18803cd024ad6ef6d52134d96202a"
+      },
+      {
+        "path": "src/storage.ts",
+        "sha256": "13ff989087620abf6df71a7ece582c15c8aaf153ca4bf234c871c621e0420146"
+      },
+      {
+        "path": "src/styles.css",
+        "sha256": "064617d50ffc281dc5341851bf5ad319fdc28e0e795aea76ae08f2b743e6e5c2"
+      },
+      {
+        "path": "src/types.ts",
+        "sha256": "6c05926bcfc385a4589ec3e700b893d8ac6d94e13c4b83a2b5f3336f018a47e7"
+      },
+      {
+        "path": "src/v6/App.tsx",
+        "sha256": "ceca1c4262cb7c351fb1145a2aa410aacdf8070e1cf0cd436aca09195237f2f0"
+      },
+      {
+        "path": "src/v6/Celebration.tsx",
+        "sha256": "527275f47f75ff725c6733353049ae580c0a68f423c55e3a50c128d03635c2b3"
+      },
+      {
+        "path": "src/v6/Exam.tsx",
+        "sha256": "2c75467867df5a5f5a31327a47d030557bfd020a40718e575dde1032310966d1"
+      },
+      {
+        "path": "src/v6/Review.tsx",
+        "sha256": "35676e85e716142075220ffa954ea38b8b29cf95514b5fcbf05471dda5ca0522"
+      },
+      {
+        "path": "src/v6/SensoryUI.tsx",
+        "sha256": "96f93c38ad1ea397c046060136c1a96b5ba8044773368198979686094a419eb5"
+      },
+      {
+        "path": "src/v6/Study.tsx",
+        "sha256": "380aa6b5d83f6a0a97360f66330ebf50dd6b139054a9f16c5608c8957f60b55a"
+      },
+      {
+        "path": "src/v6/Training.tsx",
+        "sha256": "0444c1cfca41366fb1ff73e292ae50d82b39a00a461df469beaa092b0d40583f"
+      },
+      {
+        "path": "src/v6/components.tsx",
+        "sha256": "266b3588b025dace30cfb54066e13ed82a9db0e928bc9519e3be81891b71ed5e"
+      },
+      {
+        "path": "src/v6/content-progress.ts",
+        "sha256": "59d77c45bb9c136a41262c8aaa511e92dee6ecc53b69ce2f78d77ae2323d8078"
+      },
+      {
+        "path": "src/v6/context.tsx",
+        "sha256": "4da517c70782ec5eceb004a735212427abb4543e6961a11bcbb19928ff185186"
+      },
+      {
+        "path": "src/v6/engine.ts",
+        "sha256": "ecea966b8e0d9da9a2ba0ebeef2217e7da5dcb0f7c1b7d700aee9edfa31171b7"
+      },
+      {
+        "path": "src/v6/main.tsx",
+        "sha256": "8e896f7dd7aa343f7f46e652756e3f738ed203a90194b6757ae19c59efb9097d"
+      },
+      {
+        "path": "src/v6/recognition.ts",
+        "sha256": "ce9c821c8a4416f93c9a440612b371f2f7c36d8f3c652f3fb4e7cffa0cf42e12"
+      },
+      {
+        "path": "src/v6/repository.ts",
+        "sha256": "7e1490dbf17171481aa15ff87bf9dc732892647d4acc1bbf566ce4ff3d0be5e8"
+      },
+      {
+        "path": "src/v6/sensory.ts",
+        "sha256": "78bc22078ea6764e78cedb6cece9f6d7c9e8343cf943f7ad63aed57814c399b4"
+      },
+      {
+        "path": "src/v6/sound.ts",
+        "sha256": "0f441c66935e118287a7d6887a131cbb91a8d6720a0e7b9b932dcadf5feb492c"
+      },
+      {
+        "path": "src/v6/styles.css",
+        "sha256": "313c5cbbe90e54c1481fcf823f2d83dc999869585824eaa5b9fa9c47161f0128"
+      },
+      {
+        "path": "src/v6/training-session.ts",
+        "sha256": "7c86fcccf0200930dd6827e5825a591f5a3d998435f36bba5511319d53b5d135"
+      },
+      {
+        "path": "src/v6/types.ts",
+        "sha256": "4b5b4dd1f04008c626014cade522d1193c45a1bbb45a6d1ab6077361199ccbca"
+      }
+    ]
+  },
+  "runtime_bank": {
+    "path": "public/v6/cartografia.json",
+    "sha256": "574b248f3b9180dac5633d5d304eddc5598a98e4f150df8b087ecee341b2af05",
+    "version": "6.1.0-canonica.1",
+    "units": ["cartografia-fundamentos", "cartografia-representacao", "geotecnologias"],
+    "unchanged": true
+  },
+  "implementation_inputs": [
+    {
+      "path": "base-conhecimento/fundamentos/baseline-fundamentos.json",
+      "bytes": 152320,
+      "sha256": "da69809ed03c51edb71d70b69b56fb3613667367769b385039264225a5d6b0f8"
+    },
+    {
+      "path": "base-conhecimento/fundamentos/fundamentos-geografia/0.1.0/audit.json",
+      "bytes": 103955,
+      "sha256": "d2d37e2be2109c8e0ea690346075abc31e24b29f2424dfa4799ff6fb91487222"
+    },
+    {
+      "path": "base-conhecimento/fundamentos/fundamentos-geografia/0.1.0/audit.md",
+      "bytes": 3628,
+      "sha256": "0571fd46bbaa8d55162eef2bf956fd7971261a11e9f0ec8f9f69ba976e2ec3b3"
+    },
+    {
+      "path": "base-conhecimento/fundamentos/fundamentos-geografia/0.1.0/changelog.md",
+      "bytes": 208,
+      "sha256": "98d6ed7f6e4a9416b7b2e9369d8e747ce9c09692ef84856173309b11eb29d3d3"
+    },
+    {
+      "path": "base-conhecimento/fundamentos/fundamentos-geografia/0.1.0/content.json",
+      "bytes": 536908,
+      "sha256": "53c4cd890a83e05b83e5c70f8b3604224aab22d29aab83ad8388fc085cd3c8c1"
+    },
+    {
+      "path": "base-conhecimento/fundamentos/fundamentos-geografia/0.1.0/provenance.json",
+      "bytes": 438848,
+      "sha256": "be404dcd883a43e9b611e664166683739a7f8211f950d855d4142e6917d70715"
+    },
+    {
+      "path": "base-conhecimento/fundamentos/fundamentos-geografia/0.1.0/review.md",
+      "bytes": 50380,
+      "sha256": "01f4903fc05c80565de6af58348897c0d63806d957e46e915f97bbde134bc6a4"
+    },
+    {
+      "path": "base-conhecimento/fundamentos/fundamentos-geografia/1.0.0/audit.json",
+      "bytes": 104407,
+      "sha256": "c095f89ffd5c95e7742c407d731a23a7477099ac88910339d044331d715f49e2"
+    },
+    {
+      "path": "base-conhecimento/fundamentos/fundamentos-geografia/1.0.0/audit.md",
+      "bytes": 3633,
+      "sha256": "27346ff0b68f4bf1774e5bbb490a95d3090b3654f48b2b6f25e85b31e0c4c16c"
+    },
+    {
+      "path": "base-conhecimento/fundamentos/fundamentos-geografia/1.0.0/changelog.md",
+      "bytes": 279,
+      "sha256": "b03028dba6d7f85dd7148d7eb867e993ed56f30b194ee7ea3733930800453d6c"
+    },
+    {
+      "path": "base-conhecimento/fundamentos/fundamentos-geografia/1.0.0/changes.md",
+      "bytes": 116408,
+      "sha256": "dbc3d0e271ab2a49a4b4e31d49407eced1b069a7eacc10ad2e583e738d267f11"
+    },
+    {
+      "path": "base-conhecimento/fundamentos/fundamentos-geografia/1.0.0/content.json",
+      "bytes": 536106,
+      "sha256": "d6aa778ffef7b14eb1191f3cbb6257960e8d5a32fe5039e0b79bd7fd9b2900c2"
+    },
+    {
+      "path": "base-conhecimento/fundamentos/fundamentos-geografia/1.0.0/provenance.json",
+      "bytes": 523768,
+      "sha256": "a12819928b0c71aed97d98816842efef7e810dbf2b3d1a7b9fb9ca55a3cd2427"
+    },
+    {
+      "path": "base-conhecimento/fundamentos/fundamentos-geografia/1.0.0/review.md",
+      "bytes": 50380,
+      "sha256": "9c6bf84c24f59fc0c2a5b57f7fe9c369fbff84f7584110d6d0237d0613adbc59"
+    },
+    {
+      "path": "base-conhecimento/manifest.json",
+      "bytes": 11478,
+      "sha256": "f46071b346688b3b13f507ec160bb7f9276d3f2d2146dcfc4369fba0a6ebf01d"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1578,
+      "sha256": "027bac56a3694ac9fe17b6ed0eaf95cca61af0b064baa877e1035530a7d3eea2"
+    },
+    {
+      "path": "scripts/canonical-content.mjs",
+      "bytes": 43454,
+      "sha256": "2d45b8cdc0eaa5936ee04c3ca3c15bb041f341bd8f1e273177086d19c7438cb9"
+    },
+    {
+      "path": "tests/canonical.test.mjs",
+      "bytes": 48041,
+      "sha256": "2e60810d96efa1f6670794f8515194569c2a0ec2c1656be5f69b910f873af117"
+    },
+    {
+      "path": "tests/fundamentos-canonical.test.mjs",
+      "bytes": 18903,
+      "sha256": "6e84e1ef31f75c0d98e7d24de8fa002a74029e2d4a58142343b02691e66cb7f0"
+    }
+  ],
+  "distribution_artifacts": [
+    {
+      "path": "dist/assets/legacy-routes-C9LWSb9Z.js",
+      "bytes": 228570,
+      "sha256": "9ce6db94ac9ef0c078b395ed3427863edf3a88dd8fc42107235da0a5607816ee"
+    },
+    {
+      "path": "dist/assets/main-CWwm2WoY.js",
+      "bytes": 129447,
+      "sha256": "b67e95c735930a8e7fe0e34816da3b7930f7cfa1283bf7d59c15c5cf741ecd49"
+    },
+    {
+      "path": "dist/assets/main-VOxYawnG.css",
+      "bytes": 38001,
+      "sha256": "c418bc1a9d0d2a0b76143175764bd959876507e11b72cac0e175e204e59fa416"
+    },
+    {
+      "path": "dist/assets/portal-BKylBOax.js",
+      "bytes": 23536,
+      "sha256": "ec21b4f3a672f90a69cb5171a0caf04e5efb5709dd388e69a21cdd1999fed3ce"
+    },
+    {
+      "path": "dist/assets/portal-ozacjLQX.css",
+      "bytes": 18423,
+      "sha256": "08871d481e6291cd67f923dee9ac816b3f51174f4bdf01c06b286de94ae4c4cf"
+    },
+    {
+      "path": "dist/biblioteca.html",
+      "bytes": 739,
+      "sha256": "231a14b0be0099a2ea7d1d5cf061f76e5a26a65fc6160fd60bf059441d6a69b9"
+    },
+    {
+      "path": "dist/index.html",
+      "bytes": 979,
+      "sha256": "b291cf5231e6bf5ec559eee36dd406cb53d87b106a4378c0bd6ac16207fb60d5"
+    },
+    {
+      "path": "dist/v6.html",
+      "bytes": 979,
+      "sha256": "b291cf5231e6bf5ec559eee36dd406cb53d87b106a4378c0bd6ac16207fb60d5"
+    }
+  ],
+  "protected_remote_refs_observed": {
+    "main": "3aa0509193a11d7d6f09ba916d125cc76afe5b79",
+    "v6-planejamento": "fc8023b9b99cf2978f21e613e43d232aa53643b0",
+    "v6-piloto-cartografia": "690692389b8c665c7eff4bb7b34d10be5fdabba8"
+  },
+  "delivery": {
+    "merged": false,
+    "published": false,
+    "review_document": "MissaoAprovacaoGeo/V6_ISSUE13_FUNDAMENTOS_AUDITORIA.md"
+  },
+  "limits": [
+    "Não substitui estudo das demais áreas nem constitui auditoria das outras 24 unidades.",
+    "Não há questões oficiais identificadas neste banco.",
+    "Classificações de dificuldade não foram calibradas por candidatos reais.",
+    "Trechos indexados e resumos não equivalem à leitura integral dos livros; alcances constam das fontes.",
+    "Integração de interface e migração de progresso não foram implementadas neste lote."
+  ]
+}
