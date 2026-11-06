@@ -22,4 +22,7 @@ jobs:
       - run: npm run build
       - run: npx playwright install --with-deps chromium
       - run: node tests/climatologia-candidate.browser.mjs
+      - run: node tests/climatologia-candidate.browser.mjs
+        env:
+          CLIMA_PREVIEW_FILE: public/previas/climatologia.html
       - run: npm run test:e2e

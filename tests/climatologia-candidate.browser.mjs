@@ -11,7 +11,10 @@ const browser = await chromium.launch({
     process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH ||
     (existsSync('/usr/bin/chromium') ? '/usr/bin/chromium' : undefined),
 });
-const html = await readFile(resolve(candidatePath, 'previa.html'), 'utf8');
+const html = await readFile(
+  process.env.CLIMA_PREVIEW_FILE || resolve(candidatePath, 'previa.html'),
+  'utf8',
+);
 const output = process.env.CLIMA_EVIDENCE_DIR || '/tmp/climatologia-evidence';
 await mkdir(output, { recursive: true });
 const results = [];

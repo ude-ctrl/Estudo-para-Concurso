@@ -23,6 +23,7 @@ jobs:
     permissions:
       contents: read
     outputs:
+      clima_preview_sha: ${{ steps.hashes.outputs.clima_preview }}
       bank_sha: ${{ steps.hashes.outputs.bank }}
       platform_sha: ${{ steps.hashes.outputs.platform }}
       modules_sha: ${{ steps.hashes.outputs.modules }}
@@ -47,7 +48,7 @@ jobs:
           import { readFileSync, appendFileSync } from 'node:fs';
           import { createHash } from 'node:crypto';
           for (const [name, path] of Object.entries({
-            bank: 'v6/cartografia.json', platform: 'v6/plataforma.json', modules: 'v6/modules.json', index: 'index.html',
+            clima_preview: 'previas/climatologia.html', bank: 'v6/cartografia.json', platform: 'v6/plataforma.json', modules: 'v6/modules.json', index: 'index.html',
             v6: 'v6.html', library: 'biblioteca.html',
           })) {
             const sha = createHash('sha256').update(readFileSync('dist/' + path)).digest('hex');
@@ -73,6 +74,7 @@ jobs:
       - name: Conferir arquivos no endereço público
         env:
           SITE_URL: ${{ steps.deployment.outputs.page_url }}
+          CLIMA_PREVIEW_SHA: ${{ needs.build.outputs.clima_preview_sha }}
           BANK_SHA: ${{ needs.build.outputs.bank_sha }}
           PLATFORM_SHA: ${{ needs.build.outputs.platform_sha }}
           MODULES_SHA: ${{ needs.build.outputs.modules_sha }}
@@ -85,6 +87,7 @@ jobs:
           import { setTimeout } from 'node:timers/promises';
           const base = new URL(process.env.SITE_URL);
           const expected = {
+            'previas/climatologia.html': process.env.CLIMA_PREVIEW_SHA,
             'v6/cartografia.json': process.env.BANK_SHA,
             'v6/plataforma.json': process.env.PLATFORM_SHA,
             'v6/modules.json': process.env.MODULES_SHA,
@@ -131,7 +134,7 @@ jobs:
                 if (!asset.body.length || !expectedType.test(asset.type)) throw new Error('Asset inválido: ' + url);
               }));
               console.log('Site público conferido:', base.href);
-              console.log('Seis arquivos conferidos por SHA-256 e ' + assets.size + ' assets acessíveis.');
+              console.log('Sete arquivos conferidos por SHA-256 e ' + assets.size + ' assets acessíveis.');
               console.log('Unidades canônicas:', units.map(([id, u]) => id + '@' + u.version).join(', '));
               console.log('Versão do banco:', bank.version, 'SHA-256:', process.env.PLATFORM_SHA);
               break;

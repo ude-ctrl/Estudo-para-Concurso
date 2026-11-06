@@ -33,6 +33,11 @@ test('arquivos versionados são reproduzíveis', async () => {
   }))
     assert.deepEqual(JSON.parse(await readFile(resolve(candidatePath, file), 'utf8')), value);
   assert.equal(await readFile(resolve(candidatePath, 'previa.html'), 'utf8'), preview(base));
+  const published = await readFile(resolve(root, 'public/previas/climatologia.html'), 'utf8');
+  assert.equal(published, preview(base, { published: true }));
+  assert.match(published, /em revisão/);
+  assert.match(published, /não registra respostas nem altera seu progresso/);
+  assert.match(published, /href="\.\.\/"/);
 });
 test('215 originais e a fonte histórica têm hashes intactos', async () => {
   assert.equal(sha(await readFile(resolve(root, inventory.source))), inventory.source_sha256);
