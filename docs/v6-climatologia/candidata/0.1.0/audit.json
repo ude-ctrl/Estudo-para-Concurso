@@ -1,0 +1,897 @@
+{
+  "schema_version": 1,
+  "unit_id": "climatologia",
+  "editorial_version": "0.1.0",
+  "status": "EM_AUDITORIA",
+  "reviewed_at": "2026-11-06",
+  "reviewer_kind": "ai",
+  "human_approval": null,
+  "scope": {
+    "all_legacy_pedagogical_records_read": true,
+    "full_primary_source_audit": false,
+    "runtime_integrated": false
+  },
+  "counts": {
+    "missions": 13,
+    "sections": 14,
+    "recalls": 13,
+    "concepts": 13,
+    "questions": 38,
+    "authored_questions": 38,
+    "cards": 50,
+    "game": 100,
+    "writing": 2,
+    "supplements": 5,
+    "parity_records": 215
+  },
+  "premium_criteria": [
+    {
+      "id": "correcao_conceitual",
+      "decision": "pending",
+      "assessment": "candidate-review",
+      "evidence": "Revisão e correções locais registradas; fechamento Premium ainda não emitido."
+    },
+    {
+      "id": "cobertura",
+      "decision": "pending",
+      "assessment": "candidate-review",
+      "evidence": "Revisão e correções locais registradas; fechamento Premium ainda não emitido."
+    },
+    {
+      "id": "profundidade",
+      "decision": "pending",
+      "assessment": "candidate-review",
+      "evidence": "Revisão e correções locais registradas; fechamento Premium ainda não emitido."
+    },
+    {
+      "id": "clareza",
+      "decision": "pending",
+      "assessment": "candidate-review",
+      "evidence": "Revisão e correções locais registradas; fechamento Premium ainda não emitido."
+    },
+    {
+      "id": "exemplos",
+      "decision": "pending",
+      "assessment": "candidate-review",
+      "evidence": "Revisão e correções locais registradas; fechamento Premium ainda não emitido."
+    },
+    {
+      "id": "redundancia",
+      "decision": "pending",
+      "assessment": "candidate-review",
+      "evidence": "Revisão e correções locais registradas; fechamento Premium ainda não emitido."
+    },
+    {
+      "id": "terminologia",
+      "decision": "pending",
+      "assessment": "candidate-review",
+      "evidence": "Revisão e correções locais registradas; fechamento Premium ainda não emitido."
+    },
+    {
+      "id": "lacunas",
+      "decision": "pending",
+      "assessment": "candidate-review",
+      "evidence": "Revisão e correções locais registradas; fechamento Premium ainda não emitido."
+    },
+    {
+      "id": "temporalidade",
+      "decision": "pending",
+      "assessment": "candidate-review",
+      "evidence": "Revisão e correções locais registradas; fechamento Premium ainda não emitido."
+    },
+    {
+      "id": "nivel",
+      "decision": "pending",
+      "assessment": "candidate-review",
+      "evidence": "Revisão e correções locais registradas; fechamento Premium ainda não emitido."
+    },
+    {
+      "id": "fontes",
+      "decision": "pending",
+      "assessment": "candidate-review",
+      "evidence": "Revisão e correções locais registradas; fechamento Premium ainda não emitido."
+    },
+    {
+      "id": "treino",
+      "decision": "pending",
+      "assessment": "candidate-review",
+      "evidence": "Revisão e correções locais registradas; fechamento Premium ainda não emitido."
+    }
+  ],
+  "authored_questions": [
+    {
+      "id": "v6-clima-b-0-0",
+      "resource_sha256": "5da3e13e83077f757689123949f1851def48cf7678be17e0b8a59a6493392ea0",
+      "correct_option_id": "v6-clima-b-0-0-o1",
+      "correct_option_text": "precipitação e temperatura",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-0"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-b-0-1",
+      "resource_sha256": "0e0aa483e764a2535fed0642ecf0f203ef1fb2cde8a7ce80715b17dc1b9a459b",
+      "correct_option_id": "v6-clima-b-0-1-o1",
+      "correct_option_text": "Associar elementos, fatores e sistemas atmosféricos para explicar um padrão observado.",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-0"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-b-1-0",
+      "resource_sha256": "6947e6d157220ef277313c1bb8503b16a96818242a133ed27abfc77f869b743a",
+      "correct_option_id": "v6-clima-b-1-0-o1",
+      "correct_option_text": "latitude e altitude",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-1"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-b-1-1",
+      "resource_sha256": "cfcc9167da94bc43529264cbe5636bd26683aa366fe626ee9170a0ae2adc943a",
+      "correct_option_id": "v6-clima-b-1-1-o1",
+      "correct_option_text": "referência estatística de longo período para variáveis meteorológicas",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-1"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-b-2-0",
+      "resource_sha256": "37a21fedcc62bc3802e24a1600b95eedc11fb247c1dacf829374a8e25d31725d",
+      "correct_option_id": "v6-clima-b-2-0-o0",
+      "correct_option_text": "temperaturas médias geralmente menores",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-2"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-b-2-1",
+      "resource_sha256": "0db79f7d40c0b219b369480bf66826f49bcace62396aea3134bdaacad05197ec",
+      "correct_option_id": "v6-clima-b-2-1-o1",
+      "correct_option_text": "É um processo natural; o problema atual é seu reforço por emissões humanas.",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-2"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-b-3-0",
+      "resource_sha256": "70e7860dc98e9a9e06cafa44e478cb4fae3cb1d2e3ee180872bb31a9787ee150",
+      "correct_option_id": "v6-clima-b-3-0-o1",
+      "correct_option_text": "das altas subtropicais do Hemisfério Sul em direção à baixa equatorial",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-3"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-b-3-1",
+      "resource_sha256": "a00769b375b27b5090e31ebab75d44af9419775e898ed8983b7caa3d8ff48a14",
+      "correct_option_id": "v6-clima-b-3-1-o0",
+      "correct_option_text": "desvia movimentos para a esquerda no Hemisfério Sul",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-3"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-b-4-0",
+      "resource_sha256": "0f6856479b94d39c033a010b4890acf231c4b2f824da71a523c02d62a00e16ad",
+      "correct_option_id": "v6-clima-b-4-0-o0",
+      "correct_option_text": "o relevo força o ar úmido a ascender e resfriar",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-4"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-b-4-1",
+      "resource_sha256": "dbc88635d8c5ccb1a631ac61c40bef832d40260c1c611118cd8478d92533e8da",
+      "correct_option_id": "v6-clima-b-4-1-o1",
+      "correct_option_text": "diminuir",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-4"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-b-5-0",
+      "resource_sha256": "c6d184e766c51f7964690305ab5e472a35f592896baa3f149133bcbca512ccd7",
+      "correct_option_id": "v6-clima-b-5-0-o1",
+      "correct_option_text": "mEc",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-5"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-b-5-1",
+      "resource_sha256": "1035151d701f121a67fe0bce78e40e3add3e4f18f43a5209d3219b9686097ad4",
+      "correct_option_id": "v6-clima-b-5-1-o0",
+      "correct_option_text": "à penetração de ar frio de origem polar",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-5"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-b-6-0",
+      "resource_sha256": "affba8ae6e496eeb84df76b4b1fee008f34c402d5cb6690b0ee7c1760a758f38",
+      "correct_option_id": "v6-clima-b-6-0-o1",
+      "correct_option_text": "ZCAS",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-6"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-b-6-1",
+      "resource_sha256": "deeb1f66db708f28bc1ea78c0bf793befa4941a5784fc679be9ffda06f46cd10",
+      "correct_option_id": "v6-clima-b-6-1-o0",
+      "correct_option_text": "modula a distribuição sazonal de chuvas em áreas tropicais",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-6"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-b-7-0",
+      "resource_sha256": "4bddb8de8b81a0df65d3c03a03c2ae0824e723d7ccaf7197f64ee63840b7b57e",
+      "correct_option_id": "v6-clima-b-7-0-o1",
+      "correct_option_text": "El Niño cria teleconexões que alteram probabilidades regionais, mas seus efeitos dependem de outros controles.",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-7"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-b-7-1",
+      "resource_sha256": "3422206761c4f423d4c1296e7bf6b85ae093bbfe2c9f5d6413fbcdbac12f5ca3",
+      "correct_option_id": "v6-clima-b-7-1-o0",
+      "correct_option_text": "aquecimento anômalo no Pacífico equatorial central/oriental",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-7"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-b-8-0",
+      "resource_sha256": "9d1859b49f85d50f844b92ff1bee978aeda39d6f31af9fe866c9adb9b9aec6c7",
+      "correct_option_id": "v6-clima-b-8-0-o0",
+      "correct_option_text": "clima equatorial úmido",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-8"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-b-8-1",
+      "resource_sha256": "00c25543a46b1297e4a32dd7be43eb8a056a4345612c8b56ba961d7f282dbf72",
+      "correct_option_id": "v6-clima-b-8-1-o1",
+      "correct_option_text": "usam critérios, limiares e finalidades distintos",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-8"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-b-9-0",
+      "resource_sha256": "3833707ea9fb2bf0724e0cd35fb1ad5443c20e6e0145096e4b90b74affc9b638",
+      "correct_option_id": "v6-clima-b-9-0-o1",
+      "correct_option_text": "maior atuação de frentes e massas polares ao longo do ano",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-9"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-b-9-1",
+      "resource_sha256": "ff88a39e183749e7c26b34def3044fb1d3f996328524bdcf8c7883389527527f",
+      "correct_option_id": "v6-clima-b-9-1-o1",
+      "correct_option_text": "precipitação baixa/irregular e elevada demanda evaporativa",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-9"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-b-10-0",
+      "resource_sha256": "3931f304787e7584de8a326ab3a6c81d5a9fd3839661d3b766f239a3620714da",
+      "correct_option_id": "v6-clima-b-10-0-o1",
+      "correct_option_text": "maior marcação da estação seca em partes do sul/sudeste",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-10"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-b-10-1",
+      "resource_sha256": "23f2fbbff9c1dec8fcaeb9a4182c1355f3eae5592515ae40a8b715886850ee4f",
+      "correct_option_id": "v6-clima-b-10-1-o1",
+      "correct_option_text": "recicla umidade por evapotranspiração e interage com fluxos atmosféricos",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-10"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-b-11-0",
+      "resource_sha256": "ea1c25b3e3d0af9c818a8b654b3e8635e0a1effee68c139eeb8d1f684f409bb3",
+      "correct_option_id": "v6-clima-b-11-0-o0",
+      "correct_option_text": "substituição de vegetação por superfícies impermeáveis e maior armazenamento de calor",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-11"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-b-11-1",
+      "resource_sha256": "f33e73d72f8bffb3973355a75454416667f83dc77435e55393287b2a63fa3847",
+      "correct_option_id": "v6-clima-b-11-1-o1",
+      "correct_option_text": "reduzir a mistura vertical e favorecer acúmulo de poluentes",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-11"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-b-12-0",
+      "resource_sha256": "9453a4d21a3977ee012e4f367375425b96d8bc6645e28c53e7e155739752dbb8",
+      "correct_option_id": "v6-clima-b-12-0-o1",
+      "correct_option_text": "A mudança climática pode alterar a probabilidade/intensidade de extremos, mas a atribuição exige análise específica.",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-12"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-b-12-1",
+      "resource_sha256": "038a3545ce8e618bb04287923514e98746a5acab3995452c816740a3c7a163ec",
+      "correct_option_id": "v6-clima-b-12-1-o1",
+      "correct_option_text": "maior potencial de intensidade porque ar mais quente pode conter mais vapor",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-12"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-pre-0",
+      "resource_sha256": "2a0b240e111a94a2472f6899bd4a9a36972408a3c32159990a2bf5304510831c",
+      "correct_option_id": "v6-clima-pre-0-o1",
+      "correct_option_text": "Não. Um episódio isolado descreve o tempo; clima exige padrões de longo prazo.",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-1"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-pre-1",
+      "resource_sha256": "da42e7ccc02569be0217d4d9577944875c01df94d12be611cc475a262d9bf0bc",
+      "correct_option_id": "v6-clima-pre-1-o1",
+      "correct_option_text": "ZCIT",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-6"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-pre-2",
+      "resource_sha256": "81c4104e1b94260909bd595c8d0e7e61a94a602a655ae5b4aeaac34fcc843783",
+      "correct_option_id": "v6-clima-pre-2-o0",
+      "correct_option_text": "friagem",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-5"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-c-0",
+      "resource_sha256": "4bc39f1dc68f76a86bbeb78a976aa85835b7d5d48953ebee9c0015c859b6f0c9",
+      "correct_option_id": "v6-clima-c-0-o0",
+      "correct_option_text": "equatorial úmido",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-8"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-c-1",
+      "resource_sha256": "d7e8ec4bdcb48b14069ac3de6abc107db65bf69320ea49e31bf85f2dde1c550d",
+      "correct_option_id": "v6-clima-c-1-o1",
+      "correct_option_text": "ZCIT",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-6"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-c-2",
+      "resource_sha256": "8ab0f20642d9bacf3d31237f3b02d9ab391dd18f1a4766f968e4e6dd93dc2e4a",
+      "correct_option_id": "v6-clima-c-2-o2",
+      "correct_option_text": "ENOS é variabilidade natural; o aquecimento pode alterar impactos e variabilidade de precipitação, mas há incerteza sobre frequência/amplitude.",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-7"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-c-3",
+      "resource_sha256": "7c503a899c69dcc20220872479bbda23ef13f493ee46b2cb4cc9694f0eeb6662",
+      "correct_option_id": "v6-clima-c-3-o1",
+      "correct_option_text": "O litoral/norte pode ter influência mais forte da ZCIT e do Atlântico, enquanto sul/sudeste tende a apresentar seca mais marcada.",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-10"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-c-4",
+      "resource_sha256": "dded3f84c3c78e1e3d80583a951747c6c2aa02d419d7ceacf66eac3693e0ec80",
+      "correct_option_id": "v6-clima-c-4-o1",
+      "correct_option_text": "impermeabilização + menor evapotranspiração + maior armazenamento/liberação de calor",
+      "pool": "fixacao",
+      "current_difficulty": 1,
+      "current_cognitive": 1,
+      "source_ids": [],
+      "content_evidence": [
+        "v6-clima-B-11"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Enunciado, gabarito e feedback lidos; alternativas e índice correto histórico preservados."
+      }
+    },
+    {
+      "id": "v6-clima-q-climograma-amplitude",
+      "resource_sha256": "c844d43261fa034905b0e85fa1d6f65abb5974a049ca9888370c14d127143117",
+      "correct_option_id": "v6-clima-q-climograma-amplitude-o0",
+      "correct_option_text": "1,4 °C",
+      "pool": "concurso",
+      "current_difficulty": 2,
+      "current_cognitive": 2,
+      "source_ids": [
+        "clima-dados-autorais"
+      ],
+      "content_evidence": [
+        "v6-clima-B-8",
+        "v6-clima-climogramas-pratica"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Cálculo e unicidade da resposta conferidos; cada distrator tem explicação."
+      }
+    },
+    {
+      "id": "v6-clima-q-climograma-estacao",
+      "resource_sha256": "c943f9bc6696a89f82468eafed747fe019b87df02683b675076c006602889239",
+      "correct_option_id": "v6-clima-q-climograma-estacao-o2",
+      "correct_option_text": "Três: junho, julho e agosto.",
+      "pool": "concurso",
+      "current_difficulty": 2,
+      "current_cognitive": 3,
+      "source_ids": [
+        "clima-dados-autorais"
+      ],
+      "content_evidence": [
+        "v6-clima-B-8",
+        "v6-clima-climogramas-pratica"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Cálculo e unicidade da resposta conferidos; cada distrator tem explicação."
+      }
+    },
+    {
+      "id": "v6-clima-q-climograma-inferencia",
+      "resource_sha256": "d983555c5c6b7244251e265cd040db500ffb3cb519a3cc13e3196712d4584503",
+      "correct_option_id": "v6-clima-q-climograma-inferencia-o4",
+      "correct_option_text": "O padrão é quente e chuvoso, mas os dados hipotéticos não identificam cidade nem comprovam o mecanismo de cada chuva.",
+      "pool": "concurso",
+      "current_difficulty": 3,
+      "current_cognitive": 3,
+      "source_ids": [
+        "clima-dados-autorais"
+      ],
+      "content_evidence": [
+        "v6-clima-B-8",
+        "v6-clima-climogramas-pratica"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Cálculo e unicidade da resposta conferidos; cada distrator tem explicação."
+      }
+    },
+    {
+      "id": "v6-clima-q-climograma-comparacao",
+      "resource_sha256": "30ad641365787e639d6ba21b3ab8627eed689860e8d978e080e991e4aaf959bc",
+      "correct_option_id": "v6-clima-q-climograma-comparacao-o1",
+      "correct_option_text": "Os totais são iguais, mas B concentra a chuva de modo desigual e C tem aproximadamente 141,7 mm por mês.",
+      "pool": "concurso",
+      "current_difficulty": 3,
+      "current_cognitive": 3,
+      "source_ids": [
+        "clima-dados-autorais"
+      ],
+      "content_evidence": [
+        "v6-clima-B-8",
+        "v6-clima-climogramas-pratica"
+      ],
+      "human_reviewer": null,
+      "human_decision": "pending",
+      "editorial_decision": {
+        "kind": "ai",
+        "decision": "candidate-reviewed",
+        "evidence": "Cálculo e unicidade da resposta conferidos; cada distrator tem explicação."
+      }
+    }
+  ],
+  "findings": [
+    {
+      "id": "clima-cobertura-fontes",
+      "status": "open",
+      "blocks_promotion": true,
+      "description": "Fechar cotejo curricular e referências científicas regionais/temporais antes da promoção."
+    },
+    {
+      "id": "clima-integracao",
+      "status": "open",
+      "blocks_promotion": false,
+      "description": "Integrar visualização, migração e fluxos V6 em lote posterior."
+    }
+  ],
+  "limitations": [
+    "Não é aprovação canônica nem homologação humana.",
+    "Cotejo fino com edital/retificações e atualização científica regional ainda pendentes.",
+    "IPCC conferido por excertos indexados; leitura direta retornou 403.",
+    "Não foi calibrada dificuldade com estudantes.",
+    "Migração de progresso e integração ao runtime não implementadas neste lote.",
+    "Duas fontes estáticas e controles HTML permanecem somente como procedência, sem executar JavaScript legado."
+  ]
+}

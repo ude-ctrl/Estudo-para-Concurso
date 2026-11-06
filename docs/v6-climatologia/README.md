@@ -1,5 +1,7 @@
 # Climatologia — preparação da migração V6
 
+> **Atualização em 06/11/2026:** a candidata editorial 0.1.0 já foi produzida, com correções rastreadas, dois climogramas e quatro questões novas. Consulte o [relatório da entrega](RELATORIO_CANDIDATA_0_1_0.md) e a [prévia local](candidata/0.1.0/previa.html). O texto abaixo registra a etapa anterior de inventário; não é o estado final da revisão. A candidata continua fora do site e sem aprovação canônica.
+
 Branch: `v6-climatologia`. Origem publicada: `aceaac37bc02d7762d78f45d7dd9531c0a2afac6` (Fundamentos e Cartografia). Este lote conclui o inventário reproduzível e o mapa preparatório; não promove a unidade nem altera o site. Não é um parecer de aprovação Premium.
 
 ## Destino e preservação
