@@ -63,3 +63,53 @@ Acelerar o Missão Aprovação V6, reduzir tokens e retrabalho **sem baixar o ri
 
 ## Limites desta auditoria de processo
 Esta avaliação examinou documentos e configuração de scripts, **não** instrumentou execução real do Codex, mediu tokens, auditou integralmente código nem rodou suíte nesta etapa. As recomendações de economia são hipóteses operacionais a verificar. Não há garantia de redução de custo até coletar métricas.
+
+
+## Adendo — operação sob franquia Plus com Astra (07/11/2026)
+
+### Restrição real informada pelo proprietário
+- Plano ChatGPT Plus.
+- Modelo habitual no Codex: **GPT-6 Astra**.
+- Uma execução de módulo pode consumir praticamente toda a disponibilidade; o proprietário relata esgotamento tanto da janela curta quanto da semanal.
+- **Prioridade explícita:** maximizar módulos concluídos por unidade de franquia, sem sacrificar rigor ou integridade.
+
+### Política de roteamento de modelos
+- **Padrão:** usar o modelo de menor custo/capacidade disponível que execute a tarefa corretamente. Não pressupor que nomes de modelos ou preços permaneçam constantes; conferir opções presentes no Codex.
+- **Modelo intermediário:** implementação habitual, refatorações localizadas, integração isolada e testes de regressão dirigidos.
+- **Astra (exceção justificada):** migrações de persistência com risco de perda, arquitetura transversal, bugs difíceis após diagnóstico focado, conflitos científico-pedagógicos complexos ou auditoria crítica quando modelos econômicos se mostrarem insuficientes.
+- **Escalonamento:** primeiro tentar diagnóstico/abordagem local e depois escalar com justificativa curta. Não testar indefinidamente uma solução barata que falha.
+- **Nunca degradar a aprovação científica:** ausência de Astra disponível não autoriza liberar conteúdo não auditado; registrar pendência e parar.
+
+### Orçamento por tarefa (sem inventar tokens)
+Antes de abrir tarefa do Codex, preencher:
+1. Resultado exato e condição de conclusão;
+2. Arquivos que precisam ser lidos;
+3. Modelo recomendado e motivo;
+4. Criticidade (baixo, médio, alto) e verificação correspondente;
+5. Limite de escopo: não tocar em outras unidades, arquitetura ou conteúdo canônico sem justificativa;
+6. Condição de interrupção: se surgirem dependências inesperadas ou necessidade de refatoração ampla, retornar diagnóstico compacto, não executar expansão sem autorização;
+7. Registro opcional de uso: consumo e renovação das janelas, caso a interface efetivamente mostre esses dados.
+
+### Execução de módulos em lotes pequenos
+- **Lote A — mapa de diferenças:** inventariar o módulo e comparar candidato, edital, Base Canônica e contrato V6; não implementar.
+- **Lote B — conteúdo editorial:** corrigir apenas lacunas comprovadas, preservar procedência e versionar deltas; revisão científica dirigida.
+- **Lote C — integração técnica:** consumir pacote aprovado e reutilizar componentes existentes; evitar nova implementação de shell.
+- **Lote D — verificação/homologação:** testes direcionados durante B/C, suíte integral e Auditoria Premium no marco de aprovação/publicação.
+- Se um lote já estiver concluído e verificável no repositório, **não repeti-lo**.
+
+### Diretriz para ChatGPT e Codex
+- ChatGPT: faz plano, triagem, análise de relatórios e especificação enxuta; não presumir que chats e Codex possuam franquias independentes.
+- Codex: executa alterações reproduzíveis, preferencialmente com um ticket por vez e retorno curto.
+- Trabalhar por branch/PR; nunca publicar automaticamente por economia de chamadas.
+- Reutilizar validações existentes e cache quando seguro; qualquer alteração em dependências, IDs, persistência, gabaritos ou contratos amplia os testes.
+- Não impor limite arbitrário de tokens que cause trabalho incompleto ou perda de segurança.
+- Distinguir claramente **custo de execução medido** de **hipótese de economia**; verificar o painel real de uso do plano em vez de estimar quotas.
+
+### Template econômico para enviar ao Codex
+> Execute APENAS a tarefa indicada. Leia primeiro este protocolo e os arquivos diretamente relacionados. Objetivo: [resultado]. Base: [branch/commit]. Escopo permitido: [arquivos/unidade]. Proibido: alterar HTML histórico, Base Canônica de outro módulo, IDs e progresso sem migração autorizada. Reutilize componentes e decisões homologados. Escolha testes proporcionais ao risco, mas rode validação completa para integração/homologação. Se precisar abrir escopo ou fizer falta informação crítica, entregue diagnóstico e proposta compactos e pare. Ao final, informe somente arquivos modificados, testes/resultados, riscos e próximo passo. Não iniciar outro módulo.
+
+### Primeira aplicação
+**Climatologia V6:** conferir o commit de prévia (#22) e os critérios não cumpridos; evitar reconstruir o que já está integrado. Definir primeiro ticket de baixo ou médio risco e usar modelo econômico/intermediário se capaz. Reservar Astra para bloqueador real. Registrar duração/uso disponibilizados pela interface e revisão final antes de publicações.
+
+### Critério de avaliação
+Após 3–5 tarefas comparáveis, observar: tarefas concluídas por janela, revisões adicionais, falhas reabertas, duração observada e consumo exibido pelo produto (se disponível). **Não declarar melhora sem evidências.**
