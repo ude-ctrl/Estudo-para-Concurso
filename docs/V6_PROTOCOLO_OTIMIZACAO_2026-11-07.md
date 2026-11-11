@@ -1,6 +1,8 @@
 # V6 — Protocolo operacional de eficiência e qualidade (07/11/2026)
 
-**Estado:** diretriz proposta pelo usuário, documentada nesta branch para revisão antes do merge. **Não altera automaticamente código, CI, conteúdo ou site publicado.**
+**Estado:** protocolo de 07/11/2026 adotado pelo usuário como instrução permanente em 11/11/2026. A consolidação documental está na branch `docs/v6-instrucoes-permanentes-2026-11-11`, derivada de `docs/v6-protocolo-otimizacao-2026-11-07` (`f5730e1`). Merge e publicação não foram autorizados nesta tarefa. **Não altera automaticamente código, CI, conteúdo ou site publicado.**
+
+Entrada permanente do repositório: [AGENTS.md](../AGENTS.md). Este arquivo reúne o protocolo e o único resumo operacional de continuidade; relatórios antigos continuam como evidências datadas, não como retratos automaticamente atuais.
 
 ## Objetivo vinculante
 Acelerar o Missão Aprovação V6, reduzir tokens e retrabalho **sem baixar o rigor científico, pedagógico, funcional, de acessibilidade ou de preservação de dados**. Qualidade > quantidade. A Base Canônica aprovada é a fonte editorial oficial; HTML histórico permanece íntegro. Não inventar percentuais de economia nem desempenho.
@@ -18,7 +20,7 @@ Acelerar o Missão Aprovação V6, reduzir tokens e retrabalho **sem baixar o ri
 
 ## Regras operacionais (a partir dos próximos trabalhos)
 1. **Tarefa curta e verificável:** cada ticket declara objetivo, artefatos afetados, riscos, critérios de aceite e exclusões. Evitar pedidos como “revisar tudo” para mudanças localizadas.
-2. **Contexto mínimo suficiente:** antes de codificar, ler este documento, o registro de estado, a tarefa e somente os contratos/arquivos que ela impacta. Expandir leitura quando dependências, riscos ou falhas comprovadas exigirem. Nunca omitir leitura obrigatória de segurança/contrato aplicável.
+2. **Contexto mínimo suficiente:** na primeira aplicação, ler este protocolo integralmente; nas tarefas seguintes, reutilizar o contexto conferido e consultar seu diff, o registro de estado, a tarefa e somente os contratos/arquivos impactados. Se o contexto estiver ausente ou desatualizado, recuperar as partes necessárias. Expandir leitura quando dependências, riscos ou falhas comprovadas exigirem. Nunca omitir leitura obrigatória de segurança/contrato aplicável.
 3. **Sem reauditoria cega:** Base Canônica aprovada continua válida se conteúdo e contrato não mudaram. Mudança editorial de teoria, gabarito, explicação, fonte crítica ou classificação exige delta versionado, procedência e revisão dirigida; mudanças generalizadas exigem Auditoria Premium da unidade.
 4. **Matriz de testes por risco:**
    - **Documentação isolada:** conferir links, consistência e diff; sem build pesada quando comprovadamente desnecessária.
@@ -39,6 +41,7 @@ Acelerar o Missão Aprovação V6, reduzir tokens e retrabalho **sem baixar o ri
 ## Formato padrão de tarefa (copiar)
 - **Objetivo:** uma entrega concreta.
 - **Estado-base:** branch/commit e unidades canônicas relevantes.
+- **Modelo recomendado:** opção disponível e justificativa; recomendação não equivale a troca efetiva de modelo.
 - **Arquivos/contratos necessários:** caminho exato e motivo.
 - **Não mexer:** histórico, módulos fora do escopo, persistência sem migração.
 - **Critérios de aceite:** comportamento, precisão, acessibilidade e preservação.
@@ -47,19 +50,45 @@ Acelerar o Missão Aprovação V6, reduzir tokens e retrabalho **sem baixar o ri
 - **Parada:** não avançar para o módulo seguinte automaticamente.
 
 ## Próxima execução
-1. Conferir estado atual de Climatologia no PR/branch/main e sua prévia publicada; distinguir prévia de leitura de unidade aprovada.
-2. Fazer inventário dirigido de lacunas de Climatologia, sem reler integralmente Fundamentos e Cartografia.
-3. Executar alterações de Climatologia em um PR limitado, com paridade, revisão científica dirigida e testes apropriados.
-4. Homologar o módulo e só então avançar ao seguinte, usando o mesmo padrão.
-5. Depois de 3–5 entregas equivalentes, comparar tempos/tokens observáveis com base histórica disponível e ajustar este protocolo.
+
+A prioridade e o ponto de retomada estão no registro abaixo. Esta execução é exclusivamente documental: não iniciar nem retomar Climatologia. A futura retomada deve aproveitar o trabalho verificável existente e separar conteúdo, integração e homologação em entregas; não repetir lotes concluídos. Comparar consumo apenas após 3–5 tarefas equivalentes com dados observados.
 
 ## Registro de continuidade compacto
-**Plataforma:** Missão Aprovação V6, SEDUC-PA, base permanente reutilizável por outros concursos.
-**Padrão:** Estudo / Treino / Revisão / Prova, feedback explicativo, revisão espaçada e caderno global.
-**Consolidado no histórico:** Cartografia canônica; Fundamentos integrado; biblioteca unificada; prévia de Climatologia.
-**Pendente:** confirmar estado editorial e publicação de Climatologia; migrar outras unidades; validar cobertura total do edital e homologar plataforma completa.
-**Restrições:** preservar legado, progresso e rastreabilidade; jamais tratar especificação como recurso implementado.
-**Próxima tarefa prioritária:** Climatologia V6 com escopo e aceite explícitos.
+
+**Conferência:** 11/11/2026, America/Sao_Paulo. `origin/main` = `12e7f34b5ae5f96a20680f0ff3c013510abe87c6`, obtido por fetch; PRs [#21](https://github.com/ude-ctrl/Estudo-para-Concurso/pull/21) e [#22](https://github.com/ude-ctrl/Estudo-para-Concurso/pull/22) confirmados como incorporados. Este registro descreve essa referência, não alterações locais de outra branch.
+
+| Área | Implementação e editorial na main | Homologação e publicação |
+| --- | --- | --- |
+| Cartografia e Geotecnologias | Três unidades `APROVADA_CANONICA@1.0.1`, consumo habilitado; aprovação editorial delegada à IA | Encerramento técnico e aceite de continuidade do piloto com ressalva sensorial registrados; não inventar nova homologação humana de conteúdo. Integração presente na main |
+| Fundamentos, Conceitos e Autores | `fundamentos-geografia@1.0.0`, canônica e integrada pelo PR #21, sem refazer sua base | Revisão editorial delegada; relatório não atesta homologação humana nova. Integração presente na main |
+| Climatologia | PR #22 contém candidata `0.1.0`, `EM_AUDITORIA`, e prévia estática; manifesto da main mantém `canonical_version: null` e `runtime_enabled: false` | Prévia de leitura tem publicação registrada na rodada anterior; não salva progresso nem significa integração aprovada |
+| Demais unidades | 23 sem edição canônica; com Climatologia, são 24 sem versão canônica no manifesto de 28 unidades | Biblioteca histórica continua disponível. Ausência de base V6 não significa ausência de material de estudo |
+
+**Publicação:** o histórico da execução anterior registra sucesso do Pages [42196110366](https://github.com/ude-ctrl/Estudo-para-Concurso/actions/runs/42196110366) para `12e7f34`, com verificação de hashes. Nesta tarefa não se reexecutou CI nem se testou o site ao vivo. Site principal: <https://ude-ctrl.github.io/Estudo-para-Concurso/>; prévia: <https://ude-ctrl.github.io/Estudo-para-Concurso/previas/climatologia.html>. Merge confirmado nesta conferência não é, isoladamente, comprovação de deploy atual.
+
+**Trabalho local preservado:** `v6-integracao-climatologia`, baseada em `12e7f34`, possui 16 arquivos rastreados modificados e `base-conhecimento/fisica/` não rastreada. São alterações inacabadas anteriores a esta tarefa, incluindo código e manifesto. Não foram editadas, testadas, promovidas ou publicadas nesta execução; um status declarado nesses arquivos não comprova aprovação. A entrega documental usa área separada e não incorpora esse diff. A próxima retomada deve primeiro verificar esse trabalho, sem recriá-lo nem presumir sua conclusão.
+
+**Arquitetura mínima para orientação:** React/TypeScript/Vite em `src/`; `scripts/build-v6.mjs` consome pacotes aprovados do [manifesto canônico](../base-conhecimento/manifest.json) e gera os bancos em `public/v6/`. A biblioteca histórica usa `scripts/import-content.mjs`. Estudo / Treino / Revisão / Prova têm componentes existentes reutilizáveis. A chave de progresso `missaoGeo.v6.cartografia` atende hoje também Fundamentos; o caderno global usa `missaoGeo.v6.errors`. Não renomeá-las por aparência. Persistência é local, sem sincronização entre dispositivos. A prova oficial completa permanece bloqueada por estoque insuficiente.
+
+**Evidências indispensáveis, conforme a tarefa:** [integração canônica de Cartografia](../MissaoAprovacaoGeo/V6_ISSUE13_INTEGRACAO_CANONICA_CARTOGRAFIA.md), [encerramento do piloto](../MissaoAprovacaoGeo/V6_FASE14_ENCERRAMENTO_TECNICO.md), [integração de Fundamentos](../MissaoAprovacaoGeo/V6_FUNDAMENTOS_INTEGRACAO.md), [relatório da candidata de Climatologia](v6-climatologia/RELATORIO_CANDIDATA_0_1_0.md). Datas e afirmações de “não publicado” em relatórios históricos valem para sua rodada; os PRs posteriores registram a evolução. Não reler todos em cada tarefa.
+
+**Pendências e prioridade:** avaliar esta consolidação documental antes de autorizar seu merge; depois definir uma entrega pequena de diagnóstico do diff local de Climatologia. Antes de uma nova integração/release, conferir as referências temporais necessárias: perfil de Fundamentos vence em **16/11/2026**, perfis de Cartografia em **18/11/2026**, segundo os pacotes na main. São prazos internos de revisão, não datas do concurso; não prorrogá-los sem evidência. Nenhuma revisão editorial ou de fontes foi executada nesta tarefa.
+
+**Atualização deste resumo:** modificar esta seção quando mudar o estado, citando commit/PR e separando resultados executados de históricos. Não criar outro arquivo de status ou copiar bancos pedagógicos para fornecer contexto.
+
+## Oportunidades concretas de economia
+
+| Ação | Evidência e aplicação | Situação |
+| --- | --- | --- |
+| Entrada curta e contexto por diferença | `AGENTS.md` aponta para este resumo; consultar `git diff` e trechos necessários em vez de repetir handoffs e relatórios integrais | Documentada nesta entrega |
+| Não reimprimir bancos gerados | `public/v6/plataforma.json` e paridades têm muitos dados; usar contagens/IDs por script e linhas relevantes, guardando logs completos fora do chat | Aplicável imediatamente, sem mudar arquivos pedagógicos |
+| Testes focados antes do marco de integração | `npm test` encadeia oito arquivos; para alteração isolada, executar o arquivo afetado com a mesma opção Node de `package.json`; no marco crítico, executar o conjunto completo aplicável | Sem alterar scripts ou diminuir a cobertura exigida |
+| Evitar build em documentação | `npm run build` executa importadores e gera dados; para Markdown isolado, conferir links, consistência e `git diff --check` | Aplicado nesta tarefa |
+| Aproveitar evidências já válidas | Registrar commit, escopo e resultado; repetir testes somente após mudança relevante, falha, vencimento temporal ou no marco previsto | Não transforma teste antigo em resultado novo |
+| Modelo proporcional à tarefa | Documento simples: modelo econômico disponível; código/testes habituais: intermediário; Astra para risco transversal ou bloqueador complexo fundamentado | Sem tabela de preços presumida nem troca automática |
+| Evitar CI integral para PR apenas documental | `.github/workflows/validate.yml` executa instalação, testes, build e navegador em todo PR, inclusive Markdown | Proposta futura separada: avaliar filtro seguro sem impedir checks obrigatórios. Nenhum workflow alterado |
+
+**Registro desta entrega:** somente dois documentos alterados; checagem de links locais, consistência e diff, sem build/testes de aplicação. Tempo total e tokens não foram instrumentados de forma confiável, portanto não se declara economia medida. Para as próximas 3–5 tarefas, anotar no relatório/PR já existente: escopo/modelo, arquivos lidos/alterados, comandos e duração observada, iterações, falhas reabertas e consumo somente quando disponível. Não criar outro relatório de métricas para cada leitura.
 
 ## Limites desta auditoria de processo
 Esta avaliação examinou documentos e configuração de scripts, **não** instrumentou execução real do Codex, mediu tokens, auditou integralmente código nem rodou suíte nesta etapa. As recomendações de economia são hipóteses operacionais a verificar. Não há garantia de redução de custo até coletar métricas.
@@ -109,7 +138,7 @@ Antes de abrir tarefa do Codex, preencher:
 > Execute APENAS a tarefa indicada. Leia primeiro este protocolo e os arquivos diretamente relacionados. Objetivo: [resultado]. Base: [branch/commit]. Escopo permitido: [arquivos/unidade]. Proibido: alterar HTML histórico, Base Canônica de outro módulo, IDs e progresso sem migração autorizada. Reutilize componentes e decisões homologados. Escolha testes proporcionais ao risco, mas rode validação completa para integração/homologação. Se precisar abrir escopo ou fizer falta informação crítica, entregue diagnóstico e proposta compactos e pare. Ao final, informe somente arquivos modificados, testes/resultados, riscos e próximo passo. Não iniciar outro módulo.
 
 ### Primeira aplicação
-**Climatologia V6:** conferir o commit de prévia (#22) e os critérios não cumpridos; evitar reconstruir o que já está integrado. Definir primeiro ticket de baixo ou médio risco e usar modelo econômico/intermediário se capaz. Reservar Astra para bloqueador real. Registrar duração/uso disponibilizados pela interface e revisão final antes de publicações.
+O estado da primeira aplicação e sua próxima tarefa estão no [registro de continuidade](#registro-de-continuidade-compacto). A prioridade documental de 11/11 suspende qualquer implementação de módulo nesta execução. Reservar Astra para bloqueador real e registrar apenas duração/uso efetivamente disponibilizados.
 
 ### Critério de avaliação
 Após 3–5 tarefas comparáveis, observar: tarefas concluídas por janela, revisões adicionais, falhas reabertas, duração observada e consumo exibido pelo produto (se disponível). **Não declarar melhora sem evidências.**
