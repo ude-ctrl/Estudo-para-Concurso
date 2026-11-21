@@ -12,7 +12,7 @@ A candidata 0.1.0 permanece histórica e imutável. Este documento não promove 
 
 ## 2. Edital oficial e retificações
 
-Documento-base: [Edital nº 001/2026 — SEPLAD/SEDUC, Concurso Público C-223, versão consolidada/retificada em 02/10/2026](https://conhecimento.fgv.br/sites/default/files/concursos/edital-001-2026-seduc-pa-retificado-02.10.2026.pdf).
+Documento-base: [Edital nº 001/2026 — SEPLAD/SEDUC, Concurso Público C-223, versão consolidada/retificada em 02/10/2026](https://conhecimento.fgv.br/sites/default/files/concursos/edital-consolidado-01.10-minuta.pdf).
 
 No Anexo V, em Conhecimentos Específicos de Geografia, o programa inclui expressamente:
 - atmosfera;
