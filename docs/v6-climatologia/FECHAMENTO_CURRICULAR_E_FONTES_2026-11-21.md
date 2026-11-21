@@ -67,6 +67,7 @@ Fontes-base para esse acréscimo:
 | [Batista et al., 2025 — Friagem na Amazônia brasileira](https://doi.org/10.30564/jasr.v8i3.11069) | Climatologia de eventos de friagem no sudoeste amazônico em 1979–2020 | Recorte espacial do estudo é o sudoeste da Amazônia; não generalizar a mesma frequência para todo o bioma |
 | [Viana & Herdies, 2018 — incursão de ar frio na Bacia Amazônica](https://www.scielo.br/j/rbmet/a/9RN886HDmr9n8PMg4MTSm3y/) | Caso documentado de friagem que alcançou a Amazônia central | Estudo de caso, não climatologia de frequência regional |
 | [IPCC AR6 WGI, cap. 4 — PDF oficial](https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_Chapter_04.pdf) | Incerteza sobre mudanças sistemáticas na amplitude da TSM do ENOS e aumento projetado da variabilidade de precipitação associada ao ENOS | Avaliação publicada em 2021; explicitar cenários e horizonte temporal, sem transformar projeção em previsão determinística |
+| [IPCC AR6 WGI, cap. 8 — PDF oficial](https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_Chapter_08.pdf) | Variabilidade do ciclo hidrológico, precipitação extrema, demanda evaporativa e sazonalidade projetada da precipitação/água na Amazônia | Avaliação global/regional com níveis de confiança distintos; não transferir a mesma confiança para cada localidade do Pará |
 | [IPCC AR6 WGII, cap. 12 — América Central e do Sul](https://www.ipcc.ch/report/ar6/wg2/downloads/report/IPCC_AR6_WGII_Chapter12.pdf) | Vulnerabilidade da floresta amazônica à seca e riscos associados a aquecimento, aridez, seca e fogo | Avaliação regional; não atribuir automaticamente o mesmo nível de confiança a cada município ou sub-região do Pará |
 
 ### Decisões de redação e cautela
@@ -78,6 +79,10 @@ Fontes-base para esse acréscimo:
 - Não usar o boletim SIPAM de 2015 como prognóstico contemporâneo.
 - Não extrapolar a climatologia de friagem do sudoeste amazônico para toda a Amazônia ou para o Pará inteiro.
 - A afirmação sobre a variabilidade de chuva associada ao ENOS deve permanecer separada da incerteza sobre mudanças na amplitude da TSM do ENOS.
+
+### Limite do escopo amazônico
+
+O Anexo V também inclui hidrografia, biomas amazônicos, biodiversidade, desenvolvimento sustentável e COP30/desafios contemporâneos. Esses temas não devem ser incorporados artificialmente à unidade de Climatologia: permanecem distribuídos pelos módulos próprios da V6. Aqui o recorte é climatologia amazônica, circulação, água atmosférica e variabilidade climática.
 
 ## 5. Próxima entrega técnica — candidata 0.2.0
 
