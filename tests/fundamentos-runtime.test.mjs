@@ -1,6 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
+import { cp, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import { resolve } from 'node:path';
 import { buildPlatform, buildV6 } from '../scripts/build-v6.mjs';
 import { root, readBundle, collections } from '../scripts/canonical-content.mjs';
 import {
@@ -22,14 +24,67 @@ import { expeditionComplete } from '../src/v6/sensory.ts';
 import { moduleProgress } from '../src/module-progress.ts';
 import { trainingSessionMatches } from '../src/v6/training-session.ts';
 import { canonicalLegacyRoute } from '../src/legacy-routes.ts';
+import { reconcileContent } from '../src/v6/content-progress.ts';
 
 const unit = 'fundamentos-geografia',
-  now = Date.parse('2026-11-05T12:00:00Z');
+  now = Date.parse('2026-11-24T12:00:00Z');
 const { content, parity } = await buildPlatform({ at: new Date(now).toISOString() });
 const { content: cartography } = await buildV6({ at: new Date(now).toISOString() });
-const bundle = await readBundle(root + '/base-conhecimento', unit, '1.0.0');
+const bundle = await readBundle(root + '/base-conhecimento', unit, '1.0.1');
 const modules = JSON.parse(await readFile(root + '/public/v6/modules.json', 'utf8')).modules;
 const fund = bundle.base.content;
+test('patch temporal das quatro unidades preserva o estado completo salvo na edição anterior', async (t) => {
+  const temp = await mkdtemp(resolve(tmpdir(), 'v6-previous-platform-'));
+  t.after(() => rm(temp, { recursive: true, force: true }));
+  await cp(root + '/base-conhecimento', temp, { recursive: true });
+  const registry = JSON.parse(await readFile(resolve(temp, 'manifest.json'), 'utf8'));
+  for (const entry of registry.units.filter((u) => u.canonical_version))
+    entry.candidate_version = entry.canonical_version = entry.unit_id === unit ? '1.0.0' : '1.0.1';
+  await writeFile(resolve(temp, 'manifest.json'), JSON.stringify(registry));
+  const { content: beforeContent } = await buildPlatform({
+    baseRoot: temp,
+    at: '2026-11-05T12:00:00Z',
+  });
+  const state = fresh();
+  const beforeTime = Date.parse('2026-11-05T12:00:00Z');
+  reconcileContent(state, beforeContent, beforeTime);
+  for (const u of beforeContent.units) {
+    const q = beforeContent.questions.find((q) => q.unit === u.id);
+    attempt(state, beforeContent, {
+      item: q.id,
+      correct: false,
+      kind: 'fixacao',
+      context: 'temporal-preservation',
+      at: beforeTime,
+    });
+    const card = beforeContent.cards.find((c) => c.unit === u.id);
+    state.reviews[card.id] = schedule(undefined, 'bom', beforeTime);
+    state.read[beforeContent.missions.find((m) => m.unit === u.id).sections[0].id] = beforeTime;
+  }
+  state.drafts['preserved-draft'] = 'Resposta em elaboração';
+  const q = beforeContent.questions[0];
+  state.session = {
+    id: 'preserved',
+    kind: 'questions',
+    pool: 'fixacao',
+    ids: [q.id],
+    position: 0,
+    answered: true,
+    repeat: [q.id],
+  };
+  const saved = JSON.parse(JSON.stringify(state));
+  const restored = parseState(JSON.stringify(saved));
+  assert.equal(reconcileContent(restored, content, now), true);
+  const withoutRevision = ({ contentRevision, ...rest }) => rest;
+  assert.deepEqual(withoutRevision(restored), withoutRevision(saved));
+  assert.equal(totalXP(restored), totalXP(saved));
+  assert.deepEqual(
+    restored.evidence.map((e) => e.editorialVersion),
+    ['1.0.0', '1.0.1', '1.0.1', '1.0.1'],
+  );
+  assert.equal(reconcileContent(restored, content, now + 1), false);
+});
+
 class MemoryStore {
   data = new Map();
   getItem(key) {
@@ -57,7 +112,7 @@ test('integração entrega cada coleção aprovada sem edição, omissão ou col
     parity.units.find((u) => u.id === unit),
     {
       id: unit,
-      editorial_version: '1.0.0',
+      editorial_version: '1.0.1',
       missions: 11,
       questions: 48,
       cards: 45,

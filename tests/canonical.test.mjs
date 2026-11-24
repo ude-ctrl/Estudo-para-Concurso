@@ -21,7 +21,7 @@ import {
 
 const baseRoot = resolve(root, 'base-conhecimento');
 const at = '2026-10-16T18:00:00-03:00';
-const releaseAt = '2026-11-04T12:00:00Z';
+const releaseAt = '2026-11-24T12:00:00Z';
 const ids = ['cartografia-fundamentos', 'cartografia-representacao', 'geotecnologias'];
 const originals = await Promise.all(ids.map((id) => readBundle(baseRoot, id, '0.1.0')));
 const baseline = JSON.parse(
@@ -104,9 +104,9 @@ test('catálogo mantém os 28 IDs oficiais e habilita Fundamentos e Cartografia 
   assert.ok(
     registry.units.every((u) =>
       ids.includes(u.unit_id)
-        ? u.canonical_version === '1.0.1' && u.runtime_enabled === true
+        ? u.canonical_version === '1.0.2' && u.runtime_enabled === true
         : u.unit_id === 'fundamentos-geografia'
-          ? u.canonical_version === '1.0.0' && u.runtime_enabled === true
+          ? u.canonical_version === '1.0.1' && u.runtime_enabled === true
           : u.canonical_version === null && u.runtime_enabled === false,
     ),
   );
@@ -407,6 +407,10 @@ test('nova candidata não substitui a versão aprovada nem exige reabrir o HTML 
     other.canonical_version = null;
     other.runtime_enabled = false;
   }
+  Object.assign(
+    registry.units.find((u) => u.unit_id === 'fundamentos-geografia'),
+    { candidate_version: '1.0.0', canonical_version: '1.0.0' },
+  );
   entry.canonical_version = '1.0.0';
   entry.candidate_version = '1.1.0';
   entry.status = 'EM_AUDITORIA';
@@ -754,7 +758,7 @@ test('0.1.2 continua íntegra após a promoção e preserva as identidades, alte
   assert.ok(
     result.summaries.every(
       (s) =>
-        (s.unit === 'fundamentos-geografia' ? s.version === '1.0.0' : s.version === '1.0.1') &&
+        (s.unit === 'fundamentos-geografia' ? s.version === '1.0.1' : s.version === '1.0.2') &&
         s.approved,
     ),
   );
@@ -1008,13 +1012,102 @@ test('cadeia valida também a revisão intermediária e recusa ciclos antes de c
   child.provenance.revision.parent_bundle_sha256 = sha(parent);
   const childPath = resolve(temp, 'cartografia', ids[0], '0.1.2', 'provenance.json');
   await writeFile(childPath, JSON.stringify(child.provenance));
-  await assert.rejects(validateLot(temp, { at }), /não declarada/);
+  await assert.rejects(validateLot(temp, { at: releaseAt }), /não declarada/);
   child.provenance.revision.from_version = '0.1.2';
   await writeFile(childPath, JSON.stringify(child.provenance));
-  await assert.rejects(validateLot(temp, { at }), /Ciclo na cadeia/);
+  await assert.rejects(validateLot(temp, { at: releaseAt }), /Ciclo na cadeia/);
 });
 
 const canonical = await Promise.all(ids.map((id) => readBundle(baseRoot, id, '1.0.0')));
+test('revisão de 24/11 preserva integralmente conteúdo, suporte, decisões herdadas e metadados alheios à FGV', async () => {
+  const registry = JSON.parse(await readFile(resolve(baseRoot, 'manifest.json'), 'utf8'));
+  for (const entry of registry.units.filter((u) => u.canonical_version)) {
+    const next = await readBundle(baseRoot, entry.unit_id, entry.canonical_version);
+    const parent = await readBundle(baseRoot, entry.unit_id, next.provenance.revision.from_version);
+    assert.deepEqual(next.base.content, parent.base.content);
+    assert.deepEqual(next.base.support, parent.base.support);
+    const stableMetadata = (b) => ({
+      ...b.base.metadata,
+      sources: b.base.metadata.sources.filter((s) => !s.id.startsWith('fgv-')),
+      temporal_claims: b.base.metadata.temporal_claims.filter((c) => !c.id.includes('perfil')),
+    });
+    assert.deepEqual(stableMetadata(next), stableMetadata(parent));
+    assert.equal(validateRevision(parent, next).preserved_resources, resources(parent.base).length);
+    assert.equal(next.audit.human_approval, null);
+    assert.equal(next.audit.editorial_approval.reviewer, 'ChatGPT');
+    assert.deepEqual(next.audit.premium_criteria, parent.audit.premium_criteria);
+    for (const [i, item] of next.audit.authored_questions.entries()) {
+      assert.deepEqual(
+        item.editorial_decision.inheritance.decision,
+        parent.audit.authored_questions[i].editorial_decision,
+      );
+      assert.equal(item.resource_sha256, parent.audit.authored_questions[i].resource_sha256);
+    }
+    const temporal = next.base.metadata.temporal_claims.find((c) => c.id.includes('perfil'));
+    assert.equal(temporal.verified_at, '2026-11-24');
+    assert.equal(temporal.review_due_at, '2026-11-28T23:59:59-03:00');
+    assert.ok(
+      ['fgv-pagina', 'fgv-edital', 'fgv-retificacao-1', 'fgv-retificacao-2'].every((id) =>
+        temporal.source_ids.includes(id),
+      ),
+    );
+    assert.equal(
+      validateBundle(next, { approved: true, at: '2026-11-29T02:59:58Z' }).approved,
+      true,
+    );
+    assert.throws(
+      () => validateBundle(next, { approved: true, at: '2026-11-29T02:59:59Z' }),
+      /Dado temporal vencido/,
+    );
+    assert.throws(
+      () => validateBundle(next, { approved: true, at: '2026-11-23T23:59:59Z' }),
+      /futura/,
+    );
+    assert.throws(
+      () => validateBundle(parent, { approved: true, at: releaseAt }),
+      /Dado temporal vencido/,
+    );
+    await assert.rejects(
+      loadApprovedUnit(baseRoot, entry.unit_id, parent.base.editorial_version, { at: releaseAt }),
+      /não aprovada/,
+    );
+    assert.equal(
+      (await loadApprovedUnit(baseRoot, entry.unit_id, entry.canonical_version, { at: releaseAt }))
+        .editorial_version,
+      entry.canonical_version,
+    );
+  }
+});
+
+test('autorização da nova versão não aceita autoria trocada, delegação removida ou versão duplicada', async (t) => {
+  const temp = await mkdtemp(resolve(tmpdir(), 'v6-version-authorization-'));
+  t.after(() => rm(temp, { recursive: true, force: true }));
+  await cp(baseRoot, temp, { recursive: true });
+  const registry = JSON.parse(await readFile(resolve(temp, 'manifest.json'), 'utf8'));
+  for (const mutate of [
+    (p) => {
+      p.version_authorizations[0].reviewer = 'Outro';
+    },
+    (p) => {
+      p.version_authorizations = [];
+    },
+    (p) => {
+      p.version_authorizations[0].authorization = 'outra-delegacao';
+    },
+    (p) => {
+      p.version_authorizations.push(structuredClone(p.version_authorizations[0]));
+    },
+  ]) {
+    const changed = structuredClone(registry);
+    mutate(changed.editorial_governance);
+    await writeFile(resolve(temp, 'manifest.json'), JSON.stringify(changed));
+    await assert.rejects(
+      loadApprovedUnit(temp, ids[0], '1.0.2', { at: releaseAt }),
+      /fora do contrato\/escopo|duplicados/,
+    );
+  }
+});
+
 test('1.0.1 renova somente metadados: conteúdo, suporte e procedência preservados', async () => {
   for (const [i, id] of ids.entries()) {
     const next = await readBundle(baseRoot, id, '1.0.1');
@@ -1025,7 +1118,7 @@ test('1.0.1 renova somente metadados: conteúdo, suporte e procedência preserva
     assert.ok(next.provenance.revision.changes.every((c) => c.path.startsWith('/metadata/')));
     assert.equal(validateRevision(canonical[i], next).preserved_resources, [277, 183, 231][i]);
     assert.equal(
-      (await loadApprovedUnit(baseRoot, id, '1.0.1', { at: releaseAt })).editorial_version,
+      validateBundle(next, { approved: true, at: '2026-11-04T12:00:00Z' }).version,
       '1.0.1',
     );
   }
@@ -1038,7 +1131,7 @@ test('referência vencida bloqueia edição ativa, mas não invalida aprovação
   );
   assert.equal((await validateLot(baseRoot, { at: releaseAt })).canonicalUnits, 4);
   await assert.rejects(
-    validateLot(baseRoot, { at: '2026-11-18T00:00:00Z' }),
+    validateLot(baseRoot, { at: '2026-11-29T02:59:59Z' }),
     /Dado temporal vencido: perfil-seduc-pa-2026/,
   );
 });
@@ -1123,6 +1216,10 @@ test('cadeia da canônica continua validada quando existe outra candidata em aud
   t.after(() => rm(temp, { recursive: true, force: true }));
   await cp(baseRoot, temp, { recursive: true });
   const registry = JSON.parse(await readFile(resolve(temp, 'manifest.json'), 'utf8'));
+  Object.assign(
+    registry.units.find((u) => u.unit_id === 'fundamentos-geografia'),
+    { candidate_version: '1.0.0', canonical_version: '1.0.0' },
+  );
   for (const entry of registry.units.filter((u) => ids.includes(u.unit_id)))
     entry.candidate_version = entry.canonical_version = '1.0.0';
   Object.assign(

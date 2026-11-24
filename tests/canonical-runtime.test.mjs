@@ -30,7 +30,7 @@ import {
 import { Repository } from '../src/v6/repository.ts';
 import { recognize } from '../src/v6/recognition.ts';
 
-const at = '2026-11-04T12:00:00Z';
+const at = '2026-11-24T12:00:00Z';
 const now = Date.parse(at);
 const baseRoot = resolve(root, 'base-conhecimento');
 const ids = ['cartografia-fundamentos', 'cartografia-representacao', 'geotecnologias'];
@@ -149,11 +149,11 @@ test('tentativa atual registra versão editorial e alternativa, sem apagar sua i
     at: now,
     choice: choice.id,
   });
-  assert.equal(evidence.editorialVersion, '1.0.1');
+  assert.equal(evidence.editorialVersion, '1.0.2');
   assert.equal(evidence.choice, choice.id);
   assert.equal(evidence.concept, 'gms');
   assert.equal(q.refs[0].legacy_id, 'b_6_0');
-  assert.equal(editorialVersion(content, q.unit), '1.0.1');
+  assert.equal(editorialVersion(content, q.unit), '1.0.2');
 });
 
 function oldProgress() {
@@ -340,7 +340,7 @@ test('família conhecida pelo legado reduz novidade e é ordenada depois das nã
   const exam = makeExam(content, state, 36, 30, now + DAY, undefined, 'family-novelty');
   assert.equal(exam.novelty, 35);
   assert.equal(new Set(exam.ids.map((id) => learningIdentity(content, id))).size, 36);
-  assert.deepEqual(exam.editorialVersions, Object.fromEntries(ids.map((id) => [id, '1.0.1'])));
+  assert.deepEqual(exam.editorialVersions, Object.fromEntries(ids.map((id) => [id, '1.0.2'])));
   assert.equal(nextQuestions(content, state, 'concurso', ids[0]).at(-1), members[1]);
 });
 
@@ -398,7 +398,7 @@ test('prova registra respostas e versões e mantém gabaritos após retomar a se
   finishExam(restored, content, now + 5000);
   assert.equal(restored.evidence.length, 5);
   assert.ok(
-    restored.evidence.every((e) => e.correct && e.editorialVersion === '1.0.1' && e.choice),
+    restored.evidence.every((e) => e.correct && e.editorialVersion === '1.0.2' && e.choice),
   );
   const xp = totalXP(restored);
   finishExam(restored, content, now + 6000);

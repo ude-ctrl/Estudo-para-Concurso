@@ -764,7 +764,24 @@ function validateRegisteredApproval(registry, bundle) {
       matches.length === 1,
       'Aprovação delegada fora do contrato/escopo autorizado no catálogo',
     );
-    const policy = matches[0];
+    const registered = matches[0];
+    // A named revision may have a new reviewer without rewriting archived approvals.
+    const revisions = registered.version_authorizations || [];
+    unique(
+      revisions.map((r) => r.editorial_version),
+      'Autorizações por versão',
+    );
+    requireThat(
+      revisions.every(
+        (r) =>
+          validVersion(r.editorial_version) && nonempty(r.reviewer) && nonempty(r.authorization),
+      ),
+      'Autorização por versão inválida',
+    );
+    const revision = revisions.find((r) => r.editorial_version === bundle.base.editorial_version);
+    const policy = revision
+      ? { ...registered, reviewer: revision.reviewer, authorization: revision.authorization }
+      : registered;
     requireThat(
       policy?.contract === 'delegated-content-review-v1' &&
         policy.reviewer_kind === 'ai' &&

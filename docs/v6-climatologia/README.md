@@ -1,5 +1,26 @@
 # Climatologia — preparação da migração V6
 
+## Entrega em 24/11/2026 — prioridade SEDUC-MA/FCC
+
+A candidata [0.2.0](candidata/0.2.0/previa.html) reutiliza integralmente 0.1.0 e acrescenta composição/estrutura atmosférica, aplicação ao Maranhão, dois recalls e três questões autorais A–E. Total: **13 missões, 41 questões, 50 cartões, 100 V/F, 2 discursivas, 2 climogramas e 215 vínculos históricos**. A prévia é utilizável para leitura e respostas comentadas; não grava progresso. A versão pública 0.1.0 permanece intacta.
+
+Prioridade registrada em [AGENTS.md](../../AGENTS.md), sem ampliar a arquitetura. Correção temporal dos 40 arquivos anteriores recuperada dos commits locais, sem reconstrução. O gerador incremental é `node scripts/build-climatologia-02.mjs`; `--check` verifica a reprodução sem alterar os arquivos.
+
+### Edital e recorte regional
+
+Fonte: [FCC, Edital SEAD/MA 01/2026](https://www.concursosfcc.com.br/concursos/seadm226/seadm226_edital_de_abertura_1_17_11_26_publicado.pdf), baixado diretamente em 24/11/2026. Professor Geografia, código 17: 141 vagas; prova prevista para 04/04/2027. O quadro de provas registra 20 questões gerais, 30 específicas e redação, com duração total de 4 horas. As 3 horas do quadro de aplicação são permanência mínima, não duração total. Programa de Geografia na página 76: clima, climatologia brasileira e tempo/clima do Maranhão. Consulta dirigida, sem alegar cotejo integral dos demais componentes do concurso.
+
+Fontes dos complementos: NOAA e NASA (atmosfera), SEMA-MA e NuGeo/UEMA (contrastes sazonais e sistemas). URLs, datas e alcance em `metadata.sources`. Não foram inventadas séries municipais nem convertidos os climogramas hipotéticos em observações. Exemplos paraenses permanecem comparativos; as discursivas históricas são treino didático, não reprodução da prova FCC.
+
+### Validação e limite da entrega
+
+183 testes de conteúdo, contratos e persistência aprovados; build (incluindo TypeScript) e validação das quatro unidades canônicas aprovadas. O teste novo compara cada recurso anterior e verifica a preservação de gabaritos, arquivos de origem e vínculos de progresso. A validação de navegador local foi bloqueada antes de abrir a página (`socket() failed: Operation not permitted`); os cenários de ambas as candidatas e da plataforma estão no workflow do PR.
+
+A candidata permanece **EM_AUDITORIA**, sem aprovação canônica artificial. Foram concluídos os complementos de atmosfera e Maranhão; ainda faltam o fechamento das verificações científicas regionais/temporais herdadas (especialmente IPCC), a integração ao motor V6 e sua migração de progresso. A nova prioridade não autoriza apagar essas pendências. Sem merge nem publicação.
+
+---
+
+
 > **Atualização em 06/11/2026:** a candidata editorial 0.1.0 já foi produzida, com correções rastreadas, dois climogramas e quatro questões novas. Consulte o [relatório da entrega](RELATORIO_CANDIDATA_0_1_0.md) e a [prévia local](candidata/0.1.0/previa.html). O texto abaixo registra a etapa anterior de inventário; não é o estado final da revisão. A candidata continua fora do site e sem aprovação canônica.
 
 Branch: `v6-climatologia`. Origem publicada: `aceaac37bc02d7762d78f45d7dd9531c0a2afac6` (Fundamentos e Cartografia). Este lote conclui o inventário reproduzível e o mapa preparatório; não promove a unidade nem altera o site. Não é um parecer de aprovação Premium.

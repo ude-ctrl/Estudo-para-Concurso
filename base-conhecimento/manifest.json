@@ -15,9 +15,9 @@
       "module_id": "fundamentos",
       "title": "Conceitos, Categorias e Autores",
       "status": "APROVADA_CANONICA",
-      "candidate_version": "1.0.0",
+      "candidate_version": "1.0.1",
       "initial_snapshot_version": "0.1.0",
-      "canonical_version": "1.0.0",
+      "canonical_version": "1.0.1",
       "audit_started": true,
       "runtime_enabled": true
     },
@@ -26,9 +26,9 @@
       "module_id": "cartografia",
       "title": "Orientação, Coordenadas, Fusos e Escala",
       "status": "APROVADA_CANONICA",
-      "candidate_version": "1.0.1",
+      "candidate_version": "1.0.2",
       "initial_snapshot_version": "0.1.0",
-      "canonical_version": "1.0.1",
+      "canonical_version": "1.0.2",
       "audit_started": true,
       "runtime_enabled": true
     },
@@ -37,9 +37,9 @@
       "module_id": "cartografia",
       "title": "Projeções e Representação Cartográfica",
       "status": "APROVADA_CANONICA",
-      "candidate_version": "1.0.1",
+      "candidate_version": "1.0.2",
       "initial_snapshot_version": "0.1.0",
-      "canonical_version": "1.0.1",
+      "canonical_version": "1.0.2",
       "audit_started": true,
       "runtime_enabled": true
     },
@@ -48,9 +48,9 @@
       "module_id": "cartografia",
       "title": "Sensoriamento Remoto, SIG e Geotecnologias",
       "status": "APROVADA_CANONICA",
-      "candidate_version": "1.0.1",
+      "candidate_version": "1.0.2",
       "initial_snapshot_version": "0.1.0",
-      "canonical_version": "1.0.1",
+      "canonical_version": "1.0.2",
       "audit_started": true,
       "runtime_enabled": true
     },
@@ -326,7 +326,15 @@
     "authorization": "MissaoAprovacaoGeo/V6_ISSUE13_CONTRATO_REVISAO_DELEGADA.md",
     "unit_ids": ["cartografia-fundamentos", "cartografia-representacao", "geotecnologias"],
     "effective_at": "2026-10-16",
-    "note": "Revisão editorial pelo assistente delegada pelo usuário; sem parecer humano fictício, sem merge/publicação e sem outros módulos."
+    "note": "Revisão editorial pelo assistente delegada pelo usuário; sem parecer humano fictício, sem merge/publicação e sem outros módulos.",
+    "version_authorizations": [
+      {
+        "editorial_version": "1.0.2",
+        "reviewer": "ChatGPT",
+        "authorization": "MissaoAprovacaoGeo/V6_REVISAO_TEMPORAL_2026_11_04.md#reconferencia-de-24112026",
+        "effective_at": "2026-11-24"
+      }
+    ]
   },
   "editorial_delegations": [
     {
@@ -336,7 +344,15 @@
       "authorization": "MissaoAprovacaoGeo/V6_ISSUE13_FUNDAMENTOS_AUDITORIA.md",
       "unit_ids": ["fundamentos-geografia"],
       "effective_at": "2026-10-16",
-      "note": "Continuidade da revisão delegada após publicação de Cartografia; consolidação de Fundamentos sem ativação na interface ou publicação deste lote."
+      "note": "Continuidade da revisão delegada após publicação de Cartografia; consolidação de Fundamentos sem ativação na interface ou publicação deste lote.",
+      "version_authorizations": [
+        {
+          "editorial_version": "1.0.1",
+          "reviewer": "ChatGPT",
+          "authorization": "MissaoAprovacaoGeo/V6_REVISAO_TEMPORAL_2026_11_04.md#reconferencia-de-24112026",
+          "effective_at": "2026-11-24"
+        }
+      ]
     }
   ],
   "consolidation_lots": [
