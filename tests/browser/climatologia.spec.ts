@@ -37,7 +37,8 @@ test('seções novas e os dois climogramas são acessíveis no percurso', async 
     await page.goto('./v6.html#/unidade/climatologia/estudo?missao=' + m.id);
     const section = page.locator('[data-resource-id="' + id + '"]');
     await expect(section).toBeVisible();
-    if ((await section.getAttribute('open')) === null) await section.locator('summary').click();
+    if ((await section.getAttribute('open')) === null)
+      await section.locator(':scope > summary').click();
     await expect(section.locator('.reading-body')).toBeVisible();
   }
   await expect(page.locator('svg[role="img"]')).toHaveCount(2);
