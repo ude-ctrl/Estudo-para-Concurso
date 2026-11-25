@@ -5,7 +5,7 @@ import type { Catalog } from '../../src/types';
 const catalog: Catalog = JSON.parse(
   await readFile(new URL('../../public/content/catalog.json', import.meta.url), 'utf8'),
 );
-const legacyLesson = catalog.lessons.find((lesson) => lesson.number === 4)!;
+const legacyLesson = catalog.lessons.find((lesson) => lesson.number === 5)!;
 const urban = catalog.lessons.find((lesson) => lesson.number === 11)!;
 const bncc18 = catalog.lessons.find((lesson) => lesson.id === 'lesson-fa532170310d')!;
 const bncc22 = catalog.lessons.find((lesson) => lesson.id === 'lesson-73811adb3a6b')!;
@@ -82,7 +82,7 @@ for (const {
       );
     }
     await expect(page.locator('.stats-grid')).toContainText('25temas de estudo');
-    await expect(page.locator('.stats-grid')).toContainText('25 materiais');
+    await expect(page.locator('.stats-grid')).toContainText('24 materiais + 5 unidades V6');
   });
 
   test(`busca por tema e aplicação seleciona o material ${topic} correto e preserva URLs antigas`, async ({
@@ -408,7 +408,7 @@ test('celular tem menu funcional e não transborda horizontalmente', async ({ pa
 test('entrada única reúne temas e módulos V6 sem duplicação', async ({ page }, info) => {
   await page.goto('./');
   await expect(page.locator('.lesson-card')).toHaveCount(25);
-  await expect(page.locator('.module-card')).toHaveCount(2);
+  await expect(page.locator('.module-card')).toHaveCount(3);
   await expect(page.locator('.lesson-grid')).not.toContainText('Cartografia II');
   await expect(page.getByText('Um módulo. Três unidades. Um percurso.')).toHaveCount(0);
   await page.screenshot({ path: info.outputPath('biblioteca-unificada.png'), fullPage: true });

@@ -6,6 +6,9 @@ import type { Content, Experience, State } from '../../src/v6/types';
 const content: Content = JSON.parse(
   await readFile(new URL('../../public/v6/cartografia.json', import.meta.url), 'utf8'),
 );
+const platform: Content = JSON.parse(
+  await readFile(new URL('../../public/v6/plataforma.json', import.meta.url), 'utf8'),
+);
 const fund = 'cartografia-fundamentos',
   geo = 'geotecnologias';
 const route = (unit = fund, mode = 'treino', query = '') =>
@@ -195,7 +198,7 @@ test('Sensorial: percurso tem estados explícitos, consulta livre e navegação 
   await seed(page, state);
   await page.goto('./v6.html');
   const map = page.locator('.journey-map');
-  await expect(map.locator('.journey-stop')).toHaveCount(28);
+  await expect(map.locator('.journey-stop')).toHaveCount(platform.missions.length);
   await expect(map.locator('.journey-stop.complete')).toHaveCount(1);
   await expect(map.locator('.journey-stop.reading')).toHaveCount(1);
   await expect(map.locator('[aria-current="step"]')).toHaveAttribute(

@@ -35,12 +35,10 @@ test('seções novas e os dois climogramas são acessíveis no percurso', async 
   ]) {
     const m = missions.find((m: any) => m.sections.some((s: any) => s.id === id));
     await page.goto('./v6.html#/unidade/climatologia/estudo?missao=' + m.id);
-    await expect(
-      page.getByRole('heading', {
-        name: m.sections.find((s: any) => s.id === id).title,
-        exact: true,
-      }),
-    ).toBeVisible();
+    const section = page.locator('[data-resource-id="' + id + '"]');
+    await expect(section).toBeVisible();
+    if ((await section.getAttribute('open')) === null) await section.locator('summary').click();
+    await expect(section.locator('.reading-body')).toBeVisible();
   }
   await expect(page.locator('svg[role="img"]')).toHaveCount(2);
 });
