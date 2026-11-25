@@ -15,6 +15,7 @@ const html = await readFile(
   process.env.CLIMA_PREVIEW_FILE || resolve(candidatePath, 'previa.html'),
   'utf8',
 );
+const is02 = html.includes('Candidata 0.2.0');
 const output = process.env.CLIMA_EVIDENCE_DIR || '/tmp/climatologia-evidence';
 await mkdir(output, { recursive: true });
 const results = [];
@@ -36,8 +37,8 @@ try {
         assert.equal(await page.locator('svg').count(), 2);
         assert.equal(await page.locator('svg rect').count(), 24);
         assert.equal(await page.locator('svg circle').count(), 24);
-        assert.equal(await page.locator('table caption').count(), 2);
-        assert.equal(await page.locator('article.exercise').count(), 38);
+        assert.equal(await page.locator('table caption').count(), is02 ? 3 : 2);
+        assert.equal(await page.locator('article.exercise').count(), is02 ? 41 : 38);
         assert.ok(
           await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth),
           `Overflow ${width}`,

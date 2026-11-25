@@ -34,3 +34,57 @@ As datas são prazos editoriais para nova conferência, não garantia de ausênc
 As edições 0.1.0, 0.1.1, 0.1.2 e 1.0.0 permanecem intactas. O consumidor continua usando somente as três bases aprovadas de Cartografia. O novo identificador editorial não concede XP nem remapeia respostas; evidências antigas mantêm a versão original. Melhorias pedagógicas apontadas no diagnóstico permanecem no plano de trabalho e não são declaradas resolvidas por esta revisão de metadados.
 
 Sem migração de outro módulo, merge ou publicação nesta rodada. Resultados de execução e navegação serão registrados separadamente após os testes.
+
+## Reconferencia de 24/11/2026
+
+Base: `main@12e7f34b5ae5f96a20680f0ff3c013510abe87c6`. Execução: ChatGPT, mediante autorização explícita do proprietário para estabilizar as quatro bases em branch separada, criar versões, validar e entregar para avaliação, sem merge ou publicação. As referências a Codex acima e nos pacotes anteriores são registros históricos; a revisão atual pertence ao ChatGPT. Não há homologação humana nova.
+
+| Unidade | Pai preservado | Nova edição |
+| --- | --- | --- |
+| Fundamentos | 1.0.0 | 1.0.1 |
+| Cartografia — Fundamentos | 1.0.1 | 1.0.2 |
+| Cartografia — Representação | 1.0.1 | 1.0.2 |
+| Geotecnologias | 1.0.1 | 1.0.2 |
+
+### Evidências e decisão
+
+Consulta direta em **24/11/2026**, limitada ao perfil usado nas bases:
+
+- [Página oficial FGV](https://conhecimento.fgv.br/concursos/seducpa26): lista o edital consolidado de 02/10, as duas retificações abaixo, demanda retificada em 10/11 e consulta ao local de prova publicada em 23/11. Nenhuma retificação posterior do edital foi identificada na página nesta conferência. A consulta individual do candidato não foi acessada.
+- [Edital consolidado](https://conhecimento.fgv.br/sites/default/files/concursos/edital-consolidado-01.10-minuta.pdf): itens 8.1.1, 8.5, 8.8.1–8.8.5, 8.18–8.19; Anexo V, páginas impressas 94, 101 e 102. Confirmados formato objetivo A–E, 60 itens, 30 por módulo, cinco horas para Professor e duas discursivas de 15–30 linhas. Confirmados os tópicos de Fundamentos e Cartografia/Geotecnologias. A prova permanece prevista para 29/11/2026; rubricas e questões da plataforma continuam autorais.
+- [1ª retificação](https://conhecimento.fgv.br/sites/default/files/concursos/edital-n-003-de-24.09.2026-doe-n-36.779-de-25.09.2026-retificacao-de-subitens.pdf): leitura das cinco páginas. Ajusta pontuação, delimitação das discursivas, identificação, cronograma, totais de vagas e terminologia. Não altera o programa de Geografia; o perfil conferido já corresponde ao texto consolidado.
+- [2ª retificação](https://conhecimento.fgv.br/sites/default/files/concursos/edital-n-004-de-01.10.2026-doe-n-36.789-de-02.10.2026-retificacao-do-cronograma-e-de-subitens.pdf): leitura das três páginas, relativa a inscrições, pagamento, isenção e cronograma correspondente. Sem alteração necessária no perfil pedagógico usado pelas bases.
+- [Comunicado de 01/10](https://conhecimento.fgv.br/sites/default/files/concursos/comunicado-prorrogacao-das-inscricoes_0.pdf): conferido para contextualizar a prorrogação, sem acrescentar inscrições/pagamento ao conteúdo das unidades.
+
+**Resultado:** renovar apenas os quatro registros do perfil do concurso e as duas fontes FGV já existentes em cada base; acrescentar as duas retificações como evidências diretamente consultadas. Demais fontes e afirmações temporais conservam as datas anteriores. Nenhum texto pedagógico necessita correção neste escopo.
+
+**Próxima conferência interna:** `2026-11-28T23:59:59-03:00`, até o fim da véspera da prova; qualquer nova retificação exige revisão antecipada. Esse limite é editorial, não data oficial nem garantia de ausência de mudanças. O validador continua rejeitando a edição ativa no vencimento e não renova datas automaticamente.
+
+### Preservação e contrato
+
+Os novos pacotes mantêm conteúdo e suporte completos, metadados de recursos, IDs, alternativas, gabaritos, vínculos históricos e contratos de progresso. Cada `provenance.json` contém hash do pacote pai e delta exato de metadados. Decisões pedagógicas são herdadas, com autoria e evidência anteriores guardadas em `editorial_decision.inheritance`; a revisão atual assume somente o delta descrito e compara os recursos integralmente. Os 12 critérios anteriores não são apresentados como nova auditoria integral.
+
+O manifesto acrescenta autorizações nominadas por versão para ChatGPT. O validador mantém as autorizações históricas e exige a autorização correspondente à edição, sem dispensar escopo, habilitação, digest, integridade ou validade temporal. Essa extensão localizada é necessária para registrar a nova autoria sem reescrever os pareceres antigos. Campos humanos permanecem nulos/pendentes.
+
+O PR #23 continua aberto em rascunho na conferência remota. A branch local `v6-integracao-climatologia` citada em 11/11 não está disponível nesta área de trabalho; o 404 remoto informado não prova perda ou conclusão. Seu trabalho não foi reconstruído nem incluído.
+
+### Validação desta execução
+
+- Falha original reproduzida antes das alterações: `npm test` recusou `perfil-seduc-pa-2026` vencido em dois testes canônicos.
+- `npm run check:canonical`: quatro edições válidas, 960 recursos e 913 vínculos de procedência, com toda a cadeia histórica validada.
+- `npm test`: **180 testes aprovados, zero falhas**, nas oito suítes. Inclui limites exatos de vencimento, verificação futura, autorização por versão e preservação do estado salvo nas quatro edições anteriores. Durante a adaptação dos testes foram corrigidas duas fixtures: data de uma cadeia histórica e passagem de JSON serializado ao leitor de estado; nenhum ajuste de persistência da aplicação foi necessário.
+- `npm run build`: importadores, TypeScript e Vite aprovados. Bancos públicos e paridades regenerados; todos os campos dos bancos fora de `editorial` permanecem idênticos à `main`.
+- Comparação de blobs com o commit-base: **31 HTMLs históricos e 115 arquivos anteriores de Base Canônica intactos**, excluído apenas o manifesto que recebe novos ponteiros. Conteúdo e suporte dos quatro novos pacotes comparados integralmente com os pais; IDs, opções e gabaritos iguais. `git diff --check` aprovado.
+- Retomada de 24/11: a execução local dos 52 cenários de Cartografia/Fundamentos foi bloqueada antes da navegação: Chromium encerrou com `socket() failed: Operation not permitted`. Isso não constitui resultado funcional desses cenários. A suíte completa será executada no GitHub Actions e o resultado remoto será registrado no PR desta branch; não confundir os resultados locais acima com aprovação da CI.
+
+### Retomada e bloqueio de entrega em 24/11/2026
+
+A entrega local `66d11ff` foi recuperada, sem reconstruir suas alterações. Nesta retomada passaram novamente `npm test` (180 testes, zero falhas), `npm run build`, `npm run check:canonical` e `git diff --check`. A comparação independente confirmou os 31 HTMLs históricos, 115 arquivos anteriores da Base Canônica e os dois bancos públicos fora do campo `editorial` preservados.
+
+O envio ao GitHub foi interrompido pela revisão automática: o upload de `MissaoAprovacaoGeo/V6_FUNDAMENTOS_INTEGRACAO_PARIDADE.json` foi recusado por considerar insuficiente a autorização explícita para exportar o conjunto de dados ao destino. Nenhuma tentativa alternativa de envio foi feita. Somente um blob documental sem referência de branch havia sido criado antes da recusa; a branch remota permanece na base `12e7f34`, sem as alterações desta entrega. PR e execução de GitHub Actions ainda não foram criados. É necessária autorização explícita do proprietário para enviar os 40 arquivos desta entrega à branch `fix/v6-estabilizacao-temporal-2026-11-24` no repositório `ude-ctrl/Estudo-para-Concurso` e abrir o PR, sem merge ou publicação.
+
+Branch de entrega: `fix/v6-estabilizacao-temporal-2026-11-24`. Avaliação do proprietário pendente; nenhum merge ou deploy autorizado/executado. Este adendo atualiza o registro temporal existente, sem novo diagnóstico geral nem duplicação do protocolo de continuidade mantido na branch documental.
+
+### Autorização de envio recuperada na continuidade
+
+O proprietário autorizou explicitamente em 24/11/2026 o envio dos 40 arquivos ao repositório e à branch acima, a abertura do PR e a validação remota, sem merge ou publicação. A retomada preserva a implementação e seus resultados locais já registrados. O resultado da CI será registrado no PR após a execução; a autorização de envio não equivale a aprovação para publicar.

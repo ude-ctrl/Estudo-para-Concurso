@@ -32312,31 +32312,31 @@
     ]
   },
   "editorial": {
-    "release": "cartografia@1.0.1+1.0.1+1.0.1:15e61d6a07270866",
+    "release": "cartografia@1.0.2+1.0.2+1.0.2:8294af5a4e353bc9",
     "units": {
       "cartografia-fundamentos": {
-        "version": "1.0.1",
+        "version": "1.0.2",
         "status": "APROVADA_CANONICA",
         "reviewer_kind": "delegated-ai",
-        "reviewer": "Codex",
-        "reviewed_at": "2026-11-04",
-        "digest": "a4a328f34c358dd8b89daee927d715e6b29868afc30d1c2cd54b49d0e352b6b6"
+        "reviewer": "ChatGPT",
+        "reviewed_at": "2026-11-24",
+        "digest": "3d25a82a5eb5cf6bab7cefb166afebc7f0ca5e66b174a0d8096b389165407589"
       },
       "cartografia-representacao": {
-        "version": "1.0.1",
+        "version": "1.0.2",
         "status": "APROVADA_CANONICA",
         "reviewer_kind": "delegated-ai",
-        "reviewer": "Codex",
-        "reviewed_at": "2026-11-04",
-        "digest": "c4a4f547b83b72ebf300ef7ffcb2e5f19b1b1ce2266792b6fa99ed5068f25dd2"
+        "reviewer": "ChatGPT",
+        "reviewed_at": "2026-11-24",
+        "digest": "dcff9a0acc0b96089c4d24eaee6310610a88a1d230ad64130a80f7e968122c60"
       },
       "geotecnologias": {
-        "version": "1.0.1",
+        "version": "1.0.2",
         "status": "APROVADA_CANONICA",
         "reviewer_kind": "delegated-ai",
-        "reviewer": "Codex",
-        "reviewed_at": "2026-11-04",
-        "digest": "5c36d3538f6d0dbdd6f9026f9c8d06e4ebb5097303fc433842632195ae4bc79f"
+        "reviewer": "ChatGPT",
+        "reviewed_at": "2026-11-24",
+        "digest": "3091c5d5d5b19c782cf557e59b34ac5c637d22b4bdae0a339daa6b17dea2c8bb"
       }
     },
     "legacy_version": "6.0.0-piloto.1",
@@ -32457,10 +32457,10 @@
             "title": "FGV/SEPLAD/SEDUC-PA — C-223, edital consolidado",
             "url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-consolidado-01.10-minuta.pdf",
             "reference_date": "2026-10-02",
-            "checked_at": "2026-11-04",
-            "verified_at": "2026-11-04",
+            "checked_at": "2026-11-24",
+            "verified_at": "2026-11-24",
             "verification": "direct",
-            "locator": "Página impressa 102 (índice PDF 101), programa de Geografia; página do certame indica retificação em 02/10/2026.",
+            "locator": "Itens 8.1.1, 8.5, 8.8.1–8.8.5, 8.18–8.19; Anexo V, página impressa 94 (formato) e 102 (Cartografia, Geotecnologias e Representação do Espaço). Consolidação indicada pela FGV em 02/10/2026.",
             "scope": "Presença dos tópicos de Cartografia e formato do perfil. Não comprova frequência histórica de cobrança ou dificuldade dos itens autorais."
           },
           {
@@ -32468,10 +32468,10 @@
             "title": "FGV — página de acompanhamento do concurso SEDUC-PA 2026",
             "url": "https://conhecimento.fgv.br/concursos/seducpa26",
             "reference_year": 2026,
-            "checked_at": "2026-11-04",
-            "verified_at": "2026-11-04",
+            "checked_at": "2026-11-24",
+            "verified_at": "2026-11-24",
             "verification": "direct",
-            "locator": "Arquivos do concurso e link para edital retificado em 02/10/2026.",
+            "locator": "Arquivos do concurso: edital retificado em 02/10/2026, duas retificações; demanda retificada em 10/11 e consulta ao local de prova listada em 23/11. Conferência em 24/11/2026.",
             "scope": "Identificação da versão consultada. Retificações posteriores exigem revisão."
           },
           {
@@ -32484,6 +32484,28 @@
             "checked_at": "2026-11-04",
             "verified_at": "2026-11-04",
             "verification": "direct"
+          },
+          {
+            "id": "fgv-retificacao-1",
+            "title": "FGV — 1ª retificação, Edital 003/2026",
+            "url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-n-003-de-24.09.2026-doe-n-36.779-de-25.09.2026-retificacao-de-subitens.pdf",
+            "reference_date": "2026-09-25",
+            "locator": "Itens 1–7: pontuação e discursivas; demais itens: identificação, cronograma, totais de vagas, terminologia e Arquitetura. Não altera o programa de Geografia.",
+            "checked_at": "2026-11-24",
+            "verified_at": "2026-11-24",
+            "verification": "direct",
+            "scope": "Conferência do impacto sobre o perfil usado nesta unidade; não é auditoria integral do concurso."
+          },
+          {
+            "id": "fgv-retificacao-2",
+            "title": "FGV — 2ª retificação, Edital 004/2026",
+            "url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-n-004-de-01.10.2026-doe-n-36.789-de-02.10.2026-retificacao-do-cronograma-e-de-subitens.pdf",
+            "reference_date": "2026-10-02",
+            "locator": "Páginas 1–3: inscrições, pagamento, isenção e cronograma correspondente; demais disposições mantidas.",
+            "checked_at": "2026-11-24",
+            "verified_at": "2026-11-24",
+            "verification": "direct",
+            "scope": "Conferência do impacto sobre o perfil usado nesta unidade; não é auditoria integral do concurso."
           }
         ],
         "temporal_claims": [
@@ -32535,16 +32557,18 @@
             "kind": "exam-profile",
             "source_ids": [
               "fgv-edital",
-              "fgv-pagina"
+              "fgv-pagina",
+              "fgv-retificacao-1",
+              "fgv-retificacao-2"
             ],
             "reference_date": "2026-10-02",
-            "checked_at": "2026-11-04",
-            "verified_at": "2026-11-04",
+            "checked_at": "2026-11-24",
+            "verified_at": "2026-11-24",
             "verification": "verified",
-            "review_trigger": "Nova retificação do certame e conferência antes da prova. O núcleo permanente não depende do perfil.",
-            "review_due_at": "2026-11-18",
+            "review_trigger": "Nova retificação dispara revisão imediata; reconferir até a véspera da prova prevista para 29/11/2026. Prazo interno de revisão, não prazo oficial do concurso. Rubricas autorais permanecem didáticas.",
+            "review_due_at": "2026-11-28T23:59:59-03:00",
             "note": "A presença no programa é distinta de profundidade validada e não comprova padrões históricos de cobrança.",
-            "review_evidence": "MissaoAprovacaoGeo/V6_REVISAO_TEMPORAL_2026_11_04.md"
+            "review_evidence": "MissaoAprovacaoGeo/V6_REVISAO_TEMPORAL_2026_11_04.md#reconferencia-de-24112026"
           }
         ]
       },
@@ -32616,10 +32640,10 @@
             "title": "FGV/SEPLAD/SEDUC-PA — C-223, edital consolidado",
             "url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-consolidado-01.10-minuta.pdf",
             "reference_date": "2026-10-02",
-            "checked_at": "2026-11-04",
-            "verified_at": "2026-11-04",
+            "checked_at": "2026-11-24",
+            "verified_at": "2026-11-24",
             "verification": "direct",
-            "locator": "Página impressa 102 (índice PDF 101), programa de Geografia; página do certame indica retificação em 02/10/2026.",
+            "locator": "Itens 8.1.1, 8.5, 8.8.1–8.8.5, 8.18–8.19; Anexo V, página impressa 94 (formato) e 102 (Cartografia, Geotecnologias e Representação do Espaço). Consolidação indicada pela FGV em 02/10/2026.",
             "scope": "Presença dos tópicos de Cartografia e formato do perfil. Não comprova frequência histórica de cobrança ou dificuldade dos itens autorais."
           },
           {
@@ -32627,10 +32651,10 @@
             "title": "FGV — página de acompanhamento do concurso SEDUC-PA 2026",
             "url": "https://conhecimento.fgv.br/concursos/seducpa26",
             "reference_year": 2026,
-            "checked_at": "2026-11-04",
-            "verified_at": "2026-11-04",
+            "checked_at": "2026-11-24",
+            "verified_at": "2026-11-24",
             "verification": "direct",
-            "locator": "Arquivos do concurso e link para edital retificado em 02/10/2026.",
+            "locator": "Arquivos do concurso: edital retificado em 02/10/2026, duas retificações; demanda retificada em 10/11 e consulta ao local de prova listada em 23/11. Conferência em 24/11/2026.",
             "scope": "Identificação da versão consultada. Retificações posteriores exigem revisão."
           },
           {
@@ -32699,6 +32723,28 @@
             "checked_at": "2026-11-04",
             "verified_at": "2026-11-04",
             "verification": "direct"
+          },
+          {
+            "id": "fgv-retificacao-1",
+            "title": "FGV — 1ª retificação, Edital 003/2026",
+            "url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-n-003-de-24.09.2026-doe-n-36.779-de-25.09.2026-retificacao-de-subitens.pdf",
+            "reference_date": "2026-09-25",
+            "locator": "Itens 1–7: pontuação e discursivas; demais itens: identificação, cronograma, totais de vagas, terminologia e Arquitetura. Não altera o programa de Geografia.",
+            "checked_at": "2026-11-24",
+            "verified_at": "2026-11-24",
+            "verification": "direct",
+            "scope": "Conferência do impacto sobre o perfil usado nesta unidade; não é auditoria integral do concurso."
+          },
+          {
+            "id": "fgv-retificacao-2",
+            "title": "FGV — 2ª retificação, Edital 004/2026",
+            "url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-n-004-de-01.10.2026-doe-n-36.789-de-02.10.2026-retificacao-do-cronograma-e-de-subitens.pdf",
+            "reference_date": "2026-10-02",
+            "locator": "Páginas 1–3: inscrições, pagamento, isenção e cronograma correspondente; demais disposições mantidas.",
+            "checked_at": "2026-11-24",
+            "verified_at": "2026-11-24",
+            "verification": "direct",
+            "scope": "Conferência do impacto sobre o perfil usado nesta unidade; não é auditoria integral do concurso."
           }
         ],
         "temporal_claims": [
@@ -32751,16 +32797,18 @@
             "kind": "exam-profile",
             "source_ids": [
               "fgv-edital",
-              "fgv-pagina"
+              "fgv-pagina",
+              "fgv-retificacao-1",
+              "fgv-retificacao-2"
             ],
             "reference_date": "2026-10-02",
-            "checked_at": "2026-11-04",
-            "verified_at": "2026-11-04",
+            "checked_at": "2026-11-24",
+            "verified_at": "2026-11-24",
             "verification": "verified",
-            "review_trigger": "Nova retificação do certame e conferência antes da prova. O núcleo permanente não depende do perfil.",
-            "review_due_at": "2026-11-18",
+            "review_trigger": "Nova retificação dispara revisão imediata; reconferir até a véspera da prova prevista para 29/11/2026. Prazo interno de revisão, não prazo oficial do concurso. Rubricas autorais permanecem didáticas.",
+            "review_due_at": "2026-11-28T23:59:59-03:00",
             "note": "A presença no programa é distinta de profundidade validada e não comprova padrões históricos de cobrança.",
-            "review_evidence": "MissaoAprovacaoGeo/V6_REVISAO_TEMPORAL_2026_11_04.md"
+            "review_evidence": "MissaoAprovacaoGeo/V6_REVISAO_TEMPORAL_2026_11_04.md#reconferencia-de-24112026"
           }
         ]
       },
@@ -32843,10 +32891,10 @@
             "title": "FGV/SEPLAD/SEDUC-PA — C-223, edital consolidado",
             "url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-consolidado-01.10-minuta.pdf",
             "reference_date": "2026-10-02",
-            "checked_at": "2026-11-04",
-            "verified_at": "2026-11-04",
+            "checked_at": "2026-11-24",
+            "verified_at": "2026-11-24",
             "verification": "direct",
-            "locator": "Página impressa 102 (índice PDF 101), programa de Geografia; página do certame indica retificação em 02/10/2026.",
+            "locator": "Itens 8.1.1, 8.5, 8.8.1–8.8.5, 8.18–8.19; Anexo V, página impressa 94 (formato) e 102 (Cartografia, Geotecnologias e Representação do Espaço). Consolidação indicada pela FGV em 02/10/2026.",
             "scope": "Presença dos tópicos de Cartografia e formato do perfil. Não comprova frequência histórica de cobrança ou dificuldade dos itens autorais."
           },
           {
@@ -32854,10 +32902,10 @@
             "title": "FGV — página de acompanhamento do concurso SEDUC-PA 2026",
             "url": "https://conhecimento.fgv.br/concursos/seducpa26",
             "reference_year": 2026,
-            "checked_at": "2026-11-04",
-            "verified_at": "2026-11-04",
+            "checked_at": "2026-11-24",
+            "verified_at": "2026-11-24",
             "verification": "direct",
-            "locator": "Arquivos do concurso e link para edital retificado em 02/10/2026.",
+            "locator": "Arquivos do concurso: edital retificado em 02/10/2026, duas retificações; demanda retificada em 10/11 e consulta ao local de prova listada em 23/11. Conferência em 24/11/2026.",
             "scope": "Identificação da versão consultada. Retificações posteriores exigem revisão."
           },
           {
@@ -32903,6 +32951,28 @@
             "checked_at": "2026-11-04",
             "verified_at": "2026-11-04",
             "verification": "direct"
+          },
+          {
+            "id": "fgv-retificacao-1",
+            "title": "FGV — 1ª retificação, Edital 003/2026",
+            "url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-n-003-de-24.09.2026-doe-n-36.779-de-25.09.2026-retificacao-de-subitens.pdf",
+            "reference_date": "2026-09-25",
+            "locator": "Itens 1–7: pontuação e discursivas; demais itens: identificação, cronograma, totais de vagas, terminologia e Arquitetura. Não altera o programa de Geografia.",
+            "checked_at": "2026-11-24",
+            "verified_at": "2026-11-24",
+            "verification": "direct",
+            "scope": "Conferência do impacto sobre o perfil usado nesta unidade; não é auditoria integral do concurso."
+          },
+          {
+            "id": "fgv-retificacao-2",
+            "title": "FGV — 2ª retificação, Edital 004/2026",
+            "url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-n-004-de-01.10.2026-doe-n-36.789-de-02.10.2026-retificacao-do-cronograma-e-de-subitens.pdf",
+            "reference_date": "2026-10-02",
+            "locator": "Páginas 1–3: inscrições, pagamento, isenção e cronograma correspondente; demais disposições mantidas.",
+            "checked_at": "2026-11-24",
+            "verified_at": "2026-11-24",
+            "verification": "direct",
+            "scope": "Conferência do impacto sobre o perfil usado nesta unidade; não é auditoria integral do concurso."
           }
         ],
         "temporal_claims": [
@@ -33041,16 +33111,18 @@
             "kind": "exam-profile",
             "source_ids": [
               "fgv-edital",
-              "fgv-pagina"
+              "fgv-pagina",
+              "fgv-retificacao-1",
+              "fgv-retificacao-2"
             ],
             "reference_date": "2026-10-02",
-            "checked_at": "2026-11-04",
-            "verified_at": "2026-11-04",
+            "checked_at": "2026-11-24",
+            "verified_at": "2026-11-24",
             "verification": "verified",
-            "review_trigger": "Nova retificação do certame e conferência antes da prova. O núcleo permanente não depende do perfil.",
-            "review_due_at": "2026-11-18",
+            "review_trigger": "Nova retificação dispara revisão imediata; reconferir até a véspera da prova prevista para 29/11/2026. Prazo interno de revisão, não prazo oficial do concurso. Rubricas autorais permanecem didáticas.",
+            "review_due_at": "2026-11-28T23:59:59-03:00",
             "note": "A presença no programa é distinta de profundidade validada e não comprova padrões históricos de cobrança.",
-            "review_evidence": "MissaoAprovacaoGeo/V6_REVISAO_TEMPORAL_2026_11_04.md"
+            "review_evidence": "MissaoAprovacaoGeo/V6_REVISAO_TEMPORAL_2026_11_04.md#reconferencia-de-24112026"
           }
         ]
       }

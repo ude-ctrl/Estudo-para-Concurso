@@ -3,36 +3,36 @@
   "source": "approved-canonical-bases",
   "source_versions": {
     "fundamentos-geografia": {
-      "version": "1.0.0",
+      "version": "1.0.1",
       "status": "APROVADA_CANONICA",
       "reviewer_kind": "delegated-ai",
-      "reviewer": "Codex",
-      "reviewed_at": "2026-10-16",
-      "digest": "0b6acb643e5e567fe3e586d5398df07834f28ad269d0805b64f508eeacbe322c"
+      "reviewer": "ChatGPT",
+      "reviewed_at": "2026-11-24",
+      "digest": "4576012241aba7cc75261f4d4f54b76a5a54728c599fcf81a237ea31391043fa"
     },
     "cartografia-fundamentos": {
-      "version": "1.0.1",
+      "version": "1.0.2",
       "status": "APROVADA_CANONICA",
       "reviewer_kind": "delegated-ai",
-      "reviewer": "Codex",
-      "reviewed_at": "2026-11-04",
-      "digest": "a4a328f34c358dd8b89daee927d715e6b29868afc30d1c2cd54b49d0e352b6b6"
+      "reviewer": "ChatGPT",
+      "reviewed_at": "2026-11-24",
+      "digest": "3d25a82a5eb5cf6bab7cefb166afebc7f0ca5e66b174a0d8096b389165407589"
     },
     "cartografia-representacao": {
-      "version": "1.0.1",
+      "version": "1.0.2",
       "status": "APROVADA_CANONICA",
       "reviewer_kind": "delegated-ai",
-      "reviewer": "Codex",
-      "reviewed_at": "2026-11-04",
-      "digest": "c4a4f547b83b72ebf300ef7ffcb2e5f19b1b1ce2266792b6fa99ed5068f25dd2"
+      "reviewer": "ChatGPT",
+      "reviewed_at": "2026-11-24",
+      "digest": "dcff9a0acc0b96089c4d24eaee6310610a88a1d230ad64130a80f7e968122c60"
     },
     "geotecnologias": {
-      "version": "1.0.1",
+      "version": "1.0.2",
       "status": "APROVADA_CANONICA",
       "reviewer_kind": "delegated-ai",
-      "reviewer": "Codex",
-      "reviewed_at": "2026-11-04",
-      "digest": "5c36d3538f6d0dbdd6f9026f9c8d06e4ebb5097303fc433842632195ae4bc79f"
+      "reviewer": "ChatGPT",
+      "reviewed_at": "2026-11-24",
+      "digest": "3091c5d5d5b19c782cf557e59b34ac5c637d22b4bdae0a339daa6b17dea2c8bb"
     }
   },
   "sources": [
@@ -117,7 +117,7 @@
   "units": [
     {
       "id": "fundamentos-geografia",
-      "editorial_version": "1.0.0",
+      "editorial_version": "1.0.1",
       "missions": 11,
       "questions": 48,
       "cards": 45,
@@ -125,7 +125,7 @@
     },
     {
       "id": "cartografia-fundamentos",
-      "editorial_version": "1.0.1",
+      "editorial_version": "1.0.2",
       "missions": 5,
       "questions": 60,
       "cards": 54,
@@ -133,7 +133,7 @@
     },
     {
       "id": "cartografia-representacao",
-      "editorial_version": "1.0.1",
+      "editorial_version": "1.0.2",
       "missions": 5,
       "questions": 49,
       "cards": 31,
@@ -141,7 +141,7 @@
     },
     {
       "id": "geotecnologias",
-      "editorial_version": "1.0.1",
+      "editorial_version": "1.0.2",
       "missions": 7,
       "questions": 52,
       "cards": 35,

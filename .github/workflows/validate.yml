@@ -25,4 +25,8 @@ jobs:
       - run: node tests/climatologia-candidate.browser.mjs
         env:
           CLIMA_PREVIEW_FILE: public/previas/climatologia.html
+      - run: node scripts/build-climatologia-02.mjs --check
+      - run: node tests/climatologia-candidate.browser.mjs
+        env:
+          CLIMA_PREVIEW_FILE: docs/v6-climatologia/candidata/0.2.0/previa.html
       - run: npm run test:e2e
