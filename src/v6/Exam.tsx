@@ -22,7 +22,9 @@ function timeLeft(ms: number) {
 export function Objective() {
   const { content, state, update, notify, route } = useV6(),
     [unit, setUnit] = useState(
-      route.unit === 'fundamentos-geografia' ? route.unit : 'module-cartografia',
+      ['fundamentos-geografia', 'climatologia'].includes(route.unit)
+        ? route.unit
+        : 'module-cartografia',
     ),
     [count, setCount] = useState(10),
     [minutes, setMinutes] = useState(20),

@@ -1,4 +1,11 @@
-# Climatologia — preparação da migração V6
+# Climatologia — integração V6
+
+## Integração funcional — 25/11/2026
+
+O cartão da biblioteca e o endereço histórico de Climatologia abrem agora a unidade V6: 13 missões, 41 questões, 50 flashcards, 100 V/F, duas discursivas e dois climogramas. A chave histórica é preservada e importada uma única vez como histórico, sem XP retroativo. Atmosfera e Maranhão estão no percurso de estudo.
+
+A integração usa a edição 0.2.0 revisada, mantém seu estado editorial EM_AUDITORIA e não inventa aprovação canônica. A auditoria restante é editorial, não uma promessa de integração futura. Os registros abaixo descrevem etapas anteriores.
+
 
 ## Entrega em 24/11/2026 — prioridade SEDUC-MA/FCC
 

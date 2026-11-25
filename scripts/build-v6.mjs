@@ -1,3 +1,4 @@
+import { integrateClimatologia } from './integrate-climatologia.mjs';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -19,7 +20,8 @@ export async function buildV6(options = {}) {
 }
 
 export async function buildPlatform(options = {}) {
-  return assemble(['fundamentos-geografia', ...unitIds], 'plataforma', options);
+  const result = await assemble(['fundamentos-geografia', ...unitIds], 'plataforma', options);
+  return options.includeClimatologia === false ? result : integrateClimatologia(result);
 }
 
 async function assemble(
@@ -130,7 +132,9 @@ async function assemble(
     counts: {
       stages: content.missions.reduce((n, m) => n + m.sections.length, 0),
       questions: content.questions.length,
-      legacyQuestions: archive.filter((a) => ['question', 'questions'].includes(a.kind) && Array.isArray(a.original?.o)).length,
+      legacyQuestions: archive.filter(
+        (a) => ['question', 'questions'].includes(a.kind) && Array.isArray(a.original?.o),
+      ).length,
       authored: bundles.reduce((n, b) => n + b.provenance.authored_question_ids.length, 0),
       cards: content.cards.length,
       legacyCards: archive.filter((a) => ['card', 'cards'].includes(a.kind)).length,
@@ -187,7 +191,12 @@ export function moduleIndex(content, id, title, category, number, unitIds, descr
       flashcards: selected(content.cards).length,
       game: selected(content.game).length,
     },
-    legacyLessonIds: id === 'module-fundamentos' ? ['lesson-ff1de1c07eb3'] : [],
+    legacyLessonIds:
+      id === 'module-fundamentos'
+        ? ['lesson-ff1de1c07eb3']
+        : id === 'module-climatologia'
+          ? ['lesson-92668ec707af']
+          : [],
     questionIds: selected(content.questions).map((q) => q.id),
     sectionIds: missions.flatMap((m) => m.sections.map((s) => s.id)),
     cardIds: selected(content.cards).map((c) => c.id),
@@ -220,6 +229,16 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
       unitIds,
       'Orientação, representação do espaço e geotecnologias em um único percurso.',
       'mapas coordenadas escalas projeções sensoriamento remoto SIG fusos tema 02 tema 03 tema 17',
+    ),
+    moduleIndex(
+      platform.content,
+      'module-climatologia',
+      'Climatologia',
+      'Geografia física',
+      4,
+      ['climatologia'],
+      'Atmosfera, climogramas e clima do Maranhão — SEDUC-MA/FCC.',
+      'tema 04 clima atmosfera Maranhão FCC ZCIT ENOS',
     ),
   ];
   await mkdir(resolve(root, 'public/v6'), { recursive: true });

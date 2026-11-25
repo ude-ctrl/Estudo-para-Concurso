@@ -458,7 +458,10 @@ export function examPool(content: Content, unit?: string, official = false) {
     (q) =>
       (!unit ||
         q.unit === unit ||
-        (unit === 'module-cartografia' && q.unit !== 'fundamentos-geografia')) &&
+        (unit === 'module-cartografia' &&
+          ['cartografia-fundamentos', 'cartografia-representacao', 'geotecnologias'].includes(
+            q.unit,
+          ))) &&
       q.pool !== 'fixacao' &&
       q.options.length === 5 &&
       (!official || q.status === 'approved'),
@@ -709,6 +712,7 @@ export function parseState(raw: string): State {
         'cartografia-fundamentos',
         'cartografia-representacao',
         'geotecnologias',
+        'climatologia',
       ].includes(String(e.unit)) ||
       !['fixacao', 'concurso', 'elite', 'game', 'recall', 'flashcard', 'exam', 'boss'].includes(
         String(e.kind),
@@ -830,6 +834,7 @@ export function parseState(raw: string): State {
         'cartografia-fundamentos',
         'cartografia-representacao',
         'geotecnologias',
+        'climatologia',
       ].includes(String(o.resume.unit)) ||
       !['estudo', 'treino', 'revisao', 'prova'].includes(String(o.resume.mode)))
   )

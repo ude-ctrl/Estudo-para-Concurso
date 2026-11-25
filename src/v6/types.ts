@@ -2,7 +2,8 @@ export type UnitId =
   | 'fundamentos-geografia'
   | 'cartografia-fundamentos'
   | 'cartografia-representacao'
-  | 'geotecnologias';
+  | 'geotecnologias'
+  | 'climatologia';
 export type Mode = 'estudo' | 'treino' | 'revisao' | 'prova';
 export type TrainingPool =
   'fixacao' | 'concurso' | 'elite' | 'diagnostico' | 'pos-teste' | 'chefao';

@@ -1,5 +1,6 @@
 // Compatibility aliases only: these IDs never become active study records again.
 export const legacyCanonicalRoutes: Record<string, string> = {
+  'lesson-92668ec707af': 'climatologia',
   'lesson-ff1de1c07eb3': 'fundamentos-geografia',
   'lesson-dc8d42e3bace': 'cartografia-fundamentos',
   'lesson-76fbd0d2b7a4': 'cartografia-representacao',

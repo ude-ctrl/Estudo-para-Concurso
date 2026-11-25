@@ -176,7 +176,8 @@ test('runtime e registro canônico não ativam a candidata', async () => {
   assert.equal(u.canonical_version, null);
   assert.equal(u.runtime_enabled, false);
   const runtime = JSON.parse(await readFile(resolve(root, 'public/v6/plataforma.json'), 'utf8'));
-  assert.ok(!JSON.stringify(runtime).includes('v6-clima-q-climograma-'));
+  assert.ok(JSON.stringify(runtime).includes('v6-clima-q-climograma-'));
+  assert.equal(runtime.editorial.units.climatologia.status, 'EM_AUDITORIA');
   assert.equal(base.metadata.legacy_progress.implemented, false);
   assert.equal(base.metadata.legacy_progress.key, 'seducpa_t2_clima_v26');
   assert.equal(base.metadata.legacy_progress.import_placeholder, false);

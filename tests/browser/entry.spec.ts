@@ -71,7 +71,7 @@ test('entrada mobile mantém teclado, redução de movimento e largura sem trans
   await page.setViewportSize({ width: 320, height: 800 });
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto('./');
-  await expect(page.locator('.lesson-card')).toHaveCount(25);
+  await expect(page.locator('.lesson-card')).toHaveCount(24);
   await page.getByRole('searchbox').fill('Cartografia');
   const link = page.locator('.module-card .start-link');
   await link.focus();
