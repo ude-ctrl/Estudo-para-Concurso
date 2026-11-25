@@ -1,10 +1,12 @@
 import type { Content, UnitId } from './types.ts';
 
-export type ModuleId = 'fundamentos' | 'cartografia';
+export type ModuleId = 'fundamentos' | 'cartografia' | 'climatologia';
 export function moduleOf(unit: UnitId): ModuleId {
+  if (unit === 'climatologia') return 'climatologia';
   return unit === 'fundamentos-geografia' ? 'fundamentos' : 'cartografia';
 }
 export const moduleTitles: Record<ModuleId, string> = {
+  climatologia: 'Climatologia',
   fundamentos: 'Fundamentos, Conceitos e Autores',
   cartografia: 'Cartografia e Geotecnologias',
 };

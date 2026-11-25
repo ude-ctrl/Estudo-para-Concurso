@@ -426,13 +426,17 @@ export default function App() {
           throw new Error('Catálogo inválido');
         if (
           index.schemaVersion !== 1 ||
-          index.modules.length !== 2 ||
+          index.modules.length !== 3 ||
           index.modules.some((module) => !Array.isArray(module.questionIds))
         )
           throw new Error('Módulos inválidos');
         // The historical source stays in backup/export; only the canonical module is active.
-        const archived = value.lessons.filter((lesson) => lesson.id === 'lesson-ff1de1c07eb3');
-        const lessons = value.lessons.filter((lesson) => lesson.id !== 'lesson-ff1de1c07eb3');
+        const archived = value.lessons.filter((lesson) =>
+          ['lesson-ff1de1c07eb3', 'lesson-92668ec707af'].includes(lesson.id),
+        );
+        const lessons = value.lessons.filter(
+          (lesson) => !['lesson-ff1de1c07eb3', 'lesson-92668ec707af'].includes(lesson.id),
+        );
         const totals = { ...value.totals, lessons: lessons.length };
         for (const key of ['stages', 'questions', 'flashcards', 'game', 'recall'] as const)
           totals[key] -= archived.reduce((n, lesson) => n + lesson.counts[key], 0);
@@ -560,13 +564,17 @@ export default function App() {
   const moduleProgresses = new Map(modules.map((module) => [module.id, moduleProgress(module)]));
   const isModuleFavorite = (module: StudyModule) =>
     [module.id, ...(module.legacyLessonIds || [])].some((id) => preferences.favorites.includes(id));
-  const toggleModuleFavorite = (module: StudyModule) => setPreferences((previous) => {
-    const aliases = new Set([module.id, ...(module.legacyLessonIds || [])]);
-    const active = previous.favorites.some((id) => aliases.has(id));
-    return { ...previous, favorites: active
-      ? previous.favorites.filter((id) => !aliases.has(id))
-      : [...previous.favorites, module.id] };
-  });
+  const toggleModuleFavorite = (module: StudyModule) =>
+    setPreferences((previous) => {
+      const aliases = new Set([module.id, ...(module.legacyLessonIds || [])]);
+      const active = previous.favorites.some((id) => aliases.has(id));
+      return {
+        ...previous,
+        favorites: active
+          ? previous.favorites.filter((id) => !aliases.has(id))
+          : [...previous.favorites, module.id],
+      };
+    });
   const filteredModules = modules.filter(
     (module) =>
       normalize(query)

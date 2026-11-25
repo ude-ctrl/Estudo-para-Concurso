@@ -43,6 +43,7 @@ test('patch temporal das quatro unidades preserva o estado completo salvo na edi
   await writeFile(resolve(temp, 'manifest.json'), JSON.stringify(registry));
   const { content: beforeContent } = await buildPlatform({
     baseRoot: temp,
+    includeClimatologia: false,
     at: '2026-11-05T12:00:00Z',
   });
   const state = fresh();
@@ -96,18 +97,25 @@ class MemoryStore {
 }
 
 test('integração entrega cada coleção aprovada sem edição, omissão ou colisão de IDs', () => {
-  assert.equal(content.units.length, 4);
+  assert.equal(content.units.length, 5);
   for (const key of collections) {
-    assert.deepEqual(content[key], [...fund[key], ...cartography[key]], key);
+    assert.deepEqual(
+      content[key].slice(0, fund[key].length + cartography[key].length),
+      [...fund[key], ...cartography[key]],
+      key,
+    );
     assert.equal(new Set(content[key].map((item) => item.id)).size, content[key].length, key);
   }
   for (const key of Object.keys(bundle.base.support))
     assert.deepEqual(
-      content.support[key],
+      content.support[key].slice(
+        0,
+        bundle.base.support[key].length + cartography.support[key].length,
+      ),
       [...bundle.base.support[key], ...cartography.support[key]],
       key,
     );
-  assert.equal(parity.records.length, 913);
+  assert.equal(parity.records.length, 1128);
   assert.deepEqual(
     parity.units.find((u) => u.id === unit),
     {
@@ -119,10 +127,10 @@ test('integração entrega cada coleção aprovada sem edição, omissão ou col
       game: 100,
     },
   );
-  assert.equal(parity.counts.stages, 72);
-  assert.equal(parity.counts.questions, 209);
-  assert.equal(parity.counts.cards, 165);
-  assert.equal(parity.counts.game, 356);
+  assert.equal(parity.counts.stages, 88);
+  assert.equal(parity.counts.questions, 250);
+  assert.equal(parity.counts.cards, 215);
+  assert.equal(parity.counts.game, 456);
 });
 
 function fullLegacy() {

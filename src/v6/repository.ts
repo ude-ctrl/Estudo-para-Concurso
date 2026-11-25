@@ -1,4 +1,4 @@
-import { ERROR_KEY, STATE_KEY, fresh, parseState } from './engine.ts';
+import { ERROR_KEY, STATE_KEY, fresh, parseState, importLegacy } from './engine.ts';
 import type { Content, State } from './types.ts';
 import { reconcileContent } from './content-progress.ts';
 type StorageLike = Pick<Storage, 'getItem' | 'setItem'>;
@@ -31,6 +31,21 @@ export class Repository {
     if (this.prepare(next, restoredRaw, Date.now())) {
       this.state = next;
       this.commit(() => {});
+    }
+    if (
+      content?.units.some((u) => u.id === 'climatologia') &&
+      !this.state.migrations.seducpa_t2_clima_v26
+    ) {
+      try {
+        const raw = store.getItem('seducpa_t2_clima_v26');
+        if (raw)
+          this.commit((s) => {
+            importLegacy(s, content, 'seducpa_t2_clima_v26', raw, Date.now());
+          });
+      } catch {
+        this.warning =
+          'O histórico de Climatologia continua preservado. Use a importação nas preferências para recuperá-lo.';
+      }
     }
   }
   private prepare(state: State, raw: string | null, at: number) {

@@ -47,6 +47,7 @@ function parseRoute(): Route {
         'cartografia-fundamentos',
         'cartografia-representacao',
         'geotecnologias',
+        'climatologia',
       ].includes(p[2])
         ? p[2]
         : firstUnit
@@ -129,11 +130,10 @@ function Settings({
         const found = Object.entries(obj.legacyStorage)
           .filter(([key, value]) => allowed.has(key) && typeof value === 'string')
           .map(([key, raw]) => ({ key, raw: raw as string }));
-        if (!found.length)
-          throw Error('A cópia não contém chaves de Fundamentos e Cartografia reconhecidas.');
+        if (!found.length) throw Error('A cópia não contém chaves dos módulos V6 reconhecidas.');
         setPreview(found);
         setReports([
-          'Cópia histórica reconhecida. Apenas as chaves de Fundamentos e Cartografia serão importadas.',
+          'Cópia histórica reconhecida. Apenas as chaves dos módulos V6 serão importadas.',
         ]);
       } else
         throw Error('Formato não reconhecido. Use exportação V6 ou a cópia do portal histórico.');
@@ -270,7 +270,7 @@ function Settings({
                 notify('Importação concluída. Consulte o relatório abaixo.');
               }}
             >
-              Importar estas chaves de Fundamentos e Cartografia
+              Importar estas chaves dos módulos V6
             </button>
           </>
         )}
@@ -749,7 +749,7 @@ export function App() {
       .then((data) => {
         if (
           data.version !== '6.1.0-canonica.1' ||
-          data.units?.length !== 4 ||
+          data.units?.length !== 5 ||
           !Array.isArray(data.questions) ||
           !data.editorial?.release ||
           !data.support?.visuals

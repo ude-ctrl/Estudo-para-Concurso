@@ -115,8 +115,8 @@ jobs:
               }));
               const bank = JSON.parse(files.find(f => f.path === 'v6/plataforma.json').body.toString());
               const units = Object.entries(bank.editorial?.units || {});
-              if (units.length !== 4 || !['fundamentos-geografia', 'cartografia-fundamentos', 'cartografia-representacao', 'geotecnologias'].every(id => bank.editorial.units[id]) ||
-                  !units.every(([, u]) => /^\d+\.\d+\.\d+$/.test(u.version) && u.status === 'APROVADA_CANONICA')) {
+              if (units.length !== 5 || !['fundamentos-geografia', 'cartografia-fundamentos', 'cartografia-representacao', 'geotecnologias'].every(id => bank.editorial.units[id]) ||
+                  !units.every(([id, u]) => /^\d+\.\d+\.\d+$/.test(u.version) && (id === 'climatologia' ? u.version === '0.2.0' && u.status === 'EM_AUDITORIA' : u.status === 'APROVADA_CANONICA'))) {
                 throw new Error('As quatro bases canônicas esperadas não estão publicadas.');
               }
               const assets = new Set();

@@ -63,7 +63,7 @@ test('Canônica: aplicativo usa as três edições aprovadas e apresenta fontes 
   ).toBe(true);
   await page.goto('./v6.html#/configuracoes');
   await page.getByText('Fontes e atualização do conteúdo', { exact: true }).click();
-  await expect(page.locator('.editorial-sources h3')).toHaveCount(4);
+  await expect(page.locator('.editorial-sources h3')).toHaveCount(5);
   await expect(page.locator('.editorial-sources')).toContainText('ChatGPT (IA)');
   await expect(page.locator('.editorial-sources a').first()).toHaveAttribute('href', /^https:\/\//);
   await expect(page.getByText(/itens novos estão pendentes de revisão humana/)).toHaveCount(0);

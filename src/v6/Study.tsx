@@ -46,9 +46,12 @@ export function Home() {
     resume = state.resume;
   const due = content.cards.filter((c) => state.reviews[c.id]?.due <= Date.now()).length;
   const dueUnit = content.cards.find((c) => state.reviews[c.id]?.due <= Date.now())?.unit;
-  const first = resume?.unit ||
-    [...content.questions, ...content.cards, ...content.game].find((item) => item.id === state.session?.ids[0])?.unit ||
-    content.units[0].id,
+  const first =
+      resume?.unit ||
+      [...content.questions, ...content.cards, ...content.game].find(
+        (item) => item.id === state.session?.ids[0],
+      )?.unit ||
+      content.units[0].id,
     eligible = state.evidence.filter(
       (e) => e.eligible && ['fixacao', 'concurso', 'elite', 'exam', 'boss'].includes(e.kind),
     );
@@ -57,7 +60,8 @@ export function Home() {
   const nextMission =
     content.missions.find((m) => m.id === resume?.mission) ||
     content.missions.find((m) => m.unit === resume?.unit) ||
-    content.missions.find((m) => m.unit === first) || content.missions[0];
+    content.missions.find((m) => m.unit === first) ||
+    content.missions[0];
   const canResumeTraining =
     resume?.mode === 'treino' &&
     trainingSessionMatches(content, state.session, { unit: resume.unit });
@@ -83,7 +87,10 @@ export function Home() {
           <br />
           <em>Construa seu raciocínio geográfico.</em>
         </h1>
-        <p>Fundamentos e Cartografia, com teoria, prática e revisão para avançar com constância.</p>
+        <p>
+          Fundamentos, Cartografia e Climatologia, com teoria, prática e revisão para avançar com
+          constância.
+        </p>
         <CompassArt />
         <div className="next-step-context">
           <span className="eyebrow">
@@ -167,12 +174,16 @@ export function Home() {
           <small>Com cobertura e confiança</small>
         </div>
       </div>
-      {(['fundamentos', 'cartografia'] as ModuleId[]).map((module) => (
+      {(['fundamentos', 'cartografia', 'climatologia'] as ModuleId[]).map((module) => (
         <Fragment key={module}>
           <div className="section-title">
             <div>
               <span className="eyebrow">
-                {module === 'fundamentos' ? 'Módulo 01' : 'Módulo 02'}
+                {module === 'fundamentos'
+                  ? 'Módulo 01'
+                  : module === 'climatologia'
+                    ? 'Tema 04 · SEDUC-MA/FCC'
+                    : 'Módulo 02'}
               </span>
               <h2>{moduleTitles[module]}</h2>
             </div>
@@ -370,8 +381,12 @@ export function Study() {
   let legacyAvailable = false;
   if (route.unit === 'fundamentos-geografia') {
     try {
-      legacyAvailable = ['t1i_v21', 't1i_v2'].some((key) => !state.migrations[key] && !!localStorage.getItem(key));
-    } catch { /* Recovery remains available through backup import in settings. */ }
+      legacyAvailable = ['t1i_v21', 't1i_v2'].some(
+        (key) => !state.migrations[key] && !!localStorage.getItem(key),
+      );
+    } catch {
+      /* Recovery remains available through backup import in settings. */
+    }
   }
   const index = ms.indexOf(m),
     sections = [...m.sections].sort((a, b) => Number(!a.primary) - Number(!b.primary));
@@ -383,7 +398,12 @@ export function Study() {
         </span>
         <h1>{m.title}</h1>
         <p>{m.goal}</p>
-        {legacyAvailable && <p className="micro">Encontramos seu progresso da versão anterior. <a href="#/configuracoes">Importar histórico de Fundamentos</a>.</p>}
+        {legacyAvailable && (
+          <p className="micro">
+            Encontramos seu progresso da versão anterior.{' '}
+            <a href="#/configuracoes">Importar histórico de Fundamentos</a>.
+          </p>
+        )}
       </div>
       <details className="outline">
         <summary>Escolher missão nesta unidade</summary>
